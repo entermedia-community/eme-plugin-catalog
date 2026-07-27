@@ -1,0 +1,9 @@
+<datas>
+    <data id="asset">Asset</data>
+    <data id="project">Project</data>
+    <data id="entity">Entity Chat</data>
+    <data id="agentchat">AI Agent Chat</data>
+    <data id="agententitychat">AI Entity Chat</data>
+    <data id="agenttutorchat">AI Tutor Chat</data>
+    <data id="agentonboarding">Onboarding</data>
+</datas> 

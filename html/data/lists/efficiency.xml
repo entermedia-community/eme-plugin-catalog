@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+  <property id="beginner">Beginner</property>
+  <property id="competent">Competent</property>
+  <property id="expert">Expert</property>
+</properties>
