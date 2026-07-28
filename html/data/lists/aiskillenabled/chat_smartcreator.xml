@@ -34,7 +34,7 @@
 
    <data id="chat_smartcreator_createoutline" aiskill="smartcreator_createoutline" automationscenario="chat_smartcreator" enabled="true" runafter="chat_smartcreator_findmemory" processingmessage="Creating Outline">
       <name>
-         <language id="en"><![CDATA[Create Article Outline]]></language>
+         <language id="en"><![CDATA[Create Outline]]></language>
       </name>
    </data>
 
