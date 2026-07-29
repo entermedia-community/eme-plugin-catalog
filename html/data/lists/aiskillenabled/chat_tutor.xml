@@ -22,6 +22,12 @@
       </name>
    </data>
 
+   <data id="chat_tutor_progress" aiskill="adaptiveTutorialProgressSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading...">
+      <name>
+         <language id="en"><![CDATA[Tutor Progress]]></language>
+      </name>
+   </data>
+
    <data id="chat_tutor_usercomment" aiskill="adaptiveTutorialUserCommentSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading...">
       <name>
          <language id="en"><![CDATA[Tutor Chat User Comment]]></language>
