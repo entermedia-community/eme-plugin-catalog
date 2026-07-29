@@ -34,7 +34,11 @@
 
    <data id="chat_smartcreator_createoutline" aiskill="smartcreator_createoutline" automationscenario="chat_smartcreator" enabled="true" runafter="chat_smartcreator_findmemory" processingmessage="Creating Outline">
       <name>
+<<<<<<< HEAD
          <language id="en"><![CDATA[Create Outline]]></language>
+=======
+         <language id="en"><![CDATA[Create Article Outline]]></language>
+>>>>>>> e9f2013 (first commit)
       </name>
    </data>
 

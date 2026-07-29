@@ -15,7 +15,7 @@ public void init()
 {
 	WebPageRequest req = context;
 	MediaArchive archive = req.getPageValue("mediaarchive");
-	//log.error("Starting Auto Assign Primary Image" + req.getContentPage());
+	log.error("Starting Auto Assign Primary Image" + req.getContentPage());
 	Searcher modulesearcher = archive.getSearcher("module");
 	AssetSearcher assetsearcher = (AssetSearcher)archive.getAssetSearcher();
 	
@@ -66,7 +66,7 @@ public void init()
 				}
 				if (tosave.size() > 0) {
 					searcher.saveAllData(tosave, null);
-					log.info("Auto assigned entity images: "+ tosave.size() + " for: " + searchtype);
+					log.info("Saved: "+ tosave.size() + " " + searchtype);
 				}
 			}
 			
