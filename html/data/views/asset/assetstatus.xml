@@ -9,5 +9,7 @@
   <property id="keywordsai"/>
   
   <property id="semantictopics"/>  
-    
+
+  <property id="language"/>
+
 </properties>

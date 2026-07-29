@@ -97,5 +97,17 @@
     </name>
   </property>
 
+  <property id="language" index="true" stored="true" editable="true" viewtype="list" datatype="list" filter="true" sort="textUp" type="list"
+  aicreationcommand="Select the language that this content is written in."
+  >
+    <name>
+      <language id="de"><![CDATA[Sprache]]></language>
+      <language id="en"><![CDATA[Language]]></language>
+      <language id="es"><![CDATA[Idioma]]></language>
+      <language id="fr"><![CDATA[Langue]]></language>
+    </name>
+  </property>
+
+
 
 </page>
