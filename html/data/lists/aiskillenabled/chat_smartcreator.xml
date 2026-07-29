@@ -4,13 +4,13 @@
 
 <records>
 
-   <data id="chat_smartcreator_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_smartcreator" enabled="true" processingmessage="Loading Creator Types" >
+   <data id="chat_smartcreator_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_smartcreator" enabled="true" processingmessage="Loading Creator Types">
       <name>
          <language id="en"><![CDATA[Smart Creator Choose Type]]></language>
       </name>
    </data>
 
-   <data id="chat_smartcreator_make_suggestions" aiskill="smartCreatorMakeSuggestionsSkill" automationscenario="chat_smartcreator" enabled="true"  runafter="chat_smartcreator_welcome"  processingmessage="Creating Suggestions">
+   <data id="chat_smartcreator_make_suggestions" aiskill="smartCreatorMakeSuggestionsSkill" automationscenario="chat_smartcreator" enabled="true" runafter="chat_smartcreator_welcome" processingmessage="Creating Suggestions">
       <name>
          <language id="en"><![CDATA[Make Suggestions]]></language>
       </name>
@@ -28,21 +28,17 @@
       <name>
          <language id="en"><![CDATA[Search Memory]]></language>
       </name>
-       <contextvalues>{"skipcategorysearch":true}</contextvalues>
+      <contextvalues>{"skipcategorysearch":true}</contextvalues>
    </data>
 
 
    <data id="chat_smartcreator_createoutline" aiskill="smartcreator_createoutline" automationscenario="chat_smartcreator" enabled="true" runafter="chat_smartcreator_findmemory" processingmessage="Creating Outline">
       <name>
-<<<<<<< HEAD
          <language id="en"><![CDATA[Create Outline]]></language>
-=======
-         <language id="en"><![CDATA[Create Article Outline]]></language>
->>>>>>> e9f2013 (first commit)
       </name>
    </data>
 
-   <data id="chat_smartcreator_renderoutline" aiskill="renderLocalTemplateSkill" automationscenario="chat_smartcreator" enabled="true" processingmessage="Rendering Outline" runafter="chat_smartcreator_createoutline" >
+   <data id="chat_smartcreator_renderoutline" aiskill="renderLocalTemplateSkill" automationscenario="chat_smartcreator" enabled="true" processingmessage="Rendering Outline" runafter="chat_smartcreator_createoutline">
       <name>
          <language id="en"><![CDATA[Render Outline]]></language>
       </name>
@@ -52,7 +48,7 @@
       <name>
          <language id="en"><![CDATA[Smart Creator Confirmation]]></language>
       </name>
-   </data> 
+   </data>
 
 
    <data id="chat_smartcreator_createsections" aiskill="smartcreator_createsections" automationscenario="chat_smartcreator" enabled="true" runafter="chat_smartcreator_confirmation" processingmessage="Creating Sections">
@@ -62,10 +58,10 @@
    </data>
 
    <data id="chat_smartcreator_renderfinishedoutline" aiskill="smartCreatorRenderFinishedOutlineSkill" automationscenario="chat_smartcreator" enabled="true" runafter="chat_smartcreator_createsections" processingmessage="Rendering Finished Outline">
-       <name>
+      <name>
          <language id="en"><![CDATA[Render Finished Outline]]></language>
       </name>
    </data>
 
 
-   </records>
+</records>
