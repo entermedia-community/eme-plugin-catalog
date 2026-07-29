@@ -16,6 +16,7 @@ public void addMetadataWithAI(){
 	if (asset != null)
 	{
 		asset.setValue("llmerror", false);
+		asset.setValue("taggedbyllm", false);
 		archive.saveAsset(asset);
 		log.info("Processing individual asset:" + asset.getName());
 		informaticsManager.processAsset(log, asset);
