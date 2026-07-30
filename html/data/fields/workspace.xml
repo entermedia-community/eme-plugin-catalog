@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher"> 
-  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
-    <name> 
-      <language id="de"><![CDATA[Ich würde]]></language>  
-      <language id="en"><![CDATA[Id]]></language>  
-      <language id="es"><![CDATA[Carné de identidad]]></language>  
-      <language id="fr"><![CDATA[Id]]></language> 
-    </name> 
-  </property>  
-  <property id="name" editable="true" index="true" stored="true"> 
-    <name> 
-      <language id="de"><![CDATA[Name]]></language>  
-      <language id="en"><![CDATA[Name]]></language>  
-      <language id="es"><![CDATA[Nombre]]></language>  
-      <language id="fr"><![CDATA[Prénom]]></language> 
-    </name> 
-  </property>  
-  <property id="baseurl" index="true" stored="true" editable="true"> 
-    <name> 
-      <language id="de"><![CDATA[Base URL]]></language>  
-      <language id="en"><![CDATA[Base URL]]></language>  
-      <language id="es"><![CDATA[Base URL]]></language>  
-      <language id="fr"><![CDATA[Base URL]]></language> 
-    </name> 
-  </property>  
-  <property id="mediadbappid" editable="true" index="true" stored="true"> 
-    <name> 
-      <language id="de"><![CDATA[Name]]></language>  
-      <language id="en"><![CDATA[Name]]></language>  
-      <language id="es"><![CDATA[Nombre]]></language>  
-      <language id="fr"><![CDATA[Prénom]]></language> 
-    </name> 
-  </property>  
-  <property id="thumbnaillink" internalfield="false" index="true" stored="true" editable="false"> 
-    <name> 
-      <language id="en"><![CDATA[Thumbnail Link]]></language>  
+<properties beanname="folderSearcher">
+  <property id="id" internalfield="true" index="true" editable="true" stored="true">
+    <name>
+      <language id="de"><![CDATA[Ich würde]]></language>
+      <language id="en"><![CDATA[Id]]></language>
+      <language id="es"><![CDATA[Carné de identidad]]></language>
+      <language id="fr"><![CDATA[Id]]></language>
+    </name>
+  </property>
+  <property id="name" editable="true" index="true" stored="true">
+    <name>
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="en"><![CDATA[Name]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+      <language id="fr"><![CDATA[Prénom]]></language>
+    </name>
+  </property>
+  <property id="baseurl" index="true" stored="true" editable="true">
+    <name>
+      <language id="de"><![CDATA[Base URL]]></language>
+      <language id="en"><![CDATA[Base URL]]></language>
+      <language id="es"><![CDATA[Base URL]]></language>
+      <language id="fr"><![CDATA[Base URL]]></language>
+    </name>
+  </property>
+  <property id="mediadbappid" editable="true" index="true" stored="true">
+    <name>
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="en"><![CDATA[Name]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+      <language id="fr"><![CDATA[Prénom]]></language>
+    </name>
+  </property>
+  <property id="thumbnaillink" internalfield="false" index="true" stored="true" editable="false">
+    <name>
+      <language id="en"><![CDATA[Thumbnail Link]]></language>
       <language id="de"><![CDATA[Thumbnail-Link]]></language>
       <language id="fr"><![CDATA[Lien vers l'image de prévisualisation]]></language>
       <language id="es"><![CDATA[Enlace a la miniatura]]></language>
-    </name> 
-  </property> 
+    </name>
+  </property>
 </properties>
