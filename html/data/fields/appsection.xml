@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-
   <property id="id" editable="true" stored="true" index="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
@@ -16,33 +15,38 @@
       <language id="en"><![CDATA[Name]]></language>  
       <language id="es"><![CDATA[Nombre]]></language>  
       <language id="fr"><![CDATA[Prénom]]></language> 
-    </name>
-   </property>
-   
+    </name> 
+  </property>  
   <property id="toplevelentity" editable="true" index="true" stored="true" viewtype="list" datatype="list" listid="module" type="list"> 
     <name> 
       <language id="en"><![CDATA[Menu Entity]]></language>  
+      <language id="de"><![CDATA[Menü-Entität]]></language>
+      <language id="fr"><![CDATA[Entité de menu]]></language>
+      <language id="es"><![CDATA[Entidad de menú]]></language>
     </name> 
   </property>  
-  
-
   <property id="custompath" editable="true" stored="true" index="true"> 
     <name> 
       <language id="en"><![CDATA[Custom Path]]></language>  
-    </name>
-   </property>
-   
-     <property id="datarendertype" editable="true" index="true" stored="true" note="Gallery,Table,Tree"> 
+      <language id="de"><![CDATA[Benutzerdefinierter Pfad]]></language>
+      <language id="fr"><![CDATA[Chemin personnalisé]]></language>
+      <language id="es"><![CDATA[Ruta personalizada]]></language>
+    </name> 
+  </property>  
+  <property id="datarendertype" editable="true" index="true" stored="true" note="Gallery,Table,Tree"> 
     <name> 
       <language id="en"><![CDATA[Render Type]]></language>  
+      <language id="de"><![CDATA[Rendertyp]]></language>
+      <language id="fr"><![CDATA[Type de rendu]]></language>
+      <language id="es"><![CDATA[Tipo de renderizado]]></language>
+    </name> 
+  </property>  
+  <property id="ordering" type="number" editable="true" index="true" stored="true" autoincrement="true">Ordering 
+    <name> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property> 
-  <property id="ordering" type="number" editable="true" index="true" stored="true" autoincrement="true">Ordering
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
 </properties>

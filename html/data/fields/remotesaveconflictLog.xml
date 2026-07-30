@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New
-    <name>
-      <language id="de"><![CDATA[Id]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Id]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
-  
-  <property id="pulltime" editable="true" index="true" stored="true" datatype="date" viewtype="time" type="date"> 
+  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
     <name> 
-		<language id="en"><![CDATA[pulltime]]></language>
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  
-  <property id="localsource" index="true" deleted="false" editable="true" stored="true">
+  <property id="pulltime" editable="true" index="true" stored="true" datatype="date" viewtype="time" type="date"> 
     <name> 
-      <language id="en"><![CDATA[localsource]]></language> 
+      <language id="en"><![CDATA[pulltime]]></language>  
+      <language id="de"><![CDATA[Pulltime]]></language>
+      <language id="fr"><![CDATA[Pulltime]]></language>
+      <language id="es"><![CDATA[Pulltime]]></language>
+    </name> 
+  </property>  
+  <property id="localsource" index="true" deleted="false" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[localsource]]></language>  
+      <language id="de"><![CDATA[Lokalsource]]></language>
+      <language id="fr"><![CDATA[Source locale]]></language>
+      <language id="es"><![CDATA[fuente local]]></language>
     </name> 
   </property>  
   <property id="localrecordstatus" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[localrecordstatus]]></language> 
+      <language id="en"><![CDATA[localrecordstatus]]></language>  
+      <language id="de"><![CDATA[Lokaler Aufzeichnungsstatus]]></language>
+      <language id="fr"><![CDATA[statut des enregistrements locaux]]></language>
+      <language id="es"><![CDATA[estado de los registros locales]]></language>
     </name> 
   </property>  
   <property id="dataid" index="true" deleted="false" datatype="list" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Data ID]]></language> 
+      <language id="en"><![CDATA[Data ID]]></language>  
+      <language id="de"><![CDATA[Daten-ID]]></language>
+      <language id="fr"><![CDATA[ID des données]]></language>
+      <language id="es"><![CDATA[ID de datos]]></language>
     </name> 
   </property>  
   <property id="remotesource" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[remotesource]]></language> 
+      <language id="en"><![CDATA[remotesource]]></language>  
+      <language id="de"><![CDATA[Remotequelle]]></language>
+      <language id="fr"><![CDATA[RemoteSource]]></language>
+      <language id="es"><![CDATA[remotesource]]></language>
     </name> 
   </property>  
   <property id="searchtype" index="true" deleted="false" editable="true" stored="true"> 
@@ -46,12 +59,18 @@
   </property>  
   <property id="masternodeid" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[masternodeid]]></language> 
+      <language id="en"><![CDATA[masternodeid]]></language>  
+      <language id="de"><![CDATA[Masternode-ID]]></language>
+      <language id="fr"><![CDATA[masternodeid]]></language>
+      <language id="es"><![CDATA[en el caso del masternode]]></language>
     </name> 
   </property>  
   <property id="remoterecordstatus" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[remoterecordstatus]]></language> 
+      <language id="en"><![CDATA[remoterecordstatus]]></language>  
+      <language id="de"><![CDATA[Remote-Aufzeichnungsstatus]]></language>
+      <language id="fr"><![CDATA[statut de l'enregistrement à distance]]></language>
+      <language id="es"><![CDATA[estado de la grabación remota]]></language>
     </name> 
-  </property>  
+  </property> 
 </properties>

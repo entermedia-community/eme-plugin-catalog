@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"  >Id 
+  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -10,18 +9,24 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true"  > 
+  <property id="name" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Description]]></language>  
       <language id="en"><![CDATA[Descripción]]></language>  
+      <language id="de"><![CDATA[Beschreibung]]></language>
+      <language id="fr"><![CDATA[Description]]></language>
+      <language id="es"><![CDATA[Descripción]]></language>
     </name> 
   </property>  
-   <property id="collectionid" required="true" index="true" stored="true" editable="true"  type="list" viewtype="autocomplete" listid="librarycollection" datatype="list" > 
+  <property id="collectionid" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Collection]]></language>  
+      <language id="de"><![CDATA[Sammlung]]></language>
+      <language id="fr"><![CDATA[Collection]]></language>
+      <language id="es"><![CDATA[Colección]]></language>
     </name> 
   </property>  
-  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -29,12 +34,15 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="projectgoal" required="true" index="true" stored="true" editable="true"  type="list" viewtype="autocomplete" datatype="list" > 
+  <property id="projectgoal" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Project Goal]]></language>  
+      <language id="de"><![CDATA[Projektziel]]></language>
+      <language id="fr"><![CDATA[Objectif du projet]]></language>
+      <language id="es"><![CDATA[Objetivo del proyecto]]></language>
     </name> 
   </property>  
-  <property id="taskstatus" index="true" stored="true" editable="true" type="list" viewtype="list"  datatype="list" >
+  <property id="taskstatus" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
     <name> 
       <language id="de"><![CDATA[Projekt-Status]]></language>  
       <language id="en"><![CDATA[Project Status]]></language>  
@@ -42,30 +50,39 @@
       <language id="fr"><![CDATA[Etat du projet]]></language> 
     </name> 
   </property>  
-  <property id="startedby" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="startedby" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Started By]]></language>  
+      <language id="de"><![CDATA[Erstellt von]]></language>
+      <language id="fr"><![CDATA[Initié par]]></language>
+      <language id="es"><![CDATA[Iniciado por]]></language>
     </name> 
   </property>  
-
-  <property id="startedon" index="true" stored="true" editable="true"  type="date" datatype="date" >
+  <property id="startedon" index="true" stored="true" editable="true" type="date" datatype="date"> 
     <name> 
       <language id="en"><![CDATA[Started Date]]></language>  
+      <language id="de"><![CDATA[Startdatum]]></language>
+      <language id="fr"><![CDATA[Date de début]]></language>
+      <language id="es"><![CDATA[Fecha de inicio]]></language>
     </name> 
   </property>  
-
-  <property id="projectdepartment" required="true" index="true" stored="true" editable="true"  listid="category" viewtype="multiselect" datatype="list" > 
+  <property id="projectdepartment" required="true" index="true" stored="true" editable="true" listid="category" viewtype="multiselect" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Departments]]></language>  
+      <language id="de"><![CDATA[Abteilungen]]></language>
+      <language id="fr"><![CDATA[Départements]]></language>
+      <language id="es"><![CDATA[Departamentos]]></language>
     </name> 
   </property>  
-  
-   <property id="projectdepartmentparents" index="true" stored="true" editable="true" viewtype="text"  datatype="list" >
+  <property id="projectdepartmentparents" index="true" stored="true" editable="true" viewtype="text" datatype="list"> 
     <name> 
-      <language id="en"><![CDATA[Parents]]></language>      </name> 
-  </property> 
-  
-  <property id="creationdate" index="true" stored="true" editable="true"  viewtype="datetime" type="date" >
+      <language id="en"><![CDATA[Parents]]></language>  
+      <language id="de"><![CDATA[Eltern]]></language>
+      <language id="fr"><![CDATA[Les parents]]></language>
+      <language id="es"><![CDATA[Los padres]]></language>
+    </name> 
+  </property>  
+  <property id="creationdate" index="true" stored="true" editable="true" viewtype="datetime" type="date"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -73,29 +90,31 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-
-  <property id="completedby" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="completedby" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Completed By]]></language>  
+      <language id="de"><![CDATA[Vervollständigt von:]]></language>
+      <language id="fr"><![CDATA[Complété par :]]></language>
+      <language id="es"><![CDATA[Completado por]]></language>
     </name> 
   </property>  
-
- <property id="completedon" index="true" internalfield="false" editable="true" isbadge="false" required="false" filter="false" multilanguage="false" datatype="date" stored="true" autocreatefromexif="false" writenametoexif="false">
-    <name>
-      <language id="de"><![CDATA[Erstellungsdatum]]></language>
-      <language id="en"><![CDATA[Completion Date]]></language>
-      <language id="es"><![CDATA[Fecha de creación]]></language>
-      <language id="fr"><![CDATA[Date de création]]></language>
-    </name>
-  </property>
-  <property id="completedurgent" index="true" stored="true" editable="true"  type="boolean" > 
+  <property id="completedon" index="true" internalfield="false" editable="true" isbadge="false" required="false" filter="false" multilanguage="false" datatype="date" stored="true" autocreatefromexif="false" writenametoexif="false"> 
+    <name> 
+      <language id="de"><![CDATA[Erstellungsdatum]]></language>  
+      <language id="en"><![CDATA[Completion Date]]></language>  
+      <language id="es"><![CDATA[Fecha de creación]]></language>  
+      <language id="fr"><![CDATA[Date de création]]></language> 
+    </name> 
+  </property>  
+  <property id="completedurgent" index="true" stored="true" editable="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Completed Urgent]]></language>  
+      <language id="de"><![CDATA[Abgeschlossen – Dringend]]></language>
+      <language id="fr"><![CDATA[Urgent complété]]></language>
+      <language id="es"><![CDATA[Completado con urgencia]]></language>
     </name> 
   </property>  
-
-   <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" 
-  		editable="true" filter="true"   sortable="true">Tags 
+  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true" sortable="true">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
@@ -103,59 +122,52 @@
       <language id="fr"><![CDATA[Tags]]></language> 
     </name> 
   </property>  
-
-	<property id="ordering" editable="false" index="true"
-		stored="true" datatype="number" viewtype="autoincrement"
-		indextype="not_analyzed">
-		Ordering
-	</property>
-
-
-  <property id="taskroles" index="true" stored="true" editable="true" datatype="nested" > 
-     <name> 
-      <language id="en"><![CDATA[Role Actions]]></language>  
-    </name> 
-	  <property id="actioncount" index="true" editable="true" stored="true" type="number"> 
-	    <name> 
-	      <language id="en"><![CDATA[Action Count]]></language> 
-	    </name> 
-	  </property>  
-	  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true"> 
-	    <name> 
-	      <language id="en"><![CDATA[Notes]]></language>  
-	    </name> 
-	  </property>  
-	  <property id="date" index="true" filter="false" datatype="date" editable="false" stored="true" sortable="true"> 
-	    <name> 
-	      <language id="de"><![CDATA[Datum]]></language>  
-	      <language id="en"><![CDATA[Date]]></language>  
-	      <language id="es"><![CDATA[Fecha]]></language>  
-	      <language id="fr"><![CDATA[Date]]></language> 
-	    </name> 
-	  </property>  
-	  <property id="collectiverole" index="true" stored="true" type="list"  editable="true">
-	  <name>
-	    <language id="en" > <![CDATA[Role]]> </language>
-	  </name>
-	  </property>
-	  
-	 <property id="roleuserid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="ordering" editable="false" index="true" stored="true" datatype="number" viewtype="autoincrement" indextype="not_analyzed">Ordering</property>  
+  <property id="taskroles" index="true" stored="true" editable="true" datatype="nested"> 
     <name> 
-      <language id="de"><![CDATA[Owner]]></language>  
-      <language id="en"><![CDATA[Owner]]></language>  
-      <language id="es"><![CDATA[Propietario]]></language>  
-      <language id="fr"><![CDATA[Propriétaire]]></language> 
-    </name> 
+      <language id="en"><![CDATA[Role Actions]]></language>  
+      <language id="de"><![CDATA[Rollenaktionen]]></language>
+      <language id="fr"><![CDATA[Actions des rôles]]></language>
+      <language id="es"><![CDATA[Acciones de rol]]></language>
+    </name>  
+    <property id="actioncount" index="true" editable="true" stored="true" type="number"> 
+      <name> 
+        <language id="en"><![CDATA[Action Count]]></language> 
+      </name> 
+    </property>  
+    <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true"> 
+      <name> 
+        <language id="en"><![CDATA[Notes]]></language> 
+      </name> 
+    </property>  
+    <property id="date" index="true" filter="false" datatype="date" editable="false" stored="true" sortable="true"> 
+      <name> 
+        <language id="de"><![CDATA[Datum]]></language>  
+        <language id="en"><![CDATA[Date]]></language>  
+        <language id="es"><![CDATA[Fecha]]></language>  
+        <language id="fr"><![CDATA[Date]]></language> 
+      </name> 
+    </property>  
+    <property id="collectiverole" index="true" stored="true" type="list" editable="true"> 
+      <name> 
+        <language id="en"> <![CDATA[Role]]> </language> 
+      </name> 
+    </property>  
+    <property id="roleuserid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
+      <name> 
+        <language id="de"><![CDATA[Owner]]></language>  
+        <language id="en"><![CDATA[Owner]]></language>  
+        <language id="es"><![CDATA[Propietario]]></language>  
+        <language id="fr"><![CDATA[Propriétaire]]></language> 
+      </name> 
+    </property> 
   </property>  
-	  
-	  
-  </property>  
-  
-  <property id="comment" index="true" stored="true" editable="true"  > 
+  <property id="comment" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Comment]]></language>  
       <language id="es"><![CDATA[Comentario]]></language>  
+      <language id="de"><![CDATA[Kommentar]]></language>
+      <language id="fr"><![CDATA[Comment]]></language>
     </name> 
-  </property>  
-
+  </property> 
 </properties>

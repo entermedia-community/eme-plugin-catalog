@@ -1,78 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher">
-
-  <property id="id" internalfield="true" index="true" editable="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Ich würde]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Carné de identidad]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
-  <property id="name" editable="true" index="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Name]]></language>
-      <language id="en"><![CDATA[Name]]></language>
-      <language id="es"><![CDATA[Nombre]]></language>
-      <language id="fr"><![CDATA[Prénom]]></language>
-    </name>
-  </property>
-   <property id="serverapikey" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Server Api Key]]></language>
-    </name>
-  </property>
-  <property id="serverroot" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Server Root]]></language>
-    </name>
-  </property>
-  <property id="serverpathprefix" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Base Path Pre Fix]]></language>
-    </name>
-  </property>
-  <property id="aifunctions" editable="true" index="true" type="list" listid="aifunction"  viewtype="multiselect" stored="true">
-    <name>
-      <language id="en"><![CDATA[AI Functions]]></language>
-    </name>
-  </property>
-
-  <property id="connectionbean" editable="true"  indextype="not_analyzed" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[LlmConnection Type]]></language>
-    </name>
-  </property>
-
-  <property id="modelname" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Model Name]]></language>
-    </name>
-  </property>
-
-  <property id="monitorspeed" editable="true" index="true" type="boolean" stored="true">
-    <name>
-      <language id="en"><![CDATA[Monitor Speed]]></language>
-    </name>
-  </property>
-
-  
-  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
-
-  
-    <property id="aiservertype" editable="true" index="true" stored="true" type="list">
-      <name>
-        <language id="en"><![CDATA[AI Server Type]]></language>
-      </name>
-
-    </property>
-    
+<properties beanname="folderSearcher"> 
+  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Ich würde]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Carné de identidad]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
+  <property id="name" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Name]]></language>  
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="es"><![CDATA[Nombre]]></language>  
+      <language id="fr"><![CDATA[Prénom]]></language> 
+    </name> 
+  </property>  
+  <property id="serverapikey" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Server Api Key]]></language>  
+      <language id="de"><![CDATA[Server-API-Schlüssel]]></language>
+      <language id="fr"><![CDATA[Clé API du serveur]]></language>
+      <language id="es"><![CDATA[Clave de API del servidor]]></language>
+    </name> 
+  </property>  
+  <property id="serverroot" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Server Root]]></language>  
+      <language id="de"><![CDATA[Server-Root]]></language>
+      <language id="fr"><![CDATA[Racine du serveur]]></language>
+      <language id="es"><![CDATA[Raíz del servidor]]></language>
+    </name> 
+  </property>  
+  <property id="serverpathprefix" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Base Path Pre Fix]]></language>  
+      <language id="de"><![CDATA[Basispfad Präfix]]></language>
+      <language id="fr"><![CDATA[Préfixe du chemin de base]]></language>
+      <language id="es"><![CDATA[Prefijo de la ruta base]]></language>
+    </name> 
+  </property>  
+  <property id="aifunctions" editable="true" index="true" type="list" listid="aifunction" viewtype="multiselect" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[AI Functions]]></language>  
+      <language id="de"><![CDATA[KI-Funktionen]]></language>
+      <language id="fr"><![CDATA[Fonctions de l'IA]]></language>
+      <language id="es"><![CDATA[Funciones de la IA]]></language>
+    </name> 
+  </property>  
+  <property id="connectionbean" editable="true" indextype="not_analyzed" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[LlmConnection Type]]></language>  
+      <language id="de"><![CDATA[LLM-Verbindungstyp]]></language>
+      <language id="fr"><![CDATA[Type de connexion LLM]]></language>
+      <language id="es"><![CDATA[Tipo de conexión LLM]]></language>
+    </name> 
+  </property>  
+  <property id="modelname" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Model Name]]></language>  
+      <language id="de"><![CDATA[Modellname]]></language>
+      <language id="fr"><![CDATA[Nom du modèle]]></language>
+      <language id="es"><![CDATA[Nombre del modelo]]></language>
+    </name> 
+  </property>  
+  <property id="monitorspeed" editable="true" index="true" type="boolean" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Monitor Speed]]></language>  
+      <language id="de"><![CDATA[Geschwindigkeit]]></language>
+      <language id="fr"><![CDATA[Vitesse]]></language>
+      <language id="es"><![CDATA[Velocidad de monitor]]></language>
+    </name> 
+  </property>  
+  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 
+    <name> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
+    </name> 
+  </property>  
+  <property id="aiservertype" editable="true" index="true" stored="true" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[AI Server Type]]></language>  
+      <language id="de"><![CDATA[KI-Server-Typ]]></language>
+      <language id="fr"><![CDATA[Type de serveur IA]]></language>
+      <language id="es"><![CDATA[Tipo de servidor de IA]]></language>
+    </name> 
+  </property> 
 </properties>

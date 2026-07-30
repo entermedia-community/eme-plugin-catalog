@@ -1,47 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties prefix="entityperson" beanname="dataSearcher">
-
-  <property id="name" index="true" stored="true" multilanguage="false" rendermask="${data.firstName} ${data.lastName}" editable="false">
-    <name>
-      <language id="en"><![CDATA[Label]]></language>
-    </name>
-  </property>
-
-  <property id="firstName" index="true" editable="true" viewtype="text" rendertype="text" keyword="true">
-    <name>
-      <language id="en"><![CDATA[First Name]]></language>
-    </name>
-  </property>
-
-  <property id="lastName" index="true" editable="true" viewtype="text" rendertype="text" keyword="true">
-    <name>
-      <language id="en"><![CDATA[Last Name]]></language>
-    </name>
-  </property>
-
-  <property id="contact_type" index="true" editable="true" viewtype="multiselect" rendertype="multiselect" datatype="list">
-    <name>
-      <language id="en"><![CDATA[Contact Type]]></language>
-    </name>
-  </property>
-
-  <property id="contact_email" index="true" editable="true" viewtype="text" rendertype="text" keyword="true" indextype="not_analyzed">
-    <name>
-      <language id="en"><![CDATA[Contact Email]]></language>
-    </name>
-  </property>
-
-  <property id="contact_phone" index="true" editable="true">
-    <name>
-      <language id="en"><![CDATA[Contact Phone]]></language>
-    </name>
-  </property>
-
-  <property id="contact_title" index="true" editable="true" viewtype="text" rendertype="text">
-    <name>
-      <language id="en"><![CDATA[Contact Title]]></language>
-    </name>
-  </property>
-
+<properties prefix="entityperson" beanname="dataSearcher"> 
+  <property id="name" index="true" stored="true" multilanguage="false" rendermask="${data.firstName} ${data.lastName}" editable="false"> 
+    <name> 
+      <language id="en"><![CDATA[Label]]></language>  
+      <language id="de"><![CDATA[Etikett]]></language>
+      <language id="fr"><![CDATA[Étiquette]]></language>
+      <language id="es"><![CDATA[Etiqueta]]></language>
+    </name> 
+  </property>  
+  <property id="firstName" index="true" editable="true" viewtype="text" rendertype="text" keyword="true"> 
+    <name> 
+      <language id="en"><![CDATA[First Name]]></language>  
+      <language id="de"><![CDATA[Vorname]]></language>
+      <language id="fr"><![CDATA[Prénom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+    </name> 
+  </property>  
+  <property id="lastName" index="true" editable="true" viewtype="text" rendertype="text" keyword="true"> 
+    <name> 
+      <language id="en"><![CDATA[Last Name]]></language>  
+      <language id="de"><![CDATA[Nachname]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Apellido]]></language>
+    </name> 
+  </property>  
+  <property id="contact_type" index="true" editable="true" viewtype="multiselect" rendertype="multiselect" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Contact Type]]></language>  
+      <language id="de"><![CDATA[Kontaktart]]></language>
+      <language id="fr"><![CDATA[Type de contact]]></language>
+      <language id="es"><![CDATA[Tipo de contacto]]></language>
+    </name> 
+  </property>  
+  <property id="contact_email" index="true" editable="true" viewtype="text" rendertype="text" keyword="true" indextype="not_analyzed"> 
+    <name> 
+      <language id="en"><![CDATA[Contact Email]]></language>  
+      <language id="de"><![CDATA[Kontakt-E-Mail]]></language>
+      <language id="fr"><![CDATA[Courriel de contact]]></language>
+      <language id="es"><![CDATA[Correo electrónico de contacto]]></language>
+    </name> 
+  </property>  
+  <property id="contact_phone" index="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Contact Phone]]></language>  
+      <language id="de"><![CDATA[Kontakttelefon]]></language>
+      <language id="fr"><![CDATA[Téléphone de contact]]></language>
+      <language id="es"><![CDATA[Teléfono de contacto]]></language>
+    </name> 
+  </property>  
+  <property id="contact_title" index="true" editable="true" viewtype="text" rendertype="text"> 
+    <name> 
+      <language id="en"><![CDATA[Contact Title]]></language>  
+      <language id="de"><![CDATA[Kontaktbezeichnung]]></language>
+      <language id="fr"><![CDATA[Titre du contact]]></language>
+      <language id="es"><![CDATA[Título de contacto]]></language>
+    </name> 
+  </property> 
 </properties>

@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="ethnicity" index="true" keyword="true" stored="false" editable="true" type="list">New
+  <property id="ethnicity" index="true" keyword="true" stored="false" editable="true" type="list">New 
     <name> 
-      <language id="en"><![CDATA[ethnicity]]></language> 
+      <language id="en"><![CDATA[ethnicity]]></language>  
+      <language id="de"><![CDATA[Ethnizität]]></language>
+      <language id="fr"><![CDATA[origine ethnique]]></language>
+      <language id="es"><![CDATA[etnia]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" keyword="true" stored="false" editable="true">New
+  <property id="name" index="true" keyword="true" stored="false" editable="true">New 
     <name> 
-      <language id="en"><![CDATA[name]]></language> 
+      <language id="en"><![CDATA[name]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[nom]]></language>
+      <language id="es"><![CDATA[nombre]]></language>
     </name> 
   </property>  
-  <property id="id" index="true" keyword="true" stored="false" editable="true">New
-    <name>
-      <language id="en"><![CDATA[id]]></language>
-    </name>
-  </property>
+  <property id="id" index="true" keyword="true" stored="false" editable="true">New 
+    <name> 
+      <language id="en"><![CDATA[id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[ID]]></language>
+      <language id="es"><![CDATA[id]]></language>
+    </name> 
+  </property> 
 </properties>

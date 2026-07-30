@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<properties>
-  <property id="tutorialskill" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="tutorialskill">
-    <name>
-      <language id="en">Tutorial Skills</language>
-    </name>
-  </property>
+
+<properties> 
+  <property id="tutorialskill" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="tutorialskill"> 
+    <name> 
+      <language id="en">Tutorial Skills</language>  
+      <language id="de"><![CDATA[Tutorialskills]]></language>
+      <language id="fr"><![CDATA[Compétences de tutorat]]></language>
+      <language id="es"><![CDATA[Habilidades de tutor]]></language>
+    </name> 
+  </property> 
 </properties>

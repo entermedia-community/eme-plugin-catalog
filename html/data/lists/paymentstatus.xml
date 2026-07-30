@@ -1,52 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
-	<data id="sendinvoice">
-	    <name> 
-      <language id="en"><![CDATA[Sending Invoice]]></language> 
-      <language id="es"><![CDATA[Enviando Factura]]></language>
+<root> 
+  <data id="sendinvoice"> 
+    <name> 
+      <language id="en"><![CDATA[Sending Invoice]]></language>  
+      <language id="es"><![CDATA[Enviando Factura]]></language>  
+      <language id="de"><![CDATA[Rechnung versenden]]></language>
+      <language id="fr"><![CDATA[Envoi de la facture]]></language>
     </name> 
-    </data>
-	<data id="pending">
-	<name> 
-      <language id="en"><![CDATA[Pending]]></language> 
-      <language id="es"><![CDATA[Pendiente]]></language>
-    </name>
-    </data>
-	<data id="invoiced">
-		<name> 
-      <language id="en"><![CDATA[Invoiced]]></language> 
-      <language id="es"><![CDATA[Facturada]]></language>
-    </name>
-	</data>
-	<data id="paid">
-		<name> 
-      <language id="en"><![CDATA[Paid]]></language> 
-      <language id="es"><![CDATA[Pagada]]></language>
-    </name>
-	</data>
-	<data id="autopayfailed">
-		<name> 
-      <language id="en"><![CDATA[Auto Payment Failed]]></language> 
-      <language id="es"><![CDATA[Falló Cargo Automático]]></language>
-    </name>
-	</data>
-	<data id="canceled">
-		<name> 
-      <language id="en"><![CDATA[Canceled]]></language> 
-      <language id="es"><![CDATA[Cancelada]]></language>
-    </name>
-	</data>	
-	<data id="completed">
-		<name> 
-      <language id="en"><![CDATA[Completed]]></language> 
-      <language id="es"><![CDATA[Completada]]></language>
-    </name>
-	</data>
-	<data id="error">
-		<name> 
-      <language id="en"><![CDATA[Error]]></language> 
-      <language id="es"><![CDATA[Error]]></language>
-    </name>
-	</data>
+  </data>  
+  <data id="pending"> 
+    <name> 
+      <language id="en"><![CDATA[Pending]]></language>  
+      <language id="es"><![CDATA[Pendiente]]></language>  
+      <language id="de"><![CDATA[Ausstehend]]></language>
+      <language id="fr"><![CDATA[En attente]]></language>
+    </name> 
+  </data>  
+  <data id="invoiced"> 
+    <name> 
+      <language id="en"><![CDATA[Invoiced]]></language>  
+      <language id="es"><![CDATA[Facturada]]></language>  
+      <language id="de"><![CDATA[Rechnung gestellt]]></language>
+      <language id="fr"><![CDATA[Facturé]]></language>
+    </name> 
+  </data>  
+  <data id="paid"> 
+    <name> 
+      <language id="en"><![CDATA[Paid]]></language>  
+      <language id="es"><![CDATA[Pagada]]></language>  
+      <language id="de"><![CDATA[Bezahlt]]></language>
+      <language id="fr"><![CDATA[Payé]]></language>
+    </name> 
+  </data>  
+  <data id="autopayfailed"> 
+    <name> 
+      <language id="en"><![CDATA[Auto Payment Failed]]></language>  
+      <language id="es"><![CDATA[Falló Cargo Automático]]></language>  
+      <language id="de"><![CDATA[Automatische Zahlung fehlgeschlagen]]></language>
+      <language id="fr"><![CDATA[Le paiement automatique a échoué]]></language>
+    </name> 
+  </data>  
+  <data id="canceled"> 
+    <name> 
+      <language id="en"><![CDATA[Canceled]]></language>  
+      <language id="es"><![CDATA[Cancelada]]></language>  
+      <language id="de"><![CDATA[Abgesagt]]></language>
+      <language id="fr"><![CDATA[Annulé]]></language>
+    </name> 
+  </data>  
+  <data id="completed"> 
+    <name> 
+      <language id="en"><![CDATA[Completed]]></language>  
+      <language id="es"><![CDATA[Completada]]></language>  
+      <language id="de"><![CDATA[Abgeschlossen]]></language>
+      <language id="fr"><![CDATA[Terminé]]></language>
+    </name> 
+  </data>  
+  <data id="error"> 
+    <name> 
+      <language id="en"><![CDATA[Error]]></language>  
+      <language id="es"><![CDATA[Error]]></language>  
+      <language id="de"><![CDATA[Fehler]]></language>
+      <language id="fr"><![CDATA[Erreur]]></language>
+    </name> 
+  </data> 
 </root>

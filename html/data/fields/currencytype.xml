@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
-<property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+<properties> 
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
       <language id="es"><![CDATA[Id]]></language>  
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
-  </property> 
-  
-  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name
+  </property>  
+  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -18,25 +17,28 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-   
-   <property id="exchangetousd" index="true" editable="true" stored="true" type="double">
+  <property id="exchangetousd" index="true" editable="true" stored="true" type="double"> 
     <name> 
-      <language id="en"><![CDATA[Exchange To USD]]></language> 
+      <language id="en"><![CDATA[Exchange To USD]]></language>  
+      <language id="de"><![CDATA[Umtausch in USD]]></language>
+      <language id="fr"><![CDATA[Échange vers USD]]></language>
+      <language id="es"><![CDATA[Conversión a USD]]></language>
     </name> 
-  </property> 
-  
+  </property>  
   <property id="currencycode" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Code]]></language>  
+      <language id="de"><![CDATA[Code]]></language>
+      <language id="fr"><![CDATA[Le code]]></language>
+      <language id="es"><![CDATA[Código]]></language>
     </name> 
-  </property> 
-   
-
+  </property>  
   <property id="currencysymbol" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Symbol]]></language>  
+      <language id="de"><![CDATA[Symbol]]></language>
+      <language id="fr"><![CDATA[Symbole]]></language>
+      <language id="es"><![CDATA[Símbolo]]></language>
     </name> 
   </property> 
-   
-   
 </properties>

@@ -3,17 +3,26 @@
 <root> 
   <data id="active"> 
     <name> 
-      <language id="en"><![CDATA[Active]]></language> 
-    </name> 
-  </data>
-  <data id="disabled"> 
-    <name> 
-      <language id="en"><![CDATA[Non-Active]]></language> 
-    </name> 
-  </data>
-  <data id="closed"> 
-    <name> 
-      <language id="en"><![CDATA[Closed]]></language> 
+      <language id="en"><![CDATA[Active]]></language>  
+      <language id="de"><![CDATA[Aktiv]]></language>
+      <language id="fr"><![CDATA[Actif]]></language>
+      <language id="es"><![CDATA[Activo]]></language>
     </name> 
   </data>  
-  </root>
+  <data id="disabled"> 
+    <name> 
+      <language id="en"><![CDATA[Non-Active]]></language>  
+      <language id="de"><![CDATA[Nicht aktiv]]></language>
+      <language id="fr"><![CDATA[Non actif]]></language>
+      <language id="es"><![CDATA[No activo]]></language>
+    </name> 
+  </data>  
+  <data id="closed"> 
+    <name> 
+      <language id="en"><![CDATA[Closed]]></language>  
+      <language id="de"><![CDATA[Geschlossen]]></language>
+      <language id="fr"><![CDATA[Fermé]]></language>
+      <language id="es"><![CDATA[Cerrado]]></language>
+    </name> 
+  </data> 
+</root>

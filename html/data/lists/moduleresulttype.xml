@@ -1,16 +1,20 @@
-<properties>
-	<property id="table" >
-	<name> 
-	      <language id="en"><![CDATA[Table]]></language>  
-	      <language id="es"><![CDATA[Tabla]]></language>
-	      <language id="de"><![CDATA[Tabelle]]></language>
-    </name>
-	</property>
-	<property id="brickvertical" >
-	
-	<name> 
-	      <language id="en"><![CDATA[Columns]]></language> 
-	</name>
-	</property>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<properties> 
+  <property id="table"> 
+    <name> 
+      <language id="en"><![CDATA[Table]]></language>  
+      <language id="es"><![CDATA[Tabla]]></language>  
+      <language id="de"><![CDATA[Tabelle]]></language>  
+      <language id="fr"><![CDATA[Tableau]]></language>
+    </name> 
+  </property>  
+  <property id="brickvertical"> 
+    <name> 
+      <language id="en"><![CDATA[Columns]]></language>  
+      <language id="de"><![CDATA[Spalten]]></language>
+      <language id="fr"><![CDATA[Colonnes]]></language>
+      <language id="es"><![CDATA[Columnas]]></language>
+    </name> 
+  </property> 
 </properties>

@@ -8,15 +8,15 @@
       <language id="es"><![CDATA[identificación]]></language>  
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
-  </property>
-  <property id="operation" index="true" indextype="not_analyzed" stored="true">
-    <name>
-      <language id="de"><![CDATA[Betrieb]]></language>
-      <language id="en"><![CDATA[Operation]]></language>
-      <language id="es"><![CDATA[Operación]]></language>
-      <language id="fr"><![CDATA[Opération]]></language>
-    </name>
-  </property>
+  </property>  
+  <property id="operation" index="true" indextype="not_analyzed" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Betrieb]]></language>  
+      <language id="en"><![CDATA[Operation]]></language>  
+      <language id="es"><![CDATA[Operación]]></language>  
+      <language id="fr"><![CDATA[Opération]]></language> 
+    </name> 
+  </property>  
   <property id="user" index="true" viewtype="user" stored="true" type="list" editable="false">User Name 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
@@ -33,18 +33,16 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="assetid" index="true" type="list" stored="true" editable="false" viewtype="asset">Asset 
-   
+  <property id="assetid" index="true" type="list" stored="true" editable="false" viewtype="asset">Asset</property>  
+  <property id="date" datatype="date" searchcomponent="datesearch" index="true" stored="true" filter="true" editable="false" viewtype="datetime">Date 
+    <name> 
+      <language id="de"><![CDATA[Datum]]></language>  
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="es"><![CDATA[Fecha]]></language>  
+      <language id="fr"><![CDATA[Date]]></language> 
+    </name> 
   </property>  
-  <property id="date" datatype="date" searchcomponent="datesearch" index="true" stored="true" filter="true" editable="false"  viewtype="datetime">Date
-    <name>
-      <language id="de"><![CDATA[Datum]]></language>
-      <language id="en"><![CDATA[Date]]></language>
-      <language id="es"><![CDATA[Fecha]]></language>
-      <language id="fr"><![CDATA[Date]]></language>
-    </name>
-  </property> 
-   <property id="catalogid" index="true" stored="true" editable="true">New 
+  <property id="catalogid" index="true" stored="true" editable="true">New 
     <name> 
       <language id="de"><![CDATA[CatalogID]]></language>  
       <language id="en"><![CDATA[CatalogID]]></language>  
@@ -52,7 +50,7 @@
       <language id="fr"><![CDATA[CatalogID]]></language> 
     </name> 
   </property>  
-<property id="details" index="true" stored="true" editable="false">Details 
+  <property id="details" index="true" stored="true" editable="false">Details 
     <name> 
       <language id="de"><![CDATA[Details]]></language>  
       <language id="en"><![CDATA[Details]]></language>  
@@ -60,19 +58,20 @@
       <language id="fr"><![CDATA[Détails]]></language> 
     </name> 
   </property>  
-  
   <property id="detailsjson" index="true" stored="true" editable="false">Details 
     <name> 
       <language id="de"><![CDATA[Details Json]]></language>  
       <language id="en"><![CDATA[Details Json]]></language>  
+      <language id="fr"><![CDATA[Détails JSON]]></language>
+      <language id="es"><![CDATA[Detalles JSON]]></language>
     </name> 
   </property>  
-  
   <property id="viewid" index="true" stored="true" editable="true">New 
     <name> 
       <language id="de"><![CDATA[View Id]]></language>  
       <language id="en"><![CDATA[View Id]]></language>  
+      <language id="fr"><![CDATA[Voir l'ID]]></language>
+      <language id="es"><![CDATA[ID de visualización]]></language>
     </name> 
-  </property>   
-  
+  </property> 
 </properties>

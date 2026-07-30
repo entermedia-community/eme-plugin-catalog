@@ -51,13 +51,14 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès externe]]></language> 
     </name> 
   </property>  
-  
   <property id="userlocaldesktoppath" editable="true" index="true" stored="true">External Path 
     <name> 
       <language id="en"><![CDATA[User Local Path]]></language>  
+      <language id="de"><![CDATA[Lokaler Pfad des Benutzers]]></language>
+      <language id="fr"><![CDATA[Chemin local de l'utilisateur]]></language>
+      <language id="es"><![CDATA[Ruta local del usuario]]></language>
     </name> 
-  </property>
- 
+  </property>  
   <!-- Amazon S3 -->  
   <property id="bucket" editable="true" index="true" stored="true">Bucket 
     <name> 
@@ -131,41 +132,34 @@
       <language id="fr"><![CDATA[Dernière analyse]]></language> 
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
-   <property id="refreshtoken" index="true" stored="true" editable="true">OAUTH refresh token 
-   
+  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 
+    <name> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
+    </name> 
   </property>  
-  
-   <property id="expiresin" index="true" stored="true" editable="true" type="long" datatype="long">OAUTH refresh expiration
-   
-  </property> 
-  
-  
-   <property id="httprequesttoken" index="true" stored="true" editable="true">HTTP Temp token 
-   
-  </property>  
-  <property id="accesstokentime" type="date" index="true" stored="true" editable="true">Access Token Creation Time 
-   
-  </property>  
+  <property id="refreshtoken" index="true" stored="true" editable="true">OAUTH refresh token</property>  
+  <property id="expiresin" index="true" stored="true" editable="true" type="long" datatype="long">OAUTH refresh expiration</property>  
+  <property id="httprequesttoken" index="true" stored="true" editable="true">HTTP Temp token</property>  
+  <property id="accesstokentime" type="date" index="true" stored="true" editable="true">Access Token Creation Time</property>  
   <property id="runwithinperiod" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Target Period]]></language>  
+      <language id="de"><![CDATA[Zielzeitraum]]></language>
+      <language id="fr"><![CDATA[Période cible]]></language>
+      <language id="es"><![CDATA[Período objetivo]]></language>
     </name> 
   </property>  
-  
-	<property id="syncroot" index="true" stored="true" editable="true">
-	<name> 
+  <property id="syncroot" index="true" stored="true" editable="true"> 
+    <name> 
       <language id="en"><![CDATA[Sub Directory]]></language>  
-    </name>
-	</property>  
-    
+      <language id="de"><![CDATA[Unterverzeichnis]]></language>
+      <language id="fr"><![CDATA[Sous-répertoire]]></language>
+      <language id="es"><![CDATA[Subdirectorio]]></language>
+    </name> 
+  </property>  
   <!-- Move to system settings -->  
   <!--    
   <property id="automatic" editable="true" index="true" stored="true" type="boolean">Automatic</property>

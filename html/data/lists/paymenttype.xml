@@ -3,21 +3,26 @@
 <root> 
   <data id="paypal"> 
     <name> 
-      <language id="en"><![CDATA[PayPal]]></language> 
-      <language id="es"><![CDATA[PayPal]]></language>
+      <language id="en"><![CDATA[PayPal]]></language>  
+      <language id="es"><![CDATA[PayPal]]></language>  
+      <language id="de"><![CDATA[PayPal]]></language>
+      <language id="fr"><![CDATA[PayPal]]></language>
     </name> 
   </data>  
   <data id="stripe"> 
-   <name> 
-      <language id="en"><![CDATA[Credit Card]]></language> 
-      <language id="es"><![CDATA[Tarjeta de Crédito]]></language>
+    <name> 
+      <language id="en"><![CDATA[Credit Card]]></language>  
+      <language id="es"><![CDATA[Tarjeta de Crédito]]></language>  
+      <language id="de"><![CDATA[Kreditkarte]]></language>
+      <language id="fr"><![CDATA[Carte de crédit]]></language>
     </name> 
   </data>  
   <data id="cash"> 
-   <name> 
-      <language id="en"><![CDATA[Cash]]></language> 
-      <language id="es"><![CDATA[Efectivo]]></language>
+    <name> 
+      <language id="en"><![CDATA[Cash]]></language>  
+      <language id="es"><![CDATA[Efectivo]]></language>  
+      <language id="de"><![CDATA[Bargeld]]></language>
+      <language id="fr"><![CDATA[Espèces]]></language>
     </name> 
-  </data>  
- 
+  </data> 
 </root>

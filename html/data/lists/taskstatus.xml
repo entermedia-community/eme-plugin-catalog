@@ -3,61 +3,82 @@
 <root> 
   <data id="0"> 
     <name> 
-      <language id="en"><![CDATA[Requested]]></language> 
-      <language id="es"><![CDATA[Solicitado]]></language>
+      <language id="en"><![CDATA[Requested]]></language>  
+      <language id="es"><![CDATA[Solicitado]]></language>  
+      <language id="de"><![CDATA[Geordert]]></language>
+      <language id="fr"><![CDATA[Demandé]]></language>
     </name> 
   </data>  
   <data id="1"> 
     <name> 
-      <language id="en"><![CDATA[Pending]]></language> 
-      <language id="es"><![CDATA[Pendiente]]></language>
+      <language id="en"><![CDATA[Pending]]></language>  
+      <language id="es"><![CDATA[Pendiente]]></language>  
+      <language id="de"><![CDATA[Ausstehend]]></language>
+      <language id="fr"><![CDATA[En attente]]></language>
     </name> 
   </data>  
   <data id="2"> 
     <name> 
-      <language id="en"><![CDATA[Blocked]]></language>
-      <language id="es"><![CDATA[Bloqueado]]></language> 
+      <language id="en"><![CDATA[Blocked]]></language>  
+      <language id="es"><![CDATA[Bloqueado]]></language>  
+      <language id="de"><![CDATA[Blockiert]]></language>
+      <language id="fr"><![CDATA[Bloqué]]></language>
     </name> 
   </data>  
   <data id="3"> 
     <name> 
-      <language id="en"><![CDATA[Completed]]></language>
-      <language id="es"><![CDATA[Terminado]]></language> 
+      <language id="en"><![CDATA[Completed]]></language>  
+      <language id="es"><![CDATA[Terminado]]></language>  
+      <language id="de"><![CDATA[Abgeschlossen]]></language>
+      <language id="fr"><![CDATA[Terminé]]></language>
     </name> 
   </data>  
   <data id="4"> 
     <name> 
-      <language id="en"><![CDATA[Redo]]></language> 
-      <language id="es"><![CDATA[Rehacer]]></language>
+      <language id="en"><![CDATA[Redo]]></language>  
+      <language id="es"><![CDATA[Rehacer]]></language>  
+      <language id="de"><![CDATA[Neuherstellung]]></language>
+      <language id="fr"><![CDATA[Refaire]]></language>
     </name> 
   </data>  
   <data id="5"> 
     <name> 
-      <language id="en"><![CDATA[Note]]></language> 
-      <language id="es"><![CDATA[Nota]]></language>
+      <language id="en"><![CDATA[Note]]></language>  
+      <language id="es"><![CDATA[Nota]]></language>  
+      <language id="de"><![CDATA[Anmerkung]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
     </name> 
   </data>  
   <data id="6"> 
     <name> 
-      <language id="en"><![CDATA[On Agenda]]></language>
-      <language id="es"><![CDATA[En Agenda]]></language> 
-    </name> 
-  </data>
-   <data id="7"> 
-    <name> 
-      <language id="en"><![CDATA[Urgent]]></language>
-      <language id="es"><![CDATA[Urgente]]></language> 
+      <language id="en"><![CDATA[On Agenda]]></language>  
+      <language id="es"><![CDATA[En Agenda]]></language>  
+      <language id="de"><![CDATA[Auf der Tagesordnung]]></language>
+      <language id="fr"><![CDATA[À l'ordre du jour]]></language>
     </name> 
   </data>  
-     <data id="readytostart"> 
+  <data id="7"> 
     <name> 
-      <language id="en"><![CDATA[Ready to Start]]></language>
+      <language id="en"><![CDATA[Urgent]]></language>  
+      <language id="es"><![CDATA[Urgente]]></language>  
+      <language id="de"><![CDATA[Dringend]]></language>
+      <language id="fr"><![CDATA[Urgent]]></language>
+    </name> 
+  </data>  
+  <data id="readytostart"> 
+    <name> 
+      <language id="en"><![CDATA[Ready to Start]]></language>  
+      <language id="es"><![CDATA[Listo para comenzar]]></language>  
+      <language id="de"><![CDATA[Bereit zum Start]]></language>
+      <language id="fr"><![CDATA[Prêt à commencer]]></language>
+    </name> 
+  </data>  
+  <data id="urgent"> 
+    <name> 
+      <language id="en"><![CDATA[Urgent]]></language>  
+      <language id="es"><![CDATA[Urgente.]]></language>  
+      <language id="de"><![CDATA[Dringend]]></language>
+      <language id="fr"><![CDATA[Urgent]]></language>
     </name> 
   </data> 
-     <data id="urgent"> 
-    <name> 
-      <language id="en"><![CDATA[Urgent]]></language>
-    </name> 
-  </data> 
-    
 </root>

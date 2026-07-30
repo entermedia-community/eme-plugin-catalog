@@ -17,9 +17,12 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="rotation" editable="true" stored="true" index="true">
-    <name>
-      <language id="en"><![CDATA[Rotation]]></language>
-    </name>
+  <property id="rotation" editable="true" stored="true" index="true"> 
+    <name> 
+      <language id="en"><![CDATA[Rotation]]></language>  
+      <language id="de"><![CDATA[Rotation]]></language>
+      <language id="fr"><![CDATA[Rotation]]></language>
+      <language id="es"><![CDATA[Rotación]]></language>
+    </name> 
   </property> 
 </properties>

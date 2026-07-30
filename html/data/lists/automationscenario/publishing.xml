@@ -1,9 +1,12 @@
-<records>
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <data id="publishing" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="publishlabel" chatenabled="false">
-    <name>
-      <language id="en"><![CDATA[Publish To Socials]]></language>
-    </name>
-  </data>
-
+<records> 
+  <data id="publishing" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="publishlabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Publish To Socials]]></language>  
+      <language id="de"><![CDATA[Veröffentlichen in sozialen Netzwerken]]></language>
+      <language id="fr"><![CDATA[Publier sur les réseaux sociaux]]></language>
+      <language id="es"><![CDATA[Publicar en redes sociales]]></language>
+    </name> 
+  </data> 
 </records>

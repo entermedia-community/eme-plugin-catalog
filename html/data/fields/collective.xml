@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"  > 
+  <property id="id" index="true" stored="true" editable="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -10,14 +9,15 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true"  > 
+  <property id="name" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
       <language id="es"><![CDATA[Nobre]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
     </name> 
   </property>  
-  
-    <property id="collectivedescription" index="true" stored="true" editable="true"   > 
+  <property id="collectivedescription" index="true" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Projektbeschreibung]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
@@ -25,29 +25,30 @@
       <language id="fr"><![CDATA[Description du projet]]></language> 
     </name> 
   </property>  
- 
-  <property id="collectivetags" viewtype="tageditor" defaultoperation="andgroup" index="true" stored="true" editable="true"  >User Tags 
-    <name>
-      <language id="de"><![CDATA[Nutzer-Tags]]></language>
-      <language id="en"><![CDATA[Hashtags]]></language>
-      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>
-      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language>
-    </name>
-  </property> 
- 
+  <property id="collectivetags" viewtype="tageditor" defaultoperation="andgroup" index="true" stored="true" editable="true">User Tags 
+    <name> 
+      <language id="de"><![CDATA[Nutzer-Tags]]></language>  
+      <language id="en"><![CDATA[Hashtags]]></language>  
+      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>  
+      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language> 
+    </name> 
+  </property>  
   <property id="facebooklink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Facebook]]></language>  
+      <language id="de"><![CDATA[Facebook]]></language>
+      <language id="fr"><![CDATA[Facebook]]></language>
+      <language id="es"><![CDATA[Facebook]]></language>
     </name> 
   </property>  
   <property id="websitelink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Web Site]]></language>  
+      <language id="de"><![CDATA[Webseite]]></language>
+      <language id="fr"><![CDATA[Site Web]]></language>
+      <language id="es"><![CDATA[Sitio web]]></language>
     </name> 
   </property>  
-
-  	<property id="contactemail" index="true" stored="true" keyword="true" editable="true"  indextype="not_analyzed">Email</property>
-  	<property id="contactphone" index="true" stored="true" keyword="true" editable="true"  >Phone</property>
-  
-  
+  <property id="contactemail" index="true" stored="true" keyword="true" editable="true" indextype="not_analyzed">Email</property>  
+  <property id="contactphone" index="true" stored="true" keyword="true" editable="true">Phone</property> 
 </properties>

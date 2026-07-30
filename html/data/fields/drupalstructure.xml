@@ -17,24 +17,28 @@
       <language id="fr"><![CDATA[Surnom]]></language> 
     </name> 
   </property>  
-  
   <property id="structure" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Structure]]></language>  
+      <language id="de"><![CDATA[Struktur]]></language>
+      <language id="fr"><![CDATA[Structure]]></language>
+      <language id="es"><![CDATA[Estructura]]></language>
     </name> 
   </property>  
-  
   <property id="drupalstructuretype" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Structure Type]]></language>  
+      <language id="de"><![CDATA[Strukturtyp]]></language>
+      <language id="fr"><![CDATA[Type de structure]]></language>
+      <language id="es"><![CDATA[Tipo de estructura]]></language>
     </name> 
   </property>  
-  
   <property id="structuremaintext" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Main Text]]></language>  
+      <language id="de"><![CDATA[Haupttext]]></language>
+      <language id="fr"><![CDATA[Texte principal]]></language>
+      <language id="es"><![CDATA[Texto principal]]></language>
     </name> 
-  </property>  
-  
-  
-  </properties>
+  </property> 
+</properties>

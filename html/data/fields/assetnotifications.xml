@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"  >Id 
+  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -10,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="creationdate" index="true" stored="true" editable="true"  type="date" datatype="date" >
+  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -18,7 +17,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="userid" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" keyword="true" stored="true" editable="true" > 
+  <property id="userid" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -33,10 +32,13 @@
       <language id="es"><![CDATA[identificación del activo]]></language>  
       <language id="fr"><![CDATA[ID Item]]></language> 
     </name> 
-  </property> 
-  <property id="isnotified" internalfield="true" datatype="boolean" index="true" stored="true" editable="true"   type="boolean"> 
+  </property>  
+  <property id="isnotified" internalfield="true" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Is Notified]]></language>  
+      <language id="de"><![CDATA[Benachrichtigt]]></language>
+      <language id="fr"><![CDATA[Il est avisé]]></language>
+      <language id="es"><![CDATA[Se ha notificado]]></language>
     </name> 
-  </property>  
+  </property> 
 </properties>

@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-
-<property id="id" index="true"  editable="true" stored="true">Id
+  <property id="id" index="true" editable="true" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
       <language id="es"><![CDATA[Id]]></language>  
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
+  </property>  
+  <property id="bankaccount" index="true" editable="true" stored="true" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Bank Account]]></language>  
+      <language id="de"><![CDATA[Bankkonto]]></language>
+      <language id="fr"><![CDATA[Compte bancaire]]></language>
+      <language id="es"><![CDATA[Cuenta bancaria]]></language>
+    </name> 
+  </property>  
+  <property id="user" index="true" type="list" editable="true" listid="user" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[User]]></language>  
+      <language id="de"><![CDATA[Benutzer]]></language>
+      <language id="fr"><![CDATA[Nom d'utilisateur]]></language>
+      <language id="es"><![CDATA[Usuario]]></language>
+    </name> 
+  </property>  
+  <property id="cardmade" index="true" type="boolean" keyword="false" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Card Made]]></language>  
+      <language id="de"><![CDATA[Karte erstellt]]></language>
+      <language id="fr"><![CDATA[Carte fabriquée]]></language>
+      <language id="es"><![CDATA[Tarjeta elaborada]]></language>
+    </name> 
+  </property>  
+  <property id="cardgiven" index="true" type="boolean" keyword="false" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Card Given]]></language>  
+      <language id="de"><![CDATA[Karte übergeben]]></language>
+      <language id="fr"><![CDATA[Carte remise]]></language>
+      <language id="es"><![CDATA[Tarjeta entregada]]></language>
+    </name> 
   </property> 
-
-  <property id="bankaccount" index="true" editable="true"  stored="true" type="list">
-    <name>
-      <language id="en"><![CDATA[Bank Account]]></language>
-    </name>
-  </property> 
-  
-  <property id="user" index="true" type="list" editable="true" listid="user" stored="true" >
-    <name>
-      <language id="en"><![CDATA[User]]></language>
-    </name>
-  </property> 
-
-	<property id="cardmade" index="true" type="boolean"
-		keyword="false"  editable="true">
-		<name>
-			<language id="en"><![CDATA[Card Made]]></language>
-		</name>
-	</property>
-	
-	<property id="cardgiven" index="true" type="boolean"
-		keyword="false"  editable="true">
-		<name>
-			<language id="en"><![CDATA[Card Given]]></language>
-		</name>
-	</property>	   
-   
 </properties>

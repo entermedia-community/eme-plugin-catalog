@@ -1,74 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="dataSearcher"> 
- 
-
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+<properties beanname="dataSearcher"> 
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
       <language id="es"><![CDATA[Id]]></language>  
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
-  </property> 
-    <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New
-    <name>
-      <language id="en"><![CDATA[Date]]></language>
-    </name>
-  </property> 
-  
-    <property id="remoteuser" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  </property>  
+  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Remote User]]></language> 
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-
-    <property id="ipaddress" index="true" editable="true" stored="true">
+  <property id="remoteuser" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[IP Address]]></language> 
+      <language id="en"><![CDATA[Remote User]]></language>  
+      <language id="de"><![CDATA[Fernbenutzer]]></language>
+      <language id="fr"><![CDATA[Utilisateur distant]]></language>
+      <language id="es"><![CDATA[Usuario remoto]]></language>
     </name> 
-  </property>
-  
-   <property id="referralurl" index="true" editable="true" stored="true">
+  </property>  
+  <property id="ipaddress" index="true" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Referral URL]]></language> 
+      <language id="en"><![CDATA[IP Address]]></language>  
+      <language id="de"><![CDATA[IP-Adresse]]></language>
+      <language id="fr"><![CDATA[Adresse IP]]></language>
+      <language id="es"><![CDATA[Dirección IP]]></language>
     </name> 
-  </property>    
-  
-  <property id="referralcode" index="true" editable="true" stored="true">
+  </property>  
+  <property id="referralurl" index="true" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Referral Code]]></language> 
+      <language id="en"><![CDATA[Referral URL]]></language>  
+      <language id="de"><![CDATA[Referenz-URL]]></language>
+      <language id="fr"><![CDATA[URL de référence]]></language>
+      <language id="es"><![CDATA[URL de referencia]]></language>
     </name> 
-  </property>
-  
-    <property id="path" index="true" editable="true" stored="true">
+  </property>  
+  <property id="referralcode" index="true" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Path]]></language> 
+      <language id="en"><![CDATA[Referral Code]]></language>  
+      <language id="de"><![CDATA[Referenzcode]]></language>
+      <language id="fr"><![CDATA[Code de parrainage]]></language>
+      <language id="es"><![CDATA[Código de referencia]]></language>
     </name> 
-  </property>
-  
-    <property id="firsttrakedlink" required="true" 
- 	index="true" stored="true" editable="true"  type="list" listid="collectivelinktracker" datatype="list"
- 	 > 
+  </property>  
+  <property id="path" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Path]]></language>  
+      <language id="de"><![CDATA[Pfad]]></language>
+      <language id="fr"><![CDATA[Chemin]]></language>
+      <language id="es"><![CDATA[Ruta]]></language>
+    </name> 
+  </property>  
+  <property id="firsttrakedlink" required="true" index="true" stored="true" editable="true" type="list" listid="collectivelinktracker" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[First Page Link]]></language>  
+      <language id="de"><![CDATA[Erster Link zur ersten Seite]]></language>
+      <language id="fr"><![CDATA[Lien de la première page]]></language>
+      <language id="es"><![CDATA[Enlace a la primera página]]></language>
     </name> 
-  </property> 
-  
-    <property id="collectiveproject" required="true" 
- 	index="true" stored="true" editable="true"  type="list"  datatype="list"
- 	viewtype="collectionproject" searchcomponent="collectionproject" > 
+  </property>  
+  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
+      <language id="de"><![CDATA[Thema]]></language>
+      <language id="fr"><![CDATA[Sujet]]></language>
+      <language id="es"><![CDATA[Tema]]></language>
+    </name> 
+  </property>  
+  <property id="collectionid" index="true" filter="false" editable="true" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection"> 
+    <name> 
+      <language id="en"><![CDATA[Collection Id]]></language>  
+      <language id="de"><![CDATA[Sammlungs-ID]]></language>
+      <language id="fr"><![CDATA[Identifiant de la collection]]></language>
+      <language id="es"><![CDATA[ID de la colección]]></language>
     </name> 
   </property> 
-  
-      <property id="collectionid" index="true" filter="false" editable="true" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection">
-    <name>
-      <language id="en"><![CDATA[Collection Id]]></language>
-    </name>
-  </property> 
-  
-
-  
 </properties>

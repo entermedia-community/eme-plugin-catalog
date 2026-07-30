@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
+<properties> 
   <property id="poststatus" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" highlight="false" datatype="list" autoincrement="false" keyword="false">New 
-    <name>
-      <language id="en"><![CDATA[Status]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Status]]></language>  
+      <language id="de"><![CDATA[Status]]></language>
+      <language id="fr"><![CDATA[Statut]]></language>
+      <language id="es"><![CDATA[Estado]]></language>
+    </name> 
+  </property>  
   <property id="maincontent" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="html" rendertype="html" required="false" multilanguage="false" highlight="false" autoincrement="false" keyword="true">New 
-    <name>
-      <language id="en"><![CDATA[Blog Content]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Blog Content]]></language>  
+      <language id="de"><![CDATA[Blog-Inhalte]]></language>
+      <language id="fr"><![CDATA[Contenu du blog]]></language>
+      <language id="es"><![CDATA[Contenido del blog]]></language>
+    </name> 
+  </property> 
 </properties>

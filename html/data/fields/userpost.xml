@@ -1,62 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
-  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject">
-    <name>
-      <language id="en"><![CDATA[Topic]]></language>
-    </name>
-  </property>
-
-  <property id="exclusivecontent" index="true" stored="true" editable="true" type="boolean">
-    <name>
-      <language id="en"><![CDATA[Team Only]]></language>
-    </name>
-  </property>
-
-  <property id="reportedby" index="true" viewtype="user" type="list" datatype="multi" listid="user" keyword="true" stored="true" editable="true">
-    <name>
-      <language id="en"><![CDATA[Reported By]]></language>
-    </name>
-  </property>
-
-  <property id="totalfilesize" index="true" stored="true" editable="true" datatype="number" viewtype="filesize">
-    <name>
-      <language id="en"><![CDATA[Total File Size]]></language>
-    </name>
-  </property>
-
-  <property id="urlname" index="true" stored="true" editable="true" keyword="true">
-    <name>
-      <language id="en"><![CDATA[URL]]></language>
-    </name>
-  </property>
-  
-  
-  <property id="entitymoduleid" editable="true" index="true" type="list" stored="true" sortable="true">
-    <name>
-      <language id="en"><![CDATA[Module]]></language>
-    </name>
-  </property>
-
-  <property id="entityid" editable="true" index="true" type="list" stored="true" sortable="true">
-    <name>
-      <language id="en"><![CDATA[Entity]]></language>
-    </name>
-  </property>
-
-  <property id="creatorstatus" editable="true" index="true" stored="true" type="list" filter="true" sortable="true">
-    <name>
-      <language id="en"><![CDATA[Creator Status]]></language>
-    </name>
-  </property>
-
+<properties beanname="dataSearcher"> 
+  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
+    <name> 
+      <language id="en"><![CDATA[Topic]]></language>  
+      <language id="de"><![CDATA[Thema]]></language>
+      <language id="fr"><![CDATA[Sujet]]></language>
+      <language id="es"><![CDATA[Tema]]></language>
+    </name> 
+  </property>  
+  <property id="exclusivecontent" index="true" stored="true" editable="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Team Only]]></language>  
+      <language id="de"><![CDATA[Nur für das Team]]></language>
+      <language id="fr"><![CDATA[Équipe uniquement]]></language>
+      <language id="es"><![CDATA[Solo para el equipo]]></language>
+    </name> 
+  </property>  
+  <property id="reportedby" index="true" viewtype="user" type="list" datatype="multi" listid="user" keyword="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Reported By]]></language>  
+      <language id="de"><![CDATA[Meldung von:]]></language>
+      <language id="fr"><![CDATA[Signalement de]]></language>
+      <language id="es"><![CDATA[Reportado por]]></language>
+    </name> 
+  </property>  
+  <property id="totalfilesize" index="true" stored="true" editable="true" datatype="number" viewtype="filesize"> 
+    <name> 
+      <language id="en"><![CDATA[Total File Size]]></language>  
+      <language id="de"><![CDATA[Gesamtdateigröße]]></language>
+      <language id="fr"><![CDATA[Taille totale du fichier]]></language>
+      <language id="es"><![CDATA[Tamaño total del archivo]]></language>
+    </name> 
+  </property>  
+  <property id="urlname" index="true" stored="true" editable="true" keyword="true"> 
+    <name> 
+      <language id="en"><![CDATA[URL]]></language>  
+      <language id="de"><![CDATA[URL]]></language>
+      <language id="fr"><![CDATA[URL]]></language>
+      <language id="es"><![CDATA[URL]]></language>
+    </name> 
+  </property>  
+  <property id="entitymoduleid" editable="true" index="true" type="list" stored="true" sortable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Module]]></language>  
+      <language id="de"><![CDATA[Modul]]></language>
+      <language id="fr"><![CDATA[Module]]></language>
+      <language id="es"><![CDATA[Módulo]]></language>
+    </name> 
+  </property>  
+  <property id="entityid" editable="true" index="true" type="list" stored="true" sortable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Entity]]></language>  
+      <language id="de"><![CDATA[Entität]]></language>
+      <language id="fr"><![CDATA[Entité]]></language>
+      <language id="es"><![CDATA[Entidad]]></language>
+    </name> 
+  </property>  
+  <property id="creatorstatus" editable="true" index="true" stored="true" type="list" filter="true" sortable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Creator Status]]></language>  
+      <language id="de"><![CDATA[Schöpferstatus]]></language>
+      <language id="fr"><![CDATA[Statut de créateur]]></language>
+      <language id="es"><![CDATA[Estado de Creador]]></language>
+    </name> 
+  </property>  
   <property id="librarycollection" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list">Library 
-    <name>
-      <language id="en"><![CDATA[Library Collection]]></language>
-    </name>
-  </property>
-
-
-
-
+    <name> 
+      <language id="en"><![CDATA[Library Collection]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung]]></language>
+      <language id="fr"><![CDATA[Collection de la bibliothèque]]></language>
+      <language id="es"><![CDATA[Colección bibliográfica]]></language>
+    </name> 
+  </property> 
 </properties>

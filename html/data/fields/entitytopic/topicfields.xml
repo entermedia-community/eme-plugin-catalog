@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<properties>
-  <property id="tutorial" index="true" stored="true" editable="true" type="list" listid="entitytutorial">
-    <name>
-      <language id="en">Tutorial</language>
-    </name>
-  </property>
-  <property id="assignedto" viewtype="multiselect" type="list" datatype="list" listid="user" index="true" stored="true" editable="true">
-    <name>
-      <language id="en">Assigned To</language>
-    </name>
-  </property>
+
+<properties> 
+  <property id="tutorial" index="true" stored="true" editable="true" type="list" listid="entitytutorial"> 
+    <name> 
+      <language id="en">Tutorial</language>  
+      <language id="de"><![CDATA[Tutorium]]></language>
+      <language id="fr"><![CDATA[Tutoriel]]></language>
+      <language id="es"><![CDATA[Tutoría]]></language>
+    </name> 
+  </property>  
+  <property id="assignedto" viewtype="multiselect" type="list" datatype="list" listid="user" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en">Assigned To</language>  
+      <language id="de"><![CDATA[Zugewiesen an]]></language>
+      <language id="fr"><![CDATA[Assigné à]]></language>
+      <language id="es"><![CDATA[Asignado a]]></language>
+    </name> 
+  </property> 
 </properties>

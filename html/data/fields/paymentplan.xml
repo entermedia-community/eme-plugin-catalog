@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
-<property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+<properties> 
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
       <language id="es"><![CDATA[Id]]></language>  
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
-  </property> 
-  <property id="lastprocessed" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">Last Processed
-    <name>
-      <language id="en"><![CDATA[lastprocessed]]></language>
-    </name>
   </property>  
-  <property id="planstatus" index="true" editable="true" stored="true">Plan Status
+  <property id="lastprocessed" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">Last Processed 
     <name> 
-      <language id="en"><![CDATA[planstatus]]></language> 
+      <language id="en"><![CDATA[lastprocessed]]></language>  
+      <language id="de"><![CDATA[zuletzt verarbeitet]]></language>
+      <language id="fr"><![CDATA[Dernière mise à jour]]></language>
+      <language id="es"><![CDATA[Último procesado]]></language>
     </name> 
   </property>  
-  <property id="userid" index="true" listid="user" filter="false" editable="true" stored="true" sortable="true" keyword="false" datatype="list">User
+  <property id="planstatus" index="true" editable="true" stored="true">Plan Status 
+    <name> 
+      <language id="en"><![CDATA[planstatus]]></language>  
+      <language id="de"><![CDATA[Planstatus]]></language>
+      <language id="fr"><![CDATA[statut du plan]]></language>
+      <language id="es"><![CDATA[estado del plan]]></language>
+    </name> 
+  </property>  
+  <property id="userid" index="true" listid="user" filter="false" editable="true" stored="true" sortable="true" keyword="false" datatype="list">User 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[User]]></language>  
@@ -27,17 +33,23 @@
       <language id="fr"><![CDATA[Utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="frequency" index="true" editable="true" stored="true">Frequency
+  <property id="frequency" index="true" editable="true" stored="true">Frequency 
     <name> 
-      <language id="en"><![CDATA[frequency]]></language> 
+      <language id="en"><![CDATA[frequency]]></language>  
+      <language id="de"><![CDATA[Häufigkeit]]></language>
+      <language id="fr"><![CDATA[fréquence]]></language>
+      <language id="es"><![CDATA[frecuencia]]></language>
     </name> 
   </property>  
-  <property id="amount" index="true" editable="true" stored="true">Amount
+  <property id="amount" index="true" editable="true" stored="true">Amount 
     <name> 
-      <language id="en"><![CDATA[amount]]></language> 
+      <language id="en"><![CDATA[amount]]></language>  
+      <language id="de"><![CDATA[Betrag]]></language>
+      <language id="fr"><![CDATA[le montant]]></language>
+      <language id="es"><![CDATA[cantidad]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name
+  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -45,14 +57,12 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  
-    <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" keyword="false">
-    <name>
-      <language id="de"><![CDATA[Sammlung ID]]></language>
-      <language id="en"><![CDATA[Collection Id]]></language>
-      <language id="es"><![CDATA[colección Id]]></language>
-      <language id="fr"><![CDATA[Id Collection]]></language>
-    </name>
-  </property>
-   
+  <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" keyword="false"> 
+    <name> 
+      <language id="de"><![CDATA[Sammlung ID]]></language>  
+      <language id="en"><![CDATA[Collection Id]]></language>  
+      <language id="es"><![CDATA[colección Id]]></language>  
+      <language id="fr"><![CDATA[Id Collection]]></language> 
+    </name> 
+  </property> 
 </properties>

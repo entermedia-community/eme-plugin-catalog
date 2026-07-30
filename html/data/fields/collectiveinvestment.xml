@@ -1,81 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="dataSearcher"> 
- 
-
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+<properties beanname="dataSearcher"> 
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
       <language id="es"><![CDATA[Id]]></language>  
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
-  </property> 
-  
-    <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection">
-    <name>
-      <language id="de"><![CDATA[Sammlung ID]]></language>
-      <language id="en"><![CDATA[Collection Id]]></language>
-      <language id="es"><![CDATA[colección Id]]></language>
-      <language id="fr"><![CDATA[Id Collection]]></language>
-    </name>
-  </property> 
-  
-      <property id="currencytype" index="true" editable="true" stored="true"  datatype="list" listid="currencytype"  defaultvalue="1">
+  </property>  
+  <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection"> 
     <name> 
-      <language id="en"><![CDATA[Currency Type]]></language> 
-      <language id="es"><![CDATA[Moneda]]></language>
+      <language id="de"><![CDATA[Sammlung ID]]></language>  
+      <language id="en"><![CDATA[Collection Id]]></language>  
+      <language id="es"><![CDATA[colección Id]]></language>  
+      <language id="fr"><![CDATA[Id Collection]]></language> 
     </name> 
   </property>  
- 
-   <property id="total" index="true" editable="true" stored="true" type="double">
+  <property id="currencytype" index="true" editable="true" stored="true" datatype="list" listid="currencytype" defaultvalue="1"> 
     <name> 
-      <language id="en"><![CDATA[Amount]]></language> 
-    </name> 
-  </property> 
-  
-    <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New
-    <name>
-      <language id="en"><![CDATA[Investment Date]]></language>
-    </name>
-  </property> 
-  
-    <property id="user" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
-    <name> 
-      <language id="en"><![CDATA[Approved By]]></language> 
+      <language id="en"><![CDATA[Currency Type]]></language>  
+      <language id="es"><![CDATA[Moneda]]></language>  
+      <language id="de"><![CDATA[Währungstyp]]></language>
+      <language id="fr"><![CDATA[Type de monnaie]]></language>
     </name> 
   </property>  
-
-    <property id="investmentuser" index="true" editable="true" stored="true" listid="user" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  <property id="total" index="true" editable="true" stored="true" type="double"> 
     <name> 
-      <language id="en"><![CDATA[Investor]]></language> 
+      <language id="en"><![CDATA[Amount]]></language>  
+      <language id="de"><![CDATA[Betrag]]></language>
+      <language id="fr"><![CDATA[Montant]]></language>
+      <language id="es"><![CDATA[Cantidad]]></language>
     </name> 
   </property>  
-  
-    <property id="notes" index="true" editable="true" stored="true" viewtype="textarea">
+  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Details]]></language> 
+      <language id="en"><![CDATA[Investment Date]]></language>  
+      <language id="de"><![CDATA[Investitionsdatum]]></language>
+      <language id="fr"><![CDATA[Date d'investissement]]></language>
+      <language id="es"><![CDATA[Fecha de inversión]]></language>
     </name> 
   </property>  
-  
-    <property id="collectiveproject" required="true" 
- 	index="true" stored="true" editable="true"  type="list"  datatype="list"
- 	viewtype="collectionproject" searchcomponent="collectionproject" > 
+  <property id="user" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Approved By]]></language>  
+      <language id="de"><![CDATA[Genehmigt von:]]></language>
+      <language id="fr"><![CDATA[Approuvé par]]></language>
+      <language id="es"><![CDATA[Aprobado por]]></language>
+    </name> 
+  </property>  
+  <property id="investmentuser" index="true" editable="true" stored="true" listid="user" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Investor]]></language>  
+      <language id="de"><![CDATA[Investor]]></language>
+      <language id="fr"><![CDATA[Investisseur]]></language>
+      <language id="es"><![CDATA[Inversionista]]></language>
+    </name> 
+  </property>  
+  <property id="notes" index="true" editable="true" stored="true" viewtype="textarea"> 
+    <name> 
+      <language id="en"><![CDATA[Details]]></language>  
+      <language id="de"><![CDATA[Details]]></language>
+      <language id="fr"><![CDATA[Détails]]></language>
+      <language id="es"><![CDATA[Detalles]]></language>
+    </name> 
+  </property>  
+  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
+      <language id="de"><![CDATA[Thema]]></language>
+      <language id="fr"><![CDATA[Sujet]]></language>
+      <language id="es"><![CDATA[Tema]]></language>
+    </name> 
+  </property>  
+  <property id="bankaccount" defaultvalue="1" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="bankaccount" searchcomponent="bankaccount"> 
+    <name> 
+      <language id="en"> <![CDATA[Account Balance]]> </language>  
+      <language id="es"> <![CDATA[Cuenta De Banco]]> </language>  
+      <language id="de"><![CDATA[Kontostand]]></language>
+      <language id="fr"><![CDATA[Solde du compte]]></language>
     </name> 
   </property> 
-
-   <property id="bankaccount"
-   defaultvalue="1"
-   index="true" stored="true" editable="true"  type="list"  datatype="list"
- 	viewtype="bankaccount" searchcomponent="bankaccount" > 
-	 <name>
-	 <language id="en" > <![CDATA[Account Balance]]> </language>
-	 <language id="es" > <![CDATA[Cuenta De Banco]]> </language>
-	 </name>
-	</property>
-
-  
-  
 </properties>

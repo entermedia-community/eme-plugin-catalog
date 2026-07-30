@@ -2,34 +2,44 @@
 
 <!--  THis is OLD. It has been moved to asseteditstatus.xml -->
 <properties> 
-	<property id="1">
-		<name> 
-	      <language id="en"><![CDATA[Pending]]></language>  
-	      <language id="es"><![CDATA[Pendiente]]></language> 
-	    </name>
-    </property>
-	<property id="6">
-		<name> 
-	      <language id="en"><![CDATA[Approved]]></language>  
-	      <language id="es"><![CDATA[Aprobado]]></language> 
-	    </name>
-	</property>	
-	<property id="recording">
-		<name> 
-	      <language id="en"><![CDATA[Recording]]></language>  
-	      <language id="es"><![CDATA[Grabando]]></language> 
-	    </name>
-	</property>	
-	<property id="rejected">
-		<name> 
-	      <language id="en"><![CDATA[Rejected]]></language>  
-	      <language id="es"><![CDATA[Rechazado]]></language> 
-	    </name>
-	</property>	
-	<property id="7">
-		<name> 
-	      <language id="en"><![CDATA[Deleted]]></language>  
-	      <language id="es"><![CDATA[Eliminado]]></language> 
-	    </name>
-	</property>	
+  <property id="1"> 
+    <name> 
+      <language id="en"><![CDATA[Pending]]></language>  
+      <language id="es"><![CDATA[Pendiente]]></language>  
+      <language id="de"><![CDATA[Ausstehend]]></language>
+      <language id="fr"><![CDATA[En attente]]></language>
+    </name> 
+  </property>  
+  <property id="6"> 
+    <name> 
+      <language id="en"><![CDATA[Approved]]></language>  
+      <language id="es"><![CDATA[Aprobado]]></language>  
+      <language id="de"><![CDATA[Genehmigt]]></language>
+      <language id="fr"><![CDATA[Approuvé]]></language>
+    </name> 
+  </property>  
+  <property id="recording"> 
+    <name> 
+      <language id="en"><![CDATA[Recording]]></language>  
+      <language id="es"><![CDATA[Grabando]]></language>  
+      <language id="de"><![CDATA[Aufnahme]]></language>
+      <language id="fr"><![CDATA[Enregistrement]]></language>
+    </name> 
+  </property>  
+  <property id="rejected"> 
+    <name> 
+      <language id="en"><![CDATA[Rejected]]></language>  
+      <language id="es"><![CDATA[Rechazado]]></language>  
+      <language id="de"><![CDATA[Abgelehnt]]></language>
+      <language id="fr"><![CDATA[Rejeté]]></language>
+    </name> 
+  </property>  
+  <property id="7"> 
+    <name> 
+      <language id="en"><![CDATA[Deleted]]></language>  
+      <language id="es"><![CDATA[Eliminado]]></language>  
+      <language id="de"><![CDATA[Entfernt]]></language>
+      <language id="fr"><![CDATA[Supprimé]]></language>
+    </name> 
+  </property> 
 </properties>

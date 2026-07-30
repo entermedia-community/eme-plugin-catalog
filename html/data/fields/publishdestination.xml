@@ -114,7 +114,6 @@
       <language id="fr"><![CDATA[Profil par défaut]]></language> 
     </name> 
   </property>  
-  
   <property id="technicalcontact" index="true" stored="true" editable="true">Technical Contact 
     <name> 
       <language id="de"><![CDATA[technischer Kontakt]]></language>  
@@ -204,38 +203,37 @@
       <language id="fr"><![CDATA[Jeton d&#39;accès]]></language> 
     </name> 
   </property>  
-  <property id="refresh_token" index="true" stored="true" editable="true">Refresh Token
-    <name>
-      <language id="de"><![CDATA[Aktualisierungs-Token]]></language>
-      <language id="en"><![CDATA[Refresh Token]]></language>
-      <language id="es"><![CDATA[Actualizar Token]]></language>
-      <language id="fr"><![CDATA[Rafraîchir Token]]></language>
-    </name>
+  <property id="refresh_token" index="true" stored="true" editable="true">Refresh Token 
+    <name> 
+      <language id="de"><![CDATA[Aktualisierungs-Token]]></language>  
+      <language id="en"><![CDATA[Refresh Token]]></language>  
+      <language id="es"><![CDATA[Actualizar Token]]></language>  
+      <language id="fr"><![CDATA[Rafraîchir Token]]></language> 
+    </name> 
+  </property>  
+  <!--  Data Merge -->  
+  <property id="presetid" index="true" stored="true" editable="true" type="list" viewtype="list" listid="convertpreset">New 
+    <name> 
+      <language id="de"><![CDATA[Preset-ID]]></language>  
+      <language id="en"><![CDATA[Preset ID]]></language>  
+      <language id="es"><![CDATA[ID preajustado]]></language>  
+      <language id="fr"><![CDATA[ID préréglage]]></language> 
+    </name> 
+  </property>  
+  <property id="excludeassettype" viewtype="multiselect" datatype="list" editable="true" index="true" stored="true" listid="assettype" sort="name"> 
+    <name> 
+      <language id="en"><![CDATA[Exclude Asset Types]]></language>  
+      <language id="de"><![CDATA[Vermögenswerte ausschließen]]></language>
+      <language id="fr"><![CDATA[Exclure les types d'actifs]]></language>
+      <language id="es"><![CDATA[Excluir tipos de activos]]></language>
+    </name> 
+  </property>  
+  <property id="includemetadata" index="true" stored="true" editable="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Include Metadata when publishing Conversions]]></language>  
+      <language id="de"><![CDATA[Metadaten beim Veröffentlichen von Konversionen einfügen]]></language>
+      <language id="fr"><![CDATA[Inclure des métadonnées lors de la publication des conversions]]></language>
+      <language id="es"><![CDATA[Incluir metadatos al publicar las conversiones]]></language>
+    </name> 
   </property> 
-  
- <!--  Data Merge -->
-   <property id="presetid" index="true" stored="true" editable="true" type="list" viewtype="list" listid="convertpreset">New
-    <name>
-      <language id="de"><![CDATA[Preset-ID]]></language>
-      <language id="en"><![CDATA[Preset ID]]></language>
-      <language id="es"><![CDATA[ID preajustado]]></language>
-      <language id="fr"><![CDATA[ID préréglage]]></language>
-    </name>
-  </property>
- 
-  <property id="excludeassettype" viewtype="multiselect"  datatype="list" editable="true" index="true" stored="true" listid="assettype" sort="name" >
-    <name>
-      <language id="en"><![CDATA[Exclude Asset Types]]></language>
-    </name>  
-  </property> 
-  
-  
-   <property id="includemetadata" index="true" stored="true" editable="true" type="boolean" >
-    <name>
-      <language id="en"><![CDATA[Include Metadata when publishing Conversions]]></language>
-    </name>
-  </property>
-  
-  
-  
 </properties>

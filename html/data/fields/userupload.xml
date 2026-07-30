@@ -1,90 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
   <property id="title" index="true" deleted="false" editable="true" stored="true" keyword="true"> 
     <name> 
       <language id="en"><![CDATA[Title]]></language>  
-       
+      <language id="de"><![CDATA[Titel]]></language>
+      <language id="fr"><![CDATA[Titre]]></language>
+      <language id="es"><![CDATA[Título]]></language>
     </name> 
-  </property>
-  
-  
- 
-  
-    
+  </property>  
   <property id="longdescription" index="true" stored="true" editable="true" viewtype="html" keyword="true"> 
     <name> 
       <language id="en"><![CDATA[Description]]></language>  
+      <language id="de"><![CDATA[Beschreibung]]></language>
+      <language id="fr"><![CDATA[Description]]></language>
+      <language id="es"><![CDATA[Descripción]]></language>
     </name> 
   </property>  
-
-
-  <property id="uploaddate" index="true" stored="true" editable="true"  datatype="date" viewtype="datetime" >
+  <property id="uploaddate" index="true" stored="true" editable="true" datatype="date" viewtype="datetime"> 
     <name> 
       <language id="en"><![CDATA[Upload Date]]></language>  
+      <language id="de"><![CDATA[Upload-Datum]]></language>
+      <language id="fr"><![CDATA[Date de téléchargement]]></language>
+      <language id="es"><![CDATA[Fecha de subida]]></language>
     </name> 
   </property>  
-
-
-  <property id="librarycollection" required="true" index="true" stored="true" editable="true"  type="list" viewtype="autocomplete" listid="librarycollection" datatype="list" >Library 
+  <property id="librarycollection" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list">Library 
     <name> 
       <language id="en"><![CDATA[Library Collection]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung]]></language>
+      <language id="fr"><![CDATA[Collection de la bibliothèque]]></language>
+      <language id="es"><![CDATA[Colección bibliográfica]]></language>
     </name> 
   </property>  
-
-  <property id="uploadcategory"  index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated"  editable="false" >Category ID
-    <name>
-      <language id="en"><![CDATA[Category ID]]></language>
-    </name>
-  </property> 
-  
-   <property id="usertags" datatype="kwmap" editable="true" index="true" stored="true" keyword="true"  type="kwmap">User Tags 
-    <name>
-      <language id="de"><![CDATA[Nutzer-Tags]]></language>
-      <language id="en"><![CDATA[User Tags]]></language>
-      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>
-      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language>
-    </name>
-  </property> 
- 
-  <property id="collectiveproject" required="true" 
- 	index="true" stored="true" editable="true"  type="list"  datatype="list"
- 	viewtype="collectionproject" searchcomponent="collectionproject" > 
+  <property id="uploadcategory" index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated" editable="false">Category ID 
+    <name> 
+      <language id="en"><![CDATA[Category ID]]></language>  
+      <language id="de"><![CDATA[Kategorie-ID]]></language>
+      <language id="fr"><![CDATA[ID de catégorie]]></language>
+      <language id="es"><![CDATA[ID de categoría]]></language>
+    </name> 
+  </property>  
+  <property id="usertags" datatype="kwmap" editable="true" index="true" stored="true" keyword="true" type="kwmap">User Tags 
+    <name> 
+      <language id="de"><![CDATA[Nutzer-Tags]]></language>  
+      <language id="en"><![CDATA[User Tags]]></language>  
+      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>  
+      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language> 
+    </name> 
+  </property>  
+  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
-    </name> 
-  </property> 
-
-  <property id="exclusivecontent" index="true" stored="true" editable="true"  type="boolean"> 
-    <name> 
-      <language id="en"><![CDATA[Team Only]]></language>  
-    </name> 
-  </property> 
-
-  <property id="reportedby" index="true" viewtype="user" type="list" datatype="multi" listid="user" keyword="true" stored="true"  editable="true" > 
-    <name> 
-      <language id="en"><![CDATA[Reported By]]></language>  
+      <language id="de"><![CDATA[Thema]]></language>
+      <language id="fr"><![CDATA[Sujet]]></language>
+      <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-
-  <property id="totalfilesize" index="true" stored="true" editable="true"  datatype="number" viewtype="filesize"> 
+  <property id="exclusivecontent" index="true" stored="true" editable="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Team Only]]></language>  
+      <language id="de"><![CDATA[Nur für das Team]]></language>
+      <language id="fr"><![CDATA[Équipe uniquement]]></language>
+      <language id="es"><![CDATA[Solo para el equipo]]></language>
+    </name> 
+  </property>  
+  <property id="reportedby" index="true" viewtype="user" type="list" datatype="multi" listid="user" keyword="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Reported By]]></language>  
+      <language id="de"><![CDATA[Meldung von:]]></language>
+      <language id="fr"><![CDATA[Signalement de]]></language>
+      <language id="es"><![CDATA[Reportado por]]></language>
+    </name> 
+  </property>  
+  <property id="totalfilesize" index="true" stored="true" editable="true" datatype="number" viewtype="filesize"> 
     <name> 
       <language id="en"><![CDATA[Total File Size]]></language>  
+      <language id="de"><![CDATA[Gesamtdateigröße]]></language>
+      <language id="fr"><![CDATA[Taille totale du fichier]]></language>
+      <language id="es"><![CDATA[Tamaño total del archivo]]></language>
     </name> 
-  </property> 
-
+  </property>  
   <property id="urlname" index="true" stored="true" editable="true" keyword="true"> 
     <name> 
       <language id="en"><![CDATA[Post URL]]></language>  
+      <language id="de"><![CDATA[URL]]></language>
+      <language id="fr"><![CDATA[URL du message]]></language>
+      <language id="es"><![CDATA[URL de la publicación]]></language>
     </name> 
-  </property>
-
-   <property id="primarymedia" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="${data.sourcepath}/${filename}">
-   	<name>
-   		<language id="en"><![CDATA[Post Thumbnail]]></language>
-   	</name>
-   </property>
-
-  
+  </property>  
+  <property id="primarymedia" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="${data.sourcepath}/${filename}"> 
+    <name> 
+      <language id="en"><![CDATA[Post Thumbnail]]></language>  
+      <language id="de"><![CDATA[Thumbnails des Posts]]></language>
+      <language id="fr"><![CDATA[Miniature du message]]></language>
+      <language id="es"><![CDATA[Miniatura de la publicación]]></language>
+    </name> 
+  </property> 
 </properties>

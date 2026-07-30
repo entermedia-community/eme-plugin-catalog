@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-   <property id="aitopic" index="true" editable="true" stored="true" note="e.g. a sunset landscape, a museum, an abstract art, etc."
-    internalfield="false" isbadge="false" required=" false" multilanguage="false" highlight="false" autoincrement="false">
+  <property id="aitopic" index="true" editable="true" stored="true" note="e.g. a sunset landscape, a museum, an abstract art, etc." internalfield="false" isbadge="false" required=" false" multilanguage="false" highlight="false" autoincrement="false"> 
     <name> 
-      <language id="en"><![CDATA[Target to Create]]></language> 
+      <language id="en"><![CDATA[Target to Create]]></language>  
+      <language id="de"><![CDATA[Zielsetzung]]></language>
+      <language id="fr"><![CDATA[Objectif à créer]]></language>
+      <language id="es"><![CDATA[Objetivo a alcanzar]]></language>
     </name> 
-  </property>  
- 
+  </property> 
 </properties>

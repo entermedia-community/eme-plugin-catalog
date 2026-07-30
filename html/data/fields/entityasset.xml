@@ -1,44 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
-
+<properties beanname="dataSearcher"> 
   <property id="entitydepartment" index="true" datatype="list" editable="true" stored="true" viewtype="entity" internalfield="false" isbadge="false" rendertype="entity" required="false" multilanguage="false" highlight="false" autoincrement="false" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Departments]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Departments]]></language>  
+      <language id="de"><![CDATA[Abteilungen]]></language>
+      <language id="fr"><![CDATA[Départements]]></language>
+      <language id="es"><![CDATA[Departamentos]]></language>
+    </name> 
+  </property>  
   <property id="pagescreatedfor" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" highlight="false" autoincrement="false" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[AssetID | Modtime]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[AssetID | Modtime]]></language>  
+      <language id="de"><![CDATA[AssetID | Modtime]]></language>
+      <language id="fr"><![CDATA[ID de l'actif | Date de modification]]></language>
+      <language id="es"><![CDATA[ID del activo | Hora de modificación]]></language>
+    </name> 
+  </property>  
   <property id="regions" index="true" datatype="list" editable="true" stored="true" viewtype="entity" internalfield="false" isbadge="false" rendertype="entity" required="false" multilanguage="false" highlight="false" autoincrement="false" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Regions]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Regions]]></language>  
+      <language id="de"><![CDATA[Regionen]]></language>
+      <language id="fr"><![CDATA[Régions]]></language>
+      <language id="es"><![CDATA[Regiones]]></language>
+    </name> 
+  </property>  
   <property id="formnumber" index="true" internalfield="false" editable="true" isbadge="false" required="false" multilanguage="false" highlight="false" autoincrement="false" stored="true" keyword="true" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Form Number]]></language>
-    </name>
-  </property>
-  <property id="documenttype" index="true" stored="true" editable="true" type="list" listid="recordtype" rendermask="${data.primarymedia.recordtype.id||data.primaryimage.recordtype.id}">
-    <name>
-      <language id="en"><![CDATA[Document Type]]></language>
-    </name>
-  </property>
->
-  <property id="librarycollection" index="true" filter="true" internalfield="false" deleted="false" datatype="list" editable="true" stored="true" viewtype="entity">New
-    <name>
-      <language id="en"><![CDATA[Project]]></language>
-    </name>
-  </property>
-
-  <property id="totalpages" datatype="number" viewtype="number" index="true" stored="true" searchcomponent="numbersearch" editable="true" type="number" rendermask="${data.primarymedia.pages}">
-    <name>
-      <language id="en"><![CDATA[Total Pages]]></language>
-    </name>
-  </property>
-
-
+    <name> 
+      <language id="en"><![CDATA[Form Number]]></language>  
+      <language id="de"><![CDATA[Formularnummer]]></language>
+      <language id="fr"><![CDATA[Numéro de formulaire]]></language>
+      <language id="es"><![CDATA[Número de formulario]]></language>
+    </name> 
+  </property>  
+  <property id="documenttype" index="true" stored="true" editable="true" type="list" listid="recordtype" rendermask="${data.primarymedia.recordtype.id||data.primaryimage.recordtype.id}"> 
+    <name> 
+      <language id="en"><![CDATA[Document Type]]></language>  
+      <language id="de"><![CDATA[Dokumenttyp]]></language>
+      <language id="fr"><![CDATA[Type de document]]></language>
+      <language id="es"><![CDATA[Tipo de documento]]></language>
+    </name> 
+  </property> &gt; 
+  <property id="librarycollection" index="true" filter="true" internalfield="false" deleted="false" datatype="list" editable="true" stored="true" viewtype="entity">New 
+    <name> 
+      <language id="en"><![CDATA[Project]]></language>  
+      <language id="de"><![CDATA[Projekt]]></language>
+      <language id="fr"><![CDATA[Le projet]]></language>
+      <language id="es"><![CDATA[Proyecto]]></language>
+    </name> 
+  </property>  
+  <property id="totalpages" datatype="number" viewtype="number" index="true" stored="true" searchcomponent="numbersearch" editable="true" type="number" rendermask="${data.primarymedia.pages}"> 
+    <name> 
+      <language id="en"><![CDATA[Total Pages]]></language>  
+      <language id="de"><![CDATA[Gesamtseitenanzahl]]></language>
+      <language id="fr"><![CDATA[Nombre de pages]]></language>
+      <language id="es"><![CDATA[Total de páginas]]></language>
+    </name> 
+  </property> 
 </properties>

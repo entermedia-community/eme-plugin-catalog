@@ -41,29 +41,18 @@
       <language id="fr"><![CDATA[clientsecret]]></language> 
     </name> 
   </property>  
-  
-   <property id="refreshtoken" index="true" stored="true" editable="true">OAUTH refresh token 
-   
-  </property>  
-  
-      <property id="granttoken" index="true" stored="true" editable="true"> 
+  <property id="refreshtoken" index="true" stored="true" editable="true">OAUTH refresh token</property>  
+  <property id="granttoken" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Grant Token Code]]></language>  
+      <language id="de"><![CDATA[Gutschein-Token-Code]]></language>
+      <language id="fr"><![CDATA[Code du jeton de subvention]]></language>
+      <language id="es"><![CDATA[Código de token de concesión]]></language>
     </name> 
-  </property> 
-  
-   <property id="expiresin" index="true" stored="true" editable="true" type="long" datatype="long">OAUTH refresh expiration
-   
-  </property> 
-  
-  
-   <property id="httprequesttoken" index="true" stored="true" editable="true">HTTP Temp token 
-   
   </property>  
-  <property id="accesstokentime" type="date" index="true" stored="true" editable="true">Access Token Creation Time 
-   
-  </property>  
-  
+  <property id="expiresin" index="true" stored="true" editable="true" type="long" datatype="long">OAUTH refresh expiration</property>  
+  <property id="httprequesttoken" index="true" stored="true" editable="true">HTTP Temp token</property>  
+  <property id="accesstokentime" type="date" index="true" stored="true" editable="true">Access Token Creation Time</property>  
   <property id="redirecturi" index="true" stored="true" editable="true">redirecturi 
     <name> 
       <language id="de"><![CDATA[redirecturi]]></language>  
@@ -88,7 +77,6 @@
       <language id="fr"><![CDATA[remoteroot]]></language> 
     </name> 
   </property>  
- 
   <property id="autocreateusers" index="true" stored="true" editable="true" type="boolean" internalfield="false" datatype="boolean">Auto create new users 
     <name> 
       <language id="de"><![CDATA[Auto schaffen neue Benutzer]]></language>  
@@ -97,7 +85,7 @@
       <language id="fr"><![CDATA[Auto créer de nouveaux utilisateurs]]></language> 
     </name> 
   </property>  
- <!-- 
+  <!-- 
   <property id="newusersettingsgroup" index="true" stored="true" editable="true" type="list" listid="settingsgroup" internalfield="false">Role for new users 
     <name> 
       <language id="de"><![CDATA[Rolle für neue Benutzer]]></language>  
@@ -107,35 +95,23 @@
     </name> 
   </property>
    -->  
-  <property id="alloweddomains" index="true" stored="true" editable="true" internalfield="false">List of allowed domains, comma seperated
-    <name>
-      <language id="de"><![CDATA[Liste der zulässigen Domänen, durch Komma getrennt]]></language>
-      <language id="en"><![CDATA[List of allowed domains, comma seperated]]></language>
-      <language id="es"><![CDATA[Lista de dominios permitidos, coma seperated]]></language>
-      <language id="fr"><![CDATA[Liste des domaines autorisés, séparées par des virgules]]></language>
-    </name>
-  </property> 
-  
-    <property id="remoteprojectid" index="true" stored="true" editable="true"> 
+  <property id="alloweddomains" index="true" stored="true" editable="true" internalfield="false">List of allowed domains, comma seperated 
     <name> 
-      <language id="en"><![CDATA[Remote Project Id]]></language>  
+      <language id="de"><![CDATA[Liste der zulässigen Domänen, durch Komma getrennt]]></language>  
+      <language id="en"><![CDATA[List of allowed domains, comma seperated]]></language>  
+      <language id="es"><![CDATA[Lista de dominios permitidos, coma seperated]]></language>  
+      <language id="fr"><![CDATA[Liste des domaines autorisés, séparées par des virgules]]></language> 
     </name> 
   </property>  
-  
-  
-  
-   <property id="accountid" index="true" stored="true" editable="true" > 
-  Account ID
+  <property id="remoteprojectid" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Remote Project Id]]></language>  
+      <language id="de"><![CDATA[Remote-Projekt-ID]]></language>
+      <language id="fr"><![CDATA[ID du projet distant]]></language>
+      <language id="es"><![CDATA[Identificador de proyecto remoto]]></language>
+    </name> 
   </property>  
-  
-   <property id="teamid" index="true" stored="true" editable="true" > 
-  Team ID
-  </property>  
-   <property id="tenantid" index="true" stored="true" editable="true" > 
-  Tenant ID
-  </property>  
- 
-  
-  
-  
+  <property id="accountid" index="true" stored="true" editable="true">Account ID</property>  
+  <property id="teamid" index="true" stored="true" editable="true">Team ID</property>  
+  <property id="tenantid" index="true" stored="true" editable="true">Tenant ID</property> 
 </properties>

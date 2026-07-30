@@ -1,12 +1,20 @@
-<properties>
-	<property id="questionid">Question
-		<name>
-			<language id="en"><![CDATA[Question]]></language>
-		</name>
-	</property>
-	<property id="content">Notes
-		<name>
-			<language id="en"><![CDATA[Notes]]></language>
-		</name>
-	</property>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+  <property id="questionid">Question 
+    <name> 
+      <language id="en"><![CDATA[Question]]></language>  
+      <language id="de"><![CDATA[Frage]]></language>
+      <language id="fr"><![CDATA[Question du Parlement européen]]></language>
+      <language id="es"><![CDATA[¿Cuál es el problema?]]></language>
+    </name> 
+  </property>  
+  <property id="content">Notes 
+    <name> 
+      <language id="en"><![CDATA[Notes]]></language>  
+      <language id="de"><![CDATA[Anmerkungen]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Notas]]></language>
+    </name> 
+  </property> 
 </properties>

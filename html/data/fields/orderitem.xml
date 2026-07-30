@@ -68,23 +68,24 @@
       <language id="fr"><![CDATA[Chemin distant]]></language> 
     </name> 
   </property>  
-  <property id="presetid" listid="convertpreset" type="list" index="true" stored="true" editable="false">Preset
-    <name>
-      <language id="de"><![CDATA[Preset]]></language>
-      <language id="en"><![CDATA[Preset]]></language>
-      <language id="es"><![CDATA[Programar]]></language>
-      <language id="fr"><![CDATA[Préréglage]]></language>
-    </name>
-  </property> 
-  
-  <!--  Data Merge -->
-   <property id="status" index="true" stored="true" editable="true" type="list" viewtype="list" listid="convertstatus">New
-    <name>
-      <language id="en"><![CDATA[Convert Status]]></language>
-    </name>
-  </property>
-  
-    <property id="errordetails" index="true" stored="true" editable="false">Error Details 
+  <property id="presetid" listid="convertpreset" type="list" index="true" stored="true" editable="false">Preset 
+    <name> 
+      <language id="de"><![CDATA[Preset]]></language>  
+      <language id="en"><![CDATA[Preset]]></language>  
+      <language id="es"><![CDATA[Programar]]></language>  
+      <language id="fr"><![CDATA[Préréglage]]></language> 
+    </name> 
+  </property>  
+  <!--  Data Merge -->  
+  <property id="status" index="true" stored="true" editable="true" type="list" viewtype="list" listid="convertstatus">New 
+    <name> 
+      <language id="en"><![CDATA[Convert Status]]></language>  
+      <language id="de"><![CDATA[Status konvertieren]]></language>
+      <language id="fr"><![CDATA[Changer le statut]]></language>
+      <language id="es"><![CDATA[Convertir el estado]]></language>
+    </name> 
+  </property>  
+  <property id="errordetails" index="true" stored="true" editable="false">Error Details 
     <name> 
       <language id="de"><![CDATA[Fehlerdetails]]></language>  
       <language id="en"><![CDATA[Error Details]]></language>  
@@ -92,74 +93,100 @@
       <language id="fr"><![CDATA[Détails de l&#39;erreur]]></language> 
     </name> 
   </property>  
-
-  <property id="itemexportname"  index="true" stored="true"  editable="false"> 
+  <property id="itemexportname" index="true" stored="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Preset File Path]]></language>  
+      <language id="de"><![CDATA[Pfad zur Voreinstellungsdatei]]></language>
+      <language id="fr"><![CDATA[Chemin du fichier prédéfini]]></language>
+      <language id="es"><![CDATA[Ruta de archivo predeterminada]]></language>
     </name> 
   </property>  
-
-  <property id="itemsourcepath"  index="true" stored="true"  editable="false"> 
+  <property id="itemsourcepath" index="true" stored="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Item Source Path]]></language>  
+      <language id="de"><![CDATA[Quellpfad des Artikels]]></language>
+      <language id="fr"><![CDATA[Chemin de provenance de l'article]]></language>
+      <language id="es"><![CDATA[Ruta de origen del elemento]]></language>
     </name> 
   </property>  
-
-  <property id="itemfilepath"  index="true" stored="true"  editable="false"> 
+  <property id="itemfilepath" index="true" stored="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Preset File Path]]></language>  
+      <language id="de"><![CDATA[Pfad zur Voreinstellungsdatei]]></language>
+      <language id="fr"><![CDATA[Chemin du fichier prédéfini]]></language>
+      <language id="es"><![CDATA[Ruta de archivo predeterminada]]></language>
     </name> 
   </property>  
-  
   <property id="itemdownloadurl" index="true" stored="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Download Url]]></language>  
+      <language id="de"><![CDATA[Download-URL]]></language>
+      <language id="fr"><![CDATA[Lien de téléchargement]]></language>
+      <language id="es"><![CDATA[Enlace de descarga]]></language>
     </name> 
   </property>  
-  
-  <property id="publishstartdate"  index="true" stored="true"  editable="false" type="date"> 
+  <property id="publishstartdate" index="true" stored="true" editable="false" type="date"> 
     <name> 
       <language id="en"><![CDATA[Publish Start Date]]></language>  
+      <language id="de"><![CDATA[Veröffentlichungsdatum]]></language>
+      <language id="fr"><![CDATA[Date de début de publication]]></language>
+      <language id="es"><![CDATA[Fecha de inicio de la publicación]]></language>
     </name> 
   </property>  
-  <property id="publishstatus" index="true" stored="true"   editable="true" type="list" >
+  <property id="publishstatus" index="true" stored="true" editable="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Publish Status]]></language>  
+      <language id="de"><![CDATA[Veröffentlichungsstatus]]></language>
+      <language id="fr"><![CDATA[Statut de publication]]></language>
+      <language id="es"><![CDATA[Estado de publicación]]></language>
     </name> 
-  </property> 
-  <property id="publisheddate"  index="true" stored="true"  editable="false" type="date"> 
+  </property>  
+  <property id="publisheddate" index="true" stored="true" editable="false" type="date"> 
     <name> 
       <language id="en"><![CDATA[Published Date]]></language>  
+      <language id="de"><![CDATA[Veröffentlichungsdatum]]></language>
+      <language id="fr"><![CDATA[Date de publication]]></language>
+      <language id="es"><![CDATA[Fecha de publicación]]></language>
     </name> 
   </property>  
   <property id="publishdestination" index="true" type="list" stored="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Publish Destination]]></language>  
+      <language id="de"><![CDATA[Zielpublikation veröffentlichen]]></language>
+      <language id="fr"><![CDATA[Publier la destination]]></language>
+      <language id="es"><![CDATA[Publicar destino]]></language>
     </name> 
   </property>  
-  
-  
-
   <property id="downloaditemsavepath" index="true" stored="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Download Save Path]]></language>  
+      <language id="de"><![CDATA[Speicherort herunterladen]]></language>
+      <language id="fr"><![CDATA[Chemin de sauvegarde]]></language>
+      <language id="es"><![CDATA[Ruta de guardado]]></language>
     </name> 
   </property>  
-  <property id="downloaditemtotalfilesize"  index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size"  editable="false" type="number">File Size 
+  <property id="downloaditemtotalfilesize" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" editable="false" type="number">File Size 
     <name> 
       <language id="en"><![CDATA[File Size Total]]></language>  
+      <language id="de"><![CDATA[Dateigröße insgesamt]]></language>
+      <language id="fr"><![CDATA[Taille totale du fichier]]></language>
+      <language id="es"><![CDATA[Tamaño total del archivo]]></language>
     </name> 
   </property>  
-  <property id="downloaditemdownloadedfilesize"  index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size"  editable="false" type="number">File Size 
+  <property id="downloaditemdownloadedfilesize" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" editable="false" type="number">File Size 
     <name> 
       <language id="en"><![CDATA[Size Downloaded]]></language>  
+      <language id="de"><![CDATA[Größe herunterladen]]></language>
+      <language id="fr"><![CDATA[Taille téléchargée]]></language>
+      <language id="es"><![CDATA[Tamaño descargado]]></language>
     </name> 
   </property>  
-    <property id="downloadstartdate"  index="true" stored="true"  editable="false" type="date"> 
+  <property id="downloadstartdate" index="true" stored="true" editable="false" type="date"> 
     <name> 
       <language id="en"><![CDATA[Download Start Date]]></language>  
+      <language id="de"><![CDATA[Download-Startdatum]]></language>
+      <language id="fr"><![CDATA[Date de début du téléchargement]]></language>
+      <language id="es"><![CDATA[Fecha de inicio de la descarga]]></language>
     </name> 
-  </property>  
-  
-  
+  </property> 
 </properties>

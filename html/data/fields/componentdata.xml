@@ -1,21 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher" lazy-init="true">
-
-  <property id="id" index="true" stored="true" editable="true" internalfield="true" >Id</property>
-  <property id="name" index="true" stored="true" editable="true"  >Name</property>
-  <property id="ordering" index="true" stored="true" editable="true" type="number"  datatype="number">Ordering</property>
-    <property id="nodelevel" index="true" stored="true" editable="true" type="number"  datatype="number">Node Level</property>
-    <property id="toplevelparent" index="true" stored="true" editable="true" >Top Level Parent</property>
-    <property id="alwaysrender" index="true" stored="true" editable="true" type="boolean" >Always Render</property>
-    
-  <property id="entityid" index="true" stored="true" editable="true" indextype="not_analyzed" > 
+<properties beanname="dataSearcher" lazy-init="true"> 
+  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id</property>  
+  <property id="name" index="true" stored="true" editable="true">Name</property>  
+  <property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">Ordering</property>  
+  <property id="nodelevel" index="true" stored="true" editable="true" type="number" datatype="number">Node Level</property>  
+  <property id="toplevelparent" index="true" stored="true" editable="true">Top Level Parent</property>  
+  <property id="alwaysrender" index="true" stored="true" editable="true" type="boolean">Always Render</property>  
+  <property id="entityid" index="true" stored="true" editable="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Entity]]></language>  
+      <language id="de"><![CDATA[Entität]]></language>
+      <language id="fr"><![CDATA[Entité]]></language>
+      <language id="es"><![CDATA[Entidad]]></language>
     </name> 
   </property>  
-  <property id="json" index="true" stored="true" editable="true" > 
+  <property id="json" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[JSON]]></language>  
+      <language id="de"><![CDATA[JSON]]></language>
+      <language id="fr"><![CDATA[JSON]]></language>
+      <language id="es"><![CDATA[JSON]]></language>
     </name> 
-  </property>
+  </property> 
 </properties>

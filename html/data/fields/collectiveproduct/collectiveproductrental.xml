@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
-
-		
-  <property id="blockeddates" index="true" stored="true" editable="false" multi="true">
-  <name> 
+<properties beanname="dataSearcher"> 
+  <property id="blockeddates" index="true" stored="true" editable="false" multi="true"> 
+    <name> 
       <language id="en"><![CDATA[Blocked Dates]]></language>  
+      <language id="de"><![CDATA[Blockierte Termine]]></language>
+      <language id="fr"><![CDATA[Dates bloquées]]></language>
+      <language id="es"><![CDATA[Fechas bloqueadas]]></language>
     </name> 
-  </property>
-
-
-	<property id="activeregions" listid="activeregions"
-		index="true" stored="true" editable="true" viewtype="multiselect" type="list">
-		<name>
-			<language id="en"><![CDATA[Active Region]]></language>
-		</name>
-	</property>
-	<property id="fullybooked" index="true" stored="true" type="boolean" >
-	 <name>
-	 <language id="en" > <![CDATA[Fully Booked ]]> </language>
-	 </name>
-	</property>
-	
-	<property id="guests" index="true" stored="true" editable="true" >
-		<name>
-			<language id="en"><![CDATA[Guests]]></language>
-		</name>
-	</property>
-	
-
+  </property>  
+  <property id="activeregions" listid="activeregions" index="true" stored="true" editable="true" viewtype="multiselect" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Active Region]]></language>  
+      <language id="de"><![CDATA[Aktive Region]]></language>
+      <language id="fr"><![CDATA[Région active]]></language>
+      <language id="es"><![CDATA[Región activa]]></language>
+    </name> 
+  </property>  
+  <property id="fullybooked" index="true" stored="true" type="boolean"> 
+    <name> 
+      <language id="en"> <![CDATA[Fully Booked ]]> </language>  
+      <language id="de"><![CDATA[Voll ausgebucht.]]></language>
+      <language id="fr"><![CDATA[Complet]]></language>
+      <language id="es"><![CDATA[Completamente ocupado.]]></language>
+    </name> 
+  </property>  
+  <property id="guests" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Guests]]></language>  
+      <language id="de"><![CDATA[Gäste]]></language>
+      <language id="fr"><![CDATA[Les invités]]></language>
+      <language id="es"><![CDATA[Huéspedes]]></language>
+    </name> 
+  </property> 
 </properties>

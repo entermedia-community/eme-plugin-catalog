@@ -1,11 +1,12 @@
-<records>
+<?xml version="1.0" encoding="UTF-8"?>
 
-   <data id="smartcreator_auto_entitytutorial" ordering="20" enabled="true" isvisible="true" connectedtop="contentcreationlabel" chatenabled="false">
-      <name>
-         <language id="en"><![CDATA[Auto Create Tutorials]]></language>
-      </name>
-   </data>
-
-
-
+<records> 
+  <data id="smartcreator_auto_entitytutorial" ordering="20" enabled="true" isvisible="true" connectedtop="contentcreationlabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Auto Create Tutorials]]></language>  
+      <language id="de"><![CDATA[Automatische Erstellung von Tutorials]]></language>
+      <language id="fr"><![CDATA[Création automatique de tutoriels]]></language>
+      <language id="es"><![CDATA[Creación automática de tutoriales]]></language>
+    </name> 
+  </data> 
 </records>

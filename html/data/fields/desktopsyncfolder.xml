@@ -1,138 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
+<properties> 
   <property id="id" editable="true" stored="true" index="true">ID 
-    <name>
-      <language id="de"><![CDATA[Ich würde]]></language>
-      <language id="en"><![CDATA[ID]]></language>
-      <language id="es"><![CDATA[identificación]]></language>
-      <language id="fr"><![CDATA[ID]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="de"><![CDATA[Ich würde]]></language>  
+      <language id="en"><![CDATA[ID]]></language>  
+      <language id="es"><![CDATA[identificación]]></language>  
+      <language id="fr"><![CDATA[ID]]></language> 
+    </name> 
+  </property>  
   <property id="name" editable="true" stored="true" index="true">Name 
-    <name>
-      <language id="en"><![CDATA[Name]]></language>
-    </name>
-  </property>
-
-  <property id="startcategory" editable="true" stored="true" index="true" type="list" viewtype="default">
-    <name>
-      <language id="en"><![CDATA[Start Category ID]]></language>
-    </name>
-  </property>
-
-  <property id="categorypath" editable="true" stored="true" index="true">
-    <name>
-      <language id="en"><![CDATA[Category Path]]></language>
-    </name>
-  </property>
-
-  <property id="desktop" editable="true" stored="true" index="true" datatype="list" viewtype="default">
-    <name>
-      <language id="en"><![CDATA[Desktop]]></language>
-    </name>
-  </property>
-
-  <property id="entityid" editable="true" stored="true" index="true" type="list" viewtype="default" indextype="not_analyzed">
-    <name>
-      <language id="en"><![CDATA[Entity ID]]></language>
-    </name>
-  </property>
-
-  <property id="entitymoduleid" editable="true" stored="true" index="true" type="list" listid="module">
-    <name>
-      <language id="en"><![CDATA[Module Type]]></language>
-    </name>
-  </property>
-
-  <property id="completeddate" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date">    <!-- not really a filter -->
-    <name>
-      <language id="en"><![CDATA[Complete Date]]></language>
-    </name>
-  </property>
-
-  <property id="createddate" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date">    <!-- not really a filter -->
-    <name>
-      <language id="en"><![CDATA[Created Date]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+    </name> 
+  </property>  
+  <property id="startcategory" editable="true" stored="true" index="true" type="list" viewtype="default"> 
+    <name> 
+      <language id="en"><![CDATA[Start Category ID]]></language>  
+      <language id="de"><![CDATA[Startkategorie-ID]]></language>
+      <language id="fr"><![CDATA[ID de catégorie de démarrage]]></language>
+      <language id="es"><![CDATA[ID de categoría de inicio]]></language>
+    </name> 
+  </property>  
+  <property id="categorypath" editable="true" stored="true" index="true"> 
+    <name> 
+      <language id="en"><![CDATA[Category Path]]></language>  
+      <language id="de"><![CDATA[Kategorienpfad]]></language>
+      <language id="fr"><![CDATA[Parcours de catégorie]]></language>
+      <language id="es"><![CDATA[Ruta de categoría]]></language>
+    </name> 
+  </property>  
+  <property id="desktop" editable="true" stored="true" index="true" datatype="list" viewtype="default"> 
+    <name> 
+      <language id="en"><![CDATA[Desktop]]></language>  
+      <language id="de"><![CDATA[Schreibtisch]]></language>
+      <language id="fr"><![CDATA[Bureau]]></language>
+      <language id="es"><![CDATA[Escritorio]]></language>
+    </name> 
+  </property>  
+  <property id="entityid" editable="true" stored="true" index="true" type="list" viewtype="default" indextype="not_analyzed"> 
+    <name> 
+      <language id="en"><![CDATA[Entity ID]]></language>  
+      <language id="de"><![CDATA[Entitäts-ID]]></language>
+      <language id="fr"><![CDATA[Identifiant de l'entité]]></language>
+      <language id="es"><![CDATA[ID de la entidad]]></language>
+    </name> 
+  </property>  
+  <property id="entitymoduleid" editable="true" stored="true" index="true" type="list" listid="module"> 
+    <name> 
+      <language id="en"><![CDATA[Module Type]]></language>  
+      <language id="de"><![CDATA[Modultyp]]></language>
+      <language id="fr"><![CDATA[Type de module]]></language>
+      <language id="es"><![CDATA[Tipo de módulo]]></language>
+    </name> 
+  </property>  
+  <property id="completeddate" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date"> 
+    <!-- not really a filter -->  
+    <name> 
+      <language id="en"><![CDATA[Complete Date]]></language>  
+      <language id="de"><![CDATA[Vollständiges Datum]]></language>
+      <language id="fr"><![CDATA[Date complète]]></language>
+      <language id="es"><![CDATA[Fecha completa]]></language>
+    </name> 
+  </property>  
+  <property id="createddate" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date"> 
+    <!-- not really a filter -->  
+    <name> 
+      <language id="en"><![CDATA[Created Date]]></language>  
+      <language id="de"><![CDATA[Erstellungsdatum]]></language>
+      <language id="fr"><![CDATA[Date de création]]></language>
+      <language id="es"><![CDATA[Fecha de creación]]></language>
+    </name> 
+  </property>  
   <property id="currentcategorypath" index="true" editable="true" stored="true">New 
-    <name>
-      <language id="en"><![CDATA[currentcategorypath]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[currentcategorypath]]></language>  
+      <language id="de"><![CDATA[aktuelle Kategoriepfad]]></language>
+      <language id="fr"><![CDATA[chemin de catégorie actuel]]></language>
+      <language id="es"><![CDATA[ruta actual de categoría]]></language>
+    </name> 
+  </property>  
   <property id="completedfiles" index="true" editable="true" stored="true">New 
-    <name>
-      <language id="en"><![CDATA[completedfiles]]></language>
-    </name>
-  </property>
-
-  <property id="currentfoldertotalcount" externalid="File Size" index="true" viewtype="number" rendertype="number" datatype="number" stored="true" searchcomponent="numbersearch">New
-    <name>
-      <language id="en"><![CDATA[Total Current Folder Count]]></language>
-    </name>
-  </property>
-
-  <property id="currentfoldername">
-    <name>
-      <language id="en"><![CDATA[Current Folder Name]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[completedfiles]]></language>  
+      <language id="de"><![CDATA[abgeschlossene Dateien]]></language>
+      <language id="fr"><![CDATA[fichiers terminés]]></language>
+      <language id="es"><![CDATA[archivos completados]]></language>
+    </name> 
+  </property>  
+  <property id="currentfoldertotalcount" externalid="File Size" index="true" viewtype="number" rendertype="number" datatype="number" stored="true" searchcomponent="numbersearch">New 
+    <name> 
+      <language id="en"><![CDATA[Total Current Folder Count]]></language>  
+      <language id="de"><![CDATA[Gesamtzahl der aktuellen Ordner]]></language>
+      <language id="fr"><![CDATA[Nombre total de dossiers en cours]]></language>
+      <language id="es"><![CDATA[Número total de carpetas actuales]]></language>
+    </name> 
+  </property>  
+  <property id="currentfoldername"> 
+    <name> 
+      <language id="en"><![CDATA[Current Folder Name]]></language>  
+      <language id="de"><![CDATA[Aktueller Ordnername]]></language>
+      <language id="fr"><![CDATA[Nom du dossier actuel]]></language>
+      <language id="es"><![CDATA[Nombre de la carpeta actual]]></language>
+    </name> 
+  </property>  
   <property id="currentfolderpendingsize" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" type="number">File Size 
-    <name>
-      <language id="en"><![CDATA[Pending Current Folder Size]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Pending Current Folder Size]]></language>  
+      <language id="de"><![CDATA[Aktuelle Ordnergröße]]></language>
+      <language id="fr"><![CDATA[Taille actuelle du dossier en attente]]></language>
+      <language id="es"><![CDATA[Tamaño pendiente de la carpeta actual]]></language>
+    </name> 
+  </property>  
   <property id="currentfoldertotalsize" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" type="number">File Size 
-    <name>
-      <language id="en"><![CDATA[Total Current Folder Size]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Total Current Folder Size]]></language>  
+      <language id="de"><![CDATA[Gesamtgröße des aktuellen Ordners]]></language>
+      <language id="fr"><![CDATA[Taille totale du dossier actuel]]></language>
+      <language id="es"><![CDATA[Tamaño total actual de la carpeta]]></language>
+    </name> 
+  </property>  
   <property id="currentfolderpendingcount" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" type="number">File Size 
-    <name>
-      <language id="en"><![CDATA[Pending Current Folder Count]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Pending Current Folder Count]]></language>  
+      <language id="de"><![CDATA[Anzahl der aktuellen Ordner]]></language>
+      <language id="fr"><![CDATA[Nombre de dossiers en attente]]></language>
+      <language id="es"><![CDATA[Cuenta actual de carpetas pendientes]]></language>
+    </name> 
+  </property>  
   <property id="currentfoldertotalcount" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" type="number">File Size 
-    <name>
-      <language id="en"><![CDATA[Total Current Folder Count]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Total Current Folder Count]]></language>  
+      <language id="de"><![CDATA[Gesamtzahl der aktuellen Ordner]]></language>
+      <language id="fr"><![CDATA[Nombre total de dossiers en cours]]></language>
+      <language id="es"><![CDATA[Número total de carpetas actuales]]></language>
+    </name> 
+  </property>  
   <property id="totalcompletedcount" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" type="number">File Size 
-    <name>
-      <language id="en"><![CDATA[Total Count]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Total Count]]></language>  
+      <language id="de"><![CDATA[Gesamtzahl]]></language>
+      <language id="fr"><![CDATA[Total]]></language>
+      <language id="es"><![CDATA[Conteo total]]></language>
+    </name> 
+  </property>  
   <property id="totalcompletedsize" index="true" editable="true" stored="true" datatype="number">New 
-    <name>
-      <language id="en"><![CDATA[Total Size]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Total Size]]></language>  
+      <language id="de"><![CDATA[Gesamtgröße]]></language>
+      <language id="fr"><![CDATA[Taille totale]]></language>
+      <language id="es"><![CDATA[Tamaño total]]></language>
+    </name> 
+  </property>  
   <property id="failedfiles" index="true" editable="true" stored="true" datatype="number">New 
-    <name>
-      <language id="en"><![CDATA[Files Failed]]></language>
-    </name>
-  </property>
-
-  <property id="desktopimportstatus" editable="true" stored="true" index="true" type="list">
-    <name>
-      <language id="en"><![CDATA[Desktop Import Status]]></language>
-    </name>
-  </property>
-
-  <property id="isdownload" editable="true" stored="true" index="true" type="boolean">
-    <name>
-      <language id="en"><![CDATA[Is Download]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Files Failed]]></language>  
+      <language id="de"><![CDATA[Dateien fehlgeschlagen]]></language>
+      <language id="fr"><![CDATA[Fichiers échoués]]></language>
+      <language id="es"><![CDATA[Archivos fallidos]]></language>
+    </name> 
+  </property>  
+  <property id="desktopimportstatus" editable="true" stored="true" index="true" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Desktop Import Status]]></language>  
+      <language id="de"><![CDATA[Status des Desktop-Imports]]></language>
+      <language id="fr"><![CDATA[Statut d'importation du bureau]]></language>
+      <language id="es"><![CDATA[Estado de importación de escritorio]]></language>
+    </name> 
+  </property>  
+  <property id="isdownload" editable="true" stored="true" index="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Is Download]]></language>  
+      <language id="de"><![CDATA[Herunterladen]]></language>
+      <language id="fr"><![CDATA[Télécharger]]></language>
+      <language id="es"><![CDATA[Es descargar]]></language>
+    </name> 
+  </property> 
 </properties>

@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root> 
-  <data id="0">
+  <data id="0"> 
     <name> 
-      <language id="en"><![CDATA[Person]]></language> 
+      <language id="en"><![CDATA[Person]]></language>  
+      <language id="de"><![CDATA[Person]]></language>
+      <language id="fr"><![CDATA[Personne]]></language>
+      <language id="es"><![CDATA[Persona]]></language>
     </name> 
   </data>  
   <data id="1"> 
     <name> 
-      <language id="en"><![CDATA[Project]]></language> 
+      <language id="en"><![CDATA[Project]]></language>  
+      <language id="de"><![CDATA[Projekt]]></language>
+      <language id="fr"><![CDATA[Le projet]]></language>
+      <language id="es"><![CDATA[Proyecto]]></language>
     </name> 
   </data>  
   <data id="2"> 
     <name> 
-      <language id="en"><![CDATA[Campaign]]></language> 
+      <language id="en"><![CDATA[Campaign]]></language>  
+      <language id="de"><![CDATA[Kampagne]]></language>
+      <language id="fr"><![CDATA[Campagne]]></language>
+      <language id="es"><![CDATA[Campaña]]></language>
     </name> 
-  </data>      
+  </data> 
 </root>

@@ -1,26 +1,52 @@
-<data>
-  <data id="1_general_art">
-    <name><language id="en"><![CDATA[General Art Styles]]></language></name>
-  </data>
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <data id="2_illustration_design">
-    <name><language id="en"><![CDATA[Illustration & Design]]></language></name>
-  </data>
-
-  <data id="3_cinematic_photo">
-    <name><language id="en"><![CDATA[Cinematic & Photography]]></language></name>
-  </data>
-
-  <data id="4_digital_futuristic">
-    <name><language id="en"><![CDATA[Digital & Futuristic]]></language></name>
-  </data>
-
-  <data id="5_3d_game">
-    <name><language id="en"><![CDATA[3D & Game Styles]]></language></name>
-  </data>
-
-  <data id="6_traditional_media">
-    <name><language id="en"><![CDATA[Traditional Media]]></language></name>
-  </data>
-
+<data> 
+  <data id="1_general_art"> 
+    <name>
+      <language id="en"><![CDATA[General Art Styles]]></language>
+      <language id="de"><![CDATA[Allgemeine Kunststile]]></language>
+      <language id="fr"><![CDATA[Styles artistiques généraux]]></language>
+      <language id="es"><![CDATA[Estilos generales de arte]]></language>
+    </name> 
+  </data>  
+  <data id="2_illustration_design"> 
+    <name>
+      <language id="en"><![CDATA[Illustration & Design]]></language>
+      <language id="de"><![CDATA[Illustration & Design]]></language>
+      <language id="fr"><![CDATA[Illustration et graphisme]]></language>
+      <language id="es"><![CDATA[Ilustración y diseño]]></language>
+    </name> 
+  </data>  
+  <data id="3_cinematic_photo"> 
+    <name>
+      <language id="en"><![CDATA[Cinematic & Photography]]></language>
+      <language id="de"><![CDATA[Kino und Fotografie]]></language>
+      <language id="fr"><![CDATA[Cinéma et Photographie]]></language>
+      <language id="es"><![CDATA[Cine y Fotografía]]></language>
+    </name> 
+  </data>  
+  <data id="4_digital_futuristic"> 
+    <name>
+      <language id="en"><![CDATA[Digital & Futuristic]]></language>
+      <language id="de"><![CDATA[Digital und futuristisch]]></language>
+      <language id="fr"><![CDATA[Numérique et futuriste]]></language>
+      <language id="es"><![CDATA[Digital y Futurista]]></language>
+    </name> 
+  </data>  
+  <data id="5_3d_game"> 
+    <name>
+      <language id="en"><![CDATA[3D & Game Styles]]></language>
+      <language id="de"><![CDATA[3D- und Spielstile]]></language>
+      <language id="fr"><![CDATA[3D et styles de jeu]]></language>
+      <language id="es"><![CDATA[Estilos 3D y de juego]]></language>
+    </name> 
+  </data>  
+  <data id="6_traditional_media"> 
+    <name>
+      <language id="en"><![CDATA[Traditional Media]]></language>
+      <language id="de"><![CDATA[Traditionelle Medien]]></language>
+      <language id="fr"><![CDATA[Les médias traditionnels]]></language>
+      <language id="es"><![CDATA[Medios tradicionales]]></language>
+    </name> 
+  </data> 
 </data>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user"     type="list">Users 
+  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -10,7 +9,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group"    type="list">Groups 
+  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  
@@ -18,62 +17,76 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup"    type="list">Roles
-    <name>
-      <language id="de"><![CDATA[Rollen]]></language>
-      <language id="en"><![CDATA[Roles]]></language>
-      <language id="es"><![CDATA[Roles]]></language>
-      <language id="fr"><![CDATA[Rôles]]></language>
-    </name>
-  </property>
-  
-  
-   <property id="viewerusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list"> 
+  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" type="list">Roles 
+    <name> 
+      <language id="de"><![CDATA[Rollen]]></language>  
+      <language id="en"><![CDATA[Roles]]></language>  
+      <language id="es"><![CDATA[Roles]]></language>  
+      <language id="fr"><![CDATA[Rôles]]></language> 
+    </name> 
+  </property>  
+  <property id="viewerusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list"> 
     <name> 
       <language id="en"><![CDATA[Viewer Users]]></language>  
+      <language id="de"><![CDATA[Zuschauer-Benutzer]]></language>
+      <language id="fr"><![CDATA[Utilisateurs]]></language>
+      <language id="es"><![CDATA[Usuarios espectadores]]></language>
     </name> 
   </property>  
-  <property id="viewergroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group"  type="list">
+  <property id="viewergroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list"> 
     <name> 
       <language id="en"><![CDATA[Viewer Groups]]></language>  
+      <language id="de"><![CDATA[Zuschauergemeinschaften]]></language>
+      <language id="fr"><![CDATA[Groupes de téléspectateurs]]></language>
+      <language id="es"><![CDATA[Grupos de espectadores]]></language>
     </name> 
   </property>  
-  
-  <property id="viewerroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup"  type="list">
-    <name>
-      <language id="en"><![CDATA[Viewer Roles]]></language>
-    </name>
+  <property id="viewerroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Viewer Roles]]></language>  
+      <language id="de"><![CDATA[Zuschauerrollen]]></language>
+      <language id="fr"><![CDATA[Rôles de spectateur]]></language>
+      <language id="es"><![CDATA[Roles de los espectadores]]></language>
+    </name> 
   </property>  
-  
-  
-  <property id="editorusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user"  internalfield="true" type="list"> 
+  <property id="editorusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Editors by Users]]></language>  
+      <language id="de"><![CDATA[Redakteure nach Benutzern]]></language>
+      <language id="fr"><![CDATA[Éditeurs par utilisateur]]></language>
+      <language id="es"><![CDATA[Editores por usuario]]></language>
     </name> 
   </property>  
-  <property id="editorgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group"  internalfield="true"    type="list">
+  <property id="editorgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Editors by Groups]]></language>  
+      <language id="de"><![CDATA[Redakteure nach Gruppen]]></language>
+      <language id="fr"><![CDATA[Éditeurs par groupe]]></language>
+      <language id="es"><![CDATA[Editores por grupos]]></language>
     </name> 
   </property>  
-  <property id="editorroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup"  internalfield="true"    type="list">
+  <property id="editorroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Editors by Roles]]></language>  
+      <language id="de"><![CDATA[Redakteure nach Rollen]]></language>
+      <language id="fr"><![CDATA[Rédacteurs par rôle]]></language>
+      <language id="es"><![CDATA[Editores por roles]]></language>
     </name> 
   </property>  
-  
-  
-  <property id="securityenabled" editable="true" index="true" stored="true" type="boolean" > 
+  <property id="securityenabled" editable="true" index="true" stored="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Security Enabled]]></language>  
+      <language id="de"><![CDATA[Sicherheit aktiviert]]></language>
+      <language id="fr"><![CDATA[Sécurité activée]]></language>
+      <language id="es"><![CDATA[Seguridad habilitada]]></language>
     </name> 
-  </property> 
-  
-
-  <property id="permissionsupdateddate" type="date" editable="true" index="true" stored="true" > 
+  </property>  
+  <property id="permissionsupdateddate" type="date" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Permissions Updated Date]]></language>  
+      <language id="de"><![CDATA[Datum der Aktualisierung der Berechtigungen]]></language>
+      <language id="fr"><![CDATA[Date de mise à jour des autorisations]]></language>
+      <language id="es"><![CDATA[Fecha de actualización de permisos]]></language>
     </name> 
   </property> 
-    
 </properties>

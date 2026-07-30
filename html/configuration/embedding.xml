@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
-  <property id="entityembeddingstatus" type="list" viewtype="list" index="true" stored="true" editable="true" filter="false" sortable="true">
-    <name>
-      <language id="en">Entity Embedded Status</language>
-    </name>
-  </property>
-
-  <property id="entityembeddeddate" editable="false" index="true" stored="true" datatype="date" viewtype="time" type="date">
-    <name>
-      <language id="en"><![CDATA[Entity Embedded Date]]></language>
-    </name>
-  </property>
-
+<properties> 
+  <property id="entityembeddingstatus" type="list" viewtype="list" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+    <name> 
+      <language id="en">Entity Embedded Status</language>  
+      <language id="de"><![CDATA[Entity-Embedded-Status]]></language>
+      <language id="fr"><![CDATA[Statut intégré de l'entité]]></language>
+      <language id="es"><![CDATA[Estado integrado de la entidad]]></language>
+    </name> 
+  </property>  
+  <property id="entityembeddeddate" editable="false" index="true" stored="true" datatype="date" viewtype="time" type="date"> 
+    <name> 
+      <language id="en"><![CDATA[Entity Embedded Date]]></language>  
+      <language id="de"><![CDATA[Eingebettetes Datum]]></language>
+      <language id="fr"><![CDATA[Date d'intégration de l'entité]]></language>
+      <language id="es"><![CDATA[Fecha de incorporación de la entidad]]></language>
+    </name> 
+  </property> 
 </properties>

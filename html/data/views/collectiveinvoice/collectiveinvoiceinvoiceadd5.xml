@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
-	
-	<!-- <property id="headcount" defaultvalue="1" /> -->
-	<property id="customernote">
-		<name>
-			<language id="en"><![CDATA[Leave a comment for property owner (optional)]]></language>
-		</name>
-	</property>
+<properties> 
+  <!-- <property id="headcount" defaultvalue="1" /> -->  
+  <property id="customernote"> 
+    <name> 
+      <language id="en"><![CDATA[Leave a comment for property owner (optional)]]></language>  
+      <language id="de"><![CDATA[Hinterlassen Sie eine Nachricht für den Eigentümer (optional)]]></language>
+      <language id="fr"><![CDATA[Laissez un commentaire pour le propriétaire de la propriété (facultatif)]]></language>
+      <language id="es"><![CDATA[Deja un comentario para el propietario (opcional)]]></language>
+    </name> 
+  </property> 
 </properties>

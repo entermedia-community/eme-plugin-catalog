@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="dataSearcher"> 
-
- 
+<properties beanname="dataSearcher"> 
   <property id="apikey" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[API Key]]></language> 
+      <language id="en"><![CDATA[API Key]]></language>  
+      <language id="de"><![CDATA[API-Schlüssel]]></language>
+      <language id="fr"><![CDATA[Clé API]]></language>
+      <language id="es"><![CDATA[Clave de API]]></language>
     </name> 
-  </property>  
- </properties>
+  </property> 
+</properties>

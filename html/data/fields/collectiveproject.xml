@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"  > 
+  <property id="id" index="true" stored="true" editable="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -10,14 +9,15 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true"  > 
+  <property id="name" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
       <language id="es"><![CDATA[Nombre]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
     </name> 
   </property>  
-  
-    <property id="projectdescription" index="true" stored="true" viewtype="html" editable="true"   > 
+  <property id="projectdescription" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Projektbeschreibung]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
@@ -25,36 +25,41 @@
       <language id="fr"><![CDATA[Description du projet]]></language> 
     </name> 
   </property>  
- 
-  <property id="projectusertags" viewtype="tageditor" defaultoperation="andgroup" index="true" stored="true" editable="true" >User Tags 
-    <name>
-      <language id="de"><![CDATA[Nutzer-Tags]]></language>
-      <language id="en"><![CDATA[Hashtags]]></language>
-      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>
-      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language>
-    </name>
-  </property> 
- 
+  <property id="projectusertags" viewtype="tageditor" defaultoperation="andgroup" index="true" stored="true" editable="true">User Tags 
+    <name> 
+      <language id="de"><![CDATA[Nutzer-Tags]]></language>  
+      <language id="en"><![CDATA[Hashtags]]></language>  
+      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>  
+      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language> 
+    </name> 
+  </property>  
   <property id="facebooklink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Facebook]]></language>  
+      <language id="de"><![CDATA[Facebook]]></language>
+      <language id="fr"><![CDATA[Facebook]]></language>
+      <language id="es"><![CDATA[Facebook]]></language>
     </name> 
   </property>  
   <property id="websitelink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Web Site]]></language>  
+      <language id="de"><![CDATA[Webseite]]></language>
+      <language id="fr"><![CDATA[Site Web]]></language>
+      <language id="es"><![CDATA[Sitio web]]></language>
     </name> 
   </property>  
-
-  	<property id="contactemail" index="true" stored="true" keyword="true" editable="true"  indextype="not_analyzed">Email</property>
-  	<property id="contactphone" index="true" stored="true" keyword="true" editable="true"  >Phone</property>
-  
-    <property id="parentcollectionid" listid="librarycollection" index="true" stored="true" editable="true" viewtype="list"   type="list"> 
+  <property id="contactemail" index="true" stored="true" keyword="true" editable="true" indextype="not_analyzed">Email</property>  
+  <property id="contactphone" index="true" stored="true" keyword="true" editable="true">Phone</property>  
+  <property id="parentcollectionid" listid="librarycollection" index="true" stored="true" editable="true" viewtype="list" type="list"> 
     <name> 
       <language id="en"><![CDATA[Parent Collection]]></language>  
+      <language id="de"><![CDATA[Elternkollektion]]></language>
+      <language id="fr"><![CDATA[Collection parentale]]></language>
+      <language id="es"><![CDATA[Colección de Padres]]></language>
     </name> 
-  </property> 
-    <property id="creationdate" index="true" stored="true" editable="true"  type="date" datatype="date" >
+  </property>  
+  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -62,8 +67,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  
-   <property id="projectstatus" index="true" stored="true" editable="true" type="list" viewtype="list"  datatype="list"  >Project Status 
+  <property id="projectstatus" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list">Project Status 
     <name> 
       <language id="de"><![CDATA[Projekt-Status]]></language>  
       <language id="en"><![CDATA[Project Status]]></language>  
@@ -71,25 +75,28 @@
       <language id="fr"><![CDATA[Etat du projet]]></language> 
     </name> 
   </property>  
-
-  
-    <property id="teamproject" index="true" type="boolean" keyword="false" filter="false" editable="true" > 
+  <property id="teamproject" index="true" type="boolean" keyword="false" filter="false" editable="true"> 
     <name> 
-      <language id="en"><![CDATA[Team Only]]></language>
-      <language id="es"><![CDATA[Privado]]></language>   
+      <language id="en"><![CDATA[Team Only]]></language>  
+      <language id="es"><![CDATA[Privado]]></language>  
+      <language id="de"><![CDATA[Nur für das Team]]></language>
+      <language id="fr"><![CDATA[Équipe uniquement]]></language>
     </name> 
-  </property>
-
-<property id="featured" index="true" type="boolean" keyword="false" filter="false" editable="true" > 
+  </property>  
+  <property id="featured" index="true" type="boolean" keyword="false" filter="false" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Featured]]></language>  
+      <language id="de"><![CDATA[Hervorgehoben]]></language>
+      <language id="fr"><![CDATA[Mis en avant]]></language>
+      <language id="es"><![CDATA[Destacado]]></language>
     </name> 
-  </property>
-  
-  <property id="autoresponse" index="true" type="boolean" keyword="false" filter="false" editable="true" > 
+  </property>  
+  <property id="autoresponse" index="true" type="boolean" keyword="false" filter="false" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Autoresponse Client]]></language>  
+      <language id="de"><![CDATA[Autoantwort-Client]]></language>
+      <language id="fr"><![CDATA[Réponse automatique client]]></language>
+      <language id="es"><![CDATA[Respuesta automática del cliente]]></language>
     </name> 
-  </property>
-  
+  </property> 
 </properties>

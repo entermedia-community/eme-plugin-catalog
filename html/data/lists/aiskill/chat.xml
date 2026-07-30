@@ -1,37 +1,44 @@
-<results>
+<?xml version="1.0" encoding="UTF-8"?>
 
-   <data id="autoDetectWelcomeSkill" bean="autoDetectWelcomeSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
-      <name>
-         <language id="en"><![CDATA[Auto Detect]]></language>
-      </name>
-   </data>
-
-   <data id="renderLocalTemplateSkill" bean="renderLocalTemplateSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
-      <name>
-         <language id="en"><![CDATA[Render Local Template]]></language>
-      </name>
-   </data>
-
-
-
-   <data id="autoDetectChatSkill" bean="autoDetectChatSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
-      <name>
-         <language id="en"><![CDATA[Auto Detect Next Step]]></language>
-      </name>
-   </data>
-
-   <data id="questionsSkill" bean="questionsSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
-      <name>
-         <language id="en"><![CDATA[Questions Chat]]></language>
-      </name>
-   </data>
-
-
-   <data id="searchingChatSkill" bean="searchingSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
-      <name>
-         <language id="en"><![CDATA[Searching Chat]]></language>
-      </name>
-   </data>
-
-
+<results> 
+  <data id="autoDetectWelcomeSkill" bean="autoDetectWelcomeSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Auto Detect]]></language>  
+      <language id="de"><![CDATA[Automatische Erkennung]]></language>
+      <language id="fr"><![CDATA[Détection automatique]]></language>
+      <language id="es"><![CDATA[Detección automática]]></language>
+    </name> 
+  </data>  
+  <data id="renderLocalTemplateSkill" bean="renderLocalTemplateSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Render Local Template]]></language>  
+      <language id="de"><![CDATA[Lokale Vorlage rendern]]></language>
+      <language id="fr"><![CDATA[Rendu du modèle local]]></language>
+      <language id="es"><![CDATA[Plantilla local]]></language>
+    </name> 
+  </data>  
+  <data id="autoDetectChatSkill" bean="autoDetectChatSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Auto Detect Next Step]]></language>  
+      <language id="de"><![CDATA[Auto-Erkennen des nächsten Schritts]]></language>
+      <language id="fr"><![CDATA[Détection automatique de l'étape suivante]]></language>
+      <language id="es"><![CDATA[Detección automática del siguiente paso]]></language>
+    </name> 
+  </data>  
+  <data id="questionsSkill" bean="questionsSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Questions Chat]]></language>  
+      <language id="de"><![CDATA[Chat-Fragen]]></language>
+      <language id="fr"><![CDATA[Questions de chat]]></language>
+      <language id="es"><![CDATA[Preguntas del chat]]></language>
+    </name> 
+  </data>  
+  <data id="searchingChatSkill" bean="searchingSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Searching Chat]]></language>  
+      <language id="de"><![CDATA[Chat durchsuchen]]></language>
+      <language id="fr"><![CDATA[Recherche dans le chat]]></language>
+      <language id="es"><![CDATA[Buscar en el chat]]></language>
+    </name> 
+  </data> 
 </results>

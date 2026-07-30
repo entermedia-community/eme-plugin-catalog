@@ -1,5 +1,7 @@
-<page>
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user"    type="list">Users 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page> 
+  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -7,7 +9,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group"    type="list">Groups 
+  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  
@@ -15,17 +17,20 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup"    type="list">Roles
-    <name>
-      <language id="de"><![CDATA[Rollen]]></language>
-      <language id="en"><![CDATA[Roles]]></language>
-      <language id="es"><![CDATA[Roles]]></language>
-      <language id="fr"><![CDATA[Rôles]]></language>
-    </name>
-  </property> 
-  <property id="securityenabled" securityfield="category-exact"  editable="true" index="true" stored="true" type="boolean" > 
+  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" type="list">Roles 
     <name> 
-      <language id="en"><![CDATA[Hide Record]]></language>  
+      <language id="de"><![CDATA[Rollen]]></language>  
+      <language id="en"><![CDATA[Roles]]></language>  
+      <language id="es"><![CDATA[Roles]]></language>  
+      <language id="fr"><![CDATA[Rôles]]></language> 
     </name> 
   </property>  
+  <property id="securityenabled" securityfield="category-exact" editable="true" index="true" stored="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Hide Record]]></language>  
+      <language id="de"><![CDATA[Eintrag verstecken]]></language>
+      <language id="fr"><![CDATA[Cacher l'enregistrement]]></language>
+      <language id="es"><![CDATA[Ocultar el registro]]></language>
+    </name> 
+  </property> 
 </page>

@@ -3,29 +3,42 @@
 <root> 
   <data id="0"> 
     <name> 
-      <language id="en"><![CDATA[Daily]]></language> 
+      <language id="en"><![CDATA[Daily]]></language>  
+      <language id="es"><![CDATA[Diario]]></language>  
+      <language id="de"><![CDATA[Täglich]]></language>
+      <language id="fr"><![CDATA[Chaque jour]]></language>
     </name> 
   </data>  
   <data id="1"> 
     <name> 
-      <language id="en"><![CDATA[Monthly]]></language> 
+      <language id="en"><![CDATA[Monthly]]></language>  
+      <language id="es"><![CDATA[Mensual]]></language>  
+      <language id="de"><![CDATA[Monatlich]]></language>
+      <language id="fr"><![CDATA[Mensuel]]></language>
     </name> 
   </data>  
-    <data id="3"> 
+  <data id="3"> 
     <name> 
-      <language id="en"><![CDATA[Quarterly]]></language> 
+      <language id="en"><![CDATA[Quarterly]]></language>  
+      <language id="es"><![CDATA[Trimestral]]></language>  
+      <language id="de"><![CDATA[Vierteljährlich]]></language>
+      <language id="fr"><![CDATA[Trimestriel]]></language>
     </name> 
-  </data>
-  
+  </data>  
   <data id="6"> 
     <name> 
-      <language id="en"><![CDATA[Biannual]]></language> 
-      
+      <language id="en"><![CDATA[Biannual]]></language>  
+      <language id="es"><![CDATA[Bienal]]></language>  
+      <language id="de"><![CDATA[Zweimal jährlich]]></language>
+      <language id="fr"><![CDATA[Biannuel]]></language>
     </name> 
   </data>  
   <data id="12"> 
     <name> 
-      <language id="en"><![CDATA[Yearly]]></language>
+      <language id="en"><![CDATA[Yearly]]></language>  
+      <language id="es"><![CDATA[Anual]]></language>  
+      <language id="de"><![CDATA[Jährlich]]></language>
+      <language id="fr"><![CDATA[Annuel]]></language>
     </name> 
-  </data>  
+  </data> 
 </root>

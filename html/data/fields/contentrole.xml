@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" >Name 
+  <property id="name" index="true" stored="true" editable="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,17 +17,20 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="iscontainer" index="true" stored="true" editable="true" type="boolean" internalfield="false">
-    <name>
-      <language id="en"><![CDATA[Is Container]]></language>
-    </name>
+  <property id="iscontainer" index="true" stored="true" editable="true" type="boolean" internalfield="false"> 
+    <name> 
+      <language id="en"><![CDATA[Is Container]]></language>  
+      <language id="de"><![CDATA[Ist der Container]]></language>
+      <language id="fr"><![CDATA[C'est un conteneur]]></language>
+      <language id="es"><![CDATA[Es el contenedor]]></language>
+    </name> 
+  </property>  
+  <property id="ordering" type="number" editable="true" index="true" stored="true" autoincrement="true">Ordering 
+    <name> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
+    </name> 
   </property> 
-    <property id="ordering" type="number" editable="true" index="true" stored="true" autoincrement="true">Ordering
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
 </properties>

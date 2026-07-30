@@ -3,12 +3,18 @@
 <indextypes> 
   <indextype id="analyzed"> 
     <name> 
-      <language id="en"><![CDATA[Analyzed]]></language> 
+      <language id="en"><![CDATA[Analyzed]]></language>  
+      <language id="de"><![CDATA[Analysiert]]></language>
+      <language id="fr"><![CDATA[Analysée]]></language>
+      <language id="es"><![CDATA[Analizado]]></language>
     </name> 
   </indextype>  
-  <indextype id="not_analyzed">
-    <name>
-      <language id="en"><![CDATA[Not Analyzed]]></language>
-    </name>
-  </indextype>
+  <indextype id="not_analyzed"> 
+    <name> 
+      <language id="en"><![CDATA[Not Analyzed]]></language>  
+      <language id="de"><![CDATA[Nicht analysiert]]></language>
+      <language id="fr"><![CDATA[Non analysé]]></language>
+      <language id="es"><![CDATA[No analizado]]></language>
+    </name> 
+  </indextype> 
 </indextypes>

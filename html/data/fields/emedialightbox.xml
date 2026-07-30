@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="folderSearcher">
-
-  <property id="ordering" type="number" autoincrement="false" editable="true" index="true" stored="true">Ordering
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
-
-  <property id="showonall" index="true" editable="true"   datatype="boolean"   >
+<properties beanname="folderSearcher"> 
+  <property id="ordering" type="number" autoincrement="false" editable="true" index="true" stored="true">Ordering 
     <name> 
-      <language id="en"><![CDATA[Show on All Modules]]></language> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
-  </property>
-  
-  <property id="parentmoduleid" index="true" editable="true"  listid="module" viewtype="multiselect" rendertype="multiselect"   datatype="list"   >
+  </property>  
+  <property id="showonall" index="true" editable="true" datatype="boolean"> 
     <name> 
-      <language id="en"><![CDATA[Show on Selected Modules]]></language> 
+      <language id="en"><![CDATA[Show on All Modules]]></language>  
+      <language id="de"><![CDATA[Alle Module anzeigen]]></language>
+      <language id="fr"><![CDATA[Afficher sur tous les modules]]></language>
+      <language id="es"><![CDATA[Mostrar en todos los módulos]]></language>
     </name> 
-  </property>
-
- 
-  
+  </property>  
+  <property id="parentmoduleid" index="true" editable="true" listid="module" viewtype="multiselect" rendertype="multiselect" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Show on Selected Modules]]></language>  
+      <language id="de"><![CDATA[Anzeigen für ausgewählte Module]]></language>
+      <language id="fr"><![CDATA[Afficher sur les modules sélectionnés]]></language>
+      <language id="es"><![CDATA[Mostrar en los módulos seleccionados]]></language>
+    </name> 
+  </property> 
 </properties>

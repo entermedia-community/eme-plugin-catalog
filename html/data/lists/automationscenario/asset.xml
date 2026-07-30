@@ -1,14 +1,20 @@
-<records>
-   <data id="asset_hotfolder_scanning" ordering="50" scenarioicon="folder-fill" enabled="true" isvisible="true" connectedtop="importinglabel" chatenabled="false">
-      <name>
-         <language id="en"><![CDATA[Hot Folder Scanning]]></language>
-      </name>
-   </data>
-   <data id="asset_processing" ordering="51" scenarioicon="image-fill" enabled="true" isvisible="true" connectedtop="importinglabel" chatenabled="false">
+<?xml version="1.0" encoding="UTF-8"?>
 
-      <name>
-         <language id="en"><![CDATA[New Asset Processing]]></language>
-      </name>
-   </data>
-
+<records> 
+  <data id="asset_hotfolder_scanning" ordering="50" scenarioicon="folder-fill" enabled="true" isvisible="true" connectedtop="importinglabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Hot Folder Scanning]]></language>  
+      <language id="de"><![CDATA[Hot-Ordner-Scannen]]></language>
+      <language id="fr"><![CDATA[Numérisation des dossiers chauds]]></language>
+      <language id="es"><![CDATA[Escaneo de carpetas calientes]]></language>
+    </name> 
+  </data>  
+  <data id="asset_processing" ordering="51" scenarioicon="image-fill" enabled="true" isvisible="true" connectedtop="importinglabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[New Asset Processing]]></language>  
+      <language id="de"><![CDATA[Verarbeitung neuer Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Nouveau traitement des actifs]]></language>
+      <language id="es"><![CDATA[Procesamiento de nuevos activos]]></language>
+    </name> 
+  </data> 
 </records>

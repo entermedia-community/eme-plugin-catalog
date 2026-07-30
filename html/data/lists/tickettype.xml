@@ -3,38 +3,58 @@
 <root> 
   <data id="undefined"> 
     <name> 
-      <language id="en"><![CDATA[Misc]]></language> 
+      <language id="en"><![CDATA[Misc]]></language>  
+      <language id="de"><![CDATA[Sonstiges]]></language>
+      <language id="fr"><![CDATA[Divers]]></language>
+      <language id="es"><![CDATA[Misc]]></language>
     </name> 
   </data>  
-
   <data id="0"> 
     <name> 
-      <language id="en"><![CDATA[Client]]></language> 
+      <language id="en"><![CDATA[Client]]></language>  
+      <language id="de"><![CDATA[Kunde]]></language>
+      <language id="fr"><![CDATA[Client]]></language>
+      <language id="es"><![CDATA[Cliente]]></language>
     </name> 
   </data>  
   <data id="1"> 
     <name> 
-      <language id="en"><![CDATA[Hosting]]></language> 
+      <language id="en"><![CDATA[Hosting]]></language>  
+      <language id="de"><![CDATA[Hosting]]></language>
+      <language id="fr"><![CDATA[Hébergement]]></language>
+      <language id="es"><![CDATA[Alojamiento]]></language>
     </name> 
   </data>  
   <data id="2"> 
     <name> 
-      <language id="en"><![CDATA[Marketing]]></language> 
+      <language id="en"><![CDATA[Marketing]]></language>  
+      <language id="de"><![CDATA[Marketing]]></language>
+      <language id="fr"><![CDATA[Marketing]]></language>
+      <language id="es"><![CDATA[Marketing]]></language>
     </name> 
   </data>  
   <data id="3"> 
     <name> 
-      <language id="en"><![CDATA[Meetings]]></language> 
+      <language id="en"><![CDATA[Meetings]]></language>  
+      <language id="de"><![CDATA[Treffen]]></language>
+      <language id="fr"><![CDATA[Réunions]]></language>
+      <language id="es"><![CDATA[Reuniones]]></language>
     </name> 
   </data>  
   <data id="4"> 
     <name> 
-      <language id="en"><![CDATA[Bug]]></language> 
-    </name> 
-  </data>
-  <data id="chat"> 
-    <name> 
-      <language id="en"><![CDATA[Chat]]></language> 
+      <language id="en"><![CDATA[Bug]]></language>  
+      <language id="de"><![CDATA[Fehler]]></language>
+      <language id="fr"><![CDATA[Bogue]]></language>
+      <language id="es"><![CDATA[Bicho]]></language>
     </name> 
   </data>  
+  <data id="chat"> 
+    <name> 
+      <language id="en"><![CDATA[Chat]]></language>  
+      <language id="de"><![CDATA[Chat]]></language>
+      <language id="fr"><![CDATA[Le chat]]></language>
+      <language id="es"><![CDATA[Chat]]></language>
+    </name> 
+  </data> 
 </root>

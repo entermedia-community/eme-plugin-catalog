@@ -25,20 +25,21 @@
       <language id="fr"><![CDATA[Nom du paramètre]]></language> 
     </name> 
   </property>  
-  <property id="value" editable="true" index="true" stored="true">Parameter Value
-    <name>
-      <language id="de"><![CDATA[Parameterwert]]></language>
-      <language id="en"><![CDATA[Parameter Value]]></language>
-      <language id="es"><![CDATA[parámetro Valor]]></language>
-      <language id="fr"><![CDATA[Paramètre Valeur]]></language>
-    </name>
+  <property id="value" editable="true" index="true" stored="true">Parameter Value 
+    <name> 
+      <language id="de"><![CDATA[Parameterwert]]></language>  
+      <language id="en"><![CDATA[Parameter Value]]></language>  
+      <language id="es"><![CDATA[parámetro Valor]]></language>  
+      <language id="fr"><![CDATA[Paramètre Valeur]]></language> 
+    </name> 
+  </property>  
+  <!--  Data Merged -->  
+  <property id="presetdata" index="true" keyword="true" stored="false" editable="true">New 
+    <name> 
+      <language id="en"><![CDATA[presetdata]]></language>  
+      <language id="de"><![CDATA[Voreinstellungsdaten]]></language>
+      <language id="fr"><![CDATA[données prédéfinies]]></language>
+      <language id="es"><![CDATA[Datos preestablecidos]]></language>
+    </name> 
   </property> 
-  
-  <!--  Data Merged -->
-  
-    <property id="presetdata" index="true" keyword="true" stored="false" editable="true">New
-    <name>
-      <language id="en"><![CDATA[presetdata]]></language>
-    </name>
-  </property>
 </properties>

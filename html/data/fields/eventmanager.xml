@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" editable="true" keyword="true">
+  <property id="id" index="true" editable="true" keyword="true"> 
     <name> 
-      <language id="en"><![CDATA[id]]></language> 
+      <language id="en"><![CDATA[id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[ID]]></language>
+      <language id="es"><![CDATA[id]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" editable="true" keyword="true">
+  <property id="name" index="true" editable="true" keyword="true"> 
     <name> 
-      <language id="en"><![CDATA[Name]]></language> 
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="notes" index="true" editable="true" keyword="true">
+  <property id="notes" index="true" editable="true" keyword="true"> 
     <name> 
-      <language id="en"><![CDATA[Notes]]></language> 
+      <language id="en"><![CDATA[Notes]]></language>  
+      <language id="de"><![CDATA[Anmerkungen]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
-  <property id="lastrandate" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="date" autocreatefromexif="false" writenametoexif="false">
-    <name>
-      <language id="en"><![CDATA[Last Ran Date]]></language>
-    </name>
+  <property id="lastrandate" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="date" autocreatefromexif="false" writenametoexif="false"> 
+    <name> 
+      <language id="en"><![CDATA[Last Ran Date]]></language>  
+      <language id="de"><![CDATA[Letztes Ausführungsdatum]]></language>
+      <language id="fr"><![CDATA[Date de dernière exécution]]></language>
+      <language id="es"><![CDATA[Fecha de última ejecución]]></language>
+    </name> 
   </property>  
-<!-- 
+  <!-- 
 
 TODO: Add lastrannodeid?
 Add logs?
@@ -33,6 +45,5 @@ Add logs?
     <property id="key" index="true" stored="true" editable="true">key</property>
     <property id="value" index="true" stored="true" editable="true">Value</property>   
   </property>
-   -->
-   
+   --> 
 </properties>

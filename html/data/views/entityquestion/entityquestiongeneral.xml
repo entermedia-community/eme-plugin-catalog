@@ -1,42 +1,68 @@
-<properties>
-	<property id="question">Question
-		<name>
-			<language id="en"><![CDATA[Question]]></language>
-		</name>
-	</property>
-	<property id="option_a">(A)
-		<name>
-			<language id="en"><![CDATA[(A)]]></language>
-		</name>
-	</property>
-	<property id="option_b">(B)
-		<name>
-			<language id="en"><![CDATA[(B)]]></language>
-		</name>
-	</property>
-	<property id="option_c">(C)
-		<name>
-			<language id="en"><![CDATA[(C)]]></language>
-		</name>
-	</property>
-	<property id="option_d">(D)
-		<name>
-			<language id="en"><![CDATA[(D)]]></language>
-		</name>
-	</property>
-	<property id="correctoption">Correct Option
-		<name>
-			<language id="en"><![CDATA[Correct Option]]></language>
-		</name>
-	</property>
-	<property id="rationale">Explanation
-		<name>
-			<language id="en"><![CDATA[Explanation]]></language>
-		</name>
-	</property>
-	<property id="mcqcognitivelevel">Cognitive Level
-		<name>
-			<language id="en"><![CDATA[Cognitive Level]]></language>
-		</name>
-	</property>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+  <property id="question">Question 
+    <name> 
+      <language id="en"><![CDATA[Question]]></language>  
+      <language id="de"><![CDATA[Frage]]></language>
+      <language id="fr"><![CDATA[Question du Parlement européen]]></language>
+      <language id="es"><![CDATA[¿Cuál es el problema?]]></language>
+    </name> 
+  </property>  
+  <property id="option_a">(A) 
+    <name> 
+      <language id="en"><![CDATA[(A)]]></language>  
+      <language id="de"><![CDATA[(A)]]></language>
+      <language id="fr"><![CDATA[(A) Les États membres]]></language>
+      <language id="es"><![CDATA[(A) Los Estados miembros]]></language>
+    </name> 
+  </property>  
+  <property id="option_b">(B) 
+    <name> 
+      <language id="en"><![CDATA[(B)]]></language>  
+      <language id="de"><![CDATA[(B)]]></language>
+      <language id="fr"><![CDATA[(B) Le Parlement européen]]></language>
+      <language id="es"><![CDATA[(B) El Consejo]]></language>
+    </name> 
+  </property>  
+  <property id="option_c">(C) 
+    <name> 
+      <language id="en"><![CDATA[(C)]]></language>  
+      <language id="de"><![CDATA[(C)]]></language>
+      <language id="fr"><![CDATA[Les États membres]]></language>
+      <language id="es"><![CDATA[(C) El Consejo]]></language>
+    </name> 
+  </property>  
+  <property id="option_d">(D) 
+    <name> 
+      <language id="en"><![CDATA[(D)]]></language>  
+      <language id="de"><![CDATA[(D)]]></language>
+      <language id="fr"><![CDATA[(D) Les États membres]]></language>
+      <language id="es"><![CDATA[(D) Los Estados miembros]]></language>
+    </name> 
+  </property>  
+  <property id="correctoption">Correct Option 
+    <name> 
+      <language id="en"><![CDATA[Correct Option]]></language>  
+      <language id="de"><![CDATA[Richtige Option]]></language>
+      <language id="fr"><![CDATA[Option correcte]]></language>
+      <language id="es"><![CDATA[Opción correcta]]></language>
+    </name> 
+  </property>  
+  <property id="rationale">Explanation 
+    <name> 
+      <language id="en"><![CDATA[Explanation]]></language>  
+      <language id="de"><![CDATA[Erläuterung]]></language>
+      <language id="fr"><![CDATA[Explication]]></language>
+      <language id="es"><![CDATA[Explicación]]></language>
+    </name> 
+  </property>  
+  <property id="mcqcognitivelevel">Cognitive Level 
+    <name> 
+      <language id="en"><![CDATA[Cognitive Level]]></language>  
+      <language id="de"><![CDATA[Kognitionsniveau]]></language>
+      <language id="fr"><![CDATA[Niveau cognitif]]></language>
+      <language id="es"><![CDATA[Nivel cognitivo]]></language>
+    </name> 
+  </property> 
 </properties>

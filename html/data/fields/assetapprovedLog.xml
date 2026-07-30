@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="user" index="true" viewtype="user" stored="true" type="list"   >
+  <property id="user" index="true" viewtype="user" stored="true" type="list"> 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User Name]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" index="true" stored="true"   >Source Path 
+  <property id="sourcepath" index="true" stored="true">Source Path 
     <name> 
       <language id="de"><![CDATA[Source-Pfad]]></language>  
       <language id="en"><![CDATA[Source Path]]></language>  
@@ -17,27 +17,36 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" stored="true"  datatype="list" > 
+  <property id="collectionid" index="true" stored="true" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Album]]></language>  
+      <language id="de"><![CDATA[Album]]></language>
+      <language id="fr"><![CDATA[Album]]></language>
+      <language id="es"><![CDATA[Álbum]]></language>
     </name> 
   </property>  
-  <property id="dataid" index="true" stored="true"  datatype="list" > 
+  <property id="dataid" index="true" stored="true" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Asset]]></language>  
+      <language id="de"><![CDATA[Vermögen]]></language>
+      <language id="fr"><![CDATA[Actif]]></language>
+      <language id="es"><![CDATA[Activo]]></language>
     </name> 
   </property>  
-  <property id="note" index="true" stored="true" > 
+  <property id="note" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Note]]></language>  
+      <language id="de"><![CDATA[Anmerkung]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Nota de la Comisión]]></language>
     </name> 
   </property>  
-  <property id="date" type="date" viewtype="time" index="true" stored="true"   >Date
-    <name>
-      <language id="de"><![CDATA[Datum]]></language>
-      <language id="en"><![CDATA[Date]]></language>
-      <language id="es"><![CDATA[Fecha]]></language>
-      <language id="fr"><![CDATA[Date]]></language>
-    </name>
+  <property id="date" type="date" viewtype="time" index="true" stored="true">Date 
+    <name> 
+      <language id="de"><![CDATA[Datum]]></language>  
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="es"><![CDATA[Fecha]]></language>  
+      <language id="fr"><![CDATA[Date]]></language> 
+    </name> 
   </property> 
 </properties>

@@ -1,40 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
+<properties beanname="dataSearcher"> 
   <property id="displayname" index="true" editable="true" stored="true">New 
-    <name>
-      <language id="en"><![CDATA[Display Name]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Display Name]]></language>  
+      <language id="de"><![CDATA[Anzeigename]]></language>
+      <language id="fr"><![CDATA[Nom d'affichage]]></language>
+      <language id="es"><![CDATA[Nombre de pantalla]]></language>
+    </name> 
+  </property>  
   <property id="urlname" index="true" editable="true" stored="true">New 
-    <name>
-      <language id="en"><![CDATA[URL Name]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[URL Name]]></language>  
+      <language id="de"><![CDATA[URL-Name]]></language>
+      <language id="fr"><![CDATA[Nom de l'URL]]></language>
+      <language id="es"><![CDATA[Nombre de la URL]]></language>
+    </name> 
+  </property>  
   <property id="phonenumber" index="true" editable="true" stored="true">New 
-    <name>
-      <language id="en"><![CDATA[Phone Number]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Phone Number]]></language>  
+      <language id="de"><![CDATA[Telefonnummer]]></language>
+      <language id="fr"><![CDATA[Numéro de téléphone]]></language>
+      <language id="es"><![CDATA[Número de teléfono]]></language>
+    </name> 
+  </property>  
   <property id="whatsappenabled" index="true" editable="true" stored="true" type="boolean">New 
-    <name>
-      <language id="en"><![CDATA[WhatsApp Enabled]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[WhatsApp Enabled]]></language>  
+      <language id="de"><![CDATA[WhatsApp aktiviert]]></language>
+      <language id="fr"><![CDATA[WhatsApp activé]]></language>
+      <language id="es"><![CDATA[WhatsApp habilitado]]></language>
+    </name> 
+  </property>  
   <property id="jobtitle" index="true" editable="true" stored="true">New 
-    <name>
-      <language id="en"><![CDATA[Job Title]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Job Title]]></language>  
+      <language id="de"><![CDATA[Amtsbezeichnung]]></language>
+      <language id="fr"><![CDATA[Titre du poste]]></language>
+      <language id="es"><![CDATA[Título del puesto]]></language>
+    </name> 
+  </property>  
   <property id="entitycompany" index="true" editable="true" stored="true" datatype="list">New 
-    <name>
-      <language id="en"><![CDATA[Company]]></language>
-    </name>
-  </property>
-
+    <name> 
+      <language id="en"><![CDATA[Company]]></language>  
+      <language id="de"><![CDATA[Unternehmen]]></language>
+      <language id="fr"><![CDATA[Entreprise]]></language>
+      <language id="es"><![CDATA[Compañía]]></language>
+    </name> 
+  </property> 
 </properties>

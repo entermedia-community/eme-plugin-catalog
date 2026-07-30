@@ -11,12 +11,18 @@
   </property>  
   <property id="commenttext" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[commenttext]]></language> 
+      <language id="en"><![CDATA[commenttext]]></language>  
+      <language id="de"><![CDATA[Kommentartext]]></language>
+      <language id="fr"><![CDATA[texte de commentaire]]></language>
+      <language id="es"><![CDATA[texto de comentario]]></language>
     </name> 
   </property>  
   <property id="statuschange" index="true" editable="true" stored="true" type="list" listid="taskstatus"> 
     <name> 
-      <language id="en"><![CDATA[Status]]></language> 
+      <language id="en"><![CDATA[Status]]></language>  
+      <language id="de"><![CDATA[Status]]></language>
+      <language id="fr"><![CDATA[Statut]]></language>
+      <language id="es"><![CDATA[Estado]]></language>
     </name> 
   </property>  
   <property id="author" externalid="Author" index="true" filter="false" datatype="text" editable="false" stored="true" sortable="true" keyword="false">New 
@@ -37,15 +43,18 @@
   </property>  
   <property id="goaltaskid" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[goaltaskid]]></language> 
+      <language id="en"><![CDATA[goaltaskid]]></language>  
+      <language id="de"><![CDATA[Zielverfolgung]]></language>
+      <language id="fr"><![CDATA[Goaltaskid]]></language>
+      <language id="es"><![CDATA[goaltaskid]]></language>
     </name> 
   </property>  
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">New
-    <name>
-      <language id="de"><![CDATA[Id]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Id]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">New 
+    <name> 
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property> 
 </properties>

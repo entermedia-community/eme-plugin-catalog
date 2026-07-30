@@ -1,14 +1,20 @@
-<properties>
+<?xml version="1.0" encoding="UTF-8"?>
 
-
-  <property id="tabrenderditaeditor"  ordering="39">
-	  <name> 
-	      <language id="en"><![CDATA[DITA Viewer]]></language>  
-	    </name>
-  </property>
-  <property id="tabrenderonix"  ordering="40">
-	  <name> 
-	      <language id="en"><![CDATA[ONIX Viewer]]></language>  
-	    </name>
-  </property>
+<properties> 
+  <property id="tabrenderditaeditor" ordering="39"> 
+    <name> 
+      <language id="en"><![CDATA[DITA Viewer]]></language>  
+      <language id="de"><![CDATA[DITA-Viewer]]></language>
+      <language id="fr"><![CDATA[DITA Viewer]]></language>
+      <language id="es"><![CDATA[Visor DITA]]></language>
+    </name> 
+  </property>  
+  <property id="tabrenderonix" ordering="40"> 
+    <name> 
+      <language id="en"><![CDATA[ONIX Viewer]]></language>  
+      <language id="de"><![CDATA[ONIX-Viewer]]></language>
+      <language id="fr"><![CDATA[Lecteur ONIX]]></language>
+      <language id="es"><![CDATA[Visor ONIX]]></language>
+    </name> 
+  </property> 
 </properties>

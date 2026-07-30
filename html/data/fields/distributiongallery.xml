@@ -1,164 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
-  <property id="id" index="true" internalfield="true" editable="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Id]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Id]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
-  <property id="name" index="true" multilanguage="true" editable="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Identität]]></language>
-      <language id="en"><![CDATA[Name]]></language>
-      <language id="es"><![CDATA[Nombre]]></language>
-      <language id="fr"><![CDATA[Identité]]></language>
-    </name>
-  </property>
-  <property id="sourcepath">
-    <name>
-      <language id="en"><![CDATA[SourcePath]]></language>
-    </name>
-  </property>
-  <property id="enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Enabled]]></language>
-    </name>
-  </property>
-  <property id="distributiontype" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Distribution Type]]></language>
-    </name>
-  </property>
-  <property id="title" index="true" multilanguage="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Gallery Title]]></language>
-    </name>
-  </property>
-  <property id="title_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Gallery Title Enabled]]></language>
-    </name>
-  </property>
-  <property id="footer" index="true" multilanguage="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[footer]]></language>
-    </name>
-  </property>
-  <property id="footer_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[footer_enabled]]></language>
-    </name>
-  </property>
-  <property id="download_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Download Enabled]]></language>
-    </name>
-  </property>
-  <property id="autoplay_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Autoplay]]></language>
-    </name>
-  </property>
-  <property id="feed_layout" index="true" editable="true" stored="true" deleted="true">
-    <name>
-      <language id="en"><![CDATA[feed_layout]]></language>
-    </name>
-  </property>
-  <property id="colorscheme" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[colorscheme]]></language>
-    </name>
-  </property>
-  <property id="externalcss_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[External CSS Enabled]]></language>
-    </name>
-  </property>
-  <property id="externalcss" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[External CSS]]></language>
-    </name>
-  </property>
-  <property id="caption" index="true" multilanguage="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Gallery Subtitle]]></language>
-    </name>
-  </property>
-  <property id="caption_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Gallery Subtitle Enabled]]></language>
-    </name>
-  </property>
-  <property id="image_caption_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Image Caption Enabled]]></language>
-    </name>
-  </property>
-  <property id="image_copyright_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Show Image Copyright]]></language>
-    </name>
-  </property>
-  <property id="sharelike_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[sharelike_enabled]]></language>
-    </name>
-  </property>
-  <property id="publishingfeedlayout" index="true" editable="true" stored="true" datatype="list">
-    <name>
-      <language id="en"><![CDATA[Theme]]></language>
-    </name>
-  </property>
-
-  <property id="entityid" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Entity Id]]></language>
-    </name>
-  </property>
-  <property id="moduleid" index="true" editable="true" datatype="list" stored="true" listid="module">
-    <name>
-      <language id="en"><![CDATA[Module]]></language>
-    </name>
-  </property>
-
-  <property id="categoryid" index="true" editable="true" stored="true" datatype="list" listid="category">
-    <name>
-      <language id="en"><![CDATA[Category ID]]></language>
-    </name>
-  </property>
-
-  <!-- deprecated. Use categoryid -->
-  <property id="lightboxid" index="true" editable="true" stored="true" datatype="list" listid="emedialightbox">
-    <name>
-      <language id="en"><![CDATA[Lightbox]]></language>
-    </name>
-  </property>
-
-  <property id="containerdimension_enabled" index="true" editable="true" stored="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Use Fixed Dimension]]></language>
-    </name>
-  </property>
-
-  <property id="containerwidth" index="true" editable="true" stored="true" type="number">
-    <name>
-      <language id="en"><![CDATA[Container Width]]></language>
-    </name>
-  </property>
-
-  <property id="containerheight" index="true" editable="true" stored="true" type="number">
-    <name>
-      <language id="en"><![CDATA[Container Height]]></language>
-    </name>
-  </property>
-
-  <property id="sortby" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Sort By]]></language>
-    </name>
-  </property>
-
+<properties beanname="dataSearcher"> 
+  <property id="id" index="true" internalfield="true" editable="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
+  <property id="name" index="true" multilanguage="true" editable="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Identität]]></language>  
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="es"><![CDATA[Nombre]]></language>  
+      <language id="fr"><![CDATA[Identité]]></language> 
+    </name> 
+  </property>  
+  <property id="sourcepath"> 
+    <name> 
+      <language id="en"><![CDATA[SourcePath]]></language>  
+      <language id="de"><![CDATA[Quellpfad]]></language>
+      <language id="fr"><![CDATA[Chemin d'accès]]></language>
+      <language id="es"><![CDATA[Ruta de origen]]></language>
+    </name> 
+  </property>  
+  <property id="enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Enabled]]></language>  
+      <language id="de"><![CDATA[Aktiviert]]></language>
+      <language id="fr"><![CDATA[Activé]]></language>
+      <language id="es"><![CDATA[Habilitado]]></language>
+    </name> 
+  </property>  
+  <property id="distributiontype" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Distribution Type]]></language>  
+      <language id="de"><![CDATA[Verteilungstyp]]></language>
+      <language id="fr"><![CDATA[Type de distribution]]></language>
+      <language id="es"><![CDATA[Tipo de distribución]]></language>
+    </name> 
+  </property>  
+  <property id="title" index="true" multilanguage="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Gallery Title]]></language>  
+      <language id="de"><![CDATA[Titel der Galerie]]></language>
+      <language id="fr"><![CDATA[Titre de la galerie]]></language>
+      <language id="es"><![CDATA[Título de la galería]]></language>
+    </name> 
+  </property>  
+  <property id="title_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Gallery Title Enabled]]></language>  
+      <language id="de"><![CDATA[Galerie-Titel aktiviert]]></language>
+      <language id="fr"><![CDATA[Titre de galerie activé]]></language>
+      <language id="es"><![CDATA[Título de la galería habilitado]]></language>
+    </name> 
+  </property>  
+  <property id="footer" index="true" multilanguage="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[footer]]></language>  
+      <language id="de"><![CDATA[Fußzeile]]></language>
+      <language id="fr"><![CDATA[pied de page]]></language>
+      <language id="es"><![CDATA[pie de página]]></language>
+    </name> 
+  </property>  
+  <property id="footer_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[footer_enabled]]></language>  
+      <language id="de"><![CDATA[Fußzeile aktiviert]]></language>
+      <language id="fr"><![CDATA[pied_de_page_activé]]></language>
+      <language id="es"><![CDATA[footer_enabled]]></language>
+    </name> 
+  </property>  
+  <property id="download_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Download Enabled]]></language>  
+      <language id="de"><![CDATA[Download aktivieren]]></language>
+      <language id="fr"><![CDATA[Téléchargement activé]]></language>
+      <language id="es"><![CDATA[Descargar habilitado]]></language>
+    </name> 
+  </property>  
+  <property id="autoplay_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Autoplay]]></language>  
+      <language id="de"><![CDATA[Autoplay]]></language>
+      <language id="fr"><![CDATA[Lecture automatique]]></language>
+      <language id="es"><![CDATA[Reproducción automática]]></language>
+    </name> 
+  </property>  
+  <property id="feed_layout" index="true" editable="true" stored="true" deleted="true"> 
+    <name> 
+      <language id="en"><![CDATA[feed_layout]]></language>  
+      <language id="de"><![CDATA[Feed-Layout]]></language>
+      <language id="fr"><![CDATA[mise en page]]></language>
+      <language id="es"><![CDATA[Diseño del feed_layout]]></language>
+    </name> 
+  </property>  
+  <property id="colorscheme" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[colorscheme]]></language>  
+      <language id="de"><![CDATA[Farbschema]]></language>
+      <language id="fr"><![CDATA[Thème de couleurs]]></language>
+      <language id="es"><![CDATA[Esquema de colores]]></language>
+    </name> 
+  </property>  
+  <property id="externalcss_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[External CSS Enabled]]></language>  
+      <language id="de"><![CDATA[Externes CSS aktiviert]]></language>
+      <language id="fr"><![CDATA[CSS externe activé]]></language>
+      <language id="es"><![CDATA[CSS externo habilitado]]></language>
+    </name> 
+  </property>  
+  <property id="externalcss" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[External CSS]]></language>  
+      <language id="de"><![CDATA[Externes CSS]]></language>
+      <language id="fr"><![CDATA[CSS externe]]></language>
+      <language id="es"><![CDATA[CSS externo]]></language>
+    </name> 
+  </property>  
+  <property id="caption" index="true" multilanguage="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Gallery Subtitle]]></language>  
+      <language id="de"><![CDATA[Galerie-Untertitel]]></language>
+      <language id="fr"><![CDATA[Sous-titre de la galerie]]></language>
+      <language id="es"><![CDATA[Subtítulo de la galería]]></language>
+    </name> 
+  </property>  
+  <property id="caption_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Gallery Subtitle Enabled]]></language>  
+      <language id="de"><![CDATA[Galerie-Untertitel aktiviert]]></language>
+      <language id="fr"><![CDATA[Sous-titres de la galerie activés]]></language>
+      <language id="es"><![CDATA[Subtítulos de la galería habilitados]]></language>
+    </name> 
+  </property>  
+  <property id="image_caption_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Image Caption Enabled]]></language>  
+      <language id="de"><![CDATA[Bildunterschrift aktivieren]]></language>
+      <language id="fr"><![CDATA[Légende d'image activée]]></language>
+      <language id="es"><![CDATA[Subtítulos de imagen habilitados]]></language>
+    </name> 
+  </property>  
+  <property id="image_copyright_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Show Image Copyright]]></language>  
+      <language id="de"><![CDATA[Bildrechte anzeigen]]></language>
+      <language id="fr"><![CDATA[Afficher l'image. Droits réservés.]]></language>
+      <language id="es"><![CDATA[Mostrar imagen con derechos de autor]]></language>
+    </name> 
+  </property>  
+  <property id="sharelike_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[sharelike_enabled]]></language>  
+      <language id="de"><![CDATA[sharelike_enabled]]></language>
+      <language id="fr"><![CDATA[partage_activé]]></language>
+      <language id="es"><![CDATA[sharelike_enabled (compartir igual)]]></language>
+    </name> 
+  </property>  
+  <property id="publishingfeedlayout" index="true" editable="true" stored="true" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Theme]]></language>  
+      <language id="de"><![CDATA[Thema]]></language>
+      <language id="fr"><![CDATA[Le thème]]></language>
+      <language id="es"><![CDATA[Tema]]></language>
+    </name> 
+  </property>  
+  <property id="entityid" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Entity Id]]></language>  
+      <language id="de"><![CDATA[Entity-ID]]></language>
+      <language id="fr"><![CDATA[Identifiant de l'entité]]></language>
+      <language id="es"><![CDATA[ID de la entidad]]></language>
+    </name> 
+  </property>  
+  <property id="moduleid" index="true" editable="true" datatype="list" stored="true" listid="module"> 
+    <name> 
+      <language id="en"><![CDATA[Module]]></language>  
+      <language id="de"><![CDATA[Modul]]></language>
+      <language id="fr"><![CDATA[Module]]></language>
+      <language id="es"><![CDATA[Módulo]]></language>
+    </name> 
+  </property>  
+  <property id="categoryid" index="true" editable="true" stored="true" datatype="list" listid="category"> 
+    <name> 
+      <language id="en"><![CDATA[Category ID]]></language>  
+      <language id="de"><![CDATA[Kategorie-ID]]></language>
+      <language id="fr"><![CDATA[ID de catégorie]]></language>
+      <language id="es"><![CDATA[ID de categoría]]></language>
+    </name> 
+  </property>  
+  <!-- deprecated. Use categoryid -->  
+  <property id="lightboxid" index="true" editable="true" stored="true" datatype="list" listid="emedialightbox"> 
+    <name> 
+      <language id="en"><![CDATA[Lightbox]]></language>  
+      <language id="de"><![CDATA[Lichtbox]]></language>
+      <language id="fr"><![CDATA[Lumière]]></language>
+      <language id="es"><![CDATA[Lightbox]]></language>
+    </name> 
+  </property>  
+  <property id="containerdimension_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Use Fixed Dimension]]></language>  
+      <language id="de"><![CDATA[Feste Dimension verwenden]]></language>
+      <language id="fr"><![CDATA[Utiliser une dimension fixe]]></language>
+      <language id="es"><![CDATA[Utilizar dimensión fija]]></language>
+    </name> 
+  </property>  
+  <property id="containerwidth" index="true" editable="true" stored="true" type="number"> 
+    <name> 
+      <language id="en"><![CDATA[Container Width]]></language>  
+      <language id="de"><![CDATA[Behälterbreite]]></language>
+      <language id="fr"><![CDATA[Largeur du conteneur]]></language>
+      <language id="es"><![CDATA[Ancho del contenedor]]></language>
+    </name> 
+  </property>  
+  <property id="containerheight" index="true" editable="true" stored="true" type="number"> 
+    <name> 
+      <language id="en"><![CDATA[Container Height]]></language>  
+      <language id="de"><![CDATA[Behälterhöhe]]></language>
+      <language id="fr"><![CDATA[Hauteur du conteneur]]></language>
+      <language id="es"><![CDATA[Altura del contenedor]]></language>
+    </name> 
+  </property>  
+  <property id="sortby" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Sort By]]></language>  
+      <language id="de"><![CDATA[Sortieren nach]]></language>
+      <language id="fr"><![CDATA[Trier par]]></language>
+      <language id="es"><![CDATA[Ordenar por]]></language>
+    </name> 
+  </property> 
 </properties>

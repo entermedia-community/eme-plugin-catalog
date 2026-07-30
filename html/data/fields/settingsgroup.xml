@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties index="true" stored="true"  beanname="folderSearcher">
-
+<properties index="true" stored="true" beanname="folderSearcher"> 
   <property id="id" index="true" stored="true" editable="false"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
@@ -42,15 +41,15 @@
       <language id="fr"><![CDATA[Autorisations]]></language> 
     </name> 
   </property>  
-  <property id="resultview" editable="true" index="true" stored="true" type="list">Default Result View
-    <name>
-      <language id="de"><![CDATA[Standardergebnisansicht]]></language>
-      <language id="en"><![CDATA[Default Result View]]></language>
-      <language id="es"><![CDATA[El resultado predeterminado Ver]]></language>
-      <language id="fr"><![CDATA[Vue Résultat Par Défaut]]></language>
-    </name>
+  <property id="resultview" editable="true" index="true" stored="true" type="list">Default Result View 
+    <name> 
+      <language id="de"><![CDATA[Standardergebnisansicht]]></language>  
+      <language id="en"><![CDATA[Default Result View]]></language>  
+      <language id="es"><![CDATA[El resultado predeterminado Ver]]></language>  
+      <language id="fr"><![CDATA[Vue Résultat Par Défaut]]></language> 
+    </name> 
   </property>  
-    <property id="hideassettype" index="true" stored="true" internalfield="true" viewtype="multiselect" datatype="list" listid="assettype" editable="true"  type="list"> 
+  <property id="hideassettype" index="true" stored="true" internalfield="true" viewtype="multiselect" datatype="list" listid="assettype" editable="true" type="list"> 
     <name> 
       <language id="de"><![CDATA[verstecken Asset-Typen]]></language>  
       <language id="en"><![CDATA[Hidden Asset Types]]></language>  
@@ -58,8 +57,6 @@
       <language id="fr"><![CDATA[Cacher les Types d&#39;item]]></language> 
     </name> 
   </property>  
-  
-
   <property id="assethitsperpage" index="true" stored="true" type="list" listid="hitcount" editable="true">Number of Assets to view per page 
     <name> 
       <language id="de"><![CDATA[Anzahl der Assets pro Seite zu sehen]]></language>  
@@ -76,29 +73,36 @@
       <language id="fr"><![CDATA[Nombre de lignes affichées sur le module des résultats]]></language> 
     </name> 
   </property>  
-    <property id="sendcollectionnotifications" index="true" type="boolean" internalfield="true" editable="false" > 
+  <property id="sendcollectionnotifications" index="true" type="boolean" internalfield="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Receive Album Email Notifications]]></language>  
+      <language id="de"><![CDATA[E-Mail-Benachrichtigungen für Alben erhalten]]></language>
+      <language id="fr"><![CDATA[Recevoir des notifications d'album par e-mail]]></language>
+      <language id="es"><![CDATA[Recibir notificaciones por correo electrónico del álbum]]></language>
     </name> 
   </property>  
-  <property id="sendapprovalnotifications" index="true" type="boolean" internalfield="true" editable="false" > 
+  <property id="sendapprovalnotifications" index="true" type="boolean" internalfield="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Receive Approval or Rejection Notifications]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen über Zustimmung oder Ablehnung erhalten]]></language>
+      <language id="fr"><![CDATA[Recevoir des notifications d'approbation ou de refus]]></language>
+      <language id="es"><![CDATA[Recibir notificaciones de aprobación o denegación]]></language>
     </name> 
   </property>  
-  <property id="preferedapp" index="true"  internalfield="true" editable="true" > 
+  <property id="preferedapp" index="true" internalfield="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Prefered Application]]></language>  
-      
+      <language id="de"><![CDATA[Bevorzugte Anwendung]]></language>
+      <language id="fr"><![CDATA[Application préférée]]></language>
+      <language id="es"><![CDATA[Aplicación preferida]]></language>
     </name> 
   </property>  
-<property id="multiedit" editable="true" type="boolean" index="true" stored="true"> old?
-    <name>
-      <language id="de"><![CDATA[Multi-Edit]]></language>
-      <language id="en"><![CDATA[Multi-Edit]]></language>
-      <language id="es"><![CDATA[Multi-Edit]]></language>
-      <language id="fr"><![CDATA[Edition multiple]]></language>
-    </name>
+  <property id="multiedit" editable="true" type="boolean" index="true" stored="true">old? 
+    <name> 
+      <language id="de"><![CDATA[Multi-Edit]]></language>  
+      <language id="en"><![CDATA[Multi-Edit]]></language>  
+      <language id="es"><![CDATA[Multi-Edit]]></language>  
+      <language id="fr"><![CDATA[Edition multiple]]></language> 
+    </name> 
   </property> 
-  
 </properties>

@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
-  <property id="ordering" type="number" autoincrement="true" editable="true" index="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
-  
-  <property id="lightboxid" listid="emedialightbox" index="true" editable="true"   datatype="list"   >
+  <property id="ordering" type="number" autoincrement="true" editable="true" index="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Lighbox]]></language> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
-  </property>
-
-  <property id="parententityid" index="true" editable="true"   datatype="list"   >
+  </property>  
+  <property id="lightboxid" listid="emedialightbox" index="true" editable="true" datatype="list"> 
     <name> 
-      <language id="en"><![CDATA[Parent Entity]]></language> 
+      <language id="en"><![CDATA[Lighbox]]></language>  
+      <language id="de"><![CDATA[Lichtbox]]></language>
+      <language id="fr"><![CDATA[Lighbox]]></language>
+      <language id="es"><![CDATA[Lámpara]]></language>
     </name> 
-  </property>
-  <property id="parentmoduleid" index="true" editable="true"  listid="module" viewtype="entity"   datatype="list"   >
+  </property>  
+  <property id="parententityid" index="true" editable="true" datatype="list"> 
     <name> 
-      <language id="en"><![CDATA[Parent Module]]></language> 
+      <language id="en"><![CDATA[Parent Entity]]></language>  
+      <language id="de"><![CDATA[Muttergesellschaft]]></language>
+      <language id="fr"><![CDATA[Entité parente]]></language>
+      <language id="es"><![CDATA[Entidad matriz]]></language>
     </name> 
-  </property>
- 
-  
-  
+  </property>  
+  <property id="parentmoduleid" index="true" editable="true" listid="module" viewtype="entity" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Parent Module]]></language>  
+      <language id="de"><![CDATA[Elternmodul]]></language>
+      <language id="fr"><![CDATA[Module parent]]></language>
+      <language id="es"><![CDATA[Módulo padre]]></language>
+    </name> 
+  </property> 
 </properties>

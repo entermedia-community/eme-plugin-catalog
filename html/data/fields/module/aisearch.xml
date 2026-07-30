@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher">
-
-  <!-- AI Search Fields -->
-  <property id="aisearch_userprompt" index="true" editable="true" stored="true" viewtype="textarea">
-    <name>
-      <language id="en"><![CDATA[AI Search Prompt]]></language>
-    </name>
-  </property>
-  <property id="aisearch_contains" index="true" editable="true" stored="true" viewtype="textarea">
-    <name>
-      <language id="en"><![CDATA[AI Search Contains]]></language>
-    </name>
-  </property>
-
-  <property id="semanticenabled" type="boolean" index="true" stored="true" editable="true">
-    <name>
-      <language id="en"><![CDATA[AI Powered Auto Categorization]]></language>
-    </name>
-  </property>
-  <property id="aicreationmethod"  type="list" index="true" editable="true" stored="true" >
-    <name>
-      <language id="en"><![CDATA[AI Creation Method]]></language>
-    </name>
-  </property>
-
+<properties beanname="folderSearcher"> 
+  <!-- AI Search Fields -->  
+  <property id="aisearch_userprompt" index="true" editable="true" stored="true" viewtype="textarea"> 
+    <name> 
+      <language id="en"><![CDATA[AI Search Prompt]]></language>  
+      <language id="de"><![CDATA[KI-Suchanfrage]]></language>
+      <language id="fr"><![CDATA[Prompt de recherche par IA]]></language>
+      <language id="es"><![CDATA[Prompt de búsqueda con IA]]></language>
+    </name> 
+  </property>  
+  <property id="aisearch_contains" index="true" editable="true" stored="true" viewtype="textarea"> 
+    <name> 
+      <language id="en"><![CDATA[AI Search Contains]]></language>  
+      <language id="de"><![CDATA[KI-Suche enthält]]></language>
+      <language id="fr"><![CDATA[Contenu de la recherche IA]]></language>
+      <language id="es"><![CDATA[Contiene la búsqueda de IA]]></language>
+    </name> 
+  </property>  
+  <property id="semanticenabled" type="boolean" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[AI Powered Auto Categorization]]></language>  
+      <language id="de"><![CDATA[KI-gestützte automatische Kategorisierung]]></language>
+      <language id="fr"><![CDATA[Catégorisation automatique pilotée par l'IA]]></language>
+      <language id="es"><![CDATA[Categorización automática impulsada por IA]]></language>
+    </name> 
+  </property>  
+  <property id="aicreationmethod" type="list" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[AI Creation Method]]></language>  
+      <language id="de"><![CDATA[KI-Erstellungsmethode]]></language>
+      <language id="fr"><![CDATA[Méthode de création d'IA]]></language>
+      <language id="es"><![CDATA[Método de creación de inteligencia artificial]]></language>
+    </name> 
+  </property> 
 </properties>

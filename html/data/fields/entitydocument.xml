@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
-  <property id="documenttype" index="true" stored="true" editable="true" type="list" listid="recordtype" rendermask="${data.primarymedia.recordtype.id||data.primaryimage.recordtype.id}">
-    <name>
-      <language id="en"><![CDATA[Document Type]]></language>
-    </name>
-  </property>
-  <property id="pagescreatedfor" index="true" stored="true" editable="true">
-    <name>
-      <language id="en"><![CDATA[AssetID | Modtime]]></language>
-    </name>
-  </property>
-  <property id="totalpages" datatype="number" viewtype="number" index="true" stored="true" searchcomponent="numbersearch" editable="true" type="number" rendermask="${data.primarymedia.pages}">
-    <name>
-      <language id="en"><![CDATA[Total Pages]]></language>
-    </name>
-  </property>
-
-  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" viewtype="textarea" aicreationcommand="Generate a brief summary describing what this Document is about based on its content.">
-    <name>
-      <language id="en"><![CDATA[Description]]></language>
-    </name>
-  </property>
-
-  <property id="librarycollection" required="false" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="librarycollection" datatype="list">
-    <name>
-      <language id="en"><![CDATA[Collection]]></language>
-    </name>
-  </property>
-
-
+<properties beanname="dataSearcher"> 
+  <property id="documenttype" index="true" stored="true" editable="true" type="list" listid="recordtype" rendermask="${data.primarymedia.recordtype.id||data.primaryimage.recordtype.id}"> 
+    <name> 
+      <language id="en"><![CDATA[Document Type]]></language>  
+      <language id="de"><![CDATA[Dokumenttyp]]></language>
+      <language id="fr"><![CDATA[Type de document]]></language>
+      <language id="es"><![CDATA[Tipo de documento]]></language>
+    </name> 
+  </property>  
+  <property id="pagescreatedfor" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[AssetID | Modtime]]></language>  
+      <language id="de"><![CDATA[AssetID | Modtime]]></language>
+      <language id="fr"><![CDATA[ID de l'actif | Date de modification]]></language>
+      <language id="es"><![CDATA[ID del activo | Hora de modificación]]></language>
+    </name> 
+  </property>  
+  <property id="totalpages" datatype="number" viewtype="number" index="true" stored="true" searchcomponent="numbersearch" editable="true" type="number" rendermask="${data.primarymedia.pages}"> 
+    <name> 
+      <language id="en"><![CDATA[Total Pages]]></language>  
+      <language id="de"><![CDATA[Gesamtseitenanzahl]]></language>
+      <language id="fr"><![CDATA[Nombre de pages]]></language>
+      <language id="es"><![CDATA[Total de páginas]]></language>
+    </name> 
+  </property>  
+  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" viewtype="textarea" aicreationcommand="Generate a brief summary describing what this Document is about based on its content."> 
+    <name> 
+      <language id="en"><![CDATA[Description]]></language>  
+      <language id="de"><![CDATA[Beschreibung]]></language>
+      <language id="fr"><![CDATA[Description]]></language>
+      <language id="es"><![CDATA[Descripción]]></language>
+    </name> 
+  </property>  
+  <property id="librarycollection" required="false" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="librarycollection" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Collection]]></language>  
+      <language id="de"><![CDATA[Sammlung]]></language>
+      <language id="fr"><![CDATA[Collection]]></language>
+      <language id="es"><![CDATA[Colección]]></language>
+    </name> 
+  </property> 
 </properties>

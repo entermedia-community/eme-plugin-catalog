@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
-
-  <property id="channel" index="true" editable="true" stored="true" indextype="not_analyzed">
-    <name>
-      <language id="en"><![CDATA[Channel]]></language>
-    </name>
-  </property>
-
-  <property id="query" index="true" editable="true">
-    <name>
-      <language id="en"><![CDATA[Original Query]]></language>
-    </name>
-  </property>
-
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" editable="true" index="true">
-    <name>
-      <language id="en"><![CDATA[Parsed Keywords]]></language>
-    </name>
-  </property>
-
-  <property id="context" index="true" editable="true" viewtype="text" rendertype="text" keyword="true">
-    <name>
-      <language id="en"><![CDATA[Collected Context]]></language>
-    </name>
-  </property>
-
-  <property id="ragstatus" foreignkeyid="ragstatus" index="true" stored="true" editable="true" type="list">
-    <name>
-      <language id="en"><![CDATA[Rag Status]]></language>
-    </name>
-  </property>
-
+<properties beanname="dataSearcher"> 
+  <property id="channel" index="true" editable="true" stored="true" indextype="not_analyzed"> 
+    <name> 
+      <language id="en"><![CDATA[Channel]]></language>  
+      <language id="de"><![CDATA[Kanal]]></language>
+      <language id="fr"><![CDATA[Le canal]]></language>
+      <language id="es"><![CDATA[El canal]]></language>
+    </name> 
+  </property>  
+  <property id="query" index="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Original Query]]></language>  
+      <language id="de"><![CDATA[Ursprüngliche Anfrage]]></language>
+      <language id="fr"><![CDATA[Requête originale]]></language>
+      <language id="es"><![CDATA[Consulta original]]></language>
+    </name> 
+  </property>  
+  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" editable="true" index="true"> 
+    <name> 
+      <language id="en"><![CDATA[Parsed Keywords]]></language>  
+      <language id="de"><![CDATA[Geparste Schlüsselwörter]]></language>
+      <language id="fr"><![CDATA[Mots-clés analysés]]></language>
+      <language id="es"><![CDATA[Palabras clave analizadas]]></language>
+    </name> 
+  </property>  
+  <property id="context" index="true" editable="true" viewtype="text" rendertype="text" keyword="true"> 
+    <name> 
+      <language id="en"><![CDATA[Collected Context]]></language>  
+      <language id="de"><![CDATA[Gesammelter Kontext]]></language>
+      <language id="fr"><![CDATA[Contexte collecté]]></language>
+      <language id="es"><![CDATA[Contexto recopilado]]></language>
+    </name> 
+  </property>  
+  <property id="ragstatus" foreignkeyid="ragstatus" index="true" stored="true" editable="true" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Rag Status]]></language>  
+      <language id="de"><![CDATA[Kleidungsstatus]]></language>
+      <language id="fr"><![CDATA[État du chiffon]]></language>
+      <language id="es"><![CDATA[Estado de la muñeca]]></language>
+    </name> 
+  </property> 
 </properties>

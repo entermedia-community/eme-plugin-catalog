@@ -1,71 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="notes" index="true" editable="true" keyword="true">New
+  <property id="notes" index="true" editable="true" keyword="true">New 
     <name> 
-      <language id="en"><![CDATA[Notes]]></language> 
+      <language id="en"><![CDATA[Notes]]></language>  
+      <language id="de"><![CDATA[Anmerkungen]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
-  <property id="id" index="true" editable="true" keyword="true">New
+  <property id="id" index="true" editable="true" keyword="true">New 
     <name> 
-      <language id="en"><![CDATA[id]]></language> 
+      <language id="en"><![CDATA[id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[ID]]></language>
+      <language id="es"><![CDATA[id]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" editable="true" keyword="true">New
+  <property id="name" index="true" editable="true" keyword="true">New 
     <name> 
-      <language id="en"><![CDATA[Name]]></language> 
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="senddate" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="date" autocreatefromexif="false" writenametoexif="false">New
-    <name>
-      <language id="en"><![CDATA[Date]]></language>
-    </name>
-  </property>  
-  <property id="notificationstatus" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="list" autocreatefromexif="false" writenametoexif="false">New
+  <property id="senddate" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="date" autocreatefromexif="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Notification Status]]></language> 
-    </name> 
-  </property>
-
-  <property id="notificationtype" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="list" autocreatefromexif="false" writenametoexif="false">Notification Type</property>
-  
-  <property id="notificationsubject" index="true" editable="true" keyword="true">
-    <name> 
-      <language id="en"><![CDATA[Subject]]></language> 
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  
-  
-  <property id="notificationemails" index="true" editable="true" keyword="true" indextype="not_analyzed" >
+  <property id="notificationstatus" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="list" autocreatefromexif="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Recipients]]></language> 
+      <language id="en"><![CDATA[Notification Status]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungsstatus]]></language>
+      <language id="fr"><![CDATA[Statut de notification]]></language>
+      <language id="es"><![CDATA[Estado de la notificación]]></language>
     </name> 
   </property>  
-  
-  
-  <property id="notificationfrom" index="true" editable="true" keyword="true">
+  <property id="notificationtype" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="list" autocreatefromexif="false" writenametoexif="false">Notification Type</property>  
+  <property id="notificationsubject" index="true" editable="true" keyword="true"> 
     <name> 
-      <language id="en"><![CDATA[Email From]]></language> 
+      <language id="en"><![CDATA[Subject]]></language>  
+      <language id="de"><![CDATA[Gegenstand]]></language>
+      <language id="fr"><![CDATA[Sujet]]></language>
+      <language id="es"><![CDATA[Asunto]]></language>
     </name> 
   </property>  
-  
-  <property id="dataid" index="true" editable="true" keyword="true" indextype="not_analyzed">
+  <property id="notificationemails" index="true" editable="true" keyword="true" indextype="not_analyzed"> 
     <name> 
-      <language id="en"><![CDATA[Parent Data]]></language> 
+      <language id="en"><![CDATA[Recipients]]></language>  
+      <language id="de"><![CDATA[Empfänger]]></language>
+      <language id="fr"><![CDATA[Bénéficiaires]]></language>
+      <language id="es"><![CDATA[Beneficiarios]]></language>
     </name> 
   </property>  
-  
-  
+  <property id="notificationfrom" index="true" editable="true" keyword="true"> 
+    <name> 
+      <language id="en"><![CDATA[Email From]]></language>  
+      <language id="de"><![CDATA[E-Mail von]]></language>
+      <language id="fr"><![CDATA[E-mail de]]></language>
+      <language id="es"><![CDATA[Correo electrónico de]]></language>
+    </name> 
+  </property>  
+  <property id="dataid" index="true" editable="true" keyword="true" indextype="not_analyzed"> 
+    <name> 
+      <language id="en"><![CDATA[Parent Data]]></language>  
+      <language id="de"><![CDATA[Elterndaten]]></language>
+      <language id="fr"><![CDATA[Données des parents]]></language>
+      <language id="es"><![CDATA[Datos de los padres]]></language>
+    </name> 
+  </property>  
   <property id="notificationproperties" index="true" keyword="true" stored="true" editable="true" datatype="objectarray" viewtype="notificationproperties"> 
     <name> 
       <language id="en">Properties</language>  
-    </name> 
-    <property id="key" index="true" stored="true" editable="true">key</property>
-    <property id="value" index="true" stored="true" editable="true">Value</property>   
-  </property>
-  
-  
-  
-  
-   
+      <language id="de"><![CDATA[Eigenschaften]]></language>
+      <language id="fr"><![CDATA[Propriétés]]></language>
+      <language id="es"><![CDATA[Propiedades]]></language>
+    </name>  
+    <property id="key" index="true" stored="true" editable="true">key</property>  
+    <property id="value" index="true" stored="true" editable="true">Value</property> 
+  </property> 
 </properties>

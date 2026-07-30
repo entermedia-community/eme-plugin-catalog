@@ -3,12 +3,18 @@
 <properties beanname="dataSearcher"> 
   <property id="firstname" index="true" keyword="true" stored="false" editable="true">New 
     <name> 
-      <language id="en"><![CDATA[firstname]]></language> 
+      <language id="en"><![CDATA[firstname]]></language>  
+      <language id="de"><![CDATA[Vorname]]></language>
+      <language id="fr"><![CDATA[prénom]]></language>
+      <language id="es"><![CDATA[nombre]]></language>
     </name> 
   </property>  
-  <property id="lastname" index="true" keyword="true" stored="false" editable="true">New
-    <name>
-      <language id="en"><![CDATA[lastname]]></language>
-    </name>
-  </property>
+  <property id="lastname" index="true" keyword="true" stored="false" editable="true">New 
+    <name> 
+      <language id="en"><![CDATA[lastname]]></language>  
+      <language id="de"><![CDATA[Nachname]]></language>
+      <language id="fr"><![CDATA[nom de famille]]></language>
+      <language id="es"><![CDATA[apellido]]></language>
+    </name> 
+  </property> 
 </properties>

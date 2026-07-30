@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Type]]></language> 
     </name> 
   </property>  
-  <property id="parentid" index="true" stored="true"  type="list" listid="module" editable="true"> 
+  <property id="parentid" index="true" stored="true" type="list" listid="module" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Elternteil]]></language>  
       <language id="en"><![CDATA[Parent]]></language>  
@@ -41,8 +41,7 @@
       <language id="fr"><![CDATA[Parent]]></language> 
     </name> 
   </property>  
-  <property id="moduleid" index="true" stored="true" type="list" listid="module" editable="true" legacy="module"
-		keyword="false">Module 
+  <property id="moduleid" index="true" stored="true" type="list" listid="module" editable="true" legacy="module" keyword="false">Module 
     <name> 
       <language id="de"><![CDATA[Modul]]></language>  
       <language id="en"><![CDATA[Module]]></language>  
@@ -58,21 +57,21 @@
       <language id="fr"><![CDATA[Label Used on Sub]]></language> 
     </name> 
   </property>  
-  <property id="path" index="true" stored="true" editable="true">Path
-    <name>
-      <language id="de"><![CDATA[Pfad]]></language>
-      <language id="en"><![CDATA[Path]]></language>
-      <language id="es"><![CDATA[Camino]]></language>
-      <language id="fr"><![CDATA[Chemin]]></language>
-    </name>
+  <property id="path" index="true" stored="true" editable="true">Path 
+    <name> 
+      <language id="de"><![CDATA[Pfad]]></language>  
+      <language id="en"><![CDATA[Path]]></language>  
+      <language id="es"><![CDATA[Camino]]></language>  
+      <language id="fr"><![CDATA[Chemin]]></language> 
+    </name> 
+  </property>  
+  <!--  Data Merge -->  
+  <property id="tab" index="true" keyword="true" stored="false" editable="true">New 
+    <name> 
+      <language id="en"><![CDATA[tab]]></language>  
+      <language id="de"><![CDATA[Tab]]></language>
+      <language id="fr"><![CDATA[Tab]]></language>
+      <language id="es"><![CDATA[pestaña]]></language>
+    </name> 
   </property> 
-  
-  <!--  Data Merge -->
-    <property id="tab" index="true" keyword="true" stored="false" editable="true">New
-    <name>
-      <language id="en"><![CDATA[tab]]></language>
-    </name>
-  </property>
-  
-  
 </properties>

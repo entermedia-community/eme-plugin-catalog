@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true"  > 
+  <property id="id" editable="true" stored="true" index="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true"  >
+  <property id="name" editable="true" stored="true" index="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,8 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  
-<property id="caption" editable="true" stored="true" legacy="description" index="true">Caption 
+  <property id="caption" editable="true" stored="true" legacy="description" index="true">Caption 
     <name> 
       <language id="de"><![CDATA[Bildunterschrift]]></language>  
       <language id="en"><![CDATA[Caption]]></language>  
@@ -29,31 +28,36 @@
   <property id="thumbnailpath" editable="true" stored="true" legacy="description" index="true">Caption 
     <name> 
       <language id="en"><![CDATA[Thumbnail]]></language>  
+      <language id="de"><![CDATA[Vorschaubild]]></language>
+      <language id="fr"><![CDATA[Miniature]]></language>
+      <language id="es"><![CDATA[Miniaturas]]></language>
     </name> 
-  </property>    
-  <property id="ordering" type="number" editable="true" index="true" stored="true"  >
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
-
-
-  <property id="activemodel" index="true" type="boolean" > 
+  </property>  
+  <property id="ordering" type="number" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
+    </name> 
+  </property>  
+  <property id="activemodel" index="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Active Model]]></language>  
+      <language id="de"><![CDATA[Aktives Modell]]></language>
+      <language id="fr"><![CDATA[Modèle actif]]></language>
+      <language id="es"><![CDATA[Modelo activo]]></language>
     </name> 
   </property>  
-
-   <property id="updatedby" editable="true" index="true" stored="true"  type="list" listid="user"> 
+  <property id="updatedby" editable="true" index="true" stored="true" type="list" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Updated By]]></language>  
+      <language id="de"><![CDATA[Aktualisiert von]]></language>
+      <language id="fr"><![CDATA[Mise à jour par]]></language>
+      <language id="es"><![CDATA[Actualizado por]]></language>
     </name> 
   </property>  
-  
-  <property id="updatedon" editable="true" datatype="date" viewtype="time" index="true" stored="true"   type="date">Date 
+  <property id="updatedon" editable="true" datatype="date" viewtype="time" index="true" stored="true" type="date">Date 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -61,14 +65,12 @@
       <language id="fr"><![CDATA[Date]]></language> 
     </name> 
   </property>  
- 
-
-
-  <property id="json" editable="true" stored="true" index="true"   > 
+  <property id="json" editable="true" stored="true" index="true"> 
     <name> 
       <language id="en"><![CDATA[JSON]]></language>  
+      <language id="de"><![CDATA[JSON]]></language>
+      <language id="fr"><![CDATA[JSON]]></language>
+      <language id="es"><![CDATA[JSON]]></language>
     </name> 
-  </property>  
-
-
+  </property> 
 </properties>

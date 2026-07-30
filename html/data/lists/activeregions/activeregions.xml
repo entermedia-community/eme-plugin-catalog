@@ -3,22 +3,34 @@
 <root> 
   <data id="3" linkhome="https://cincinnati.tierra-sagrada.org" ordering="1"> 
     <name> 
-      <language id="en"><![CDATA[Cincinnati - USA]]></language> 
-    </name>
+      <language id="en"><![CDATA[Cincinnati - USA]]></language>  
+      <language id="de"><![CDATA[Cincinnati – USA]]></language>
+      <language id="fr"><![CDATA[Cincinnati, États-Unis]]></language>
+      <language id="es"><![CDATA[Cincinnati, EE. UU.]]></language>
+    </name> 
   </data>  
   <data id="4" linkhome="https://san-miguel-de-allende.tierra-sagrada.org" ordering="2"> 
     <name> 
-      <language id="en"><![CDATA[San Miguel De Allende - Mexico]]></language> 
+      <language id="en"><![CDATA[San Miguel De Allende - Mexico]]></language>  
+      <language id="de"><![CDATA[San Miguel de Allende – Mexiko]]></language>
+      <language id="fr"><![CDATA[San Miguel de Allende, au Mexique]]></language>
+      <language id="es"><![CDATA[San Miguel de Allende - México]]></language>
     </name> 
   </data>  
   <data id="2" linkhome="https://zapallar.tierra-sagrada.org" ordering="3"> 
     <name> 
-      <language id="en"><![CDATA[Zapallar - Chile]]></language> 
+      <language id="en"><![CDATA[Zapallar - Chile]]></language>  
+      <language id="de"><![CDATA[Zapallar – Chile]]></language>
+      <language id="fr"><![CDATA[Zapallar - Chili]]></language>
+      <language id="es"><![CDATA[Zapallar - Chile]]></language>
     </name> 
   </data>  
-  <data id="1" linkhome="https://san-marcos.tierra-sagrada.org" ordering="4">
+  <data id="1" linkhome="https://san-marcos.tierra-sagrada.org" ordering="4"> 
     <name> 
-      <language id="en"><![CDATA[San Marcos La Laguna - Guatemala]]></language> 
+      <language id="en"><![CDATA[San Marcos La Laguna - Guatemala]]></language>  
+      <language id="de"><![CDATA[San Marcos La Laguna (Guatemala)]]></language>
+      <language id="fr"><![CDATA[San Marcos La Laguna, au Guatemala]]></language>
+      <language id="es"><![CDATA[San Marcos La Laguna - Guatemala]]></language>
     </name> 
-  </data>  
+  </data> 
 </root>

@@ -1,42 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="dataSearcher"> 
-  <property id="balancetransaction" index="true" editable="true" stored="true">Balance
+<properties beanname="dataSearcher"> 
+  <property id="balancetransaction" index="true" editable="true" stored="true">Balance 
     <name> 
-      <language id="en"><![CDATA[Balance Transaction]]></language> 
+      <language id="en"><![CDATA[Balance Transaction]]></language>  
+      <language id="de"><![CDATA[Saldo-Transaktion]]></language>
+      <language id="fr"><![CDATA[Opération de solde]]></language>
+      <language id="es"><![CDATA[Transacción de saldo]]></language>
     </name> 
   </property>  
-  <property id="paymentplan" index="true" editable="true" stored="true"  datatype="list" listid="paymentplan">Payment Plan
+  <property id="paymentplan" index="true" editable="true" stored="true" datatype="list" listid="paymentplan">Payment Plan 
     <name> 
-      <language id="en"><![CDATA[Payment Plan]]></language> 
+      <language id="en"><![CDATA[Payment Plan]]></language>  
+      <language id="de"><![CDATA[Zahlungsplan]]></language>
+      <language id="fr"><![CDATA[Plan de paiement]]></language>
+      <language id="es"><![CDATA[Plan de pagos]]></language>
     </name> 
   </property>  
-  <property id="totalprice" index="true" editable="true" stored="true" type="double">Total price
+  <property id="totalprice" index="true" editable="true" stored="true" type="double">Total price 
     <name> 
-      <language id="en"><![CDATA[Total Price]]></language> 
+      <language id="en"><![CDATA[Total Price]]></language>  
+      <language id="de"><![CDATA[Gesamtpreis]]></language>
+      <language id="fr"><![CDATA[Prix total]]></language>
+      <language id="es"><![CDATA[Precio total]]></language>
     </name> 
   </property>  
-  <property id="fee" index="true" editable="true" stored="true">Fee
+  <property id="fee" index="true" editable="true" stored="true">Fee 
     <name> 
-      <language id="en"><![CDATA[Fee]]></language> 
+      <language id="en"><![CDATA[Fee]]></language>  
+      <language id="de"><![CDATA[Gebühr]]></language>
+      <language id="fr"><![CDATA[Frais]]></language>
+      <language id="es"><![CDATA[Cuota]]></language>
     </name> 
   </property>  
-  <property id="stripechargeid" index="true" editable="true" stored="true">Stripe charge id
+  <property id="stripechargeid" index="true" editable="true" stored="true">Stripe charge id 
     <name> 
-      <language id="en"><![CDATA[Stripe Charge Id]]></language> 
+      <language id="en"><![CDATA[Stripe Charge Id]]></language>  
+      <language id="de"><![CDATA[Stripe Charge ID]]></language>
+      <language id="fr"><![CDATA[ID de la facture Stripe]]></language>
+      <language id="es"><![CDATA[ID de cargo de Stripe]]></language>
     </name> 
   </property>  
-  <property id="stripefee" index="true" editable="true" stored="true">Stripe Fee
+  <property id="stripefee" index="true" editable="true" stored="true">Stripe Fee 
     <name> 
-      <language id="en"><![CDATA[Stripe Fee]]></language> 
+      <language id="en"><![CDATA[Stripe Fee]]></language>  
+      <language id="de"><![CDATA[Stripe-Gebühr]]></language>
+      <language id="fr"><![CDATA[Frais Stripe]]></language>
+      <language id="es"><![CDATA[Tarifa de Stripe]]></language>
     </name> 
   </property>  
-  <property id="net" index="true" editable="true" stored="true">Net
+  <property id="net" index="true" editable="true" stored="true">Net 
     <name> 
-      <language id="en"><![CDATA[Net]]></language> 
+      <language id="en"><![CDATA[Net]]></language>  
+      <language id="de"><![CDATA[Netto]]></language>
+      <language id="fr"><![CDATA[Résultat net]]></language>
+      <language id="es"><![CDATA[Neto]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name
+  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -44,7 +65,7 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -52,79 +73,93 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="userid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="userid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[User]]></language>  
+      <language id="de"><![CDATA[Benutzer]]></language>
+      <language id="fr"><![CDATA[Nom d'utilisateur]]></language>
+      <language id="es"><![CDATA[Usuario]]></language>
     </name> 
   </property>  
-  
-  <property id="paymentdate" index="true" editable="true" stored="true" type="date" datatype="date">Payment Date
+  <property id="paymentdate" index="true" editable="true" stored="true" type="date" datatype="date">Payment Date 
     <name> 
-      <language id="en"><![CDATA[Payment Date]]></language> 
+      <language id="en"><![CDATA[Payment Date]]></language>  
+      <language id="de"><![CDATA[Zahlungsdatum]]></language>
+      <language id="fr"><![CDATA[Date de paiement]]></language>
+      <language id="es"><![CDATA[Fecha de pago]]></language>
     </name> 
   </property>  
-  
-  <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" lisstid="librarycollection" keyword="false">
-    <name>
-      <language id="de"><![CDATA[Sammlung ID]]></language>
-      <language id="en"><![CDATA[Collection Id]]></language>
-      <language id="es"><![CDATA[colección Id]]></language>
-      <language id="fr"><![CDATA[Id Collection]]></language>
-    </name>
-  </property>
-
- <property id="paymenttype" index="true" filter="false" editable="false" stored="true" sortable="true" keyword="false" type="list">
-    <name>
-      <language id="en"><![CDATA[Payment Type]]></language>
-    </name>
-  </property>
-
-  <property id="paymentemail" index="true" editable="true" stored="true">
+  <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" lisstid="librarycollection" keyword="false"> 
     <name> 
-      <language id="en"><![CDATA[Payment Email]]></language> 
-    </name> 
-  </property>     
-
-  <property id="authorizationid" index="true" editable="true" stored="true">
-    <name> 
-      <language id="en"><![CDATA[Authorization id]]></language> 
-    </name> 
-  </property>
-  
-    <property id="isdonation" index="true" deleted="false" editable="true" stored="true">New 
-    <name> 
-      <language id="en"><![CDATA[isdonation]]></language> 
+      <language id="de"><![CDATA[Sammlung ID]]></language>  
+      <language id="en"><![CDATA[Collection Id]]></language>  
+      <language id="es"><![CDATA[colección Id]]></language>  
+      <language id="fr"><![CDATA[Id Collection]]></language> 
     </name> 
   </property>  
-  <property id="receiptstatus" index="true" deleted="false" editable="true" stored="true">New
-    <name>
-      <language id="en"><![CDATA[Receipt Status]]></language>
-    </name>
-  </property>
-  
-    <property id="currencytype" index="true" editable="true" stored="true"  datatype="list" listid="currencytype"  defaultvalue="1">
+  <property id="paymenttype" index="true" filter="false" editable="false" stored="true" sortable="true" keyword="false" type="list"> 
     <name> 
-      <language id="en"><![CDATA[Currency Type]]></language> 
-      <language id="es"><![CDATA[Moneda]]></language>
+      <language id="en"><![CDATA[Payment Type]]></language>  
+      <language id="de"><![CDATA[Zahlungsart]]></language>
+      <language id="fr"><![CDATA[Type de paiement]]></language>
+      <language id="es"><![CDATA[Tipo de pago]]></language>
     </name> 
-  </property>
-  
-  <property id="incometype" index="true" editable="true" stored="true"  datatype="list" listid="incometype">
+  </property>  
+  <property id="paymentemail" index="true" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Income Type]]></language> 
+      <language id="en"><![CDATA[Payment Email]]></language>  
+      <language id="de"><![CDATA[Zahlungsmail]]></language>
+      <language id="fr"><![CDATA[Courriel de paiement]]></language>
+      <language id="es"><![CDATA[Correo de pago]]></language>
     </name> 
-  </property>   
-  
-    <property id="collectiveproject" required="true" 
- 	index="true" stored="true" editable="true"  type="list"  datatype="list"
- 	viewtype="collectionproject" searchcomponent="collectionproject" > 
+  </property>  
+  <property id="authorizationid" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Authorization id]]></language>  
+      <language id="de"><![CDATA[Authentifizierungs-ID]]></language>
+      <language id="fr"><![CDATA[ID d'autorisation]]></language>
+      <language id="es"><![CDATA[ID de autorización]]></language>
+    </name> 
+  </property>  
+  <property id="isdonation" index="true" deleted="false" editable="true" stored="true">New 
+    <name> 
+      <language id="en"><![CDATA[isdonation]]></language>  
+      <language id="de"><![CDATA[Spende]]></language>
+      <language id="fr"><![CDATA[dons]]></language>
+      <language id="es"><![CDATA[la donación]]></language>
+    </name> 
+  </property>  
+  <property id="receiptstatus" index="true" deleted="false" editable="true" stored="true">New 
+    <name> 
+      <language id="en"><![CDATA[Receipt Status]]></language>  
+      <language id="de"><![CDATA[Quittungsstatus]]></language>
+      <language id="fr"><![CDATA[Statut de la facture]]></language>
+      <language id="es"><![CDATA[Estado del recibo]]></language>
+    </name> 
+  </property>  
+  <property id="currencytype" index="true" editable="true" stored="true" datatype="list" listid="currencytype" defaultvalue="1"> 
+    <name> 
+      <language id="en"><![CDATA[Currency Type]]></language>  
+      <language id="es"><![CDATA[Moneda]]></language>  
+      <language id="de"><![CDATA[Währungstyp]]></language>
+      <language id="fr"><![CDATA[Type de monnaie]]></language>
+    </name> 
+  </property>  
+  <property id="incometype" index="true" editable="true" stored="true" datatype="list" listid="incometype"> 
+    <name> 
+      <language id="en"><![CDATA[Income Type]]></language>  
+      <language id="de"><![CDATA[Einkommensart]]></language>
+      <language id="fr"><![CDATA[Type de revenu]]></language>
+      <language id="es"><![CDATA[Tipo de ingreso]]></language>
+    </name> 
+  </property>  
+  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
+      <language id="de"><![CDATA[Thema]]></language>
+      <language id="fr"><![CDATA[Sujet]]></language>
+      <language id="es"><![CDATA[Tema]]></language>
     </name> 
-  </property> 
-  
-  	<property id="paymentstatus" index="true" stored="true"
-		editable="true" type="list">Payment Status</property>
-  
-  
+  </property>  
+  <property id="paymentstatus" index="true" stored="true" editable="true" type="list">Payment Status</property> 
 </properties>

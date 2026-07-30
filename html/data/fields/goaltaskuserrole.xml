@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">New
-    <name>
-      <language id="de"><![CDATA[Id]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Id]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
+  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">New 
+    <name> 
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
   <property id="date" index="true" filter="false" datatype="date" editable="false" stored="true" sortable="true" keyword="false">New 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
@@ -19,25 +19,37 @@
   </property>  
   <property id="roleactioncount" index="true" editable="true" stored="true" type="number"> 
     <name> 
-      <language id="en"><![CDATA[Action Count]]></language> 
+      <language id="en"><![CDATA[Action Count]]></language>  
+      <language id="de"><![CDATA[Anzahl der Aktionen]]></language>
+      <language id="fr"><![CDATA[Nombre d'actions]]></language>
+      <language id="es"><![CDATA[Número de acciones]]></language>
     </name> 
   </property>  
   <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">New 
     <name> 
       <language id="en"><![CDATA[Notes]]></language>  
+      <language id="de"><![CDATA[Anmerkungen]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
   <property id="goaltaskid" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[goaltaskid]]></language> 
+      <language id="en"><![CDATA[goaltaskid]]></language>  
+      <language id="de"><![CDATA[Zielverfolgung]]></language>
+      <language id="fr"><![CDATA[Goaltaskid]]></language>
+      <language id="es"><![CDATA[goaltaskid]]></language>
     </name> 
-  </property>
-  <property id="collectiverole" index="true" stored="true" type="list"  editable="true">
-  <name>
-    <language id="en" > <![CDATA[Role]]> </language>
-  </name>
-  </property>
-	 <property id="roleuserid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  </property>  
+  <property id="collectiverole" index="true" stored="true" type="list" editable="true"> 
+    <name> 
+      <language id="en"> <![CDATA[Role]]> </language>  
+      <language id="de"><![CDATA[Rolle]]></language>
+      <language id="fr"><![CDATA[Rôle]]></language>
+      <language id="es"><![CDATA[Rol]]></language>
+    </name> 
+  </property>  
+  <property id="roleuserid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -45,7 +57,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-	 <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -53,11 +65,12 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  
-   <property id="name" index="true" stored="true" editable="true">
-		<name>
-			<language id="en"><![CDATA[Note]]></language>
-		</name>
-	</property>
-    
+  <property id="name" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Note]]></language>  
+      <language id="de"><![CDATA[Anmerkung]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Nota de la Comisión]]></language>
+    </name> 
+  </property> 
 </properties>

@@ -3,24 +3,34 @@
 <root> 
   <data id="requested"> 
     <name> 
-      <language id="en"><![CDATA[Requested]]></language> 
-      <language id="es"><![CDATA[Solicitado]]></language>
+      <language id="en"><![CDATA[Requested]]></language>  
+      <language id="es"><![CDATA[Solicitado]]></language>  
+      <language id="de"><![CDATA[Geordert]]></language>
+      <language id="fr"><![CDATA[Demandé]]></language>
     </name> 
   </data>  
   <data id="created"> 
     <name> 
-      <language id="en"><![CDATA[Created]]></language> 
+      <language id="en"><![CDATA[Created]]></language>  
+      <language id="de"><![CDATA[Erstellt]]></language>
+      <language id="fr"><![CDATA[Créé]]></language>
+      <language id="es"><![CDATA[Creado]]></language>
     </name> 
   </data>  
   <data id="expired"> 
     <name> 
-      <language id="en"><![CDATA[Expired]]></language>
+      <language id="en"><![CDATA[Expired]]></language>  
+      <language id="de"><![CDATA[Abgelaufen]]></language>
+      <language id="fr"><![CDATA[Expiré]]></language>
+      <language id="es"><![CDATA[Expirado]]></language>
     </name> 
   </data>  
   <data id="deleted"> 
     <name> 
-      <language id="en"><![CDATA[Deleted]]></language>
+      <language id="en"><![CDATA[Deleted]]></language>  
+      <language id="de"><![CDATA[Entfernt]]></language>
+      <language id="fr"><![CDATA[Supprimé]]></language>
+      <language id="es"><![CDATA[Eliminado]]></language>
     </name> 
-  </data>  
-    
+  </data> 
 </root>

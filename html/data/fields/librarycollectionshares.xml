@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"   >
+  <property id="id" index="true" stored="true" editable="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" > 
+  <property id="sourcepath"> 
     <name> 
       <language id="de"><![CDATA[SourcePath]]></language>  
       <language id="en"><![CDATA[SourcePath]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="librarycollection" index="true" type="list" stored="true" editable="true"   > 
+  <property id="librarycollection" index="true" type="list" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Sammlung]]></language>  
       <language id="en"><![CDATA[Album]]></language>  
@@ -25,9 +25,12 @@
       <language id="fr"><![CDATA[Album]]></language> 
     </name> 
   </property>  
-  <property id="followeruser" index="true" viewtype="user" type="list" listid="user"  stored="true" editable="true"  > 
+  <property id="followeruser" index="true" viewtype="user" type="list" listid="user" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[User]]></language>  
+      <language id="de"><![CDATA[Benutzer]]></language>
+      <language id="fr"><![CDATA[Nom d'utilisateur]]></language>
+      <language id="es"><![CDATA[Usuario]]></language>
     </name> 
   </property>  
   <!-- 
@@ -40,7 +43,7 @@
     </name> 
   </property>
    -->  
-  <property id="addeddate"  index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"   >
+  <property id="addeddate" index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Sendedatum]]></language>  
       <language id="en"><![CDATA[Added Date]]></language>  
@@ -54,8 +57,8 @@
       <language id="en"><![CDATA[App Home]]></language>  
     </name> 
   </property>
-  -->   
-  <property id="note" editable="true" viewtype="textarea" index="true" stored="true"   > 
+  -->  
+  <property id="note" editable="true" viewtype="textarea" index="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Hinweis]]></language>  
       <language id="en"><![CDATA[Leave a comment]]></language>  
@@ -63,7 +66,7 @@
       <language id="fr"><![CDATA[Remarque]]></language> 
     </name> 
   </property>  
-  <property id="senderror"  index="true" stored="true"   >Error 
+  <property id="senderror" index="true" stored="true">Error 
     <name> 
       <language id="de"><![CDATA[Fehler]]></language>  
       <language id="en"><![CDATA[Error]]></language>  
@@ -71,24 +74,28 @@
       <language id="fr"><![CDATA[Erreur]]></language> 
     </name> 
   </property>  
-  <property id="fromuser"  viewtype="user" type="list" listid="user" catalogid="assets/catalog" index="true" stored="true"   >
-    <name>
-      <language id="de"><![CDATA[gesendet von]]></language>
-      <language id="en"><![CDATA[Added By]]></language>
-      <language id="es"><![CDATA[Enviado por]]></language>
-      <language id="fr"><![CDATA[Envoyée par]]></language>
-    </name>
-  </property> 
-  <property id="agreetoterms"  index="true" stored="true"  type="boolean" editable="true" > 
+  <property id="fromuser" viewtype="user" type="list" listid="user" catalogid="assets/catalog" index="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[gesendet von]]></language>  
+      <language id="en"><![CDATA[Added By]]></language>  
+      <language id="es"><![CDATA[Enviado por]]></language>  
+      <language id="fr"><![CDATA[Envoyée par]]></language> 
+    </name> 
+  </property>  
+  <property id="agreetoterms" index="true" stored="true" type="boolean" editable="true"> 
     <name> 
       <language id="en"><![CDATA[I want to join]]></language>  
+      <language id="de"><![CDATA[Ich möchte mitmachen.]]></language>
+      <language id="fr"><![CDATA[Je veux m'inscrire]]></language>
+      <language id="es"><![CDATA[Quiero unirme]]></language>
     </name> 
   </property>  
-  <property id="whatsappnumber"  index="true" stored="true" editable="true" > 
+  <property id="whatsappnumber" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[WhatsApp]]></language>  
+      <language id="de"><![CDATA[WhatsApp]]></language>
+      <language id="fr"><![CDATA[WhatsApp]]></language>
+      <language id="es"><![CDATA[WhatsApp]]></language>
     </name> 
-  </property>  
-  
-
+  </property> 
 </properties>

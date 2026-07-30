@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="dataSearcher" class="postData"> 
-  <property id="name" editable="true" index="true" stored="true" required="true"   >
+<properties beanname="dataSearcher" class="postData"> 
+  <property id="name" editable="true" index="true" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="id" editable="true" index="true" stored="true"   >
+  <property id="id" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[Nom d'usage]]></language>
+      <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-  <property id="shortdescription" editable="true" index="true" stored="true"   >
+  <property id="shortdescription" editable="true" index="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[kurze Beschreibung]]></language>  
       <language id="en"><![CDATA[Short Description]]></language>  
@@ -19,7 +25,7 @@
       <language id="fr"><![CDATA[Brève description]]></language> 
     </name> 
   </property>  
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" listcatalogid="system"    type="list">Users 
+  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" listcatalogid="system" type="list">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -27,7 +33,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" listcatalogid="system"    type="list">Groups 
+  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" listcatalogid="system" type="list">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  
@@ -35,21 +41,23 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup"    type="list">Roles
-    <name>
-      <language id="de"><![CDATA[Rollen]]></language>
-      <language id="en"><![CDATA[Roles]]></language>
-      <language id="es"><![CDATA[Roles]]></language>
-      <language id="fr"><![CDATA[Rôles]]></language>
-    </name>
-  </property> 
-
-  <property id="sourcepath" internalfield="false" index="true" stored="true"   editable="true" sortable="true">Source Path 
+  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" type="list">Roles 
     <name> 
-      <language id="en"><![CDATA[Post URL]]></language>  
+      <language id="de"><![CDATA[Rollen]]></language>  
+      <language id="en"><![CDATA[Roles]]></language>  
+      <language id="es"><![CDATA[Roles]]></language>  
+      <language id="fr"><![CDATA[Rôles]]></language> 
     </name> 
   </property>  
-  <property id="category-exact" index="true" stored="true" keyword="true" editable="true" defaultoperation="contains" viewtype="text" listid="category" type="list" >Exact Categories 
+  <property id="sourcepath" internalfield="false" index="true" stored="true" editable="true" sortable="true">Source Path 
+    <name> 
+      <language id="en"><![CDATA[Post URL]]></language>  
+      <language id="de"><![CDATA[URL]]></language>
+      <language id="fr"><![CDATA[URL du message]]></language>
+      <language id="es"><![CDATA[URL de la publicación]]></language>
+    </name> 
+  </property>  
+  <property id="category-exact" index="true" stored="true" keyword="true" editable="true" defaultoperation="contains" viewtype="text" listid="category" type="list">Exact Categories 
     <name> 
       <language id="de"><![CDATA[Kategorien]]></language>  
       <language id="en"><![CDATA[Exact Categories]]></language>  
@@ -57,100 +65,140 @@
       <language id="fr"><![CDATA[Categories]]></language> 
     </name> 
   </property>  
-   <property id="maincontent" index="true" stored="true" viewtype="html" editable="true"   > 
+  <property id="maincontent" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Main Content]]></language>  
+      <language id="de"><![CDATA[Hauptinhalt]]></language>
+      <language id="fr"><![CDATA[Contenu principal]]></language>
+      <language id="es"><![CDATA[Contenido principal]]></language>
     </name> 
-  </property>     
-  <property id="postmodificationdate" editable="false" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time"   type="date">Last Modified 
+  </property>  
+  <property id="postmodificationdate" editable="false" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time" type="date">Last Modified 
     <name> 
       <language id="en"><![CDATA[Last Modified]]></language>  
+      <language id="de"><![CDATA[Zuletzt geändert]]></language>
+      <language id="fr"><![CDATA[Dernière modification]]></language>
+      <language id="es"><![CDATA[Última modificación]]></language>
     </name> 
   </property>  
-  <property id="mastereditclusterid" index="true" stored="true" editable="true">
-    <name>
-      <language id="en"><![CDATA[Master Edit Cluster]]></language>
-    </name>
-  </property> 
-  <property id="postvisibility" index="true" stored="true" editable="true" type="list" viewtype="list" listid="sitepostvisibility" datatype="list"  >
+  <property id="mastereditclusterid" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Master Edit Cluster]]></language>  
+      <language id="de"><![CDATA[Master-Bearbeitungscluster]]></language>
+      <language id="fr"><![CDATA[Groupe maître d'édition]]></language>
+      <language id="es"><![CDATA[Clúster maestro de edición]]></language>
+    </name> 
+  </property>  
+  <property id="postvisibility" index="true" stored="true" editable="true" type="list" viewtype="list" listid="sitepostvisibility" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Visibility]]></language>  
+      <language id="de"><![CDATA[Sichtbarkeit]]></language>
+      <language id="fr"><![CDATA[Visibilité]]></language>
+      <language id="es"><![CDATA[Visibilidad]]></language>
     </name> 
   </property>  
-  <property id="siteid" listid="site" catalogid="system" index="true" stored="true" editable="true" viewtype="list"   type="list"> 
+  <property id="siteid" listid="site" catalogid="system" index="true" stored="true" editable="true" viewtype="list" type="list"> 
     <name> 
       <language id="en"><![CDATA[Site ID]]></language>  
-    </name> 
-  </property>
-     <property id="metatitle" index="true" deleted="false" editable="true" stored="true">New 
-    <name> 
-      <language id="en"><![CDATA[Meta Title]]></language> 
+      <language id="de"><![CDATA[Standort-ID]]></language>
+      <language id="fr"><![CDATA[ID du site]]></language>
+      <language id="es"><![CDATA[ID del sitio]]></language>
     </name> 
   </property>  
-
-   <property id="metatags" index="true" deleted="false" editable="true" stored="true"> 
+  <property id="metatitle" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Meta Tags]]></language> 
+      <language id="en"><![CDATA[Meta Title]]></language>  
+      <language id="de"><![CDATA[Meta-Titel]]></language>
+      <language id="fr"><![CDATA[Méta-titre]]></language>
+      <language id="es"><![CDATA[Meta Title]]></language>
     </name> 
   </property>  
-  <property id="metadescription" editable="true" index="true" stored="true"   >
+  <property id="metatags" index="true" deleted="false" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Meta Tags]]></language>  
+      <language id="de"><![CDATA[Meta-Tags]]></language>
+      <language id="fr"><![CDATA[Méta-balises]]></language>
+      <language id="es"><![CDATA[Etiquetas meta]]></language>
+    </name> 
+  </property>  
+  <property id="metadescription" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Meta Description]]></language>  
-    </name> 
-  </property>
-    <property id="metaimage" editable="true" index="true" stored="true"   >
-    <name> 
-      <language id="en"><![CDATA[Meta Image URL]]></language>  
-    </name> 
-  </property>
-
-  <property id="metaurl" editable="true" index="true" stored="true"   >
-    <name> 
-      <language id="en"><![CDATA[Canonical URL]]></language>  
+      <language id="de"><![CDATA[Meta-Beschreibung]]></language>
+      <language id="fr"><![CDATA[Méta-description]]></language>
+      <language id="es"><![CDATA[Meta descripción]]></language>
     </name> 
   </property>  
-  
-    <property id="metaimage" index="true" deleted="false" editable="true" stored="true">New
-    <name>
-      <language id="en"><![CDATA[Meta Image]]></language>
-    </name>
-  </property>
-  
-     
+  <property id="metaimage" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Meta Image URL]]></language>  
+      <language id="de"><![CDATA[Meta-Bild-URL]]></language>
+      <language id="fr"><![CDATA[URL de l'image méta]]></language>
+      <language id="es"><![CDATA[URL de la imagen]]></language>
+    </name> 
+  </property>  
+  <property id="metaurl" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Canonical URL]]></language>  
+      <language id="de"><![CDATA[Kanonische URL]]></language>
+      <language id="fr"><![CDATA[URL canonique]]></language>
+      <language id="es"><![CDATA[URL canónica]]></language>
+    </name> 
+  </property>  
+  <property id="metaimage" index="true" deleted="false" editable="true" stored="true">New 
+    <name> 
+      <language id="en"><![CDATA[Meta Image]]></language>  
+      <language id="de"><![CDATA[Meta-Bild]]></language>
+      <language id="fr"><![CDATA[Méta-image]]></language>
+      <language id="es"><![CDATA[Imagen de Meta]]></language>
+    </name> 
+  </property>  
   <property id="post_title" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Title]]></language> 
+      <language id="en"><![CDATA[Title]]></language>  
+      <language id="de"><![CDATA[Titel]]></language>
+      <language id="fr"><![CDATA[Titre]]></language>
+      <language id="es"><![CDATA[Título]]></language>
     </name> 
   </property>  
   <property id="post_author" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Author]]></language> 
+      <language id="en"><![CDATA[Author]]></language>  
+      <language id="de"><![CDATA[Autor]]></language>
+      <language id="fr"><![CDATA[Auteur]]></language>
+      <language id="es"><![CDATA[Autor]]></language>
     </name> 
   </property>  
-  
- 
-  
   <property id="post_date" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Date]]></language> 
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  
-   <property id="postcontent" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="postcontent" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Content]]></language> 
+      <language id="en"><![CDATA[Content]]></language>  
+      <language id="de"><![CDATA[Inhalte]]></language>
+      <language id="fr"><![CDATA[Contenu]]></language>
+      <language id="es"><![CDATA[Contenido]]></language>
     </name> 
-  </property>
-    
-    <property id="knowledgebase_category" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" listid="postdata_category_learning" highlight="false" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  </property>  
+  <property id="knowledgebase_category" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" listid="postdata_category_learning" highlight="false" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Category]]></language> 
+      <language id="en"><![CDATA[Category]]></language>  
+      <language id="de"><![CDATA[Kategorie]]></language>
+      <language id="fr"><![CDATA[Catégorie]]></language>
+      <language id="es"><![CDATA[Categoría]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="knowledgebase_tag" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Tags]]></language> 
+      <language id="en"><![CDATA[Tags]]></language>  
+      <language id="de"><![CDATA[Tags]]></language>
+      <language id="fr"><![CDATA[Étiquettes]]></language>
+      <language id="es"><![CDATA[Etiquetas]]></language>
     </name> 
-  </property>  
-   
+  </property> 
 </properties>

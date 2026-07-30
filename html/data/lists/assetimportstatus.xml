@@ -1,72 +1,99 @@
-<properties>
-	<!-- The last thing completed -->
-	<property id="needsmetadata">
-		<name> 
-	      <language id="en"><![CDATA[Pending Metadata]]></language>  
-	      <language id="es"><![CDATA[Pendiente Metadata]]></language> 
-	    </name>
-	</property>
-	<property id="created" >
-		<name> 
-	      <language id="en"><![CDATA[Created]]></language>  
-	    </name>
-	</property> <!-- originals in place -->
-	
-	<property id="modified" >
-		<name> 
-	      <language id="en"><![CDATA[Modified]]></language>  
-	    </name>
-	</property>
-	
-	<property id="uploading" >
-		<name> 
-	     <language id="en"><![CDATA[Uploading]]></language>  
-	     <language id="es"><![CDATA[Subiendo]]></language> 
-	   </name>
-	</property> <!-- Assets created -->
-	<property id="needsdownload">
-		<name> 
-	      <language id="en"><![CDATA[Pending Download]]></language>  
-	      <language id="es"><![CDATA[Pendiente]]></language> 
-	    </name>
-	</property> <!-- Assets created -->
-	<property id="uploaded" >
-		<name> 
-	      <language id="en"><![CDATA[Uploaded]]></language>  
-	      <language id="es"><![CDATA[Subido]]></language> 
-	    </name>
-	</property> <!-- originals in place -->
-	<property id="imported" >
-		<name> 
-	      <language id="en"><![CDATA[Imported]]></language>  
-	      <language id="es"><![CDATA[Importado]]></language> 
-	    </name>
-	</property> <!-- after exif removed -->
-	<property id="reimported" >
-		<name> 
-	      <language id="en"><![CDATA[Re-Imported]]></language>  
-	      <language id="es"><![CDATA[Re-Importado]]></language> 
-	    </name>
-	</property> <!-- if modified -->
-	<property id="complete" >
-		<name> 
-	      <language id="en"><![CDATA[Complete]]></language>  
-	      <language id="es"><![CDATA[Completo]]></language> 
-	    </name>
-	</property>
-	<property id="error" >
-<name> 
-	      <language id="en"><![CDATA[Error]]></language>  
-	      <language id="es"><![CDATA[Error]]></language> 
-	    </name>
+<?xml version="1.0" encoding="UTF-8"?>
 
-	</property>
-	
-		<property id="invalidformat" >
-		<name>
-		<language id="en"><![CDATA[Invalid Format]]></language>
-		</name>
-	</property>
-	
+<properties> 
+  <!-- The last thing completed -->  
+  <property id="needsmetadata"> 
+    <name> 
+      <language id="en"><![CDATA[Pending Metadata]]></language>  
+      <language id="es"><![CDATA[Pendiente Metadata]]></language>  
+      <language id="de"><![CDATA[Ausstehende Metadaten]]></language>
+      <language id="fr"><![CDATA[Métadonnées en attente]]></language>
+    </name> 
+  </property>  
+  <property id="created"> 
+    <name> 
+      <language id="en"><![CDATA[Created]]></language>  
+      <language id="es"><![CDATA[Creado]]></language>  
+      <language id="de"><![CDATA[Erstellt]]></language>
+      <language id="fr"><![CDATA[Créé]]></language>
+    </name> 
+  </property>  
+  <!-- originals in place -->  
+  <property id="modified"> 
+    <name> 
+      <language id="en"><![CDATA[Modified]]></language>  
+      <language id="es"><![CDATA[Modificado]]></language>  
+      <language id="de"><![CDATA[Geändert]]></language>
+      <language id="fr"><![CDATA[Modifié]]></language>
+    </name> 
+  </property>  
+  <property id="uploading"> 
+    <name> 
+      <language id="en"><![CDATA[Uploading]]></language>  
+      <language id="es"><![CDATA[Subiendo]]></language>  
+      <language id="de"><![CDATA[Hochladen]]></language>
+      <language id="fr"><![CDATA[Téléversement]]></language>
+    </name> 
+  </property>  
+  <!-- Assets created -->  
+  <property id="needsdownload"> 
+    <name> 
+      <language id="en"><![CDATA[Pending Download]]></language>  
+      <language id="es"><![CDATA[Pendiente]]></language>  
+      <language id="de"><![CDATA[Ausstehender Download]]></language>
+      <language id="fr"><![CDATA[Téléchargement en attente]]></language>
+    </name> 
+  </property>  
+  <!-- Assets created -->  
+  <property id="uploaded"> 
+    <name> 
+      <language id="en"><![CDATA[Uploaded]]></language>  
+      <language id="es"><![CDATA[Subido]]></language>  
+      <language id="de"><![CDATA[Hochgeladen]]></language>
+      <language id="fr"><![CDATA[Téléversé]]></language>
+    </name> 
+  </property>  
+  <!-- originals in place -->  
+  <property id="imported"> 
+    <name> 
+      <language id="en"><![CDATA[Imported]]></language>  
+      <language id="es"><![CDATA[Importado]]></language>  
+      <language id="de"><![CDATA[Importiert]]></language>
+      <language id="fr"><![CDATA[Importé]]></language>
+    </name> 
+  </property>  
+  <!-- after exif removed -->  
+  <property id="reimported"> 
+    <name> 
+      <language id="en"><![CDATA[Re-Imported]]></language>  
+      <language id="es"><![CDATA[Re-Importado]]></language>  
+      <language id="de"><![CDATA[Wiederimportiert]]></language>
+      <language id="fr"><![CDATA[Réimporté]]></language>
+    </name> 
+  </property>  
+  <!-- if modified -->  
+  <property id="complete"> 
+    <name> 
+      <language id="en"><![CDATA[Complete]]></language>  
+      <language id="es"><![CDATA[Completo]]></language>  
+      <language id="de"><![CDATA[Vollständig]]></language>
+      <language id="fr"><![CDATA[Complet]]></language>
+    </name> 
+  </property>  
+  <property id="error"> 
+    <name> 
+      <language id="en"><![CDATA[Error]]></language>  
+      <language id="es"><![CDATA[Error]]></language>  
+      <language id="de"><![CDATA[Fehler]]></language>
+      <language id="fr"><![CDATA[Erreur]]></language>
+    </name> 
+  </property>  
+  <property id="invalidformat"> 
+    <name> 
+      <language id="en"><![CDATA[Invalid Format]]></language>  
+      <language id="es"><![CDATA[Formato no válido]]></language>  
+      <language id="de"><![CDATA[Ungültiges Format]]></language>
+      <language id="fr"><![CDATA[Format invalide]]></language>
+    </name> 
+  </property> 
 </properties>
-  

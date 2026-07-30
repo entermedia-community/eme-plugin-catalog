@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties  beanname="dataSearcher"> 
-  
-  
-  <property id="automationscenario" type="list" listid="automationscenario" index="true" stored="true" editable="true">
+<properties beanname="dataSearcher"> 
+  <property id="automationscenario" type="list" listid="automationscenario" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Scenerio]]></language>  
-    </name> 
-  </property>
-  
- 
-   <property id="processingstatus" type="list" editable="true" index="true" stored="true" listid="llmstatus"> 
-    <name> 
-      <language id="en"><![CDATA[Processing status]]></language>  
+      <language id="de"><![CDATA[Szenario]]></language>
+      <language id="fr"><![CDATA[Scénario]]></language>
+      <language id="es"><![CDATA[Escenario]]></language>
     </name> 
   </property>  
-  
+  <property id="processingstatus" type="list" editable="true" index="true" stored="true" listid="llmstatus"> 
+    <name> 
+      <language id="en"><![CDATA[Processing status]]></language>  
+      <language id="de"><![CDATA[Verarbeitungsstatus]]></language>
+      <language id="fr"><![CDATA[Statut de traitement]]></language>
+      <language id="es"><![CDATA[Estado del procesamiento]]></language>
+    </name> 
+  </property> 
 </properties>

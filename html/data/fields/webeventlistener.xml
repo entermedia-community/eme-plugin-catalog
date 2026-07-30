@@ -20,6 +20,9 @@
   <property id="beanname" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Bean]]></language>  
+      <language id="de"><![CDATA[Bohne]]></language>
+      <language id="fr"><![CDATA[Les haricots]]></language>
+      <language id="es"><![CDATA[Frijol]]></language>
     </name> 
-  </property>  
+  </property> 
 </properties>

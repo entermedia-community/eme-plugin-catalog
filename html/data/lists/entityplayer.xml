@@ -1,15 +1,20 @@
-<properties>
+<?xml version="1.0" encoding="UTF-8"?>
 
-	<property id="gallery">
-		<name> 
+<properties> 
+  <property id="gallery"> 
+    <name> 
       <language id="en"><![CDATA[Gallery]]></language>  
-    </name>
-	</property>
-
-	<property id="carousel">
-		<name> 
+      <language id="de"><![CDATA[Galerie]]></language>
+      <language id="fr"><![CDATA[Galerie]]></language>
+      <language id="es"><![CDATA[Galería]]></language>
+    </name> 
+  </property>  
+  <property id="carousel"> 
+    <name> 
       <language id="en"><![CDATA[Carousel]]></language>  
-    </name>
-	</property>
-	
+      <language id="de"><![CDATA[Karussell]]></language>
+      <language id="fr"><![CDATA[Le carrousel]]></language>
+      <language id="es"><![CDATA[Carrusel]]></language>
+    </name> 
+  </property> 
 </properties>

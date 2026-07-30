@@ -1,19 +1,28 @@
-<properties>
-	<property id="assetsremoved">
-		<name> 
-	    	<language id="en"><![CDATA[Asset Removed]]></language>  
-	    </name>
-	</property>
-	<property id="assetsadded">
-		<name> 
-	    	<language id="en"><![CDATA[Asset Added]]></language>  
-	    </name>
-	</property>
-	
-	<property id="entitysaved">
-		<name> 
-	    	<language id="en"><![CDATA[Entity Saved]]></language>  
-	    </name>
-	</property>
-	
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+  <property id="assetsremoved"> 
+    <name> 
+      <language id="en"><![CDATA[Asset Removed]]></language>  
+      <language id="es"><![CDATA[Activo eliminado]]></language>  
+      <language id="de"><![CDATA[Vermögenswert entfernt]]></language>
+      <language id="fr"><![CDATA[Actif retiré]]></language>
+    </name> 
+  </property>  
+  <property id="assetsadded"> 
+    <name> 
+      <language id="en"><![CDATA[Asset Added]]></language>  
+      <language id="es"><![CDATA[Activo añadido]]></language>  
+      <language id="de"><![CDATA[Vermögenswert hinzugefügt]]></language>
+      <language id="fr"><![CDATA[Actif ajouté]]></language>
+    </name> 
+  </property>  
+  <property id="entitysaved"> 
+    <name> 
+      <language id="en"><![CDATA[Entity Saved]]></language>  
+      <language id="es"><![CDATA[Entidad guardada]]></language>  
+      <language id="de"><![CDATA[Entität gespeichert]]></language>
+      <language id="fr"><![CDATA[Entité sauvegardée]]></language>
+    </name> 
+  </property> 
 </properties>

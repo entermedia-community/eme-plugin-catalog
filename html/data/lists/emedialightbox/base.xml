@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root> 
-    <data ordering="10" id="base001" showonall="true" >
-   <name>
-      <language id="en"><![CDATA[Published]]></language>
-    </name>
-  </data> 
-
-   
-  <data ordering="30" id="base002" showonall="true" moduleicon="transparency">
-   <name>
-      <language id="en"><![CDATA[In Progress]]></language>
-    </name>
-  </data>
-
-  
-  <data ordering="40" id="base003" showonall="true"  moduleicon="heart-half">
-   <name>
-      <language id="en"><![CDATA[Select Media]]></language>
-    </name>
+  <data ordering="10" id="base001" showonall="true"> 
+    <name> 
+      <language id="en"><![CDATA[Published]]></language>  
+      <language id="de"><![CDATA[Veröffentlicht]]></language>
+      <language id="fr"><![CDATA[Publié]]></language>
+      <language id="es"><![CDATA[Publicado]]></language>
+    </name> 
   </data>  
-
-    
+  <data ordering="30" id="base002" showonall="true" moduleicon="transparency"> 
+    <name> 
+      <language id="en"><![CDATA[In Progress]]></language>  
+      <language id="de"><![CDATA[In Bearbeitung]]></language>
+      <language id="fr"><![CDATA[En cours]]></language>
+      <language id="es"><![CDATA[En curso]]></language>
+    </name> 
+  </data>  
+  <data ordering="40" id="base003" showonall="true" moduleicon="heart-half"> 
+    <name> 
+      <language id="en"><![CDATA[Select Media]]></language>  
+      <language id="de"><![CDATA[Medien auswählen]]></language>
+      <language id="fr"><![CDATA[Sélectionner les médias]]></language>
+      <language id="es"><![CDATA[Seleccione medios]]></language>
+    </name> 
+  </data> 
 </root>

@@ -3,38 +3,42 @@
 <root> 
   <data id="user"> 
     <name> 
-      <language id="en"><![CDATA[Person]]></language> 
-      <language id="es"><![CDATA[Persona]]></language> 
+      <language id="en"><![CDATA[Person]]></language>  
+      <language id="es"><![CDATA[Persona]]></language>  
+      <language id="de"><![CDATA[Person]]></language>
+      <language id="fr"><![CDATA[Personne]]></language>
     </name> 
-  </data>   
-     
+  </data>  
   <data id="librarycollection"> 
     <name> 
-      <language id="en"><![CDATA[Project]]></language> 
-      <language id="es"><![CDATA[Proyecto]]></language> 
+      <language id="en"><![CDATA[Project]]></language>  
+      <language id="es"><![CDATA[Proyecto]]></language>  
+      <language id="de"><![CDATA[Projekt]]></language>
+      <language id="fr"><![CDATA[Le projet]]></language>
     </name> 
-  </data>   
-
+  </data>  
   <data id="externalpaypal"> 
     <name> 
-      <language id="en"><![CDATA[External PayPal]]></language> 
-      <language id="es"><![CDATA[External PayPal]]></language> 
+      <language id="en"><![CDATA[External PayPal]]></language>  
+      <language id="es"><![CDATA[External PayPal]]></language>  
+      <language id="de"><![CDATA[Externer PayPal]]></language>
+      <language id="fr"><![CDATA[PayPal externe]]></language>
     </name> 
-  </data>   
-
+  </data>  
   <data id="externalbank"> 
     <name> 
-      <language id="en"><![CDATA[External Bank Deposit]]></language> 
-      <language id="es"><![CDATA[Transferencia de Banco]]></language> 
+      <language id="en"><![CDATA[External Bank Deposit]]></language>  
+      <language id="es"><![CDATA[Transferencia de Banco]]></language>  
+      <language id="de"><![CDATA[Externe Bankguthaben]]></language>
+      <language id="fr"><![CDATA[Dépôt bancaire externe]]></language>
     </name> 
-  </data>   
-
+  </data>  
   <data id="externalwise"> 
     <name> 
-      <language id="en"><![CDATA[Transfer to Wise.com]]></language> 
-      <language id="es"><![CDATA[Transferencia por Wise.com]]></language> 
+      <language id="en"><![CDATA[Transfer to Wise.com]]></language>  
+      <language id="es"><![CDATA[Transferencia por Wise.com]]></language>  
+      <language id="de"><![CDATA[Überweisung an Wise.com]]></language>
+      <language id="fr"><![CDATA[Transfert vers Wise.com]]></language>
     </name> 
-  </data>   
-
-    
+  </data> 
 </root>

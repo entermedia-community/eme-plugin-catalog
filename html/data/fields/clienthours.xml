@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties prefix="clienthours" beanname="dataSearcher"> 
-  <property id="id" index="true" internalfield="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New
+  <property id="id" index="true" internalfield="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New
+  <property id="name" index="true" multilanguage="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,34 +17,52 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath">New
+  <property id="sourcepath">New 
     <name> 
-      <language id="en"><![CDATA[SourcePath]]></language> 
+      <language id="en"><![CDATA[SourcePath]]></language>  
+      <language id="de"><![CDATA[Quellpfad]]></language>
+      <language id="fr"><![CDATA[Chemin d'accès]]></language>
+      <language id="es"><![CDATA[Ruta de origen]]></language>
     </name> 
   </property>  
-  <property id="notes" index="true" editable="true" stored="true">New
+  <property id="notes" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Notes]]></language> 
+      <language id="en"><![CDATA[Notes]]></language>  
+      <language id="de"><![CDATA[Anmerkungen]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
-  <property id="time" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="double" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  <property id="time" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="double" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Time]]></language> 
+      <language id="en"><![CDATA[Time]]></language>  
+      <language id="de"><![CDATA[Zeit]]></language>
+      <language id="fr"><![CDATA[Le temps]]></language>
+      <language id="es"><![CDATA[El tiempo]]></language>
     </name> 
   </property>  
-  <property id="client" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  <property id="client" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[Client]]></language> 
+      <language id="en"><![CDATA[Client]]></language>  
+      <language id="de"><![CDATA[Kunde]]></language>
+      <language id="fr"><![CDATA[Client]]></language>
+      <language id="es"><![CDATA[El cliente]]></language>
     </name> 
   </property>  
-  <property id="user" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  <property id="user" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[User]]></language> 
+      <language id="en"><![CDATA[User]]></language>  
+      <language id="de"><![CDATA[Benutzer]]></language>
+      <language id="fr"><![CDATA[Nom d'utilisateur]]></language>
+      <language id="es"><![CDATA[Usuario]]></language>
     </name> 
   </property>  
-  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New
-    <name>
-      <language id="en"><![CDATA[Date]]></language>
-    </name>
+  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
+    </name> 
   </property> 
 </properties>

@@ -1,44 +1,60 @@
-<records>
-   <data id="javaifcheck" bean="javaLogicAgent" enabled="true" ordering="10" agenttype="logicagent">
-      <name>
-         <language id="en"><![CDATA[Programmatic If Check]]></language>
-      </name>
-   </data>
+<?xml version="1.0" encoding="UTF-8"?>
 
-   <data id="toolifcheck" bean="llmToolAgent" enabled="true" ordering="10" agenttype="logicagent">
-      <name>
-         <language id="en"><![CDATA[LLm If Check]]></language>
-      </name>
-   </data>
-   <data id="copyWebRequest" bean="copyWebRequestAgent" enabled="true" agenttype="eventagent" ordering="10">
-      <name>
-         <language id="en"><![CDATA[Handle Web Request]]></language>
-      </name>
-   </data>
-
-   <data id="runEventSkill" bean="runEventSkill" enabled="true" agenttype="eventagent" ordering="10">
-      <name>
-         <language id="en"><![CDATA[Run Event]]></language>
-      </name>
-   </data>
-
-   <data id="runSharedEventSkill" bean="runSharedEventSkill" enabled="true" agenttype="eventagent" ordering="10">
-      <name>
-         <language id="en"><![CDATA[Run Event In Thread]]></language>
-      </name>
-   </data>
-
-   <data id="runModuleSkill" bean="runModuleSkill" enabled="true" agenttype="eventagent" ordering="10">
-      <name>
-         <language id="en"><![CDATA[Run Module Event]]></language>
-      </name>
-   </data>
-
-   <data id="handleWebEventSkill" bean="handleWebEventSkill" enabled="true" agenttype="eventagent" ordering="10">
-      <name>
-         <language id="en"><![CDATA[Handle Web Event]]></language>
-      </name>
-   </data>
-
-
+<records> 
+  <data id="javaifcheck" bean="javaLogicAgent" enabled="true" ordering="10" agenttype="logicagent"> 
+    <name> 
+      <language id="en"><![CDATA[Programmatic If Check]]></language>  
+      <language id="de"><![CDATA[Programmatische Wenn-Prüfung]]></language>
+      <language id="fr"><![CDATA[Vérification conditionnelle]]></language>
+      <language id="es"><![CDATA[Comprobación condicional programática]]></language>
+    </name> 
+  </data>  
+  <data id="toolifcheck" bean="llmToolAgent" enabled="true" ordering="10" agenttype="logicagent"> 
+    <name> 
+      <language id="en"><![CDATA[LLm If Check]]></language>  
+      <language id="de"><![CDATA[LLM-Check]]></language>
+      <language id="fr"><![CDATA[LLM : Vérifier]]></language>
+      <language id="es"><![CDATA[LLM Si Comprobar]]></language>
+    </name> 
+  </data>  
+  <data id="copyWebRequest" bean="copyWebRequestAgent" enabled="true" agenttype="eventagent" ordering="10"> 
+    <name> 
+      <language id="en"><![CDATA[Handle Web Request]]></language>  
+      <language id="de"><![CDATA[Webanfrage bearbeiten]]></language>
+      <language id="fr"><![CDATA[Gérer une requête Web]]></language>
+      <language id="es"><![CDATA[Gestión de solicitudes web]]></language>
+    </name> 
+  </data>  
+  <data id="runEventSkill" bean="runEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
+    <name> 
+      <language id="en"><![CDATA[Run Event]]></language>  
+      <language id="de"><![CDATA[Veranstaltung ausführen]]></language>
+      <language id="fr"><![CDATA[Événement d'exécution]]></language>
+      <language id="es"><![CDATA[Ejecutar el evento]]></language>
+    </name> 
+  </data>  
+  <data id="runSharedEventSkill" bean="runSharedEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
+    <name> 
+      <language id="en"><![CDATA[Run Event In Thread]]></language>  
+      <language id="de"><![CDATA[Veranstaltung im Thread ausführen]]></language>
+      <language id="fr"><![CDATA[Exécuter l'événement dans le thread]]></language>
+      <language id="es"><![CDATA[Ejecutar el evento en un hilo]]></language>
+    </name> 
+  </data>  
+  <data id="runModuleSkill" bean="runModuleSkill" enabled="true" agenttype="eventagent" ordering="10"> 
+    <name> 
+      <language id="en"><![CDATA[Run Module Event]]></language>  
+      <language id="de"><![CDATA[Modulereignis ausführen]]></language>
+      <language id="fr"><![CDATA[Exécuter l'événement du module]]></language>
+      <language id="es"><![CDATA[Ejecutar el evento del módulo]]></language>
+    </name> 
+  </data>  
+  <data id="handleWebEventSkill" bean="handleWebEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
+    <name> 
+      <language id="en"><![CDATA[Handle Web Event]]></language>  
+      <language id="de"><![CDATA[Webereignis verwalten]]></language>
+      <language id="fr"><![CDATA[Gérer l'événement Web]]></language>
+      <language id="es"><![CDATA[Gestionar el evento web]]></language>
+    </name> 
+  </data> 
 </records>

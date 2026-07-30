@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true"  internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+  <property id="id" index="true" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true"  editable="true" stored="true" sortable="true" keyword="false">Name
+  <property id="name" index="true" multilanguage="true" editable="true" stored="true" sortable="true" keyword="false">Name 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,44 +17,60 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-   <property id="previousstatus" index="true"  editable="true" stored="true" sortable="true" keyword="false">
+  <property id="previousstatus" index="true" editable="true" stored="true" sortable="true" keyword="false"> 
     <name> 
       <language id="en"><![CDATA[Previous]]></language>  
+      <language id="de"><![CDATA[Vorherige]]></language>
+      <language id="fr"><![CDATA[Précédent]]></language>
+      <language id="es"><![CDATA[Anterior]]></language>
     </name> 
   </property>  
-  <property id="userid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="userid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[User]]></language>  
+      <language id="de"><![CDATA[Benutzer]]></language>
+      <language id="fr"><![CDATA[Nom d'utilisateur]]></language>
+      <language id="es"><![CDATA[Usuario]]></language>
     </name> 
   </property>  
-  <property id="date" index="true" editable="true" stored="true" type="date" datatype="date">
+  <property id="date" index="true" editable="true" stored="true" type="date" datatype="date"> 
     <name> 
-      <language id="en"><![CDATA[Date]]></language> 
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="collectionid" index="true"  editable="false" stored="true" sortable="true" keyword="false">Collection id
-    <name>
-      <language id="de"><![CDATA[Sammlung ID]]></language>
-      <language id="en"><![CDATA[Collection Id]]></language>
-      <language id="es"><![CDATA[colección Id]]></language>
-      <language id="fr"><![CDATA[Id Collection]]></language>
-    </name>
-  </property>
-  <property id="goalid" index="true"  editable="false" stored="true" sortable="true" keyword="false">
-    <name>
-      <language id="en"><![CDATA[Goal Id]]></language>
-    </name>
-  </property>
-    <property id="notified" editable="true" index="true" stored="true" type="boolean" > 
+  <property id="collectionid" index="true" editable="false" stored="true" sortable="true" keyword="false">Collection id 
+    <name> 
+      <language id="de"><![CDATA[Sammlung ID]]></language>  
+      <language id="en"><![CDATA[Collection Id]]></language>  
+      <language id="es"><![CDATA[colección Id]]></language>  
+      <language id="fr"><![CDATA[Id Collection]]></language> 
+    </name> 
+  </property>  
+  <property id="goalid" index="true" editable="false" stored="true" sortable="true" keyword="false"> 
+    <name> 
+      <language id="en"><![CDATA[Goal Id]]></language>  
+      <language id="de"><![CDATA[Ziel-ID]]></language>
+      <language id="fr"><![CDATA[ID du but]]></language>
+      <language id="es"><![CDATA[ID del objetivo]]></language>
+    </name> 
+  </property>  
+  <property id="notified" editable="true" index="true" stored="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Was Notified]]></language>  
+      <language id="de"><![CDATA[Benachrichtigt]]></language>
+      <language id="fr"><![CDATA[A été notifié(e)]]></language>
+      <language id="es"><![CDATA[Fue notificado]]></language>
     </name> 
   </property>  
-  <property id="editedbyid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true"  editable="true" > 
+  <property id="editedbyid" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Edited By]]></language>  
+      <language id="de"><![CDATA[Herausgegeben von]]></language>
+      <language id="fr"><![CDATA[Édité par]]></language>
+      <language id="es"><![CDATA[Editado por]]></language>
     </name> 
-  </property>  
-  
-  
+  </property> 
 </properties>

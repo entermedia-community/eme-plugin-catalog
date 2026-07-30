@@ -20,11 +20,17 @@
   <property id="filename" index="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Template Filename]]></language>  
+      <language id="de"><![CDATA[Vorlagenname]]></language>
+      <language id="fr"><![CDATA[Nom du fichier du modèle]]></language>
+      <language id="es"><![CDATA[Nombre del archivo de la plantilla]]></language>
     </name> 
   </property>  
   <property id="targetsubmoduleid" index="true" type="list" listid="module" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Sub Module Type]]></language>  
+      <language id="de"><![CDATA[Untermodultyp]]></language>
+      <language id="fr"><![CDATA[Type de sous-module]]></language>
+      <language id="es"><![CDATA[Tipo de submódulo]]></language>
     </name> 
-  </property>  
- </properties>
+  </property> 
+</properties>

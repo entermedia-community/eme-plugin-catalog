@@ -1,33 +1,44 @@
-<properties beanname="dataSearcher">
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <property id="id" internalfield="true" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Id]]></language>
-    </name>
-  </property>
-
-  <property id="text" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Text]]></language>
-    </name>
-  </property>
-
-  <property id="strokecolor" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Stroke Color]]></language>
-    </name>
-  </property>
-
-  <property id="bgcolor" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Background Color]]></language>
-    </name>
-  </property>
-
-  <property id="connectedbottom" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Connected Bottom]]></language>
-    </name>
-  </property>
-
+<properties beanname="dataSearcher"> 
+  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[Nom de famille]]></language>
+      <language id="es"><![CDATA[Identificación]]></language>
+    </name> 
+  </property>  
+  <property id="text" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Text]]></language>  
+      <language id="de"><![CDATA[Wortlaut]]></language>
+      <language id="fr"><![CDATA[Le texte]]></language>
+      <language id="es"><![CDATA[El texto]]></language>
+    </name> 
+  </property>  
+  <property id="strokecolor" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Stroke Color]]></language>  
+      <language id="de"><![CDATA[Schlagschattenfarbe]]></language>
+      <language id="fr"><![CDATA[Couleur du trait]]></language>
+      <language id="es"><![CDATA[Color del trazo]]></language>
+    </name> 
+  </property>  
+  <property id="bgcolor" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Background Color]]></language>  
+      <language id="de"><![CDATA[Hintergrundfarbe]]></language>
+      <language id="fr"><![CDATA[Couleur de fond]]></language>
+      <language id="es"><![CDATA[Color de fondo]]></language>
+    </name> 
+  </property>  
+  <property id="connectedbottom" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Connected Bottom]]></language>  
+      <language id="de"><![CDATA[Verbundunterseite]]></language>
+      <language id="fr"><![CDATA[Sous-sol relié]]></language>
+      <language id="es"><![CDATA[Conexión inferior]]></language>
+    </name> 
+  </property> 
 </properties>

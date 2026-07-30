@@ -1,81 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <fields> 
-
-
-<!-- Not used anymore, replace with faceembeddings ID array. Leave here to copy old data?-->
- <property id="faceprofiles" index="true" stored="true" editable="true" viewtype="faceprofiles" datatype="nested" > 
-	     <name> 
-	      <language id="en"><![CDATA[Face Profiles]]></language>  
-	    </name> 
-        <property id="timecodestart" index="true" viewtype="timelength" stored="true" datatype="double" searchcomponent="numbersearch"   editable="false" type="double"> 
-	      <name> 
-	        <language id="en"><![CDATA[Face Data Time Code]]></language>  
-	      </name> 
-		</property>  
-        <property id="timecodelength" index="true" viewtype="timelength" stored="true" datatype="double" searchcomponent="numbersearch"   editable="false" type="double"> 
-	      <name> 
-	        <language id="en"><![CDATA[Face Data Length]]></language>  
-	      </name> 
-		</property>  
-	    <property id="facedata" index="true" indextype="not_analyzed" keyword="true" stored="true" editable="true" >
-	    <name> 
-	      <language id="en"><![CDATA[Face Data]]></language>  
-	    </name> 
-	    </property>
-		<property id="faceprofilegroup" index="true" indextype="not_analyzed" stored="true" viewtype="multiselect" editable="true" datatype="list" type="list"> 
-		    <name> 
-		      <language id="en"><![CDATA[Face Profile Group]]></language>  
-		    </name> 
-		</property>
-
-		  <property id="locationx" datatype="number" index="true" stored="true" > 
-	    <name> 
-	      <language id="en"><![CDATA[X Location]]></language>  
-	    </name> 
-	  </property>  
-
-		  <property id="locationy" datatype="number" index="true" stored="true" > 
-	    <name> 
-	      <language id="en"><![CDATA[Y Location]]></language>  
-	    </name> 
-	  </property>  
-
-	  <property id="locationw" datatype="number" index="true" stored="true" > 
-	    <name> 
-	      <language id="en"><![CDATA[Width]]></language>  
-	    </name> 
-	  </property>  
-	  <property id="locationh" datatype="number" index="true" stored="true" > 
-	    <name> 
-	      <language id="en"><![CDATA[Height]]></language>  
-	    </name> 
-	  </property>  
-		 
-  </property>
-  
+  <!-- Not used anymore, replace with faceembeddings ID array. Leave here to copy old data?-->  
+  <property id="faceprofiles" index="true" stored="true" editable="true" viewtype="faceprofiles" datatype="nested"> 
+    <name> 
+      <language id="en"><![CDATA[Face Profiles]]></language>  
+      <language id="de"><![CDATA[Gesichtsprofile]]></language>
+      <language id="fr"><![CDATA[Profil facial]]></language>
+      <language id="es"><![CDATA[Perfiles faciales]]></language>
+    </name>  
+    <property id="timecodestart" index="true" viewtype="timelength" stored="true" datatype="double" searchcomponent="numbersearch" editable="false" type="double"> 
+      <name> 
+        <language id="en"><![CDATA[Face Data Time Code]]></language> 
+      </name> 
+    </property>  
+    <property id="timecodelength" index="true" viewtype="timelength" stored="true" datatype="double" searchcomponent="numbersearch" editable="false" type="double"> 
+      <name> 
+        <language id="en"><![CDATA[Face Data Length]]></language> 
+      </name> 
+    </property>  
+    <property id="facedata" index="true" indextype="not_analyzed" keyword="true" stored="true" editable="true"> 
+      <name> 
+        <language id="en"><![CDATA[Face Data]]></language> 
+      </name> 
+    </property>  
+    <property id="faceprofilegroup" index="true" indextype="not_analyzed" stored="true" viewtype="multiselect" editable="true" datatype="list" type="list"> 
+      <name> 
+        <language id="en"><![CDATA[Face Profile Group]]></language> 
+      </name> 
+    </property>  
+    <property id="locationx" datatype="number" index="true" stored="true"> 
+      <name> 
+        <language id="en"><![CDATA[X Location]]></language> 
+      </name> 
+    </property>  
+    <property id="locationy" datatype="number" index="true" stored="true"> 
+      <name> 
+        <language id="en"><![CDATA[Y Location]]></language> 
+      </name> 
+    </property>  
+    <property id="locationw" datatype="number" index="true" stored="true"> 
+      <name> 
+        <language id="en"><![CDATA[Width]]></language> 
+      </name> 
+    </property>  
+    <property id="locationh" datatype="number" index="true" stored="true"> 
+      <name> 
+        <language id="en"><![CDATA[Height]]></language> 
+      </name> 
+    </property> 
+  </property>  
   <property id="removedfaceprofilegroups" index="true" indextype="not_analyzed" stored="true" viewtype="multiselect" editable="true" datatype="list" type="list" listid="faceprofilegroup"> 
-	    <name> 
-	      <language id="en"><![CDATA[False Face Profile Group]]></language>  
-	    </name> 
-   </property> 
-
-  <property id="facescancomplete" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true"  type="boolean">
+    <name> 
+      <language id="en"><![CDATA[False Face Profile Group]]></language>  
+      <language id="de"><![CDATA[Falsches-Gesichter-Profil-Gruppe]]></language>
+      <language id="fr"><![CDATA[Groupe des profils de faux visages]]></language>
+      <language id="es"><![CDATA[Grupo de Perfiles de Caras Falsas]]></language>
+    </name> 
+  </property>  
+  <property id="facescancomplete" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Face Detect Complete]]></language>  
+      <language id="de"><![CDATA[Gesichtserkennung abgeschlossen]]></language>
+      <language id="fr"><![CDATA[Détection faciale complète]]></language>
+      <language id="es"><![CDATA[Detección de rostros completa]]></language>
     </name> 
   </property>  
-  
-  <property id="facehasprofile" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true"  type="boolean">
+  <property id="facehasprofile" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[File Has Face]]></language>  
+      <language id="de"><![CDATA[Die Datei hat ein Gesicht]]></language>
+      <language id="fr"><![CDATA[Le fichier a un visage]]></language>
+      <language id="es"><![CDATA[El archivo tiene rostro]]></language>
     </name> 
   </property>  
-
-<property id="facescanerror" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true"  type="boolean">
+  <property id="facescanerror" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true" type="boolean"> 
     <name> 
       <language id="en"><![CDATA[Face Scan Error]]></language>  
+      <language id="de"><![CDATA[Gesichtsscannerfehler]]></language>
+      <language id="fr"><![CDATA[Erreur de scan du visage]]></language>
+      <language id="es"><![CDATA[Error de escaneo facial]]></language>
     </name> 
-  </property>  
- </fields>
- 
+  </property> 
+</fields>

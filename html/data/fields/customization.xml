@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true" >
+  <property id="id" editable="true" stored="true" index="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true" >Name 
+  <property id="name" editable="true" stored="true" index="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,16 +17,15 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="deploypath" editable="true" stored="true" index="true" >Deploy Path
-    <name>
-      <language id="de"><![CDATA[bereitstellen Weg]]></language>
-      <language id="en"><![CDATA[Deploy Path]]></language>
-      <language id="es"><![CDATA[Ruta de montación]]></language>
-      <language id="fr"><![CDATA[Chemin de déploiement]]></language>
-    </name>
-  </property> 
-
-  <property id="userid" index="true" viewtype="user" stored="true" type="list" editable="false" >User Name 
+  <property id="deploypath" editable="true" stored="true" index="true">Deploy Path 
+    <name> 
+      <language id="de"><![CDATA[bereitstellen Weg]]></language>  
+      <language id="en"><![CDATA[Deploy Path]]></language>  
+      <language id="es"><![CDATA[Ruta de montación]]></language>  
+      <language id="fr"><![CDATA[Chemin de déploiement]]></language> 
+    </name> 
+  </property>  
+  <property id="userid" index="true" viewtype="user" stored="true" type="list" editable="false">User Name 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User Name]]></language>  
@@ -34,35 +33,36 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  
-   <property id="customizationtype" type="list" editable="true" index="true" stored="true" viewtype="list"> 
+  <property id="customizationtype" type="list" editable="true" index="true" stored="true" viewtype="list"> 
     <name> 
       <language id="en"><![CDATA[Type]]></language>  
+      <language id="de"><![CDATA[Typ]]></language>
+      <language id="fr"><![CDATA[Type]]></language>
+      <language id="es"><![CDATA[Tipo]]></language>
     </name> 
   </property>  
-  
-   <property id="moduleids" type="list" editable="true" index="true" stored="true" viewtype="multivalued"> 
+  <property id="moduleids" type="list" editable="true" index="true" stored="true" viewtype="multivalued"> 
     <name> 
       <language id="en"><![CDATA[Modules]]></language>  
+      <language id="de"><![CDATA[Module]]></language>
+      <language id="fr"><![CDATA[Modules]]></language>
+      <language id="es"><![CDATA[Módulos]]></language>
     </name> 
   </property>  
-  
-  <property id="dateupdated" datatype="date" viewtype="date" searchcomponent="datesearch" index="true" stored="true" filter="true" editable="false" type="date">
-    <name>
-      <language id="de"><![CDATA[Datum]]></language>
-      <language id="en"><![CDATA[Date]]></language>
-      <language id="es"><![CDATA[Fecha]]></language>
-      <language id="fr"><![CDATA[Date]]></language>
-    </name>
+  <property id="dateupdated" datatype="date" viewtype="date" searchcomponent="datesearch" index="true" stored="true" filter="true" editable="false" type="date"> 
+    <name> 
+      <language id="de"><![CDATA[Datum]]></language>  
+      <language id="en"><![CDATA[Date]]></language>  
+      <language id="es"><![CDATA[Fecha]]></language>  
+      <language id="fr"><![CDATA[Date]]></language> 
+    </name> 
+  </property>  
+  <property id="targetid" index="true" deleted="false" editable="true" stored="true" viewtype="asset" datatype="list">New 
+    <name> 
+      <language id="de"><![CDATA[Ziel]]></language>  
+      <language id="en"><![CDATA[Target]]></language>  
+      <language id="es"><![CDATA[Objetivo]]></language>  
+      <language id="fr"><![CDATA[Cible]]></language> 
+    </name> 
   </property> 
-  <property id="targetid" index="true" deleted="false" editable="true" stored="true" viewtype="asset" datatype="list">New
-    <name>
-      <language id="de"><![CDATA[Ziel]]></language>
-      <language id="en"><![CDATA[Target]]></language>
-      <language id="es"><![CDATA[Objetivo]]></language>
-      <language id="fr"><![CDATA[Cible]]></language>
-    </name>
-  </property>
-
-
 </properties>

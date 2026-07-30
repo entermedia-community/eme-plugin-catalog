@@ -3,18 +3,26 @@
 <root> 
   <data id="disabled"> 
     <name> 
-      <language id="en"><![CDATA[Not Enabled]]></language> 
+      <language id="en"><![CDATA[Not Enabled]]></language>  
+      <language id="de"><![CDATA[Nicht aktiviert]]></language>
+      <language id="fr"><![CDATA[Non activé]]></language>
+      <language id="es"><![CDATA[No habilitado]]></language>
     </name> 
   </data>  
   <data id="live"> 
     <name> 
-      <language id="en"><![CDATA[Live - Production Mode]]></language> 
+      <language id="en"><![CDATA[Live - Production Mode]]></language>  
+      <language id="de"><![CDATA[Live – Produktionsmodus]]></language>
+      <language id="fr"><![CDATA[Mode de production en direct]]></language>
+      <language id="es"><![CDATA[Modo de producción en vivo]]></language>
     </name> 
   </data>  
   <data id="global"> 
     <name> 
-      <language id="en"><![CDATA[Global Settings]]></language>
+      <language id="en"><![CDATA[Global Settings]]></language>  
+      <language id="de"><![CDATA[Globale Einstellungen]]></language>
+      <language id="fr"><![CDATA[Paramètres globaux]]></language>
+      <language id="es"><![CDATA[Configuración global]]></language>
     </name> 
-  </data>  
-    
+  </data> 
 </root>

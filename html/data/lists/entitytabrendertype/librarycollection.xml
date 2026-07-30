@@ -1,28 +1,36 @@
-<properties>
+<?xml version="1.0" encoding="UTF-8"?>
 
-
-  <property id="finances" ordering="39">
-    <name>
-      <language id="en"><![CDATA[Finances]]></language>
-    </name>
-  </property>
-
-  <property id="goals" ordering="40">
-    <name>
-      <language id="en"><![CDATA[Goals]]></language>
-    </name>
-  </property>
-
-  <property id="referrals" ordering="41">
-    <name>
-      <language id="en"><![CDATA[Referrals]]></language>
-    </name>
-  </property>
-
-  <property id="blogs" ordering="41">
-    <name>
-      <language id="en"><![CDATA[Blogs]]></language>
-    </name>
-  </property>
-
+<properties> 
+  <property id="finances" ordering="39"> 
+    <name> 
+      <language id="en"><![CDATA[Finances]]></language>  
+      <language id="de"><![CDATA[Finanzen]]></language>
+      <language id="fr"><![CDATA[Finances]]></language>
+      <language id="es"><![CDATA[Finanzas]]></language>
+    </name> 
+  </property>  
+  <property id="goals" ordering="40"> 
+    <name> 
+      <language id="en"><![CDATA[Goals]]></language>  
+      <language id="de"><![CDATA[Ziele]]></language>
+      <language id="fr"><![CDATA[Objectifs]]></language>
+      <language id="es"><![CDATA[Objetivos]]></language>
+    </name> 
+  </property>  
+  <property id="referrals" ordering="41"> 
+    <name> 
+      <language id="en"><![CDATA[Referrals]]></language>  
+      <language id="de"><![CDATA[Verweise]]></language>
+      <language id="fr"><![CDATA[Renvois]]></language>
+      <language id="es"><![CDATA[Referencias]]></language>
+    </name> 
+  </property>  
+  <property id="blogs" ordering="41"> 
+    <name> 
+      <language id="en"><![CDATA[Blogs]]></language>  
+      <language id="de"><![CDATA[Blogs]]></language>
+      <language id="fr"><![CDATA[Les blogs]]></language>
+      <language id="es"><![CDATA[Blogs]]></language>
+    </name> 
+  </property> 
 </properties>

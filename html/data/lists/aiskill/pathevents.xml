@@ -1,473 +1,749 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- using more descriptive ids for easier debugging -->
-<records>
-   <data id="notifications_createnotifications" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/createnotifications">
-      <name>
-         <language id="en"><![CDATA[Notifications: Setup Pending Renewal Notifications]]></language>
-      </name>
-   </data>
-   <data id="notifications_sendnotifications" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/sendnotifications">
-      <name>
-         <language id="en"><![CDATA[Notifications: Send Pending Renewal Notifications]]></language>
-      </name>
-   </data>
-   <data id="notifications_assetchat" bean="runSharedEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetchat">
-      <name>
-         <language id="en"><![CDATA[Notifications: Asset Chat Notification]]></language>
-      </name>
-   </data>
-   <data id="notifications_assetmetadata" bean="runSharedEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetmetadata">
-      <name>
-         <language id="en"><![CDATA[Notifications: Asset Metadata Notification]]></language>
-      </name>
-   </data>
-   <data id="notifications_expireassets" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/expireassets">
-      <name>
-         <language id="en"><![CDATA[Notifications: Flag Expired Assets]]></language>
-      </name>
-   </data>
-   <data id="notifications_assetapprovednotification" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetapprovednotification">
-      <name>
-         <language id="en"><![CDATA[Notifications: Pull Approved Assets from Remote Server]]></language>
-      </name>
-   </data>
-   <data id="importing_importsql" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importsql">
-      <name>
-         <language id="en"><![CDATA[Importing: Import From SQL]]></language>
-      </name>
-   </data>
-   <data id="importing_importcomplete" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importcomplete">
-      <name>
-         <language id="en"><![CDATA[Importing: Import Complete]]></language>
-      </name>
-   </data>
-   <data id="importing_readallmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/readallmetadata">
-      <name>
-         <language id="en"><![CDATA[Importing: Reload All Asset Metadata]]></language>
-      </name>
-   </data>
-   <data id="importing_assetscreated" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetscreated">
-      <name>
-         <language id="en"><![CDATA[Importing: Assets Created]]></language>
-      </name>
-   </data>
-   <data id="importing_pushassetimported" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/pushassetimported">
-      <name>
-         <language id="en"><![CDATA[Importing: Push Received and Imported]]></language>
-      </name>
-   </data>
-   <data id="importing_fetchdownloads" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/fetchdownloads">
-      <name>
-         <language id="en"><![CDATA[Importing: Fetch assets from remote locations]]></language>
-      </name>
-   </data>
-   <data id="importing_checkpreviewstatus" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/checkpreviewstatus">
-      <name>
-         <language id="en"><![CDATA[Importing: Check Preview Status]]></language>
-      </name>
-   </data>
-   <data id="importing_restoredeleted" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/restoredeleted">
-      <name>
-         <language id="en"><![CDATA[Importing: Restore Deleted ]]></language>
-      </name>
-   </data>
-   <data id="importing_importfolders" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importfolders">
-      <name>
-         <language id="en"><![CDATA[Importing: Import Hot Folders]]></language>
-      </name>
-   </data>
-   <data id="importing_importassets" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importassets">
-      <name>
-         <language id="en"><![CDATA[Importing: Imported Assets]]></language>
-      </name>
-   </data>
-   <data id="importing_assetsclear" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsclear">
-      <name>
-         <language id="en"><![CDATA[Importing: Check Original Media]]></language>
-      </name>
-   </data>
-   <data id="importing_recalculatemd5" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/recalculatemd5">
-      <name>
-         <language id="en"><![CDATA[Importing: Reload All MD5]]></language>
-      </name>
-   </data>
-   <data id="data_takesnapshot" bean="runSharedEventSkill" agenttype="eventagent" folder="data" runoperation="data/takesnapshot">
-      <name>
-         <language id="en"><![CDATA[Data: Take Daily DB Snapshot]]></language>
-      </name>
-   </data>
-   <data id="data_importdatabase" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/importdatabase">
-      <name>
-         <language id="en"><![CDATA[Data: Import EM8 MediaDB]]></language>
-      </name>
-   </data>
-   <data id="data_reindex" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/reindex">
-      <name>
-         <language id="en"><![CDATA[Data: Reindex Database]]></language>
-      </name>
-   </data>
-   <data id="data_export" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/export">
-      <name>
-         <language id="en"><![CDATA[Data: Save Asset CSV]]></language>
-      </name>
-   </data>
-   <data id="data_managersnapshot" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/managersnapshot">
-      <name>
-         <language id="en"><![CDATA[Data: Manager Snapshot]]></language>
-      </name>
-   </data>
-   <data id="utils_setupmodules" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/setupmodules">
-      <name>
-         <language id="en"><![CDATA[Utils: Create Views and folder for all modules]]></language>
-      </name>
-   </data>
-   <data id="utils_custom_assignprimaryimage" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/custom_assignprimaryimage">
-      <name>
-         <language id="en"><![CDATA[Utils: Alfred: Assign Publication Thumbnails]]></language>
-      </name>
-   </data>
-   <data id="utils_autorestoresnaps2" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/autorestoresnaps2">
-      <name>
-         <language id="en"><![CDATA[Utils: Restore newest snapshots (Groovy Only)]]></language>
-      </name>
-   </data>
-   <data id="utils_autorestoresnaps" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/autorestoresnaps">
-      <name>
-         <language id="en"><![CDATA[Utils: Restore newest snapshots]]></language>
-      </name>
-   </data>
-   <data id="utils_flushserver" bean="runSharedEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/flushserver">
-      <name>
-         <language id="en"><![CDATA[Utils: Flush Server Objects]]></language>
-      </name>
-   </data>
-   <data id="conversions_autotranscode" bean="runSharedEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/autotranscode">
-      <name>
-         <language id="en"><![CDATA[Conversions: Transcript Audio]]></language>
-      </name>
-   </data>
-   <data id="conversions_expireconversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/expireconversions">
-      <name>
-         <language id="en"><![CDATA[Conversions: Expire old conversion tasks]]></language>
-      </name>
-   </data>
-   <data id="conversions_runconversion" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversion">
-      <name>
-         <language id="en"><![CDATA[Conversions: Run media conversion on one asset]]></language>
-      </name>
-   </data>
-   <data id="conversions_runconversions" bean="runSharedEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions">
-      <name>
-         <language id="en"><![CDATA[Conversions: Run media conversions]]></language>
-      </name>
-   </data>
-   <data id="conversions_rerunfailed" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/rerunfailed">
-      <name>
-         <language id="en"><![CDATA[Conversions: Mark Conversion Errors As New]]></language>
-      </name>
-   </data>
-   <data id="conversions_generatemissing" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/generatemissing">
-      <name>
-         <language id="en"><![CDATA[Conversions: Fix Missing Generated Images]]></language>
-      </name>
-   </data>
-   <data id="conversions_generateall" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/generateall">
-      <name>
-         <language id="en"><![CDATA[Conversions: Clear Generated + re-Import]]></language>
-      </name>
-   </data>
-   <data id="conversions_thumbnailreplaced" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/thumbnailreplaced">
-      <name>
-         <language id="en"><![CDATA[Conversions: Thumbnail Replaced]]></language>
-      </name>
-   </data>
-   <data id="publishing_publishcomplete" bean="runEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishcomplete">
-      <name>
-         <language id="en"><![CDATA[Publishing: Publish Complete]]></language>
-      </name>
-   </data>
-   <data id="publishing_publishassets" bean="runSharedEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishassets">
-      <name>
-         <language id="en"><![CDATA[Publishing: Publish Assets]]></language>
-      </name>
-   </data>
-   <data id="publishing_publishasset" bean="runEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishasset">
-      <name>
-         <language id="en"><![CDATA[Publishing: Publish Single Asset]]></language>
-      </name>
-   </data>
-   <data id="smartcreator_publish" bean="runEventSkill" agenttype="eventagent" folder="smartcreator" runoperation="smartcreator/publish">
-      <name>
-         <language id="en"><![CDATA[Smartcreator: Smart Creator Publish]]></language>
-      </name>
-   </data>
-   <data id="categories_assetsadded" bean="runEventSkill" agenttype="eventagent" folder="categories" runoperation="categories/assetsadded">
-      <name>
-         <language id="en"><![CDATA[Categories: Assets Added to Category]]></language>
-      </name>
-   </data>
-   <data id="categories_assetsremoved" bean="runEventSkill" agenttype="eventagent" folder="categories" runoperation="categories/assetsremoved">
-      <name>
-         <language id="en"><![CDATA[Categories: Assets Removed from Category]]></language>
-      </name>
-   </data>
-   <data id="librarycollectionshares_saved" bean="runEventSkill" agenttype="eventagent" folder="librarycollectionshares" runoperation="librarycollectionshares/saved">
-      <name>
-         <language id="en"><![CDATA[Librarycollectionshares: Library Collection Share Saved]]></language>
-      </name>
-   </data>
-   <data id="order_saved" bean="runEventSkill" agenttype="eventagent" folder="order" runoperation="order/saved">
-      <name>
-         <language id="en"><![CDATA[Order: Order Saved]]></language>
-      </name>
-   </data>
-   <data id="users_sync-users-to-people" bean="runEventSkill" agenttype="eventagent" folder="users" runoperation="users/sync-users-to-people">
-      <name>
-         <language id="en"><![CDATA[Users: Copy Users Into entityperson]]></language>
-      </name>
-   </data>
-   <data id="library_migratepermissions" bean="runEventSkill" agenttype="eventagent" folder="library" runoperation="library/migratepermissions">
-      <name>
-         <language id="en"><![CDATA[Library: Copies permissions set on libraries to its associated category]]></language>
-      </name>
-   </data>
-   <data id="library_saved" bean="runEventSkill" agenttype="eventagent" folder="library" runoperation="library/saved">
-      <name>
-         <language id="en"><![CDATA[Library: Library Saved]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_notifycollectionupdates" bean="runSharedEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/notifycollectionupdates">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Send Collection Chat Notifications]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_notifyassetscountchange" bean="runSharedEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/notifyassetscountchange">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Send Count Change Notifications]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_syncalfred" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/syncalfred">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Download and sync collections]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_rejected" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/rejected">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Send Asset Rejection Notifications]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_assetadded" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/assetadded">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Asset Added To Collection]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_approved" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/approved">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Send Asset Approval Notifications]]></language>
-      </name>
-   </data>
-   <data id="librarycollection_importproductentities" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/importproductentities">
-      <name>
-         <language id="en"><![CDATA[Librarycollection: Import Entity Products]]></language>
-      </name>
-   </data>
-   <data id="ordering_orderplaced" bean="runEventSkill" agenttype="eventagent" folder="ordering" runoperation="ordering/orderplaced">
-      <name>
-         <language id="en"><![CDATA[Ordering: Order Placed]]></language>
-      </name>
-   </data>
-   <data id="ordering_checkorderstatus" bean="runSharedEventSkill" agenttype="eventagent" folder="ordering" runoperation="ordering/checkorderstatus">
-      <name>
-         <language id="en"><![CDATA[Ordering: Update Order History]]></language>
-      </name>
-   </data>
-   <data id="llm_addmodulestoplevels" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmodulestoplevels">
-      <name>
-         <language id="en"><![CDATA[Llm: Recreate AI Functions]]></language>
-      </name>
-   </data>
-   <data id="llm_monitorchats" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/monitorchats">
-      <name>
-         <language id="en"><![CDATA[Llm: Monitor Chats]]></language>
-      </name>
-   </data>
-   <data id="llm_creatorcomponentcontent" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/creatorcomponentcontent">
-      <name>
-         <language id="en"><![CDATA[Llm: Make Components Contents]]></language>
-      </name>
-   </data>
-   <data id="llm_executerag" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/executerag">
-      <name>
-         <language id="en"><![CDATA[Llm: Execute RAG]]></language>
-      </name>
-   </data>
-   <data id="llm_createentities" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createentities">
-      <name>
-         <language id="en"><![CDATA[Llm: AI Content Generation]]></language>
-      </name>
-   </data>
-   <data id="llm_semanticrebalance" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/semanticrebalance">
-      <name>
-         <language id="en"><![CDATA[Llm: Semantic Rebalance]]></language>
-      </name>
-   </data>
-   <data id="llm_embeddata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/embeddata">
-      <name>
-         <language id="en"><![CDATA[Llm: Embed Asset/Entity/Blogs in Projects]]></language>
-      </name>
-   </data>
-   <data id="llm_updateaiservers" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/updateaiservers">
-      <name>
-         <language id="en"><![CDATA[Llm: Update AI Servers]]></language>
-      </name>
-   </data>
-   <data id="llm_createassets" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createassets">
-      <name>
-         <language id="en"><![CDATA[Llm: AI Image Generation]]></language>
-      </name>
-   </data>
-   <data id="llm_addmetadata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmetadata">
-      <name>
-         <language id="en"><![CDATA[Llm: Apply Informatics to Assets and Entities]]></language>
-      </name>
-   </data>
-   <data id="llm_loadactions" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/loadactions">
-      <name>
-         <language id="en"><![CDATA[Llm: Load Search Actions into Action Index]]></language>
-      </name>
-   </data>
-   <data id="userprofile_saved" bean="runEventSkill" agenttype="eventagent" folder="userprofile" runoperation="userprofile/saved">
-      <name>
-         <language id="en"><![CDATA[Userprofile: UserProfile  Saved]]></language>
-      </name>
-   </data>
-   <data id="searchcategory_assigncollections" bean="runEventSkill" agenttype="eventagent" folder="searchcategory" runoperation="searchcategory/assigncollections">
-      <name>
-         <language id="en"><![CDATA[Searchcategory: Create Sub Collections by Search Category]]></language>
-      </name>
-   </data>
-   <data id="entities_autoassignprimaryimage" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autoassignprimaryimage">
-      <name>
-         <language id="en"><![CDATA[Entities: Auto assign Entity Image]]></language>
-      </name>
-   </data>
-   <data id="entities_autocreateentities" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autocreateentities">
-      <name>
-         <language id="en"><![CDATA[Entities: Auto Create Entities]]></language>
-      </name>
-   </data>
-   <data id="entities_clearalluploadsourcepaths" bean="runEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/clearalluploadsourcepaths">
-      <name>
-         <language id="en"><![CDATA[Entities: Clear Existing Upload Source Paths]]></language>
-      </name>
-   </data>
-   <data id="entities_autoassignprimaryimagefixdeleted" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autoassignprimaryimagefixdeleted">
-      <name>
-         <language id="en"><![CDATA[Entities: Entity fix missing Primary Image (Deleted Asset)]]></language>
-      </name>
-   </data>
-   <data id="entities_checkpermissionhistory" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/checkpermissionhistory">
-      <name>
-         <language id="en"><![CDATA[Entities: Check Permission Changes]]></language>
-      </name>
-   </data>
-   <data id="faces_facerescanerrors" bean="runEventSkill" agenttype="eventagent" folder="faces" runoperation="faces/facerescanerrors">
-      <name>
-         <language id="en"><![CDATA[Faces: Facial Recognition Scan Errors]]></language>
-      </name>
-   </data>
-   <data id="faces_facereinitclusters" bean="runEventSkill" agenttype="eventagent" folder="faces" runoperation="faces/facereinitclusters">
-      <name>
-         <language id="en"><![CDATA[Faces: Face Init Cluster]]></language>
-      </name>
-   </data>
-   <data id="asset_assetwritemetadata" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/assetwritemetadata">
-      <name>
-         <language id="en"><![CDATA[Asset: Write Metadata to originals]]></language>
-      </name>
-   </data>
-   <data id="asset_aliasduplicates" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/aliasduplicates">
-      <name>
-         <language id="en"><![CDATA[Asset: Alias Duplicate Assets]]></language>
-      </name>
-   </data>
-   <data id="asset_createautocomplete" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/createautocomplete">
-      <name>
-         <language id="en"><![CDATA[Asset: Prepopulate Auto-Complete Values]]></language>
-      </name>
-   </data>
-   <data id="asset_createmappings" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/createmappings">
-      <name>
-         <language id="en"><![CDATA[Asset: Create Mappings]]></language>
-      </name>
-   </data>
-   <data id="asset_originalreplaced" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/originalreplaced">
-      <name>
-         <language id="en"><![CDATA[Asset: Original Replaced]]></language>
-      </name>
-   </data>
-   <data id="asset_resetassettypes" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/resetassettypes">
-      <name>
-         <language id="en"><![CDATA[Asset: Reset Asset Types]]></language>
-      </name>
-   </data>
-   <data id="asset_removedeletednow" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/removedeletednow">
-      <name>
-         <language id="en"><![CDATA[Asset: Remove deleted now]]></language>
-      </name>
-   </data>
-   <data id="asset_writeentermediaid" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/writeentermediaid">
-      <name>
-         <language id="en"><![CDATA[Asset: Write EnterMedia ID to originals]]></language>
-      </name>
-   </data>
-   <data id="asset_resetpermissions" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/resetpermissions">
-      <name>
-         <language id="en"><![CDATA[Asset: Reset Asset Permissions ]]></language>
-      </name>
-   </data>
-   <data id="asset_reindexlegacyassets" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/reindexlegacyassets">
-      <name>
-         <language id="en"><![CDATA[Asset: Reindex legacy (data.xml) assets]]></language>
-      </name>
-   </data>
-   <data id="asset_originalmodified" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/originalmodified">
-      <name>
-         <language id="en"><![CDATA[Asset: Original Modified]]></language>
-      </name>
-   </data>
-   <data id="asset_validateautocomplete" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/validateautocomplete">
-      <name>
-         <language id="en"><![CDATA[Asset: Validate type ahead suggestions for asset searches]]></language>
-      </name>
-   </data>
-   <data id="asset_syncgoogledrive" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/syncgoogledrive">
-      <name>
-         <language id="en"><![CDATA[Asset: Sync Google Drive]]></language>
-      </name>
-   </data>
-   <data id="asset_removedeleted" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/removedeleted">
-      <name>
-         <language id="en"><![CDATA[Asset: Remove deleted records > 1 month]]></language>
-      </name>
-   </data>
-   <data id="asset_reindex" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/reindex">
-      <name>
-         <language id="en"><![CDATA[Asset: Reindex Asset Searches]]></language>
-      </name>
-   </data>
-   <data id="asset_assetuploadnotification" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/assetuploadnotification">
-      <name>
-         <language id="en"><![CDATA[Asset: Send Periodic Summary of Uploads]]></language>
-      </name>
-   </data>
-
-   <data id="importing_queueconversions" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/queueconversions">
-      <name>
-         <language id="en"><![CDATA[Importing: Queue Conversions]]></language>
-      </name>
-   </data>
-
-
+<records> 
+  <data id="notifications_createnotifications" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/createnotifications"> 
+    <name> 
+      <language id="en"><![CDATA[Notifications: Setup Pending Renewal Notifications]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen: Einrichtung ausstehender Erneuerungsbenachrichtigungen]]></language>
+      <language id="fr"><![CDATA[Notifications : Configurer les notifications de renouvellement en attente]]></language>
+      <language id="es"><![CDATA[Notificaciones: Configuración de notificaciones de renovación pendientes]]></language>
+    </name> 
+  </data>  
+  <data id="notifications_sendnotifications" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/sendnotifications"> 
+    <name> 
+      <language id="en"><![CDATA[Notifications: Send Pending Renewal Notifications]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen: Ausstehende Erneuerungsbenachrichtigungen senden]]></language>
+      <language id="fr"><![CDATA[Notifications : envoyer des notifications de renouvellement en attente]]></language>
+      <language id="es"><![CDATA[Notificaciones: Enviar notificaciones de renovación pendientes]]></language>
+    </name> 
+  </data>  
+  <data id="notifications_assetchat" bean="runSharedEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetchat"> 
+    <name> 
+      <language id="en"><![CDATA[Notifications: Asset Chat Notification]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen: Benachrichtigung für den Asset-Chat]]></language>
+      <language id="fr"><![CDATA[Notifications : Notification de chat d'actifs]]></language>
+      <language id="es"><![CDATA[Notificaciones: Notificación de chat de activos]]></language>
+    </name> 
+  </data>  
+  <data id="notifications_assetmetadata" bean="runSharedEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetmetadata"> 
+    <name> 
+      <language id="en"><![CDATA[Notifications: Asset Metadata Notification]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen: Benachrichtigung zur Vermögenswert-Metadaten]]></language>
+      <language id="fr"><![CDATA[Notifications : notification des métadonnées des actifs]]></language>
+      <language id="es"><![CDATA[Notificaciones: Notificación de metadatos de activos]]></language>
+    </name> 
+  </data>  
+  <data id="notifications_expireassets" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/expireassets"> 
+    <name> 
+      <language id="en"><![CDATA[Notifications: Flag Expired Assets]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen: Verfallene Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Notifications : désignation des actifs expirés]]></language>
+      <language id="es"><![CDATA[Notificaciones: Activos caducados]]></language>
+    </name> 
+  </data>  
+  <data id="notifications_assetapprovednotification" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetapprovednotification"> 
+    <name> 
+      <language id="en"><![CDATA[Notifications: Pull Approved Assets from Remote Server]]></language>  
+      <language id="de"><![CDATA[Benachrichtigungen: Genehmigte Assets vom Remote-Server abrufen]]></language>
+      <language id="fr"><![CDATA[Notifications : Récupérer les actifs approuvés depuis le serveur distant]]></language>
+      <language id="es"><![CDATA[Notificaciones: Extraiga los activos aprobados del servidor remoto]]></language>
+    </name> 
+  </data>  
+  <data id="importing_importsql" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importsql"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Import From SQL]]></language>  
+      <language id="de"><![CDATA[Importieren: Importieren aus SQL]]></language>
+      <language id="fr"><![CDATA[Importer : Importer depuis SQL]]></language>
+      <language id="es"><![CDATA[Importar: Importar desde SQL]]></language>
+    </name> 
+  </data>  
+  <data id="importing_importcomplete" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importcomplete"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Import Complete]]></language>  
+      <language id="de"><![CDATA[Importieren: Import abgeschlossen]]></language>
+      <language id="fr"><![CDATA[Importation : Importation terminée]]></language>
+      <language id="es"><![CDATA[Importación: Importación completada]]></language>
+    </name> 
+  </data>  
+  <data id="importing_readallmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/readallmetadata"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Reload All Asset Metadata]]></language>  
+      <language id="de"><![CDATA[Importieren: Alle Asset-Metadaten neu laden]]></language>
+      <language id="fr"><![CDATA[Importation : Recharger toutes les métadonnées des actifs]]></language>
+      <language id="es"><![CDATA[Importar: Cargar todos los metadatos de los activos]]></language>
+    </name> 
+  </data>  
+  <data id="importing_assetscreated" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetscreated"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Assets Created]]></language>  
+      <language id="de"><![CDATA[Importieren: Erstellte Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Importation : actifs créés]]></language>
+      <language id="es"><![CDATA[Importación: Activos creados]]></language>
+    </name> 
+  </data>  
+  <data id="importing_pushassetimported" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/pushassetimported"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Push Received and Imported]]></language>  
+      <language id="de"><![CDATA[Import: Push empfangen und importiert]]></language>
+      <language id="fr"><![CDATA[Importation : Reçue et importée]]></language>
+      <language id="es"><![CDATA[Importación: Empuje recibido e importado]]></language>
+    </name> 
+  </data>  
+  <data id="importing_fetchdownloads" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/fetchdownloads"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Fetch assets from remote locations]]></language>  
+      <language id="de"><![CDATA[Importieren: Ressourcen von entfernten Standorten abrufen]]></language>
+      <language id="fr"><![CDATA[Importation : Récupérer des actifs depuis des emplacements distants]]></language>
+      <language id="es"><![CDATA[Importar: Obtener activos desde ubicaciones remotas]]></language>
+    </name> 
+  </data>  
+  <data id="importing_checkpreviewstatus" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/checkpreviewstatus"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Check Preview Status]]></language>  
+      <language id="de"><![CDATA[Importieren: Vorschau-Status überprüfen]]></language>
+      <language id="fr"><![CDATA[Importation : Vérifier l'état de l'aperçu]]></language>
+      <language id="es"><![CDATA[Importar: Verificar el estado de la vista previa]]></language>
+    </name> 
+  </data>  
+  <data id="importing_restoredeleted" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/restoredeleted"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Restore Deleted ]]></language>  
+      <language id="de"><![CDATA[Importieren: Gelöschte wiederherstellen]]></language>
+      <language id="fr"><![CDATA[Importer : Restaurer les éléments supprimés]]></language>
+      <language id="es"><![CDATA[Importar: Restaurar elementos eliminados]]></language>
+    </name> 
+  </data>  
+  <data id="importing_importfolders" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importfolders"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Import Hot Folders]]></language>  
+      <language id="de"><![CDATA[Importieren: Hot-Folder importieren]]></language>
+      <language id="fr"><![CDATA[Importer : Importer les dossiers chauds]]></language>
+      <language id="es"><![CDATA[Importar: Importar carpetas activas]]></language>
+    </name> 
+  </data>  
+  <data id="importing_importassets" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importassets"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Imported Assets]]></language>  
+      <language id="de"><![CDATA[Import: Importierte Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Importation : Actifs importés]]></language>
+      <language id="es"><![CDATA[Importación: Activos importados]]></language>
+    </name> 
+  </data>  
+  <data id="importing_assetsclear" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsclear"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Check Original Media]]></language>  
+      <language id="de"><![CDATA[Importieren: Originalmedien prüfen]]></language>
+      <language id="fr"><![CDATA[Importer : vérifier les médias originaux]]></language>
+      <language id="es"><![CDATA[Importar: verificar los medios originales]]></language>
+    </name> 
+  </data>  
+  <data id="importing_recalculatemd5" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/recalculatemd5"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Reload All MD5]]></language>  
+      <language id="de"><![CDATA[Importieren: Alle MD5 neu laden]]></language>
+      <language id="fr"><![CDATA[Importer : recharger tous les MD5]]></language>
+      <language id="es"><![CDATA[Importación: Cargar todos los MD5]]></language>
+    </name> 
+  </data>  
+  <data id="data_takesnapshot" bean="runSharedEventSkill" agenttype="eventagent" folder="data" runoperation="data/takesnapshot"> 
+    <name> 
+      <language id="en"><![CDATA[Data: Take Daily DB Snapshot]]></language>  
+      <language id="de"><![CDATA[Daten: Tägliches DB-Snapshot erstellen]]></language>
+      <language id="fr"><![CDATA[Données : prenez une capture instantanée quotidienne de la base de données]]></language>
+      <language id="es"><![CDATA[Datos: tomar una instantánea diaria de la base de datos]]></language>
+    </name> 
+  </data>  
+  <data id="data_importdatabase" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/importdatabase"> 
+    <name> 
+      <language id="en"><![CDATA[Data: Import EM8 MediaDB]]></language>  
+      <language id="de"><![CDATA[Daten: Import von EM8 MediaDB]]></language>
+      <language id="fr"><![CDATA[Données : import de la base de données EM8 Media]]></language>
+      <language id="es"><![CDATA[Datos: Importar base de datos EM8 Media]]></language>
+    </name> 
+  </data>  
+  <data id="data_reindex" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/reindex"> 
+    <name> 
+      <language id="en"><![CDATA[Data: Reindex Database]]></language>  
+      <language id="de"><![CDATA[Daten: Datenbank neuindizieren]]></language>
+      <language id="fr"><![CDATA[Données : Reindexer la base de données]]></language>
+      <language id="es"><![CDATA[Datos: Reíndice de base de datos]]></language>
+    </name> 
+  </data>  
+  <data id="data_export" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/export"> 
+    <name> 
+      <language id="en"><![CDATA[Data: Save Asset CSV]]></language>  
+      <language id="de"><![CDATA[Daten: Asset-CSV speichern]]></language>
+      <language id="fr"><![CDATA[Données : Enregistrer le fichier CSV des actifs]]></language>
+      <language id="es"><![CDATA[Datos: Guardar CSV de activos]]></language>
+    </name> 
+  </data>  
+  <data id="data_managersnapshot" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/managersnapshot"> 
+    <name> 
+      <language id="en"><![CDATA[Data: Manager Snapshot]]></language>  
+      <language id="de"><![CDATA[Daten: Managersnapshot]]></language>
+      <language id="fr"><![CDATA[Données : Capture d'écran du gestionnaire]]></language>
+      <language id="es"><![CDATA[Datos: instantánea del gerente]]></language>
+    </name> 
+  </data>  
+  <data id="utils_setupmodules" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/setupmodules"> 
+    <name> 
+      <language id="en"><![CDATA[Utils: Create Views and folder for all modules]]></language>  
+      <language id="de"><![CDATA[Hilfsmittel: Ansichten und Ordner für alle Module erstellen]]></language>
+      <language id="fr"><![CDATA[Utilitaires : Créer des vues et des dossiers pour tous les modules]]></language>
+      <language id="es"><![CDATA[Utilidades: Crear vistas y carpetas para todos los módulos]]></language>
+    </name> 
+  </data>  
+  <data id="utils_custom_assignprimaryimage" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/custom_assignprimaryimage"> 
+    <name> 
+      <language id="en"><![CDATA[Utils: Alfred: Assign Publication Thumbnails]]></language>  
+      <language id="de"><![CDATA[Hilfsmittel: Alfred: Zuweisen von Publikationsminiaturbildern]]></language>
+      <language id="fr"><![CDATA[Utilitaires : Alfred : attribuer des miniatures de publications]]></language>
+      <language id="es"><![CDATA[Utilidades: Alfred: Asignar miniaturas de publicaciones]]></language>
+    </name> 
+  </data>  
+  <data id="utils_autorestoresnaps2" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/autorestoresnaps2"> 
+    <name> 
+      <language id="en"><![CDATA[Utils: Restore newest snapshots (Groovy Only)]]></language>  
+      <language id="de"><![CDATA[Hilfsmittel: Neueste Snapshots wiederherstellen (nur Groovy)]]></language>
+      <language id="fr"><![CDATA[Utilitaires : Restaurer les dernières sauvegardes (uniquement Groovy)]]></language>
+      <language id="es"><![CDATA[Utilidades: Restaurar instantáneas más recientes (solo Groovy)]]></language>
+    </name> 
+  </data>  
+  <data id="utils_autorestoresnaps" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/autorestoresnaps"> 
+    <name> 
+      <language id="en"><![CDATA[Utils: Restore newest snapshots]]></language>  
+      <language id="de"><![CDATA[Hilfsmittel: Neueste Snapshots wiederherstellen]]></language>
+      <language id="fr"><![CDATA[Utilitaires : Restaurer les dernières sauvegardes]]></language>
+      <language id="es"><![CDATA[Utilidades: Restaurar instantáneas más recientes]]></language>
+    </name> 
+  </data>  
+  <data id="utils_flushserver" bean="runSharedEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/flushserver"> 
+    <name> 
+      <language id="en"><![CDATA[Utils: Flush Server Objects]]></language>  
+      <language id="de"><![CDATA[Utilities: Server-Objekte leeren]]></language>
+      <language id="fr"><![CDATA[Utilitaires : Objets du serveur Flush]]></language>
+      <language id="es"><![CDATA[Utilidades: Objetos del servidor]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_autotranscode" bean="runSharedEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/autotranscode"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Transcript Audio]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Transkript-Audio]]></language>
+      <language id="fr"><![CDATA[Conversions : transcription audio]]></language>
+      <language id="es"><![CDATA[Conversión: Transcripción de audio]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_expireconversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/expireconversions"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Expire old conversion tasks]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Alte Konvertierungsaufgaben ablaufen lassen]]></language>
+      <language id="fr"><![CDATA[Conversions : Expirer les anciennes tâches de conversion]]></language>
+      <language id="es"><![CDATA[Conversiónes: Expirar las tareas de conversión antiguas]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_runconversion" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversion"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Run media conversion on one asset]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Medienkonvertierung eines Assets durchführen]]></language>
+      <language id="fr"><![CDATA[Conversions : exécuter la conversion d'un actif]]></language>
+      <language id="es"><![CDATA[Conversión: Ejecutar la conversión de medios en un activo]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_runconversions" bean="runSharedEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Run media conversions]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Medienkonvertierungen ausführen]]></language>
+      <language id="fr"><![CDATA[Conversions : exécutez les conversions multimédias]]></language>
+      <language id="es"><![CDATA[Conversiónes: Ejecutar conversiones de medios]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_rerunfailed" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/rerunfailed"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Mark Conversion Errors As New]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Konvertierungsfehler als neu markieren]]></language>
+      <language id="fr"><![CDATA[Conversions : Marquer les erreurs de conversion comme nouvelles]]></language>
+      <language id="es"><![CDATA[Conversiónes: Marque los errores de conversión como nuevos]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_generatemissing" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/generatemissing"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Fix Missing Generated Images]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Fehlgenerierte Bilder korrigieren]]></language>
+      <language id="fr"><![CDATA[Conversions : réparer les images générées manquantes]]></language>
+      <language id="es"><![CDATA[Conversiónes: Corrección de imágenes generadas faltantes]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_generateall" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/generateall"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Clear Generated + re-Import]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Generiert + erneut importiert]]></language>
+      <language id="fr"><![CDATA[Conversions : Généré clairement + réimporter]]></language>
+      <language id="es"><![CDATA[Conversiónes: Generado claro + reimportar]]></language>
+    </name> 
+  </data>  
+  <data id="conversions_thumbnailreplaced" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/thumbnailreplaced"> 
+    <name> 
+      <language id="en"><![CDATA[Conversions: Thumbnail Replaced]]></language>  
+      <language id="de"><![CDATA[Konvertierungen: Thumbnail ersetzt]]></language>
+      <language id="fr"><![CDATA[Conversions : vignette remplacée]]></language>
+      <language id="es"><![CDATA[Conversión: Miniatura reemplazada]]></language>
+    </name> 
+  </data>  
+  <data id="publishing_publishcomplete" bean="runEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishcomplete"> 
+    <name> 
+      <language id="en"><![CDATA[Publishing: Publish Complete]]></language>  
+      <language id="de"><![CDATA[Veröffentlichung: Vollständige Veröffentlichung]]></language>
+      <language id="fr"><![CDATA[Édition : Publier l'intégralité]]></language>
+      <language id="es"><![CDATA[Publicación: Publicar completo]]></language>
+    </name> 
+  </data>  
+  <data id="publishing_publishassets" bean="runSharedEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishassets"> 
+    <name> 
+      <language id="en"><![CDATA[Publishing: Publish Assets]]></language>  
+      <language id="de"><![CDATA[Veröffentlichung: Assets veröffentlichen]]></language>
+      <language id="fr"><![CDATA[Édition : Publier des actifs]]></language>
+      <language id="es"><![CDATA[Publicación: Publicar activos]]></language>
+    </name> 
+  </data>  
+  <data id="publishing_publishasset" bean="runEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishasset"> 
+    <name> 
+      <language id="en"><![CDATA[Publishing: Publish Single Asset]]></language>  
+      <language id="de"><![CDATA[Veröffentlichung: Einzelveröffentlichung]]></language>
+      <language id="fr"><![CDATA[Édition : Publication d'un seul actif]]></language>
+      <language id="es"><![CDATA[Publicación: Publicación de un solo activo]]></language>
+    </name> 
+  </data>  
+  <data id="smartcreator_publish" bean="runEventSkill" agenttype="eventagent" folder="smartcreator" runoperation="smartcreator/publish"> 
+    <name> 
+      <language id="en"><![CDATA[Smartcreator: Smart Creator Publish]]></language>  
+      <language id="de"><![CDATA[Smartcreator: Smart Creator Veröffentlichen]]></language>
+      <language id="fr"><![CDATA[Smartcreator : Smart Creator Publish]]></language>
+      <language id="es"><![CDATA[Smartcreator: Smart Creator Publicar]]></language>
+    </name> 
+  </data>  
+  <data id="categories_assetsadded" bean="runEventSkill" agenttype="eventagent" folder="categories" runoperation="categories/assetsadded"> 
+    <name> 
+      <language id="en"><![CDATA[Categories: Assets Added to Category]]></language>  
+      <language id="de"><![CDATA[Kategorien: Vermögenswerte, die einer Kategorie hinzugefügt wurden]]></language>
+      <language id="fr"><![CDATA[Catégories : Actifs ajoutés à la catégorie]]></language>
+      <language id="es"><![CDATA[Categorías: Activos añadidos a la categoría]]></language>
+    </name> 
+  </data>  
+  <data id="categories_assetsremoved" bean="runEventSkill" agenttype="eventagent" folder="categories" runoperation="categories/assetsremoved"> 
+    <name> 
+      <language id="en"><![CDATA[Categories: Assets Removed from Category]]></language>  
+      <language id="de"><![CDATA[Kategorien: Vermögenswerte, die aus der Kategorie entfernt wurden]]></language>
+      <language id="fr"><![CDATA[Catégories : Actifs retirés de la catégorie]]></language>
+      <language id="es"><![CDATA[Categorías: Activos eliminados de la categoría]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollectionshares_saved" bean="runEventSkill" agenttype="eventagent" folder="librarycollectionshares" runoperation="librarycollectionshares/saved"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollectionshares: Library Collection Share Saved]]></language>  
+      <language id="de"><![CDATA[Bibliotheksteilungen: Bibliotheksteilung gespeichert]]></language>
+      <language id="fr"><![CDATA[Partage de collections de bibliothèque : Partage de collection de bibliothèque sauvegardé]]></language>
+      <language id="es"><![CDATA[Compartir colección de biblioteca: Compartir colección de biblioteca guardado]]></language>
+    </name> 
+  </data>  
+  <data id="order_saved" bean="runEventSkill" agenttype="eventagent" folder="order" runoperation="order/saved"> 
+    <name> 
+      <language id="en"><![CDATA[Order: Order Saved]]></language>  
+      <language id="de"><![CDATA[Bestellung: Bestellung gespeichert]]></language>
+      <language id="fr"><![CDATA[Commande : Commande enregistrée]]></language>
+      <language id="es"><![CDATA[Orden: Orden guardada]]></language>
+    </name> 
+  </data>  
+  <data id="users_sync-users-to-people" bean="runEventSkill" agenttype="eventagent" folder="users" runoperation="users/sync-users-to-people"> 
+    <name> 
+      <language id="en"><![CDATA[Users: Copy Users Into entityperson]]></language>  
+      <language id="de"><![CDATA[Benutzer: Benutzer in Entitätsperson kopieren]]></language>
+      <language id="fr"><![CDATA[Utilisateurs : Copiez les utilisateurs dans l'entité Person]]></language>
+      <language id="es"><![CDATA[Usuarios: Copiar usuarios en la entidad Persona]]></language>
+    </name> 
+  </data>  
+  <data id="library_migratepermissions" bean="runEventSkill" agenttype="eventagent" folder="library" runoperation="library/migratepermissions"> 
+    <name> 
+      <language id="en"><![CDATA[Library: Copies permissions set on libraries to its associated category]]></language>  
+      <language id="de"><![CDATA[Bibliothek: Kopiert die in Bibliotheken auf die zugehörige Kategorie gesetzten Berechtigungen]]></language>
+      <language id="fr"><![CDATA[Bibliothèque : Copie les autorisations définies sur les bibliothèques vers sa catégorie associée]]></language>
+      <language id="es"><![CDATA[Biblioteca: Copia los permisos configurados en las bibliotecas a su categoría asociada]]></language>
+    </name> 
+  </data>  
+  <data id="library_saved" bean="runEventSkill" agenttype="eventagent" folder="library" runoperation="library/saved"> 
+    <name> 
+      <language id="en"><![CDATA[Library: Library Saved]]></language>  
+      <language id="de"><![CDATA[Bibliothek: Bibliothek gespeichert]]></language>
+      <language id="fr"><![CDATA[Bibliothèque : Bibliothèque sauvegardée]]></language>
+      <language id="es"><![CDATA[Biblioteca: Biblioteca guardada]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_notifycollectionupdates" bean="runSharedEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/notifycollectionupdates"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Send Collection Chat Notifications]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Chat-Benachrichtigungen für die Sammlung senden]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications de chat de collection]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de chat de colección]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_notifyassetscountchange" bean="runSharedEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/notifyassetscountchange"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Send Count Change Notifications]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Benachrichtigungen über Zählungsänderungen senden]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications de modification du nombre d'articles]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de cambios de cuenta]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_syncalfred" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/syncalfred"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Download and sync collections]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Sammlungen herunterladen und synchronisieren]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : télécharger et synchroniser les collections]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: descarga y sincronización de colecciones]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_rejected" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/rejected"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Send Asset Rejection Notifications]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Benachrichtigungen über die Ablehnung von Vermögenswerten senden]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications de rejet d'actifs]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de rechazo de activos]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_assetadded" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/assetadded"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Asset Added To Collection]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Vermögenswert zur Sammlung hinzugefügt]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : actif ajouté à la collection]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: Activo añadido a la colección]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_approved" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/approved"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Send Asset Approval Notifications]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Senden von Benachrichtigungen zur Genehmigung von Vermögenswerten]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications d'approbation des actifs]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de aprobación de activos]]></language>
+    </name> 
+  </data>  
+  <data id="librarycollection_importproductentities" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/importproductentities"> 
+    <name> 
+      <language id="en"><![CDATA[Librarycollection: Import Entity Products]]></language>  
+      <language id="de"><![CDATA[Bibliothekssammlung: Importieren von Entitätsprodukten]]></language>
+      <language id="fr"><![CDATA[Collection de bibliothèque : Produits importés par l'entité]]></language>
+      <language id="es"><![CDATA[Colección de biblioteca: Productos de la entidad importada]]></language>
+    </name> 
+  </data>  
+  <data id="ordering_orderplaced" bean="runEventSkill" agenttype="eventagent" folder="ordering" runoperation="ordering/orderplaced"> 
+    <name> 
+      <language id="en"><![CDATA[Ordering: Order Placed]]></language>  
+      <language id="de"><![CDATA[Bestellung: Bestellung aufgegeben]]></language>
+      <language id="fr"><![CDATA[Commande : Commande passée]]></language>
+      <language id="es"><![CDATA[Pedido: Pedido realizado]]></language>
+    </name> 
+  </data>  
+  <data id="ordering_checkorderstatus" bean="runSharedEventSkill" agenttype="eventagent" folder="ordering" runoperation="ordering/checkorderstatus"> 
+    <name> 
+      <language id="en"><![CDATA[Ordering: Update Order History]]></language>  
+      <language id="de"><![CDATA[Bestellung: Bestellverlauf aktualisieren]]></language>
+      <language id="fr"><![CDATA[Commande : Mise à jour de l'historique de la commande]]></language>
+      <language id="es"><![CDATA[Ordenar: Actualizar el historial de pedidos]]></language>
+    </name> 
+  </data>  
+  <data id="llm_addmodulestoplevels" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmodulestoplevels"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Recreate AI Functions]]></language>  
+      <language id="de"><![CDATA[LLM: KI-Funktionen wiederherstellen]]></language>
+      <language id="fr"><![CDATA[LLM : Recréer des fonctions d'IA]]></language>
+      <language id="es"><![CDATA[LLM: Recrear funciones de IA]]></language>
+    </name> 
+  </data>  
+  <data id="llm_monitorchats" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/monitorchats"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Monitor Chats]]></language>  
+      <language id="de"><![CDATA[LLM: Chatüberwachung]]></language>
+      <language id="fr"><![CDATA[LLM : Surveiller les conversations]]></language>
+      <language id="es"><![CDATA[LLM: Monitorear chats]]></language>
+    </name> 
+  </data>  
+  <data id="llm_creatorcomponentcontent" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/creatorcomponentcontent"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Make Components Contents]]></language>  
+      <language id="de"><![CDATA[LLM: Komponenteninhalt erstellen]]></language>
+      <language id="fr"><![CDATA[LLM : Créer les contenus des composants]]></language>
+      <language id="es"><![CDATA[LLM: Crear componentes de contenido]]></language>
+    </name> 
+  </data>  
+  <data id="llm_executerag" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/executerag"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Execute RAG]]></language>  
+      <language id="de"><![CDATA[LLM: RAG ausführen]]></language>
+      <language id="fr"><![CDATA[LLM : Exécuter le RAG]]></language>
+      <language id="es"><![CDATA[LLM: Ejecutar RAG]]></language>
+    </name> 
+  </data>  
+  <data id="llm_createentities" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createentities"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: AI Content Generation]]></language>  
+      <language id="de"><![CDATA[LLM: Generierung von KI-Inhalten]]></language>
+      <language id="fr"><![CDATA[LLM : génération de contenu par IA]]></language>
+      <language id="es"><![CDATA[LLM: Generación de contenido con IA]]></language>
+    </name> 
+  </data>  
+  <data id="llm_semanticrebalance" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/semanticrebalance"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Semantic Rebalance]]></language>  
+      <language id="de"><![CDATA[LLM: Semantische Neujustierung]]></language>
+      <language id="fr"><![CDATA[Rééquilibrage sémantique]]></language>
+      <language id="es"><![CDATA[LLM: Reequilibrio semántico]]></language>
+    </name> 
+  </data>  
+  <data id="llm_embeddata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/embeddata"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Embed Asset/Entity/Blogs in Projects]]></language>  
+      <language id="de"><![CDATA[LLM: Asset/Entity/Blogs in Projekte einbetten]]></language>
+      <language id="fr"><![CDATA[LLM : Intégrer des actifs/entités/blogs dans des projets]]></language>
+      <language id="es"><![CDATA[LLM: Incorporar activos/entidades/blogs en proyectos]]></language>
+    </name> 
+  </data>  
+  <data id="llm_updateaiservers" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/updateaiservers"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Update AI Servers]]></language>  
+      <language id="de"><![CDATA[LLM: Aktualisierung der KI-Server]]></language>
+      <language id="fr"><![CDATA[LLM : Mise à jour des serveurs IA]]></language>
+      <language id="es"><![CDATA[LLM: Actualizar servidores de IA]]></language>
+    </name> 
+  </data>  
+  <data id="llm_createassets" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createassets"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: AI Image Generation]]></language>  
+      <language id="de"><![CDATA[LLM: KI-Bildgenerierung]]></language>
+      <language id="fr"><![CDATA[Génération d'images par IA]]></language>
+      <language id="es"><![CDATA[LLM: Generación de imágenes con IA]]></language>
+    </name> 
+  </data>  
+  <data id="llm_addmetadata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmetadata"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Apply Informatics to Assets and Entities]]></language>  
+      <language id="de"><![CDATA[LLM: Anwendung der Informatik auf Vermögenswerte und Entitäten]]></language>
+      <language id="fr"><![CDATA[LLM : Appliquer l'informatique aux actifs et aux entités]]></language>
+      <language id="es"><![CDATA[IA: Aplicar la informática a los activos y entidades]]></language>
+    </name> 
+  </data>  
+  <data id="llm_loadactions" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/loadactions"> 
+    <name> 
+      <language id="en"><![CDATA[Llm: Load Search Actions into Action Index]]></language>  
+      <language id="de"><![CDATA[LLM: Suchaktionen in den Aktionsindex laden]]></language>
+      <language id="fr"><![CDATA[LLM : Charger les actions de recherche dans l'index d'actions]]></language>
+      <language id="es"><![CDATA[LLM: Cargar las acciones de búsqueda en el índice de acciones]]></language>
+    </name> 
+  </data>  
+  <data id="userprofile_saved" bean="runEventSkill" agenttype="eventagent" folder="userprofile" runoperation="userprofile/saved"> 
+    <name> 
+      <language id="en"><![CDATA[Userprofile: UserProfile  Saved]]></language>  
+      <language id="de"><![CDATA[Benutzerprofil: Benutzerprofil gespeichert]]></language>
+      <language id="fr"><![CDATA[Profil utilisateur sauvegardé]]></language>
+      <language id="es"><![CDATA[Perfil de usuario: Perfil de usuario guardado]]></language>
+    </name> 
+  </data>  
+  <data id="searchcategory_assigncollections" bean="runEventSkill" agenttype="eventagent" folder="searchcategory" runoperation="searchcategory/assigncollections"> 
+    <name> 
+      <language id="en"><![CDATA[Searchcategory: Create Sub Collections by Search Category]]></language>  
+      <language id="de"><![CDATA[Suchkategorie: Unterkollektionen nach Suchkategorie erstellen]]></language>
+      <language id="fr"><![CDATA[Catégorie de recherche : Créer des sous-collections par catégorie de recherche]]></language>
+      <language id="es"><![CDATA[Categoría de búsqueda: Crear subcolecciones por categoría de búsqueda]]></language>
+    </name> 
+  </data>  
+  <data id="entities_autoassignprimaryimage" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autoassignprimaryimage"> 
+    <name> 
+      <language id="en"><![CDATA[Entities: Auto assign Entity Image]]></language>  
+      <language id="de"><![CDATA[Entitäten: Automatische Zuweisung Entitätsbild]]></language>
+      <language id="fr"><![CDATA[Entités : Attribution automatique d'une image d'entité]]></language>
+      <language id="es"><![CDATA[Entidades: Asignación automática de la imagen de la entidad]]></language>
+    </name> 
+  </data>  
+  <data id="entities_autocreateentities" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autocreateentities"> 
+    <name> 
+      <language id="en"><![CDATA[Entities: Auto Create Entities]]></language>  
+      <language id="de"><![CDATA[Entitäten: Automatische Erstellung von Entitäten]]></language>
+      <language id="fr"><![CDATA[Entités : Créer automatiquement des entités]]></language>
+      <language id="es"><![CDATA[Entidades: Creación automática de entidades]]></language>
+    </name> 
+  </data>  
+  <data id="entities_clearalluploadsourcepaths" bean="runEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/clearalluploadsourcepaths"> 
+    <name> 
+      <language id="en"><![CDATA[Entities: Clear Existing Upload Source Paths]]></language>  
+      <language id="de"><![CDATA[Entitäten: Klare vorhandene Upload-Quellpfade]]></language>
+      <language id="fr"><![CDATA[Entités : Clarifier les chemins de source de téléchargement existants]]></language>
+      <language id="es"><![CDATA[Entidades: Aclarar las rutas de origen de carga existentes]]></language>
+    </name> 
+  </data>  
+  <data id="entities_autoassignprimaryimagefixdeleted" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autoassignprimaryimagefixdeleted"> 
+    <name> 
+      <language id="en"><![CDATA[Entities: Entity fix missing Primary Image (Deleted Asset)]]></language>  
+      <language id="de"><![CDATA[Entitäten: Entität korrigiert fehlendes Primärbild (gelöschtes Asset)]]></language>
+      <language id="fr"><![CDATA[Entités : correction de l'entité pour l'image principale manquante (actif supprimé)]]></language>
+      <language id="es"><![CDATA[Entidades: Entidad que corrige la falta de imagen principal (activo eliminado)]]></language>
+    </name> 
+  </data>  
+  <data id="entities_checkpermissionhistory" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/checkpermissionhistory"> 
+    <name> 
+      <language id="en"><![CDATA[Entities: Check Permission Changes]]></language>  
+      <language id="de"><![CDATA[Entitäten: Berechtigungsänderungen überprüfen]]></language>
+      <language id="fr"><![CDATA[Entités : Vérifier les modifications d'autorisation]]></language>
+      <language id="es"><![CDATA[Entidades: Verificar cambios de permisos]]></language>
+    </name> 
+  </data>  
+  <data id="faces_facerescanerrors" bean="runEventSkill" agenttype="eventagent" folder="faces" runoperation="faces/facerescanerrors"> 
+    <name> 
+      <language id="en"><![CDATA[Faces: Facial Recognition Scan Errors]]></language>  
+      <language id="de"><![CDATA[Gesichter: Fehler bei der Gesichtserkennung]]></language>
+      <language id="fr"><![CDATA[Visages : erreurs de la numérisation faciale]]></language>
+      <language id="es"><![CDATA[Caras: Errores en el escaneo de reconocimiento facial]]></language>
+    </name> 
+  </data>  
+  <data id="faces_facereinitclusters" bean="runEventSkill" agenttype="eventagent" folder="faces" runoperation="faces/facereinitclusters"> 
+    <name> 
+      <language id="en"><![CDATA[Faces: Face Init Cluster]]></language>  
+      <language id="de"><![CDATA[Gesichter: Face-Init-Cluster]]></language>
+      <language id="fr"><![CDATA[Visages : groupe Face Init]]></language>
+      <language id="es"><![CDATA[Caras: Clúster de Face Init]]></language>
+    </name> 
+  </data>  
+  <data id="asset_assetwritemetadata" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/assetwritemetadata"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Write Metadata to originals]]></language>  
+      <language id="de"><![CDATA[Asset: Metadaten in die Originale schreiben]]></language>
+      <language id="fr"><![CDATA[Actif : Écrire les métadonnées dans les originaux]]></language>
+      <language id="es"><![CDATA[Activo: Escribir metadatos a los originales]]></language>
+    </name> 
+  </data>  
+  <data id="asset_aliasduplicates" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/aliasduplicates"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Alias Duplicate Assets]]></language>  
+      <language id="de"><![CDATA[Vermögenswert: Alias doppelte Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Actif : Alias de doublons d'actifs]]></language>
+      <language id="es"><![CDATA[Activo: Alias Activos duplicados]]></language>
+    </name> 
+  </data>  
+  <data id="asset_createautocomplete" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/createautocomplete"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Prepopulate Auto-Complete Values]]></language>  
+      <language id="de"><![CDATA[Asset: Vorabfüllung der Auto-Complete-Werte]]></language>
+      <language id="fr"><![CDATA[Actif : Préremplir les valeurs de complétion automatique]]></language>
+      <language id="es"><![CDATA[Activo: Prellenar valores de autocompletado]]></language>
+    </name> 
+  </data>  
+  <data id="asset_createmappings" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/createmappings"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Create Mappings]]></language>  
+      <language id="de"><![CDATA[Asset: Zuordnungen erstellen]]></language>
+      <language id="fr"><![CDATA[Actif : Créer des correspondances]]></language>
+      <language id="es"><![CDATA[Activo: Crear mapeos]]></language>
+    </name> 
+  </data>  
+  <data id="asset_originalreplaced" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/originalreplaced"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Original Replaced]]></language>  
+      <language id="de"><![CDATA[Vermögenswert: Original ersetzt]]></language>
+      <language id="fr"><![CDATA[Actif : Remplacement de l'original]]></language>
+      <language id="es"><![CDATA[Activo: Reemplazo original]]></language>
+    </name> 
+  </data>  
+  <data id="asset_resetassettypes" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/resetassettypes"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Reset Asset Types]]></language>  
+      <language id="de"><![CDATA[Asset: Asset-Typen zurücksetzen]]></language>
+      <language id="fr"><![CDATA[Actif : Réinitialiser les types d'actifs]]></language>
+      <language id="es"><![CDATA[Activo: Tipos de activo de reinicio]]></language>
+    </name> 
+  </data>  
+  <data id="asset_removedeletednow" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/removedeletednow"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Remove deleted now]]></language>  
+      <language id="de"><![CDATA[Vermögenswert: Jetzt löschen]]></language>
+      <language id="fr"><![CDATA[Actif : supprimer les éléments supprimés maintenant]]></language>
+      <language id="es"><![CDATA[Activo: Eliminar lo eliminado ahora]]></language>
+    </name> 
+  </data>  
+  <data id="asset_writeentermediaid" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/writeentermediaid"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Write EnterMedia ID to originals]]></language>  
+      <language id="de"><![CDATA[Asset: EnterMedia-ID auf das Original schreiben]]></language>
+      <language id="fr"><![CDATA[Actif : Écrire l'ID EnterMedia sur les originaux]]></language>
+      <language id="es"><![CDATA[Activo: Escribir el ID de EnterMedia en los originales]]></language>
+    </name> 
+  </data>  
+  <data id="asset_resetpermissions" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/resetpermissions"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Reset Asset Permissions ]]></language>  
+      <language id="de"><![CDATA[Asset: Berechtigungen für Vermögenswerte zurücksetzen]]></language>
+      <language id="fr"><![CDATA[Actif : réinitialiser les autorisations de l'actif]]></language>
+      <language id="es"><![CDATA[Activo: Restablecer permisos de activo]]></language>
+    </name> 
+  </data>  
+  <data id="asset_reindexlegacyassets" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/reindexlegacyassets"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Reindex legacy (data.xml) assets]]></language>  
+      <language id="de"><![CDATA[Vermögenswert: Legacy-Vermögenswerte (data.xml) neuindizieren]]></language>
+      <language id="fr"><![CDATA[Actif : réindexer les actifs hérités (data.xml)]]></language>
+      <language id="es"><![CDATA[Activo: Reindexar activos heredados (data.xml)]]></language>
+    </name> 
+  </data>  
+  <data id="asset_originalmodified" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/originalmodified"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Original Modified]]></language>  
+      <language id="de"><![CDATA[Vermögenswert: ursprünglich geändert]]></language>
+      <language id="fr"><![CDATA[Actif : Modifié à l'origine]]></language>
+      <language id="es"><![CDATA[Activo: Original modificado]]></language>
+    </name> 
+  </data>  
+  <data id="asset_validateautocomplete" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/validateautocomplete"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Validate type ahead suggestions for asset searches]]></language>  
+      <language id="de"><![CDATA[Asset: Validieren Sie Vorschläge für die Suche nach Assets]]></language>
+      <language id="fr"><![CDATA[Actif : Valider les suggestions de type pour les recherches d'actifs]]></language>
+      <language id="es"><![CDATA[Activo: Validar las sugerencias de autocompletado para las búsquedas de activos]]></language>
+    </name> 
+  </data>  
+  <data id="asset_syncgoogledrive" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/syncgoogledrive"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Sync Google Drive]]></language>  
+      <language id="de"><![CDATA[Asset: Google Drive synchronisieren]]></language>
+      <language id="fr"><![CDATA[Actif : synchroniser Google Drive]]></language>
+      <language id="es"><![CDATA[Activo: Sincronizar con Google Drive]]></language>
+    </name> 
+  </data>  
+  <data id="asset_removedeleted" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/removedeleted"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Remove deleted records > 1 month]]></language>  
+      <language id="de"><![CDATA[Asset: Gelöschte Datensätze > 1 Monat löschen]]></language>
+      <language id="fr"><![CDATA[Actif : supprimer les enregistrements supprimés depuis plus d'un mois]]></language>
+      <language id="es"><![CDATA[Activo: Eliminación de registros eliminados > 1 mes]]></language>
+    </name> 
+  </data>  
+  <data id="asset_reindex" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/reindex"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Reindex Asset Searches]]></language>  
+      <language id="de"><![CDATA[Vermögenswert: Vermögenswertsuche neuindizieren]]></language>
+      <language id="fr"><![CDATA[Actif : Reindexer les recherches d'actifs]]></language>
+      <language id="es"><![CDATA[Activo: Reindexar búsquedas de activos]]></language>
+    </name> 
+  </data>  
+  <data id="asset_assetuploadnotification" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/assetuploadnotification"> 
+    <name> 
+      <language id="en"><![CDATA[Asset: Send Periodic Summary of Uploads]]></language>  
+      <language id="de"><![CDATA[Asset: Senden Sie regelmäßig Zusammenfassungen der Uploads]]></language>
+      <language id="fr"><![CDATA[Actif : Envoyer un résumé périodique des envois]]></language>
+      <language id="es"><![CDATA[Activo: Enviar un resumen periódico de las cargas]]></language>
+    </name> 
+  </data>  
+  <data id="importing_queueconversions" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/queueconversions"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Queue Conversions]]></language>  
+      <language id="de"><![CDATA[Importieren: Warteschlangenkonversionen]]></language>
+      <language id="fr"><![CDATA[Importation : conversions de file d'attente]]></language>
+      <language id="es"><![CDATA[Importación: conversiones de cola]]></language>
+    </name> 
+  </data> 
 </records>

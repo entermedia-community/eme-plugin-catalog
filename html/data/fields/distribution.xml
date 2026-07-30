@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
   <property id="id" index="true" stored="true" editable="true">Vote Id 
     <name> 
       <language id="de"><![CDATA[Abstimmung id]]></language>  
@@ -26,20 +25,20 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="creationtime" legacy="time" datatype="date" index="true" stored="true" filter="true" editable="false" type="date">Time
-    <name>
-      <language id="de"><![CDATA[Zeit]]></language>
-      <language id="en"><![CDATA[Time]]></language>
-      <language id="es"><![CDATA[Hora]]></language>
-      <language id="fr"><![CDATA[Temps]]></language>
-    </name>
-  </property> 
-  
-    <property id="alloworiginal" index="true"	type="boolean" editable="true">
-    <name>
-      <language id="en"><![CDATA[Allow Original]]></language>
-      <language id="es"><![CDATA[Permitir Original]]></language>
-    </name>
+  <property id="creationtime" legacy="time" datatype="date" index="true" stored="true" filter="true" editable="false" type="date">Time 
+    <name> 
+      <language id="de"><![CDATA[Zeit]]></language>  
+      <language id="en"><![CDATA[Time]]></language>  
+      <language id="es"><![CDATA[Hora]]></language>  
+      <language id="fr"><![CDATA[Temps]]></language> 
+    </name> 
   </property>  
-    
+  <property id="alloworiginal" index="true" type="boolean" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Allow Original]]></language>  
+      <language id="es"><![CDATA[Permitir Original]]></language>  
+      <language id="de"><![CDATA[Original zulassen]]></language>
+      <language id="fr"><![CDATA[Autoriser l'original]]></language>
+    </name> 
+  </property> 
 </properties>

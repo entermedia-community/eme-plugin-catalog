@@ -1,45 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
+<properties beanname="dataSearcher"> 
   <property id="entityasset" index="true" datatype="list" editable="true" stored="true" viewtype="entitysingle" internalfield="false" isbadge="false" rendertype="entitysingle" required="false" multilanguage="false" highlight="false" autoincrement="false" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Entity Asset]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Entity Asset]]></language>  
+      <language id="de"><![CDATA[Vermögenswerte der Entität]]></language>
+      <language id="fr"><![CDATA[Actifs de l'entité]]></language>
+      <language id="es"><![CDATA[Activos de la entidad]]></language>
+    </name> 
+  </property>  
   <property id="pagenum" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" highlight="false" datatype="number" autoincrement="false" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Page Number]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Page Number]]></language>  
+      <language id="de"><![CDATA[Seitennummer]]></language>
+      <language id="fr"><![CDATA[Numéro de page]]></language>
+      <language id="es"><![CDATA[Número de página]]></language>
+    </name> 
+  </property>  
   <property id="longcaption" index="true" internalfield="false" editable="true" isbadge="false" viewtype="textarea" rendertype="textarea" required="false" multilanguage="false" highlight="false" autoincrement="false" stored="true" keyword="true" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Main Text]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Main Text]]></language>  
+      <language id="de"><![CDATA[Haupttext]]></language>
+      <language id="fr"><![CDATA[Texte principal]]></language>
+      <language id="es"><![CDATA[Texto principal]]></language>
+    </name> 
+  </property>  
   <property id="entitylocation" index="true" datatype="list" editable="true" stored="true" viewtype="entity" aiautocreated="true" aicreationdescription="Names of all the places (cities, states, countries, or well-known places) mentioned in the metadata">New 
-    <name>
-      <language id="en"><![CDATA[Location]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Location]]></language>  
+      <language id="de"><![CDATA[Standort]]></language>
+      <language id="fr"><![CDATA[Lieu]]></language>
+      <language id="es"><![CDATA[Ubicación]]></language>
+    </name> 
+  </property>  
   <property id="entitycompany" index="true" datatype="list" editable="true" stored="true" viewtype="entity" aiautocreated="true" aicreationdescription="Names of all the companies mentioned in the metadata.">New 
-    <name>
-      <language id="en"><![CDATA[Companies]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Companies]]></language>  
+      <language id="de"><![CDATA[Unternehmen]]></language>
+      <language id="fr"><![CDATA[Entreprises]]></language>
+      <language id="es"><![CDATA[Empresas]]></language>
+    </name> 
+  </property>  
   <property id="primarymedia" index="true" internalfield="false" editable="true" isbadge="false" viewtype="documentpage" rendertype="documentpage" sourcepath="${data.sourcepath}/${filename}" required="false" listid="asset" multilanguage="false" highlight="false" datatype="list" autoincrement="false" stored="true" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Page Preview]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Page Preview]]></language>  
+      <language id="de"><![CDATA[Seitenvorschau]]></language>
+      <language id="fr"><![CDATA[Aperçu de la page]]></language>
+      <language id="es"><![CDATA[Vista previa de la página]]></language>
+    </name> 
+  </property>  
   <property id="parentasset" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" multilanguage="false" highlight="false" datatype="list" autoincrement="false" aiautocreated="false">New 
-    <name>
-      <language id="en"><![CDATA[Parent Asset]]></language>
-    </name>
-  </property>
-
-  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown">
-    <name>
-      <language id="en"><![CDATA[Markdown Content]]></language>
-    </name>
-  </property>
+    <name> 
+      <language id="en"><![CDATA[Parent Asset]]></language>  
+      <language id="de"><![CDATA[Elternvermögen]]></language>
+      <language id="fr"><![CDATA[Actif de la société mère]]></language>
+      <language id="es"><![CDATA[Activo de la empresa matriz]]></language>
+    </name> 
+  </property>  
+  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown"> 
+    <name> 
+      <language id="en"><![CDATA[Markdown Content]]></language>  
+      <language id="de"><![CDATA[Markdown-Inhalt]]></language>
+      <language id="fr"><![CDATA[Contenu au format Markdown]]></language>
+      <language id="es"><![CDATA[Contenido en formato Markdown]]></language>
+    </name> 
+  </property> 
 </properties>

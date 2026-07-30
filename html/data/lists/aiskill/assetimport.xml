@@ -1,61 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- using more descriptive ids for easier debugging -->
-<records>
-
-   <data id="hotfoldersourceagent" bean="hotFolderSourceSkill" ordering="10" agenttype="eventagent" enabled="true">
-       <name>
-         <language id="en"><![CDATA[Hot Folder Source]]></language>
-      </name>
-   </data>
-
-   <data id="AssetsImportCreated" bean="assetImportCreated" enabled="true" ordering="10" agenttype="taskagent">
-      <name>
-         <language id="en"><![CDATA[Assets Created]]></language>
-      </name>
-   </data>
-
-   <data id="AssetImportImported" bean="assetImportImported" agenttype="taskagent" enabled="true" ordering="12">
-      <name>
-         <language id="en"><![CDATA[Asset Import]]></language>
-      </name>
-   </data>
-   <!-- Not used -->
-   <data id="importing_assetsreadmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsreadmetadata">
-      <name>
-         <language id="en"><![CDATA[Importing: Process Needs Metadata]]></language>
-      </name>
-   </data>
-
-   <data id="EntityModule_handleAssetsImported" runoperation="EntityModule.handleAssetsImported" bean="runModuleSkill" agenttype="taskagent" enabled="true" ordering="14">
-      <name>
-         <language id="en"><![CDATA[Entity Check Imports]]></language>
-      </name>
-   </data>
-
-   <data id="processNeedsMetadata" bean="processNeedsMetadataSkill" agenttype="taskagent" folder="importing">
-      <name>
-         <language id="en"><![CDATA[Process Needs Metadata]]></language>
-      </name>
-   </data>
-
-   <data id="importing_assetsimportedcustom" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsimportedcustom">
-      <name>
-         <language id="en"><![CDATA[Importing: Custom Assets Imported]]></language>
-      </name>
-   </data>
-
-   <data id="queueConversions" bean="queueConversionsSkill" agenttype="taskagent" enabled="true" ordering="16">
-      <name>
-         <language id="en"><![CDATA[Queue Conversions]]></language>
-      </name>
-   </data>
-
-   <!--Use the event for now so they dont start multiple conversions simultaneously-->
-   <data id="runConversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions" enabled="true" ordering="16">
-      <name>
-         <language id="en"><![CDATA[Run Conversions]]></language>
-      </name>
-   </data>
-
+<records> 
+  <data id="hotfoldersourceagent" bean="hotFolderSourceSkill" ordering="10" agenttype="eventagent" enabled="true"> 
+    <name> 
+      <language id="en"><![CDATA[Hot Folder Source]]></language>  
+      <language id="de"><![CDATA[Hot-Ordner-Quelle]]></language>
+      <language id="fr"><![CDATA[Source du dossier chaud]]></language>
+      <language id="es"><![CDATA[Carpeta de origen]]></language>
+    </name> 
+  </data>  
+  <data id="AssetsImportCreated" bean="assetImportCreated" enabled="true" ordering="10" agenttype="taskagent"> 
+    <name> 
+      <language id="en"><![CDATA[Assets Created]]></language>  
+      <language id="de"><![CDATA[Erstellte Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Actifs créés]]></language>
+      <language id="es"><![CDATA[Activos creados]]></language>
+    </name> 
+  </data>  
+  <data id="AssetImportImported" bean="assetImportImported" agenttype="taskagent" enabled="true" ordering="12"> 
+    <name> 
+      <language id="en"><![CDATA[Asset Import]]></language>  
+      <language id="de"><![CDATA[Asset-Import]]></language>
+      <language id="fr"><![CDATA[Importation d'actifs]]></language>
+      <language id="es"><![CDATA[Importación de activos]]></language>
+    </name> 
+  </data>  
+  <!-- Not used -->  
+  <data id="importing_assetsreadmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsreadmetadata"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Process Needs Metadata]]></language>  
+      <language id="de"><![CDATA[Import: Prozess benötigt Metadaten]]></language>
+      <language id="fr"><![CDATA[Importation : le processus nécessite des métadonnées]]></language>
+      <language id="es"><![CDATA[Importación: El proceso necesita metadatos]]></language>
+    </name> 
+  </data>  
+  <data id="EntityModule_handleAssetsImported" runoperation="EntityModule.handleAssetsImported" bean="runModuleSkill" agenttype="taskagent" enabled="true" ordering="14"> 
+    <name> 
+      <language id="en"><![CDATA[Entity Check Imports]]></language>  
+      <language id="de"><![CDATA[Entity-Check-Importe]]></language>
+      <language id="fr"><![CDATA[Vérification des importations d'entités]]></language>
+      <language id="es"><![CDATA[Verificación de importaciones de entidades]]></language>
+    </name> 
+  </data>  
+  <data id="processNeedsMetadata" bean="processNeedsMetadataSkill" agenttype="taskagent" folder="importing"> 
+    <name> 
+      <language id="en"><![CDATA[Process Needs Metadata]]></language>  
+      <language id="de"><![CDATA[Prozess benötigt Metadaten]]></language>
+      <language id="fr"><![CDATA[Le processus nécessite des métadonnées]]></language>
+      <language id="es"><![CDATA[El proceso necesita metadatos]]></language>
+    </name> 
+  </data>  
+  <data id="importing_assetsimportedcustom" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsimportedcustom"> 
+    <name> 
+      <language id="en"><![CDATA[Importing: Custom Assets Imported]]></language>  
+      <language id="de"><![CDATA[Importieren: Importierte benutzerdefinierte Assets]]></language>
+      <language id="fr"><![CDATA[Importation : actifs personnalisés importés]]></language>
+      <language id="es"><![CDATA[Importación: Activos personalizados importados]]></language>
+    </name> 
+  </data>  
+  <data id="queueConversions" bean="queueConversionsSkill" agenttype="taskagent" enabled="true" ordering="16"> 
+    <name> 
+      <language id="en"><![CDATA[Queue Conversions]]></language>  
+      <language id="de"><![CDATA[Konversionen aus Warteschlangen]]></language>
+      <language id="fr"><![CDATA[Conversions de la file d'attente]]></language>
+      <language id="es"><![CDATA[Conversiones de cola]]></language>
+    </name> 
+  </data>  
+  <!--Use the event for now so they dont start multiple conversions simultaneously-->  
+  <data id="runConversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions" enabled="true" ordering="16"> 
+    <name> 
+      <language id="en"><![CDATA[Run Conversions]]></language>  
+      <language id="de"><![CDATA[Konversionen durchführen]]></language>
+      <language id="fr"><![CDATA[Lancer des conversions]]></language>
+      <language id="es"><![CDATA[Ejecutar conversiones]]></language>
+    </name> 
+  </data> 
 </records>

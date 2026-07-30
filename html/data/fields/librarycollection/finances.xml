@@ -1,98 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-   <property id="goaldate" index="true" stored="true" editable="true"  type="date" datatype="date" >
+  <property id="goaldate" index="true" stored="true" editable="true" type="date" datatype="date"> 
     <name> 
       <language id="en"><![CDATA[Goal Date]]></language>  
       <language id="es"><![CDATA[Fecha de Objetivo]]></language>  
+      <language id="de"><![CDATA[Zieldatum]]></language>
+      <language id="fr"><![CDATA[Date butoir]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="goalamount" index="true" stored="true" editable="true" type="number"> 
     <name> 
       <language id="en"><![CDATA[Goal Amount]]></language>  
       <language id="es"><![CDATA[Cuenta de Objetivo]]></language>  
+      <language id="de"><![CDATA[Zielbetrag]]></language>
+      <language id="fr"><![CDATA[Montant visé]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="distributedtotal" index="true" stored="true" editable="true" type="number"> 
     <name> 
       <language id="en"><![CDATA[Distributed Total]]></language>  
+      <language id="de"><![CDATA[Verteilte Summe]]></language>
+      <language id="fr"><![CDATA[Total distribué]]></language>
+      <language id="es"><![CDATA[Total distribuido]]></language>
     </name> 
-  </property>
-  
-  <property id="donationemailsubject" index="true" stored="true" editable="true"   > 
+  </property>  
+  <property id="donationemailsubject" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Donation Email Subject]]></language>  
+      <language id="de"><![CDATA[Betreff der Spende-E-Mail]]></language>
+      <language id="fr"><![CDATA[Objet du courriel de don]]></language>
+      <language id="es"><![CDATA[Asunto del correo electrónico de donación]]></language>
     </name> 
-  </property>    
-  
-  
-   <property id="donationemailtemplate" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="donationemailtemplate" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Donation Email Template]]></language>  
+      <language id="de"><![CDATA[Spenden-E-Mail-Vorlage]]></language>
+      <language id="fr"><![CDATA[Modèle de courriel de don]]></language>
+      <language id="es"><![CDATA[Plantilla de correo electrónico para donaciones]]></language>
     </name> 
-  </property>
-  
-  <property id="invoiceemailheader" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="invoiceemailheader" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Invoice Email Header]]></language>  
+      <language id="de"><![CDATA[Rechnungs-E-Mail-Kopfzeile]]></language>
+      <language id="fr"><![CDATA[Objet : Facture]]></language>
+      <language id="es"><![CDATA[Asunto del correo electrónico de factura]]></language>
     </name> 
-  </property>
-  
-    <property id="invoiceemailfooter" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="invoiceemailfooter" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Invoice Email Footer]]></language>  
+      <language id="de"><![CDATA[Rechnungs-E-Mail-Fußzeile]]></language>
+      <language id="fr"><![CDATA[Pied de page de l'e-mail de facture]]></language>
+      <language id="es"><![CDATA[Pie de correo electrónico de factura]]></language>
     </name> 
-  </property>     
-  
-  <property id="invoicepaidemail" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="invoicepaidemail" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Payd Invoice Email Message]]></language>  
+      <language id="de"><![CDATA[E-Mail-Nachricht über eine bezahlte Rechnung]]></language>
+      <language id="fr"><![CDATA[Message relatif à un paiement de facture]]></language>
+      <language id="es"><![CDATA[Mensaje de correo electrónico de factura abonada]]></language>
     </name> 
-  </property>   
-  
-    <property id="invoicepayoptions" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="invoicepayoptions" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Other Pay Options for Invoices]]></language>  
+      <language id="de"><![CDATA[Weitere Zahlungsoptionen für Rechnungen]]></language>
+      <language id="fr"><![CDATA[Autres options de paiement pour les factures]]></language>
+      <language id="es"><![CDATA[Otras opciones de pago para las facturas]]></language>
     </name> 
-  </property>     
-  
-  
-  <property id="dollarsperpoints" index="true" stored="true"  editable="true" type="double" defaultvalue="1">
+  </property>  
+  <property id="dollarsperpoints" index="true" stored="true" editable="true" type="double" defaultvalue="1"> 
     <name> 
       <language id="en"><![CDATA[Dollars Per Points]]></language>  
+      <language id="de"><![CDATA[Dollar pro Punkt]]></language>
+      <language id="fr"><![CDATA[Dollars par point]]></language>
+      <language id="es"><![CDATA[Dólares por punto]]></language>
     </name> 
-  </property>
-  
-  
-  	<property id="parentprojectinvoicing" listid="librarycollection"
-		index="true" stored="true" editable="true" viewtype="list" type="list">
-		<name>
-			<language id="en"><![CDATA[Parent Collection Invoicing Options]]></language>
-		</name>
-	</property>
-
-  	
-  	<property id="stripepublickey" index="true" stored="true" editable="true"   > 
-	    <name> 
-	      <language id="en"><![CDATA[Stripe Public Key]]></language>  
-	    </name> 
-	 </property>
- 	 <property id="stripeprivatekey" index="true" stored="true" editable="true"   > 
-	    <name> 
-	      <language id="en"><![CDATA[Stripe Private Key]]></language>  
-	    </name> 
-	 </property>
-	 
-	 
-	 
-   <property id="sessioncalcdate" index="true" deleted="false" editable="true" stored="true" type="date">Session Calc Date
   </property>  
-  <property id="totalsessionspurchased" index="true" deleted="false" editable="true" stored="true" type="number">Total Sessions Purchased
+  <property id="parentprojectinvoicing" listid="librarycollection" index="true" stored="true" editable="true" viewtype="list" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Parent Collection Invoicing Options]]></language>  
+      <language id="de"><![CDATA[Rechnungsstellungsoptionen für die Elternsammlung]]></language>
+      <language id="fr"><![CDATA[Options de facturation pour la collecte parentale]]></language>
+      <language id="es"><![CDATA[Opciones de facturación de la colección de padres]]></language>
+    </name> 
   </property>  
-  <property id="totalsessionsused" index="true" deleted="false" editable="true" stored="true" type="number">Total Sessions Used
-  </property>
-  <property id="remainingsessions" index="true" deleted="false" editable="true" stored="true" type="number">Remaining Sessions
-  </property>
-  
-  
+  <property id="stripepublickey" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Stripe Public Key]]></language>  
+      <language id="de"><![CDATA[Stripe-öffentlicher Schlüssel]]></language>
+      <language id="fr"><![CDATA[Clé publique Stripe]]></language>
+      <language id="es"><![CDATA[Clave pública de Stripe]]></language>
+    </name> 
+  </property>  
+  <property id="stripeprivatekey" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Stripe Private Key]]></language>  
+      <language id="de"><![CDATA[Stripe-Privatschlüssel]]></language>
+      <language id="fr"><![CDATA[Clé privée Stripe]]></language>
+      <language id="es"><![CDATA[Clave privada de Stripe]]></language>
+    </name> 
+  </property>  
+  <property id="sessioncalcdate" index="true" deleted="false" editable="true" stored="true" type="date">Session Calc Date</property>  
+  <property id="totalsessionspurchased" index="true" deleted="false" editable="true" stored="true" type="number">Total Sessions Purchased</property>  
+  <property id="totalsessionsused" index="true" deleted="false" editable="true" stored="true" type="number">Total Sessions Used</property>  
+  <property id="remainingsessions" index="true" deleted="false" editable="true" stored="true" type="number">Remaining Sessions</property> 
 </properties>

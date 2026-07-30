@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
- <properties beanname="dataSearcher" allowdynamicfields="true">
-  
-    <property id="id" index="true" stored="true" keyword="true" internalfield="true" filter="false" editable="false" sortable="true">ID 
-    <name>   
-      <language id="en"><![CDATA[sdl_id]]></language> 
+<properties beanname="dataSearcher" allowdynamicfields="true"> 
+  <property id="id" index="true" stored="true" keyword="true" internalfield="true" filter="false" editable="false" sortable="true">ID 
+    <name> 
+      <language id="en"><![CDATA[sdl_id]]></language>  
+      <language id="de"><![CDATA[SDL_ID]]></language>
+      <language id="fr"><![CDATA[ID SDL]]></language>
+      <language id="es"><![CDATA[ID]]></language>
     </name> 
-    </property>
-
-    <property id="name" index="true" stored="true" editable="true" keyword="true">
-	  <name>
-	    <language id="en" > <![CDATA[Name]]> </language>
-	  </name>
-	</property>
-	
-	<property id="entitysourcetype" index="true" stored="true" type="list" listid="module"  editable="true" keyword="true" filter="true">
-	  <name>
-	    <language id="en" > <![CDATA[Entity Source Type]]> </language>
-	  </name>
-	</property>
-
-
-  <property id="description" defaultoperation="freeform" index="true"   stored="true"  editable="false" sortable="true">All Fields 
+  </property>  
+  <property id="name" index="true" stored="true" editable="true" keyword="true"> 
+    <name> 
+      <language id="en"> <![CDATA[Name]]> </language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+    </name> 
+  </property>  
+  <property id="entitysourcetype" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+    <name> 
+      <language id="en"> <![CDATA[Entity Source Type]]> </language>  
+      <language id="de"><![CDATA[Entitätsquellentyp]]></language>
+      <language id="fr"><![CDATA[Type de source d'entité]]></language>
+      <language id="es"><![CDATA[Tipo de entidad de origen]]></language>
+    </name> 
+  </property>  
+  <property id="description" defaultoperation="freeform" index="true" stored="true" editable="false" sortable="true">All Fields 
     <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  
       <language id="es"><![CDATA[Todos]]></language>  
       <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
-  </property> 
-  
-   <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" 
-  		editable="true" filter="true"   sortable="true">Tags 
+  </property>  
+  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true" sortable="true">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
@@ -39,33 +41,37 @@
       <language id="fr"><![CDATA[Tags]]></language> 
     </name> 
   </property>  
-  
-  <property id="primaryimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" 
-  	datatype="list" sourcepath="/uploads/${data.collectiveid}/products/${formattedyear}/${shortguid}">
-   	<name>
-   		<language id="en"><![CDATA[Primary Media]]></language>
-   	</name>
-   </property>
-  
-    <property id="entity_date" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date" filter="false">  <!-- not really a filter -->
-	  <name>
-	    <language id="en" > <![CDATA[Date]]> </language>
-	  </name>
-	</property>
-
-	<property id="hasfulltext" index="true" stored="true" type="boolean" >
-	 <name>
-	 <language id="en" > <![CDATA[Has Text]]> </language>
-	 </name>
-	</property>
-	
-	<property id="longcaption" keyword="true" index="true" editable="true" stored="true"  sortable="true"> 
+  <property id="primaryimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="/uploads/${data.collectiveid}/products/${formattedyear}/${shortguid}"> 
+    <name> 
+      <language id="en"><![CDATA[Primary Media]]></language>  
+      <language id="de"><![CDATA[Primärmedien]]></language>
+      <language id="fr"><![CDATA[Médias primaires]]></language>
+      <language id="es"><![CDATA[Medios principales]]></language>
+    </name> 
+  </property>  
+  <property id="entity_date" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date" filter="false"> 
+    <!-- not really a filter -->  
+    <name> 
+      <language id="en"> <![CDATA[Date]]> </language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
+    </name> 
+  </property>  
+  <property id="hasfulltext" index="true" stored="true" type="boolean"> 
+    <name> 
+      <language id="en"> <![CDATA[Has Text]]> </language>  
+      <language id="de"><![CDATA[Hat Text]]></language>
+      <language id="fr"><![CDATA[Il y a du texte]]></language>
+      <language id="es"><![CDATA[Tiene texto]]></language>
+    </name> 
+  </property>  
+  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" sortable="true"> 
     <name> 
       <language id="de"><![CDATA[Description]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
       <language id="es"><![CDATA[descripción]]></language>  
       <language id="fr"><![CDATA[Description]]></language> 
     </name> 
-  </property>
-	
+  </property> 
 </properties>

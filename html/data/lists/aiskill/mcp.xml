@@ -1,9 +1,12 @@
-<results>
+<?xml version="1.0" encoding="UTF-8"?>
 
-   <data id="mcpclientagent" bean="mcpClientAgent" ordering="10" agenttype="remoteagent"             >
-      <name>
-         <language id="en"><![CDATA[MCP: General Client]]></language>
-      </name>
-   </data>
-
+<results> 
+  <data id="mcpclientagent" bean="mcpClientAgent" ordering="10" agenttype="remoteagent"> 
+    <name> 
+      <language id="en"><![CDATA[MCP: General Client]]></language>  
+      <language id="de"><![CDATA[MCP: General Customer]]></language>
+      <language id="fr"><![CDATA[CCP : Client général]]></language>
+      <language id="es"><![CDATA[MCP: Cliente general]]></language>
+    </name> 
+  </data> 
 </results>

@@ -1,15 +1,20 @@
-<properties>
+<?xml version="1.0" encoding="UTF-8"?>
 
-	<property id="downloading">
-		<name> 
+<properties> 
+  <property id="downloading"> 
+    <name> 
       <language id="en"><![CDATA[Downloading]]></language>  
-    </name>
-	</property>
-
-	<property id="uploading">
-		<name> 
+      <language id="es"><![CDATA[Descargar]]></language>  
+      <language id="de"><![CDATA[Herunterladen]]></language>
+      <language id="fr"><![CDATA[Téléchargement]]></language>
+    </name> 
+  </property>  
+  <property id="uploading"> 
+    <name> 
       <language id="en"><![CDATA[Uploading]]></language>  
-    </name>
-	</property>
-	
+      <language id="es"><![CDATA[Subida]]></language>  
+      <language id="de"><![CDATA[Hochladen]]></language>
+      <language id="fr"><![CDATA[Téléversement]]></language>
+    </name> 
+  </property> 
 </properties>

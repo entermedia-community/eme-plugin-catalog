@@ -1,50 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
-<property id="id" index="true" editable="true" stored="true" keyword="true"> 
+<properties> 
+  <property id="id" index="true" editable="true" stored="true" keyword="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[Nom d'usage]]></language>
+      <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-	<property id="name" index="true" stored="true" multilanguage="true" editable="true" keyword="true">
-	  <name>
-	    <language id="en" > <![CDATA[Name]]> </language>
-	  </name>
-	</property>
-  
-   <property id="description"  internalfield="true" defaultoperation="freeform" index="true"   stored="true"  editable="false">All Fields 
+  <property id="name" index="true" stored="true" multilanguage="true" editable="true" keyword="true"> 
+    <name> 
+      <language id="en"> <![CDATA[Name]]> </language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+    </name> 
+  </property>  
+  <property id="description" internalfield="true" defaultoperation="freeform" index="true" stored="true" editable="false">All Fields 
     <name> 
       <language id="en"><![CDATA[All Fields]]></language>  
+      <language id="de"><![CDATA[Alle Felder]]></language>
+      <language id="fr"><![CDATA[Tous les champs]]></language>
+      <language id="es"><![CDATA[Todos los campos]]></language>
     </name> 
-  </property> 
-  
-    <property id="lightboxicon" editable="true" index="true" stored="true" > 
+  </property>  
+  <property id="lightboxicon" editable="true" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Icon]]></language>  
+      <language id="de"><![CDATA[Symbol]]></language>
+      <language id="fr"><![CDATA[Icône]]></language>
+      <language id="es"><![CDATA[Icono]]></language>
+    </name> 
+  </property>  
+  <property id="ordering" type="number" autoincrement="false" editable="true" index="true" stored="true">Ordering 
+    <name> 
+      <language id="de"><![CDATA[Bestellung]]></language>  
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="es"><![CDATA[Ordenando]]></language>  
+      <language id="fr"><![CDATA[Commande]]></language> 
+    </name> 
+  </property>  
+  <property id="showonall" index="true" editable="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Show on All Modules]]></language>  
+      <language id="de"><![CDATA[Alle Module anzeigen]]></language>
+      <language id="fr"><![CDATA[Afficher sur tous les modules]]></language>
+      <language id="es"><![CDATA[Mostrar en todos los módulos]]></language>
+    </name> 
+  </property>  
+  <property id="parentmoduleid" index="true" editable="true" listid="module" viewtype="multiselect" rendertype="multiselect" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Show on Selected Modules]]></language>  
+      <language id="de"><![CDATA[Anzeigen für ausgewählte Module]]></language>
+      <language id="fr"><![CDATA[Afficher sur les modules sélectionnés]]></language>
+      <language id="es"><![CDATA[Mostrar en los módulos seleccionados]]></language>
     </name> 
   </property> 
-
-  <property id="ordering" type="number" autoincrement="false" editable="true" index="true" stored="true">Ordering
-    <name>
-      <language id="de"><![CDATA[Bestellung]]></language>
-      <language id="en"><![CDATA[Ordering]]></language>
-      <language id="es"><![CDATA[Ordenando]]></language>
-      <language id="fr"><![CDATA[Commande]]></language>
-    </name>
-  </property>
-
-  <property id="showonall" index="true" editable="true"   datatype="boolean"   >
-    <name> 
-      <language id="en"><![CDATA[Show on All Modules]]></language> 
-    </name> 
-  </property>
-  
-  <property id="parentmoduleid" index="true" editable="true"  listid="module" viewtype="multiselect" rendertype="multiselect"   datatype="list"   >
-    <name> 
-      <language id="en"><![CDATA[Show on Selected Modules]]></language> 
-    </name> 
-  </property>
-
- 
-  
 </properties>

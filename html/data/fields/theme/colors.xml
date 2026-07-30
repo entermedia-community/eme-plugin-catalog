@@ -1,264 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties>
-  <property id="body-bg" index="true" editable="true" viewtype="color" note="General background color">
-    <name>
-      <language id="en"><![CDATA[Sidebar Background]]></language>
-    </name>
-  </property>
-
-  <property id="sidebar" index="true" editable="true" viewtype="color" note="Background color of the leftmost toolbar">
-    <name>
-      <language id="en"><![CDATA[Sidebar Background]]></language>
-    </name>
-  </property>
-
-  <property id="sidebar-text" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Sidebar Text]]></language>
-    </name>
-  </property>
-
-  <property id="navbar-primary" index="true" editable="true" viewtype="color" note="Top header background color">
-    <name>
-      <language id="en"><![CDATA[Header Background]]></language>
-    </name>
-  </property>
-
-  <property id="navbar-secondary" index="true" editable="true" viewtype="color" note="Navigation tab background color (right above the folder list)">
-    <name>
-      <language id="en"><![CDATA[Navigation Background]]></language>
-    </name>
-  </property>
-
-  <property id="navbar-primary-text" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Navigation Primary Text]]></language>
-    </name>
-  </property>
-
-  <property id="navbar-primary-text-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Navigation Primary Text Hover]]></language>
-    </name>
-  </property>
-  <property id="navbar-secondary-text" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Navigation Secondary Text]]></language>
-    </name>
-  </property>
-
-  <property id="nav-btn" index="true" editable="true" viewtype="color" note="Colors of the button at the header (e.g. Upload to)">
-    <name>
-      <language id="en"><![CDATA[Navigation Button]]></language>
-    </name>
-  </property>
-
-  <property id="nav-btn-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Navigation Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="nav-btn-text" index="true" editable="true" viewtype="color" note="Navigation button text color">
-    <name>
-      <language id="en"><![CDATA[Navigation Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="nav-btn-active" index="true" editable="true" viewtype="color" note="Colors of the active button at the header (e.g. Upload to)">
-    <name>
-      <language id="en"><![CDATA[Active Navigation Button]]></language>
-    </name>
-  </property>
-
-  <property id="nav-btn-active-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Active Navigation Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="nav-btn-active-text" index="true" editable="true" viewtype="color" note="Active navigation button text color">
-    <name>
-      <language id="en"><![CDATA[Active Navigation Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="tab-bar" index="true" editable="true" viewtype="color" note="Background color of tab navigation bar">
-    <name>
-      <language id="en"><![CDATA[Tabbar Background]]></language>
-    </name>
-  </property>
-
-  <property id="tab-btn" index="true" editable="true" viewtype="color" note="Tab button background color">
-    <name>
-      <language id="en"><![CDATA[Tab Button]]></language>
-    </name>
-  </property>
-  <property id="tab-btn-text" index="true" editable="true" viewtype="color" note="Tab button text color">
-    <name>
-      <language id="en"><![CDATA[Tab Button Text]]></language>
-    </name>
-  </property>
-  <property id="tab-btn-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Tab Button Hover]]></language>
-    </name>
-  </property>
-  <property id="tab-btn-hover-text" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Tab Button Hover Text]]></language>
-    </name>
-  </property>
-
-  <property id="tab-btn-active" index="true" editable="true" viewtype="color" note="Background color of active tab button">
-    <name>
-      <language id="en"><![CDATA[Active Tab Button]]></language>
-    </name>
-  </property>
-
-  <property id="tab-btn-active-text" index="true" editable="true" viewtype="color" note="Text color of active tab button">
-    <name>
-      <language id="en"><![CDATA[Active Tab Button text]]></language>
-    </name>
-  </property>
-
-  <property id="tab-btn-active-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Active Tab Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="btn" index="true" editable="true" viewtype="color" note="Colors of the primary buttons (e.g. form buttons)">
-    <name>
-      <language id="en"><![CDATA[Primary Button]]></language>
-    </name>
-  </property>
-
-  <property id="btn-text" index="true" editable="true" viewtype="color" note="Text color of the primary buttons">
-    <name>
-      <language id="en"><![CDATA[Primary Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="btn-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Primary Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="btn-sec" index="true" editable="true" viewtype="color" note="Colors of the secondary buttons (e.g. cancel buttons)">
-    <name>
-      <language id="en"><![CDATA[Secondary Button]]></language>
-    </name>
-  </property>
-
-  <property id="btn-sec-text" index="true" editable="true" viewtype="color" note="Text color of the secondary buttons">
-    <name>
-      <language id="en"><![CDATA[Secondary Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="btn-sec-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Secondary Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="btn-acc" index="true" editable="true" viewtype="color" note="Colors of the accent buttons (e.g. buttons at the top of entity dialog)">
-    <name>
-      <language id="en"><![CDATA[Accent Button]]></language>
-    </name>
-  </property>
-
-  <property id="btn-acc-text" index="true" editable="true" viewtype="color" note="Text color of the accent buttons">
-    <name>
-      <language id="en"><![CDATA[Accent Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="btn-acc-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Accent Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="btn-acc-active" index="true" editable="true" viewtype="color" note="Active color of the tabs/accent buttons on entity dialog">
-    <name>
-      <language id="en"><![CDATA[Active Accent Button]]></language>
-    </name>
-  </property>
-
-  <property id="btn-acc-active-text" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Active Accent Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="btn-call-to-action" index="true" editable="true" viewtype="color" note="Colors of the Call to Action buttons (e.g. form submit buttons)">
-    <name>
-      <language id="en"><![CDATA[CTA Button]]></language>
-    </name>
-  </property>
-
-  <property id="btn-call-to-action-text" index="true" editable="true" viewtype="color" note="Text color of the CTA buttons">
-    <name>
-      <language id="en"><![CDATA[CTA Button Text]]></language>
-    </name>
-  </property>
-
-  <property id="btn-call-to-action-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[CTA Button Hover]]></language>
-    </name>
-  </property>
-
-  <property id="th" index="true" editable="true" viewtype="color" note="Table header background color">
-    <name>
-      <language id="en"><![CDATA[Table Header Background]]></language>
-    </name>
-  </property>
-
-  <property id="th-hover" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Table Header Hover]]></language>
-    </name>
-  </property>
-
-  <property id="th-text" index="true" editable="true" viewtype="color" note="Table header text color">
-    <name>
-      <language id="en"><![CDATA[Table Header Text]]></language>
-    </name>
-  </property>
-
-  <property id="td" index="true" editable="true" viewtype="color" note="Table cell background color">
-    <name>
-      <language id="en"><![CDATA[Table Cell Background]]></language>
-    </name>
-  </property>
-
-  <property id="td-stripe" index="true" editable="true" viewtype="color" note="">
-    <name>
-      <language id="en"><![CDATA[Table Stripe]]></language>
-    </name>
-  </property>
-
-  <property id="td-text" index="true" editable="true" viewtype="color" note="Table cell text color">
-    <name>
-      <language id="en"><![CDATA[Table Cell Text]]></language>
-    </name>
-  </property>
-
-  <property id="footer" index="true" editable="true" viewtype="color" note="Footer background color">
-    <name>
-      <language id="en"><![CDATA[Footer Background]]></language>
-    </name>
-  </property>
-
-  <property id="footer-text" index="true" editable="true" viewtype="color" note="Footer text color">
-    <name>
-      <language id="en"><![CDATA[Footer Text]]></language>
-    </name>
-  </property>
-
+<properties> 
+  <property id="body-bg" index="true" editable="true" viewtype="color" note="General background color"> 
+    <name> 
+      <language id="en"><![CDATA[Sidebar Background]]></language>  
+      <language id="de"><![CDATA[Seitenleiste-Hintergrund]]></language>
+      <language id="fr"><![CDATA[Fond de la barre latérale]]></language>
+      <language id="es"><![CDATA[Fondo de la barra lateral]]></language>
+    </name> 
+  </property>  
+  <property id="sidebar" index="true" editable="true" viewtype="color" note="Background color of the leftmost toolbar"> 
+    <name> 
+      <language id="en"><![CDATA[Sidebar Background]]></language>  
+      <language id="de"><![CDATA[Seitenleiste-Hintergrund]]></language>
+      <language id="fr"><![CDATA[Fond de la barre latérale]]></language>
+      <language id="es"><![CDATA[Fondo de la barra lateral]]></language>
+    </name> 
+  </property>  
+  <property id="sidebar-text" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Sidebar Text]]></language>  
+      <language id="de"><![CDATA[Seitenleiste-Text]]></language>
+      <language id="fr"><![CDATA[Texte de la barre latérale]]></language>
+      <language id="es"><![CDATA[Texto de la barra lateral]]></language>
+    </name> 
+  </property>  
+  <property id="navbar-primary" index="true" editable="true" viewtype="color" note="Top header background color"> 
+    <name> 
+      <language id="en"><![CDATA[Header Background]]></language>  
+      <language id="de"><![CDATA[Header-Hintergrund]]></language>
+      <language id="fr"><![CDATA[Fond d'en-tête]]></language>
+      <language id="es"><![CDATA[Fondo del encabezado]]></language>
+    </name> 
+  </property>  
+  <property id="navbar-secondary" index="true" editable="true" viewtype="color" note="Navigation tab background color (right above the folder list)"> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Background]]></language>  
+      <language id="de"><![CDATA[Navigations-Hintergrund]]></language>
+      <language id="fr"><![CDATA[Fond de navigation]]></language>
+      <language id="es"><![CDATA[Antecedentes de la navegación]]></language>
+    </name> 
+  </property>  
+  <property id="navbar-primary-text" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Primary Text]]></language>  
+      <language id="de"><![CDATA[Navigation Primärtext]]></language>
+      <language id="fr"><![CDATA[Navigation Texte principal]]></language>
+      <language id="es"><![CDATA[Navegación Texto principal]]></language>
+    </name> 
+  </property>  
+  <property id="navbar-primary-text-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Primary Text Hover]]></language>  
+      <language id="de"><![CDATA[Navigation Primärtext-Hover]]></language>
+      <language id="fr"><![CDATA[Navigation Texte principal au survol]]></language>
+      <language id="es"><![CDATA[Navegación Texto primario al pasar el cursor]]></language>
+    </name> 
+  </property>  
+  <property id="navbar-secondary-text" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Secondary Text]]></language>  
+      <language id="de"><![CDATA[Navigation Sekundärtext]]></language>
+      <language id="fr"><![CDATA[Navigation Texte secondaire]]></language>
+      <language id="es"><![CDATA[Texto secundario de navegación]]></language>
+    </name> 
+  </property>  
+  <property id="nav-btn" index="true" editable="true" viewtype="color" note="Colors of the button at the header (e.g. Upload to)"> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Button]]></language>  
+      <language id="de"><![CDATA[Navigationsknopf]]></language>
+      <language id="fr"><![CDATA[Bouton de navigation]]></language>
+      <language id="es"><![CDATA[Botón de navegación]]></language>
+    </name> 
+  </property>  
+  <property id="nav-btn-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Button Hover]]></language>  
+      <language id="de"><![CDATA[Navigationsschaltfläche]]></language>
+      <language id="fr"><![CDATA[Effet de survol du bouton de navigation]]></language>
+      <language id="es"><![CDATA[Efecto al pasar el ratón por encima del botón de navegación]]></language>
+    </name> 
+  </property>  
+  <property id="nav-btn-text" index="true" editable="true" viewtype="color" note="Navigation button text color"> 
+    <name> 
+      <language id="en"><![CDATA[Navigation Button Text]]></language>  
+      <language id="de"><![CDATA[Navigationsknopf]]></language>
+      <language id="fr"><![CDATA[Texte du bouton de navigation]]></language>
+      <language id="es"><![CDATA[Texto del botón de navegación]]></language>
+    </name> 
+  </property>  
+  <property id="nav-btn-active" index="true" editable="true" viewtype="color" note="Colors of the active button at the header (e.g. Upload to)"> 
+    <name> 
+      <language id="en"><![CDATA[Active Navigation Button]]></language>  
+      <language id="de"><![CDATA[Aktiver Navigationsbutton]]></language>
+      <language id="fr"><![CDATA[Bouton de navigation actif]]></language>
+      <language id="es"><![CDATA[Botón de navegación activo]]></language>
+    </name> 
+  </property>  
+  <property id="nav-btn-active-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Active Navigation Button Hover]]></language>  
+      <language id="de"><![CDATA[Aktive Navigations-Schaltfläche beim Überfahren mit der Maus]]></language>
+      <language id="fr"><![CDATA[Effet de survol du bouton de navigation actif]]></language>
+      <language id="es"><![CDATA[Botón de navegación activo al pasar el cursor]]></language>
+    </name> 
+  </property>  
+  <property id="nav-btn-active-text" index="true" editable="true" viewtype="color" note="Active navigation button text color"> 
+    <name> 
+      <language id="en"><![CDATA[Active Navigation Button Text]]></language>  
+      <language id="de"><![CDATA[Text der aktiven Navigations Taste]]></language>
+      <language id="fr"><![CDATA[Texte du bouton de navigation actif]]></language>
+      <language id="es"><![CDATA[Texto del botón de navegación activa]]></language>
+    </name> 
+  </property>  
+  <property id="tab-bar" index="true" editable="true" viewtype="color" note="Background color of tab navigation bar"> 
+    <name> 
+      <language id="en"><![CDATA[Tabbar Background]]></language>  
+      <language id="de"><![CDATA[Tabbar-Hintergrund]]></language>
+      <language id="fr"><![CDATA[Fond de Tabbar]]></language>
+      <language id="es"><![CDATA[Fondo de Tabbar]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn" index="true" editable="true" viewtype="color" note="Tab button background color"> 
+    <name> 
+      <language id="en"><![CDATA[Tab Button]]></language>  
+      <language id="de"><![CDATA[Tab-Taste]]></language>
+      <language id="fr"><![CDATA[Bouton d'onglet]]></language>
+      <language id="es"><![CDATA[Botón de pestaña]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn-text" index="true" editable="true" viewtype="color" note="Tab button text color"> 
+    <name> 
+      <language id="en"><![CDATA[Tab Button Text]]></language>  
+      <language id="de"><![CDATA[Tab-Button-Text]]></language>
+      <language id="fr"><![CDATA[Texte du bouton d'onglet]]></language>
+      <language id="es"><![CDATA[Texto del botón de pestaña]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Tab Button Hover]]></language>  
+      <language id="de"><![CDATA[Tab-Button-Hover]]></language>
+      <language id="fr"><![CDATA[Effet de survol du bouton Tab]]></language>
+      <language id="es"><![CDATA[Efecto al pasar el ratón por encima del botón de pestaña]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn-hover-text" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Tab Button Hover Text]]></language>  
+      <language id="de"><![CDATA[Tab-Button-Hover-Text]]></language>
+      <language id="fr"><![CDATA[Texte au survol du bouton d'onglet]]></language>
+      <language id="es"><![CDATA[Texto al pasar el ratón por encima del botón de pestaña]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn-active" index="true" editable="true" viewtype="color" note="Background color of active tab button"> 
+    <name> 
+      <language id="en"><![CDATA[Active Tab Button]]></language>  
+      <language id="de"><![CDATA[Aktiver Tab-Button]]></language>
+      <language id="fr"><![CDATA[Bouton d'onglet actif]]></language>
+      <language id="es"><![CDATA[Botón de pestaña activa]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn-active-text" index="true" editable="true" viewtype="color" note="Text color of active tab button"> 
+    <name> 
+      <language id="en"><![CDATA[Active Tab Button text]]></language>  
+      <language id="de"><![CDATA[Text des aktiven Tab-Buttons]]></language>
+      <language id="fr"><![CDATA[Texte du bouton d'onglet actif]]></language>
+      <language id="es"><![CDATA[Texto del botón de pestaña activa]]></language>
+    </name> 
+  </property>  
+  <property id="tab-btn-active-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Active Tab Button Hover]]></language>  
+      <language id="de"><![CDATA[Aktiver Tab-Button beim Überfahren mit der Maus]]></language>
+      <language id="fr"><![CDATA[Bouton d'onglet actif au survol]]></language>
+      <language id="es"><![CDATA[Pestaña activa: efecto al pasar el cursor]]></language>
+    </name> 
+  </property>  
+  <property id="btn" index="true" editable="true" viewtype="color" note="Colors of the primary buttons (e.g. form buttons)"> 
+    <name> 
+      <language id="en"><![CDATA[Primary Button]]></language>  
+      <language id="de"><![CDATA[Primärknopf]]></language>
+      <language id="fr"><![CDATA[Bouton principal]]></language>
+      <language id="es"><![CDATA[Botón primario]]></language>
+    </name> 
+  </property>  
+  <property id="btn-text" index="true" editable="true" viewtype="color" note="Text color of the primary buttons"> 
+    <name> 
+      <language id="en"><![CDATA[Primary Button Text]]></language>  
+      <language id="de"><![CDATA[Primärknopf-Text]]></language>
+      <language id="fr"><![CDATA[Texte du bouton principal]]></language>
+      <language id="es"><![CDATA[Texto del botón principal]]></language>
+    </name> 
+  </property>  
+  <property id="btn-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Primary Button Hover]]></language>  
+      <language id="de"><![CDATA[Primär-Button-Hover]]></language>
+      <language id="fr"><![CDATA[Souris sur le bouton principal]]></language>
+      <language id="es"><![CDATA[Efecto al pasar el ratón por encima del botón primario]]></language>
+    </name> 
+  </property>  
+  <property id="btn-sec" index="true" editable="true" viewtype="color" note="Colors of the secondary buttons (e.g. cancel buttons)"> 
+    <name> 
+      <language id="en"><![CDATA[Secondary Button]]></language>  
+      <language id="de"><![CDATA[Sekundärbutton]]></language>
+      <language id="fr"><![CDATA[Bouton secondaire]]></language>
+      <language id="es"><![CDATA[Botón secundario]]></language>
+    </name> 
+  </property>  
+  <property id="btn-sec-text" index="true" editable="true" viewtype="color" note="Text color of the secondary buttons"> 
+    <name> 
+      <language id="en"><![CDATA[Secondary Button Text]]></language>  
+      <language id="de"><![CDATA[Sekundär-Button-Text]]></language>
+      <language id="fr"><![CDATA[Texte du bouton secondaire]]></language>
+      <language id="es"><![CDATA[Texto del botón secundario]]></language>
+    </name> 
+  </property>  
+  <property id="btn-sec-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Secondary Button Hover]]></language>  
+      <language id="de"><![CDATA[Sekundärknopf-Hover]]></language>
+      <language id="fr"><![CDATA[Sous-menu secondaire]]></language>
+      <language id="es"><![CDATA[Botón secundario al pasar el cursor]]></language>
+    </name> 
+  </property>  
+  <property id="btn-acc" index="true" editable="true" viewtype="color" note="Colors of the accent buttons (e.g. buttons at the top of entity dialog)"> 
+    <name> 
+      <language id="en"><![CDATA[Accent Button]]></language>  
+      <language id="de"><![CDATA[Akzent-Taste]]></language>
+      <language id="fr"><![CDATA[Bouton Accent]]></language>
+      <language id="es"><![CDATA[Botón de Acento]]></language>
+    </name> 
+  </property>  
+  <property id="btn-acc-text" index="true" editable="true" viewtype="color" note="Text color of the accent buttons"> 
+    <name> 
+      <language id="en"><![CDATA[Accent Button Text]]></language>  
+      <language id="de"><![CDATA[Text für die Akzent-Taste]]></language>
+      <language id="fr"><![CDATA[Texte du bouton d'accent]]></language>
+      <language id="es"><![CDATA[Texto del botón de acento]]></language>
+    </name> 
+  </property>  
+  <property id="btn-acc-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Accent Button Hover]]></language>  
+      <language id="de"><![CDATA[Akzent-Button-Hover]]></language>
+      <language id="fr"><![CDATA[Effet de survol du bouton Accent]]></language>
+      <language id="es"><![CDATA[Efecto al pasar el cursor por el botón de acento]]></language>
+    </name> 
+  </property>  
+  <property id="btn-acc-active" index="true" editable="true" viewtype="color" note="Active color of the tabs/accent buttons on entity dialog"> 
+    <name> 
+      <language id="en"><![CDATA[Active Accent Button]]></language>  
+      <language id="de"><![CDATA[Aktiver Akzent-Button]]></language>
+      <language id="fr"><![CDATA[Bouton Accent actif]]></language>
+      <language id="es"><![CDATA[Botón de acento activo]]></language>
+    </name> 
+  </property>  
+  <property id="btn-acc-active-text" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Active Accent Button Text]]></language>  
+      <language id="de"><![CDATA[Aktiver Akzent-Button-Text]]></language>
+      <language id="fr"><![CDATA[Texte du bouton Accent actif]]></language>
+      <language id="es"><![CDATA[Texto del botón de acento activo]]></language>
+    </name> 
+  </property>  
+  <property id="btn-call-to-action" index="true" editable="true" viewtype="color" note="Colors of the Call to Action buttons (e.g. form submit buttons)"> 
+    <name> 
+      <language id="en"><![CDATA[CTA Button]]></language>  
+      <language id="de"><![CDATA[CTA-Button]]></language>
+      <language id="fr"><![CDATA[Bouton d'appel à l'action]]></language>
+      <language id="es"><![CDATA[Botón de llamada a la acción]]></language>
+    </name> 
+  </property>  
+  <property id="btn-call-to-action-text" index="true" editable="true" viewtype="color" note="Text color of the CTA buttons"> 
+    <name> 
+      <language id="en"><![CDATA[CTA Button Text]]></language>  
+      <language id="de"><![CDATA[Text der CTA-Schaltfläche]]></language>
+      <language id="fr"><![CDATA[Texte du bouton CTA]]></language>
+      <language id="es"><![CDATA[Texto del botón CTA]]></language>
+    </name> 
+  </property>  
+  <property id="btn-call-to-action-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[CTA Button Hover]]></language>  
+      <language id="de"><![CDATA[CTA-Button-Hover]]></language>
+      <language id="fr"><![CDATA[Effet de survol du bouton CTA]]></language>
+      <language id="es"><![CDATA[Efecto al pasar el ratón por encima del botón CTA]]></language>
+    </name> 
+  </property>  
+  <property id="th" index="true" editable="true" viewtype="color" note="Table header background color"> 
+    <name> 
+      <language id="en"><![CDATA[Table Header Background]]></language>  
+      <language id="de"><![CDATA[Hintergrundfarbe der Tabellenüberschrift]]></language>
+      <language id="fr"><![CDATA[Fond d'en-tête de tableau]]></language>
+      <language id="es"><![CDATA[Fondo del encabezado de la tabla]]></language>
+    </name> 
+  </property>  
+  <property id="th-hover" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Table Header Hover]]></language>  
+      <language id="de"><![CDATA[Tabellenüberschrift beim Überfahren mit der Maus]]></language>
+      <language id="fr"><![CDATA[Survoler l'en-tête de tableau]]></language>
+      <language id="es"><![CDATA[Pasar el cursor sobre el encabezado de la tabla]]></language>
+    </name> 
+  </property>  
+  <property id="th-text" index="true" editable="true" viewtype="color" note="Table header text color"> 
+    <name> 
+      <language id="en"><![CDATA[Table Header Text]]></language>  
+      <language id="de"><![CDATA[Tabellenüberschrift]]></language>
+      <language id="fr"><![CDATA[Texte d'en-tête du tableau]]></language>
+      <language id="es"><![CDATA[Texto del encabezado de la tabla]]></language>
+    </name> 
+  </property>  
+  <property id="td" index="true" editable="true" viewtype="color" note="Table cell background color"> 
+    <name> 
+      <language id="en"><![CDATA[Table Cell Background]]></language>  
+      <language id="de"><![CDATA[Hintergrundfarbe der Tabellenzelle]]></language>
+      <language id="fr"><![CDATA[Fond de cellule de tableau]]></language>
+      <language id="es"><![CDATA[Fondo de celda de tabla]]></language>
+    </name> 
+  </property>  
+  <property id="td-stripe" index="true" editable="true" viewtype="color" note=""> 
+    <name> 
+      <language id="en"><![CDATA[Table Stripe]]></language>  
+      <language id="de"><![CDATA[Tischstreifen]]></language>
+      <language id="fr"><![CDATA[Rayures de table]]></language>
+      <language id="es"><![CDATA[Tabla rayada]]></language>
+    </name> 
+  </property>  
+  <property id="td-text" index="true" editable="true" viewtype="color" note="Table cell text color"> 
+    <name> 
+      <language id="en"><![CDATA[Table Cell Text]]></language>  
+      <language id="de"><![CDATA[Tabellenzellentext]]></language>
+      <language id="fr"><![CDATA[Texte de la cellule de tableau]]></language>
+      <language id="es"><![CDATA[Texto de la celda de la tabla]]></language>
+    </name> 
+  </property>  
+  <property id="footer" index="true" editable="true" viewtype="color" note="Footer background color"> 
+    <name> 
+      <language id="en"><![CDATA[Footer Background]]></language>  
+      <language id="de"><![CDATA[Fußzeilhintergrund]]></language>
+      <language id="fr"><![CDATA[Fond de pied de page]]></language>
+      <language id="es"><![CDATA[Fondo del pie de página]]></language>
+    </name> 
+  </property>  
+  <property id="footer-text" index="true" editable="true" viewtype="color" note="Footer text color"> 
+    <name> 
+      <language id="en"><![CDATA[Footer Text]]></language>  
+      <language id="de"><![CDATA[Fußzeilentext]]></language>
+      <language id="fr"><![CDATA[Texte du pied de page]]></language>
+      <language id="es"><![CDATA[Texto del pie de página]]></language>
+    </name> 
+  </property> 
 </properties>

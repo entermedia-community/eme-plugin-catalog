@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">  
-  <property id="id" index="true" stored="true" editable="false" > 
+<properties beanname="dataSearcher"> 
+  <property id="id" index="true" stored="true" editable="false"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,24 +9,28 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="date" datatype="date" editable="true" index="true" stored="true"  type="date"> 
+  <property id="date" datatype="date" editable="true" index="true" stored="true" type="date"> 
     <name> 
       <language id="en"><![CDATA[Date]]></language>  
+      <language id="de"><![CDATA[Datum]]></language>
+      <language id="fr"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="savenotes" editable="true" list="false" index="true" stored="true" > 
+  <property id="savenotes" editable="true" list="false" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Notes]]></language>  
+      <language id="de"><![CDATA[Anmerkungen]]></language>
+      <language id="fr"><![CDATA[Notes]]></language>
+      <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
-    <property id="notes" index="true" deleted="false" editable="true" stored="true">New
-    <name>
-      <language id="de"><![CDATA[Notizen]]></language>
-      <language id="en"><![CDATA[Notes]]></language>
-      <language id="es"><![CDATA[notas]]></language>
-      <language id="fr"><![CDATA[Remarques]]></language>
-    </name>
-  </property>
-  
-  
+  <property id="notes" index="true" deleted="false" editable="true" stored="true">New 
+    <name> 
+      <language id="de"><![CDATA[Notizen]]></language>  
+      <language id="en"><![CDATA[Notes]]></language>  
+      <language id="es"><![CDATA[notas]]></language>  
+      <language id="fr"><![CDATA[Remarques]]></language> 
+    </name> 
+  </property> 
 </properties>

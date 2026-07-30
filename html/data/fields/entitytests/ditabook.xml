@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-
- <property id="ordering" index="true" deleted="false" editable="true" stored="true" datatype="number">New 
+  <property id="ordering" index="true" deleted="false" editable="true" stored="true" datatype="number">New 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -12,76 +11,98 @@
   </property>  
   <property id="lastprompt" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[lastprompt]]></language> 
+      <language id="en"><![CDATA[lastprompt]]></language>  
+      <language id="de"><![CDATA[letzte Aufforderung]]></language>
+      <language id="fr"><![CDATA[le dernier prompt]]></language>
+      <language id="es"><![CDATA[último prompt]]></language>
     </name> 
   </property>  
- 
-
- <property id="ditatemplate" type="list" listid="ditatemplate" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Chapter Template]]></language>
-    </name>
-  </property>
-
- <property id="ditaid" index="true" deleted="false" editable="true" stored="true">New
-    <name>
-      <language id="en"><![CDATA[ditaid]]></language>
-    </name>
-  </property>
-
+  <property id="ditatemplate" type="list" listid="ditatemplate" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Chapter Template]]></language>  
+      <language id="de"><![CDATA[Kapitelvorlage]]></language>
+      <language id="fr"><![CDATA[Modèle de chapitre]]></language>
+      <language id="es"><![CDATA[Plantilla de capítulo]]></language>
+    </name> 
+  </property>  
+  <property id="ditaid" index="true" deleted="false" editable="true" stored="true">New 
+    <name> 
+      <language id="en"><![CDATA[ditaid]]></language>  
+      <language id="de"><![CDATA[dita]]></language>
+      <language id="fr"><![CDATA[dit aidé]]></language>
+      <language id="es"><![CDATA[Ditaid]]></language>
+    </name> 
+  </property>  
   <property id="userbooklibrary" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Book Library]]></language> 
+      <language id="en"><![CDATA[Book Library]]></language>  
+      <language id="de"><![CDATA[Bibliothek]]></language>
+      <language id="fr"><![CDATA[Bibliothèque]]></language>
+      <language id="es"><![CDATA[Biblioteca]]></language>
     </name> 
   </property>  
-
   <property id="userauthor" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Authors]]></language> 
+      <language id="en"><![CDATA[Authors]]></language>  
+      <language id="de"><![CDATA[Autoren]]></language>
+      <language id="fr"><![CDATA[Auteurs]]></language>
+      <language id="es"><![CDATA[Autores]]></language>
     </name> 
   </property>  
-
   <property id="useraddressdetails" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Address]]></language> 
+      <language id="en"><![CDATA[Address]]></language>  
+      <language id="de"><![CDATA[Adresse]]></language>
+      <language id="fr"><![CDATA[Adresse]]></language>
+      <language id="es"><![CDATA[Dirección]]></language>
     </name> 
   </property>  
-
   <property id="userkeywords" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Book Keywords]]></language> 
+      <language id="en"><![CDATA[Book Keywords]]></language>  
+      <language id="de"><![CDATA[Schlüsselwörter]]></language>
+      <language id="fr"><![CDATA[Mots-clés du livre]]></language>
+      <language id="es"><![CDATA[Palabras clave del libro]]></language>
     </name> 
   </property>  
-
   <property id="userisbn" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[ISBD]]></language> 
+      <language id="en"><![CDATA[ISBD]]></language>  
+      <language id="de"><![CDATA[ISBD]]></language>
+      <language id="fr"><![CDATA[ISBD]]></language>
+      <language id="es"><![CDATA[ISBD]]></language>
     </name> 
   </property>  
-
   <property id="userbooknumber" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Book Number]]></language> 
+      <language id="en"><![CDATA[Book Number]]></language>  
+      <language id="de"><![CDATA[Buchnummer]]></language>
+      <language id="fr"><![CDATA[Numéro de livre]]></language>
+      <language id="es"><![CDATA[Número de libro]]></language>
     </name> 
   </property>  
-
   <property id="userorganization" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Organization]]></language> 
+      <language id="en"><![CDATA[Organization]]></language>  
+      <language id="de"><![CDATA[Organisation]]></language>
+      <language id="fr"><![CDATA[Organisation]]></language>
+      <language id="es"><![CDATA[La organización]]></language>
     </name> 
   </property>  
-
   <property id="usercopyrightyear" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Copyright Year]]></language> 
+      <language id="en"><![CDATA[Copyright Year]]></language>  
+      <language id="de"><![CDATA[Copyright-Jahr]]></language>
+      <language id="fr"><![CDATA[Année de copyright]]></language>
+      <language id="es"><![CDATA[Año de copyright]]></language>
     </name> 
   </property>  
- 
   <property id="usercopyrightorganization" index="true" deleted="false" editable="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Copyright Organization]]></language> 
+      <language id="en"><![CDATA[Copyright Organization]]></language>  
+      <language id="de"><![CDATA[Urheberrechtsorganisation]]></language>
+      <language id="fr"><![CDATA[Organisation des droits d'auteur]]></language>
+      <language id="es"><![CDATA[Organismo de derechos de autor]]></language>
     </name> 
-  </property>  
-
-
+  </property> 
 </properties>

@@ -1,54 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher">
-
-  <property id="id" internalfield="true" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Id]]></language>
-    </name>
-  </property>
-
-  <property id="name" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Name]]></language>
-    </name>
-  </property>
-
-  <property id="prompt" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Prompt]]></language>
-    </name>
-  </property>
-
-  <property id="featured" editable="true" index="true" stored="true" type="boolean">
-    <name>
-      <language id="en"><![CDATA[Featured]]></language>
-    </name>
-  </property>
-
-  <property id="aifunction" editable="true" index="true" type="list" stored="true">
-    <name>
-      <language id="en"><![CDATA[AI Function]]></language>
-    </name>
-  </property>
-
-  <property id="aigenerated" editable="true" index="true" stored="true" type="boolean">
-    <name>
-      <language id="en"><![CDATA[AI Generated]]></language>
-    </name>
-  </property>
-  
- <property id="entityid" index="true" editable="true" stored="true" indextype="not_analyzed">
-    <name>
-      <language id="en"><![CDATA[Entity Id]]></language>
-    </name>
-  </property>
-
-  <property id="entitymoduleid" index="true" editable="true" isbadge="false" required="false" multilanguage="false" deleted="false" datatype="list" stored="true" listid="module">
-    <name>
-      <language id="en"><![CDATA[Module]]></language>
-    </name>
-  </property>
-
-
+<properties beanname="folderSearcher"> 
+  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="de"><![CDATA[ID]]></language>
+      <language id="fr"><![CDATA[Nom d'usage]]></language>
+      <language id="es"><![CDATA[Identificación]]></language>
+    </name> 
+  </property>  
+  <property id="name" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="de"><![CDATA[Name]]></language>
+      <language id="fr"><![CDATA[Nom]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+    </name> 
+  </property>  
+  <property id="prompt" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Prompt]]></language>  
+      <language id="de"><![CDATA[Sofort.]]></language>
+      <language id="fr"><![CDATA[Tout de suite.]]></language>
+      <language id="es"><![CDATA[Ahora mismo.]]></language>
+    </name> 
+  </property>  
+  <property id="featured" editable="true" index="true" stored="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Featured]]></language>  
+      <language id="de"><![CDATA[Hervorgehoben]]></language>
+      <language id="fr"><![CDATA[Mis en avant]]></language>
+      <language id="es"><![CDATA[Destacado]]></language>
+    </name> 
+  </property>  
+  <property id="aifunction" editable="true" index="true" type="list" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[AI Function]]></language>  
+      <language id="de"><![CDATA[KI-Funktion]]></language>
+      <language id="fr"><![CDATA[Fonction IA]]></language>
+      <language id="es"><![CDATA[Función de IA]]></language>
+    </name> 
+  </property>  
+  <property id="aigenerated" editable="true" index="true" stored="true" type="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[AI Generated]]></language>  
+      <language id="de"><![CDATA[Künstlich Intelligenz erzeugt]]></language>
+      <language id="fr"><![CDATA[Généré par l'IA]]></language>
+      <language id="es"><![CDATA[Generación de IA]]></language>
+    </name> 
+  </property>  
+  <property id="entityid" index="true" editable="true" stored="true" indextype="not_analyzed"> 
+    <name> 
+      <language id="en"><![CDATA[Entity Id]]></language>  
+      <language id="de"><![CDATA[Entity-ID]]></language>
+      <language id="fr"><![CDATA[Identifiant de l'entité]]></language>
+      <language id="es"><![CDATA[ID de la entidad]]></language>
+    </name> 
+  </property>  
+  <property id="entitymoduleid" index="true" editable="true" isbadge="false" required="false" multilanguage="false" deleted="false" datatype="list" stored="true" listid="module"> 
+    <name> 
+      <language id="en"><![CDATA[Module]]></language>  
+      <language id="de"><![CDATA[Modul]]></language>
+      <language id="fr"><![CDATA[Module]]></language>
+      <language id="es"><![CDATA[Módulo]]></language>
+    </name> 
+  </property> 
 </properties>

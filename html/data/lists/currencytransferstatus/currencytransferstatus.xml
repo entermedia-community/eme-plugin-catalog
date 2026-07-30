@@ -3,20 +3,26 @@
 <root> 
   <data id="1"> 
     <name> 
-      <language id="en"><![CDATA[Pending]]></language> 
+      <language id="en"><![CDATA[Pending]]></language>  
+      <language id="de"><![CDATA[Ausstehend]]></language>
+      <language id="fr"><![CDATA[En attente]]></language>
+      <language id="es"><![CDATA[Pendiente]]></language>
     </name> 
-  </data>   
-     
+  </data>  
   <data id="2"> 
     <name> 
-      <language id="en"><![CDATA[Complete]]></language> 
+      <language id="en"><![CDATA[Complete]]></language>  
+      <language id="de"><![CDATA[Vollständig]]></language>
+      <language id="fr"><![CDATA[Complet]]></language>
+      <language id="es"><![CDATA[Completo]]></language>
     </name> 
-  </data>   
-
+  </data>  
   <data id="cancel"> 
     <name> 
-      <language id="en"><![CDATA[Canceled]]></language> 
+      <language id="en"><![CDATA[Canceled]]></language>  
+      <language id="de"><![CDATA[Abgesagt]]></language>
+      <language id="fr"><![CDATA[Annulé]]></language>
+      <language id="es"><![CDATA[Cancelado]]></language>
     </name> 
-  </data>   
-     
+  </data> 
 </root>

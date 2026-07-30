@@ -1,17 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <properties> 
-	<property id="1">
-		<name> 
-	      <language id="en"><![CDATA[Make Collection Public (View Only)]]></language>  
-	    </name>
-    </property>
-	<property id="2">
-		<name> 
-	      <language id="en"><![CDATA[Make Collection Public (+Add Media)]]></language>  
-	    </name>
-	</property>	
-	<property id="3">
-		<name> 
-	      <language id="en"><![CDATA[Make Collection Private (Editors Only)]]></language>  
-	    </name>
-	</property>			
-</properties>	
+  <property id="1"> 
+    <name> 
+      <language id="en"><![CDATA[Make Collection Public (View Only)]]></language>  
+      <language id="de"><![CDATA[Sammlung öffentlich machen (Nur zum Anzeigen)]]></language>
+      <language id="fr"><![CDATA[Rendre la collecte publique (Lecture seule)]]></language>
+      <language id="es"><![CDATA[Hacer pública la colección (solo lectura)]]></language>
+    </name> 
+  </property>  
+  <property id="2"> 
+    <name> 
+      <language id="en"><![CDATA[Make Collection Public (+Add Media)]]></language>  
+      <language id="de"><![CDATA[Sammlung öffentlich machen (+Medien hinzufügen)]]></language>
+      <language id="fr"><![CDATA[Rendre la collection publique (+ Ajouter des médias)]]></language>
+      <language id="es"><![CDATA[Hacer pública la colección (+Añadir medios)]]></language>
+    </name> 
+  </property>  
+  <property id="3"> 
+    <name> 
+      <language id="en"><![CDATA[Make Collection Private (Editors Only)]]></language>  
+      <language id="de"><![CDATA[Sammlung auf Privat umstellen (nur für Redakteure)]]></language>
+      <language id="fr"><![CDATA[Rendre la collection privée (uniquement pour les éditeurs)]]></language>
+      <language id="es"><![CDATA[Hacer que la colección sea privada (solo para editores)]]></language>
+    </name> 
+  </property> 
+</properties>

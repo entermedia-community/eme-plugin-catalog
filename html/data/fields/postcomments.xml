@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher" class="postComment">
- 
-  <property id="id" index="true" internalfield="true" editable="true" stored="true" >New
-    <name>
-      <language id="de"><![CDATA[Id]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Id]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
-  <property id="date" index="true" datatype="date"  stored="true" >New 
+<properties beanname="dataSearcher" class="postComment"> 
+  <property id="id" index="true" internalfield="true" editable="true" stored="true">New 
+    <name> 
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
+  <property id="date" index="true" datatype="date" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -20,10 +19,13 @@
   </property>  
   <property id="commenttext" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[commenttext]]></language> 
+      <language id="en"><![CDATA[commenttext]]></language>  
+      <language id="de"><![CDATA[Kommentartext]]></language>
+      <language id="fr"><![CDATA[texte de commentaire]]></language>
+      <language id="es"><![CDATA[texto de comentario]]></language>
     </name> 
   </property>  
-  <property id="userid" index="true" datatype="text"  stored="true" > 
+  <property id="userid" index="true" datatype="text" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Author]]></language>  
       <language id="en"><![CDATA[Author]]></language>  
@@ -33,7 +35,10 @@
   </property>  
   <property id="useruploadid" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[goaltaskid]]></language> 
+      <language id="en"><![CDATA[goaltaskid]]></language>  
+      <language id="de"><![CDATA[Zielverfolgung]]></language>
+      <language id="fr"><![CDATA[Goaltaskid]]></language>
+      <language id="es"><![CDATA[goaltaskid]]></language>
     </name> 
-  </property>  
+  </property> 
 </properties>

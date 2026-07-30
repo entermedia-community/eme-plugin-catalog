@@ -1,12 +1,20 @@
-<properties>
-	<property id="assetid">Asset
-		<name>
-			<language id="en"><![CDATA[Asset]]></language>
-		</name>
-	</property>
-	<property id="content">Caption
-		<name>
-			<language id="en"><![CDATA[Caption]]></language>
-		</name>
-	</property>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+  <property id="assetid">Asset 
+    <name> 
+      <language id="en"><![CDATA[Asset]]></language>  
+      <language id="de"><![CDATA[Vermögen]]></language>
+      <language id="fr"><![CDATA[Actif]]></language>
+      <language id="es"><![CDATA[Activo]]></language>
+    </name> 
+  </property>  
+  <property id="content">Caption 
+    <name> 
+      <language id="en"><![CDATA[Caption]]></language>  
+      <language id="de"><![CDATA[Untertitel]]></language>
+      <language id="fr"><![CDATA[Légende]]></language>
+      <language id="es"><![CDATA[Pie de foto]]></language>
+    </name> 
+  </property> 
 </properties>

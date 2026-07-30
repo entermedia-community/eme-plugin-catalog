@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties > 
-  <property id="name">	
-  	<name>
-  	<language id="en"><![CDATA[Community Name]]></language>
-  	</name>
+<properties> 
+  <property id="name"> 
+    <name> 
+      <language id="en"><![CDATA[Community Name]]></language>  
+      <language id="de"><![CDATA[Gemeinschaftsname]]></language>
+      <language id="fr"><![CDATA[Nom de la communauté]]></language>
+      <language id="es"><![CDATA[Nombre de la comunidad]]></language>
+    </name> 
   </property>  
-  <property id="thumbnail" />  
-  <property id="viewusers" />  
-  <property id="communitysubdomain" />  
+  <property id="thumbnail"/>  
+  <property id="viewusers"/>  
+  <property id="communitysubdomain"/> 
 </properties>

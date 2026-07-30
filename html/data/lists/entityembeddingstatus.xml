@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
-
-  <data id="notembedded">
-    <name>
-      <language id="en"><![CDATA[Not Embedded]]></language>
-    </name>
-  </data>
-
-  <data id="pending">
-    <name>
-      <language id="en"><![CDATA[Pending]]></language>
-    </name>
-  </data>
-
-  <data id="embedded">
-    <name>
-      <language id="en"><![CDATA[Embedded]]></language>
-    </name>
-  </data>
-
-  <data id="failed">
-    <name>
-      <language id="en"><![CDATA[Failed]]></language>
-    </name>
-  </data>
-
+<root> 
+  <data id="notembedded"> 
+    <name> 
+      <language id="en"><![CDATA[Not Embedded]]></language>  
+      <language id="de"><![CDATA[Nicht eingebettet]]></language>
+      <language id="fr"><![CDATA[Non intégré]]></language>
+      <language id="es"><![CDATA[No integrado]]></language>
+    </name> 
+  </data>  
+  <data id="pending"> 
+    <name> 
+      <language id="en"><![CDATA[Pending]]></language>  
+      <language id="de"><![CDATA[Ausstehend]]></language>
+      <language id="fr"><![CDATA[En attente]]></language>
+      <language id="es"><![CDATA[Pendiente]]></language>
+    </name> 
+  </data>  
+  <data id="embedded"> 
+    <name> 
+      <language id="en"><![CDATA[Embedded]]></language>  
+      <language id="de"><![CDATA[Eingebettet]]></language>
+      <language id="fr"><![CDATA[Intégré]]></language>
+      <language id="es"><![CDATA[Incrustado]]></language>
+    </name> 
+  </data>  
+  <data id="failed"> 
+    <name> 
+      <language id="en"><![CDATA[Failed]]></language>  
+      <language id="de"><![CDATA[Fehlschlag]]></language>
+      <language id="fr"><![CDATA[Échec]]></language>
+      <language id="es"><![CDATA[Sin éxito.]]></language>
+    </name> 
+  </data> 
 </root>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"  >Id 
+  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true"  keyword="true" multilanguage="true" required="true"  > 
+  <property id="name" index="true" stored="true" editable="true" keyword="true" multilanguage="true" required="true"> 
     <name> 
       <language id="de"><![CDATA[Kollektion]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,12 +17,15 @@
       <language id="fr"><![CDATA[Collection]]></language> 
     </name> 
   </property>  
-  <property id="urlname" index="true" stored="true" editable="true" note="just the label My-Project"   > 
+  <property id="urlname" index="true" stored="true" editable="true" note="just the label My-Project"> 
     <name> 
       <language id="en"><![CDATA[Url Name]]></language>  
+      <language id="de"><![CDATA[URL-Name]]></language>
+      <language id="fr"><![CDATA[Nom de l'URL]]></language>
+      <language id="es"><![CDATA[Nombre de la URL]]></language>
     </name> 
   </property>  
-  <property id="description" defaultoperation="freeform" index="true"   stored="true"  editable="false" sortable="true">
+  <property id="description" defaultoperation="freeform" index="true" stored="true" editable="false" sortable="true"> 
     <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  
@@ -30,8 +33,7 @@
       <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
   </property>  
-  
-  <property id="creationdate" index="true" stored="true" editable="true"  type="date" datatype="date" >
+  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -39,7 +41,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="startdate" index="true" stored="true" editable="true"  type="date" viewtype="date"  datatype="date" >Start Date 
+  <property id="startdate" index="true" stored="true" editable="true" type="date" viewtype="date" datatype="date">Start Date 
     <name> 
       <language id="de"><![CDATA[Anfangsdatum]]></language>  
       <language id="en"><![CDATA[Start Date]]></language>  
@@ -47,7 +49,7 @@
       <language id="fr"><![CDATA[Date de début]]></language> 
     </name> 
   </property>  
-  <property id="deliverydate" index="true" stored="true" editable="true"  type="date" datatype="date" >Delivery Date 
+  <property id="deliverydate" index="true" stored="true" editable="true" type="date" datatype="date">Delivery Date 
     <name> 
       <language id="de"><![CDATA[Lieferdatum]]></language>  
       <language id="en"><![CDATA[Delivery Date]]></language>  
@@ -55,7 +57,7 @@
       <language id="fr"><![CDATA[Date de livraison]]></language> 
     </name> 
   </property>  
-  <property id="recorddate" index="true" stored="true" editable="true"  type="date" datatype="date" >Update Date 
+  <property id="recorddate" index="true" stored="true" editable="true" type="date" datatype="date">Update Date 
     <name> 
       <language id="de"><![CDATA[Aktualisierungsdatum]]></language>  
       <language id="en"><![CDATA[Update Date]]></language>  
@@ -63,7 +65,7 @@
       <language id="fr"><![CDATA[Date de mise à jour]]></language> 
     </name> 
   </property>  
-  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="false" stored="true"  editable="true" > 
+  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="false" stored="true" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -71,10 +73,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  
-  
-  <property id="library" index="true" stored="true" editable="true"  type="list" 
-  	viewtype="multiselect" listid="library" datatype="list" > 
+  <property id="library" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="library" datatype="list"> 
     <name> 
       <language id="de"><![CDATA[Bibliothek]]></language>  
       <language id="en"><![CDATA[Library]]></language>  
@@ -82,7 +81,7 @@
       <language id="fr"><![CDATA[Bibliothèque]]></language> 
     </name> 
   </property>  
-  <property id="addnotifypolicy" index="true" type="list" listid="librarycollection/addnotifypolicy" stored="true" editable="true" note="[[Who do we notify when assets are added]]"  >Send Notifications 
+  <property id="addnotifypolicy" index="true" type="list" listid="librarycollection/addnotifypolicy" stored="true" editable="true" note="[[Who do we notify when assets are added]]">Send Notifications 
     <name> 
       <language id="de"><![CDATA[Benachrichtigungen versenden]]></language>  
       <language id="en"><![CDATA[Send Notifications]]></language>  
@@ -90,7 +89,7 @@
       <language id="fr"><![CDATA[Envoyer Notifications]]></language> 
     </name> 
   </property>  
-  <property id="revisions" index="true" stored="true" editable="true"  type="number" > 
+  <property id="revisions" index="true" stored="true" editable="true" type="number"> 
     <name> 
       <language id="de"><![CDATA[Revisionen]]></language>  
       <language id="en"><![CDATA[Revisions]]></language>  
@@ -98,13 +97,15 @@
       <language id="fr"><![CDATA[Révisions]]></language> 
     </name> 
   </property>  
-  <property id="collectiontype" index="true" stored="true" editable="true" type="list" viewtype="list"  datatype="list"  > 
+  <property id="collectiontype" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
     <name> 
       <language id="en"><![CDATA[Collection Type]]></language>  
+      <language id="de"><![CDATA[Sammlungstyp]]></language>
+      <language id="fr"><![CDATA[Type de collection]]></language>
+      <language id="es"><![CDATA[Tipo de colección]]></language>
     </name> 
   </property>  
-
-  <property id="visibility" index="true" stored="true" type="list" listid="librarycollectionvisibility" editable="true" > 
+  <property id="visibility" index="true" stored="true" type="list" listid="librarycollectionvisibility" editable="true"> 
     <name> 
       <language id="de"><![CDATA[Sichtweite]]></language>  
       <language id="en"><![CDATA[Visibility]]></language>  
@@ -112,16 +113,15 @@
       <language id="fr"><![CDATA[Visibilité]]></language> 
     </name> 
   </property>  
-    <property id="projectstatus" index="true" stored="true" editable="true" type="list" viewtype="list"  datatype="list"  >Project Status 
+  <property id="projectstatus" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list">Project Status 
     <name> 
       <language id="de"><![CDATA[Projekt-Status]]></language>  
       <language id="en"><![CDATA[Project Status]]></language>  
       <language id="es"><![CDATA[Estatus del proyecto]]></language>  
       <language id="fr"><![CDATA[Etat du projet]]></language> 
     </name> 
-  </property>
-  
-  <property id="projecttype" index="true" stored="true" editable="true" type="list" viewtype="list"  datatype="list"  >Project Type 
+  </property>  
+  <property id="projecttype" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list">Project Type 
     <name> 
       <language id="de"><![CDATA[Projekttyp]]></language>  
       <language id="en"><![CDATA[Project Type]]></language>  
@@ -129,43 +129,50 @@
       <language id="fr"><![CDATA[Type de projet]]></language> 
     </name> 
   </property>  
- 
-  <property id="rootcategory"  index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated"  editable="false" >Category ID
-    <name>
-      <language id="de"><![CDATA[Kategorie ID]]></language>
-      <language id="en"><![CDATA[Category ID]]></language>
-      <language id="es"><![CDATA[categoria ID]]></language>
-      <language id="fr"><![CDATA[ID Catégorie]]></language>
-    </name>
-  </property> 
-  
-   <property id="parentcategories"  index="true" viewtype="multiselect" datatype="list" listid="category" stored="true" note="Auto populated"  editable="false" >
-    <name>
-      <language id="en"><![CDATA[Parent Categories]]></language>
-    </name>
-  </property> 
-  
-  
-   <property id="lastmodifieddatesent"  index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"  >
+  <property id="rootcategory" index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated" editable="false">Category ID 
+    <name> 
+      <language id="de"><![CDATA[Kategorie ID]]></language>  
+      <language id="en"><![CDATA[Category ID]]></language>  
+      <language id="es"><![CDATA[categoria ID]]></language>  
+      <language id="fr"><![CDATA[ID Catégorie]]></language> 
+    </name> 
+  </property>  
+  <property id="parentcategories" index="true" viewtype="multiselect" datatype="list" listid="category" stored="true" note="Auto populated" editable="false"> 
+    <name> 
+      <language id="en"><![CDATA[Parent Categories]]></language>  
+      <language id="de"><![CDATA[Elternkategorien]]></language>
+      <language id="fr"><![CDATA[Catégories parentes]]></language>
+      <language id="es"><![CDATA[Categorías parentales]]></language>
+    </name> 
+  </property>  
+  <property id="lastmodifieddatesent" index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Notified On]]></language>  
+      <language id="de"><![CDATA[Benachrichtigt am]]></language>
+      <language id="fr"><![CDATA[Notifié le]]></language>
+      <language id="es"><![CDATA[Notificado el]]></language>
     </name> 
   </property>  
-   <property id="lastmodifieddate"  index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"  >
+  <property id="lastmodifieddate" index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Asset Modified]]></language>  
+      <language id="de"><![CDATA[Vermögenswert geändert]]></language>
+      <language id="fr"><![CDATA[Actif modifié]]></language>
+      <language id="es"><![CDATA[Activo modificado]]></language>
     </name> 
   </property>  
-  <property id="lastmodifieddatedirty"  index="true" datatype="boolean" stored="true" >
+  <property id="lastmodifieddatedirty" index="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Recently Edited]]></language>  
+      <language id="de"><![CDATA[Kürzlich bearbeitet]]></language>
+      <language id="fr"><![CDATA[Récemment modifié]]></language>
+      <language id="es"><![CDATA[Recientemente editado]]></language>
     </name> 
   </property>  
-
   <!-- Approvals -->  
   <!--property id="assetclients.clientid" datatype="textjoin" index="true" stored="true" listid="clients" query="assetclients.assetid = asset.id">Asset Clients</property -->  
   <!-- Geo Location -->  
-  <property id="geo_point" internalfield="false" type="geo_point" datatype="geo_point" viewtype="map" index="true" stored="true" externalid="GPS Latitude,GPS Longitude" searchcomponent="locationsearch"   editable="true" >Position 
+  <property id="geo_point" internalfield="false" type="geo_point" datatype="geo_point" viewtype="map" index="true" stored="true" externalid="GPS Latitude,GPS Longitude" searchcomponent="locationsearch" editable="true">Position 
     <name> 
       <language id="de"><![CDATA[Position]]></language>  
       <language id="en"><![CDATA[Position]]></language>  
@@ -173,13 +180,15 @@
       <language id="fr"><![CDATA[Position]]></language> 
     </name> 
   </property>  
- 
-  <property id="city" index="true" stored="true" editable="true" > 
+  <property id="city" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[City / State]]></language>  
+      <language id="de"><![CDATA[Stadt / Bundesland]]></language>
+      <language id="fr"><![CDATA[Ville / État]]></language>
+      <language id="es"><![CDATA[Ciudad / Estado]]></language>
     </name> 
   </property>  
-  <property id="country" index="true" stored="true" editable="true" viewtype="list"   type="list"> 
+  <property id="country" index="true" stored="true" editable="true" viewtype="list" type="list"> 
     <name> 
       <language id="de"><![CDATA[Land]]></language>  
       <language id="en"><![CDATA[Country]]></language>  
@@ -190,44 +199,44 @@
   <property id="street" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Street]]></language>  
+      <language id="de"><![CDATA[Straße]]></language>
+      <language id="fr"><![CDATA[La rue]]></language>
+      <language id="es"><![CDATA[Calle]]></language>
     </name> 
   </property>  
-  
-
-    <property id="geo_point_formatedaddress" index="true" editable="true" stored="true">New
-    <name>
-      <language id="en"><![CDATA[Geo Formated Address]]></language>
-    </name>
-  </property>
-  
-   <property id="assetportrait" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" 
-   	rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list"
-   	sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" 
-   	autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="geo_point_formatedaddress" index="true" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[Portrait Photo]]></language> 
+      <language id="en"><![CDATA[Geo Formated Address]]></language>  
+      <language id="de"><![CDATA[Geoformatierte Adresse]]></language>
+      <language id="fr"><![CDATA[Adresse géolocalisée]]></language>
+      <language id="es"><![CDATA[Dirección con formato geográfico]]></language>
     </name> 
   </property>  
-
-  <property id="assetbanner" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" 
-  	required="false" filter="false" multilanguage="false" datatype="list" autocreatefromexif="false" keyword="false" 
-  	sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}"
-  	writenametoexif="false">New 
-    <name>
-      <language id="en"><![CDATA[Background Photo]]></language>
-    </name>
-  </property>
-  
-  <property id="collectivebanner" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" 
-  	required="false" filter="false" multilanguage="false" datatype="list" autocreatefromexif="false" keyword="false" 
-  	sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}"
-  	writenametoexif="false">New 
-    <name>
-      <language id="en"><![CDATA[Banner Photo]]></language>
-    </name>
-  </property> 
-L
-    <property id="collectivedescription" index="true" stored="true" editable="true"  keyword="true"  > 
+  <property id="assetportrait" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Portrait Photo]]></language>  
+      <language id="de"><![CDATA[Porträtfoto]]></language>
+      <language id="fr"><![CDATA[Portrait]]></language>
+      <language id="es"><![CDATA[Foto de retrato]]></language>
+    </name> 
+  </property>  
+  <property id="assetbanner" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" autocreatefromexif="false" keyword="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Background Photo]]></language>  
+      <language id="de"><![CDATA[Hintergrundbild]]></language>
+      <language id="fr"><![CDATA[Photo de fond]]></language>
+      <language id="es"><![CDATA[Foto de fondo]]></language>
+    </name> 
+  </property>  
+  <property id="collectivebanner" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" autocreatefromexif="false" keyword="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Banner Photo]]></language>  
+      <language id="de"><![CDATA[Bannerfoto]]></language>
+      <language id="fr"><![CDATA[Photo de bannière]]></language>
+      <language id="es"><![CDATA[Foto de cabecera]]></language>
+    </name> 
+  </property> L
+  <property id="collectivedescription" index="true" stored="true" editable="true" keyword="true"> 
     <name> 
       <language id="de"><![CDATA[Projektbeschreibung]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
@@ -235,202 +244,259 @@ L
       <language id="fr"><![CDATA[Description du projet]]></language> 
     </name> 
   </property>  
-   <property id="manifesto" index="true" stored="true" editable="true" keyword="true"   > 
+  <property id="manifesto" index="true" stored="true" editable="true" keyword="true"> 
     <name> 
       <language id="en"><![CDATA[Manifesto / Mission]]></language>  
+      <language id="de"><![CDATA[Manifest / Mission]]></language>
+      <language id="fr"><![CDATA[Manifeste / Mission]]></language>
+      <language id="es"><![CDATA[Manifiesto / Misión]]></language>
     </name> 
   </property>  
-  <property id="collectivetags" viewtype="tageditor"  keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true"  >User Tags 
-    <name>
-      <language id="de"><![CDATA[Nutzer-Tags]]></language>
-      <language id="en"><![CDATA[Hashtags]]></language>
-      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>
-      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language>
-    </name>
-  </property> 
-
-  <property id="communitytag" legacy="communitytagcategory" index="true" stored="true" editable="true" filter="true"  datatype="list"  type="list">
-    <name>
-      <language id="en"><![CDATA[Community]]></language>
-    </name>
-  </property> 
-  
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" 
-  		editable="true"  filter="true"   sortable="true">Tags 
+  <property id="collectivetags" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true">User Tags 
+    <name> 
+      <language id="de"><![CDATA[Nutzer-Tags]]></language>  
+      <language id="en"><![CDATA[Hashtags]]></language>  
+      <language id="es"><![CDATA[Etiquetas de usuarios]]></language>  
+      <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language> 
+    </name> 
+  </property>  
+  <property id="communitytag" legacy="communitytagcategory" index="true" stored="true" editable="true" filter="true" datatype="list" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Community]]></language>  
+      <language id="de"><![CDATA[Gemeinschaft]]></language>
+      <language id="fr"><![CDATA[Communauté]]></language>
+      <language id="es"><![CDATA[Comunidad]]></language>
+    </name> 
+  </property>  
+  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true" sortable="true">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
       <language id="es"><![CDATA[Etiquetas]]></language>  
       <language id="fr"><![CDATA[Tags]]></language> 
     </name> 
-  </property>
-  
- 
+  </property>  
   <property id="facebooklink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Facebook]]></language>  
+      <language id="de"><![CDATA[Facebook]]></language>
+      <language id="fr"><![CDATA[Facebook]]></language>
+      <language id="es"><![CDATA[Facebook]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="twitterlink" index="true" stored="true" editable="true"> 
     <name> 
-      <language id="en"><![CDATA[X (Twitter)]]></language>
+      <language id="en"><![CDATA[X (Twitter)]]></language>  
+      <language id="de"><![CDATA[X (Twitter)]]></language>
+      <language id="fr"><![CDATA[X (Twitter)]]></language>
+      <language id="es"><![CDATA[X (Twitter)]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="githublink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[GitHub]]></language>  
+      <language id="de"><![CDATA[GitHub]]></language>
+      <language id="fr"><![CDATA[GitHub]]></language>
+      <language id="es"><![CDATA[GitHub]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="linkedinlink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[LinkedIn]]></language>  
+      <language id="de"><![CDATA[LinkedIn]]></language>
+      <language id="fr"><![CDATA[LinkedIn]]></language>
+      <language id="es"><![CDATA[LinkedIn]]></language>
     </name> 
-  </property>
+  </property>  
   <property id="instagramlink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Instagram]]></language>  
+      <language id="de"><![CDATA[Instagram]]></language>
+      <language id="fr"><![CDATA[Instagram]]></language>
+      <language id="es"><![CDATA[Instagram]]></language>
     </name> 
   </property>  
   <property id="websitelink" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Web Site]]></language>  
+      <language id="de"><![CDATA[Webseite]]></language>
+      <language id="fr"><![CDATA[Site Web]]></language>
+      <language id="es"><![CDATA[Sitio web]]></language>
     </name> 
   </property>  
   <property id="invoicebusinessinfo" index="true" stored="true" editable="true" viewtype="html"> 
     <name> 
       <language id="en"><![CDATA[Business Info (Invoice)]]></language>  
+      <language id="de"><![CDATA[Geschäftsinformationen (Rechnung)]]></language>
+      <language id="fr"><![CDATA[Informations commerciales (facture)]]></language>
+      <language id="es"><![CDATA[Información de la empresa (factura)]]></language>
     </name> 
   </property>  
-  
-   <property id="invoicelogo" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" 
-	   	rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list"
-	   	sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" 
-	   	autocreatefromexif="false" keyword="false" writenametoexif="false"> 
-	    <name> 
-	      <language id="en"><![CDATA[Invoice Logo]]></language> 
-	    </name> 
-	</property>  
-
-  
-  	<property id="contactname" index="true" stored="true" keyword="true" editable="true" >Contact Name</property>
-
-  	<property id="contactemail" index="true" stored="true" keyword="true" editable="true"  indextype="not_analyzed">Email</property>
-	<property id="contactphone" index="true" stored="true" keyword="true" editable="true"  >Phone</property>
-  
-   <property id="vision" index="true" stored="true" viewtype="html" editable="true" keyword="true"   > 
+  <property id="invoicelogo" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" autocreatefromexif="false" keyword="false" writenametoexif="false"> 
+    <name> 
+      <language id="en"><![CDATA[Invoice Logo]]></language>  
+      <language id="de"><![CDATA[Rechnungslogo]]></language>
+      <language id="fr"><![CDATA[Logo de la facture]]></language>
+      <language id="es"><![CDATA[Logotipo de la factura]]></language>
+    </name> 
+  </property>  
+  <property id="contactname" index="true" stored="true" keyword="true" editable="true">Contact Name</property>  
+  <property id="contactemail" index="true" stored="true" keyword="true" editable="true" indextype="not_analyzed">Email</property>  
+  <property id="contactphone" index="true" stored="true" keyword="true" editable="true">Phone</property>  
+  <property id="vision" index="true" stored="true" viewtype="html" editable="true" keyword="true"> 
     <name> 
       <language id="en"><![CDATA[Vision]]></language>  
+      <language id="de"><![CDATA[Vision]]></language>
+      <language id="fr"><![CDATA[Vision]]></language>
+      <language id="es"><![CDATA[Visión]]></language>
     </name> 
   </property>  
-  
-  
-   <property id="collectionimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset"
-   	 internalfield="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}">Image</property>  
-
-  <property id="automatictagging"  index="true" datatype="boolean"  editable="true" >
+  <property id="collectionimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}">Image</property>  
+  <property id="automatictagging" index="true" datatype="boolean" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Automatic Tagging]]></language>  
+      <language id="de"><![CDATA[Automatische Kennzeichnung]]></language>
+      <language id="fr"><![CDATA[Marquage automatique]]></language>
+      <language id="es"><![CDATA[Etiquetado automático]]></language>
     </name> 
   </property>  
-  
-<!-- 
+  <!-- 
 https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/208?fullscreen=true&showtabssearch=false&autostart=true
- -->
-   <property id="streamurl" index="true" stored="true" editable="true"   > 
+ -->  
+  <property id="streamurl" index="true" stored="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Streaming URL]]></language>  
+      <language id="de"><![CDATA[Streaming-URL]]></language>
+      <language id="fr"><![CDATA[URL de streaming]]></language>
+      <language id="es"><![CDATA[URL de streaming]]></language>
     </name> 
   </property>  
-
-  <property id="chatparentid" index="true" stored="true" type="list" listid="chatterbox" > 
+  <property id="chatparentid" index="true" stored="true" type="list" listid="chatterbox"> 
     <name> 
       <language id="en"><![CDATA[Chat Parent]]></language>  
+      <language id="de"><![CDATA[Chat mit Eltern]]></language>
+      <language id="fr"><![CDATA[Chat Parent]]></language>
+      <language id="es"><![CDATA[Chat con el padre]]></language>
     </name> 
-  </property>
-  
+  </property>  
   <property id="timezone" index="true" internalfield="false" editable="true" isbadge="false" required="false" multilanguage="false" filter="false" deleted="false" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
     <name> 
-      <language id="en"><![CDATA[Time Zone]]></language> 
+      <language id="en"><![CDATA[Time Zone]]></language>  
+      <language id="de"><![CDATA[Zeitzone]]></language>
+      <language id="fr"><![CDATA[Fuseau horaire]]></language>
+      <language id="es"><![CDATA[Zona horaria]]></language>
     </name> 
-  </property> 
-  
-    <property id="sessioncalcdate" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  </property>  
+  <property id="sessioncalcdate" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[sessioncalcdate]]></language> 
+      <language id="en"><![CDATA[sessioncalcdate]]></language>  
+      <language id="de"><![CDATA[Sitzungsdatum]]></language>
+      <language id="fr"><![CDATA[sessioncalcdate]]></language>
+      <language id="es"><![CDATA[fechacalc]]></language>
     </name> 
   </property>  
   <property id="totalsessionsused" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[totalsessionsused]]></language> 
+      <language id="en"><![CDATA[totalsessionsused]]></language>  
+      <language id="de"><![CDATA[Gesamtverwendete Sitzungen]]></language>
+      <language id="fr"><![CDATA[Total des sessions utilisées]]></language>
+      <language id="es"><![CDATA[Total de sesiones utilizadas]]></language>
     </name> 
   </property>  
   <property id="remainingsessions" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[remainingsessions]]></language> 
+      <language id="en"><![CDATA[remainingsessions]]></language>  
+      <language id="de"><![CDATA[Verbleibende Sitzungen]]></language>
+      <language id="fr"><![CDATA[Les sessions restantes]]></language>
+      <language id="es"><![CDATA[las sesiones restantes]]></language>
     </name> 
   </property>  
   <property id="totalsessionspurchased" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
-    <name>
-      <language id="en"><![CDATA[totalsessionspurchased]]></language>
-    </name>
-  </property>   
+    <name> 
+      <language id="en"><![CDATA[totalsessionspurchased]]></language>  
+      <language id="de"><![CDATA[Gesamtzahl der gekauften Sitzungen]]></language>
+      <language id="fr"><![CDATA[Total des séances achetées]]></language>
+      <language id="es"><![CDATA[Total de sesiones compradas]]></language>
+    </name> 
+  </property>  
   <property id="organizationstatus" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
-    <name>
-      <language id="en"><![CDATA[Status]]></language>
-    </name>
-  </property> 
- 
-
-<property id="priviacylevel" index="true" stored="true" type="list" listid="projectprivacylevel" editable="true" defaultvalue="community" > 
+    <name> 
+      <language id="en"><![CDATA[Status]]></language>  
+      <language id="de"><![CDATA[Status]]></language>
+      <language id="fr"><![CDATA[Statut]]></language>
+      <language id="es"><![CDATA[Estado]]></language>
+    </name> 
+  </property>  
+  <property id="priviacylevel" index="true" stored="true" type="list" listid="projectprivacylevel" editable="true" defaultvalue="community"> 
     <name> 
       <language id="en"><![CDATA[Privacy Level]]></language>  
+      <language id="de"><![CDATA[Datenschutzeinstellung]]></language>
+      <language id="fr"><![CDATA[Niveau de confidentialité]]></language>
+      <language id="es"><![CDATA[Nivel de privacidad]]></language>
     </name> 
-  </property>
-  
-  <property id="storedescription" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="storedescription" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Store Description]]></language>  
+      <language id="de"><![CDATA[Ladenbeschreibung]]></language>
+      <language id="fr"><![CDATA[Description du magasin]]></language>
+      <language id="es"><![CDATA[Descripción de la tienda]]></language>
     </name> 
-  </property>
-  
-  
-  <property id="campaignhighlights" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="campaignhighlights" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Campaign Highlights]]></language>  
+      <language id="de"><![CDATA[Höhepunkte der Kampagne]]></language>
+      <language id="fr"><![CDATA[Points forts de la campagne]]></language>
+      <language id="es"><![CDATA[Puntos destacados de la campaña]]></language>
     </name> 
-  </property>
-  
-  <property id="proposalproblem" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="proposalproblem" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Problem]]></language>  
+      <language id="de"><![CDATA[Das Problem]]></language>
+      <language id="fr"><![CDATA[Le problème]]></language>
+      <language id="es"><![CDATA[El problema]]></language>
     </name> 
-  </property>
-  <property id="proposalcauses" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="proposalcauses" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Root Causes]]></language>  
+      <language id="de"><![CDATA[Ursachen]]></language>
+      <language id="fr"><![CDATA[Les causes profondes]]></language>
+      <language id="es"><![CDATA[Causas raíz]]></language>
     </name> 
-  </property>
-  <property id="proposalempowerment" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="proposalempowerment" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Empowerment]]></language>  
+      <language id="de"><![CDATA[Empowerment]]></language>
+      <language id="fr"><![CDATA[L'autonomisation]]></language>
+      <language id="es"><![CDATA[Empoderamiento]]></language>
     </name> 
-  </property>
-  <property id="proposaltestimonials" index="true" stored="true" viewtype="html" editable="true"   > 
+  </property>  
+  <property id="proposaltestimonials" index="true" stored="true" viewtype="html" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Testimonials]]></language>  
+      <language id="de"><![CDATA[Zeugnisse]]></language>
+      <language id="fr"><![CDATA[Témoignages]]></language>
+      <language id="es"><![CDATA[Testimonios]]></language>
     </name> 
-  </property>
-  
-    <property id="featuredcollection" index="true" type="boolean" keyword="false" filter="false" editable="true">
-    <name>
-      <language id="en"><![CDATA[Featured]]></language>
-    </name>
-  </property>
-
-	<property id="serverstatus" index="true" stored="true" editable="true" type="list" viewtype="list"  datatype="list"  > 
-    	<name> 
-      		<language id="en"><![CDATA[Server Status]]></language>  
-    	</name> 
-  	</property>
-  	   
+  </property>  
+  <property id="featuredcollection" index="true" type="boolean" keyword="false" filter="false" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Featured]]></language>  
+      <language id="de"><![CDATA[Hervorgehoben]]></language>
+      <language id="fr"><![CDATA[Mis en avant]]></language>
+      <language id="es"><![CDATA[Destacado]]></language>
+    </name> 
+  </property>  
+  <property id="serverstatus" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Server Status]]></language>  
+      <language id="de"><![CDATA[Serverstatus]]></language>
+      <language id="fr"><![CDATA[État du serveur]]></language>
+      <language id="es"><![CDATA[Estado del servidor]]></language>
+    </name> 
+  </property> 
 </properties>

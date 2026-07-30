@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
-
-  <data id="desktopsyncfolder" isentity="false" ordering="300" moduleicon="folder-check" showonsearch="false" securityenabled="false" moduleresultsview="table">
-    <name>
-      <language id="en"><![CDATA[Remote Desktop Sync Folders]]></language>
-    </name>
-  </data>
-
-  <data id="channel" isentity="false" ordering="300" moduleicon="chat" showonsearch="false" securityenabled="false" moduleresultsview="table" uploadsourcepath="Channels/${data.user}/${formatteddate}">
-    <name>
-      <language id="en"><![CDATA[Channel]]></language>
-    </name>
-  </data>
-
-  <data id="contentcreator" isentity="true" ordering="300" moduleicon="magic" showonsearch="false" securityenabled="false" moduleresultsview="table">
-    <name>
-      <language id="en"><![CDATA[Content Creator]]></language>
-    </name>
-  </data>
-
-
+<root> 
+  <data id="desktopsyncfolder" isentity="false" ordering="300" moduleicon="folder-check" showonsearch="false" securityenabled="false" moduleresultsview="table"> 
+    <name> 
+      <language id="en"><![CDATA[Remote Desktop Sync Folders]]></language>  
+      <language id="es"><![CDATA[Sincronización de carpetas de Escritorio remoto]]></language>  
+      <language id="de"><![CDATA[Synchronisierungsordner für Remote-Desktop]]></language>
+      <language id="fr"><![CDATA[Dossiers de synchronisation du bureau à distance]]></language>
+    </name> 
+  </data>  
+  <data id="channel" isentity="false" ordering="300" moduleicon="chat" showonsearch="false" securityenabled="false" moduleresultsview="table" uploadsourcepath="Channels/${data.user}/${formatteddate}"> 
+    <name> 
+      <language id="en"><![CDATA[Channel]]></language>  
+      <language id="es"><![CDATA[El canal]]></language>  
+      <language id="de"><![CDATA[Kanal]]></language>
+      <language id="fr"><![CDATA[Le canal]]></language>
+    </name> 
+  </data>  
+  <data id="contentcreator" isentity="true" ordering="300" moduleicon="magic" showonsearch="false" securityenabled="false" moduleresultsview="table"> 
+    <name> 
+      <language id="en"><![CDATA[Content Creator]]></language>  
+      <language id="es"><![CDATA[Creador de contenido]]></language>  
+      <language id="de"><![CDATA[Content Creator]]></language>
+      <language id="fr"><![CDATA[Créateur de contenu]]></language>
+    </name> 
+  </data> 
 </root>

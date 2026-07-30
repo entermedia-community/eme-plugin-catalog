@@ -1,162 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher">
-
-  <property id="id" internalfield="true" index="true" editable="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Ich würde]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Carné de identidad]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
-    </name>
-  </property>
-
-  <property id="name" editable="true" index="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Name]]></language>
-      <language id="en"><![CDATA[Name]]></language>
-      <language id="es"><![CDATA[Nombre]]></language>
-      <language id="fr"><![CDATA[Prénom]]></language>
-    </name>
-  </property>
-
-  <property id="skilloverview" editable="true" multilanguage="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Overview]]></language>
-    </name>
-  </property>
-
-  <property id="llmprompt" index="true" stored="true" keyword="true" editable="true" note="Prompt used for LLM interaction" multilanguage="true">
-    <name>
-      <language id="en"><![CDATA[Instructions]]></language>
-    </name>
-  </property>
-
-  <property id="searchtypes" index="true" type="list" viewtype="multiselect" listid="module" editable="true" stored="true" required="true">
-    <name>
-      <language id="en"><![CDATA[Search Type]]></language>
-    </name>
-  </property>
-
-
-  <property id="bean" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Bean Name]]></language>
-    </name>
-  </property>
-
-  <property id="contextbean" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Context Bean Name]]></language>
-    </name>
-  </property>
-
-  <property id="fieldname" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Field Name]]></language>
-    </name>
-  </property>
-
-  <property id="folder" index="true" editable="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Folder Group]]></language>
-    </name>
-  </property>
-
-  <property id="runoperation" editable="true" indextype="not_analyzed" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Run Operation]]></language>
-    </name>
-  </property>
-
-  <property id="generatemarkdown" index="true" stored="true" editable="true" datatype="boolean">
-    <name>
-      <language id="en"><![CDATA[Generate Markdown]]></language>
-    </name>
-  </property>
-
-
-  <property id="agenttype" index="true" editable="true" stored="true" type="list">
-    <name>
-      <language id="en"><![CDATA[Agent Type]]></language>
-    </name>
-  </property>
-
-  <property id="ordering" type="number" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[Ordering]]></language>
-    </name>
-  </property>
-
-  <property id="fieldsavevector" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="default">
-    <name>
-      <language id="en"><![CDATA[Field Save Vector]]></language>
-    </name>
-  </property>
-
-  <property id="maxnumberofcentroids" type="number" editable="true" index="true" stored="true" autoincrement="true">
-    <name>
-      <language id="en"><![CDATA[Max Number of Centroids]]></language>
-    </name>
-  </property>
-
-  <property id="init_loop_start_distance" index="true" editable="true" stored="true" datatype="double" type="double">
-    <name>
-      <language id="en"><![CDATA[Initial Loop Start Distance]]></language>
-    </name>
-  </property>
-
-  <property id="init_loop_lower_limit" index="true" editable="true" stored="true" datatype="double" type="double">
-    <name>
-      <language id="en"><![CDATA[Initial Loop Lower Limit]]></language>
-    </name>
-  </property>
-
-  <property id="maxdistancetocentroid" index="true" editable="true" stored="true" datatype="double" type="double">
-    <name>
-      <language id="en"><![CDATA[Max Distance to Centroid]]></language>
-    </name>
-  </property>
-
-  <property id="maxdistancetocentroid_ome" index="true" editable="true" stored="true" datatype="double" type="double">
-    <name>
-      <language id="en"><![CDATA[Max Distance to Centroid One]]></language>
-    </name>
-  </property>
-
-  <property id="maxdistancetomatch" index="true" editable="true" stored="true" datatype="double" type="double">
-    <name>
-      <language id="en"><![CDATA[Max Distance to Match]]></language>
-    </name>
-  </property>
-
-  <property id="notes" editable="true" index="true" stored="true">
-    <name>
-      <language id="de"><![CDATA[Notizen]]></language>
-      <language id="en"><![CDATA[Notes]]></language>
-      <language id="es"><![CDATA[notas]]></language>
-      <language id="fr"><![CDATA[Remarques]]></language>
-    </name>
-  </property>
-
-  <property id="aicreationcommand" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[AI Creation Command]]></language>
-    </name>
-  </property>
-
-  <property id="aicreationdescription" editable="true" index="true" stored="true">
-    <name>
-      <language id="en"><![CDATA[AI Creation Description]]></language>
-    </name>
-  </property>
-
-  <property id="contextvalues" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="json">
-    <name>
-      <language id="en"><![CDATA[Agent Context Values]]></language>
-    </name>
-  </property>
-
-
-
+<properties beanname="folderSearcher"> 
+  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Ich würde]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Carné de identidad]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
+  <property id="name" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Name]]></language>  
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="es"><![CDATA[Nombre]]></language>  
+      <language id="fr"><![CDATA[Prénom]]></language> 
+    </name> 
+  </property>  
+  <property id="skilloverview" editable="true" multilanguage="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Overview]]></language>  
+      <language id="de"><![CDATA[Übersicht]]></language>
+      <language id="fr"><![CDATA[Vue d'ensemble]]></language>
+      <language id="es"><![CDATA[Descripción general]]></language>
+    </name> 
+  </property>  
+  <property id="llmprompt" index="true" stored="true" keyword="true" editable="true" note="Prompt used for LLM interaction" multilanguage="true"> 
+    <name> 
+      <language id="en"><![CDATA[Instructions]]></language>  
+      <language id="de"><![CDATA[Anweisungen]]></language>
+      <language id="fr"><![CDATA[Instructions]]></language>
+      <language id="es"><![CDATA[Instrucciones]]></language>
+    </name> 
+  </property>  
+  <property id="searchtypes" index="true" type="list" viewtype="multiselect" listid="module" editable="true" stored="true" required="true"> 
+    <name> 
+      <language id="en"><![CDATA[Search Type]]></language>  
+      <language id="de"><![CDATA[Suchart]]></language>
+      <language id="fr"><![CDATA[Type de recherche]]></language>
+      <language id="es"><![CDATA[Tipo de búsqueda]]></language>
+    </name> 
+  </property>  
+  <property id="bean" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Bean Name]]></language>  
+      <language id="de"><![CDATA[Bohnenname]]></language>
+      <language id="fr"><![CDATA[Nom du haricot]]></language>
+      <language id="es"><![CDATA[Nombre del frijol]]></language>
+    </name> 
+  </property>  
+  <property id="contextbean" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Context Bean Name]]></language>  
+      <language id="de"><![CDATA[Kontext-Bean-Name]]></language>
+      <language id="fr"><![CDATA[Nom de la Bean]]></language>
+      <language id="es"><![CDATA[Nombre del contexto]]></language>
+    </name> 
+  </property>  
+  <property id="fieldname" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Field Name]]></language>  
+      <language id="de"><![CDATA[Feldname]]></language>
+      <language id="fr"><![CDATA[Nom du champ]]></language>
+      <language id="es"><![CDATA[Nombre del campo]]></language>
+    </name> 
+  </property>  
+  <property id="folder" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Folder Group]]></language>  
+      <language id="de"><![CDATA[Ordnergruppe]]></language>
+      <language id="fr"><![CDATA[Groupe de dossiers]]></language>
+      <language id="es"><![CDATA[Grupo de carpetas]]></language>
+    </name> 
+  </property>  
+  <property id="runoperation" editable="true" indextype="not_analyzed" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Run Operation]]></language>  
+      <language id="de"><![CDATA[Betrieb durchführen]]></language>
+      <language id="fr"><![CDATA[Exécuter l'opération]]></language>
+      <language id="es"><![CDATA[Ejecutar operación]]></language>
+    </name> 
+  </property>  
+  <property id="generatemarkdown" index="true" stored="true" editable="true" datatype="boolean"> 
+    <name> 
+      <language id="en"><![CDATA[Generate Markdown]]></language>  
+      <language id="de"><![CDATA[Markdown generieren]]></language>
+      <language id="fr"><![CDATA[Générer du Markdown]]></language>
+      <language id="es"><![CDATA[Generar código Markdown]]></language>
+    </name> 
+  </property>  
+  <property id="agenttype" index="true" editable="true" stored="true" type="list"> 
+    <name> 
+      <language id="en"><![CDATA[Agent Type]]></language>  
+      <language id="de"><![CDATA[Agententyp]]></language>
+      <language id="fr"><![CDATA[Type d'agent]]></language>
+      <language id="es"><![CDATA[Tipo de agente]]></language>
+    </name> 
+  </property>  
+  <property id="ordering" type="number" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="de"><![CDATA[Bestellung]]></language>
+      <language id="fr"><![CDATA[La commande]]></language>
+      <language id="es"><![CDATA[Ordenar]]></language>
+    </name> 
+  </property>  
+  <property id="fieldsavevector" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="default"> 
+    <name> 
+      <language id="en"><![CDATA[Field Save Vector]]></language>  
+      <language id="de"><![CDATA[Feldspeicher-Vektor]]></language>
+      <language id="fr"><![CDATA[Vecteur de sauvegarde de champ]]></language>
+      <language id="es"><![CDATA[Vector de guardado de campo]]></language>
+    </name> 
+  </property>  
+  <property id="maxnumberofcentroids" type="number" editable="true" index="true" stored="true" autoincrement="true"> 
+    <name> 
+      <language id="en"><![CDATA[Max Number of Centroids]]></language>  
+      <language id="de"><![CDATA[Maximale Anzahl der Zentren]]></language>
+      <language id="fr"><![CDATA[Nombre maximal de centroïdes]]></language>
+      <language id="es"><![CDATA[Número máximo de centroides]]></language>
+    </name> 
+  </property>  
+  <property id="init_loop_start_distance" index="true" editable="true" stored="true" datatype="double" type="double"> 
+    <name> 
+      <language id="en"><![CDATA[Initial Loop Start Distance]]></language>  
+      <language id="de"><![CDATA[Anfangs-Strecke der ersten Schleife]]></language>
+      <language id="fr"><![CDATA[Distance de départ de la boucle initiale]]></language>
+      <language id="es"><![CDATA[Distancia inicial de inicio del bucle]]></language>
+    </name> 
+  </property>  
+  <property id="init_loop_lower_limit" index="true" editable="true" stored="true" datatype="double" type="double"> 
+    <name> 
+      <language id="en"><![CDATA[Initial Loop Lower Limit]]></language>  
+      <language id="de"><![CDATA[Untere Grenze der ersten Schleife]]></language>
+      <language id="fr"><![CDATA[Limite inférieure de la boucle initiale]]></language>
+      <language id="es"><![CDATA[Límite inferior del bucle inicial]]></language>
+    </name> 
+  </property>  
+  <property id="maxdistancetocentroid" index="true" editable="true" stored="true" datatype="double" type="double"> 
+    <name> 
+      <language id="en"><![CDATA[Max Distance to Centroid]]></language>  
+      <language id="de"><![CDATA[Maximaler Abstand zum Schwerpunkt]]></language>
+      <language id="fr"><![CDATA[Distance maximale au centre de gravité]]></language>
+      <language id="es"><![CDATA[Distancia máxima al centroide]]></language>
+    </name> 
+  </property>  
+  <property id="maxdistancetocentroid_ome" index="true" editable="true" stored="true" datatype="double" type="double"> 
+    <name> 
+      <language id="en"><![CDATA[Max Distance to Centroid One]]></language>  
+      <language id="de"><![CDATA[Maximaler Abstand zum Zentroid eins]]></language>
+      <language id="fr"><![CDATA[Distance maximale au centroid un]]></language>
+      <language id="es"><![CDATA[Distancia máxima al centróide uno]]></language>
+    </name> 
+  </property>  
+  <property id="maxdistancetomatch" index="true" editable="true" stored="true" datatype="double" type="double"> 
+    <name> 
+      <language id="en"><![CDATA[Max Distance to Match]]></language>  
+      <language id="de"><![CDATA[Maximaler Abstand zum Match]]></language>
+      <language id="fr"><![CDATA[Distance maximale pour correspondre]]></language>
+      <language id="es"><![CDATA[Máxima distancia para coincidir]]></language>
+    </name> 
+  </property>  
+  <property id="notes" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="de"><![CDATA[Notizen]]></language>  
+      <language id="en"><![CDATA[Notes]]></language>  
+      <language id="es"><![CDATA[notas]]></language>  
+      <language id="fr"><![CDATA[Remarques]]></language> 
+    </name> 
+  </property>  
+  <property id="aicreationcommand" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[AI Creation Command]]></language>  
+      <language id="de"><![CDATA[AI-Erstellungsbefehl]]></language>
+      <language id="fr"><![CDATA[Commande de création d'IA]]></language>
+      <language id="es"><![CDATA[Comando de creación de IA]]></language>
+    </name> 
+  </property>  
+  <property id="aicreationdescription" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[AI Creation Description]]></language>  
+      <language id="de"><![CDATA[KI-Erstellungsbeschreibung]]></language>
+      <language id="fr"><![CDATA[Description de la création par l'IA]]></language>
+      <language id="es"><![CDATA[Descripción de la creación de inteligencia artificial]]></language>
+    </name> 
+  </property>  
+  <property id="contextvalues" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="json"> 
+    <name> 
+      <language id="en"><![CDATA[Agent Context Values]]></language>  
+      <language id="de"><![CDATA[Agent-Kontextwerte]]></language>
+      <language id="fr"><![CDATA[Les valeurs de contexte de l'agent]]></language>
+      <language id="es"><![CDATA[Valores de contexto del agente]]></language>
+    </name> 
+  </property> 
 </properties>

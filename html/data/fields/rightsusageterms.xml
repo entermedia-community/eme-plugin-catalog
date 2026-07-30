@@ -16,10 +16,13 @@
       <language id="es"><![CDATA[Nombre]]></language>  
       <language id="fr"><![CDATA[prénom]]></language> 
     </name> 
-  </property>
-  <property id="fatwirevalue" index="true" keyword="true" stored="false" editable="true">
-    <name>
-      <language id="en"><![CDATA[Fatwire Code]]></language>
-    </name>
-  </property>    
+  </property>  
+  <property id="fatwirevalue" index="true" keyword="true" stored="false" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Fatwire Code]]></language>  
+      <language id="de"><![CDATA[Fatwire-Code]]></language>
+      <language id="fr"><![CDATA[Le code Fatwire]]></language>
+      <language id="es"><![CDATA[Código Fatwire]]></language>
+    </name> 
+  </property> 
 </properties>
