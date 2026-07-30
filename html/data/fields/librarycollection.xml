@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
-    <name> 
-      <language id="de"><![CDATA[Ich würde]]></language>  
-      <language id="en"><![CDATA[Id]]></language>  
-      <language id="es"><![CDATA[Carné de identidad]]></language>  
-      <language id="fr"><![CDATA[Id]]></language> 
-    </name> 
-  </property>  
-  <property id="name" index="true" stored="true" editable="true" keyword="true" multilanguage="true" required="true"> 
-    <name> 
-      <language id="de"><![CDATA[Kollektion]]></language>  
-      <language id="en"><![CDATA[Name]]></language>  
-      <language id="es"><![CDATA[Colección]]></language>  
-      <language id="fr"><![CDATA[Collection]]></language> 
-    </name> 
-  </property>  
   <property id="urlname" index="true" stored="true" editable="true" note="just the label My-Project"> 
     <name> 
       <language id="en"><![CDATA[Url Name]]></language>  
       <language id="de"><![CDATA[URL-Name]]></language>
       <language id="fr"><![CDATA[Nom de l'URL]]></language>
       <language id="es"><![CDATA[Nombre de la URL]]></language>
-    </name> 
-  </property>  
-  <property id="description" defaultoperation="freeform" index="true" stored="true" editable="false" sortable="true"> 
-    <name> 
-      <language id="de"><![CDATA[All Fields]]></language>  
-      <language id="en"><![CDATA[All Fields]]></language>  
-      <language id="es"><![CDATA[Todos]]></language>  
-      <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
   </property>  
   <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
@@ -63,14 +39,6 @@
       <language id="en"><![CDATA[Update Date]]></language>  
       <language id="es"><![CDATA[Fecha de actualización]]></language>  
       <language id="fr"><![CDATA[Date de mise à jour]]></language> 
-    </name> 
-  </property>  
-  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="false" stored="true" editable="true"> 
-    <name> 
-      <language id="de"><![CDATA[Owner]]></language>  
-      <language id="en"><![CDATA[Owner]]></language>  
-      <language id="es"><![CDATA[Propietario]]></language>  
-      <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
   <property id="library" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="library" datatype="list"> 
@@ -129,14 +97,7 @@
       <language id="fr"><![CDATA[Type de projet]]></language> 
     </name> 
   </property>  
-  <property id="rootcategory" index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated" editable="false">Category ID 
-    <name> 
-      <language id="de"><![CDATA[Kategorie ID]]></language>  
-      <language id="en"><![CDATA[Category ID]]></language>  
-      <language id="es"><![CDATA[categoria ID]]></language>  
-      <language id="fr"><![CDATA[ID Catégorie]]></language> 
-    </name> 
-  </property>  
+  
   <property id="parentcategories" index="true" viewtype="multiselect" datatype="list" listid="category" stored="true" note="Auto populated" editable="false"> 
     <name> 
       <language id="en"><![CDATA[Parent Categories]]></language>  
