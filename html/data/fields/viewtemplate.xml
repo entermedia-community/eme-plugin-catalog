@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true">Name 
+  <property id="name" editable="true" index="true" stored="true" multilanguage="true">
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Type de rendu]]></language> 
     </name> 
   </property>  
-  <property id="rendertable" index="true" stored="true" editable="true">Table 
+  <property id="rendertable" index="true" stored="true" editable="true" type="list" listid="searchtypes"> 
     <name> 
       <language id="de"><![CDATA[Tabelle]]></language>  
       <language id="en"><![CDATA[Table]]></language>  

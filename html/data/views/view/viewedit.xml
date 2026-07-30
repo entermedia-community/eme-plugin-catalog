@@ -1,0 +1,9 @@
+<properties>
+	
+	<property id="name" />
+	<property id="rendertype" />
+	<property id="systemdefined" />
+	<property id="renderexternalid" />
+	<property id="renderinternalid" />
+	<property id="rendersort" />
+</properties> 

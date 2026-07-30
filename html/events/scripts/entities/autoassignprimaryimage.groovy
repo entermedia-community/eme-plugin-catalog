@@ -15,7 +15,7 @@ public void init()
 {
 	WebPageRequest req = context;
 	MediaArchive archive = req.getPageValue("mediaarchive");
-	log.error("Starting Auto Assign Primary Image" + req.getContentPage());
+	//log.error("Starting Auto Assign Primary Image" + req.getContentPage());
 	Searcher modulesearcher = archive.getSearcher("module");
 	AssetSearcher assetsearcher = (AssetSearcher)archive.getAssetSearcher();
 	
