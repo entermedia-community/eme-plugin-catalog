@@ -1,68 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties> 
-  <property id="user" index="true" stored="true" editable="true" type="list" listid="user"> 
-    <name> 
-      <language id="en">User</language>  
-      <language id="de"><![CDATA[Benutzer]]></language>
-      <language id="fr"><![CDATA[Nom d'utilisateur]]></language>
-      <language id="es"><![CDATA[Usuario]]></language>
-    </name> 
-  </property>  
-  <property id="entitytutorial" type="list" listid="entitytutorial" index="true" stored="true" editable="true"> 
-    <name> 
-      <language id="en">Tutorials</language>  
-      <language id="de"><![CDATA[Tutorials]]></language>
-      <language id="fr"><![CDATA[Tutoriels]]></language>
-      <language id="es"><![CDATA[Tutoriales]]></language>
-    </name> 
-  </property>  
-  <property id="beginnerprogress" index="true" stored="true" editable="true" datatype="number"> 
-    <name> 
-      <language id="en">Beginner Progress</language>  
-      <language id="de"><![CDATA[Fortschritte für Einsteiger]]></language>
-      <language id="fr"><![CDATA[Progression des débutants]]></language>
-      <language id="es"><![CDATA[Progreso de principiantes]]></language>
-    </name> 
-  </property>  
-  <property id="competentprogress" index="true" stored="true" editable="true" datatype="number"> 
-    <name> 
-      <language id="en">Competent Progress</language>  
-      <language id="de"><![CDATA[Kompetenter Fortschritt]]></language>
-      <language id="fr"><![CDATA[Progrès accomplis]]></language>
-      <language id="es"><![CDATA[Progreso competente]]></language>
-    </name> 
-  </property>  
-  <property id="expertprogress" index="true" stored="true" editable="true" datatype="number"> 
-    <name> 
-      <language id="en">Expert Progress</language>  
-      <language id="de"><![CDATA[Expertenfortschritt]]></language>
-      <language id="fr"><![CDATA[Progression des experts]]></language>
-      <language id="es"><![CDATA[Progreso experto]]></language>
-    </name> 
-  </property>  
-  <property id="efficiency" index="true" stored="true" editable="true" type="list" listid="efficiency"> 
-    <name> 
-      <language id="en">Efficiency</language>  
-      <language id="de"><![CDATA[Effizienz]]></language>
-      <language id="fr"><![CDATA[Efficacité]]></language>
-      <language id="es"><![CDATA[Eficiencia]]></language>
-    </name> 
-  </property>  
-  <property id="answersforgotten" index="true" stored="true" editable="true" datatype="number"> 
-    <name> 
-      <language id="en">Answers Forgotten</language>  
-      <language id="de"><![CDATA[Vergessene Antworten]]></language>
-      <language id="fr"><![CDATA[Réponses oubliées]]></language>
-      <language id="es"><![CDATA[Respuestas Olvidadas]]></language>
-    </name> 
-  </property>  
-  <property id="lastreviewed" index="true" stored="true" editable="true" type="date"> 
-    <name> 
-      <language id="en">Last Reviewed</language>  
-      <language id="de"><![CDATA[Zuletzt geprüft]]></language>
-      <language id="fr"><![CDATA[Dernière mise à jour]]></language>
-      <language id="es"><![CDATA[Última revisión]]></language>
-    </name> 
-  </property> 
+<properties>
+  <property id="user" index="true" stored="true" editable="true" type="list" listid="user">
+    <name>
+      <language id="en">User</language>
+    </name>
+  </property>
+
+  <property id="entitytutorial" type="list" listid="entitytutorial" index="true" stored="true" editable="true">
+    <name>
+      <language id="en">Tutorials</language>
+    </name>
+  </property>
+
+  <property id="beginnerprogress" index="true" stored="true" editable="true" datatype="number">
+    <name>
+      <language id="en">Beginner Progress</language>
+    </name>
+  </property>
+
+  <property id="competentprogress" index="true" stored="true" editable="true" datatype="number">
+    <name>
+      <language id="en">Competent Progress</language>
+    </name>
+  </property>
+
+  <property id="expertprogress" index="true" stored="true" editable="true" datatype="number">
+    <name>
+      <language id="en">Expert Progress</language>
+    </name>
+  </property>
+
+  <property id="efficiency" index="true" stored="true" editable="true" type="list" listid="efficiency">
+    <name>
+      <language id="en">Efficiency</language>
+    </name>
+  </property>
+
+  <property id="answersforgotten" index="true" stored="true" editable="true" datatype="number">
+    <name>
+      <language id="en">Answers Forgotten</language>
+    </name>
+  </property>
+
+  <property id="lastreviewed" index="true" stored="true" editable="true" type="date">
+    <name>
+      <language id="en">Last Reviewed</language>
+    </name>
+  </property>
 </properties>
