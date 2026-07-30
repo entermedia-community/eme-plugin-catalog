@@ -1,7 +1,7 @@
 <properties>
 
-	<property id="beginner">Beginner</property>
-	<property id="competent">Competent</property>
-	<property id="expert">Expert</property>
+	<property id="beginner" points="10">Beginner</property>
+	<property id="competent" points="20">Competent</property>
+	<property id="expert" points="40">Expert</property>
 
 </properties>
