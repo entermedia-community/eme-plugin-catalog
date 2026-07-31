@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher"> 
+<properties > 
   <property id="id" index="true" stored="true" editable="false">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true">Name 
+  <property id="name" index="true" stored="true" editable="true"  multilanguage="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="menulevel" index="true" stored="true" editable="true" legacy="type">Type 
+  <property id="type" index="true" stored="true" editable="true" type="list">Type 
     <name> 
       <language id="de"><![CDATA[Art]]></language>  
       <language id="en"><![CDATA[Type]]></language>  
@@ -33,12 +33,40 @@
       <language id="fr"><![CDATA[Type]]></language> 
     </name> 
   </property>  
-  <property id="parentid" index="true" stored="true" type="list" listid="module" editable="true"> 
+
+  <!-- 
+  Used on /home/shanti/git/eme-server/webapp/community/default/theme/layouts/settingssubtablayout.html
+  Parents are like tabs. Randomly used
+  -->
+  <property id="parentid" index="true" stored="true" editable="true" type="list"> 
     <name> 
       <language id="de"><![CDATA[Elternteil]]></language>  
       <language id="en"><![CDATA[Parent]]></language>  
       <language id="es"><![CDATA[Padre]]></language>  
       <language id="fr"><![CDATA[Parent]]></language> 
+    </name> 
+  </property>  
+  <property id="sublabel" index="true" stored="true" editable="true">Label Used on Sub
+    <name>
+      <language id="de"><![CDATA[Etikett auf die Unter]]></language>
+      <language id="en"><![CDATA[Label Used on Sub]]></language>
+      <language id="es"><![CDATA[Se utiliza en la etiqueta Sub]]></language>
+      <language id="fr"><![CDATA[Label Used on Sub]]></language>
+    </name>
+  </property> 
+<!--
+Used:
+#set( $null = $query.addExact("menulevel","toplevel") )
+									#set( $null = $query.addExact("moduleid",$amodule.id) )
+                  /home/shanti/git/eme-server/plugins/community/html/default/components/sidebars/addentity/index.html
+
+                  and    And  here:
+  /home/shanti/git/eme-server/plugins/community/html/default/components/sidebars/settings/index.html
+
+-->
+ <property id="menulevel" index="true" stored="true" editable="true" legacy="type">Type 
+    <name> 
+      <language id="en"><![CDATA[Menu Level]]></language>  
     </name> 
   </property>  
   <property id="moduleid" index="true" stored="true" type="list" listid="module" editable="true" legacy="module" keyword="false">Module 
@@ -47,14 +75,6 @@
       <language id="en"><![CDATA[Module]]></language>  
       <language id="es"><![CDATA[Módulo]]></language>  
       <language id="fr"><![CDATA[Module]]></language> 
-    </name> 
-  </property>  
-  <property id="sublabel" index="true" stored="true" editable="true">Label Used on Sub 
-    <name> 
-      <language id="de"><![CDATA[Etikett auf die Unter]]></language>  
-      <language id="en"><![CDATA[Label Used on Sub]]></language>  
-      <language id="es"><![CDATA[Se utiliza en la etiqueta Sub]]></language>  
-      <language id="fr"><![CDATA[Label Used on Sub]]></language> 
     </name> 
   </property>  
   <property id="path" index="true" stored="true" editable="true">Path 
@@ -74,4 +94,6 @@
       <language id="es"><![CDATA[pestaña]]></language>
     </name> 
   </property> 
+
+
 </properties>

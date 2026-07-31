@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+  <property id="assetmodulefields" menulevel="toplevel" moduleid="asset" parentid="assetviews" path="/views/settings/modules/asset/metadata/properties/index.html" ordering="20">Fields Setup</property>
+  <property id="assetviews" moduleid="asset" parentid="assetviews" ordering="100" path="/views/settings/modules/asset/metadata/views/index.html">Edit Views</property>  
+  <property id="assetsystemviews" moduleid="asset" parentid="assetviews" path="/views/settings/modules/asset/metadata/viewssystem/index.html" ordering="110">Application Views</property>
+  
+  <property id="assetmodulepermissions" menulevel="toplevel" moduleid="asset" parentid="asset" path="/views/settings/modules/asset/permissions/enabled.html" ordering="24">Permissions</property>
+   <property id="hotfolders" moduleid="asset" menulevel="toplevel" path="/views/settings/modules/asset/hotfolders/index.html" ordering="040">Hot Folders</property>
+  <property id="preferences" menulevel="toplevel" parentid="preferences" moduleid="asset" path="/views/settings/modules/asset/transcoding/index.html" sublabel="Transcoding" ordering="060">Preferences</property>
+  <property id="publishing" menulevel="sublevel" parentid="preferences" moduleid="asset" path="/views/settings/modules/asset/publishing/index.html" ordering="630">Publishing</property>
+  <property id="presets" menulevel="sublevel" parentid="preferences" moduleid="asset" path="/views/settings/modules/asset/presetconfig/index.html" ordering="610">Preset Configuration</property>
+  <property id="assettypes" menulevel="toplevel" moduleid="asset" parentid="assettypes"  path="/views/settings/modules/asset/assettypes/index.html" ordering="050">Asset Types</property>
+
+</properties>

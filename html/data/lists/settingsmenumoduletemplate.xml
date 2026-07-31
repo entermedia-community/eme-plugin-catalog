@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+
+  <property id="MODULEIDproperties" menulevel="toplevel" moduleid="MODULEID" path="/views/settings/modules/MODULEID/info/module-setup.html" ordering="20">
+	<name>
+	  <language id="en"><![CDATA[Properties]]></language>
+		<language id="es"><![CDATA[Configuración de campo]]></language>
+		<language id="fr"><![CDATA[Configuration du champ]]></language>
+	</name>
+  </property>
+
+		<property id="MODULEIDviews" menulevel="toplevel"  moduleid="MODULEID" parentid="MODULEIDviews" ordering="100" path="/views/settings/modules/MODULEID/metadata/views/index.html" 
+			sublabel="Editing">
+			<name>
+			<language id="de"><![CDATA[Edit Views]]></language>
+			<language id="en"><![CDATA[Edit Views]]></language>
+			<language id="es"><![CDATA[Editar vistas]]></language>
+			<language id="fr"><![CDATA[Modifier les vues]]></language>
+			</name>
+		</property>  
+		<property id="MODULEIDsystemviews" moduleid="MODULEID" parentid="MODULEIDviews" path="/views/settings/modules/MODULEID/metadata/viewssystem/index.html" ordering="110">
+			<name>
+			<language id="de"><![CDATA[Application Views]]></language>
+			<language id="en"><![CDATA[Application Views]]></language>
+			<language id="es"><![CDATA[Vistas de la aplicación]]></language>
+			<language id="fr"><![CDATA[Vues de l'application]]></language>
+			</name>
+		</property>	
+
+  <property id="MODULEIDmodulepermissions" menulevel="toplevel" moduleid="MODULEID" parentid="MODULEID" path="/views/settings/modules/MODULEID/permissions/enabled.html" ordering="23">
+	<name>
+	  <language id="de"><![CDATA[Permissions]]></language>
+	  <language id="en"><![CDATA[Permissions]]></language>
+	  <language id="es"><![CDATA[Permisos]]></language>
+	  <language id="fr"><![CDATA[Autorisations]]></language>
+	</name>
+  </property>
+
+<!--
+
+
+<li class="current">
+			<a href="${apphome}/views/settings/modules/${module.id}/permissions/enabled.html" class="ajax auto-active-link" data-targetdiv="workarea" data-oemaxlevel="1" data-updateurl="true">[[Enabled For]]</a>
+		</li>
+		<li>
+			<a href="${apphome}/views/settings/modules/${module.id}/permissions/viewers.html" class="ajax auto-active-link" data-targetdiv="workarea" data-oemaxlevel="1" data-updateurl="true">[[Viewers]]</a>
+		</li>
+		<li>
+			<a href="${apphome}/views/settings/modules/${module.id}/permissions/editors.html" class="ajax auto-active-link" data-targetdiv="workarea" data-oemaxlevel="1" data-updateurl="true">[[Editors]]</a>
+		</li>
+		<li>
+			<a href="${apphome}/views/settings/modules/${module.id}/permissions/actionpermissions/index.html" class="ajax auto-active-link" data-targetdiv="workarea" data-oemaxlevel="2" data-updateurl="true">[[Action Permissions]]</a>
+		</li>
+
+-->
+
+</properties>
