@@ -1,23 +1,63 @@
 <properties beanname="dataSearcher" lazy-init="true">
 
-	<property id="id" index="true" stored="true" editable="true" internalfield="true">Id</property>
+	<property id="id" index="true" stored="true" editable="true" internalfield="true">
+	<name> 
+      <language id="en"><![CDATA[Id]]></language> 
+	  </name>
+	</property>
 
-	<property id="content" index="true" rendertype="textarea" stored="true" editable="true">Content</property>
+	<property id="content" index="true" rendertype="textarea" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Content]]></language>
+		</name>
+	</property>
 
-	<property id="assetid" type="list" listid="asset" viewtype="asset" index="true" stored="true" editable="true">Asset</property>
+	<property id="assetid" type="list" listid="asset" viewtype="asset" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Asset]]></language>
+		</name>
+	</property>
 
-	<property id="questionid" type="list" listid="entityquestion" index="true" stored="true" editable="true">Question ID</property>
+	<property id="questionid" type="list" listid="entityquestion" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Question ID]]></language>
+		</name>
+	</property>
 
-	<property id="componentsectionid" type="list" listid="componentsection" index="true" stored="true" editable="true">Parent</property>
+	<property id="componentsectionid" type="list" listid="componentsection" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Parent]]></language>
+		</name>
+	</property>
 
-	<property id="contentrole" type="list" index="true" stored="true" editable="true">Content Role</property>
+	<property id="contentrole" type="list" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Content Role]]></language>
+		</name>
+	</property>
 
-	<property id="componenttype" type="list" index="true" stored="true" editable="true">Component Type</property>
+	<property id="componenttype" type="list" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Component Type]]></language>
+		</name>
+	</property>
 
-	<property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">Ordering</property>
+	<property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">
+		<name>
+			<language id="en"><![CDATA[Ordering]]></language>
+		</name>
+	</property>
 
-	<property id="creationdate" index="true" stored="true" datatype="date" viewtype="time" searchcomponent="datesearch" type="date">Created On</property>
+	<property id="creationdate" index="true" stored="true" datatype="date" viewtype="time" searchcomponent="datesearch" type="date">
+		<name>
+			<language id="en"><![CDATA[Created On]]></language>
+		</name>
+	</property>
 
-	<property id="modificationdate" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time" type="date">Last Modified</property>
+	<property id="modificationdate" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time" type="date">
+		<name>
+			<language id="en"><![CDATA[Last Modified]]></language>
+		</name>
+	</property>
 
 </properties>

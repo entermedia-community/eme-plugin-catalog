@@ -1,24 +1,64 @@
 <properties beanname="dataSearcher" lazy-init="true">
 
-	<property id="id" index="true" stored="true" editable="true" internalfield="true">Id</property>
+	<property id="id" index="true" stored="true" editable="true" internalfield="true">
+		<name> 
+      		<language id="en"><![CDATA[Id]]></language> 
+	  	</name>
+	</property>
 
-	<property id="name" index="true" stored="true" editable="true">Name</property>
+	<property id="name" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Name]]></language>
+		</name>
+	</property>
 	
 	<!--project, collection-->
-	<property id="entitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">Created in Module</property>
-	<property id="entityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">Created in Entity</property>
+	<property id="entitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Created in Module]]></language>
+		</name>
+	</property>
+	<property id="entityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Created in Entity]]></language>
+		</name>
+	</property>
 
-	<property id="contentrole" type="list" index="true" stored="true" editable="true">Content Role</property>
+	<property id="contentrole" type="list" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Content Role]]></language>
+		</name>
+	</property>
 
 	<!--tutorial, blog-->
-	<property id="playbackentitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">Saved Module</property>
-	<property id="playbackentityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">Saved Entity</property>
+	<property id="playbackentitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Saved Module]]></language>
+		</name>
+	</property>
+	<property id="playbackentityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">
+		<name>
+			<language id="en"><![CDATA[Saved Entity]]></language>
+		</name>
+	</property>
 
-	<property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">Ordering</property>
+	<property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">
+		<name>
+			<language id="en"><![CDATA[Ordering]]></language>
+		</name>
+	</property>
 
-	<property id="creationdate" index="true" stored="true" datatype="date" viewtype="time" searchcomponent="datesearch" type="date">Created On</property>
+	<property id="creationdate" index="true" stored="true" datatype="date" viewtype="time" searchcomponent="datesearch" type="date">
+		<name>
+			<language id="en"><![CDATA[Created On]]></language>
+		</name>
+	</property>
 
-	<property id="modificationdate" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time" type="date">Last Modified</property>
+	<property id="modificationdate" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time" type="date">
+		<name>
+			<language id="en"><![CDATA[Last Modified]]></language>
+		</name>
+	</property>
 	
 	
 

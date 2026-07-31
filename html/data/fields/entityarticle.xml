@@ -16,7 +16,7 @@
       <language id="fr"><![CDATA[Type de document]]></language>
       <language id="es"><![CDATA[Tipo de documento]]></language>
     </name> 
-  </property> &gt; 
+  </property>  
   <property id="librarycollection" index="true" filter="true" internalfield="false" deleted="false" datatype="list" editable="true" stored="true" viewtype="entity">New 
     <name> 
       <language id="en"><![CDATA[Project]]></language>  
