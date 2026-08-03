@@ -10,16 +10,21 @@
 	</name>
   </property>
 
-		<property id="MODULEIDviews" menulevel="toplevel"  moduleid="MODULEID" parentid="MODULEIDviews" ordering="100" path="/views/settings/modules/MODULEID/metadata/views/index.html" 
-			sublabel="Editing">
-			<name>
-			<language id="de"><![CDATA[Edit Views]]></language>
-			<language id="en"><![CDATA[Edit Views]]></language>
-			<language id="es"><![CDATA[Editar vistas]]></language>
-			<language id="fr"><![CDATA[Modifier les vues]]></language>
-			</name>
-		</property>  
-		<property id="MODULEIDsystemviews" moduleid="MODULEID" parentid="MODULEIDviews" path="/views/settings/modules/MODULEID/metadata/viewssystem/index.html" ordering="110">
+  <property id="MODULEIDfields" moduleid="MODULEID"  parentid="MODULEIDfields" path="/views/settings/modules/MODULEID/metadata/properties/index.html" ordering="30">
+	<name>
+	  <language id="en"><![CDATA[Data]]></language>
+	</name>
+  </property>
+
+	<property id="MODULEIDviews" menulevel="toplevel"  moduleid="MODULEID" parentid="MODULEIDfields" ordering="31" path="/views/settings/modules/MODULEID/metadata/views/index.html" 
+		>
+		<name>
+		<language id="de"><![CDATA[Fields]]></language>
+		</name>
+	</property>  
+
+
+		<property id="MODULEIDsystemviews" moduleid="MODULEID" parentid="MODULEIDfields" path="/views/settings/modules/MODULEID/metadata/viewssystem/index.html" ordering="32">
 			<name>
 			<language id="de"><![CDATA[Application Views]]></language>
 			<language id="en"><![CDATA[Application Views]]></language>
@@ -28,7 +33,7 @@
 			</name>
 		</property>	
 
-  <property id="MODULEIDmodulepermissions" menulevel="toplevel" moduleid="MODULEID" parentid="MODULEID" path="/views/settings/modules/MODULEID/permissions/enabled.html" ordering="23">
+  <property id="MODULEIDmodulepermissions" menulevel="toplevel" moduleid="MODULEID" parentid="MODULEID" path="/views/settings/modules/MODULEID/permissions/enabled.html" ordering="40">
 	<name>
 	  <language id="de"><![CDATA[Permissions]]></language>
 	  <language id="en"><![CDATA[Permissions]]></language>
