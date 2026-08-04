@@ -95,5 +95,12 @@ Used:
     </name> 
   </property> 
 
+    <property id="menuicon" editable="true" stored="true" index="true"> 
+    <name> 
+      <language id="en"><![CDATA[Menu Icon]]></language>  
+      <language id="es"><![CDATA[Ícono del módulo]]></language>
+    </name> 
+  </property>  
+
 
 </properties>
