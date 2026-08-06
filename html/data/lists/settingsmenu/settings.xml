@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-  <property tab="datamanager" id="datamanager" parentid="datamanager"  menulevel="toplevel" moduleid="system" path="/views/settings/lists/datamanager/list/index.html" menuicon="database-fill" ordering="010">
+  <property tab="datamanager" id="datamanager" parentid="datamanager"  menulevel="toplevel" moduleid="system" path="/views/settings/lists/datamanager/list/index.html" menuicon="database" ordering="010">
   <name>
       <language id="de"><![CDATA[Datamanager]]></language>
       <language id="en"><![CDATA[Datamanager]]></language>
@@ -10,7 +10,7 @@
     </name>
   </property>
   
-   <property id="tools" parentid="tools" menulevel="toplevel" moduleid="system" path="/views/settings/status/tools/index.html" menuicon="hdd-rack-fill"  ordering="0">
+   <property id="tools" parentid="tools" menulevel="toplevel" moduleid="system" path="/views/settings/status/tools/index.html" menuicon="hdd-rack"  ordering="0">
    <name>
       <language id="de"><![CDATA[Werkzeuge]]></language>
       <language id="en"><![CDATA[Server]]></language>
@@ -19,7 +19,7 @@
     </name>
    </property>
     
-    <property id="users" menulevel="toplevel" parentid="users" moduleid="system" path="/views/settings/users/usermanager/users/index.html" menuicon="person-fill" ordering="030">
+    <property id="users" menulevel="toplevel" parentid="users" moduleid="system" path="/views/settings/users/usermanager/users/index.html" menuicon="person" ordering="030">
     <name>
       <language id="de"><![CDATA[Benutzer]]></language>
       <language id="en"><![CDATA[Users]]></language>
@@ -28,7 +28,7 @@
     </name>
     </property>
 
-  <property  id="groups"  menulevel="toplevel" moduleid="system"  parentid="groups" path="/views/settings/users/usermanager/groups/index.html" menuicon="people-fill" ordering="040">
+  <property  id="groups"  menulevel="toplevel" moduleid="system"  parentid="groups" path="/views/settings/users/usermanager/groups/index.html" menuicon="people" ordering="040">
     <name>
       <language id="de"><![CDATA[Gruppen]]></language>
       <language id="en"><![CDATA[Groups]]></language>
@@ -37,7 +37,7 @@
     </name>
   </property>
  
-  <property id="permissions"  parentid="permissions" menulevel="toplevel" moduleid="system" path="/views/settings/users/permissions/index.html" menuicon="shield-fill" ordering="050">
+  <property id="permissions"  parentid="permissions" menulevel="toplevel" moduleid="system" path="/views/settings/users/permissions/index.html" menuicon="shield" ordering="050">
     <name>
       <language id="de"><![CDATA[Berechtigungen]]></language>
       <language id="en"><![CDATA[Site Permissions]]></language>
@@ -55,7 +55,7 @@
     </name>
   </property>
   
- <property id="theme"   menulevel="toplevel"  moduleid="system" path="/views/settings/applicationsetup/theme/index.html" menuicon="palette-fill" ordering="60">
+ <property id="theme"   menulevel="toplevel"  moduleid="system" path="/views/settings/applicationsetup/theme/index.html" menuicon="palette" ordering="60">
     <name>
       <language id="de"><![CDATA[Thema]]></language>
       <language id="en"><![CDATA[Theme]]></language>
@@ -64,7 +64,7 @@
     </name>
   </property>
  
-  <property id="emails"   menulevel="toplevel"  moduleid="system" path="/views/settings/applicationsetup/emails/index.html" menuicon="envelope-fill" ordering="80">
+  <property id="emails"   menulevel="toplevel"  moduleid="system" path="/views/settings/applicationsetup/emails/index.html" menuicon="envelope" ordering="80">
     <name>
       <language id="de"><![CDATA[E-Mail-Vorlagen]]></language>
       <language id="en"><![CDATA[Email Templates]]></language>
@@ -73,7 +73,7 @@
     </name>
   </property>
   
-   <property id="scheduler"  menulevel="toplevel" parentid="scheduler" moduleid="system" path="/views/settings/events/ps/index.html" menuicon="calendar-fill" ordering="300" sublabel="Scheduled">
+   <property id="scheduler"  menulevel="toplevel" parentid="scheduler" moduleid="system" path="/views/settings/events/ps/index.html" menuicon="calendar" ordering="300" sublabel="Scheduled">
     <name>
       <language id="de"><![CDATA[Planer]]></language>
       <language id="en"><![CDATA[Scheduler]]></language>
@@ -82,7 +82,7 @@
     </name>
   </property>
  
-  <property id="events"  parentid="scheduler" menulevel="toplevel" moduleid="system" path="/views/settings/events/triggers/index.html" menuicon="lightning-fill" ordering="280">
+  <property id="events"  parentid="scheduler" menulevel="toplevel" moduleid="system" path="/views/settings/events/triggers/index.html" menuicon="lightning" ordering="280">
     <name>
       <language id="de"><![CDATA[Ereignisse]]></language>
       <language id="en"><![CDATA[Events]]></language>
@@ -91,7 +91,7 @@
     </name>
   </property>
  
-   <property id="scripts"  parentid="scheduler" menulevel="toplevel" moduleid="system" path="/views/settings/scripts/scriptlist.html" menuicon="file-code-fill" ordering="290">
+   <property id="scripts"  parentid="scheduler" menulevel="toplevel" moduleid="system" path="/views/settings/scripts/scriptlist.html" menuicon="file-code" ordering="290">
     <name>
       <language id="de"><![CDATA[Skripte]]></language>
       <language id="en"><![CDATA[Scripts]]></language>
@@ -100,7 +100,7 @@
     </name>
   </property>
 
-  <!-- property id="version" parentid="tools" menulevel="toplevel" moduleid="system" path="/views/settings/status/version/index.html" menuicon="info-circle-fill" ordering="400">
+  <!-- property id="version" parentid="tools" menulevel="toplevel" moduleid="system" path="/views/settings/status/version/index.html" menuicon="info-circle" ordering="400">
     <name>
       <language id="de"><![CDATA[Versionen]]></language>
       <language id="en"><![CDATA[Versions]]></language>
