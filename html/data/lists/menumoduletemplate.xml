@@ -10,30 +10,30 @@
 	</name>
   </property>
 
-  <property id="MODULEIDfields" moduleid="MODULEID"  parentid="MODULEIDfields" path="/views/settings/modules/MODULEID/metadata/properties/index.html" ordering="30">
+  <property id="MODULEIDfields" moduleid="MODULEID" menulevel="toplevel"  parentid="MODULEIDfields" path="/views/settings/modules/MODULEID/metadata/properties/index.html" ordering="30">
 	<name>
 	  <language id="en"><![CDATA[Data]]></language>
 	</name>
   </property>
 
-	<property id="MODULEIDviews" menulevel="toplevel"  moduleid="MODULEID" parentid="MODULEIDfields" ordering="31" path="/views/settings/modules/MODULEID/metadata/views/index.html" 
-		>
-		<name>
-		<language id="de"><![CDATA[Fields]]></language>
-		</name>
-	</property>  
+			<property id="MODULEIDviews"  moduleid="MODULEID" parentid="MODULEIDfields" ordering="31" path="/views/settings/modules/MODULEID/metadata/views/index.html" 
+				>
+				<name>
+				<language id="en"><![CDATA[Views]]></language>
+				</name>
+			</property>  
 
 
-		<property id="MODULEIDsystemviews" moduleid="MODULEID" parentid="MODULEIDfields" path="/views/settings/modules/MODULEID/metadata/viewssystem/index.html" ordering="32">
-			<name>
-			<language id="de"><![CDATA[Application Views]]></language>
-			<language id="en"><![CDATA[Application Views]]></language>
-			<language id="es"><![CDATA[Vistas de la aplicación]]></language>
-			<language id="fr"><![CDATA[Vues de l'application]]></language>
-			</name>
-		</property>	
+			<property id="MODULEIDsystemviews" moduleid="MODULEID" parentid="MODULEIDfields" path="/views/settings/modules/MODULEID/metadata/viewssystem/index.html" ordering="32">
+				<name>
+				<language id="de"><![CDATA[Application Views]]></language>
+				<language id="en"><![CDATA[Application Views]]></language>
+				<language id="es"><![CDATA[Vistas de la aplicación]]></language>
+				<language id="fr"><![CDATA[Vues de l'application]]></language>
+				</name>
+			</property>	
 
-  <property id="MODULEIDmodulepermissions" menulevel="toplevel" moduleid="MODULEID" parentid="MODULEID" path="/views/settings/modules/MODULEID/permissions/enabled.html" ordering="40">
+  <property id="MODULEIDmodulepermissions" menulevel="toplevel" moduleid="MODULEID" parentid="MODULEIDmodulepermissions" path="/views/settings/modules/MODULEID/permissions/enabled.html" ordering="40">
 	<name>
 	  <language id="de"><![CDATA[Permissions]]></language>
 	  <language id="en"><![CDATA[Permissions]]></language>
