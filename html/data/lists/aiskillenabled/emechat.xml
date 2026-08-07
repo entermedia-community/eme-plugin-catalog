@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+
+   <data id="emechat_responder_welcome" aiskill="emechatWelcomeSkill" automationscenario="emechat_responder" enabled="true" agenttype="eventagent"  processingmessage="Loading" >
+      <name>
+         <![CDATA[Welcomes Users to Chat]]>
+      </name>
+   </data>
+
+ 
+   <data id="emechat_responder" aiskill="chatResponderSkill" automationscenario="emechat_responder" enabled="true" agenttype="eventagent"  processingmessage="Thinking" runafter="emechat_responder_welcome">
+      <name>
+         <![CDATA[Responds to Chat]]>
+      </name>
+   </data>
+
+   </records>
