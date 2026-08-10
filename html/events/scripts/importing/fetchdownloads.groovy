@@ -29,12 +29,13 @@ public void init() {
 		log.info("Found ${assets.size()} assets ");
 	}
 	Downloader dl = new Downloader();
-	assets.each
+
+	for(asset in assets)
 	{
 		Asset current = null;
 		try
 		{	
-			current = archive.getAssetSearcher().loadData(it);
+			current = archive.getAssetSearcher().loadData(asset.getId());
 			String fetchurl = current.fetchurl;
 			
 			boolean regenerate = false;
@@ -48,6 +49,10 @@ public void init() {
 				else if(filename == null){
 					filename = PathUtilities.extractFileName(fetchurl);
 					filename = filename.replaceAll("\\?.*", "");
+				}
+				if (current.getSourcePath() == null) {
+					log.error("Asset ${current.getId()} does not have a source path. Skipping download.");
+					return;
 				}
 				String path = "/WEB-INF/data/"	+ archive.getCatalogId() + "/originals/" + current.getSourcePath()			+ "/" + filename;
 				Page finalfile = archive.getPageManager().getPage(path);
@@ -98,7 +103,7 @@ public void init() {
 		}
 		catch( Exception ex )
 		{
-			log.error("could not process asset: " + it.sourcepath,ex);
+			log.error("could not process asset: " + asset.getSourcePath(),ex);
 			current.setProperty("importstatus","error");
 			archive.saveAsset(current,user);
 			
