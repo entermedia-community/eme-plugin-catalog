@@ -18,7 +18,7 @@
 			<language id="en"><![CDATA[Created in Module]]></language>
 		</name>
 	</property>
-	<property id="entityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">
+	<property id="entityid"  indextype="not_analyzed"  index="true" stored="true" editable="true">
 		<name>
 			<language id="en"><![CDATA[Created in Entity]]></language>
 		</name>
@@ -36,7 +36,7 @@
 			<language id="en"><![CDATA[Saved Module]]></language>
 		</name>
 	</property>
-	<property id="playbackentityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">
+	<property id="playbackentityid"  indextype="not_analyzed" index="true" stored="true" editable="true">
 		<name>
 			<language id="en"><![CDATA[Saved Entity]]></language>
 		</name>

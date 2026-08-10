@@ -33,12 +33,10 @@
       <language id="fr"><![CDATA[Défini par le système]]></language> 
     </name> 
   </property>  
-  <property id="moduleid" index="true" stored="true" legacy="module" editable="false" type="list" listid="module"> 
+  <property id="moduleid" index="true" stored="true" legacy="module" editable="false" type="list" listid="module" rendertype="default"> 
     <name> 
-      <language id="de"><![CDATA[Modul]]></language>  
-      <language id="en"><![CDATA[Module]]></language>  
-      <language id="es"><![CDATA[Módulo]]></language>  
-      <language id="fr"><![CDATA[Module]]></language> 
+      <language id="en"><![CDATA[Searchtype]]></language>  
+      <language id="es"><![CDATA[Searchtype]]></language>  
     </name> 
   </property>  
   <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 

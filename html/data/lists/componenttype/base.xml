@@ -1,8 +1,39 @@
 <datas>
-	<data id="heading" icon="type-h1" ordering="1">Heading</data>
-	<data id="paragraph" icon="paragraph" ordering="2">Paragraph</data>
-	<data id="asset" icon="image" ordering="3">Asset</data>
-	<data id="bulleted_list" icon="list" ordering="4">Bulleted List</data>
-	<data id="numbered_list" icon="list" ordering="5">Numbered List</data>
-	<data id="mcq" icon="ui-checks" ordering="6">Multiple Choice Question</data>
+	<data id="heading" icon="type-h1" ordering="1">
+	<name>
+		<language id="en"><![CDATA[Heading]]></language>
+		<language id="es"><![CDATA[Título]]></language>
+	</name>
+	</data>
+	<data id="paragraph" icon="paragraph" ordering="2">
+		<name>
+			<language id="en"><![CDATA[Paragraph]]></language>
+			<language id="es"><![CDATA[Párrafo]]></language>
+		</name>
+	</data>
+	<data id="asset" icon="image" ordering="3">
+		<name>
+			<language id="en"><![CDATA[Asset]]></language>
+			<language id="es"><![CDATA[Recurso]]></language>
+		</name>
+	</data>
+	<data id="bulleted_list" icon="list" ordering="4">
+		<name>
+			<language id="en"><![CDATA[Bulleted List]]></language>
+			<language id="es"><![CDATA[Lista con viñetas]]></language>
+		</name>
+	</data>
+	<data id="numbered_list" icon="list" ordering="5">
+		<name>
+			<language id="en"><![CDATA[Numbered List]]></language>
+			<language id="es"><![CDATA[Lista numerada]]></language>
+		</name>
+	</data>
+	<data id="mcq" icon="ui-checks" ordering="6">
+		<name>
+			<language id="en"><![CDATA[Multiple Choice Question]]></language>
+			<language id="es"><![CDATA[Pregunta de opción múltiple]]></language>
+		</name>
+	</data>
+
 </datas> 

@@ -1,32 +1,130 @@
 <properties>
-  <property id="metadata" iscontainer="true" ordering="1">Metadata</property>
+  <property id="metadata" iscontainer="true" ordering="1">
+    <name>
+      <language id="en"><![CDATA[Metadata]]></language>
+      <language id="es"><![CDATA[Metadatos]]></language>
+    </name>
+  </property>
 
-  <property id="intro" iscontainer="true" ordering="2">Introduction</property>
-  <property id="body" iscontainer="true" ordering="3">Body</property>
-  <property id="budget" iscontainer="true" ordering="4">Budget</property>
-  <property id="conclusion" iscontainer="true" ordering="5">Conclusion</property>
-  <property id="appendix" iscontainer="true" ordering="6">Appendix</property>
+  <property id="intro" iscontainer="true" ordering="2">
+    <name>
+      <language id="en"><![CDATA[Introduction]]></language>
+      <language id="es"><![CDATA[Introducción]]></language>
+    </name>
+  </property>
+  <property id="body" iscontainer="true" ordering="3">
+    <name>
+      <language id="en"><![CDATA[Body]]></language>
+      <language id="es"><![CDATA[Cuerpo]]></language>
+    </name>
+  </property>
+  <property id="budget" iscontainer="true" ordering="4">
+    <name>
+      <language id="en"><![CDATA[Budget]]></language>
+      <language id="es"><![CDATA[Presupuesto]]></language>
+    </name>
+  </property>
+  <property id="conclusion" iscontainer="true" ordering="5">
+    <name>
+      <language id="en"><![CDATA[Conclusion]]></language>
+      <language id="es"><![CDATA[Conclusión]]></language>
+    </name>
+  </property>
+  <property id="appendix" iscontainer="true" ordering="6">
+    <name>
+      <language id="en"><![CDATA[Appendix]]></language>
+      <language id="es"><![CDATA[Apéndice]]></language>
+    </name>
+  </property>
 
+  <property id="headline" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Headline]]></language>
+      <language id="es"><![CDATA[Titular]]></language>
+    </name>
+  </property>
+  <property id="byline" ordering="11">
+    <name>
+      <language id="en"><![CDATA[By Line]]></language>
+      <language id="es"><![CDATA[Por línea]]></language>
+    </name>
+  </property>
+  <property id="lead" ordering="12">
+    <name>
+      <language id="en"><![CDATA[Lead]]></language>
+      <language id="es"><![CDATA[Entrada]]></language>
+    </name>
+  </property>
+  <property id="synopsis" ordering="13">
+    <name>
+      <language id="en"><![CDATA[Synopsis]]></language>
+      <language id="es"><![CDATA[Sinopsis]]></language>
+    </name>
+  </property>
+  <property id="publisheddate" ordering="14">
+    <name>
+      <language id="en"><![CDATA[Date]]></language>
+      <language id="es"><![CDATA[Fecha]]></language>
+    </name>
+  </property>
 
+  <property id="exercise" ordering="15">
+    <name>
+      <language id="en"><![CDATA[Exercise]]></language>
+      <language id="es"><![CDATA[Ejercicio]]></language>
+    </name>
+  </property>
+  <property id="source" ordering="16">
+    <name>
+      <language id="en"><![CDATA[Source]]></language>
+      <language id="es"><![CDATA[Fuente]]></language>
+    </name>
+  </property>
 
+  <property id="featureimage" ordering="21">
+    <name>
+      <language id="en"><![CDATA[Feature Image]]></language>
+      <language id="es"><![CDATA[Imagen destacada]]></language>
+    </name>
+  </property>
+  <property id="featurevideo" ordering="22">
+    <name>
+      <language id="en"><![CDATA[Feature Video]]></language>
+      <language id="es"><![CDATA[Video destacado]]></language>
+    </name>
+  </property>
+  <property id="featureaudio" ordering="23">
+    <name>
+      <language id="en"><![CDATA[Feature Audio]]></language>
+      <language id="es"><![CDATA[Audio destacado]]></language>
+    </name>
+  </property>
 
+  <property id="topiclist" ordering="31">
+    <name>
+      <language id="en"><![CDATA[Topics]]></language>
+      <language id="es"><![CDATA[Temas]]></language>
+    </name>
+  </property>
 
+  <property id="imageright" ordering="41">
+    <name>
+      <language id="en"><![CDATA[Image Right]]></language>
+      <language id="es"><![CDATA[Imagen derecha]]></language>
+    </name>
+  </property>
+  <property id="imageleft" ordering="42">
+    <name>
+      <language id="en"><![CDATA[Image Left]]></language>
+      <language id="es"><![CDATA[Imagen izquierda]]></language>
+    </name>
+  </property>
 
-  <property id="headline" ordering="10">Headline</property>
-  <property id="byline" ordering="11">By Line</property>
-  <property id="lead" ordering="12">Lead</property>
-  <property id="synopsis" ordering="13">Synopsis</property>
-  <property id="publisheddate" ordering="14">Date</property>
-
-  <property id="featureimage" ordering="21">Feature Image</property>
-  <property id="featurevideo" ordering="22">Feature Video</property>
-  <property id="featureaudio" ordering="23">Feature Audio</property>
-
-  <property id="topiclist" ordering="31">Topics</property>
-
-  <property id="imageright" ordering="41">Image Right</property>
-  <property id="imageleft" ordering="42">Image Left</property>
-
-  <property id="usefullink" ordering="51">Useful Link</property>
+  <property id="usefullink" ordering="51">
+    <name>
+      <language id="en"><![CDATA[Useful Link]]></language>
+      <language id="es"><![CDATA[Enlace útil]]></language>
+    </name>
+  </property>
 
 </properties>
