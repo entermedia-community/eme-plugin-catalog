@@ -1,7 +1,22 @@
 <properties>
 
-	<property id="beginner" points="10">Beginner</property>
-	<property id="competent" points="20">Competent</property>
-	<property id="expert" points="40">Expert</property>
+	<property id="beginner" points="10">
+		<name>
+			<language id="en"><![CDATA[Beginner]]></language>
+			<language id="es"><![CDATA[Principiante]]></language>
+		</name>
+	</property>
+	<property id="competent" points="20">
+		<name>
+			<language id="en"><![CDATA[Competent]]></language>
+			<language id="es"><![CDATA[Competente]]></language>
+		</name>
+	</property>
+	<property id="expert" points="40">
+		<name>
+			<language id="en"><![CDATA[Expert]]></language>
+			<language id="es"><![CDATA[Experto]]></language>
+		</name>
+	</property>
 
 </properties>
