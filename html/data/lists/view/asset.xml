@@ -6,4 +6,5 @@
 	
 	<property id="assetmultipleupload" moduleid="asset" systemdefined="true" byassettype="false">Multiple Upload</property>
 	
+	<property id="assetcreatenewurl" moduleid="asset" systemdefined="true" byassettype="false">Create new from URL</property>
 </properties>
