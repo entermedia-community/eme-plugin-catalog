@@ -2,7 +2,7 @@
 
   <property id="id" index="true" stored="true" editable="true" internalfield="true">Id</property>
 
-  <property id="name" index="true" stored="true" editable="true">Name</property>
+  <property id="name" index="true" stored="true" editable="true" multilanguage="true">Name</property>
 
   <property id="icon" index="true" stored="true" editable="true">Icon</property>
 
