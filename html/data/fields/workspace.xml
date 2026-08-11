@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+  <property id="id" index="true" stored="true" keyword="true" internalfield="true" editable="true">ID
+    <name>
+      <language id="de"><![CDATA[Ich würde]]></language>
+      <language id="en"><![CDATA[ID]]></language>
+      <language id="es"><![CDATA[identificación]]></language>
+      <language id="fr"><![CDATA[ID]]></language>
+    </name>
+  </property>
+  <property id="name" index="true" multilanguage="true" deleted="false" editable="true" stored="true">Name
+    <name>
+      <language id="de"><![CDATA[Identität]]></language>
+      <language id="en"><![CDATA[Name]]></language>
+      <language id="es"><![CDATA[Nombre]]></language>
+      <language id="fr"><![CDATA[Identité]]></language>
+    </name>
+  </property>
+  <property id="mediadbroot" index="true" stored="true" editable="true">MediaDB Root
+    <name>
+      <language id="de"><![CDATA[Medien-Datenbank-Wurzel]]></language>
+      <language id="en"><![CDATA[MediaDB Root]]></language>
+      <language id="es"><![CDATA[Raíz de MediaDB]]></language>
+      <language id="fr"><![CDATA[Racine MediaDB]]></language>
+    </name>
+  </property>
+  <property id="iconasset" index="true" stored="true" editable="true">Icon Asset
+    <name>
+      <language id="de"><![CDATA[Symbol-Asset]]></language>
+      <language id="en"><![CDATA[Icon Asset]]></language>
+      <language id="es"><![CDATA[Activo de icono]]></language>
+      <language id="fr"><![CDATA[Actif d'icône]]></language>
+    </name>
+  </property>
+</properties>
