@@ -17,4 +17,7 @@
   <property id="phonenumber" />
   <property id="whatsappenabled" />
 
+  <property id="emeskillset" />
+  <property id="emepersonality" />
+
 </root>

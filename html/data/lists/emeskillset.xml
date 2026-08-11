@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+ 
+  <property id="criticalthinker"> 
+    <name> 
+      <language id="en"><![CDATA[Critical Thinker]]></language>  
+      <language id="de"><![CDATA[Kritischer Denker]]></language>
+      <language id="fr"><![CDATA[Penseur critique]]></language>
+      <language id="es"><![CDATA[Pensador crítico]]></language>
+    </name> 
+  </property> 
+  <property id="creative"> 
+    <name> 
+      <language id="en"><![CDATA[Creative]]></language>  
+      <language id="de"><![CDATA[Kreativ]]></language>
+      <language id="fr"><![CDATA[Créatif]]></language>
+      <language id="es"><![CDATA[Creativo]]></language>
+    </name> 
+  </property>
+  <property id="empathetic"> 
+    <name> 
+      <language id="en"><![CDATA[Empathetic]]></language>  
+      <language id="de"><![CDATA[Einfühlsam]]></language>
+      <language id="fr"><![CDATA[Empathique]]></language>
+      <language id="es"><![CDATA[Empático]]></language>
+    </name> 
+  </property>
+  <property id="adaptable"> 
+    <name> 
+      <language id="en"><![CDATA[Adaptable]]></language>  
+      <language id="de"><![CDATA[Anpassungsfähig]]></language>
+      <language id="fr"><![CDATA[Adaptable]]></language>
+      <language id="es"><![CDATA[Adaptable]]></language>
+    </name> 
+  </property>
+  <property id="collaborative"> 
+    <name> 
+      <language id="en"><![CDATA[Collaborative]]></language>  
+      <language id="de"><![CDATA[Kollaborativ]]></language>
+      <language id="fr"><![CDATA[Collaboratif]]></language>
+      <language id="es"><![CDATA[Colaborativo]]></language>
+    </name> 
+  </property>
+  <property id="resilient"> 
+    <name> 
+      <language id="en"><![CDATA[Resilient]]></language>  
+      <language id="de"><![CDATA[Widerstandsfähig]]></language>
+      <language id="fr"><![CDATA[Résilient]]></language>
+      <language id="es"><![CDATA[Resiliente]]></language>
+    </name> 
+  </property>
+  <property id="accountable"> 
+    <name> 
+      <language id="en"><![CDATA[Accountable]]></language>  
+      <language id="de"><![CDATA[Verantwortlich]]></language>
+      <language id="fr"><![CDATA[Responsable]]></language>
+      <language id="es"><![CDATA[Responsable]]></language>
+    </name> 
+  </property>
+  <property id="communicative"> 
+    <name> 
+      <language id="en"><![CDATA[Communicative]]></language>  
+      <language id="de"><![CDATA[Kommunikativ]]></language>
+      <language id="fr"><![CDATA[Communicatif]]></language>
+      <language id="es"><![CDATA[Comunicativo]]></language>
+    </name> 
+  </property>
+  <property id="analytical"> 
+    <name> 
+      <language id="en"><![CDATA[Analytical]]></language>  
+      <language id="de"><![CDATA[Analytisch]]></language>
+      <language id="fr"><![CDATA[Analytique]]></language>
+      <language id="es"><![CDATA[Analítico]]></language>
+    </name> 
+  </property>
+  <property id="proactive"> 
+    <name> 
+      <language id="en"><![CDATA[Proactive]]></language>  
+      <language id="de"><![CDATA[Proaktiv]]></language>
+      <language id="fr"><![CDATA[Proactif]]></language>
+      <language id="es"><![CDATA[Proactivo]]></language>
+    </name> 
+  </property>
+  <property id="ethical"> 
+    <name> 
+      <language id="en"><![CDATA[Ethical]]></language>  
+      <language id="de"><![CDATA[Ethisch]]></language>
+      <language id="fr"><![CDATA[Éthique]]></language>
+      <language id="es"><![CDATA[Ético]]></language>
+    </name> 
+  </property>
+  <property id="detailoriented"> 
+    <name> 
+      <language id="en"><![CDATA[Detail-Oriented]]></language>  
+      <language id="de"><![CDATA[Detailorientiert]]></language>
+      <language id="fr"><![CDATA[Soucieux du détail]]></language>
+      <language id="es"><![CDATA[Orientado al detalle]]></language>
+    </name> 
+  </property>
+</properties>

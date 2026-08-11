@@ -49,4 +49,19 @@
       <language id="es"><![CDATA[Compañía]]></language>
     </name> 
   </property> 
+
+
+    <property id="emeskillset" editable="true" index="true" keyword="true" stored="true" viewtype="multiselect" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Skill Set]]></language>  
+      <language id="es"><![CDATA[Conjunto de habilidades]]></language>
+    </name> 
+  </property>  
+
+  <property id="emepersonality" editable="true" index="true" keyword="true" stored="true" viewtype="multiselect" datatype="list"> 
+    <name> 
+      <language id="en"><![CDATA[Personality]]></language>  
+      <language id="es"><![CDATA[Personalidad]]></language>
+    </name> 
+  </property>  
 </properties>

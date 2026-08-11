@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+  <property id="friendly"> 
+    <name> 
+      <language id="en"><![CDATA[Friendly]]></language>  
+      <language id="de"><![CDATA[Freundlich]]></language>
+      <language id="fr"><![CDATA[Amical]]></language>
+      <language id="es"><![CDATA[Amable]]></language>
+    </name> 
+  </property>  
+  <property id="analytical"> 
+    <name> 
+      <language id="en"><![CDATA[Analytical]]></language>  
+      <language id="de"><![CDATA[Analytisch]]></language>
+      <language id="fr"><![CDATA[Analytique]]></language>
+      <language id="es"><![CDATA[Analítico]]></language>
+    </name> 
+  </property> 
+  <property id="optimistic"> 
+    <name> 
+      <language id="en"><![CDATA[Optimistic]]></language>  
+      <language id="de"><![CDATA[Optimistisch]]></language>
+      <language id="fr"><![CDATA[Optimiste]]></language>
+      <language id="es"><![CDATA[Optimista]]></language>
+    </name> 
+  </property>
+  <property id="calm"> 
+    <name> 
+      <language id="en"><![CDATA[Calm]]></language>  
+      <language id="de"><![CDATA[Gelassen]]></language>
+      <language id="fr"><![CDATA[Calme]]></language>
+      <language id="es"><![CDATA[Calmado]]></language>
+    </name> 
+  </property>
+  <property id="confident"> 
+    <name> 
+      <language id="en"><![CDATA[Confident]]></language>  
+      <language id="de"><![CDATA[Selbstbewusst]]></language>
+      <language id="fr"><![CDATA[Confiant]]></language>
+      <language id="es"><![CDATA[Seguro de sí mismo]]></language>
+    </name> 
+  </property>
+  <property id="curious"> 
+    <name> 
+      <language id="en"><![CDATA[Curious]]></language>  
+      <language id="de"><![CDATA[Neugierig]]></language>
+      <language id="fr"><![CDATA[Curieux]]></language>
+      <language id="es"><![CDATA[Curioso]]></language>
+    </name> 
+  </property>
+  <property id="organized"> 
+    <name> 
+      <language id="en"><![CDATA[Organized]]></language>  
+      <language id="de"><![CDATA[Organisiert]]></language>
+      <language id="fr"><![CDATA[Organisé]]></language>
+      <language id="es"><![CDATA[Organizado]]></language>
+    </name> 
+  </property>
+  <property id="patient"> 
+    <name> 
+      <language id="en"><![CDATA[Patient]]></language>  
+      <language id="de"><![CDATA[Geduldig]]></language>
+      <language id="fr"><![CDATA[Patient]]></language>
+      <language id="es"><![CDATA[Paciente]]></language>
+    </name> 
+  </property>
+  <property id="sociable"> 
+    <name> 
+      <language id="en"><![CDATA[Sociable]]></language>  
+      <language id="de"><![CDATA[Gesellig]]></language>
+      <language id="fr"><![CDATA[Sociable]]></language>
+      <language id="es"><![CDATA[Sociable]]></language>
+    </name> 
+  </property>
+  <property id="assertive"> 
+    <name> 
+      <language id="en"><![CDATA[Assertive]]></language>  
+      <language id="de"><![CDATA[Durchsetzungsfähig]]></language>
+      <language id="fr"><![CDATA[Assertif]]></language>
+      <language id="es"><![CDATA[Asertivo]]></language>
+    </name> 
+  </property>
+  <property id="playful"> 
+    <name> 
+      <language id="en"><![CDATA[Playful]]></language>  
+      <language id="de"><![CDATA[Verspielt]]></language>
+      <language id="fr"><![CDATA[Enjoué]]></language>
+      <language id="es"><![CDATA[Juguetón]]></language>
+    </name> 
+  </property>
+  <property id="pragmatic"> 
+    <name> 
+      <language id="en"><![CDATA[Pragmatic]]></language>  
+      <language id="de"><![CDATA[Pragmatisch]]></language>
+      <language id="fr"><![CDATA[Pragmatique]]></language>
+      <language id="es"><![CDATA[Pragmático]]></language>
+    </name> 
+  </property>
+</properties>
