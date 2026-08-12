@@ -16,19 +16,17 @@ public void addUser(MediaArchive mediaArchive, Data collection, String inUserId)
 		userrecord.setValue("followeruser",inUserId);
 		userrecord.setValue("ontheteam","true");
 		mediaArchive.saveData("librarycollectionusers",userrecord);
+		log.info("User added to librarycollection: " + inUserId + " collection: " + collection.getName() );
 	}
 
 }
 
 public void init()
 {
-	MediaArchive mediaArchive = context.getPageValue("mediaarchive");//Search for all files looking for videos
+	MediaArchive mediaArchive = context.getPageValue("mediaarchive");
 	BaseSearcher collectionsearcher = mediaArchive.getSearcher("librarycollection");
-	String  id = data.getId();
-	LibraryCollection collection = (LibraryCollection)collectionsearcher.searchById(id);
+	LibraryCollection collection = (LibraryCollection)collectionsearcher.loadData(data);
 	Searcher librarysearcher = mediaArchive.getSearcher("library");
-	log.info("User is: " + user.getId() );
-
 	
 	if( collection.getLibrary() == null)
 	{
@@ -53,19 +51,14 @@ public void init()
 	String collectiontype = context.getRequestParameter("collectiontype");
 	if( collectiontype == "3")
 	{
-		//Get extra users 
 		String[] otherusers = context.getRequestParameters("otherusers");
 		for (userid in otherusers) {
 			addUser(mediaArchive,collection,user);
 		}
 	}
 	
-	//#set( $team = $mediaarchive.query("librarycollectionusers").exact("collectionid",$collectionid).exact("ontheteam",true).search($context) )
-	
 	collectionsearcher.saveData(collection);
 	
-	//mediaArchive.getProjectManager().getRootCategory(mediaArchive,collection);
-		
 	BaseSearcher colectivesearcher = mediaArchive.getSearcher("collectiveproject");
 	Data newproject = colectivesearcher.query().exact("parentcollectionid",collection.getId()).orgroup("name","Public|General").searchOne();
 	if( newproject == null)
@@ -82,7 +75,7 @@ public void init()
 	String url = collection.get("urlname");
 	if( url != null)
 	{
-		context.redirect("/" + url);
+		//context.redirect("/" + url);
 	}
 	
 }

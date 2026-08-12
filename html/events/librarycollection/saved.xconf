@@ -2,4 +2,8 @@
 	<path-action name="Script.run" >
 		<script>/${catalogid}/events/scripts/librarycollection/saveproject.groovy</script>
 	</path-action>
+
+	<path-action name="Script.run" >
+		<script>/${catalogid}/events/scripts/librarycollection/savecollective.groovy</script>
+	</path-action>
 </page>	

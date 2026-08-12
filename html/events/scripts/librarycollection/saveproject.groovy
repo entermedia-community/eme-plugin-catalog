@@ -9,50 +9,28 @@ import org.openedit.util.URLUtilities
 
 public void init()
 {
-	MediaArchive mediaArchive = context.getPageValue("mediaarchive");//Search for all files looking for videos
+	MediaArchive mediaArchive = context.getPageValue("mediaarchive");
 	BaseSearcher collectionsearcher = mediaArchive.getSearcher("librarycollection");
-	String  id = context.getRequestParameter("dataid");
-	if( id == null )
-	{
-		id = data.getId();
-	}
-	LibraryCollection data = (LibraryCollection)collectionsearcher.searchById(id);
+	LibraryCollection data = (LibraryCollection)collectionsearcher.loadData(data);
+
 	if( data == null)
 	{
 		log.error("Could not find collection " + id);
 		return;
 	}
-	if( data.getValue("geo_point") != null && data.getValue("library") != null)
-	{
-		return;
-	}
-	Searcher librarysearcher = mediaArchive.getSearcher("library");
+	
+	boolean saved = false;
 
-
-	log.info("User saving librarycollection: " + user.getId() );
-
-	/*
-	if( data.getValue("library") == null )
-	{
-		Data library = librarysearcher.searchByField("owner", user.getId());
-		if( library == null)
-		{
-			library = librarysearcher.createNewData();
-			library.setValue("owner", user.getId());
-			library.setName(user.getScreenName());
-			librarysearcher.saveData(library);
-		}
-		data.setValue("library",library.getId());
-	}
-	*/	
-	if( data.get("owner") == null )
+	if( data.get("owner") == null && data.get("owner").equals(user.getId()) )
 	{
 		data.setValue("owner",user.getId());
-	}	
+		saved = true;
+	}
 	
 	if( data.get("creationdate") == null )
 	{
 		data.setValue("creationdate", new Date());
+		saved = true;
 	}
 	
 	if( data.get("urlname") == null )
@@ -61,35 +39,42 @@ public void init()
 		String name = URLUtilities.dash(data.getName()); 
 		name = URLUtilities.urlEscape(name);
 		data.setValue("urlname",name);
+		saved = true;
 	}
-	
-//	org.entermediadb.asset.Category root = mediaArchive.getProjectManager().createRootCategory(mediaArchive,data);
-//	data.getRootCategoryId(root.getId();
-	
+
 	//Search Google and put point on map
-	String location = "";
-	if (data.get("street")) {
-		location = data.get("street");
-	}
-	if (data.get("city")) {
-		location += " " + data.get("city");
-	}
-	Data country = mediaArchive.getData("country", data.get("country"));
-	if (country) {
-		location += " " + country;
-	} 
-	
-	if (location != "")
+	if (data.get("geo_point") == null) 
 	{
-		//location = location.replaceAll("null","");
-		Position p = (Position)collectionsearcher.getGeoCoder().findFirstPosition(location);
-		if( p != null)
+		String location = "";
+		if (data.get("street")) {
+			location = data.get("street");
+		}
+		if (data.get("city")) {
+			location += " " + data.get("city");
+		}
+		Data country = mediaArchive.getData("country", data.get("country"));
+		if (country) {
+			location += " " + country;
+		} 
+		
+		if (location != "")
 		{
-			data.setValue("geo_point",p);
-			data.setValue("geo_point_formatedaddress",p.getFormatedAddress());
-		}	
+			//location = location.replaceAll("null","");
+			Position p = (Position)collectionsearcher.getGeoCoder().findFirstPosition(location);
+			if( p != null)
+			{
+				data.setValue("geo_point",p);
+				data.setValue("geo_point_formatedaddress",p.getFormatedAddress());
+			}	
+			saved = true;
+		}
 	}
-	collectionsearcher.saveData(data);
+
+	if (saved)
+	{
+		collectionsearcher.saveData(data);
+		log.info("librarycollection saved: " + data.getName() + " by: " + user.getId() );
+	}
 	
 }
 
