@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher">
-  <property id="id" internalfield="true" index="true" editable="true" stored="true">
+<properties>
+  <property id="id" index="true" stored="true" keyword="true" internalfield="true" editable="true">ID
     <name>
       <language id="de"><![CDATA[Ich würde]]></language>
-      <language id="en"><![CDATA[Id]]></language>
-      <language id="es"><![CDATA[Carné de identidad]]></language>
-      <language id="fr"><![CDATA[Id]]></language>
+      <language id="en"><![CDATA[ID]]></language>
+      <language id="es"><![CDATA[identificación]]></language>
+      <language id="fr"><![CDATA[ID]]></language>
     </name>
   </property>
-  <property id="name" editable="true" index="true" stored="true">
+  <property id="name" index="true" multilanguage="true" deleted="false" editable="true" stored="true">Name
     <name>
-      <language id="de"><![CDATA[Name]]></language>
+      <language id="de"><![CDATA[Identität]]></language>
       <language id="en"><![CDATA[Name]]></language>
       <language id="es"><![CDATA[Nombre]]></language>
-      <language id="fr"><![CDATA[Prénom]]></language>
+      <language id="fr"><![CDATA[Identité]]></language>
     </name>
   </property>
-  <property id="baseurl" index="true" stored="true" editable="true">
+  <property id="mediadbroot" index="true" stored="true" editable="true">MediaDB Root
     <name>
-      <language id="de"><![CDATA[Base URL]]></language>
-      <language id="en"><![CDATA[Base URL]]></language>
-      <language id="es"><![CDATA[Base URL]]></language>
-      <language id="fr"><![CDATA[Base URL]]></language>
+      <language id="de"><![CDATA[Medien-Datenbank-Wurzel]]></language>
+      <language id="en"><![CDATA[MediaDB Root]]></language>
+      <language id="es"><![CDATA[Raíz de MediaDB]]></language>
+      <language id="fr"><![CDATA[Racine MediaDB]]></language>
     </name>
   </property>
-  <property id="mediadbappid" editable="true" index="true" stored="true">
+  <property id="iconasset" index="true" stored="true" editable="true">Icon Asset
     <name>
-      <language id="de"><![CDATA[Name]]></language>
-      <language id="en"><![CDATA[Name]]></language>
-      <language id="es"><![CDATA[Nombre]]></language>
-      <language id="fr"><![CDATA[Prénom]]></language>
-    </name>
-  </property>
-  <property id="thumbnaillink" internalfield="false" index="true" stored="true" editable="false">
-    <name>
-      <language id="en"><![CDATA[Thumbnail Link]]></language>
-      <language id="de"><![CDATA[Thumbnail-Link]]></language>
-      <language id="fr"><![CDATA[Lien vers l'image de prévisualisation]]></language>
-      <language id="es"><![CDATA[Enlace a la miniatura]]></language>
+      <language id="de"><![CDATA[Symbol-Asset]]></language>
+      <language id="en"><![CDATA[Icon Asset]]></language>
+      <language id="es"><![CDATA[Activo de icono]]></language>
+      <language id="fr"><![CDATA[Actif d'icône]]></language>
     </name>
   </property>
 </properties>

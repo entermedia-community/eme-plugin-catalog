@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <properties>
-  <property id="minusr" name="Minsur" mediadbappid="site/mediadb" baseurl="https://minsur.genailabs.tech" thumbnaillink="thumbnail.png" />
+  <property id="development" mediadbroot="http://localhost.com:8080/site/mediadb" iconasset="http://localhost.com:8080/site/find/theme/logo.png">Development</property>
+  <property id="minsur" mediadbroot="https://minsur-app.genailabs.tech/site/mediadb" iconasset="https://minsur.genailabs.tech/site/find/theme/logo.png">Minsur</property>
 </properties>
- 
