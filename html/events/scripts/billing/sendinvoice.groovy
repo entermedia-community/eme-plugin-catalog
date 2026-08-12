@@ -254,8 +254,16 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 	}
 	
 	String communitypath = community.get("templatepath");
+	String template;
+	if (communitypath != null)
+	{
+		template = siteid + communitypath + "/theme/emails/";
+	}
+	else
+	{
+		template = siteid + "/profile/theme/emails/";
+	}
 	
-	String template = siteid + communitypath + "/theme/emails/";
 	
 	String actionUrl = community.get("externaldomain") + "/" + librarycol.get("urlname");
 	
