@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-
-
-
- 
-   <data id="emechat_responder_welcome" aiskill="chatResponderSkill" automationscenario="emechat_responder" enabled="true" agenttype="eventagent"  processingmessage="Thinking" >
+   <data id="emechat_responder_welcome" aiskill="emeChatDetectSkill" automationscenario="emechat_responder" enabled="true" agenttype="eventagent"  processingmessage="Thinking" >
+      <name>
+         <![CDATA[Auto Detect Chat]]>
+      </name>
+   </data> 
+   <data id="emechat_responder_respond" aiskill="emeChatRespondSkill" automationscenario="emechat_responder" enabled="true" agenttype="eventagent"  processingmessage="Thinking" runafter="emechat_responder_welcome" >
       <name>
          <![CDATA[Responds to Chat]]>
       </name>

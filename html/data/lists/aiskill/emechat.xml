@@ -2,7 +2,7 @@
 
 <results> 
 
-<data id="emechatWelcomeSkill" bean="renderLocalTemplateSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+<data id="emeChatDetectSkill" bean="emeChatDetectSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Render Local Template]]></language>  
       <language id="de"><![CDATA[Lokale Vorlage rendern]]></language>
@@ -11,7 +11,7 @@
     </name> 
   </data>  
 
-  <data id="chatResponderSkill" bean="chatResponderSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+  <data id="emeChatRespondSkill" bean="emeChatRespondSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Responder]]></language>  
       <language id="de"><![CDATA[Antwortgeber]]></language>
