@@ -121,6 +121,13 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language>
     </name>
   </property>
+  <property id="useralias" index="true" editable="false" stored="true" viewtype="user" datatype="list">
+    <name>
+      <language id="en"><![CDATA[Alias User]]></language>
+      <language id="es"><![CDATA[Alias de usuario]]></language>
+      <language id="fr"><![CDATA[Alias utilisateur]]></language>
+    </name>
+  </property>
   <property id="agentcontextvalues" index="true" deleted="false" editable="true" stored="true">
     <name>
       <language id="en"><![CDATA[Context Values]]></language>
