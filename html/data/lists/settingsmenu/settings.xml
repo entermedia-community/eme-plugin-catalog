@@ -77,7 +77,7 @@
     <name>
       <language id="de"><![CDATA[Planer]]></language>
       <language id="en"><![CDATA[Scheduler]]></language>
-      <language id="es"><![CDATA[Programador]]></language>
+      <language id="es"><![CDATA[Tareas Programadas]]></language>
       <language id="fr"><![CDATA[Planificateur]]></language>
     </name>
   </property>

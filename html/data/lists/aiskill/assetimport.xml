@@ -23,7 +23,7 @@
       <language id="en"><![CDATA[Asset Import]]></language>  
       <language id="de"><![CDATA[Asset-Import]]></language>
       <language id="fr"><![CDATA[Importation d'actifs]]></language>
-      <language id="es"><![CDATA[Importación de activos]]></language>
+      <language id="es"><![CDATA[Importar Assets]]></language>
     </name> 
   </data>  
   <!-- Not used -->  
@@ -32,7 +32,7 @@
       <language id="en"><![CDATA[Importing: Process Needs Metadata]]></language>  
       <language id="de"><![CDATA[Import: Prozess benötigt Metadaten]]></language>
       <language id="fr"><![CDATA[Importation : le processus nécessite des métadonnées]]></language>
-      <language id="es"><![CDATA[Importación: El proceso necesita metadatos]]></language>
+      <language id="es"><![CDATA[Importar: El proceso necesita metadatos]]></language>
     </name> 
   </data>  
   <data id="EntityModule_handleAssetsImported" runoperation="EntityModule.handleAssetsImported" bean="runModuleSkill" agenttype="taskagent" enabled="true" ordering="14"> 
@@ -56,7 +56,7 @@
       <language id="en"><![CDATA[Importing: Custom Assets Imported]]></language>  
       <language id="de"><![CDATA[Importieren: Importierte benutzerdefinierte Assets]]></language>
       <language id="fr"><![CDATA[Importation : actifs personnalisés importés]]></language>
-      <language id="es"><![CDATA[Importación: Activos personalizados importados]]></language>
+      <language id="es"><![CDATA[Importar: Activos personalizados importados]]></language>
     </name> 
   </data>  
   <data id="queueConversions" bean="queueConversionsSkill" agenttype="taskagent" enabled="true" ordering="16"> 

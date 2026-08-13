@@ -63,7 +63,7 @@
       <language id="en"><![CDATA[Importing: Import Complete]]></language>  
       <language id="de"><![CDATA[Importieren: Import abgeschlossen]]></language>
       <language id="fr"><![CDATA[Importation : Importation terminée]]></language>
-      <language id="es"><![CDATA[Importación: Importación completada]]></language>
+      <language id="es"><![CDATA[Importar: Importación completada]]></language>
     </name> 
   </data>  
   <data id="importing_readallmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/readallmetadata"> 
@@ -79,7 +79,7 @@
       <language id="en"><![CDATA[Importing: Assets Created]]></language>  
       <language id="de"><![CDATA[Importieren: Erstellte Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Importation : actifs créés]]></language>
-      <language id="es"><![CDATA[Importación: Activos creados]]></language>
+      <language id="es"><![CDATA[Importar: Activos creados]]></language>
     </name> 
   </data>  
   <data id="importing_pushassetimported" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/pushassetimported"> 
@@ -87,7 +87,7 @@
       <language id="en"><![CDATA[Importing: Push Received and Imported]]></language>  
       <language id="de"><![CDATA[Import: Push empfangen und importiert]]></language>
       <language id="fr"><![CDATA[Importation : Reçue et importée]]></language>
-      <language id="es"><![CDATA[Importación: Empuje recibido e importado]]></language>
+      <language id="es"><![CDATA[Importar: Recibido e importado]]></language>
     </name> 
   </data>  
   <data id="importing_fetchdownloads" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/fetchdownloads"> 
@@ -127,7 +127,7 @@
       <language id="en"><![CDATA[Importing: Imported Assets]]></language>  
       <language id="de"><![CDATA[Import: Importierte Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Importation : Actifs importés]]></language>
-      <language id="es"><![CDATA[Importación: Activos importados]]></language>
+      <language id="es"><![CDATA[Importar: Activos importados]]></language>
     </name> 
   </data>  
   <data id="importing_assetsclear" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsclear"> 
@@ -143,7 +143,7 @@
       <language id="en"><![CDATA[Importing: Reload All MD5]]></language>  
       <language id="de"><![CDATA[Importieren: Alle MD5 neu laden]]></language>
       <language id="fr"><![CDATA[Importer : recharger tous les MD5]]></language>
-      <language id="es"><![CDATA[Importación: Cargar todos los MD5]]></language>
+      <language id="es"><![CDATA[Importar: Cargar todos los MD5]]></language>
     </name> 
   </data>  
   <data id="data_takesnapshot" bean="runSharedEventSkill" agenttype="eventagent" folder="data" runoperation="data/takesnapshot"> 
@@ -743,7 +743,7 @@
       <language id="en"><![CDATA[Importing: Queue Conversions]]></language>  
       <language id="de"><![CDATA[Importieren: Warteschlangenkonversionen]]></language>
       <language id="fr"><![CDATA[Importation : conversions de file d'attente]]></language>
-      <language id="es"><![CDATA[Importación: conversiones de cola]]></language>
+      <language id="es"><![CDATA[Importar: Cola de conversiones]]></language>
     </name> 
   </data> 
 </records>

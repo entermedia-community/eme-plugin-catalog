@@ -1,5 +1,5 @@
 #
-#Wed Jul 29 17:14:30 CST 2026
+#Thu Aug 13 11:05:12 CST 2026
 (A)=(A) Los Estados miembros
 (B)=(B) El Consejo
 (C)=(C) El Consejo
@@ -47,9 +47,14 @@ Id=Identificaci\u00F3n
 Instagram=Instagram
 LLM\ Error=Error del LLM
 Name=Nombre
+Option\ (A)=Opci\u00F3n (A)
+Option\ (B)=Opci\u00F3n (B)
+Option\ (C)=Opci\u00F3n (C)
+Option\ (D)=Opci\u00F3n (D)
 Permissions\ Updated\ Date=Fecha de actualizaci\u00F3n de permisos
 Portrait\ Photo=Foto de perfil
 Question=\u00BFCu\u00E1l es el problema?
+Rationale=Raz\u00F3n
 Roles=Roles
 Security\ Enabled=Seguridad habilitada
 Selected\ File=Archivo seleccionado

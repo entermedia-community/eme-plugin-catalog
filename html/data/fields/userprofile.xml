@@ -109,7 +109,7 @@
     <name>
       <language id="de"><![CDATA[Anzahl der Assets pro Seite zu sehen]]></language>
       <language id="en"><![CDATA[Number of Assets to view per page]]></language>
-      <language id="es"><![CDATA[Número de Activos para ver por página]]></language>
+      <language id="es"><![CDATA[Número de Assets por página]]></language>
       <language id="fr"><![CDATA[Nombre d&#39;items à afficher par page]]></language>
     </name>
   </property>
@@ -117,7 +117,7 @@
     <name>
       <language id="de"><![CDATA[Anzahl der Zeilen zeigen Modul Ergebnisse]]></language>
       <language id="en"><![CDATA[Number of rows show on Module results]]></language>
-      <language id="es"><![CDATA[Número de filas muestran en los resultados del módulo]]></language>
+      <language id="es"><![CDATA[Filas de resultados por módulo]]></language>
       <language id="fr"><![CDATA[Nombre de lignes affichées sur le module des résultats]]></language>
     </name>
   </property>
