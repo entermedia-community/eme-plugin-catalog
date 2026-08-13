@@ -3,10 +3,10 @@
 <properties>
   <property tab="datamanager" id="datamanager" parentid="datamanager"  menulevel="toplevel" moduleid="system" path="/views/settings/lists/datamanager/list/index.html" menuicon="database" ordering="010">
   <name>
-      <language id="de"><![CDATA[Datamanager]]></language>
-      <language id="en"><![CDATA[Datamanager]]></language>
+      <language id="en"><![CDATA[Database]]></language>
+      <language id="de"><![CDATA[Datenbank]]></language>
       <language id="es"><![CDATA[Base de Datos]]></language>
-      <language id="fr"><![CDATA[Datamanager]]></language>
+      <language id="fr"><![CDATA[Base de Données]]></language>
     </name>
   </property>
   
