@@ -10,9 +10,9 @@
 		display="true" fileexportformat="${shortfilename}post.webp" transcoderid="imagemagick" 
 		inputtype="video|document|image" onimport="true" ordering="450" enforceaspectratio="true"  singlepage="true">Thumbnail Image JPG</preset>
 
-	<preset id="shareimage" guid="shareimage" 
+	<!-- preset id="shareimage" guid="shareimage" 
 		generatedoutputfile="image1200x628.jpg" outputextension="jpg" 
 		display="true" fileexportformat="${shortfilename}post.jpg" transcoderid="imagemagick" 
-		inputtype="video|document|image" onimport="true" ordering="455" enforceaspectratio="true"  singlepage="true">SEO Thumbnail JPG</preset>
+		inputtype="video|document|image" onimport="true" ordering="455" enforceaspectratio="true"  singlepage="true">SEO Thumbnail JPG</preset -->
 
 </presets>

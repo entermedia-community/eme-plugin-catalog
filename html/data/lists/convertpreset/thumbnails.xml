@@ -19,6 +19,6 @@
 
     <preset id="webpimagepreviewfpo" watermark="true" guid="webpimagepreviewfpo" systemdefinedpreset="true" display="true" generatedoutputfile="image3000x3000wm.webp" outputextension="webp" fileexportformat="${shortfilename}3000x3000-fpo.webp" transcoderid="imagemagick" extension="webp" inputtype="image|document" onimport="false" ordering="150" singlepage="true">Webp Image Large Watermarked</preset>
 
-    <preset id="webpwidesscreencrop" guid="webpimagewidesscreencrop" systemdefinedpreset="false" generatedoutputfile="image1920x500cropped.webp" outputextension="webp" display="true" fileexportformat="${shortfilename}1920x500cropped.webp" transcoderid="imagemagick" extension="webp" inputtype="image" onimport="false" ordering="180" enforceaspectratio="true" singlepage="true">Webp Image Widescreen Banner Crop</preset>
+    <preset id="webpwidesscreencrop" guid="webpimagewidesscreencrop" systemdefinedpreset="false" generatedoutputfile="image1920x500cropped.webp" outputextension="webp" display="false" fileexportformat="${shortfilename}1920x500cropped.webp" transcoderid="imagemagick" extension="webp" inputtype="image" onimport="false" ordering="180" enforceaspectratio="true" singlepage="true">Webp Image Widescreen Banner Crop</preset>
 
 </presets>                                                                                                                                                                                                    
