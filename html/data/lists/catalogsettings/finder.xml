@@ -5,7 +5,7 @@
 
 	<property id="stackedgalleryfield" value="assetttitle">Field to show on hover on the stacked gallery view</property>
 
-	<property id="sitetitle" value="eMedia Library">Application Site Title</property>
+	<property id="sitetitle" value="EME">Application Site Title</property>
 
 	<property id="guidelink" value="https://emedialibrary.com/knowledge/index.html">Guide</property>
 
