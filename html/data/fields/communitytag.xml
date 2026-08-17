@@ -27,10 +27,8 @@
   </property>  
   <property id="externaldomain" editable="true" index="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[External Domain]]></language>  
-      <language id="de"><![CDATA[Externe Domäne]]></language>
-      <language id="fr"><![CDATA[Domaine externe]]></language>
-      <language id="es"><![CDATA[Dominio externo]]></language>
+      <language id="en"><![CDATA[Site Root]]></language>  
+      <language id="de"><![CDATA[Stammseite]]></language>
     </name> 
   </property>  
   <property id="domainlist" editable="true" index="true" stored="true" viewtype="tageditor" indextype="analyzed" analyzer="tags"> 
