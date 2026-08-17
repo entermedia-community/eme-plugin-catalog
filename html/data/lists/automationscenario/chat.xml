@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<records> 
-  <data id="chat_detection" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false"> 
-    <name> 
-      <language id="en"><![CDATA[Auto Detect Chat]]></language>  
+<records>
+  <data id="chat_detection" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false">
+    <name>
+      <language id="en"><![CDATA[Auto Detect Chat]]></language>
       <language id="de"><![CDATA[Auto-Erkennung des Chats]]></language>
       <language id="fr"><![CDATA[Détection automatique du chat]]></language>
       <language id="es"><![CDATA[Detección automática de chat]]></language>
-    </name> 
-  </data>  
-  <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel"> 
-    <name> 
-      <language id="en"><![CDATA[Question Chat]]></language>  
+    </name>
+  </data>
+  <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
+    <name>
+      <language id="en"><![CDATA[Question Chat]]></language>
       <language id="de"><![CDATA[Chat-Frage]]></language>
       <language id="fr"><![CDATA[Question du chat]]></language>
       <language id="es"><![CDATA[Preguntas y respuestas]]></language>
-    </name> 
-  </data>  
-  <data id="chat_searching" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="chatlabel"> 
-    <name> 
-      <language id="en"><![CDATA[Search Chat]]></language>  
+    </name>
+  </data>
+  <data id="chat_searching" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="chatlabel">
+    <name>
+      <language id="en"><![CDATA[Search Chat]]></language>
       <language id="de"><![CDATA[Chat durchsuchen]]></language>
       <language id="fr"><![CDATA[Rechercher dans le chat]]></language>
       <language id="es"><![CDATA[Buscar en el chat]]></language>
-    </name> 
-  </data>  
-  <data id="chat_smartcreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel"> 
-    <name> 
-      <language id="en"><![CDATA[Smart Creator]]></language>  
+    </name>
+  </data>
+  <data id="chat_smartcreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
+    <name>
+      <language id="en"><![CDATA[Smart Creator]]></language>
       <language id="de"><![CDATA[Smart Creator]]></language>
       <language id="fr"><![CDATA[Créateur intelligent]]></language>
       <language id="es"><![CDATA[Creador inteligente]]></language>
-    </name> 
-  </data>  
-  <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel"> 
-    <name> 
-      <language id="en"><![CDATA[Tutor Chat]]></language>  
+    </name>
+  </data>
+  <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false" chatenabled="true" connectedtop="chatlabel">
+    <name>
+      <language id="en"><![CDATA[Tutor Chat]]></language>
       <language id="de"><![CDATA[Tutor-Chat]]></language>
       <language id="fr"><![CDATA[Chat avec le tuteur]]></language>
       <language id="es"><![CDATA[Chat con el tutor]]></language>
-    </name> 
-  </data> 
+    </name>
+  </data>
 </records>
