@@ -275,12 +275,28 @@
       <language id="es"><![CDATA[Módulo de búsqueda principal]]></language>
     </name>
   </property>
-  <property id="workspace" type="list" listid="workspace" editable="true" index="true" stored="true" internalfield="true" viewtype="multiselect">Workspace
+  <property id="workspace" type="list" listid="workspace" editable="true" index="true" stored="true" viewtype="multiselect">Workspace
     <name>
       <language id="en"><![CDATA[Workspace]]></language>
       <language id="de"><![CDATA[Arbeitsbereich]]></language>
       <language id="fr"><![CDATA[Espace de travail]]></language>
       <language id="es"><![CDATA[Espacio de trabajo]]></language>
+    </name>
+  </property>
+  <property id="dataconsent" type="boolean" editable="true" index="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[Data Consent]]></language>
+      <language id="de"><![CDATA[Datenschutz]]></language>
+      <language id="fr"><![CDATA[Consentement des données]]></language>
+      <language id="es"><![CDATA[Consentimiento de datos]]></language>
+    </name>
+  </property>
+  <property id="datadeleterequested" type="date" datatype="date" editable="true" index="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[Data Delete Requested]]></language>
+      <language id="de"><![CDATA[Datenschutz]]></language>
+      <language id="fr"><![CDATA[Demande de suppression de données]]></language>
+      <language id="es"><![CDATA[Solicitud de eliminación de datos]]></language>
     </name>
   </property>
 </properties>
