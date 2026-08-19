@@ -79,4 +79,14 @@
       <language id="es"><![CDATA[Logotipo]]></language>
     </name> 
   </property> 
+
+  <property id="defaultapplicationid" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Default Application]]></language>  
+      <language id="de"><![CDATA[Standardanwendung]]></language>
+      <language id="fr"><![CDATA[Application par défaut]]></language>
+      <language id="es"><![CDATA[Aplicación predeterminada]]></language>
+    </name>
+  </property>
+
 </properties>

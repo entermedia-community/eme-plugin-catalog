@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root> 
-  <data id="default" primaryimagepath="/theme/images/logos/oilogo.svg" externaldomain=""> 
+  <data id="default" primaryimagepath="/theme/images/logos/oilogo.svg" externaldomain="" defaultapplicationid="site/profile"> 
     <name> 
       <language id="en"><![CDATA[EME Server]]></language>  
       <language id="de"><![CDATA[EME-Server]]></language>

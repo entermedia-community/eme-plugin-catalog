@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+   <data id="goals_processing_start" aiskill="handleWebEventSkill" runoperation="goaltask.goalcreated" automationscenario="goals_manager" enabled="true" agenttype="eventagent">
+      <name>
+         <![CDATA[Event Handler]]>
+      </name>
+   </data>
+
+   <data id="goal_created" aiskill="goalTaskCreationSkill" automationscenario="goals_manager" runafter="goals_processing_start" enabled="true">
+   </data>
+
+</records> 

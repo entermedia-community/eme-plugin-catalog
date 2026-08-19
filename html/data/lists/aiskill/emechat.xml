@@ -18,6 +18,15 @@
       <language id="fr"><![CDATA[Répondant]]></language>
       <language id="es"><![CDATA[Respondedor]]></language>
     </name> 
+  </data> 
+
+  <data id="chatCreateGoalSkill" bean="chatCreateGoalSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Create Goal]]></language>
+      <language id="de"><![CDATA[Ziel erstellen]]></language>
+      <language id="fr"><![CDATA[Créer un objectif]]></language>
+      <language id="es"><![CDATA[Crear objetivo]]></language>
+    </name> 
   </data>  
 
   </results>

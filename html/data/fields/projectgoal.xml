@@ -11,10 +11,10 @@
   </property>  
   <property id="name" index="true" stored="true" editable="true" defaultoperation="contains"> 
     <name> 
-      <language id="en"><![CDATA[Description]]></language>  
-      <language id="es"><![CDATA[Descripción]]></language>  
-      <language id="de"><![CDATA[Beschreibung]]></language>
-      <language id="fr"><![CDATA[Description]]></language>
+      <language id="en"><![CDATA[Goal Name]]></language>  
+      <language id="es"><![CDATA[Nombre del objetivo]]></language>
+      <language id="de"><![CDATA[Zielname]]></language>
+      <language id="fr"><![CDATA[Nom de l'objectif]]></language>
     </name> 
   </property>  
   <property id="details" index="true" stored="true" editable="true"> 
@@ -209,4 +209,12 @@
       <language id="fr"><![CDATA[Rédacteur en chef]]></language>
     </name> 
   </property> 
+  <property id="taggedbyllm" type="boolean" index="true" stored="true" editable="true"> 
+    <name> 
+      <language id="en">Tagged by LLM</language>  
+      <language id="de"><![CDATA[Von einem LLM markiert]]></language>
+      <language id="fr"><![CDATA[Étiqueté par LLM]]></language>
+      <language id="es"><![CDATA[Etiquetado por LLM]]></language>
+    </name> 
+  </property>  
 </properties>

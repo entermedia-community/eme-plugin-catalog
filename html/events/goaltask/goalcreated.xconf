@@ -1,0 +1,7 @@
+<page>
+	<property name="eventname">Goal Created</property>	
+	<property name="eventdescription">Goal created, make a plan for tasks</property>
+	<property name="enabled">true</property>
+
+	
+</page>

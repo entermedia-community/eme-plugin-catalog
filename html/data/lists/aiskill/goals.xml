@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<results> 
+
+<data id="goalTaskCreationSkill" bean="goalTaskCreationSkill" agenttype="remoteagent" ordering="10" > 
+    <name> 
+      <language id="en"><![CDATA[Goal Planning]]></language>
+      <language id="de"><![CDATA[Zielplanung]]></language>
+      <language id="fr"><![CDATA[Planification des objectifs]]></language>
+      <language id="es"><![CDATA[Planificación de objetivos]]></language>
+    </name> 
+  </data> 
+</results>
