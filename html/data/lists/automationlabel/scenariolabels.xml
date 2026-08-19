@@ -9,10 +9,13 @@
   <data id="contentcreationlabel" strokecolor="rgba(59,0,102,1)" bgcolor="rgba(75,0,130,1)" text="eContent">
     <name/>
   </data>
-  <data id="chatlabel" strokecolor="rgba(30,124,21,1)" bgcolor="rgba(36,37,41,1)" text="eChat">
+  <data id="chatlabel" strokecolor="rgba(30,124,21,1)" bgcolor="rgba(36,37,41,1)" text="Entity Chat">
     <name/>
   </data>
   <data id="importinglabel" strokecolor="rgba(102,0,102,1)" bgcolor="rgba(128,0,128,1)" text="eMemory">
+    <name/>
+  </data>
+  <data id="agentchatlabel" strokecolor="rgba(30,124,21,1)" bgcolor="rgba(36,37,41,1)" text="Agent Chat">
     <name/>
   </data>
 </root>

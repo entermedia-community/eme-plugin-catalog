@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records> 
-  <data id="goals_manager" ordering="50" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="false"> 
+  <data id="goals_manager" ordering="56" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="false"> 
     <name> 
       <language id="en"><![CDATA[Goals Manager]]></language>
       <language id="de"><![CDATA[Ziele Manager]]></language>

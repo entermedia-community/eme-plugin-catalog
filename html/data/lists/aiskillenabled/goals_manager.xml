@@ -7,7 +7,7 @@
       </name>
    </data>
 
-   <data id="goal_created" aiskill="goalTaskCreationSkill" automationscenario="goals_manager" runafter="goals_processing_start" enabled="true">
+   <data id="goal_task_create" aiskill="goalTaskCreationSkill" automationscenario="goals_manager" runafter="goals_processing_start" enabled="true">
    </data>
 
 </records> 

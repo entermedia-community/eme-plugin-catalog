@@ -12,10 +12,4 @@
       </name>
    </data>
 
-   <data id="task_create" aiskill="chatCreateGoalSkill" automationscenario="emechat_responder" enabled="true" agenttype="eventagent"  processingmessage="Thinking" >
-      <name>
-         <![CDATA[Create Task]]>
-      </name>
-   </data>
-
    </records>

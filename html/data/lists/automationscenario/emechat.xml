@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records> 
-  <data id="emechat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="false"> 
+  <data id="emechat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="agentchatlabel" chatenabled="false"> 
     <name> 
       <language id="en"><![CDATA[EME Team Chat]]></language>
       <language id="de"><![CDATA[EME Team Chat]]></language>
       <language id="fr"><![CDATA[EME Team Chat]]></language>
       <language id="es"><![CDATA[Chat de EME]]></language>
+      
+    </name> 
+  </data>  
+  <data id="emechat_goal_manager" ordering="55" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="agentchatlabel" chatenabled="false">
+    <name> 
+      <language id="en"><![CDATA[EME Chat Goals]]></language>
+      <language id="de"><![CDATA[EME Chat Goals]]></language>
+      <language id="fr"><![CDATA[EME Chat Goals]]></language>
+      <language id="es"><![CDATA[Objetivos de Chat de EME]]></language>
       
     </name> 
   </data>  
