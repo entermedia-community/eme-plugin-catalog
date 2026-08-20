@@ -15,7 +15,7 @@
   <data id="importinglabel" strokecolor="rgba(102,0,102,1)" bgcolor="rgba(128,0,128,1)" text="eMemory">
     <name/>
   </data>
-  <data id="agentchatlabel" strokecolor="rgba(30,124,21,1)" bgcolor="rgba(36,37,41,1)" text="Agent Chat">
+  <data id="agentchatlabel" strokecolor="rgb(73, 60, 37)" bgcolor="rgb(94, 80, 54)" text="Agent Chat">
     <name/>
   </data>
 </root>

@@ -13,9 +13,12 @@
   <data id="chat_questions" posx="2018.8133498055631" posy="1841.0085454073098"> 
     <name/> 
   </data>  
-  <data id="email" posx="1266.7373910107153" posy="2374.9469567419637"> 
+  <data id="email" posx="1266.7373910107153" posy="2441.4128425331105"> 
     <name/> 
   </data>  
+  <data id="goals_manager" posx="918.5356588208558" posy="2441.4128425331105">
+    <name/>
+  </data>
   <data id="chat_detection" posx="1522.1769502804211" posy="1954.279234108336"> 
     <name/> 
   </data>  
@@ -55,19 +58,20 @@
   <data id="importinglabel" posx="1141.1033816425122" posy="1428.9512077294685">
     <name/>
   </data>
-  <data id="emechat_responder" posx="1881.6286892470935" posy="2691.1838406669076">
-    <name/>
-  </data>
-
+  
   <data id="agentchatlabel" posx="1994.746020357742" posy="2533.460873681781">
     <name/>
   </data>
-  <data id="emechat_goal_manager" posx="2148.4843441444505" posy="2686.0810783164693">
+  <data id="emechat_responder" posx="1761.6286892470935" posy="2691.1838406669076">
     <name/>
   </data>
-  <data id="goals_manager" posx="868.5356588208558" posy="2441.4128425331105">
+  <data id="emeteamchat_responder" posx="2053.6286892470935" posy="2691.1838406669076">
     <name/>
   </data>
+    <data id="emechat_goal_manager" posx="2299.4843441444505" posy="2691.0810783164693">
+    <name/>
+  </data>
+  
 
 
   

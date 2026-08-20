@@ -20,6 +20,15 @@
     </name> 
   </data> 
 
+  <data id="emeTeamChatRespondSkill" bean="emeTeamChatRespondSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Team Chat Responder]]></language>  
+      <language id="de"><![CDATA[Team-Chat-Antwortgeber]]></language>
+      <language id="fr"><![CDATA[Répondant au chat d'équipe]]></language>
+      <language id="es"><![CDATA[Respondedor de chat de equipo]]></language>
+    </name> 
+  </data>
+
   <data id="chatCreateGoalSkill" bean="chatCreateGoalSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Create Goal]]></language>
