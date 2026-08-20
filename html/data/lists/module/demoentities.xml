@@ -36,7 +36,7 @@
       <language id="fr"><![CDATA[Pages du document]]></language>
     </name> 
   </data>  
-  <data id="entityarticle" isentity="true" moduleicon="file-earmark-post" semanticenabled="true" showonsearch="true" moduleresultsview="table" uploadsourcepath="Articles/${data.entity_date.YYYY}/${data.name}"> 
+  <data id="entityarticle" isentity="true" moduleicon="file-earmark-post" semanticenabled="true" showonsearch="true" moduleresultsview="table" uploadsourcepath="Articles/${data.entity_date.YYYY}/${data.name}" aicreationmethod="smartcreator"> 
     <name> 
       <language id="en"><![CDATA[Articles]]></language>  
       <language id="es"><![CDATA[Artículos]]></language>  
@@ -84,4 +84,12 @@
       <language id="fr"><![CDATA[Versions de rendu]]></language>
     </name> 
   </data> 
+  <data id="aitutorial" isentity="true" moduleicon="file-earmark-post" semanticenabled="true" showonsearch="true" moduleresultsview="table" uploadsourcepath="Tutorials/${data.entity_date.YYYY}/${data.name}" aicreationmethod="smartcreator"> 
+    <name> 
+      <language id="en"><![CDATA[AI Tutorials]]></language>  
+      <language id="es"><![CDATA[Tutoriales de IA]]></language>  
+      <language id="de"><![CDATA[KI-Tutorials]]></language>
+      <language id="fr"><![CDATA[Tutoriels d'IA]]></language>
+    </name> 
+  </data>
 </root>
