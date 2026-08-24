@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true" multilanguage="false" rendermask="${data.aiskill.name}"> 
+  <property id="name" editable="true" index="true" stored="true" multilanguage="true" rendermask="${data.aiskill.name}"> 
     <name> 
       <language id="en"><![CDATA[Custom Name]]></language>  
       <language id="de"><![CDATA[Benutzername]]></language>
