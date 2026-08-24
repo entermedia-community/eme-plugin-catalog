@@ -73,6 +73,14 @@
       <language id="fr"><![CDATA[Prêt à commencer]]></language>
     </name> 
   </data>  
+  <data id="pendinguserapproval"> 
+    <name> 
+      <language id="en"><![CDATA[Pending User Approval]]></language>  
+      <language id="es"><![CDATA[Pendiente de aprobación del usuario]]></language>  
+      <language id="de"><![CDATA[Ausstehende Benutzerfreigabe]]></language>
+      <language id="fr"><![CDATA[En attente de l'approbation de l'utilisateur]]></language>
+    </name> 
+  </data>  
   <data id="urgent"> 
     <name> 
       <language id="en"><![CDATA[Urgent]]></language>  

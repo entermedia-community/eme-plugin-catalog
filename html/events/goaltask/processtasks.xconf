@@ -1,0 +1,6 @@
+<page>
+	<property name="eventname">Process Tasks With AI</property>	
+	<property name="eventdescription">Look for pending tasks and chat about them</property>
+	<property name="enabled">true</property>
+	<property name="period">5m</property>
+</page>

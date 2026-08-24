@@ -10,4 +10,11 @@
       <language id="es"><![CDATA[Planificación de objetivos]]></language>
     </name> 
   </data> 
+
+  <data id="goalProcessorSkill" bean="goalProcessorSkill" agenttype="remoteagent" ordering="10" > 
+    <name> 
+      <language id="en"><![CDATA[Goal Scanner]]></language>
+    </name> 
+  </data> 
+
 </results>

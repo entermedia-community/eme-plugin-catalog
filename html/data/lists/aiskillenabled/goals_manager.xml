@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-   <data id="goals_processing_start" aiskill="handleWebEventSkill" runoperation="goaltask.goalcreated" automationscenario="goals_manager" enabled="true" agenttype="eventagent">
+   <data id="goals_processing_start"  runoperation="goaltask.processtasks"  aiskill="handleWebEventSkill" automationscenario="goals_manager" enabled="true" agenttype="eventagent">
       <name>
-         <![CDATA[Event Handler]]>
+         <language id="en"><![CDATA[Process Task Scheduler]]></language>  
       </name>
    </data>
 
-   <data id="goal_task_create" aiskill="goalTaskCreationSkill" automationscenario="goals_manager" runafter="goals_processing_start" enabled="true">
+   <data id="goalProcessorSkill" aiskill="goalProcessorSkill" automationscenario="goals_manager" enabled="true" agenttype="eventagent" runafter="goals_processing_start">
+      <name>
+         <![CDATA[Goal Processing]]>
+      </name>
    </data>
+
 
 </records> 
