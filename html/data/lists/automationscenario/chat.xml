@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Creador inteligente]]></language>
     </name>
   </data>
-  <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false" chatenabled="true" connectedtop="chatlabel">
+  <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false"  connectedtop="chatlabel">
     <name>
       <language id="en"><![CDATA[Tutor Chat]]></language>
       <language id="de"><![CDATA[Tutor-Chat]]></language>
