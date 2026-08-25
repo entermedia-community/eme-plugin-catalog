@@ -1,5 +1,5 @@
 #
-#Thu Aug 13 11:05:12 CST 2026
+#Tue Aug 25 23:16:34 BDT 2026
 (A)=(A) Los Estados miembros
 (B)=(B) El Consejo
 (C)=(C) El Consejo
@@ -46,6 +46,7 @@ Groups=Grupos
 Id=Identificaci\u00F3n
 Instagram=Instagram
 LLM\ Error=Error del LLM
+Menu\ Level=Nivel de men\u00FA
 Name=Nombre
 Option\ (A)=Opci\u00F3n (A)
 Option\ (B)=Opci\u00F3n (B)
@@ -67,6 +68,7 @@ Tagged\ by\ LLM=Etiquetado por LLM
 Topic=Tema
 Total\ Pages=Total de p\u00E1ginas
 Tutorial=Tutor\u00EDa
+Tutorials=Tutoriales
 Users=Usuarios
 Viewer\ Groups=Grupos de espectadores
 Viewer\ Roles=Roles de los espectadores
