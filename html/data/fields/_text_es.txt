@@ -1,5 +1,5 @@
 #
-#Tue Aug 25 23:16:34 BDT 2026
+#Wed Aug 26 00:44:37 BDT 2026
 (A)=(A) Los Estados miembros
 (B)=(B) El Consejo
 (C)=(C) El Consejo
@@ -42,6 +42,7 @@ Entity\ Folder\ Mask=M\u00E1scara de carpeta de entidad
 Entity\ Source\ Type=Tipo de entidad de origen
 Explanation=Explicaci\u00F3n
 Facebook=Facebook
+Grade=Clasificaci\u00F3n
 Groups=Grupos
 Id=Identificaci\u00F3n
 Instagram=Instagram
@@ -52,6 +53,8 @@ Option\ (A)=Opci\u00F3n (A)
 Option\ (B)=Opci\u00F3n (B)
 Option\ (C)=Opci\u00F3n (C)
 Option\ (D)=Opci\u00F3n (D)
+Option\ (E)=Opci\u00F3n (E)
+Option\ (F)=Opci\u00F3n (F)
 Permissions\ Updated\ Date=Fecha de actualizaci\u00F3n de permisos
 Portrait\ Photo=Foto de perfil
 Question=\u00BFCu\u00E1l es el problema?
