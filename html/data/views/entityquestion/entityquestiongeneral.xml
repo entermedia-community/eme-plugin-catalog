@@ -6,6 +6,8 @@
   <property id="option_b" />
   <property id="option_c" />
   <property id="option_d" />
+  <property id="option_e" />
+  <property id="option_f" />
   <property id="correctoption" />
   <property id="rationale" />
   <property id="mcqcognitivelevel" />
