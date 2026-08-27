@@ -4,4 +4,12 @@
   <data id="emeprofilegeneral" moduleid="emeprofile">
     <name><![CDATA[Edit Profile]]></name>
   </data>
+
+  <data id="emeprofileentityasset" moduleid="emeprofile" rendertype="entitysubmodules"  systemdefined="false" renderexternalid="emeprofile" rendertable="entityasset">
+    <name>
+      <language id="en"><![CDATA[Memory]]></language>
+      <language id="es"><![CDATA[Memoria]]></language>
+      
+    </name>
+  </data>
 </properties>
