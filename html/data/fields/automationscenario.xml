@@ -89,4 +89,13 @@
       <language id="es"><![CDATA[Conector superior]]></language>
     </name> 
   </property> 
+
+  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown"> 
+    <name> 
+      <language id="en"><![CDATA[Markdown Content]]></language>  
+      <language id="de"><![CDATA[Markdown-Inhalt]]></language>
+      <language id="fr"><![CDATA[Contenu au format Markdown]]></language>
+      <language id="es"><![CDATA[Contenido Markdown]]></language>
+    </name> 
+  </property> 
 </properties>

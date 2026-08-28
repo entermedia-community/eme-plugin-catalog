@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records> 
+  <data id="image_creation" ordering="10" enabled="true" isvisible="true" connectedtop="contentcreationlabel" chatenabled="false" markdowncontent="This scenario will create images based on the prompt you provide. You can specify the number of images to generate and the desired size. The generated images will be saved in the specified folder."> 
+    <name> 
+      <language id="en"><![CDATA[Create Images]]></language>  
+      <language id="de"><![CDATA[Bilder erstellen]]></language>
+      <language id="fr"><![CDATA[Créer des images]]></language>
+      <language id="es"><![CDATA[Crear imágenes]]></language>
+    </name> 
+  </data> 
+</records>

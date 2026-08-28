@@ -9,4 +9,8 @@
    <data id="goaltask" autocreatedeep="0" showonsearch="true" securityenabled="false" ordering="300" autocreateentities="false" semanticenabled="true" isentity="true" enableuploading="true" moduleicon="file-earmark-richtext">
     <name><![CDATA[Tasks]]></name>
   </data>
+
+  <data id="automationscenario" showonsearch="false" securityenabled="false" ordering="0" autocreateentities="false" semanticenabled="true" isentity="false" enableuploading="false" moduleicon="file-earmark-richtext">
+    <name><![CDATA[Automation Scenarios]]></name> 
+    </data>
 </root>

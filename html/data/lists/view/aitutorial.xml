@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+
+    <data id="aitutorialsmart_creator" renderexternalid="aitutorial" showonsearch="false" deleted="false" byassettype="false" ordering="1781293923831" systemdefined="false" renderinternalid="id" rendertype="tabsmartcreator" moduleid="aitutorial"> 
+    <name><![CDATA[Smart Creator]]></name> 
+  </data>  
+  <data id="aitutorialpreview" renderexternalid="aitutorial" showonsearch="false" deleted="false" byassettype="false" ordering="1781293938780" systemdefined="false" renderinternalid="id" rendertype="tabsmartcreatorpreview" moduleid="aitutorial">
+    <name><![CDATA[Preview]]></name>
+  </data> 
+
+  <data id="aitutoriallightboxes" deleted="true" moduleid="aitutorial">
+    <name><![CDATA[Files]]></name>
+  </data>
+</properties>
