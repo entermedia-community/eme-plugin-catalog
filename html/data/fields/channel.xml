@@ -42,7 +42,15 @@
       <language id="fr"><![CDATA[type de recherche]]></language>
       <language id="es"><![CDATA[Tipo de búsqueda]]></language>
     </name> 
-  </property>  
+  </property> 
+  <property id="channelstatus" index="true" type="list" listid="channelstatus"  stored="true" editable="true">New 
+    <name> 
+      <language id="en"><![CDATA[Channel Status]]></language>  
+      <language id="de"><![CDATA[Kanalstatus]]></language>
+      <language id="fr"><![CDATA[Statut du canal]]></language>
+      <language id="es"><![CDATA[Estado del canal]]></language>
+    </name> 
+  </property> 
   <property id="chatapplicationid" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
       <language id="en"><![CDATA[Chat Application Id]]></language>  
