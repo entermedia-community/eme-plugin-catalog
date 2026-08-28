@@ -31,6 +31,12 @@
       <language id="en"><![CDATA[Date Created]]></language>
     </name>
   </property>
+  
+  <property id="lastpenalty" type="date" index="true" editable="true" stored="true">Last Penalty
+    <name>
+      <language id="en"><![CDATA[Last Penalty]]></language>
+    </name>
+  </property>
 
   <property id="user" type="list" listid="user" index="true" editable="true" stored="true">User
     <name>
