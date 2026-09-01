@@ -11,9 +11,9 @@
     </name> 
   </data> 
 
-  <data id="goalProcessorSkill" bean="goalProcessorSkill" agenttype="remoteagent" ordering="10" > 
+  <data id="taskCreateChannelSkill" bean="taskCreateChannelSkill" agenttype="remoteagent" ordering="10" > 
     <name> 
-      <language id="en"><![CDATA[Goal Scanner]]></language>
+      <language id="en"><![CDATA[Task Channel Creation]]></language>
     </name> 
   </data> 
 

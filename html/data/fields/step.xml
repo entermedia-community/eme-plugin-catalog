@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties beanname="dataSearcher" prefix="steps">
+  <property id="id" index="true" stored="true" editable="true" internalfield="true">
+    <name>
+      <language id="en">Id</language>
+    </name>
+  </property>
+
+  <property id="name" index="true" stored="true" editable="true">
+    <name>
+      <language id="en">Step Name</language>
+    </name>
+  </property>
+
+  <property id="jobid" index="true" stored="true" editable="true" type="list" listid="job">
+    <name>
+      <language id="en">Job</language>
+    </name>
+  </property>
+
+  <property id="ordering" index="true" stored="true" editable="true" type="number">
+    <name>
+      <language id="en">Ordering</language>
+    </name>
+  </property>
+
+  <property id="aiskillid" index="true" stored="true" editable="true" type="list" listid="aiskill">
+    <name>
+      <language id="en">Skill</language>
+    </name>
+  </property>
+
+  <property id="workflowid" index="true" stored="true" editable="true" type="list" listid="automationscenario">
+    <name>
+      <language id="en">Workflow</language>
+    </name>
+  </property>
+
+  <property id="status" index="true" stored="true" editable="true" type="list" listid="jobstatus">
+    <name>
+      <language id="en">Status</language>
+    </name>
+  </property>
+
+  <property id="inputparameters" index="true" stored="true" editable="true" viewtype="json">
+    <name>
+      <language id="en">Input Parameters</language>
+    </name>
+  </property>
+
+  <property id="outputvalues" index="true" stored="true" editable="true" viewtype="json">
+    <name>
+      <language id="en">Output Values</language>
+    </name>
+  </property>
+
+  <property id="errordetails" index="true" stored="true" editable="true">
+    <name>
+      <language id="en">Error Details</language>
+    </name>
+  </property>
+</properties>

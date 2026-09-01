@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-   <data id="goals_processing_start"  runoperation="goaltask.processtasks"  aiskill="handleWebEventSkill" automationscenario="goals_manager" enabled="true" agenttype="eventagent">
+   <data id="goals_processing_start"  runoperation="goaltask.processtasks"  aiskill="handleWebEventSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent">
       <name>
-         <language id="en"><![CDATA[Process Task Scheduler]]></language>  
+         <language id="en"><![CDATA[Create Tasks]]></language>  
       </name>
    </data>
 
-   <data id="goalProcessorSkill" aiskill="goalProcessorSkill" automationscenario="goals_manager" enabled="true" agenttype="eventagent" runafter="goals_processing_start">
+   <data id="taskCreateChannelSkill" aiskill="taskCreateChannelSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent" runafter="goals_processing_start">
       <name>
-         <![CDATA[Goal Processing]]>
+         <![CDATA[Task Channel Creation]]>
       </name>
    </data>
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records> 
+  <data id="task_creation" ordering="56" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Task Creation]]></language>      
+    </name> 
+  </data>  
+</records>
