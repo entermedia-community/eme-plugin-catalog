@@ -2,15 +2,21 @@
 
 <properties beanname="dataSearcher">
 
+ <property id="id" index="true" stored="true" editable="true" internalfield="true">New 
+    <name>  
+      <language id="en"><![CDATA[Id]]></language>   
+    </name> 
+  </property>  
+
   <property id="sectionid" type="list" listid="componentsection" index="true" editable="true" stored="true">Section
     <name>
       <language id="en"><![CDATA[Section]]></language>
     </name>
   </property>
 
-  <property id="date" index="true" editable="true" stored="true">Date
+  <property id="challengedate" type="date" viewtype="datetime" index="true" editable="true" stored="true">Challenge Date
     <name>
-      <language id="en"><![CDATA[Date]]></language>
+      <language id="en"><![CDATA[Challenge Date]]></language>
     </name>
   </property>
 
