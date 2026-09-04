@@ -1,16 +1,22 @@
 <results>
 
-   <data id="import_youtube" bean="youtubeImporterSkill" agenttype="taskagent" ordering="10">
-      <name>
-         <![CDATA[Import YouTube]]>
-      </name>
-   </data>
+  <data id="import_youtube" bean="youtubeImporterSkill" agenttype="taskagent" ordering="10">
+    <name>
+      <![CDATA[Import YouTube]]>
+    </name>
+    <skilloverview>
+      <language id="en"><![CDATA[Fetches video metadata and media from YouTube URLs using YouTube Data API and parser.]]></language>
+    </skilloverview>
+  </data>
 
-   <data id="face_detection" bean="faceDetectionAgent" agenttype="taskagent" ordering="10">
-      <name>
-         <![CDATA[Face Detection]]>
-      </name>
-   </data>
+  <data id="face_detection" bean="faceDetectionAgent" agenttype="taskagent" ordering="10">
+    <name>
+      <![CDATA[Face Detection]]>
+    </name>
+    <skilloverview>
+      <language id="en"><![CDATA[Detects and extracts facial profiles and bounding coordinates from visual assets.]]></language>
+    </skilloverview>
+  </data>
 
 
 </results>

@@ -8,5 +8,8 @@
       <language id="fr"><![CDATA[CCP : Client général]]></language>
       <language id="es"><![CDATA[MCP: Cliente general]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Connects to Model Context Protocol (MCP) servers to discover tools and execute remote MCP tool calls.]]></language>
+    </skilloverview>
   </data> 
 </results>

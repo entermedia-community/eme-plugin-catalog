@@ -1,17 +1,23 @@
 <records>
 
 
-<data id="questionsMakeSuggestionsSkill" bean="questionsMakeSuggestionsSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10">
-      <name>
-         <![CDATA[Questions Make Suggestions]]>
-      </name>
-   </data>
+  <data id="questionsMakeSuggestionsSkill" bean="questionsMakeSuggestionsSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10">
+    <name>
+      <![CDATA[Questions Make Suggestions]]>
+    </name>
+    <skilloverview>
+      <language id="en"><![CDATA[Analyzes entity embedded text and generates contextual question suggestions for the user.]]></language>
+    </skilloverview>
+  </data>
 
-<data id="questionsAskSkill" bean="questionsAskSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10">
-      <name>
-         <![CDATA[Questions Ask]]>
-      </name>
-   </data>
+  <data id="questionsAskSkill" bean="questionsAskSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10">
+    <name>
+      <![CDATA[Questions Ask]]>
+    </name>
+    <skilloverview>
+      <language id="en"><![CDATA[Searches embedded vector documents to find answers to user questions and returns structured answers with citations.]]></language>
+    </skilloverview>
+  </data>
 
 
 </records>

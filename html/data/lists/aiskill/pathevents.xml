@@ -514,13 +514,16 @@
       <language id="es"><![CDATA[LLM: Actualizar servidores de IA]]></language>
     </name> 
   </data>  
-  <data id="llm_createassets" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createassets" skilloverview="Loop contentcreator table for rows with status field 'newimage' "> 
+  <data id="llm_createassets" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createassets"> 
     <name> 
       <language id="en"><![CDATA[Llm: AI Image Generation]]></language>  
       <language id="de"><![CDATA[LLM: KI-Bildgenerierung]]></language>
       <language id="fr"><![CDATA[Génération d'images par IA]]></language>
       <language id="es"><![CDATA[LLM: Generación de imágenes con IA]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Loops over contentcreator records with status 'newimage' to generate AI images.]]></language>
+    </skilloverview>
   </data>   
   <data id="llm_addmetadata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmetadata"> 
     <name> 

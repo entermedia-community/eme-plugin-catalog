@@ -8,6 +8,9 @@
       <language id="fr"><![CDATA[Vérification conditionnelle]]></language>
       <language id="es"><![CDATA[Comprobación condicional programática]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Evaluates programmatic Java conditions and branching logic within automation scenarios.]]></language>
+    </skilloverview>
   </data>  
   <data id="toolifcheck" bean="llmToolAgent" enabled="true" ordering="10" agenttype="logicagent"> 
     <name> 
@@ -16,6 +19,9 @@
       <language id="fr"><![CDATA[LLM : Vérifier]]></language>
       <language id="es"><![CDATA[LLM Si Comprobar]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Evaluates dynamic branching conditions and tool selection rules using LLM decision logic.]]></language>
+    </skilloverview>
   </data>  
   <data id="copyWebRequest" bean="copyWebRequestAgent" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -24,6 +30,9 @@
       <language id="fr"><![CDATA[Gérer une requête Web]]></language>
       <language id="es"><![CDATA[Gestión de solicitudes web]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Copies parameters, user profile, and session context from the active web request into the agent context.]]></language>
+    </skilloverview>
   </data>  
   <data id="runEventSkill" bean="runEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -32,6 +41,9 @@
       <language id="fr"><![CDATA[Événement d'exécution]]></language>
       <language id="es"><![CDATA[Ejecutar el evento]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Runs a configured path event within the current catalog and propagates agent execution context.]]></language>
+    </skilloverview>
   </data>  
   <data id="runSharedEventSkill" bean="runSharedEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -40,6 +52,9 @@
       <language id="fr"><![CDATA[Exécuter l'événement dans le thread]]></language>
       <language id="es"><![CDATA[Ejecutar el evento en un hilo]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Runs a shared path event asynchronously across threads and catalog scopes.]]></language>
+    </skilloverview>
   </data>  
   <data id="runModuleSkill" bean="runModuleSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -48,6 +63,9 @@
       <language id="fr"><![CDATA[Exécuter l'événement du module]]></language>
       <language id="es"><![CDATA[Ejecutar el evento del módulo]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Dynamically invokes a module method or action using the module manager and current web request context.]]></language>
+    </skilloverview>
   </data>  
   <data id="handleWebEventSkill" bean="handleWebEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -56,5 +74,8 @@
       <language id="fr"><![CDATA[Gérer l'événement Web]]></language>
       <language id="es"><![CDATA[Gestionar el evento web]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Handles incoming web events, binds entity module parameters to agent context, and routes execution to the next enabled skill step.]]></language>
+    </skilloverview>
   </data> 
 </records>

@@ -8,9 +8,9 @@
       <language id="fr"><![CDATA[Agent informatique]]></language>
       <language id="es"><![CDATA[Agente de informática]]></language>
     </name>  
-    <defaultskilloverview> 
-      <language id="en"><![CDATA[Loop over all the entites and assets that have been edited within the last 30 days and not processed]]></language> 
-    </defaultskilloverview> 
+    <skilloverview> 
+      <language id="en"><![CDATA[Loops over recently edited or pending assets and entities to run automated informatics processing pipelines.]]></language> 
+    </skilloverview> 
   </data>  
   <data id="entityassetsplitting" bean="documentSplitterSkill" searchtype="entityasset" generatedsearchtype="entityassetpage" contextbean="informaticsContext" enabled="true" agenttype="taskagent" generatemarkdown="true" ordering="50"> 
     <name> 
@@ -19,9 +19,9 @@
       <language id="fr"><![CDATA[Découpage des actifs de l'entité]]></language>
       <language id="es"><![CDATA[División de activos de la entidad]]></language>
     </name>  
-    <defaultskilloverview> 
-      <language id="en"><![CDATA[Break down text into smaller segments of 2000 characters each]]></language> 
-    </defaultskilloverview> 
+    <skilloverview> 
+      <language id="en"><![CDATA[Splits entity asset text content into smaller page segments (e.g. 2000 characters) for vector embedding and analysis.]]></language> 
+    </skilloverview> 
   </data>  
   <data id="documentsplitting" bean="documentSplitterSkill" searchtype="entitydocument" generatedsearchtype="entitydocumentpage" contextbean="informaticsContext" enabled="true" agenttype="taskagent" generatemarkdown="true" ordering="50"> 
     <name> 
@@ -30,9 +30,9 @@
       <language id="fr"><![CDATA[Découpage du document]]></language>
       <language id="es"><![CDATA[División de documentos]]></language>
     </name>  
-    <defaultskilloverview> 
-      <language id="en"><![CDATA[Break down text into smaller segments of 2000 characters each]]></language> 
-    </defaultskilloverview> 
+    <skilloverview> 
+      <language id="en"><![CDATA[Splits entity document text into smaller page chunks for granular semantic search and embedding.]]></language> 
+    </skilloverview> 
   </data>  
   <data id="autotranscribe" bean="transcriberSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Transcribe audio or video content with timestamps" ordering="100"> 
     <name> 
@@ -41,6 +41,9 @@
       <language id="fr"><![CDATA[Transcription automatique]]></language>
       <language id="es"><![CDATA[Transcripción automática]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Transcribes audio and video media files into text with timestamps using automated transcription services.]]></language>
+    </skilloverview>
   </data>  
   <data id="classify" bean="classifySkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" fieldsavevector="vectorarray" aicreationdescription="You are an assistant that analyzes a batch of metadata inputs and identifies a list of topics that describe the underlying concepts, emotions, actions, and themes. Focus on the essence of what is happening — abstract ideas, moods, and relationships — NOT generic object names unless they are essential to the concept. This topics are used for clustering, search, filtering, and recommendations." ordering="200"> 
     <name> 
@@ -49,6 +52,9 @@
       <language id="fr"><![CDATA[Classificateur de texte]]></language>
       <language id="es"><![CDATA[Clasificador de texto]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Analyzes text and metadata using LLM to classify content into conceptual themes, moods, and abstract topics.]]></language>
+    </skilloverview>
   </data>  
   <data id="autotranslate" bean="translationSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Translate fields that have values and are multi language" ordering="300"> 
     <name> 
@@ -57,6 +63,9 @@
       <language id="fr"><![CDATA[Traduction automatique]]></language>
       <language id="es"><![CDATA[Traducción automática]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Translates multi-language metadata fields in assets and records into target languages.]]></language>
+    </skilloverview>
   </data>  
   <data id="FixCustomFieldAgent" bean="fixCustomFieldSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Translate fields that have values and are multi language" ordering="300"> 
     <name> 
@@ -65,6 +74,9 @@
       <language id="fr"><![CDATA[Correction des traductions de champs personnalisés]]></language>
       <language id="es"><![CDATA[Corregir las traducciones de campos personalizados]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Preserves and restores organization credits and copyright tokens across translations for custom fields.]]></language>
+    </skilloverview>
   </data>  
   <data id="semantictopics" bean="semanticClassifierSkill" fieldname="semantictopics" searchtype="semanticembedding" contextbean="informaticsContext" enabled="true" agenttype="taskagent" fieldsavevector="vectorarray" aicreationdescription="You are an assistant that analyzes a batch of metadata inputs and creates a 3 very short semantic summary  in the same language as specified in the metadata that describe the underlying concepts, emotions, actions, and themes. Focus on the essence of what is happening, abstract ideas, moods, and relationships. NOT generic object names unless they are essential to the concept. This summaries are used for clustering, search, filtering, and recommendations. Each semantic summary should be 4 to 7 words. " aicreationcommand="Generate up to 3 semantic summary, in the same language as the content, based on the following metadata:" maxnumberofcentroids="4" init_loop_start_distance=".60" init_loop_lower_limit=".50" maxdistancetocentroid=".67" maxdistancetocentroid_one=".78" maxdistancetomatch=".455" ordering="400"> 
     <name> 
@@ -73,6 +85,9 @@
       <language id="fr"><![CDATA[Thèmes sémantiques]]></language>
       <language id="es"><![CDATA[Temas semánticos]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates concise semantic summaries (4 to 7 words) and assigns semantic topic centroids using vector distance matching.]]></language>
+    </skilloverview>
   </data>  
   <data id="aifunctionparameter" bean="semanticClassifierSkill" searchtype="aifunctionparameter" enabled="false" fieldsavevector="vectorarray" maxnumberofcentroids="4" init_loop_start_distance=".60" init_loop_lower_limit=".50" maxdistancetocentroid=".67" maxdistancetocentroid_one=".78" maxdistancetomatch=".455" ordering="1000"> 
     <name> 
@@ -81,6 +96,9 @@
       <language id="fr"><![CDATA[Liste des actions sémantiques]]></language>
       <language id="es"><![CDATA[Lista de acciones semánticas]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Clusters and categorizes AI function parameters using semantic vector similarity.]]></language>
+    </skilloverview>
   </data>  
   <data id="namedentityrecognition" bean="namedEntityRecognitionSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="(NER: Named Entity Recognition) is most useful when you need to extract concrete facts (companies, people, places, products) for building indexes, knowledge graphs, or searchable databases" aicreationdescription="You are an information extraction assistant. From the following text, extract a clean list of: Company Names and Place Names (cities, states, countries, or well-known places). Rules: Ignore street addresses, zip codes, URLs, hyperlinks, and email addresses. Do not include personal names (people) or abbreviations of city/states (e.g., CA, NY). Do not include duplicates, return each unique entry once. If no companies or places are found, return an empty array for that field." aicreationcommand="Extract a list of named entities from the following metadata:" ordering="600"> 
     <name> 
@@ -89,6 +107,9 @@
       <language id="fr"><![CDATA[Reconnaissance des entités nommées]]></language>
       <language id="es"><![CDATA[Reconocimiento de Entidades Nombradas]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Extracts named entities including company names and place names from text content using LLM fact extraction.]]></language>
+    </skilloverview>
   </data>  
   <data id="facedetect" bean="faceProfileSkill" searchtype="faceembedding" contextbean="informaticsContext" enabled="true" agenttype="taskagent" fieldsavevector="vectorarray" maxnumberofcentroids="4" init_loop_start_distance=".60" init_loop_lower_limit=".50" maxdistancetocentroid=".795" maxdistancetocentroid_one=".835" maxdistancetomatch=".648" notes="Face detection is the process of identifying and locating human faces in images or videos." ordering="700"> 
     <name> 
@@ -97,6 +118,9 @@
       <language id="fr"><![CDATA[Détection de visage]]></language>
       <language id="es"><![CDATA[Detección de rostros]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Detects human faces in visual media, extracts facial embeddings, and profiles individuals across assets.]]></language>
+    </skilloverview>
   </data>  
   <!-- Automatically embed entitydocument -->  
   <data id="documentEmbedding" bean="embeddingSkill" searchtype="entitydocument" contextbean="informaticsContext" enabled="true" agenttype="taskagent" ordering="800"> 
@@ -106,6 +130,9 @@
       <language id="fr"><![CDATA[Intégration du document]]></language>
       <language id="es"><![CDATA[Incrustación del documento]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates vector embeddings for entity documents to enable similarity and semantic search.]]></language>
+    </skilloverview>
   </data>  
   <!-- Automatically embed entityasset -->  
   <data id="entityAssetEmbedding" bean="embeddingSkill" searchtype="entityasset" contextbean="informaticsContext" enabled="true" agenttype="taskagent" ordering="800"> 
@@ -115,6 +142,9 @@
       <language id="fr"><![CDATA[Intégration des actifs de l'entité]]></language>
       <language id="es"><![CDATA[Incrustación de activos de la entidad]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates vector embeddings for entity assets to power AI semantic retrieval.]]></language>
+    </skilloverview>
   </data>  
   <!-- Automatically embed aitutorial -->  
   <data id="aitutorialsEmbedding" bean="embeddingSkill" searchtype="aitutorial" contextbean="informaticsContext" enabled="true" agenttype="taskagent" ordering="800"> 
@@ -124,6 +154,9 @@
       <language id="fr"><![CDATA[Tutoriels d'incrustage]]></language>
       <language id="es"><![CDATA[Tutoriales incrustados]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates vector embeddings for AI tutorial content and questions for interactive tutoring.]]></language>
+    </skilloverview>
   </data>  
   <!-- Manually trigger embedding on the fly  -->  
   <data id="embedding" bean="embeddingSkill" enabled="false" ordering="900"> 
@@ -133,5 +166,8 @@
       <language id="fr"><![CDATA[Enrichissement]]></language>
       <language id="es"><![CDATA[Incrustación]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates vector embeddings on the fly for arbitrary data records or text fields.]]></language>
+    </skilloverview>
   </data> 
 </records>

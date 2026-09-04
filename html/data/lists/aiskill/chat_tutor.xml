@@ -9,6 +9,9 @@
       <language id="fr"><![CDATA[Bienvenue dans le chat de tutorat.]]></language>
       <language id="es"><![CDATA[Bienvenido al Tutor Chat]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Initializes adaptive tutorial sessions, displays welcome greeting, and loads tutorial or daily challenge topics.]]></language>
+    </skilloverview>
   </data>  
   <data id="adaptiveTutorialContinueSkill" bean="adaptiveTutorialContinueSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="20"> 
     <name> 
@@ -17,6 +20,9 @@
       <language id="fr"><![CDATA[Continuer la discussion avec le tuteur]]></language>
       <language id="es"><![CDATA[Continuar el chat con el tutor]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Manages tutorial progression, selects the next section or question, and tracks user responses.]]></language>
+    </skilloverview>
   </data>  
   <data id="adaptiveTutorialAnswerSkill" bean="adaptiveTutorialAnswerSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="30"> 
     <name> 
@@ -25,6 +31,9 @@
       <language id="fr"><![CDATA[Réponse du chat du tuteur]]></language>
       <language id="es"><![CDATA[Respuesta del tutor en el chat]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Evaluates user answers against questions, calculates points based on cognitive level and confidence, and records results.]]></language>
+    </skilloverview>
   </data>  
   <data id="adaptiveTutorialProgressSkill" bean="adaptiveTutorialProgressSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="40"> 
     <name> 
@@ -33,6 +42,9 @@
       <language id="fr"><![CDATA[Progrès du tuteur]]></language>
       <language id="es"><![CDATA[Progreso del tutor]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Calculates cumulative tutorial scores, competency levels (beginner, competent, expert), and completion metrics.]]></language>
+    </skilloverview>
   </data>  
   <data id="adaptiveTutorialUserCommentSkill" bean="adaptiveTutorialUserCommentSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="50"> 
     <name> 
@@ -41,6 +53,9 @@
       <language id="fr"><![CDATA[Commentaire de l'utilisateur]]></language>
       <language id="es"><![CDATA[Comentario del usuario del tutor]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Answers user comments and questions during tutorials using embedding search over tutorial knowledge.]]></language>
+    </skilloverview>
   </data>  
   <data id="adaptiveTutorialEndSkill" bean="adaptiveTutorialEndSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="60"> 
     <name> 
@@ -49,5 +64,8 @@
       <language id="fr"><![CDATA[Fin de la discussion avec le tuteur]]></language>
       <language id="es"><![CDATA[Fin del chat con el tutor]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Concludes the adaptive tutorial session, marks the channel finished, and presents the final summary.]]></language>
+    </skilloverview>
   </data> 
 </records>

@@ -2,19 +2,25 @@
 
 <results> 
 
-<data id="goalTaskCreationSkill" bean="goalTaskCreationSkill" agenttype="remoteagent" ordering="10" > 
+  <data id="goalTaskCreationSkill" bean="goalTaskCreationSkill" agenttype="remoteagent" ordering="10" > 
     <name> 
       <language id="en"><![CDATA[Goal Planning]]></language>
       <language id="de"><![CDATA[Zielplanung]]></language>
       <language id="fr"><![CDATA[Planification des objectifs]]></language>
       <language id="es"><![CDATA[Planificación de objetivos]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Analyzes open project goals and uses LLM to generate actionable task outlines and subtasks.]]></language>
+    </skilloverview>
   </data> 
 
   <data id="taskCreateChannelSkill" bean="taskCreateChannelSkill" agenttype="remoteagent" ordering="10" > 
     <name> 
       <language id="en"><![CDATA[Task Channel Creation]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Monitors pending tasks for open goals and creates dedicated communication channels for collaboration.]]></language>
+    </skilloverview>
   </data> 
 
 </results>

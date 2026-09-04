@@ -3,6 +3,9 @@
 <records> 
   <data id="smartCreatorMakeSuggestionsSkill" bean="smartCreatorMakeSuggestionsSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10"> 
     <name> <![CDATA[Smart Creator Make Suggestions]]> </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates creative suggestions and topics for new content based on entity semantic topics.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartcreator_processpendingrecords" bean="smartCreatorProcessPendingSkill" agenttype="taskagent" ordering="20"> 
     <name> 
@@ -11,6 +14,9 @@
       <language id="fr"><![CDATA[Créateur intelligent : traitement des enregistrements en attente]]></language>
       <language id="es"><![CDATA[Creador inteligente: Procesar registros pendientes]]></language>
     </name>  
+    <skilloverview>
+      <language id="en"><![CDATA[Processes new pending records across target modules using LLM prompts to generate outlines and summaries.]]></language>
+    </skilloverview>
     <llmprompt> 
       <language id="en"><![CDATA[Create a brief outline about ${data.longcaption}. 
 	         For each outline topic, create a summary with a header, and paragraphs + lists (where necessary). 
@@ -24,6 +30,9 @@
       <language id="fr"><![CDATA[Créateur intelligent : retrouvez la mémoire]]></language>
       <language id="es"><![CDATA[Creador inteligente: encuentra la memoria]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Finds embedded memory files and reference documents relevant to the entity being created.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartCreatorParseUserPromptSkill" bean="smartCreatorParseUserPromptSkill" contextbean="chatMessageContext" agenttype="taskagent" ordering="20"> 
     <name> 
@@ -32,6 +41,9 @@
       <language id="fr"><![CDATA[Créateur intelligent : analysez la demande de l'utilisateur]]></language>
       <language id="es"><![CDATA[Creador inteligente: Análisis del prompt del usuario]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Parses user creation prompts into structured outline components and instructions.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartcreator_createoutline" bean="smartCreatorCreateOutlineSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -40,6 +52,9 @@
       <language id="fr"><![CDATA[Créateur intelligent : créez un plan]]></language>
       <language id="es"><![CDATA[Creador inteligente: Crear esquema]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates a structured section outline for new content using embedding knowledge and user prompts.]]></language>
+    </skilloverview>
   </data>  
   <data id="chatSmartCreatorConfirmationSkill" bean="chatSmartCreatorConfirmationSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10"> 
     <name> 
@@ -48,6 +63,9 @@
       <language id="fr"><![CDATA[Confirmation du Créateur intelligent]]></language>
       <language id="es"><![CDATA[Confirmación de Smart Creator]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Interactively presents proposed outlines to users in chat and refines them based on user feedback.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartcreator_createsections" bean="smartCreatorMakeSectionsSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -56,6 +74,9 @@
       <language id="fr"><![CDATA[Créateur intelligent : créer des sections]]></language>
       <language id="es"><![CDATA[Creador inteligente: Crear secciones]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates detailed markdown content for each confirmed section using embedded knowledge.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartcreator_createquestions" bean="smartCreatorCreateQuestionsSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -64,9 +85,15 @@
       <language id="fr"><![CDATA[Créateur intelligent : créez des questions]]></language>
       <language id="es"><![CDATA[Creador inteligente: Crea preguntas]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Automatically creates multiple-choice questions with answer keys from generated section content.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartCreatorRenderFinishedOutlineSkill" bean="smartCreatorRenderFinishedOutlineSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10"> 
     <name> <![CDATA[Smart Creator Render Finished Outline]]> </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Renders completed outline and sections into a finalized template preview in chat.]]></language>
+    </skilloverview>
   </data>  
   <data id="smartcreator_renderasset" bean="smartCreatorRenderAssetSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -75,5 +102,8 @@
       <language id="fr"><![CDATA[Créateur intelligent : Afficher du HTML]]></language>
       <language id="es"><![CDATA[Creador inteligente: Render HTML]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Renders generated entity content into HTML and exports it as a published media asset.]]></language>
+    </skilloverview>
   </data> 
 </records>

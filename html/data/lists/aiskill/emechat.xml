@@ -2,13 +2,16 @@
 
 <results> 
 
-<data id="emeChatDetectSkill" bean="emeChatDetectSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+  <data id="emeChatDetectSkill" bean="emeChatDetectSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Render Local Template]]></language>  
       <language id="de"><![CDATA[Lokale Vorlage rendern]]></language>
       <language id="fr"><![CDATA[Rendu du modèle local]]></language>
       <language id="es"><![CDATA[Plantilla local]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Detects chat intent and renders local chat templates for EME assistant interactions.]]></language>
+    </skilloverview>
   </data>  
 
   <data id="emeChatRespondSkill" bean="emeChatRespondSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
@@ -18,6 +21,9 @@
       <language id="fr"><![CDATA[Répondant]]></language>
       <language id="es"><![CDATA[Respondedor]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Generates direct conversational responses to user messages in EME chat channels.]]></language>
+    </skilloverview>
   </data> 
 
   <data id="emeTeamChatRespondSkill" bean="emeTeamChatRespondSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
@@ -27,6 +33,9 @@
       <language id="fr"><![CDATA[Répondant au chat d'équipe]]></language>
       <language id="es"><![CDATA[Respondedor de chat de equipo]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Coordinates team chat interactions, identifies required tools or scenarios, and delegates task execution.]]></language>
+    </skilloverview>
   </data>
 
   <data id="chatCreateGoalSkill" bean="chatCreateGoalSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
@@ -36,6 +45,9 @@
       <language id="fr"><![CDATA[Créer un objectif]]></language>
       <language id="es"><![CDATA[Crear objetivo]]></language>
     </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Extracts goals from chat conversations and initializes new project goals with assigned owners.]]></language>
+    </skilloverview>
   </data>  
 
   </results>

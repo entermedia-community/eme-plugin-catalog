@@ -2,13 +2,16 @@
 
 <results>
 
-  <data id="fileOperationSkill" bean="fileOperationSkill" agenttype="taskagent" ordering="10" skilloverview="Read or Write text content from files. Support file path resolution and validation, handle overwrite protection and file creation and provide detailed operation status and error messages">
+  <data id="fileOperationSkill" bean="fileOperationSkill" agenttype="taskagent" ordering="10">
     <name>
       <language id="en"><![CDATA[File Operation]]></language>
       <language id="de"><![CDATA[Dateioperation]]></language>
       <language id="fr"><![CDATA[Opération de fichier]]></language>
       <language id="es"><![CDATA[Operación de archivo]]></language>
     </name>
+    <skilloverview>
+      <language id="en"><![CDATA[Reads and writes text files with path resolution, validation, overwrite protection, and error reporting.]]></language>
+    </skilloverview>
   </data>
 
 </results>
