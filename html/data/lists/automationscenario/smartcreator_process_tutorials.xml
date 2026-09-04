@@ -8,5 +8,8 @@
       <language id="fr"><![CDATA[Création automatique de tutoriels]]></language>
       <language id="es"><![CDATA[Creación automática de tutoriales]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Automatically creates structured educational tutorials and interactive learning modules in batch mode by searching memory embeddings, building progressive lesson outlines, generating content sections, and rendering completed assets.]]></language>
+    </longdescription>
   </data> 
 </records>

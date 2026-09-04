@@ -8,5 +8,8 @@
       <language id="fr"><![CDATA[Publier sur les réseaux sociaux]]></language>
       <language id="es"><![CDATA[Publicar en redes sociales]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Manages automated publishing and distribution workflows for approved media assets and content to external channels, social networks, and content management systems.]]></language>
+    </longdescription>
   </data> 
 </records>

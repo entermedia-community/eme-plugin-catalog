@@ -8,6 +8,9 @@
       <language id="fr"><![CDATA[Classification automatisée]]></language>
       <language id="es"><![CDATA[Clasificación automática]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Performs comprehensive automated content intelligence on assets and documents, including document text splitting, speech-to-text audio/video transcription, content classification, multi-language translation, semantic topic clustering, named entity recognition (NER), facial detection, and vector embedding generation.]]></language>
+    </longdescription>
   </data>  
   <data id="smartcreator_publish" ordering="40" scenarioicon="file-earmark-richtext" enabled="true" isvisible="true" connectedtop="contentcreationlabel" chatenabled="false"> 
     <name> 
@@ -16,6 +19,9 @@
       <language id="fr"><![CDATA[Créateur intelligent - Publier]]></language>
       <language id="es"><![CDATA[Creador inteligente - Publicar]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Renders generated Smart Creator entities into standardized HTML documents and assets, and generates accompanying assessment questions and publish-ready outputs.]]></language>
+    </longdescription>
   </data>  
   <data id="informatics_translate" ordering="40" scenarioicon="file-earmark-richtext" enabled="true" isvisible="true" connectedtop="importinglabel" chatenabled="false"> 
     <name> 
@@ -24,5 +30,8 @@
       <language id="fr"><![CDATA[Classification automatisée – Traduire]]></language>
       <language id="es"><![CDATA[Clasificación automática - Traducir]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Performs automated translation of multi-language fields across assets, documents, and entity records to maintain multilingual catalog consistency.]]></language>
+    </longdescription>
   </data> 
 </records>

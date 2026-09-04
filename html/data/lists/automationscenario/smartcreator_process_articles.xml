@@ -8,5 +8,8 @@
       <language id="fr"><![CDATA[Création automatique d'articles]]></language>
       <language id="es"><![CDATA[Creación automática de artículos]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Automatically generates comprehensive articles in batch mode from pending records by querying reference memory embeddings, structuring article outlines, drafting detailed section content, and rendering final HTML assets.]]></language>
+    </longdescription>
   </data> 
 </records>

@@ -2,13 +2,16 @@
 
 <records>
 
- <data id="chat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+  <data id="chat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
     <name> 
       <language id="en"><![CDATA[Monitor Chats]]></language>
       <language id="de"><![CDATA[Chats überwachen]]></language>
       <language id="fr"><![CDATA[Surveiller les chats]]></language>
       <language id="es"><![CDATA[Monitorear chats]]></language>      
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Monitors incoming chat conversations in real-time, detecting user intent, contextual needs, and dispatching tool-calling AI agents to generate intelligent responses.]]></language>
+    </longdescription>
   </data>  
   <data id="emechat_goal_manager" ordering="55" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false">
     <name> 
@@ -16,8 +19,10 @@
       <language id="de"><![CDATA[Ziele erstellen]]></language>
       <language id="fr"><![CDATA[Créer des objectifs]]></language>
       <language id="es"><![CDATA[Crear objetivos]]></language>
-      
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Analyzes chat discussions to extract project objectives, automatically creating structured goals, breakdown tasks, and assigning team members within project workspaces.]]></language>
+    </longdescription>
   </data>  
   <data id="agentjobcreator" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
     <name> 
@@ -26,13 +31,20 @@
       <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
       <language id="es"><![CDATA[Crear trabajos de agente]]></language>      
     </name> 
-  </data>    <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
+    <longdescription>
+      <language id="en"><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></language>
+    </longdescription>
+  </data>
+  <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
     <name>
       <language id="en"><![CDATA[Answer Questions]]></language>
       <language id="de"><![CDATA[Fragen beantworten]]></language>
       <language id="fr"><![CDATA[Répondre aux questions]]></language>
       <language id="es"><![CDATA[Responder preguntas]]></language>
     </name>
+    <longdescription>
+      <language id="en"><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></language>
+    </longdescription>
   </data>
   <data id="chat_searching" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="chatlabel">
     <name>
@@ -41,6 +53,9 @@
       <language id="fr"><![CDATA[Rechercher des fichiers]]></language>
       <language id="es"><![CDATA[Buscar archivos]]></language>
     </name>
+    <longdescription>
+      <language id="en"><![CDATA[Enables conversational catalog search, parsing natural language queries in chat to find, filter, and present relevant media assets and data records.]]></language>
+    </longdescription>
   </data>
   <data id="chat_smartcreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
     <name>
@@ -49,6 +64,9 @@
       <language id="fr"><![CDATA[Créateur intelligent]]></language>
       <language id="es"><![CDATA[Creador inteligente]]></language>
     </name>
+    <longdescription>
+      <language id="en"><![CDATA[Provides an interactive conversational assistant for Smart Creator that parses prompts, retrieves reference memory from vector embeddings, generates structured outlines, refines sections with user confirmation, and renders finalized content templates.]]></language>
+    </longdescription>
   </data>
   <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false"  connectedtop="chatlabel">
     <name>
@@ -57,5 +75,8 @@
       <language id="fr"><![CDATA[Chat avec le tuteur]]></language>
       <language id="es"><![CDATA[Chat con el tutor]]></language>
     </name>
+    <longdescription>
+      <language id="en"><![CDATA[Powers an adaptive interactive tutoring session that guides learners step-by-step through educational material, evaluates responses, awards cognitive confidence scores, tracks mastery progress, and answers learner questions.]]></language>
+    </longdescription>
   </data>
 </records>

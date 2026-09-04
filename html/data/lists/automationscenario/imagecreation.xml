@@ -8,5 +8,8 @@
       <language id="fr"><![CDATA[Créer des images]]></language>
       <language id="es"><![CDATA[Crear imágenes]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Generates high-quality AI images from descriptive text prompts, creating and cataloging new media assets with custom dimensions, styles, and prompt parameters.]]></language>
+    </longdescription>
   </data> 
 </records>

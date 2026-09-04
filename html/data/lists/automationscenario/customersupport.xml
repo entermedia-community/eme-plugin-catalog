@@ -8,5 +8,8 @@
       <language id="fr"><![CDATA[Répondeur automatique]]></language>
       <language id="es"><![CDATA[Respondedor de correo electrónico]]></language>
     </name> 
+    <longdescription>
+      <language id="en"><![CDATA[Automates email-based customer support by ingesting incoming emails, retrieving matching knowledge base context via vector embeddings, drafting and sending AI replies, and categorizing or escalating critical issues.]]></language>
+    </longdescription>
   </data> 
 </records>
