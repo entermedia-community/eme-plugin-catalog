@@ -2,10 +2,10 @@
 
 <properties>
 
-  <property id="generaledit" systemdefined="false" moduleid="aiskillenabled">
+  <property id="generaledit" systemdefined="false" moduleid="automationstep">
     <name><![CDATA[Edit Automation Agent]]></name>
   </property>
-  <property id="filteragentedit" systemdefined="false" moduleid="aiskillenabled">
+  <property id="filteragentedit" systemdefined="false" moduleid="automationstep">
     <name><![CDATA[Edit Automation Agent]]></name>
   </property>
 

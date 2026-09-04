@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<records>
+
+
+  <data id="agentJobCreator_welcome" aiskill="renderLocalTemplateSkill" automationscenario="agentjobcreator" enabled="true" processingmessage="Loading Job Creator"> 
+    <name> 
+      <language id="en"><![CDATA[Agent Job Welcome]]></language>  
+    </name> 
+  </data>  
+
+
+   <data id="agentJobCreator_conversation" aiskill="autoDetectChatSkill" automationscenario="agentjobcreator" enabled="true" agenttype="eventagent" processingmessage="Detecting" runafter="agentJobCreator_welcome" >
+      <name>
+         <![CDATA[Auto Detect Next Step]]>
+      </name>
+   </data>
+   
+
+   </records>

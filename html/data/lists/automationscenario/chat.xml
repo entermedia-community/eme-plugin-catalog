@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-  <data id="chat_detection" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false">
+
+ <data id="chat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+    <name> 
+      <language id="en"><![CDATA[Monitor Chats]]></language>
+      <language id="de"><![CDATA[Chats überwachen]]></language>
+      <language id="fr"><![CDATA[Surveiller les chats]]></language>
+      <language id="es"><![CDATA[Monitorear chats]]></language>      
+    </name> 
+  </data>  
+  <data id="emechat_goal_manager" ordering="55" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false">
+    <name> 
+      <language id="en"><![CDATA[Create Goals]]></language>
+      <language id="de"><![CDATA[Ziele erstellen]]></language>
+      <language id="fr"><![CDATA[Créer des objectifs]]></language>
+      <language id="es"><![CDATA[Crear objetivos]]></language>
+      
+    </name> 
+  </data>  
+  <data id="agentjobcreator" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+    <name> 
+      <language id="en"><![CDATA[Create Agent Jobs]]></language>
+      <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>
+      <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
+      <language id="es"><![CDATA[Crear trabajos de agente]]></language>      
+    </name> 
+  </data>    <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
     <name>
-      <language id="en"><![CDATA[Auto Detect Chat]]></language>
-      <language id="de"><![CDATA[Auto-Erkennung des Chats]]></language>
-      <language id="fr"><![CDATA[Détection automatique du chat]]></language>
-      <language id="es"><![CDATA[Detección automática de chat]]></language>
-    </name>
-  </data>
-  <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
-    <name>
-      <language id="en"><![CDATA[Question Chat]]></language>
-      <language id="de"><![CDATA[Chat-Frage]]></language>
-      <language id="fr"><![CDATA[Question du chat]]></language>
-      <language id="es"><![CDATA[Preguntas y respuestas]]></language>
+      <language id="en"><![CDATA[Answer Questions]]></language>
+      <language id="de"><![CDATA[Fragen beantworten]]></language>
+      <language id="fr"><![CDATA[Répondre aux questions]]></language>
+      <language id="es"><![CDATA[Responder preguntas]]></language>
     </name>
   </data>
   <data id="chat_searching" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="chatlabel">
     <name>
-      <language id="en"><![CDATA[Search Chat]]></language>
-      <language id="de"><![CDATA[Chat durchsuchen]]></language>
-      <language id="fr"><![CDATA[Rechercher dans le chat]]></language>
-      <language id="es"><![CDATA[Buscar en el chat]]></language>
+      <language id="en"><![CDATA[Search Files]]></language>
+      <language id="de"><![CDATA[Dateien durchsuchen]]></language>
+      <language id="fr"><![CDATA[Rechercher des fichiers]]></language>
+      <language id="es"><![CDATA[Buscar archivos]]></language>
     </name>
   </data>
   <data id="chat_smartcreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">

@@ -26,7 +26,7 @@ every other plugin (finder, community, profile, mediadb, ...) reads or extends. 
 
 - The full data dictionary: every table name, its fields, and their types
 - List-of-values used by dropdowns and enabled/ordering config across the app (including
-  `aiskill`/`aiskillenabled` which drive the AI automation pipeline defined in `plugins/finder`)
+  `aiskill`/`automationstep` which drive the AI automation pipeline defined in `plugins/finder`)
 - REST endpoint documentation in `html/data/lists/endpoint/*.xml` (sample requests/responses for
   the JSON services implemented in `plugins/mediadb/html/services`)
 - Cross-cutting event scripts that fire on data changes, independent of which plugin's UI
@@ -58,5 +58,5 @@ every other plugin (finder, community, profile, mediadb, ...) reads or extends. 
 
 - This plugin is data, not code — most "customization" requests that mention a new table, field,
   dropdown, or automation step land here, even if the feature is surfaced by another plugin's UI.
-- `plugins/catalog/html/data/lists/aiskillenabled/*.xml` controls which Java `Skill` classes (see
+- `plugins/catalog/html/data/lists/automationstep/*.xml` controls which Java `Skill` classes (see
   `plugins/finder/.agents/skills/create-java-ai-skill/SKILL.md`) run and in what order.

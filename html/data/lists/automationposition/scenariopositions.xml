@@ -1,77 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root> 
-  <data id="asset_processing" posx="998.407787011291" posy="1820.1"> 
+  <data id="asset_processing" posx="998.407787011291" posy="1830.12193535934"> 
     <name/> 
   </data>  
-  <data id="chat_smartcreator" posx="1678.6232736857326" posy="2187.044989215333"> 
+  <data id="chat_smartcreator" posx="2439.98096623442" posy="2504.12229116623"> 
     <name/> 
   </data>  
-  <data id="chat_searching" posx="1862.435262781696" posy="2026.5657754220038"> 
+  <data id="chat_searching" posx="2135.94612925181" posy="2579.36207415973"> 
     <name/> 
   </data>  
-  <data id="chat_questions" posx="2018.8133498055631" posy="1841.0085454073098"> 
+  <data id="chat_questions" posx="1825.34060168908" posy="2585.04384804201"> 
     <name/> 
   </data>  
-  <data id="email" posx="1266.7373910107153" posy="2441.4128425331105"> 
+  <data id="email" posx="1050.84571051792" posy="2404.04697475551"> 
     <name/> 
   </data>  
-  <data id="goals_manager" posx="918.5356588208558" posy="2441.4128425331105">
+  <data id="goals_manager" posx="918.535658820856" posy="2441.41284253311">
     <name/>
   </data>
-  <data id="chat_detection" posx="1522.1769502804211" posy="1954.279234108336"> 
+  <data id="asset_hotfolder_scanning" posx="899.518509183412" posy="1605.16408239788"> 
     <name/> 
   </data>  
-  <data id="asset_hotfolder_scanning" posx="899.5185091834117" posy="1605.1640823978778"> 
+  <data id="publishing" posx="1800.61496350038" posy="1683.96362927492"> 
     <name/> 
   </data>  
-  <data id="publishing" posx="2326.3163734156547" posy="2299.368057548755"> 
+  <data id="informatics_translate" posx="1364.17331534985" posy="1615.38093504325"> 
     <name/> 
   </data>  
-  <data id="informatics_translate" posx="1364.1733153498487" posy="1615.3809350432512"> 
+  <data id="smartcreator_publish" posx="2719.5994438544" posy="1665.29947500066"> 
     <name/> 
   </data>  
-  <data id="smartcreator_publish" posx="2744.579010142183" posy="1577.0003328469231"> 
+  <data id="informatics" posx="1252.48448145191" posy="1895.29363039042"> 
     <name/> 
   </data>  
-  <data id="informatics" posx="1252.4844814519054" posy="1895.293630390418"> 
-    <name/> 
-  </data>  
-  <data id="image_creation" posx="2159.7368085286" posy="1577.0003328469231"> 
+  <data id="image_creation" posx="2159.7368085286" posy="1577.00033284692"> 
     <name/>
   </data>
-    <data id="smartcreator_auto_entitytutorial" posx="2357.6315541298345" posy="1654.263524318323"> 
+    <data id="smartcreator_auto_entitytutorial" posx="2306.89250971914" posy="1759.45600619085"> 
     <name/> 
   </data>  
-  <data id="smartcreator_auto_entityarticle" posx="2565.6315541298345" posy="1866.3158186707824"> 
+  <data id="smartcreator_auto_entityarticle" posx="2534.21349146754" posy="1883.46334637643"> 
     <name/> 
   </data>  
-  <data id="customerservicelabel" posx="1073.8920894963017" posy="2288.2830394824614">
+  <data id="customerservicelabel" posx="1004.6960380563" posy="2112.52506882486">
     <name/>
   </data>
-  <data id="publishlabel" posx="2256.6848470230634" posy="2080.2100927388765">
+  <data id="publishlabel" posx="1789.39470487615" posy="1448.11673081694">
     <name/>
   </data>
-  <data id="contentcreationlabel" posx="2454.473728006174" posy="1400.5">
+  <data id="contentcreationlabel" posx="2404.47372800617" posy="1406.52646615453">
     <name/>
   </data>
-  <data id="chatlabel" posx="1745.8236242959163" posy="1694.2170088205112">
+  <data id="chatlabel" posx="1784.15159952194" posy="1982.60452174756">
     <name/>
   </data>
-  <data id="importinglabel" posx="1141.1033816425122" posy="1400.5">
+  <data id="importinglabel" posx="1141.10338164251" posy="1428.95120772947">
     <name/>
   </data>
   
-  <data id="agentchatlabel" posx="1994.746020357742" posy="2533.460873681781">
+
+  <data id="chat_responder" posx="1354.75171845458" posy="2243.19459553044">
     <name/>
   </data>
-  <data id="emechat_responder" posx="1761.6286892470935" posy="2691.1838406669076">
+
+  <data id="agentjobcreator" posx="1541.89361014098" posy="2507.52351203124">
     <name/>
   </data>
-  <data id="emeteamchat_responder" posx="2053.6286892470935" posy="2691.1838406669076">
-    <name/>
-  </data>
-    <data id="emechat_goal_manager" posx="2299.4843441444505" posy="2691.0810783164693">
+
+
+
+  <data id="emechat_goal_manager" posx="2724.65331364985" posy="2341.59799016255">
     <name/>
   </data>
   

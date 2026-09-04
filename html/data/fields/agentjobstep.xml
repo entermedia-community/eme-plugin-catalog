@@ -31,9 +31,9 @@
     </name>
   </property>
 
-  <property id="workflowid" index="true" stored="true" editable="true" type="list" listid="automationscenario">
+  <property id="automationscenario" index="true" stored="true" editable="true" type="list" listid="automationscenario">
     <name>
-      <language id="en">Workflow</language>
+      <language id="en">Automation Scenario</language>
     </name>
   </property>
 

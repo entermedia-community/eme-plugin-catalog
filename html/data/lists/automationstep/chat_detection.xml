@@ -4,7 +4,7 @@
 
 <records>
 
-   <data id="chat_detection_welcome" aiskill="autoDetectWelcomeSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" >
+   <data id="chat_detection_welcome" aiskill="chatMonitorSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" >
       <name>
          <![CDATA[Auto Detect Welcome]]>
       </name>

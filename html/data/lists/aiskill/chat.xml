@@ -17,14 +17,24 @@
       <language id="es"><![CDATA[Plantilla local]]></language>
     </name> 
   </data>  
-  <data id="autoDetectChatSkill" bean="autoDetectChatSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+  <data id="chatMonitorSkill" bean="chatMonitorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
-      <language id="en"><![CDATA[Auto Detect Next Step]]></language>  
-      <language id="de"><![CDATA[Auto-Erkennen des nächsten Schritts]]></language>
-      <language id="fr"><![CDATA[Détection automatique de l'étape suivante]]></language>
-      <language id="es"><![CDATA[Detección automática del siguiente paso]]></language>
+      <language id="en"><![CDATA[Monitor Chats]]></language>  
+      <language id="de"><![CDATA[Chats überwachen]]></language>
+      <language id="fr"><![CDATA[Surveiller les chats]]></language>
+      <language id="es"><![CDATA[Monitorear chats]]></language>
     </name> 
   </data>  
+  <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Create Agent Jobs]]></language>  
+      <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>
+      <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
+      <language id="es"><![CDATA[Crear trabajos de agente]]></language>
+    </name> 
+  </data>  
+
+
   <data id="questionsSkill" bean="questionsSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Questions Chat]]></language>  

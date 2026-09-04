@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher">
+<properties beanname="dataSearcher" class="agentjob">
   <property id="id" index="true" stored="true" editable="true" internalfield="true">
     <name>
       <language id="en">Id</language>
@@ -16,6 +16,12 @@
   <property id="status" index="true" stored="true" editable="true" type="list" listid="jobstatus">
     <name>
       <language id="en">Status</language>
+    </name>
+  </property>
+
+  <property id="submitteddate" index="true" stored="true" editable="true" type="date">
+    <name>
+      <language id="en">Submitted Date</language>
     </name>
   </property>
 
