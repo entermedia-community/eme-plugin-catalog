@@ -17,14 +17,14 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="skilloverview" editable="true" multilanguage="true" index="true" stored="true"> 
+  <property id="skilloverview" editable="true" indextype="not_analyzed" multilanguage="true" index="true" stored="true"> 
     <name> 
-      <language id="en"><![CDATA[Overview]]></language>  
-      <language id="de"><![CDATA[Übersicht]]></language>
-      <language id="fr"><![CDATA[Vue d'ensemble]]></language>
-      <language id="es"><![CDATA[Descripción general]]></language>
+      <language id="en"><![CDATA[Skill Overview]]></language>  
+      <language id="de"><![CDATA[Skill-Übersicht]]></language>
+      <language id="fr"><![CDATA[Vue d'ensemble des compétences]]></language>
+      <language id="es"><![CDATA[Descripción general de la habilidad]]></language>
     </name> 
-  </property>  
+  </property>
   <property id="llmprompt" index="true" stored="true" keyword="true" editable="true" note="Prompt used for LLM interaction" multilanguage="true"> 
     <name> 
       <language id="en"><![CDATA[Instructions]]></language>  
