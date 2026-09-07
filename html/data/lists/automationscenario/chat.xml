@@ -2,9 +2,9 @@
 
 <records>
 
-  <data id="chat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+  <data id="chat_detection" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
     <name> 
-      <language id="en"><![CDATA[Monitor Chats]]></language>
+      <language id="en"><![CDATA[Monitor Chats2]]></language>
       <language id="de"><![CDATA[Chats überwachen]]></language>
       <language id="fr"><![CDATA[Surveiller les chats]]></language>
       <language id="es"><![CDATA[Monitorear chats]]></language>      
