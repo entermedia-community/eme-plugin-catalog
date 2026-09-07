@@ -34,6 +34,15 @@
       <language id="en"><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></language>
     </skilloverview>
   </data>  
+  <data id="chatMonitorResponseSkill" bean="chatMonitorResponseSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Respond to Chats]]></language>  
+    </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></language>
+    </skilloverview>
+  </data>  
+
   <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Create Agent Jobs]]></language>  

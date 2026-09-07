@@ -24,7 +24,7 @@
       <language id="en"><![CDATA[Analyzes chat discussions to extract project objectives, automatically creating structured goals, breakdown tasks, and assigning team members within project workspaces.]]></language>
     </longdescription>
   </data>  
-  <data id="agentjobcreator" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+  <data id="agentorchestrator" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
     <name> 
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
       <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>

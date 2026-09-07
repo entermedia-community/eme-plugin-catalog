@@ -2,6 +2,18 @@
 
 <results> 
 
+<data id="chatCreateGoalSkill" bean="chatCreateGoalSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Create Goal]]></language>
+      <language id="de"><![CDATA[Ziel erstellen]]></language>
+      <language id="fr"><![CDATA[Créer un objectif]]></language>
+      <language id="es"><![CDATA[Crear objetivo]]></language>
+    </name> 
+    <skilloverview>
+      <language id="en"><![CDATA[Extracts goals from chat conversations and initializes new project goals with assigned owners.]]></language>
+    </skilloverview>
+  </data>  
+
   <data id="goalTaskCreationSkill" bean="goalTaskCreationSkill" agenttype="remoteagent" ordering="10" > 
     <name> 
       <language id="en"><![CDATA[Goal Planning]]></language>

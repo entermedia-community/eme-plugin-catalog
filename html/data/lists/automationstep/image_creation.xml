@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- using more descriptive ids for easier debugging -->
+
+<records>
+<data id="image_creation_welcome" aiskill="renderLocalTemplateSkill" automationscenario="image_creation" enabled="true" processingmessage="Loading..."> 
+    <name> 
+      <language id="en"><![CDATA[Image Creation Welcome]]></language>  
+    </name> 
+  </data>  
+  <data id="image_creation" aiskill="mediaCreationSkill" automationscenario="image_creation" enabled="true" processingmessage="Loading..."> 
+    <name> 
+      <language id="en"><![CDATA[Create Image]]></language>  
+    </name> 
+  </data>  
+
+</records>

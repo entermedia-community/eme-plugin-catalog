@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- using more descriptive ids for easier debugging -->
+
+<records>
+
+   <data id="chat_detection_welcome" aiskill="chatMonitorSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" >
+      <name>
+         <![CDATA[Auto Detect Welcome]]>
+      </name>
+   </data>
+
+   <data id="chatMonitor" aiskill="chatMonitorSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" runafter="chat_detection_welcome" >
+      <name>
+         <![CDATA[Auto Detect Next Step]]>
+      </name>
+   </data>
+   
+    <data id="chatMonitorResponse" aiskill="chatMonitorResponseSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" runafter="chatMonitor" >
+      <name>
+         <![CDATA[Orchestrator]]>
+      </name>
+   </data>
+  
+
+   </records>
