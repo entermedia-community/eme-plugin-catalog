@@ -4,7 +4,7 @@
 
 
 
-   <data id="goal_create" aiskill="chatCreateGoalSkill" automationscenario="emechat_goal_manager" enabled="true" agenttype="eventagent"  processingmessage="Creating Goal" >
+   <data id="goal_create" aiskill="chatCreateGoalSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent"  processingmessage="Creating Goal" >
       <name>
          <![CDATA[Create Goal]]>
       </name>

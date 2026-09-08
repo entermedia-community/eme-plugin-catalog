@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-
   <data id="chat_detection" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
     <name> 
       <language id="en"><![CDATA[Monitor Chats2]]></language>
