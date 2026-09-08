@@ -8,8 +8,7 @@
       <language id="fr"><![CDATA[Agent informatique]]></language>
       <language id="es"><![CDATA[Agente de informática]]></language>
     </name>  
-    ]]></markdowncontent><![CDATA[Loops over recently edited or pending assets and entities to run automated informatics processing pipelines.]]></language> 
-    ]]></markdowncontent> 
+    <markdowncontent><![CDATA[Loops over recently edited or pending assets and entities to run automated informatics processing pipelines.]]></markdowncontent> 
   </data>  
   <data id="entityassetsplitting" bean="documentSplitterSkill" searchtype="entityasset" generatedsearchtype="entityassetpage" contextbean="informaticsContext" enabled="true" agenttype="taskagent" generatemarkdown="true" ordering="50"> 
     <name> 
@@ -18,8 +17,7 @@
       <language id="fr"><![CDATA[Découpage des actifs de l'entité]]></language>
       <language id="es"><![CDATA[División de activos de la entidad]]></language>
     </name>  
-    <markdowncontent><![CDATA[Splits entity asset text content into smaller page segments (e.g. 2000 characters) for vector embedding and analysis.]]></language> 
-    ]]></markdowncontent> 
+    <markdowncontent><![CDATA[Splits entity asset text content into smaller page segments (e.g. 2000 characters) for vector embedding and analysis.]]></markdowncontent> 
   </data>  
   <data id="documentsplitting" bean="documentSplitterSkill" searchtype="entitydocument" generatedsearchtype="entitydocumentpage" contextbean="informaticsContext" enabled="true" agenttype="taskagent" generatemarkdown="true" ordering="50"> 
     <name> 
@@ -28,8 +26,7 @@
       <language id="fr"><![CDATA[Découpage du document]]></language>
       <language id="es"><![CDATA[División de documentos]]></language>
     </name>  
-    <markdowncontent><![CDATA[Splits entity document text into smaller page chunks for granular semantic search and embedding.]]></language> 
-    ]]></markdowncontent> 
+    <markdowncontent><![CDATA[Splits entity document text into smaller page chunks for granular semantic search and embedding.]]></markdowncontent> 
   </data>  
   <data id="autotranscribe" bean="transcriberSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Transcribe audio or video content with timestamps" ordering="100"> 
     <name> 
