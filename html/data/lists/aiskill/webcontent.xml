@@ -12,6 +12,9 @@
     <skilloverview>
       <language id="en"><![CDATA[Extracts and parses website HTML content, extracts text and metadata, and collects hyperlinks for scraping and indexing.]]></language>
     </skilloverview>
+
+    <requiredinputs><![CDATA[ {"id":"websiteurl"},{"id":"requestmethod"},{"id":"extractmetadata"}]]></requiredinputs>
+    <defaultoutput><![CDATA[ {"id":"extractedcontent"},{"id":"webpagemetadata"},{"id":"extractedlinks"}]]></defaultoutput>
   </data>
 
 </results>

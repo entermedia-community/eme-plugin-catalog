@@ -66,6 +66,9 @@
     <skilloverview>
       <language id="en"><![CDATA[Translates multi-language metadata fields in assets and records into target languages.]]></language>
     </skilloverview>
+    <requiredinputs><![CDATA[ {"id":"recordsToProcess"}]]></requiredinputs>
+    <defaultoutput></defaultoutput>
+    
   </data>  
   <data id="FixCustomFieldAgent" bean="fixCustomFieldSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Translate fields that have values and are multi language" ordering="300"> 
     <name> 
