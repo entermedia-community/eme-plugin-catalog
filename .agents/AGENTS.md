@@ -59,4 +59,13 @@ every other plugin (finder, community, profile, mediadb, ...) reads or extends. 
 - This plugin is data, not code — most "customization" requests that mention a new table, field,
   dropdown, or automation step land here, even if the feature is surfaced by another plugin's UI.
 - `plugins/catalog/html/data/lists/automationstep/*.xml` controls which Java `Skill` classes (see
-  `plugins/finder/.agents/skills/create-java-ai-skill/SKILL.md`) run and in what order.
+  `.agents/skills/create-java-ai-skill/SKILL.md` at the repo root — not under `plugins/finder`,
+  which currently has no `.agents/` directory) run and in what order.
+- Don't hand-dump the whole `aiskill` table into an LLM prompt to let the model "see everything
+  available" — it's already embedded/indexed for semantic search precisely so callers can retrieve
+  just the relevant few records instead. `plugins/finder/code/org/entermediadb/ai/skills/AgentJobCreatorSkill.java`
+  is the reference example: it calls `EmbeddingManager.callFindDocIds(...)` over doc ids prefixed
+  `aiskill_<id>` (skills) and `automationscenario_<id>` (automations) to shortlist relevant records
+  for a given goal. Note that same class's `loadSkillDocIds()` currently fetches the skill list via
+  `getMediaArchive().getList("agentskill")` rather than `"aiskill"` — double-check which list id is
+  actually correct before copying that call elsewhere.
