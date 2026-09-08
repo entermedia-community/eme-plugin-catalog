@@ -5,9 +5,7 @@
     <name>
       <![CDATA[Find Answer for Customer Query]]>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Searches knowledge embeddings to answer customer queries and drafts automated email replies.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Searches knowledge embeddings to answer customer queries and drafts automated email replies.]]></markdowncontent>
   </data>
 
 

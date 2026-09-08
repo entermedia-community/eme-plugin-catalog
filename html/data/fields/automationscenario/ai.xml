@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+<property id="taggedbyllm" type="boolean" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+    <name> 
+      <language id="en"><![CDATA[Tagged by LLM]]></language>  
+      <language id="de"><![CDATA[Von einem LLM markiert]]></language>
+      <language id="fr"><![CDATA[Étiqueté par LLM]]></language>
+      <language id="es"><![CDATA[Etiquetado por LLM]]></language>
+    </name> 
+  </property>  
+  <property id="llmerror" type="boolean" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+    <name> 
+      <language id="en"><![CDATA[LLM Error]]></language>  
+      <language id="de"><![CDATA[LLM-Fehler]]></language>
+      <language id="fr"><![CDATA[Erreur LLM]]></language>
+      <language id="es"><![CDATA[Error del LLM]]></language>
+    </name> 
+  </property>
+    
+</properties>

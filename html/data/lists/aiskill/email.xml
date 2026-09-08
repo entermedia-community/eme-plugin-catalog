@@ -4,18 +4,14 @@
     <name>
       <![CDATA[Process Email]]>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Connects to an IMAP mailbox, fetches unread emails, and dispatches them to automated processing agents.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Connects to an IMAP mailbox, fetches unread emails, and dispatches them to automated processing agents.]]></markdowncontent>
   </data>
 
   <data id="reply_email" bean="imapMailSenderSkill" agenttype="remoteagent" ordering="10">
     <name>
       <![CDATA[Reply to Email]]>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Sends email responses via SMTP using configured server credentials and formatted response content.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Sends email responses via SMTP using configured server credentials and formatted response content.]]></markdowncontent>
   </data>
 
 

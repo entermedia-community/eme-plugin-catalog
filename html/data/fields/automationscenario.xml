@@ -17,12 +17,12 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="longdescription" editable="true" indextype="not_analyzed" index="true" stored="true" multilanguage="true"> 
+  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown"> 
     <name> 
-      <language id="en"><![CDATA[Long Description]]></language>  
-      <language id="de"><![CDATA[Ausführliche Beschreibung]]></language>
-      <language id="fr"><![CDATA[Description détaillée]]></language>
-      <language id="es"><![CDATA[Descripción larga]]></language>
+      <language id="en"><![CDATA[Markdown Content]]></language>  
+      <language id="de"><![CDATA[Markdown-Inhalt]]></language>
+      <language id="fr"><![CDATA[Contenu au format Markdown]]></language>
+      <language id="es"><![CDATA[Contenido Markdown]]></language>
     </name> 
   </property>  
   <property id="ordering" type="number" editable="true" index="true" stored="true"> 
@@ -87,23 +87,6 @@
       <language id="de"><![CDATA[Verbundene Oberseite]]></language>
       <language id="fr"><![CDATA[Top connecté]]></language>
       <language id="es"><![CDATA[Conector superior]]></language>
-    </name> 
-  </property> 
-
-    <property id="entityembeddingstatus" type="list" viewtype="list" index="true" stored="true" editable="true" filter="false" sortable="true"> 
-    <name> 
-      <language id="en">Entity Embedded Status</language>  
-      <language id="de"><![CDATA[Entity-Embedded-Status]]></language>
-      <language id="fr"><![CDATA[Statut intégré de l'entité]]></language>
-      <language id="es"><![CDATA[Estado integrado de la entidad]]></language>
-    </name> 
-  </property>  
-  <property id="entityembeddeddate" editable="false" index="true" stored="true" datatype="date" viewtype="time" type="date"> 
-    <name> 
-      <language id="en"><![CDATA[Entity Embedded Date]]></language>  
-      <language id="de"><![CDATA[Eingebettetes Datum]]></language>
-      <language id="fr"><![CDATA[Date d'intégration de l'entité]]></language>
-      <language id="es"><![CDATA[Fecha de incorporación de la entidad]]></language>
     </name> 
   </property> 
   <property id="requiredinputs" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 

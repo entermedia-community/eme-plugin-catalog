@@ -5,8 +5,6 @@
     <name> 
       <language id="en"><![CDATA[Task Creation]]></language>      
     </name> 
-    <longdescription>
-      <language id="en"><![CDATA[Monitors project goals and task triggers to automatically generate actionable tasks, assign resources, and create dedicated collaboration channels.]]></language>
-    </longdescription>
+    <markdowncontent><![CDATA[Monitors project goals and task triggers to automatically generate actionable tasks, assign resources, and create dedicated collaboration channels.]]></markdowncontent>
   </data>  
 </records>

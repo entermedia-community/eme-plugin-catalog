@@ -5,8 +5,6 @@
     <name> 
       <language id="en"><![CDATA[Create Image]]></language>  
     </name> 
-    <longdescription>
-      <language id="en"><![CDATA[Generates high-quality AI images from descriptive text prompts, creating and cataloging new media assets with custom dimensions, styles, and prompt parameters.]]></language>
-    </longdescription>
+    <markdowncontent><![CDATA[Generates high-quality AI images from descriptive text prompts, creating and cataloging new media assets with custom dimensions, styles, and prompt parameters.]]></markdowncontent>
   </data> 
 </records>

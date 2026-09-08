@@ -17,14 +17,14 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="skilloverview" editable="true" indextype="not_analyzed" multilanguage="true" index="true" stored="true"> 
+  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown"> 
     <name> 
-      <language id="en"><![CDATA[Skill Overview]]></language>  
-      <language id="de"><![CDATA[Skill-Übersicht]]></language>
-      <language id="fr"><![CDATA[Vue d'ensemble des compétences]]></language>
-      <language id="es"><![CDATA[Descripción general de la habilidad]]></language>
+      <language id="en"><![CDATA[Markdown Content]]></language>  
+      <language id="de"><![CDATA[Markdown-Inhalt]]></language>
+      <language id="fr"><![CDATA[Contenu au format Markdown]]></language>
+      <language id="es"><![CDATA[Contenido Markdown]]></language>
     </name> 
-  </property>
+  </property> 
   <property id="requiredinputs" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
@@ -209,20 +209,4 @@
       <language id="es"><![CDATA[Valores de contexto del agente]]></language>
     </name> 
   </property>
-  <property id="entityembeddingstatus" type="list" viewtype="list" index="true" stored="true" editable="true" filter="false" sortable="true"> 
-    <name> 
-      <language id="en">Entity Embedded Status</language>  
-      <language id="de"><![CDATA[Entity-Embedded-Status]]></language>
-      <language id="fr"><![CDATA[Statut intégré de l'entité]]></language>
-      <language id="es"><![CDATA[Estado integrado de la entidad]]></language>
-    </name> 
-  </property>  
-  <property id="entityembeddeddate" editable="false" index="true" stored="true" datatype="date" viewtype="time" type="date"> 
-    <name> 
-      <language id="en"><![CDATA[Entity Embedded Date]]></language>  
-      <language id="de"><![CDATA[Eingebettetes Datum]]></language>
-      <language id="fr"><![CDATA[Date d'intégration de l'entité]]></language>
-      <language id="es"><![CDATA[Fecha de incorporación de la entidad]]></language>
-    </name> 
-  </property> 
 </properties>

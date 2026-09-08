@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+<property id="entitysourcetype" internalfield="true" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+    <name> 
+      <language id="en"><![CDATA[Entity Source Type]]></language>  
+      <language id="de"><![CDATA[Entitätstyp der Quelle]]></language>
+      <language id="fr"><![CDATA[Type de source d'entité]]></language>
+      <language id="es"><![CDATA[Tipo de entidad de origen]]></language>
+    </name> 
+  </property>  
+</properties>

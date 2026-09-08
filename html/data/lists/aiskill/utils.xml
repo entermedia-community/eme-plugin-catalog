@@ -4,18 +4,14 @@
     <name>
       <![CDATA[Import YouTube]]>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Fetches video metadata and media from YouTube URLs using YouTube Data API and parser.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Fetches video metadata and media from YouTube URLs using YouTube Data API and parser.]]></markdowncontent>
   </data>
 
   <data id="face_detection" bean="faceDetectionAgent" agenttype="taskagent" ordering="10">
     <name>
       <![CDATA[Face Detection]]>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Detects and extracts facial profiles and bounding coordinates from visual assets.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Detects and extracts facial profiles and bounding coordinates from visual assets.]]></markdowncontent>
   </data>
 
 

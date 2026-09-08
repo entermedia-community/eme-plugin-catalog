@@ -8,9 +8,7 @@
       <language id="fr"><![CDATA[Détection automatique]]></language>
       <language id="es"><![CDATA[Detección automática]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Sends an initial welcome greeting and options template to the user when starting a new chat session.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Sends an initial welcome greeting and options template to the user when starting a new chat session.]]></markdowncontent>
   </data>  
   <data id="renderLocalTemplateSkill" bean="renderLocalTemplateSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
@@ -19,9 +17,7 @@
       <language id="fr"><![CDATA[Rendu du modèle local]]></language>
       <language id="es"><![CDATA[Plantilla local]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Renders local UI action templates and formatting for interactive chat responses.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Renders local UI action templates and formatting for interactive chat responses.]]></markdowncontent>
   </data>  
   <data id="chatMonitorSkill" bean="chatMonitorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
@@ -30,17 +26,13 @@
       <language id="fr"><![CDATA[Surveiller les chats]]></language>
       <language id="es"><![CDATA[Monitorear chats]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></markdowncontent>
   </data>  
   <data id="chatMonitorResponseSkill" bean="chatMonitorResponseSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Respond to Chats]]></language>  
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></markdowncontent>
   </data>  
 
   <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
@@ -50,9 +42,7 @@
       <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
       <language id="es"><![CDATA[Crear trabajos de agente]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Creates agent jobs and goal structures from chat interactions by matching available skills and automations.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Creates agent jobs and goal structures from chat interactions by matching available skills and automations.]]></markdowncontent>
   </data>  
 
 
@@ -63,9 +53,7 @@
       <language id="fr"><![CDATA[Questions de chat]]></language>
       <language id="es"><![CDATA[Preguntas del chat]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Handles question-answering workflows in chat by loading entity contexts, guide statuses, and suggestions.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Handles question-answering workflows in chat by loading entity contexts, guide statuses, and suggestions.]]></markdowncontent>
   </data>  
   <data id="searchingChatSkill" bean="searchingSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
@@ -74,8 +62,6 @@
       <language id="fr"><![CDATA[Recherche dans le chat]]></language>
       <language id="es"><![CDATA[Buscar en el chat]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Performs conversational search across catalogs and entities using natural language parsing and schema filters.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Performs conversational search across catalogs and entities using natural language parsing and schema filters.]]></markdowncontent>
   </data> 
 </results>

@@ -5,9 +5,7 @@
     <name>
       <![CDATA[Find Embeddings]]>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Finds relevant embedded document IDs across semantic-enabled modules and search categories for answering queries.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Finds relevant embedded document IDs across semantic-enabled modules and search categories for answering queries.]]></markdowncontent>
   </data>
 
 

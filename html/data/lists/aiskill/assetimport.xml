@@ -9,9 +9,7 @@
       <language id="fr"><![CDATA[Source du dossier chaud]]></language>
       <language id="es"><![CDATA[Carpeta de origen]]></language>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Scans configured hot folders for new or modified files within periodic intervals and imports assets under lock protection.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Scans configured hot folders for new or modified files within periodic intervals and imports assets under lock protection.]]></markdowncontent>
   </data>  
   <data id="AssetsImportCreated" bean="assetImportCreated" enabled="true" ordering="10" agenttype="taskagent"> 
     <name> 
@@ -20,9 +18,7 @@
       <language id="fr"><![CDATA[Actifs créés]]></language>
       <language id="es"><![CDATA[Activos creados]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Queries assets with import status 'created' or 'modified', removes stale generated images, and batches assets into context for downstream processing.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Queries assets with import status 'created' or 'modified', removes stale generated images, and batches assets into context for downstream processing.]]></markdowncontent>
   </data>  
   <data id="AssetImportImported" bean="assetImportImported" agenttype="taskagent" enabled="true" ordering="12"> 
     <name> 
@@ -31,9 +27,7 @@
       <language id="fr"><![CDATA[Importation d'actifs]]></language>
       <language id="es"><![CDATA[Importar Assets]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Marks asset import status as 'needsmetadata', detects and assigns asset types using AssetTypeManager, and persists updated asset records.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Marks asset import status as 'needsmetadata', detects and assigns asset types using AssetTypeManager, and persists updated asset records.]]></markdowncontent>
   </data>  
   <!-- Not used -->  
   <data id="importing_assetsreadmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsreadmetadata"> 
@@ -43,9 +37,7 @@
       <language id="fr"><![CDATA[Importation : le processus nécessite des métadonnées]]></language>
       <language id="es"><![CDATA[Importar: El proceso necesita metadatos]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Triggers the 'importing/assetsreadmetadata' path event to extract metadata for newly imported assets.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Triggers the 'importing/assetsreadmetadata' path event to extract metadata for newly imported assets.]]></markdowncontent>
   </data>  
   <data id="EntityModule_handleAssetsImported" runoperation="EntityModule.handleAssetsImported" bean="runModuleSkill" agenttype="taskagent" enabled="true" ordering="14"> 
     <name> 
@@ -54,9 +46,7 @@
       <language id="fr"><![CDATA[Vérification des importations d'entités]]></language>
       <language id="es"><![CDATA[Verificación de importaciones de entidades]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Executes the EntityModule.handleAssetsImported module action to process entity associations for newly imported assets.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Executes the EntityModule.handleAssetsImported module action to process entity associations for newly imported assets.]]></markdowncontent>
   </data>  
   <data id="processNeedsMetadata" bean="processNeedsMetadataSkill" agenttype="taskagent" folder="importing"> 
     <name> 
@@ -65,9 +55,7 @@
       <language id="fr"><![CDATA[Le processus nécessite des métadonnées]]></language>
       <language id="es"><![CDATA[El proceso necesita metadatos]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Reads original file metadata using MetaDataReader, populates asset properties, and transitions asset status to 'imported'.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Reads original file metadata using MetaDataReader, populates asset properties, and transitions asset status to 'imported'.]]></markdowncontent>
   </data>  
   <data id="importing_assetsimportedcustom" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsimportedcustom"> 
     <name> 
@@ -76,9 +64,7 @@
       <language id="fr"><![CDATA[Importation : actifs personnalisés importés]]></language>
       <language id="es"><![CDATA[Importar: Activos personalizados importados]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Triggers custom post-import path event 'importing/assetsimportedcustom' for specialized asset processing.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Triggers custom post-import path event 'importing/assetsimportedcustom' for specialized asset processing.]]></markdowncontent>
   </data>  
   <data id="queueConversions" bean="queueConversionsSkill" agenttype="taskagent" enabled="true" ordering="16"> 
     <name> 
@@ -87,9 +73,7 @@
       <language id="fr"><![CDATA[Conversions de la file d'attente]]></language>
       <language id="es"><![CDATA[Conversiones de cola]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Iterates over assets and creates conversion tasks in the queue based on configured conversion presets.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Iterates over assets and creates conversion tasks in the queue based on configured conversion presets.]]></markdowncontent>
   </data>  
   <!--Use the event for now so they dont start multiple conversions simultaneously-->  
   <data id="runConversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions" enabled="true" ordering="16"> 
@@ -99,8 +83,6 @@
       <language id="fr"><![CDATA[Lancer des conversions]]></language>
       <language id="es"><![CDATA[Ejecutar conversiones]]></language>
     </name> 
-    <skilloverview>
-      <language id="en"><![CDATA[Triggers the conversion runner path event 'conversions/runconversions' to process pending media conversion tasks.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Triggers the conversion runner path event 'conversions/runconversions' to process pending media conversion tasks.]]></markdowncontent>
   </data> 
 </records>

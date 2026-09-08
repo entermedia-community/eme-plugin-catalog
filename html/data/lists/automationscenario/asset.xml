@@ -8,9 +8,7 @@
       <language id="fr"><![CDATA[Numérisation des dossiers chauds]]></language>
       <language id="es"><![CDATA[Escaneo de carpetas calientes]]></language>
     </name> 
-    <longdescription>
-      <language id="en"><![CDATA[Monitors configured hot folders and external sources to automatically discover, scan, and import new or updated media assets and YouTube content into the repository.]]></language>
-    </longdescription>
+    <markdowncontent><![CDATA[Monitors configured hot folders and external sources to automatically discover, scan, and import new or updated media assets and YouTube content into the repository.]]></markdowncontent>
   </data>  
   <data id="asset_processing" ordering="51" scenarioicon="image-fill" enabled="true" isvisible="true" connectedtop="importinglabel" chatenabled="false"> 
     <name> 
@@ -19,8 +17,6 @@
       <language id="fr"><![CDATA[Nouveau traitement des actifs]]></language>
       <language id="es"><![CDATA[Procesamiento de nuevos activos]]></language>
     </name> 
-    <longdescription>
-      <language id="en"><![CDATA[Executes the end-to-end media asset ingestion pipeline, extracting embedded metadata, assigning asset types, synchronizing entity associations, and queueing and running format transcoding and proxy conversions.]]></language>
-    </longdescription>
+    <markdowncontent><![CDATA[Executes the end-to-end media asset ingestion pipeline, extracting embedded metadata, assigning asset types, synchronizing entity associations, and queueing and running format transcoding and proxy conversions.]]></markdowncontent>
   </data> 
 </records>

@@ -9,9 +9,7 @@
       <language id="fr"><![CDATA[Opération de fichier]]></language>
       <language id="es"><![CDATA[Operación de archivo]]></language>
     </name>
-    <skilloverview>
-      <language id="en"><![CDATA[Reads and writes text files with path resolution, validation, overwrite protection, and error reporting.]]></language>
-    </skilloverview>
+    <markdowncontent><![CDATA[Reads and writes text files with path resolution, validation, overwrite protection, and error reporting.]]></markdowncontent>
     <requiredinputs><![CDATA[ {"id":"filename"},{"id":"filepath"},{"id":"fileoperationtype"},{"id":"overwritefile"},{"id":"filecontent"}]]></requiredinputs>
     <defaultoutput><![CDATA[ {"id":"fileoperationstatus"},{"id":"filepath"}]]></defaultoutput>
   </data>
