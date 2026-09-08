@@ -106,4 +106,20 @@
       <language id="es"><![CDATA[Fecha de incorporación de la entidad]]></language>
     </name> 
   </property> 
+  <property id="requiredinputs" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Required Inputs]]></language>  
+      <language id="de"><![CDATA[Erforderliche Eingaben]]></language>
+      <language id="fr"><![CDATA[Entrées requises]]></language>
+      <language id="es"><![CDATA[Entradas requeridas]]></language>
+    </name> 
+  </property>
+  <property id="defaultoutput" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Default Output]]></language>  
+      <language id="de"><![CDATA[Standardausgabe]]></language>
+      <language id="fr"><![CDATA[Sortie par défaut]]></language>
+      <language id="es"><![CDATA[Salida predeterminada]]></language>
+    </name> 
+  </property>
 </properties>

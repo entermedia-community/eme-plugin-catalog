@@ -12,6 +12,8 @@
     <skilloverview>
       <language id="en"><![CDATA[Reads and writes text files with path resolution, validation, overwrite protection, and error reporting.]]></language>
     </skilloverview>
+    <requiredinputs><![CDATA[ {"id":"filename"},{"id":"filepath"},{"id":"fileoperationtype"},{"id":"overwritefile"},{"id":"filecontent"}]]></requiredinputs>
+    <defaultoutput><![CDATA[ {"id":"fileoperationstatus"},{"id":"filepath"}]]></defaultoutput>
   </data>
 
 </results>
