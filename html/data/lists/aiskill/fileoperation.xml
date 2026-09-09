@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Opération de fichier]]></language>
       <language id="es"><![CDATA[Operación de archivo]]></language>
     </name>
-    <markdowncontent><![CDATA[Reads and writes text files with path resolution, validation, overwrite protection, and error reporting.]]></markdowncontent>
+  <markdowncontent><![CDATA[Writes text to a local file.]]></markdowncontent>
     <requiredinputs><![CDATA[ {"id":"filename"},{"id":"filepath"},{"id":"fileoperationtype"},{"id":"overwritefile"},{"id":"filecontent"}]]></requiredinputs>
     <defaultoutput><![CDATA[ {"id":"fileoperationstatus"},{"id":"filepath"}]]></defaultoutput>
   </data>
