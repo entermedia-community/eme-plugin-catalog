@@ -9,11 +9,9 @@
       <language id="fr"><![CDATA[Articles en attente de traitement]]></language>
       <language id="es"><![CDATA[Artículos en proceso]]></language>
     </name>  
-    <llmprompt> 
-      <language id="en"><![CDATA[Create a brief outline for a Article about ${data.longcaption}. 
+    <llmprompt><![CDATA[Create a brief outline for a Article about ${data.longcaption}. 
 	         For each outline topic, create a summary with a header, and paragraphs + lists (where necessary). 
-	         Provide examples if applicable.]]></language> 
-    </llmprompt> 
+	         Provide examples if applicable.]]></llmprompt> 
   </data>  
   <data id="entityarticle_smartcreator_parse_user_prompt" aiskill="smartCreatorParseUserPromptSkill" automationscenario="smartcreator_auto_entityarticle" enabled="true" runafter="entityarticle_processpendingrecords"> 
     <name> 

@@ -54,7 +54,7 @@
       <language id="es"><![CDATA[Traducción automática]]></language>
     </name> 
     <markdowncontent><![CDATA[Translates multi-language metadata fields in assets and records into target languages.]]></markdowncontent>
-    <requiredinputs><![CDATA[ {"id":"recordsToProcess"}]]></requiredinputs>
+    <parameters><![CDATA[ {"id":"recordsToProcess"}]]></parameters>
     <defaultoutput></defaultoutput>
     
   </data>  

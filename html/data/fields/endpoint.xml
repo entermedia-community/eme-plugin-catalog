@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Section Documentation]]></language> 
     </name> 
   </property>  
-  <property id="parameters" editable="true" stored="true" index="true">Parameters 
+  <property id="parameters" editable="true" stored="true" index="true" indextype="not_analyzed"> 
     <name> 
       <language id="de"><![CDATA[Parameter]]></language>  
       <language id="en"><![CDATA[Parameters]]></language>  

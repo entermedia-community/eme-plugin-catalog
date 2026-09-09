@@ -7,15 +7,19 @@
     </name>
   </property>
 
-  <property id="name" index="true" stored="true" editable="true">
-    <name>
-      <language id="en">Step Name</language>
-    </name>
-  </property>
 
-  <property id="jobid" index="true" stored="true" editable="true" type="list" listid="job">
+ <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown"> 
+    <name> 
+      <language id="en"><![CDATA[Markdown Content]]></language>  
+      <language id="de"><![CDATA[Markdown-Inhalt]]></language>
+      <language id="fr"><![CDATA[Contenu au format Markdown]]></language>
+      <language id="es"><![CDATA[Contenido Markdown]]></language>
+    </name> 
+  </property> 
+
+  <property id="agentjob" index="true" stored="true" editable="true" type="list">
     <name>
-      <language id="en">Job</language>
+      <language id="en">Agent Job</language>
     </name>
   </property>
 
@@ -43,7 +47,7 @@
     </name>
   </property>
 
-  <property id="requiredinputs" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="parameters" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
       <language id="de"><![CDATA[Erforderliche Eingaben]]></language>

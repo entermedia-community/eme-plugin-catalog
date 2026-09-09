@@ -27,9 +27,7 @@
     <name>
       <![CDATA[Find Answer for Query]]>
     </name>
-    <llmprompt>
-      <language id="en"><![CDATA[Answers support email when it's asking a general question or query that doesn't require human intervention.]]></language>
-    </llmprompt>
+    <llmprompt><![CDATA[Answers support email when it's asking a general question or query that doesn't require human intervention.]]></llmprompt>
     <skilloverview>
       <language id="en"><![CDATA[Requires name, email, and the question as arguments (if available).]]></language>
     </skilloverview>
@@ -65,9 +63,7 @@
     <name>
       <![CDATA[Escalate Issue]]>
     </name>
-    <llmprompt>
-      <language id="en"><![CDATA[Escalates issues that cannot be resolved by the automated system to a human agent for further handling.]]></language>
-    </llmprompt>
+    <llmprompt><![CDATA[Escalates issues that cannot be resolved by the automated system to a human agent for further handling.]]></llmprompt>
   </data>
 
 

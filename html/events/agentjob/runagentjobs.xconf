@@ -1,0 +1,8 @@
+<page>
+	<property name="eventname">Run Agent Jobs</property>	
+	<path-action name="AgentJobModule.checkQueue" alltypes="true" />
+
+	<property name="enabled">true</property>
+
+	<property name="period">15m</property>
+</page>

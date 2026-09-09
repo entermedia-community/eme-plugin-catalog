@@ -11,7 +11,7 @@
     </name>
     <markdowncontent><![CDATA[Extracts and parses website HTML content, extracts text and metadata, and collects hyperlinks for scraping and indexing.]]></markdowncontent>
 
-    <requiredinputs><![CDATA[ {"id":"websiteurl"},{"id":"requestmethod"},{"id":"extractmetadata"}]]></requiredinputs>
+    <parameters><![CDATA[ {"id":"websiteurl"},{"id":"requestmethod"},{"id":"extractmetadata"}]]></parameters>
     <defaultoutput><![CDATA[ {"id":"extractedcontent"},{"id":"webpagemetadata"},{"id":"extractedlinks"}]]></defaultoutput>
   </data>
 

@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Conector superior]]></language>
     </name> 
   </property> 
-  <property id="requiredinputs" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="parameters" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
       <language id="de"><![CDATA[Erforderliche Eingaben]]></language>

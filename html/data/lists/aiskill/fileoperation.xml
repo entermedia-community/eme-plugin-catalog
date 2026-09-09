@@ -10,7 +10,24 @@
       <language id="es"><![CDATA[Operación de archivo]]></language>
     </name>
   <markdowncontent><![CDATA[Writes text to a local file.]]></markdowncontent>
-    <requiredinputs><![CDATA[ {"id":"filename"},{"id":"filepath"},{"id":"fileoperationtype"},{"id":"overwritefile"},{"id":"filecontent"}]]></requiredinputs>
+    <parameters><![CDATA[ 
+[{
+"id":"filepath",
+"description":"The full path to the file"
+},
+{
+"id":"fileoperationtype",
+"description":"either read or write"
+},
+{
+"id":"appendcontent",
+"description":"Write to the end of the file"
+},
+{
+"id":"filecontent",
+"description":"The text content to the be saved"
+}]
+   ]]></parameters>
     <defaultoutput><![CDATA[ {"id":"fileoperationstatus"},{"id":"filepath"}]]></defaultoutput>
   </data>
 

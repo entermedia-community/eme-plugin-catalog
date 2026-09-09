@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Contenido Markdown]]></language>
     </name> 
   </property> 
-  <property id="requiredinputs" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="parameters" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
       <language id="de"><![CDATA[Erforderliche Eingaben]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Salida predeterminada]]></language>
     </name> 
   </property>
-  <property id="llmprompt" index="true" stored="true" keyword="true" editable="true" note="Prompt used for LLM interaction" multilanguage="true"> 
+  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction" > 
     <name> 
       <language id="en"><![CDATA[Instructions]]></language>  
       <language id="de"><![CDATA[Anweisungen]]></language>
