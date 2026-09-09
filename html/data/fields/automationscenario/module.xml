@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
+  <property id="emrecordstatus" index="true" keyword="false" internalfield="true" stored="true" editable="true" datatype="object"> 
+    <name> 
+      <language id="en"><![CDATA[EM Record Status]]></language>  
+      <language id="de"><![CDATA[EM-Status]]></language>
+      <language id="fr"><![CDATA[Statut des enregistrements EM]]></language>
+      <language id="es"><![CDATA[Estado del registro EM]]></language>
+    </name> 
+  </property>  
 <property id="entitysourcetype" internalfield="true" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
     <name> 
       <language id="en"><![CDATA[Entity Source Type]]></language>  

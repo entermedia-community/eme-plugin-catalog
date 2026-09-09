@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown"> 
+  <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="false" stored="true" viewtype="markdown"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>
@@ -49,14 +49,7 @@
       <language id="es"><![CDATA[Instrucciones]]></language>
     </name> 
   </property>  
-  <property id="searchtypes" index="true" type="list" viewtype="multiselect" listid="module" editable="true" stored="true" required="true"> 
-    <name> 
-      <language id="en"><![CDATA[Search Type]]></language>  
-      <language id="de"><![CDATA[Suchart]]></language>
-      <language id="fr"><![CDATA[Type de recherche]]></language>
-      <language id="es"><![CDATA[Tipo de búsqueda]]></language>
-    </name> 
-  </property>  
+
   <property id="bean" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Bean Name]]></language>  

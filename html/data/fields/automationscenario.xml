@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="markdowncontent" keyword="true" index="true" editable="false" stored="true" viewtype="markdown"> 
+  <property id="markdowncontent" keyword="true" indextype="not_analyzed" index="true" editable="false" stored="true" viewtype="markdown"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>
