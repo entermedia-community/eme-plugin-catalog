@@ -4,7 +4,7 @@
 
 <records>
 
-   <data id="chat_detection_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" >
+   <data id="chat_detection_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Welcome" >
       <name>
          <![CDATA[Auto Detect Welcome]]>
       </name>
@@ -18,7 +18,7 @@
       </name>
    </data>
    
-    <data id="chatMonitorResponse" aiskill="chatMonitorResponseSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Detecting" runafter="chatMonitor" >
+    <data id="chatMonitorResponse" aiskill="chatMonitorResponseSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Orchestrating" runafter="chatMonitor" >
       <name>
          <![CDATA[Orchestrator]]>
       </name>
