@@ -11,7 +11,7 @@
     </name> 
   </property>  
   <!-- Property: llmprompt -->  
-  <property id="llmprompt" index="true" stored="true"  indextype="not_analyzed"  keyword="true" editable="true" note="Prompt used for LLM interaction"> 
+  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
     <name> 
       <language id="de"><![CDATA[Eingabeaufforderung für LLM]]></language>  
       <language id="en"><![CDATA[LLM Prompt]]></language>  
