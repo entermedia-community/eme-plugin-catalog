@@ -48,7 +48,7 @@
     </name>
   </property>
 
-  <property id="llmprompt" index="true" stored="true"  indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
+  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
     <name> 
       <language id="en"><![CDATA[Instructions]]></language>  
       <language id="de"><![CDATA[Anweisungen]]></language>
