@@ -10,7 +10,7 @@
     </name> 
   </data>  
 
-   <data id="agentJobCreator" aiskill="agentJobCreatorSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Detecting" runafter="agentorchestrator_welcome" >
+   <data id="agentJobCreator" aiskill="agentJobCreatorSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Calculating Steps" runafter="agentorchestrator_welcome" >
       <name>
          <![CDATA[Job Creator]]>
       </name>

@@ -18,6 +18,15 @@
     </name>
   </property>
 
+ <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown"> 
+    <name> 
+      <language id="en"><![CDATA[Markdown Content]]></language>  
+      <language id="de"><![CDATA[Markdown-Inhalt]]></language>
+      <language id="fr"><![CDATA[Contenu au format Markdown]]></language>
+      <language id="es"><![CDATA[Contenido Markdown]]></language>
+    </name> 
+  </property> 
+
   <property id="status" index="true" stored="true" editable="true" type="list" listid="jobstatus">
     <name>
       <language id="en">Status</language>
@@ -38,7 +47,7 @@
 
   <property id="enddate" index="true" stored="true" editable="true" type="date">
     <name>
-      <language id="en">End Date</language>
+      <language id="en">Complete Date</language>
     </name>
   </property>
 
