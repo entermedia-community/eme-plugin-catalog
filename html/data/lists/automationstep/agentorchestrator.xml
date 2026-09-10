@@ -12,7 +12,7 @@
 
    <data id="agentJobCreator" aiskill="agentJobCreatorSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Detecting" runafter="agentorchestrator_welcome" >
       <name>
-         <![CDATA[Auto Detect Next Step]]>
+         <![CDATA[Job Creator]]>
       </name>
    </data>
 
