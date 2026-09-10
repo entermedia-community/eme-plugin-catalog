@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- using more descriptive ids for easier debugging -->
+
+<records>
+
+   <data id="create_image" aiskill="mediaCreatorSkill" automationscenario="chat_imagecreator" enabled="true" processingmessage="Creating the Image">
+      <name>
+         <![CDATA[Create Image]]>
+      </name>
+   </data>
+
+   </records>

@@ -64,4 +64,13 @@
     </name>
     <markdowncontent><![CDATA[Powers an adaptive interactive tutoring session that guides learners step-by-step through educational material, evaluates responses, awards cognitive confidence scores, tracks mastery progress, and answers learner questions.]]></markdowncontent>
   </data>
+   <data id="chat_imagecreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false"  connectedtop="chatlabel">
+    <name>
+      <language id="en"><![CDATA[Image Creator Chat]]></language>
+      <language id="de"><![CDATA[Bild-Generator-Chat]]></language>
+      <language id="fr"><![CDATA[Chat du créateur d'images]]></language>
+      <language id="es"><![CDATA[Chat del creador de imágenes]]></language>
+    </name>
+    <markdowncontent><![CDATA[Image creation based on user prompts.]]></markdowncontent>
+  </data>
 </records>
