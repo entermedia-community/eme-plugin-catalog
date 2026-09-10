@@ -35,15 +35,22 @@
     <markdowncontent><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></markdowncontent>
   </data>  
 
-  <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
-    <name> 
-      <language id="en"><![CDATA[Create Agent Jobs]]></language>  
+  <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Create Agent Jobs]]></language>
       <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>
       <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
       <language id="es"><![CDATA[Crear trabajos de agente]]></language>
-    </name> 
+    </name>
     <markdowncontent><![CDATA[Creates agent jobs and goal structures from chat interactions by matching available skills and automations.]]></markdowncontent>
-  </data>  
+  </data>
+
+  <data id="agentJobStatusSkill" bean="agentJobStatusSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Agent Job Status]]></language>
+    </name>
+    <markdowncontent><![CDATA[Reports the current status of the agent jobs created by the orchestrator.]]></markdowncontent>
+  </data>
 
 
   <data id="questionsSkill" bean="questionsSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 

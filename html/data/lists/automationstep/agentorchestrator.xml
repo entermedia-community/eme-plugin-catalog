@@ -15,6 +15,11 @@
          <![CDATA[Auto Detect Next Step]]>
       </name>
    </data>
-   
+
+   <data id="agentJobStatus" aiskill="agentJobStatusSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Checking Job Status" runafter="agentJobCreator" >
+      <name>
+         <![CDATA[Agent Job Status]]>
+      </name>
+   </data>
 
    </records>
