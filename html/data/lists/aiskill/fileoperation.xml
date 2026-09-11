@@ -28,7 +28,11 @@
 "description":"The text content to the be saved"
 }]
    ]]></parameters>
-    <defaultoutput><![CDATA[ {"id":"fileoperationstatus"},{"id":"filepath"}]]></defaultoutput>
+     <defaultoutput><![CDATA[ [
+  {
+    "id": "fileoperationstatus"
+  }
+] ]]></defaultoutput>
   </data>
 
 </results>

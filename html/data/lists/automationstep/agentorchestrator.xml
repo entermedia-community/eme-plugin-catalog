@@ -16,10 +16,16 @@
       </name>
    </data>
 
-   <data id="agentJobStatus" aiskill="agentJobStatusSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Checking Job Status" runafter="agentJobCreator" >
-      <name>
-         <![CDATA[Agent Job Status]]>
-      </name>
-   </data>
+    <data id="agentJobStatus" aiskill="agentJobStatusSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Checking Job Status" runafter="agentJobCreator" >
+       <name>
+          <![CDATA[Agent Job Status]]>
+       </name>
+    </data>
 
-   </records>
+    <data id="markdownToHtml" aiskill="markdownToHtmlSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="agentJobStatus" >
+       <name>
+          <![CDATA[Markdown to HTML]]>
+       </name>
+    </data>
+
+    </records>

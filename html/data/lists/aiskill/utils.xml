@@ -14,5 +14,12 @@
     <markdowncontent><![CDATA[Detects and extracts facial profiles and bounding coordinates from visual assets.]]></markdowncontent>
   </data>
 
+  <data id="markdownToHtmlSkill" bean="markdownToHtmlSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <![CDATA[Markdown to HTML]]>
+    </name>
+    <markdowncontent><![CDATA[Takes a markdowncontent parameter from the agent context and converts it to HTML using the built-in MarkdownUtil, storing the result on the context as 'html' for downstream steps and templates.]]></markdowncontent>
+  </data>
+
 
 </results>
