@@ -21,5 +21,30 @@
     <markdowncontent><![CDATA[Takes a markdowncontent parameter from the agent context and converts it to HTML using the built-in MarkdownUtil, storing the result on the context as 'html' for downstream steps and templates.]]></markdowncontent>
   </data>
 
+  <data id="openCodeRunnerSkill" bean="openCodeRunnerSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <![CDATA[Open Code Runner]]>
+    </name>
+    <markdowncontent><![CDATA[Runs the opencode large languae model harness that can change code on the web server or answer complex questions posted to it.]]></markdowncontent>
+    <parameters><![CDATA[
+[{
+"id":"workingpath",
+"description":"The directory the opencode command runs in"
+},
+{
+"id":"outputfile",
+"description":"Optional path of the temporary file to append command output to; a unique temp file is created if not provided"
+}]
+   ]]></parameters>
+    <defaultoutput><![CDATA[ [
+  {
+    "id": "commandoutput"
+  },
+  {
+    "id": "outputfilepath"
+  }
+] ]]></defaultoutput>
+  </data>
+
 
 </results>
