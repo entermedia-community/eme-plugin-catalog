@@ -25,15 +25,11 @@
     <name>
       <![CDATA[Open Code Runner]]>
     </name>
-    <markdowncontent><![CDATA[Runs the opencode large languae model harness that can change code on the web server or answer complex questions posted to it.]]></markdowncontent>
+    <markdowncontent><![CDATA[Runs the opencode large language model harness that can change code on the web server or perform complex actions.]]></markdowncontent>
     <parameters><![CDATA[
 [{
-"id":"workingpath",
-"description":"The directory the opencode command runs in"
-},
-{
-"id":"outputfile",
-"description":"Optional path of the temporary file to append command output to; a unique temp file is created if not provided"
+"id":"userrequest",
+"description":"The request or query to be sent to the opencode command"
 }]
    ]]></parameters>
     <defaultoutput><![CDATA[ [

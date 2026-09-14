@@ -57,7 +57,7 @@
     </name>
   </property>
 
-  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
+  <property id="userrequest" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
     <name> 
       <language id="en"><![CDATA[Instructions]]></language>  
       <language id="de"><![CDATA[Anweisungen]]></language>
@@ -65,6 +65,12 @@
       <language id="es"><![CDATA[Instrucciones]]></language>
     </name> 
   </property>  
+
+  <property id="lastresponse" index="true"  indextype="not_analyzed"  stored="true" editable="true" viewtype="markdown">
+    <name>
+      <language id="en">Last Response</language>
+    </name>
+  </property>
 
 
 </properties>

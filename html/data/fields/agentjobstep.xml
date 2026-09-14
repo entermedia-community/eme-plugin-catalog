@@ -47,7 +47,7 @@
     </name>
   </property>
 
-  <property id="parameters" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="parameters" editable="true" indextype="not_analyzed" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
       <language id="de"><![CDATA[Erforderliche Eingaben]]></language>
@@ -55,7 +55,7 @@
       <language id="es"><![CDATA[Entradas requeridas]]></language>
     </name> 
   </property>
-  <property id="defaultoutput" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="defaultoutput" editable="true" indextype="not_analyzed" index="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Default Output]]></language>  
       <language id="de"><![CDATA[Standardausgabe]]></language>
@@ -69,4 +69,11 @@
       <language id="en">Error Details</language>
     </name>
   </property>
+
+  <property id="lastresponse" index="true"  indextype="not_analyzed"  stored="true" editable="true">
+    <name>
+      <language id="en">Last Response</language>
+    </name>
+  </property>
+  
 </properties>

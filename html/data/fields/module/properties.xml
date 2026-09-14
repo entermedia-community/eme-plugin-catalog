@@ -74,7 +74,7 @@
     </name> 
   </property>  
   <!-- TODO: rename id to foldermask and use legacy -->  
-  <property id="uploadsourcepath" editable="true" stored="true" index="true" note="Module/${data.entity_date.yyyy}/${data.name}  Macros: ${formatteddate} ${formattedyear} ${data.entityparentid.sourcepath}"> 
+  <property id="uploadsourcepath" editable="true" stored="true" index="true" indextype="not_analyzed" note="Module/${data.entity_date.yyyy}/${data.name}  Macros: ${formatteddate} ${formattedyear} ${data.entityparentid.sourcepath}"> 
     <name> 
       <language id="en"><![CDATA[Entity Folder Mask]]></language>  
       <language id="de"><![CDATA[Entitäts-Ordnermaske]]></language>
