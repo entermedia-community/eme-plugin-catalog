@@ -70,7 +70,7 @@
     </name>
   </property>
 
-  <property id="lastresponse" index="true"  indextype="not_analyzed"  stored="true" editable="true">
+  <property id="lastresponse" index="true"  indextype="not_analyzed"  stored="true" editable="true" viewtype="markdown">
     <name>
       <language id="en">Last Response</language>
     </name>
