@@ -1,0 +1,65 @@
+<permissions name="Library Permissions">
+
+	<permission id="copycategory" permissionentitytype="librarycollection" description="Enables users to auto-populate collections" ordering="255">
+		<name><![CDATA[Copy Categories into Collections]]></name>
+	</permission>
+	<permission id="addtofavorites" permissionentitytype="librarycollection" description="Enables users to add files to their Bookmarks" ordering="256">
+		<name><![CDATA[Add files to Bookmarks]]></name>
+	</permission>
+	<permission id="viewcategorynavcollections" permissionentitytype="librarycollection" description="Enables users to view folders inside collections" ordering="257">
+		<name><![CDATA[View Folders in Collections]]></name>
+	</permission>
+	<permission id="searchjoins" permissionentitytype="librarycollection" description="Enables users to search fields from Collections and Libraries when searching assets" ordering="258">
+		<name><![CDATA[Enable advanced search joins]]></name>
+	</permission>
+	<permission id="forcebasiccollections" permissionentitytype="librarycollection" description="Forces a more simplistic view of collections for users" ordering="259">
+		<name><![CDATA[Forces a simple, stripped down view of collections]]></name>
+	</permission>
+	<permission id="editallcollections" permissionentitytype="librarycollection" description="Edit All Collections" ordering="560">
+		<name><![CDATA[Edit All Collections]]></name>
+	</permission>
+
+	<permission id="asseteditorlibraries" permissionentitytype="librarycollection" description="Enables access to the asset library picking." ordering="500">
+		<name><![CDATA[Pick Library For Asset]]></name>
+	</permission>
+	<permission id="asseteditorpickanylibrary" permissionentitytype="librarycollection" description="Asset can be added to any library." ordering="505">
+		<name><![CDATA[Pick Any Library]]></name>
+	</permission>
+	<permission id="viewopencollections" permissionentitytype="librarycollection" description="Enables a list of open collections on the sidebar." ordering="515">
+		<name><![CDATA[Open Collections]]></name>
+	</permission>
+	<permission id="addnewcollection" permissionentitytype="librarycollection" description="Allows creation of new collections." ordering="520">
+		<name><![CDATA[Create New Collection]]></name>
+	</permission>
+	<permission id="addnewlibrary" permissionentitytype="librarycollection" description="Allows creation of new Libraries" ordering="520">
+		<name><![CDATA[Create New Library]]></name>
+	</permission>
+	<permission id="showlibrarypicker" permissionentitytype="librarycollection" description="Show Libraries picker in header area" ordering="521">
+		<name><![CDATA[Show Library Picker]]></name>
+	</permission>
+	<permission id="showcollectionpicker" permissionentitytype="librarycollection" description="Show Collections picker in header area" ordering="523">
+		<name><![CDATA[Show Collection Picker]]></name>
+	</permission>
+	<permission id="assetannotate" permissionentitytype="librarycollection" description="allows annotations" ordering="525">
+		<name><![CDATA[Annotations]]></name>
+	</permission>
+
+	<permission id="viewsavedcollections" permissionentitytype="librarycollection" description="Allow users to view and edit their saved collections" ordering="526">
+		<name><![CDATA[Saved Collections]]></name>
+	</permission>
+	<permission id="viewfeaturedcollections" permissionentitytype="librarycollection" description="Show featured folders in quick search" ordering="527">
+		<name><![CDATA[View Featured Folders]]></name>
+	</permission>
+
+	<permission id="exportcollection" permissionentitytype="librarycollection" description="Move assets in a collection into a Library" ordering="530">
+		<name><![CDATA[Export Collection]]></name>
+	</permission>
+	<permission id="sharecollection" permissionentitytype="librarycollection" description="Email Links to a Collection" ordering="535">
+		<name><![CDATA[Share Collection]]></name>
+	</permission>
+	<permission id="importworkspace" permissionentitytype="librarycollection" description="Import Workspace files from remote" ordering="525">
+		<name><![CDATA[Import Workspace]]></name>
+	</permission>
+
+</permissions>
+	 
