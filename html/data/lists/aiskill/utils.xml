@@ -25,7 +25,7 @@
     <name>
       <![CDATA[Open Code Runner]]>
     </name>
-    <markdowncontent><![CDATA[Runs the opencode large language model harness that can change code on the web server or perform complex actions.]]></markdowncontent>
+    <markdowncontent><![CDATA[Executes the OpenCode LLM harness to assist with automated HTML creation, file searching, and content analysis. Includes administrative utilities to customize and manage eme-server instances.]]></markdowncontent>
     <parameters><![CDATA[
 [{
 "id":"userrequest",
