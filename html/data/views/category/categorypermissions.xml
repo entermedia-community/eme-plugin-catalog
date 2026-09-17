@@ -3,5 +3,4 @@
 <root> 
   <property id="viewgroups"/>  
   <property id="viewusers"/>  
-  <property id="viewroles"/>  
 </root>

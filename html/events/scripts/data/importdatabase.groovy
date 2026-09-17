@@ -87,7 +87,7 @@ public void init()
 		}
 	}
 	ordereredtypes.addAll(childrennames);
-	ordereredtypes.removeAll("settingsgroup");
+	ordereredtypes.removeAll("settingsrole");
 	ordereredtypes.removeAll("propertydetail");
 	ordereredtypes.removeAll("lock");
 	ordereredtypes.removeAll("category");
@@ -147,12 +147,12 @@ public void archiveFolder(Page inPage, String inIndex)
 }
 
 public void importPermissions(MediaArchive mediaarchive, String rootdrive, String tempindex) {
-	Searcher sg = mediaarchive.getSearcher("settingsgroup");
+	Searcher sg = mediaarchive.getSearcher("settingsrole");
 	sg.setAlternativeIndex(tempindex);
 	if( !sg.putMappings() ) {
 		throw new OpenEditException("Could not import permissions ");
 	}
-	Page upload = mediaarchive.getPageManager().getPage(rootdrive + "/lists/settingsgroup.xml");
+	Page upload = mediaarchive.getPageManager().getPage(rootdrive + "/lists/settingsrole.xml");
 	if( upload.exists() ) {
 		XmlUtil util = new XmlUtil();
 		Element root = util.getXml(upload.getReader(),"utf-8");

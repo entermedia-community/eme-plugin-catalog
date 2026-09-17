@@ -65,14 +65,6 @@
       <language id="es"><![CDATA[Grupos]]></language>
     </name> 
   </property>  
-  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" internalfield="true" type="list"> 
-    <name> 
-      <language id="en"><![CDATA[Roles]]></language>  
-      <language id="de"><![CDATA[Rollen]]></language>
-      <language id="fr"><![CDATA[Rôles]]></language>
-      <language id="es"><![CDATA[Roles]]></language>
-    </name> 
-  </property>  
   <property id="securityenabled" editable="true" internalfield="true" index="true" stored="true" type="boolean" securityfield="rootcategory"> 
     <name> 
       <language id="en"><![CDATA[Security Enabled]]></language>  

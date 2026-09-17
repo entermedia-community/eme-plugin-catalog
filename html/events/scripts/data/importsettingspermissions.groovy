@@ -14,12 +14,12 @@ import org.openedit.util.XmlUtil
 
 public void init()
 {
-	Searcher sg = mediaarchive.getSearcher("settingsgroup");
+	Searcher sg = mediaarchive.getSearcher("settingsrole");
 	PropertyDetails details = sg.getPropertyDetails();
 	
 	ArrayList data = new ArrayList();
 
-	Page upload = mediaarchive.getPageManager().getPage("/WEB-INF/data/" + sg.getCatalogId() + "/dataexport/lists/settingsgroup.xml");
+	Page upload = mediaarchive.getPageManager().getPage("/WEB-INF/data/" + sg.getCatalogId() + "/dataexport/lists/settingsrole.xml");
 	
 	XmlUtil util = new XmlUtil();
 	Element root = util.getXml(upload.getReader(),"utf-8");

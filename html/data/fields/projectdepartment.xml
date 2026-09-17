@@ -49,14 +49,6 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" type="list">Roles 
-    <name> 
-      <language id="de"><![CDATA[Rollen]]></language>  
-      <language id="en"><![CDATA[Roles]]></language>  
-      <language id="es"><![CDATA[Roles]]></language>  
-      <language id="fr"><![CDATA[Rôles]]></language> 
-    </name> 
-  </property>  
   <property id="goalpoints" editable="true" index="true" stored="true" type="number" viewtype="text"> 
     <name> 
       <language id="en"><![CDATA[Points]]></language>  

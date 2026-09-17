@@ -67,27 +67,27 @@ public void init()
 												 }
 												 if( current.isInGroup(admingroup) )
 												 {
-														  profile.setProperty("settingsgroup","administrator");
+														  profile.setProperty("settingsrole","administrator");
 													   //   log.info("Made admin");
 												 }
 												 else if( current.isInGroup(usergroup) )
 												 {
-														  profile.setProperty("settingsgroup","user");
+														  profile.setProperty("settingsrole","user");
 												 }
 												 else if( current.isInGroup(readonlygroup) )
 												 {
-														  profile.setProperty("settingsgroup","AVmPYLWTPbQVdTC3G5OM");
+														  profile.setProperty("settingsrole","AVmPYLWTPbQVdTC3G5OM");
 												 }
 												 
 												 else if( current.isInGroup(deletegroup) )
 												 {
-														  profile.setProperty("settingsgroup","AVmPVfBNPbQVdTC3G5N4");
+														  profile.setProperty("settingsrole","AVmPVfBNPbQVdTC3G5N4");
 												 }
 												 else if( current.isInGroup(uploaddeletegroup) )
 												 {
-														  profile.setProperty("settingsgroup","AVmPXL9pPbQVdTC3G5N8");
+														  profile.setProperty("settingsrole","AVmPXL9pPbQVdTC3G5N8");
 												 }
-												 log.info("saved profile ${profile.getId()} as ${profile.settingsgroup}");
+												 log.info("saved profile ${profile.getId()} as ${profile.settingsrole}");
 												profilesearcher.saveData(profile,null);
 					 }
 				 }

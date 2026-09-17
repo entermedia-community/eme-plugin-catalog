@@ -25,7 +25,6 @@ public void init() {
 			if(cat){
 				List users = it.getValues("viewusers");
 				List groups = it.getValues("viewgroups");
-				List roles = it.getValues("viewroles");
 
 
 				users.each {
@@ -34,10 +33,6 @@ public void init() {
 
 				groups.each {
 					cat.addValue("viewgroups",it);
-				}
-
-				roles.each {
-					cat.addValue("viewroles",it);
 				}
 
 				tosave.add(cat);

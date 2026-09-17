@@ -86,7 +86,7 @@
     </name> 
   </property>  
   <!-- 
-  <property id="newusersettingsgroup" index="true" stored="true" editable="true" type="list" listid="settingsgroup" internalfield="false">Role for new users 
+  <property id="newusersettingsrole" index="true" stored="true" editable="true" type="list" listid="settingsrole" internalfield="false">Role for new users 
     <name> 
       <language id="de"><![CDATA[Rolle für neue Benutzer]]></language>  
       <language id="en"><![CDATA[Role for new users]]></language>  

@@ -15,6 +15,6 @@
     <property id="state_province"  />   
     <property id="postal_code"  />
     
-    <property id="settingsgroup"  />
+    <property id="settingsrole"  />
 
 </properties> 

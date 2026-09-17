@@ -4,7 +4,7 @@
   <property id="id" index="true" stored="true" editable="true">Id 
    
   </property>  
-  <property id="settingsgroup" datatype="list" index="true" stored="true" editable="true" >Settings Group </property>
+  <property id="group" datatype="list" index="true" stored="true" editable="true" >User Group </property>
   <property id="permissionsentity" datatype="list" index="true" stored="true" editable="true" >Permission</property>
   
 	<property id="moduleid" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" deleted="false" autocreatefromexif="false" writenametoexif="false" datatype="list">Module 
@@ -15,7 +15,13 @@
       <language id="fr"><![CDATA[Module]]></language> 
     </name> 
   </property>
-  
+
+	<property id="entityid" index="true" editable="true" stored="true" datatype="list" viewtype="default">
+    <name> 
+      <language id="en"><![CDATA[Specific Entity]]></language>  
+    </name> 
+  </property>
+
   <property id="enabled" index="true" stored="true" editable="true" datatype="boolean">Enabled</property>  
   
 </properties>

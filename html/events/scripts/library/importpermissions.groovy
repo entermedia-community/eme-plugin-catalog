@@ -53,15 +53,6 @@ public void init()
 			}
 		}
 
-		HitTracker roles = mediaArchive.getSearcher("libraryroles").query().match("libraryid",library.getId()).search();
-		roles.each {
-			library.addValue("viewroles",it.roleid);
-			if(node != null) {
-				
-			node.addValue("viewroles",it.roleid);
-			}
-		}
-		
 		libraries.saveData(library);
 		if( node != null)
 		{

@@ -36,7 +36,7 @@ public void init() {
 		
 		if( !isprivate )
 		{
-			if( library.getValue("viewusers") != null ||  library.getValue("viewroles") != null ||  library.getValue("viewgroups") != null)
+			if( library.getValue("viewusers") != null ||  library.getValue("viewgroups") != null)
 			{
 				library.setValue("privatelibrary", true);
 			}

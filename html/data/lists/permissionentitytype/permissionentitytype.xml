@@ -1,5 +1,7 @@
 <types>
-	<type id="general" ordering="0">General</type> 
+	<type id="module" ordering="0">Module</type> 
+	<type id="general" ordering="5">General</type> 
 	<type id="import" ordering="10">Import</type>
 	<type id="export" ordering="20">Export</type>
+	<type id="views" ordering="30">Views</type>
 </types>

@@ -32,7 +32,7 @@ public void init()
 		{
 			Data data = permissionsSearcher.createNewData();
 			data.setValue("moduleid", moduleid);
-			data.setValue("settingsgroup", groupid);
+			data.setValue("group", groupid);
 			data.setValue("permissionsentity", permissionid);
 			data.setValue("enabled", true);
 			permissionsSearcher.saveData(data);

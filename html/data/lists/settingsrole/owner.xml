@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settingsroles> 
+  <settingsrole id="owner">
+    <name><![CDATA[Entity Owner]]></name>
+  </settingsrole>  
+</settingsroles>

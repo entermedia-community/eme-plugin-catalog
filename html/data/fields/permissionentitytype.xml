@@ -17,4 +17,12 @@
       <language id="fr"><![CDATA[Prénom]]></language>
     </name>
   </property> 
+  <property id="ordering" type="number" editable="true" index="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="de"><![CDATA[Bestellung]]></language>
+      <language id="fr"><![CDATA[La commande]]></language>
+      <language id="es"><![CDATA[Ordenar]]></language>
+    </name> 
+  </property>  
 </properties>

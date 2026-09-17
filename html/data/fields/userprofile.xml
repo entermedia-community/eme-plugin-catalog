@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Utilisateur]]></language>
     </name>
   </property>
-  <property id="settingsgroup" editable="true" index="true" stored="true" datatype="list" type="list">Role 
+  <property id="settingsrole" editable="true" index="true" stored="true" datatype="list" type="list">Role 
     <name>
       <language id="de"><![CDATA[Rolle]]></language>
       <language id="en"><![CDATA[Role]]></language>

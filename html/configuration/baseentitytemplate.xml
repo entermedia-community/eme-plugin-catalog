@@ -106,14 +106,6 @@
       <language id="es"><![CDATA[Grupos]]></language>
     </name> 
   </property>  
-  <property id="viewroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" internalfield="true" type="list"> 
-    <name> 
-      <language id="en"><![CDATA[Roles]]></language>  
-      <language id="de"><![CDATA[Rollen]]></language>
-      <language id="fr"><![CDATA[Rôles]]></language>
-      <language id="es"><![CDATA[Roles]]></language>
-    </name> 
-  </property>  
   <property id="viewerusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Viewer Users]]></language>  
@@ -130,7 +122,7 @@
       <language id="es"><![CDATA[Grupos de visualización]]></language>
     </name> 
   </property>  
-  <property id="viewerroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" internalfield="true" type="list"> 
+  <property id="viewerroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsrole" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Viewer Roles]]></language>  
       <language id="de"><![CDATA[Zuschauerrollen]]></language>
@@ -154,7 +146,7 @@
       <language id="es"><![CDATA[Grupos editoriales]]></language>
     </name> 
   </property>  
-  <property id="editorroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsgroup" internalfield="true" type="list"> 
+  <property id="editorroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsrole" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Editors Roles]]></language>  
       <language id="de"><![CDATA[Rollen der Herausgeber]]></language>

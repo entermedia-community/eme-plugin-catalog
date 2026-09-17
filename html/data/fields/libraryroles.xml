@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="roleid" type="list" listid="settingsgroup" editable="true" index="true" stored="true">Role 
+  <property id="roleid" type="list" listid="settingsrole" editable="true" index="true" stored="true">Role 
     <name> 
       <language id="de"><![CDATA[Rolle]]></language>  
       <language id="en"><![CDATA[Role]]></language>  

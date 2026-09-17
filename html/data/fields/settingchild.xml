@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="settingsgroup" index="true" stored="true" type="list" editable="false">Settings Group 
+  <property id="settingsrole" index="true" stored="true" type="list" editable="false">Settings Group 
     <name> 
       <language id="de"><![CDATA[Einstellungen Gruppe]]></language>  
       <language id="en"><![CDATA[Settings Group]]></language>  
