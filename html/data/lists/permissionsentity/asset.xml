@@ -1,4 +1,15 @@
 <permissions name="Asset Permissions">
+	<permission id="convert" permissionentitytype="asset" name="Download Additional Sizes" description="Enables downloading of alternate media asset resolutions." ordering="240"/>
+	<permission id="download" permissionentitytype="asset" name="Download Original" description="Enables downloading of the original asset." ordering="245"/>
+	<permission id="quickdownload" permissionentitytype="asset" name="Quick Download Original" description="Enables downloading of the original asset from the results area" ordering="245"/>
+	<permission id="downloadfpo" permissionentitytype="asset" name="Download FPO" description="Enables downloading of the watermarked asset." ordering="250"/>
+	
+	<permission id="viewcategorynav" permissionentitytype="asset" name="Category Navigation" description="Enables the Category Navigation in the sidebar." ordering="292"/>
+  	<permission id="viewcategorytree" permissionentitytype="asset" name="View Category Tree" description="Enables the Category Tree in the Assets Module." ordering="294"/>
+	<permission id="editcategorytree" permissionentitytype="asset" name="Edit/Modify Category Tree" description="Enables editing of the Category Tree in the sidebar." ordering="295"/>
+	<permission id="viewcategorysearch" permissionentitytype="asset" name="Category Search" description="Enables the Category Search in the Category Tree." ordering="296"/>
+	<permission id="filterbyassettype" permissionentitytype="asset" name="Filter By Asset Type" description="Enables filters." ordering="294"/>
+	<permission id="viewrelatedkeywords" permissionentitytype="asset" name="Related Keywords" description="Enables a list of related keywords when searching." ordering="295"/>
 
 	<permission id="viewupload" permissionentitytype="asset" caption="Enables the upload of assets." ordering="300">
 		<name>

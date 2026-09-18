@@ -5,17 +5,11 @@
 	<permission id="viewhomelink" permissiontype="application" name="Home" description="Enables the home button." ordering="205"/>
   	<permission id="viewsettings" permissiontype="application" name="Settings" description="Enables access to application management settings." ordering="205"/>
 		
-	<permission id="multiedit" permissiontype="application" name="Multiple Files" description="Enables various actions across multiple assets simultaneously." ordering="210" />
+	
 	<permission id="edittablecolumns" permissiontype="application" name="Table Columns" description="Enables the customization of search result columns in table view." ordering="220" />
 	<permission id="editlists" permissiontype="application" name="Inline List Editing" description="Allows users to add values to lists." ordering="225" />
 	
-	
-	<permission id="convert" permissiontype="application" name="Download Additional Sizes" description="Enables downloading of alternate media asset resolutions." ordering="240"/>
-	<permission id="download" permissiontype="application" name="Download Original" description="Enables downloading of the original asset." ordering="245"/>
-	<permission id="quickdownload" permissiontype="application" name="Quick Download Original" description="Enables downloading of the original asset from the results area" ordering="245"/>
-	
-	<permission id="downloadfpo" permissiontype="application" name="Download FPO" description="Enables downloading of the watermarked asset." ordering="250"/>
-	
+	<permission id="multiedit" permissiontype="application" name="Multiple Files" description="Enables various actions across multiple assets simultaneously." ordering="210" />
 	
 	<permission id="exportdata" permissiontype="application" name="Export Data" description="Enables exporting of data to CSV" ordering="245"/>
 	
@@ -32,16 +26,10 @@
 	<permission id="viewrecentsearches" permissiontype="application" name="Previous Searches" description="Enables access to past searches." ordering="285"/>
 	<permission id="quicksearch" permissiontype="application" name="Quick Search" description="Enables a general search bar in the top navigation bar." ordering="290"/>
   	<permission id="viewmodulesettings" permissiontype="application" name="Module Settings" description="Enables access to module specific settings." ordering="291"/>
-  	<permission id="viewcategorynav" permissiontype="application" name="Category Navigation" description="Enables the Category Navigation in the sidebar." ordering="292"/>
-  	<permission id="viewcategorytree" permissiontype="application" name="View Category Tree" description="Enables the Category Tree in the Assets Module." ordering="294"/>
-	<permission id="editcategorytree" permissiontype="application" name="Edit/Modify Category Tree" description="Enables editing of the Category Tree in the sidebar." ordering="295"/>
-	<permission id="viewcategorysearch" permissiontype="application" name="Category Search" description="Enables the Category Search in the Category Tree." ordering="296"/>
-	
+  	
 	<permission id="viewerrors" permissiontype="application" name="Error Reporting" description="Enables Error Reporting to appear at the bottom of the screen." ordering="400"/>
 	
-	<permission id="filterbyassettype" permissiontype="application" name="Filter By Asset Type" description="Enables filters." ordering="294"/>
-	<permission id="viewrelatedkeywords" permissiontype="application" name="Related Keywords" description="Enables a list of related keywords when searching." ordering="295"/>
-	
+
 	<permission id="sidebar" permissiontype="application" name="Show Sidebars" description="Show Sidebars" ordering="420"/>
 	<permission id="togglesidebar" permissiontype="application" name="Collapse and Expand Sidebars" description="Allow users to toggle sidebar components" ordering="422"/>
 	<permission id="viewmodulelist" permissiontype="application" name="Entities List" description="Enables the Entities Database Menu." ordering="424"/>
