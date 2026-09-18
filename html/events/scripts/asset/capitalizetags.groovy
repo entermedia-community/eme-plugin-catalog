@@ -32,7 +32,7 @@ public void init(){
 			tosave.add(it);
 		}
 
-		if (tosave.size() >= 100)
+		if (tosave.size() >= 1000)
 		{
 			mediaarchive.saveAssets(tosave);
 			tosave.clear();
