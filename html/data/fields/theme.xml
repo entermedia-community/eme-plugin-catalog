@@ -17,4 +17,12 @@
       <language id="fr"><![CDATA[Nom du Thème]]></language>
     </name>
   </property> 
+  <property id="themeicon" editable="true" stored="true" index="true">
+    <name>
+      <language id="de"><![CDATA[Thema Symbol]]></language>
+      <language id="en"><![CDATA[Theme Icon]]></language>
+      <language id="es"><![CDATA[Icono del tema]]></language>
+      <language id="fr"><![CDATA[Icône du Thème]]></language>
+    </name>
+  </property> 
 </properties>
