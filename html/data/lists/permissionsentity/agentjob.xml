@@ -1,0 +1,5 @@
+<permissions name="Agent Job Permissions">
+  <permission id="usewebinterface" multiedit="false" permissionentitytype="agentjob" ordering="100" caption="Use Web Interface">
+    <name><![CDATA[Use Web Interface]]></name>
+  </permission>
+</permissions>
