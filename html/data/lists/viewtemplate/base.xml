@@ -1,96 +1,166 @@
 <!-- This is a list for all modules by default to have. They can delete the ones they don't need -->
 
 <properties>
+	<property id="defaultentityadminsettings" moduleid="default" systemdefined="true" rendertype="entityadminsettings" ordering="1010">
+		<name>
+			<language id="en">Security</language>
+			<language id="es">Seguridad</language>
+		</name>
+	</property>
 	<property id="defaultgeneral" moduleid="default" systemdefined="false" rendertype="data" ordering="10">
-		Details
+		<name>
+			<language id="en">Details</language>
+			<language id="es">Detalles</language>
+		</name>
 	</property>
 
 	<property id="defaultlightboxes" moduleid="default" systemdefined="false" rendertype="entitymedia" ordering="20">
-		Files
+		<name>
+			<language id="en">Files</language>
+			<language id="es">Archivos</language>
+		</name>
 	</property>
 
 	<property id="defaultaddnew" moduleid="default" systemdefined="true" rendertype="data" ordering="50">
-		Add New
+		<name>
+			<language id="en">Add New</language>
+			<language id="es">Agregar nuevo</language>
+		</name>
 	</property>
 
 	<property id="defaultadvancedsearch" moduleid="default" systemdefined="true" ordering="60">
-		Advanced Search
+		<name>
+			<language id="en">Advanced Search</language>
+			<language id="es">Búsqueda avanzada</language>
+		</name>
 	</property>
 
 	<property id="defaultresultstable" moduleid="default" systemdefined="true" ordering="70">
-		Results
+		<name>
+			<language id="en">Results</language>
+			<language id="es">Resultados</language>
+		</name>
 	</property>
 
 	<property id="defaultai_prompt" moduleid="default" systemdefined="true" ordering="150">
-		AI Asset Creation
+		<name>
+			<language id="en">AI Asset Creation</language>
+			<language id="es">Creación de activos con IA</language>
+		</name>
 	</property>
 
 	<property id="defaultai_prompttext" moduleid="default" systemdefined="true" ordering="151">
-		AI Text Creation
+		<name>
+			<language id="en">AI Text Creation</language>
+			<language id="es">Creación de texto con IA</language>
+		</name>
 	</property>
 
 	<property id="defaultentityactivityhistory" moduleid="default" systemdefined="true" rendertype="entityactivityhistory" parentview="defaultentityadminsettings" ordering="1000">
-		Activity History
+		<name>
+			<language id="en">Activity History</language>
+			<language id="es">Historial de actividad</language>
+		</name>
 	</property>
 
 	<property id="defaultentityexports" moduleid="default" systemdefined="true" rendertype="entityexports" ordering="1010">
-		Export
+		<name>
+			<language id="en">Export</language>
+			<language id="es">Exportar</language>
+		</name>
 	</property>
 
-	<property id="defaultentityadminsettings" moduleid="default" systemdefined="true" rendertype="entityadminsettings" ordering="1010">
-		Moderation Settings
-	</property>
+
 
 	<property id="defaultentityshare" moduleid="default" systemdefined="true" rendertype="entityshare" parentview="defaultentityexports" ordering="1012">
-		Share
+		<name>
+			<language id="en">Share</language>
+			<language id="es">Compartir</language>
+		</name>
 	</property>
 
 	<property id="defaultentitygallery" moduleid="default" systemdefined="true" rendertype="entitygallery" parentview="defaultentityexports" ordering="1014">
-		Publish Gallery
+		<name>
+			<language id="en">Publish Gallery</language>
+			<language id="es">Galería publicada</language>
+		</name>
 	</property>
 
 	<property id="defaultentitycarousel" moduleid="default" systemdefined="true" rendertype="entitycarousel" parentview="defaultentityexports" ordering="1015">
-		Publish Carousel
+		<name>
+			<language id="en">Publish Carousel</language>
+			<language id="es">Carrusel</language>
+		</name>
 	</property>
 
 	<property id="defaultentitycopy" moduleid="default" systemdefined="true" rendertype="entitycopy" parentview="defaultentityexports" ordering="1016">
-		Copy
+		<name>
+			<language id="en">Copy</language>
+			<language id="es">Copiar</language>
+		</name>
 	</property>
 
 	<property id="defaultentitymove" moduleid="default" systemdefined="true" rendertype="entitymove" parentview="defaultentityexports" ordering="1017">
-		Move
+		<name>
+			<language id="en">Move</language>
+			<language id="es">Mover</language>
+		</name>
 	</property>
 
 	<property id="defaultentitydownloadzip" moduleid="default" systemdefined="true" rendertype="entitydownloadzip" parentview="defaultentityexports" ordering="1019">
-		Download Zip
+		<name>
+			<language id="en">Download Zip</language>
+			<language id="es">Descargar zip</language>
+		</name>
 	</property>
 
 	<property id="defaultentitybulkdownload" moduleid="default" systemdefined="true" rendertype="entitybulkdownload" parentview="defaultentityexports" ordering="1020">
-		Bulk Downloader
+		<name>
+			<language id="en">Bulk Downloader</language>
+			<language id="es">Descarga masiva</language>
+		</name>
 	</property>
 
 	<property id="defaultentityimports" moduleid="default" systemdefined="true" rendertype="entityimports" ordering="1000">
-		Import
+		<name>
+			<language id="en">Import</language>
+			<language id="es">Importar</language>
+		</name>
 	</property>
 
 	<property id="defaultentityupload" moduleid="default" systemdefined="true" rendertype="entityupload" parentview="defaultentityexports" ordering="1100">
-		Upload
+		<name>
+			<language id="en">Upload</language>
+			<language id="es">Subir</language>
+		</name>
 	</property>
 
 	<property id="defaultentitybulkupload" moduleid="default" systemdefined="true" rendertype="entitybulkupload" parentview="defaultentityexports" ordering="1101">
-		Bulk Uploader
+		<name>
+			<language id="en">Bulk Uploader</language>
+			<language id="es">Carga masiva</language>
+		</name>
 	</property>
 
 	<property id="defaultentityuploadwithurl" moduleid="default" systemdefined="true" rendertype="entityuploadwithurl" parentview="defaultentityexports" ordering="1103">
-		Upload With URL
+		<name>
+			<language id="en">Upload With URL</language>
+			<language id="es">Subir con URL</language>
+		</name>
 	</property>
 
 	<property id="defaultentityaddexisting" moduleid="default" systemdefined="true" rendertype="entityaddexisting" parentview="defaultentityexports" ordering="1105">
-		Add Existing Folders
+		<name>
+			<language id="en">Add Existing Folders</language>
+			<language id="es">Agregar carpetas existentes</language>
+		</name>
 	</property>
 
 	<property id="defaultpermissionedit" moduleid="default" systemdefined="true" rendertype="data" parentview="defaultentityadminsettings" ordering="1200">
-		Permissions
+		<name>
+			<language id="en">Permissions</language>
+			<language id="es">Permisos</language>
+		</name>
 	</property>
 
 </properties>

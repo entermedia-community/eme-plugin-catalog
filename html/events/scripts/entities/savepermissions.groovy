@@ -12,6 +12,7 @@ public void init()
 
 	String moduleid = context.getRequestParameter("moduleid");
 	String groupid = context.getRequestParameter("settingsgroupid");
+	String entityid = context.getRequestParameter("entityid");
 	
 	PermissionManager permissionManager = mediaarchive.getBean("permissionManager");
 
@@ -19,7 +20,15 @@ public void init()
 	
 	Searcher permissionsSearcher = mediaarchive.getSearcher("permissionentityassigned");
 
-	Collection<Data> existing = permissionsSearcher.query().exact("moduleid", moduleid).exact("group", groupid).search();
+	Collection<Data> existing = new ArrayList<Data>();
+	if( entityid != null)
+	{
+		existing = permissionsSearcher.query().exact("moduleid", moduleid).exact("group", groupid).exact("entityid", entityid).search();
+	}
+	else
+	{
+		existing = permissionsSearcher.query().exact("moduleid", moduleid).exact("group", groupid).search();
+	}
 	permissionsSearcher.deleteAll(existing, null);
 	
 	Collection<Data> tosave = new ArrayList<Data>();
@@ -29,6 +38,10 @@ public void init()
 		{
 			Data data = permissionsSearcher.createNewData();
 			data.setValue("moduleid", moduleid);
+			if( entityid != null)
+			{
+				data.setValue("entityid", entityid);
+			}
 			data.setValue("group", groupid);
 			data.setValue("permissionsentity", permissionid);
 			data.setValue("enabled", true);
