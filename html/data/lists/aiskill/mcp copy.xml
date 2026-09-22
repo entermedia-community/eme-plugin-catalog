@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<results> 
+  <data id="mediaCreatorSkill" bean="mediaCreatorSkill" ordering="10" agenttype="remoteagent"> 
+    <name> 
+      <language id="en"><![CDATA[Media Creator]]></language>  
+    </name> 
+    <markdowncontent><![CDATA[Create Images.]]></markdowncontent>
+  </data> 
+</results>
