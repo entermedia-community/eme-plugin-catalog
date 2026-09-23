@@ -2,77 +2,91 @@
 	<permission id="viewassets" permissionentitytype="asset" caption="Enables access to assets." ordering="1">
 		<name>
 			<language id="en"><![CDATA[View Asset]]></language>
+			<language id="es"><![CDATA[Ver Activo]]></language>
 		</name>
 	</permission>
 	<permission id="editallassets" permissionentitytype="asset" caption="Allow editing and viewing of any asset." ordering="10">
 		<name>
 			<language id="en"><![CDATA[Edit All Assets]]></language>
+			<language id="es"><![CDATA[Editar Todos los Activos]]></language>
 		</name>
 	</permission>
-<permission id="viewmetadatageneral" permissionentitytype="asset" caption="View Metadata Summary" ordering="20">
+	<permission id="viewmetadatageneral" permissionentitytype="asset" caption="View Metadata Summary" ordering="20">
 		<name>
 			<language id="en"><![CDATA[View  Metadata]]></language>
+			<language id="es"><![CDATA[Ver Metadatos]]></language>
 		</name>
 	</permission>
-		<permission id="editmetadatasetup" permissionentitytype="asset" caption="Allows users to edit views." ordering="30">
+	<permission id="editmetadatasetup" permissionentitytype="asset" caption="Allows users to edit views." ordering="30">
 		<name>
 			<language id="en"><![CDATA[Edit Metadata Setup]]></language>
+			<language id="es"><![CDATA[Editar Configuración de Metadatos]]></language>
 		</name>
 	</permission>
 
 	<permission id="deleteasset" permissionentitytype="asset" caption="Enables removal of an asset, and the option to remove the original." ordering="40">
 		<name>
 			<language id="en"><![CDATA[Delete]]></language>
+			<language id="es"><![CDATA[Eliminar]]></language>
 		</name>
 	</permission>
 
 	<permission id="multidelete" permissionentitytype="asset" caption="Enables removal of selected assets, and the option to remove the original." ordering="50">
 		<name>
 			<language id="en"><![CDATA[Multi-Delete]]></language>
+			<language id="es"><![CDATA[Eliminar Múltiple]]></language>
 		</name>
 	</permission>
 
 	<permission id="emaillink" permissionentitytype="asset" caption="Enables an email button that sends a link to an internal asset." ordering="60">
 		<name>
 			<language id="en"><![CDATA[Email]]></language>
+			<language id="es"><![CDATA[Correo Electrónico]]></language>
 		</name>
 	</permission>
 
 	<permission id="publish" permissionentitytype="asset" caption="Enables the publishing of an asset to a specified set of servers." ordering="70">
 		<name>
 			<language id="en"><![CDATA[Publish]]></language>
+			<language id="es"><![CDATA[Publicar]]></language>
 		</name>
 	</permission>
 	<permission id="shareasset" permissionentitytype="asset" caption="Enables the share button. Parent of email, embed, publish and social media share." ordering="80">
 		<name>
 			<language id="en"><![CDATA[Share]]></language>
+			<language id="es"><![CDATA[Compartir]]></language>
 		</name>
 	</permission>
 	<permission id="printpreview" permissionentitytype="asset" caption="Allows printing of asset and asset metadata." ordering="90">
 		<name>
 			<language id="en"><![CDATA[Print]]></language>
+			<language id="es"><![CDATA[Imprimir]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewconversions" permissionentitytype="asset" caption="View Conversions Tool" ordering="100">
 		<name>
 			<language id="en"><![CDATA[Conversions]]></language>
+			<language id="es"><![CDATA[Conversiones]]></language>
 		</name>
 	</permission>
 
 	<permission id="download" permissionentitytype="asset" description="Enables downloading of the original asset." ordering="110">
 		<name>
 			<language id="en"><![CDATA[Download Original]]></language>
+			<language id="es"><![CDATA[Descargar Original]]></language>
 		</name>
 	</permission>
 	<permission id="quickdownload" permissionentitytype="asset" description="Enables downloading of the original asset from the results area" ordering="120">
 		<name>
 			<language id="en"><![CDATA[Quick Download Original]]></language>
+			<language id="es"><![CDATA[Descarga Rápida del Original]]></language>
 		</name>
 	</permission>
 	<permission id="downloadfpo" permissionentitytype="asset" description="Enables downloading of the watermarked asset." ordering="130">
 		<name>
 			<language id="en"><![CDATA[Download FPO]]></language>
+			<language id="es"><![CDATA[Descargar FPO]]></language>
 		</name>
 	</permission>
 
@@ -80,39 +94,46 @@
 	<permission id="convert" permissionentitytype="asset" description="Enables downloading of alternate media asset resolutions." ordering="140">
 		<name>
 			<language id="en"><![CDATA[Download Additional Sizes]]></language>
+			<language id="es"><![CDATA[Descargar Tamaños Adicionales]]></language>
 		</name>
 	</permission>
 
-		<permission id="downloadcategoryzip" permissionentitytype="asset" caption="Download all assets in category in a Zip file" ordering="1420">
+	<permission id="downloadcategoryzip" permissionentitytype="asset" caption="Download all assets in category in a Zip file" ordering="1420">
 		<name>
 			<language id="en"><![CDATA[Download All Assets in Category]]></language>
+			<language id="es"><![CDATA[Descargar Todos los Activos de la Categoría]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewcategorynav" permissionentitytype="asset" description="Enables the Category Navigation in the sidebar." ordering="150">
 		<name>
 			<language id="en"><![CDATA[Category Navigation]]></language>
+			<language id="es"><![CDATA[Navegación por Categorías]]></language>
 		</name>
 	</permission>
 	<permission id="viewcategorytree" permissionentitytype="asset" description="Enables the Category Tree in the Assets Module." ordering="160">
 		<name>
 			<language id="en"><![CDATA[View Category Tree]]></language>
+			<language id="es"><![CDATA[Ver Árbol de Categorías]]></language>
 		</name>
 	</permission>
 	<permission id="editcategorytree" permissionentitytype="asset" description="Enables editing of the Category Tree in the sidebar." ordering="170">
 		<name>
 			<language id="en"><![CDATA[Edit/Modify Category Tree]]></language>
+			<language id="es"><![CDATA[Editar/Modificar Árbol de Categorías]]></language>
 		</name>
 	</permission>
 	<permission id="viewcategorysearch" permissionentitytype="asset" description="Enables the Category Search in the Category Tree." ordering="180">
 		<name>
 			<language id="en"><![CDATA[Category Search]]></language>
+			<language id="es"><![CDATA[Búsqueda por Categoría]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewrelatedkeywords" permissionentitytype="asset" description="Enables a list of related keywords when searching." ordering="200">
 		<name>
 			<language id="en"><![CDATA[Related Keywords]]></language>
+			<language id="es"><![CDATA[Palabras Clave Relacionadas]]></language>
 		</name>
 	</permission>
 
@@ -126,47 +147,55 @@
 	<permission id="viewvoting" permissionentitytype="asset" caption="Enables a like button for users to express approval of an asset." ordering="220">
 		<name>
 			<language id="en"><![CDATA[View Like]]></language>
+			<language id="es"><![CDATA[Ver Me Gusta]]></language>
 		</name>
 	</permission>
 
-	
+
 
 	<permission id="embedasset" permissionentitytype="asset" caption="Enables and embed button that provides HTML code for an asset." ordering="230">
 		<name>
 			<language id="en"><![CDATA[Embedding]]></language>
+			<language id="es"><![CDATA[Incrustación]]></language>
 		</name>
 	</permission>
 	<permission id="quickpublish" permissionentitytype="asset" caption="Enables the quick publish menu for rapidly publishing assets" ordering="240">
 		<name>
 			<language id="en"><![CDATA[Quick Publish]]></language>
+			<language id="es"><![CDATA[Publicación Rápida]]></language>
 		</name>
 	</permission>
 
 	<permission id="editassetcategories" permissionentitytype="asset" caption="Enables editing of an assets assigned categories" ordering="260">
 		<name>
 			<language id="en"><![CDATA[Assign Categories]]></language>
+			<language id="es"><![CDATA[Asignar Categorías]]></language>
 		</name>
 	</permission>
 	<permission id="editcategories" permissionentitytype="asset" caption="Enables editing of categories" ordering="270">
 		<name>
 			<language id="en"><![CDATA[Edit Categories]]></language>
+			<language id="es"><![CDATA[Editar Categorías]]></language>
 		</name>
 	</permission>
 	<permission id="showbadge" permissionentitytype="asset" caption="Enables view the badges on Thumbnails ." ordering="280">
 		<name>
 			<language id="en"><![CDATA[Show Badge]]></language>
+			<language id="es"><![CDATA[Mostrar Insignia]]></language>
 		</name>
 	</permission>
-	
+
 	<permission id="deletecomments" permissionentitytype="asset" caption="Enables deleting commenting on media assets." ordering="290">
 		<name>
 			<language id="en"><![CDATA[Delete Comments]]></language>
+			<language id="es"><![CDATA[Eliminar Comentarios]]></language>
 		</name>
 	</permission>
 
 	<permission id="assetpermissions" permissionentitytype="asset" caption="Enables permission alteration for media assets." ordering="300">
 		<name>
 			<language id="en"><![CDATA[Permissions]]></language>
+			<language id="es"><![CDATA[Permisos]]></language>
 		</name>
 	</permission>
 
@@ -174,38 +203,45 @@
 	<permission id="converthistory" permissionentitytype="asset" caption="Logs the conversion history of an asset." ordering="310">
 		<name>
 			<language id="en"><![CDATA[Conversions Logs]]></language>
+			<language id="es"><![CDATA[Registros de Conversiones]]></language>
 		</name>
 	</permission>
 	<permission id="viewassetpreviewhistory" permissionentitytype="asset" caption="Logs the preview history of an asset." ordering="320">
 		<name>
 			<language id="en"><![CDATA[Preview Logs]]></language>
+			<language id="es"><![CDATA[Registros de Vista Previa]]></language>
 		</name>
 	</permission>
-	<preference id="capturehistory" permissionentitytype="asset" caption="Logs the usage history of an asset." ordering="330">
+	<permission id="capturehistory" permissionentitytype="asset" caption="Logs the usage history of an asset." ordering="330">
 		<name>
 			<language id="en"><![CDATA[Save Usage]]></language>
+			<language id="es"><![CDATA[Guardar Uso]]></language>
 		</name>
-	</preference>
+	</permission>
 
 	<permission id="viewmap" permissionentitytype="asset" caption="Enables access to asset latitude/ longitude and a mapping feature." ordering="340">
 		<name>
 			<language id="en"><![CDATA[Map & Geo-location]]></language>
+			<language id="es"><![CDATA[Mapa y Geolocalización]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewmediaedit" permissionentitytype="asset" caption="Enables access to Media Editor." ordering="350">
 		<name>
 			<language id="en"><![CDATA[Media Editor]]></language>
+			<language id="es"><![CDATA[Editor de Medios]]></language>
 		</name>
 	</permission>
 	<permission id="mediaeditsave" permissionentitytype="asset" caption="Allow saving changes on Media Editor to the original Media." ordering="360">
 		<name>
 			<language id="en"><![CDATA[Save Changes on Media Editor]]></language>
+			<language id="es"><![CDATA[Guardar Cambios en Editor de Medios]]></language>
 		</name>
 	</permission>
 	<permission id="mediaeditsaveas" permissionentitytype="asset" caption="Allow saving changes on Media Editor as a copy." ordering="370">
 		<name>
 			<language id="en"><![CDATA[Save As Changes on Media Editor]]></language>
+			<language id="es"><![CDATA[Guardar Como Cambios en Editor de Medios]]></language>
 		</name>
 	</permission>
 
@@ -213,60 +249,69 @@
 	<permission id="viewcroppingtool" permissionentitytype="asset" caption="Enables Cropping Tool" ordering="380">
 		<name>
 			<language id="en"><![CDATA[Cropping]]></language>
+			<language id="es"><![CDATA[Recorte]]></language>
 		</name>
 	</permission>
 
-	
 
-	
+
 	<permission id="showbadge" permissionentitytype="asset" caption="Enables view the badges on Thumbnails ." ordering="400">
 		<name>
 			<language id="en"><![CDATA[Show Badge]]></language>
+			<language id="es"><![CDATA[Mostrar Insignia]]></language>
 		</name>
 	</permission>
 	<permission id="viewtimeline" permissionentitytype="asset" caption="Enables access to video clips and metadata" ordering="410">
 		<name>
 			<language id="en"><![CDATA[Video Timeline]]></language>
+			<language id="es"><![CDATA[Línea de Tiempo de Video]]></language>
 		</name>
 	</permission>
 	<permission id="viewclosedcaptions" permissionentitytype="asset" caption="Closed Caption Support" ordering="420">
 		<name>
 			<language id="en"><![CDATA[Closed Captions]]></language>
+			<language id="es"><![CDATA[Subtítulos Ocultos]]></language>
 		</name>
 	</permission>
 
 	<permission id="showunwatermarkedassets" permissionentitytype="asset" caption="Show assets in collection without a watermark applied" ordering="440">
 		<name>
 			<language id="en"><![CDATA[Show Unwatermarked Assets]]></language>
+			<language id="es"><![CDATA[Mostrar Activos sin Marca de Agua]]></language>
 		</name>
 	</permission>
 	<permission id="forcewatermarkasset" permissionentitytype="asset" caption="System Wide Watermarking across all assets" ordering="450">
 		<name>
 			<language id="en"><![CDATA[Watermark]]></language>
+			<language id="es"><![CDATA[Marca de Agua]]></language>
 		</name>
 	</permission>
 
 	<permission id="showpendingassets" permissionentitytype="asset" caption="Show pending assets for users (or assets owned by them)" ordering="460">
 		<name>
 			<language id="en"><![CDATA[Show Pending Assets]]></language>
+			<language id="es"><![CDATA[Mostrar Activos Pendientes]]></language>
 		</name>
 	</permission>
 
 	<permission id="hidedeletedassets" permissionentitytype="asset" caption="Hide Deleted Assets from search results" ordering="470">
 		<name>
 			<language id="en"><![CDATA[Hide Deleted Assets]]></language>
+			<language id="es"><![CDATA[Ocultar Activos Eliminados]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewbreadcrumb" permissionentitytype="asset" caption="Enables Categories Breadcrumb Boxes." ordering="480">
 		<name>
 			<language id="en"><![CDATA[Categories Breadcrumb]]></language>
+			<language id="es"><![CDATA[Miga de Pan de Categorías]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewapprovereject" permissionentitytype="asset" caption="Enables Approve/Reject options." ordering="490">
 		<name>
 			<language id="en"><![CDATA[Approve/Reject Workflow]]></language>
+			<language id="es"><![CDATA[Flujo de Aprobación/Rechazo]]></language>
 		</name>
 	</permission>
 
@@ -274,23 +319,25 @@
 	<permission id="viewallorders" permissionentitytype="asset" caption="View All Users Orders" ordering="500">
 		<name>
 			<language id="en"><![CDATA[Orders]]></language>
+			<language id="es"><![CDATA[Órdenes]]></language>
 		</name>
 	</permission>
 
 	<permission id="viewfaceprofile" permissionentitytype="asset" caption="View Asset Face Profile Detection" ordering="510">
 		<name>
 			<language id="en"><![CDATA[View Face Profiles]]></language>
+			<language id="es"><![CDATA[Ver Perfiles Faciales]]></language>
 		</name>
 	</permission>
 
-	<!-- 
-	
-	<preference id="relateassets" name="Create Asset Relationships" caption="Enable creation and modification of asset relation"/>	
+	<!--
+
+	<preference id="relateassets" name="Create Asset Relationships" caption="Enable creation and modification of asset relation"/>
 	<permission id="editassetcategories" name="Edit Categories" caption="Edit Asset Categories"/>
 
 	<permission id="viewassetdownloads" name="View Download Links" caption="Show screen for custom links"/>
 	<permission id="viewassetedit" name="Media editor" caption="Allow JPG crop and resize"/>
-		
+
 	<permission id="viewassetdownloadhistory" name="Download History" caption="Show download history report"/>
 	<permission id="viewassetedithistory" name="Edit History" caption="Show when edits where made"/>
 	<permission id="viewassetorderhistory" name="Order History" caption="Show order history report"/>
@@ -302,35 +349,33 @@
 </permission>
 
 <permission id="viewcomments" permissionentitytype="asset" caption="View comments on media assets." ordering="270">
-		<name>
-			<language id="en"><![CDATA[View Comments]]></language>
-		</name>
-	</permission>
-	<permission id="comment" permissionentitytype="asset" caption="Enables commenting on media assets." ordering="280">
-		<name>
-			<language id="en"><![CDATA[Add Comments]]></language>
-		</name>
-	</permission>
-	<permission id="viewfatwire" permissionentitytype="asset" caption="Shows Fatwire Status." ordering="200">
-		<name>
-			<language id="en"><![CDATA[View Fatwire Status]]></language>
-		</name>
-	</permission>
+<name>
+<language id="en"><![CDATA[View Comments]]></language>
+</name>
+</permission>
+<permission id="comment" permissionentitytype="asset" caption="Enables commenting on media assets." ordering="280">
+<name>
+<language id="en"><![CDATA[Add Comments]]></language>
+</name>
+</permission>
+<permission id="viewfatwire" permissionentitytype="asset" caption="Shows Fatwire Status." ordering="200">
+<name>
+<language id="en"><![CDATA[View Fatwire Status]]></language>
+</name>
+</permission>
 
-		<permission id="filterbyassettype" permissionentitytype="asset" description="Enables filters." ordering="190">
-		<name>
-			<language id="en"><![CDATA[Filter By Asset Type]]></language>
-		</name>
-	</permission>
+<permission id="filterbyassettype" permissionentitytype="asset" description="Enables filters." ordering="190">
+<name>
+<language id="en"><![CDATA[Filter By Asset Type]]></language>
+</name>
+</permission>
 
-		<permission id="editadvancedsearch" permissionentitytype="asset" caption="Enables the customization of initial search criteria." ordering="250">
-		<name>
-			<language id="en"><![CDATA[Advanced Search]]></language>
-		</name>
-	</permission>
+<permission id="editadvancedsearch" permissionentitytype="asset" caption="Enables the customization of initial search criteria." ordering="250">
+<name>
+<language id="en"><![CDATA[Advanced Search]]></language>
+</name>
+</permission>
 	 -->
 
 
 </permissions>
-
-	

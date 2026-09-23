@@ -1,22 +1,38 @@
 <permissions name="Importing Permissions">
   <permission id="upload_files" multiedit="false" permissionentitytype="import" ordering="100" caption="Upload files to record">
-    <name><![CDATA[Upload Files]]></name>
+    <name>
+      <language id="en"><![CDATA[Upload Files]]></language>
+      <language id="es"><![CDATA[Subir Archivos]]></language>
+    </name>
   </permission>
   <permission id="upload_folders" permissionentitytype="import" caption="Upload folders to record" ordering="102" multiedit="false">
-    <name><![CDATA[Upload Folders]]></name>
+    <name>
+      <language id="en"><![CDATA[Upload Folders]]></language>
+      <language id="es"><![CDATA[Subir Carpetas]]></language>
+    </name>
   </permission>
   <permission id="importurl" multiedit="false" permissionentitytype="import" ordering="110" caption="Import from URL">
-    <name><![CDATA[Import from URL]]></name>
+    <name>
+      <language id="en"><![CDATA[Import from URL]]></language>
+      <language id="es"><![CDATA[Importar desde URL]]></language>
+    </name>
   </permission>
   <permission id="importassets" multiedit="false" permissionentitytype="import" ordering="120" caption="Import Assets">
-    <name><![CDATA[Import Assets (Remote)]]></name>
+    <name>
+      <language id="en"><![CDATA[Import Assets (Remote)]]></language>
+      <language id="es"><![CDATA[Importar Activos (Remoto)]]></language>
+    </name>
   </permission>
   <permission id="importfolders" multiedit="false" permissionentitytype="import" ordering="130" caption="Import Folders">
-    <name><![CDATA[Import Folders]]></name>
+    <name>
+      <language id="en"><![CDATA[Import Folders]]></language>
+      <language id="es"><![CDATA[Importar Carpetas]]></language>
+    </name>
   </permission>
   <permission id="importpushtoserver" multiedit="false" permissionentitytype="import" ordering="140" caption="Push Files to Server">
-    <name><![CDATA[Push Files to Server (Desktop)]]></name>
+    <name>
+      <language id="en"><![CDATA[Push Files to Server (Desktop)]]></language>
+      <language id="es"><![CDATA[Enviar Archivos al Servidor (Escritorio)]]></language>
+    </name>
   </permission>
 </permissions>
-
-	

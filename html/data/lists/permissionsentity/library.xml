@@ -1,65 +1,121 @@
 <permissions name="Library Permissions">
 
 	<permission id="copycategory" permissionentitytype="librarycollection" description="Enables users to auto-populate collections" ordering="255">
-		<name><![CDATA[Copy Categories into Collections]]></name>
+		<name>
+			<language id="en"><![CDATA[Copy Categories into Collections]]></language>
+			<language id="es"><![CDATA[Copiar Categorías en Colecciones]]></language>
+		</name>
 	</permission>
 	<permission id="addtofavorites" permissionentitytype="librarycollection" description="Enables users to add files to their Bookmarks" ordering="256">
-		<name><![CDATA[Add files to Bookmarks]]></name>
+		<name>
+			<language id="en"><![CDATA[Add files to Bookmarks]]></language>
+			<language id="es"><![CDATA[Agregar Archivos a Marcadores]]></language>
+		</name>
 	</permission>
 	<permission id="viewcategorynavcollections" permissionentitytype="librarycollection" description="Enables users to view folders inside collections" ordering="257">
-		<name><![CDATA[View Folders in Collections]]></name>
+		<name>
+			<language id="en"><![CDATA[View Folders in Collections]]></language>
+			<language id="es"><![CDATA[Ver Carpetas en Colecciones]]></language>
+		</name>
 	</permission>
 	<permission id="searchjoins" permissionentitytype="librarycollection" description="Enables users to search fields from Collections and Libraries when searching assets" ordering="258">
-		<name><![CDATA[Enable advanced search joins]]></name>
+		<name>
+			<language id="en"><![CDATA[Enable advanced search joins]]></language>
+			<language id="es"><![CDATA[Habilitar Uniones de Búsqueda Avanzada]]></language>
+		</name>
 	</permission>
 	<permission id="forcebasiccollections" permissionentitytype="librarycollection" description="Forces a more simplistic view of collections for users" ordering="259">
-		<name><![CDATA[Forces a simple, stripped down view of collections]]></name>
+		<name>
+			<language id="en"><![CDATA[Forces a simple, stripped down view of collections]]></language>
+			<language id="es"><![CDATA[Forzar una Vista Simplificada de Colecciones]]></language>
+		</name>
 	</permission>
 	<permission id="editallcollections" permissionentitytype="librarycollection" description="Edit All Collections" ordering="560">
-		<name><![CDATA[Edit All Collections]]></name>
+		<name>
+			<language id="en"><![CDATA[Edit All Collections]]></language>
+			<language id="es"><![CDATA[Editar Todas las Colecciones]]></language>
+		</name>
 	</permission>
 
 	<permission id="asseteditorlibraries" permissionentitytype="librarycollection" description="Enables access to the asset library picking." ordering="500">
-		<name><![CDATA[Pick Library For Asset]]></name>
+		<name>
+			<language id="en"><![CDATA[Pick Library For Asset]]></language>
+			<language id="es"><![CDATA[Elegir Biblioteca para Activo]]></language>
+		</name>
 	</permission>
 	<permission id="asseteditorpickanylibrary" permissionentitytype="librarycollection" description="Asset can be added to any library." ordering="505">
-		<name><![CDATA[Pick Any Library]]></name>
+		<name>
+			<language id="en"><![CDATA[Pick Any Library]]></language>
+			<language id="es"><![CDATA[Elegir Cualquier Biblioteca]]></language>
+		</name>
 	</permission>
 	<permission id="viewopencollections" permissionentitytype="librarycollection" description="Enables a list of open collections on the sidebar." ordering="515">
-		<name><![CDATA[Open Collections]]></name>
+		<name>
+			<language id="en"><![CDATA[Open Collections]]></language>
+			<language id="es"><![CDATA[Colecciones Abiertas]]></language>
+		</name>
 	</permission>
 	<permission id="addnewcollection" permissionentitytype="librarycollection" description="Allows creation of new collections." ordering="520">
-		<name><![CDATA[Create New Collection]]></name>
+		<name>
+			<language id="en"><![CDATA[Create New Collection]]></language>
+			<language id="es"><![CDATA[Crear Nueva Colección]]></language>
+		</name>
 	</permission>
 	<permission id="addnewlibrary" permissionentitytype="librarycollection" description="Allows creation of new Libraries" ordering="520">
-		<name><![CDATA[Create New Library]]></name>
+		<name>
+			<language id="en"><![CDATA[Create New Library]]></language>
+			<language id="es"><![CDATA[Crear Nueva Biblioteca]]></language>
+		</name>
 	</permission>
 	<permission id="showlibrarypicker" permissionentitytype="librarycollection" description="Show Libraries picker in header area" ordering="521">
-		<name><![CDATA[Show Library Picker]]></name>
+		<name>
+			<language id="en"><![CDATA[Show Library Picker]]></language>
+			<language id="es"><![CDATA[Mostrar Selector de Bibliotecas]]></language>
+		</name>
 	</permission>
 	<permission id="showcollectionpicker" permissionentitytype="librarycollection" description="Show Collections picker in header area" ordering="523">
-		<name><![CDATA[Show Collection Picker]]></name>
+		<name>
+			<language id="en"><![CDATA[Show Collection Picker]]></language>
+			<language id="es"><![CDATA[Mostrar Selector de Colecciones]]></language>
+		</name>
 	</permission>
 	<permission id="assetannotate" permissionentitytype="librarycollection" description="allows annotations" ordering="525">
-		<name><![CDATA[Annotations]]></name>
+		<name>
+			<language id="en"><![CDATA[Annotations]]></language>
+			<language id="es"><![CDATA[Anotaciones]]></language>
+		</name>
 	</permission>
 
 	<permission id="viewsavedcollections" permissionentitytype="librarycollection" description="Allow users to view and edit their saved collections" ordering="526">
-		<name><![CDATA[Saved Collections]]></name>
+		<name>
+			<language id="en"><![CDATA[Saved Collections]]></language>
+			<language id="es"><![CDATA[Colecciones Guardadas]]></language>
+		</name>
 	</permission>
 	<permission id="viewfeaturedcollections" permissionentitytype="librarycollection" description="Show featured folders in quick search" ordering="527">
-		<name><![CDATA[View Featured Folders]]></name>
+		<name>
+			<language id="en"><![CDATA[View Featured Folders]]></language>
+			<language id="es"><![CDATA[Ver Carpetas Destacadas]]></language>
+		</name>
 	</permission>
 
 	<permission id="exportcollection" permissionentitytype="librarycollection" description="Move assets in a collection into a Library" ordering="530">
-		<name><![CDATA[Export Collection]]></name>
+		<name>
+			<language id="en"><![CDATA[Export Collection]]></language>
+			<language id="es"><![CDATA[Exportar Colección]]></language>
+		</name>
 	</permission>
 	<permission id="sharecollection" permissionentitytype="librarycollection" description="Email Links to a Collection" ordering="535">
-		<name><![CDATA[Share Collection]]></name>
+		<name>
+			<language id="en"><![CDATA[Share Collection]]></language>
+			<language id="es"><![CDATA[Compartir Colección]]></language>
+		</name>
 	</permission>
 	<permission id="importworkspace" permissionentitytype="librarycollection" description="Import Workspace files from remote" ordering="525">
-		<name><![CDATA[Import Workspace]]></name>
+		<name>
+			<language id="en"><![CDATA[Import Workspace]]></language>
+			<language id="es"><![CDATA[Importar Espacio de Trabajo]]></language>
+		</name>
 	</permission>
 
 </permissions>
-	 

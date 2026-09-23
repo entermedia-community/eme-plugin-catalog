@@ -1,65 +1,114 @@
 <permissions name="General Permissions">
   <permission id="share" multiedit="false" permissionentitytype="general" ordering="255" caption="Share Link">
-    <name><![CDATA[Share Link]]></name>
+    <name>
+      <language id="en"><![CDATA[Share Link]]></language>
+      <language id="es"><![CDATA[Compartir Enlace]]></language>
+    </name>
   </permission>
   <permission id="publishinggallery" multiedit="false" permissionentitytype="general" ordering="257" caption="Allow Publishing Gallery">
-    <name><![CDATA[Allow Publish Gallery]]></name>
+    <name>
+      <language id="en"><![CDATA[Allow Publish Gallery]]></language>
+      <language id="es"><![CDATA[Permitir Publicar Galería]]></language>
+    </name>
   </permission>
   <permission id="view_files" multiedit="false" permissionentitytype="general" ordering="231" caption="View Files">
-    <name><![CDATA[View Files]]></name>
+    <name>
+      <language id="en"><![CDATA[View Files]]></language>
+      <language id="es"><![CDATA[Ver Archivos]]></language>
+    </name>
   </permission>
 
   <permission id="delete" permissionentitytype="general" multiedit="false" ordering="220" description="Delete existing" caption="Delete existing entities">
-    <name><![CDATA[Delete]]></name>
+    <name>
+      <language id="en"><![CDATA[Delete]]></language>
+      <language id="es"><![CDATA[Eliminar]]></language>
+    </name>
   </permission>
   <permission id="edit" permissionentitytype="general" multiedit="false" ordering="210" description="Edit existing" caption="Edit existing entities">
-    <name><![CDATA[Edit]]></name>
+    <name>
+      <language id="en"><![CDATA[Edit]]></language>
+      <language id="es"><![CDATA[Editar]]></language>
+    </name>
   </permission>
   <permission id="create" permissionentitytype="general" multiedit="false" ordering="200" description="Create new" caption="Create entities">
-    <name><![CDATA[Create]]></name>
+    <name>
+      <language id="en"><![CDATA[Create]]></language>
+      <language id="es"><![CDATA[Crear]]></language>
+    </name>
   </permission>
   <permission id="assign_files" permissionentitytype="general" multiedit="false" ordering="235" caption="Assign existing files">
-    <name><![CDATA[Assign Existing Files]]></name>
+    <name>
+      <language id="en"><![CDATA[Assign Existing Files]]></language>
+      <language id="es"><![CDATA[Asignar Archivos Existentes]]></language>
+    </name>
   </permission>
   <permission id="assign_folders" permissionentitytype="general" caption="Assign existing folders" ordering="237" multiedit="false">
-    <name><![CDATA[Assign Existing Folders]]></name>
+    <name>
+      <language id="en"><![CDATA[Assign Existing Folders]]></language>
+      <language id="es"><![CDATA[Asignar Carpetas Existentes]]></language>
+    </name>
   </permission>
   <permission id="view" permissionentitytype="general" multiedit="false" ordering="100" caption="View Details">
-    <name><![CDATA[View Details]]></name>
+    <name>
+      <language id="en"><![CDATA[View Details]]></language>
+      <language id="es"><![CDATA[Ver Detalles]]></language>
+    </name>
   </permission>
 
   <permission id="viewerpermissions" permissionentitytype="general" multiedit="false" ordering="100" caption="Record Permissions">
-    <name><![CDATA[Permissions]]></name>
+    <name>
+      <language id="en"><![CDATA[Permissions]]></language>
+      <language id="es"><![CDATA[Permisos]]></language>
+    </name>
   </permission>
 
 
   <permission id="view_assetworkflow" multiedit="false" permissionentitytype="general" ordering="531" caption="View Files">
-    <name><![CDATA[View Asset Workflow]]></name>
+    <name>
+      <language id="en"><![CDATA[View Asset Workflow]]></language>
+      <language id="es"><![CDATA[Ver Flujo de Trabajo del Activo]]></language>
+    </name>
   </permission>
   <permission id="createwithai" permissionentitytype="general" multiedit="false" ordering="210" description="Edit existing" caption="Build new Entities with AI">
-    <name><![CDATA[Build new Entities with AI]]></name>
+    <name>
+      <language id="en"><![CDATA[Build new Entities with AI]]></language>
+      <language id="es"><![CDATA[Crear Nuevas Entidades con IA]]></language>
+    </name>
   </permission>
   <permission id="createassetswithai" permissionentitytype="general" multiedit="false" ordering="210" description="Edit existing" caption="Build new assets with AI for use in Entity">
-    <name><![CDATA[Create new Assets with AI]]></name>
+    <name>
+      <language id="en"><![CDATA[Create new Assets with AI]]></language>
+      <language id="es"><![CDATA[Crear Nuevos Activos con IA]]></language>
+    </name>
   </permission>
 
 
   <permission id="chat_send_messages" multiedit="false" permissionentitytype="general" ordering="631" caption="Chat - Send Messages">
-    <name><![CDATA[Chat Send Messages]]></name>
+    <name>
+      <language id="en"><![CDATA[Chat Send Messages]]></language>
+      <language id="es"><![CDATA[Chat Enviar Mensajes]]></language>
+    </name>
   </permission>
 
   <permission id="chat_edit_messages" multiedit="false" permissionentitytype="general" ordering="631" caption="Chat - Edit Messages">
-    <name><![CDATA[Chat Edit Own Messages]]></name>
+    <name>
+      <language id="en"><![CDATA[Chat Edit Own Messages]]></language>
+      <language id="es"><![CDATA[Chat Editar Propios Mensajes]]></language>
+    </name>
   </permission>
 
   <permission id="chat_message_reactions" multiedit="false" permissionentitytype="general" ordering="631" caption="Chat - Message Reactions">
-    <name><![CDATA[Chat Send Reactions to Messages]]></name>
+    <name>
+      <language id="en"><![CDATA[Chat Send Reactions to Messages]]></language>
+      <language id="es"><![CDATA[Chat Enviar Reacciones a Mensajes]]></language>
+    </name>
   </permission>
 
   <permission id="chat_add_attachments" multiedit="false" permissionentitytype="general" ordering="631" caption="Chat - Add Attachments">
-    <name><![CDATA[Chat Add Attachments]]></name>
+    <name>
+      <language id="en"><![CDATA[Chat Add Attachments]]></language>
+      <language id="es"><![CDATA[Chat Adjuntar Archivos]]></language>
+    </name>
   </permission>
 
 </permissions>
-
-	
