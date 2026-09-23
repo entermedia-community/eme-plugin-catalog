@@ -10,6 +10,8 @@
   <property id="orderactivityresults" moduleid="order" systemdefined="true" >Order Activity</property>
   
   <property id="orderviewcheckoutorder" moduleid="order" systemdefined="true" >Checkout Edit</property>
+
+  <property id="assetdownloaddetails" moduleid="asset" systemdefined="true" >Asset Download Details</property>
   
   <data id="orderlightboxes"  deleted="true" moduleid="order"> 
     <name><![CDATA[Files]]></name> 
