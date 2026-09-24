@@ -43,4 +43,7 @@
       <language id="es"><![CDATA[IA: Detección de rostros]]></language>
     </name> 
   </data> 
+  <data id="opencode" connectionbean="httpConnection" serverroot="http://127.0.0.1:49374" serverapikey="b3BlbmNvZGU6RlBzbC0xc2MtcmVHUHBsZENkU0tnT2tnbXNYMzFnLWNGb19JbGRYUlpBYw==" aiservertype="harness"> 
+    <name><![CDATA[AI: OpenCode Harness Server]]></name> 
+  </data>  
 </root>

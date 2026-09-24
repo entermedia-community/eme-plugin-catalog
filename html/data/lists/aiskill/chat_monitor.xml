@@ -53,6 +53,20 @@
   </data>
 
 
+  <data id="openCodeApproveSkill" bean="openCodeApproveSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Open Code Approve]]></language>
+    </name>
+    <markdowncontent><![CDATA[Answers an opencode security prompt (once, always or reject) for an agent job step.]]></markdowncontent>
+  </data>
+
+  <data id="openCodeAnswerSkill" bean="openCodeAnswerSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Open Code Answer]]></language>
+    </name>
+    <markdowncontent><![CDATA[Answers an opencode question for an agent job step.]]></markdowncontent>
+  </data>
+
   <data id="questionsSkill" bean="questionsSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Questions Chat]]></language>  

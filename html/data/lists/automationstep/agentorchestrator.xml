@@ -34,4 +34,16 @@
         </name>
      </data>
 
+    <data id="openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Sending Approval">
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
      </records>

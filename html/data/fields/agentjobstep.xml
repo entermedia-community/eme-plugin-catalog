@@ -75,5 +75,17 @@
       <language id="en">Last Response</language>
     </name>
   </property>
-  
+
+  <property id="pendingquestion" index="true"  indextype="not_analyzed"  stored="true" editable="true" viewtype="markdown">
+    <name>
+      <language id="en">Pending Question</language>
+    </name>
+  </property>
+
+  <property id="pendingpermissionid" index="true"  indextype="not_analyzed"  stored="true" editable="true">
+    <name>
+      <language id="en">Pending Permission ID</language>
+    </name>
+  </property>
+
 </properties>
