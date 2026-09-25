@@ -6,12 +6,12 @@
 			<language id="es"><![CDATA[Copiar Categorías en Colecciones]]></language>
 		</name>
 	</permission>
-	<permission id="addtofavorites" permissionentitytype="librarycollection" description="Enables users to add files to their Bookmarks" ordering="256">
-		<name>
-			<language id="en"><![CDATA[Add files to Bookmarks]]></language>
-			<language id="es"><![CDATA[Agregar Archivos a Marcadores]]></language>
-		</name>
-	</permission>
+
+	
+
+
+	<!--
+	
 	<permission id="viewcategorynavcollections" permissionentitytype="librarycollection" description="Enables users to view folders inside collections" ordering="257">
 		<name>
 			<language id="en"><![CDATA[View Folders in Collections]]></language>
@@ -30,6 +30,7 @@
 			<language id="es"><![CDATA[Forzar una Vista Simplificada de Colecciones]]></language>
 		</name>
 	</permission>
+	
 	<permission id="asseteditorlibraries" permissionentitytype="librarycollection" description="Enables access to the asset library picking." ordering="500">
 		<name>
 			<language id="en"><![CDATA[Pick Library For Asset]]></language>
@@ -97,6 +98,6 @@
 			<language id="en"><![CDATA[Import Workspace]]></language>
 			<language id="es"><![CDATA[Importar Espacio de Trabajo]]></language>
 		</name>
-	</permission>
+	</permission -->
 
 </permissions>
