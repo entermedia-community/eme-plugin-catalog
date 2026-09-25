@@ -88,4 +88,10 @@
     </name>
   </property>
 
+  <property id="pendingform" index="true" indextype="not_analyzed" stored="true" editable="false">
+    <name>
+      <language id="en">Pending Form</language>
+    </name>
+  </property>
+
 </properties>

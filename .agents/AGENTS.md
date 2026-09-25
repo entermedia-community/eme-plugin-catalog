@@ -52,7 +52,10 @@ every other plugin (finder, community, profile, mediadb, ...) reads or extends. 
    through the xconf cache, not picked up on simple reload like a plain HTML file.
 3. Reindex if a field's searchability/type changed, since Elasticsearch mapping is derived from
    these field definitions (see `plugins/system` for the index bootstrap).
-4. Exercise the table from the admin UI (finder) to confirm the field/list renders and saves.
+4. If you changed any file under `html/data/lists/<table>/`, load it into the running server with the
+   `reload-list-data` skill (`.agents/skills/reload-list-data/SKILL.md`): `restoredata` for adds/edits,
+   `deleteall` then `restoredata` when rows were removed.
+5. Exercise the table from the admin UI (finder) to confirm the field/list renders and saves.
 
 ### Notes For Agents
 
