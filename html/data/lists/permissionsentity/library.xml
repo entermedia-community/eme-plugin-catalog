@@ -30,13 +30,6 @@
 			<language id="es"><![CDATA[Forzar una Vista Simplificada de Colecciones]]></language>
 		</name>
 	</permission>
-	<permission id="editallcollections" permissionentitytype="librarycollection" description="Edit All Collections" ordering="560">
-		<name>
-			<language id="en"><![CDATA[Edit All Collections]]></language>
-			<language id="es"><![CDATA[Editar Todas las Colecciones]]></language>
-		</name>
-	</permission>
-
 	<permission id="asseteditorlibraries" permissionentitytype="librarycollection" description="Enables access to the asset library picking." ordering="500">
 		<name>
 			<language id="en"><![CDATA[Pick Library For Asset]]></language>
@@ -99,18 +92,6 @@
 		</name>
 	</permission>
 
-	<permission id="exportcollection" permissionentitytype="librarycollection" description="Move assets in a collection into a Library" ordering="530">
-		<name>
-			<language id="en"><![CDATA[Export Collection]]></language>
-			<language id="es"><![CDATA[Exportar Colección]]></language>
-		</name>
-	</permission>
-	<permission id="sharecollection" permissionentitytype="librarycollection" description="Email Links to a Collection" ordering="535">
-		<name>
-			<language id="en"><![CDATA[Share Collection]]></language>
-			<language id="es"><![CDATA[Compartir Colección]]></language>
-		</name>
-	</permission>
 	<permission id="importworkspace" permissionentitytype="librarycollection" description="Import Workspace files from remote" ordering="525">
 		<name>
 			<language id="en"><![CDATA[Import Workspace]]></language>
