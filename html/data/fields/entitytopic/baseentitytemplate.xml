@@ -122,14 +122,6 @@
       <language id="es"><![CDATA[Grupos de espectadores]]></language>
     </name> 
   </property>  
-  <property id="viewerroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsrole" internalfield="true" type="list"> 
-    <name> 
-      <language id="en"><![CDATA[Viewer Roles]]></language>  
-      <language id="de"><![CDATA[Zuschauerrollen]]></language>
-      <language id="fr"><![CDATA[Rôles de spectateur]]></language>
-      <language id="es"><![CDATA[Roles de los espectadores]]></language>
-    </name> 
-  </property>  
   <property id="editorusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Editors Users]]></language>  
@@ -144,14 +136,6 @@
       <language id="de"><![CDATA[Redaktionsgruppen]]></language>
       <language id="fr"><![CDATA[Groupes éditoriaux]]></language>
       <language id="es"><![CDATA[Grupos editoriales]]></language>
-    </name> 
-  </property>  
-  <property id="editorroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsrole" internalfield="true" type="list"> 
-    <name> 
-      <language id="en"><![CDATA[Editors Roles]]></language>  
-      <language id="de"><![CDATA[Rollen der Herausgeber]]></language>
-      <language id="fr"><![CDATA[Rôles des éditeurs]]></language>
-      <language id="es"><![CDATA[Roles de los editores]]></language>
     </name> 
   </property>  
   <property id="securityalwaysvisible" editable="true" internalfield="true" index="true" stored="true" type="boolean" securityfield="rootcategory"> 

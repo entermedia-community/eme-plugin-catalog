@@ -24,12 +24,7 @@
       <language id="es"><![CDATA[Eliminar]]></language>
     </name>
   </permission>
-  <permission id="edit" permissionentitytype="general" multiedit="false" ordering="210" description="Edit existing" caption="Edit existing entities">
-    <name>
-      <language id="en"><![CDATA[Edit]]></language>
-      <language id="es"><![CDATA[Editar]]></language>
-    </name>
-  </permission>
+
   <permission id="create" permissionentitytype="general" multiedit="false" ordering="200" description="Create new" caption="Create entities">
     <name>
       <language id="en"><![CDATA[Create]]></language>
@@ -61,6 +56,13 @@
       <language id="es"><![CDATA[Permisos]]></language>
     </name>
   </permission>
+
+  <permission id="editmodulemetadatasetup" permissionentitytype="general" caption="Allows users to edit module views." ordering="30">
+		<name>
+			<language id="en"><![CDATA[Edit Module Metadata Setup]]></language>
+			<language id="es"><![CDATA[Editar Configuración de Metadatos del Modulo]]></language>
+		</name>
+	</permission>
 
 
   <permission id="view_assetworkflow" multiedit="false" permissionentitytype="general" ordering="531" caption="View Files">

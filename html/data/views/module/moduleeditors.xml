@@ -1,5 +1,4 @@
 <properties>		
 	<property id="editorusers" />
 	<property id="editorgroups" />
-	<property id="editorroles" />
 </properties>

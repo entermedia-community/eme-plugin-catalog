@@ -17,14 +17,6 @@
       <language id="es"><![CDATA[Grupos de espectadores]]></language>
     </name> 
   </property>  
-  <property id="viewerroles" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="settingsrole" type="list"> 
-    <name> 
-      <language id="en"><![CDATA[Viewer Roles]]></language>  
-      <language id="de"><![CDATA[Zuschauerrollen]]></language>
-      <language id="fr"><![CDATA[Rôles de spectateur]]></language>
-      <language id="es"><![CDATA[Roles de los espectadores]]></language>
-    </name> 
-  </property>  
   <property id="customusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
     <name> 
       <language id="en"><![CDATA[Custom View Users]]></language>  
