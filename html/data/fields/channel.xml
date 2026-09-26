@@ -51,14 +51,6 @@
       <language id="es"><![CDATA[Estado del canal]]></language>
     </name> 
   </property> 
-  <property id="chatapplicationid" index="true" deleted="false" editable="true" stored="true">New 
-    <name> 
-      <language id="en"><![CDATA[Chat Application Id]]></language>  
-      <language id="de"><![CDATA[Chat-App-ID]]></language>
-      <language id="fr"><![CDATA[Identifiant de l'application de chat]]></language>
-      <language id="es"><![CDATA[Identificador de la aplicación de chat]]></language>
-    </name> 
-  </property>  
   <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  

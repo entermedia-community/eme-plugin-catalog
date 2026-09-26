@@ -1,0 +1,62 @@
+<results>
+
+
+
+  <data id="openCodeApproveSkill" bean="openCodeApproveSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Open Code Approve]]></language>
+    </name>
+    <markdowncontent><![CDATA[Answers an opencode security prompt (once, always or reject) for an agent job step.]]></markdowncontent>
+  </data>
+
+  <data id="openCodeUserRequestSkill" bean="openCodeUserRequestSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Open Code User Request]]></language>
+    </name>
+    <markdowncontent><![CDATA[Takes the chat user's message, creates a one-step agent job for it and passes it as the userrequest to the OpenCode runner.]]></markdowncontent>
+    <defaultoutput><![CDATA[ [
+  {
+    "id": "userrequest"
+  },
+  {
+    "id": "agentjobstep"
+  }
+] ]]></defaultoutput>
+  </data>
+
+  <data id="openCodeAnswerSkill" bean="openCodeAnswerSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Open Code Answer]]></language>
+    </name>
+    <markdowncontent><![CDATA[Answers an opencode question for an agent job step.]]></markdowncontent>
+  </data>
+
+  <data id="openCodeRunnerSkill" bean="openCodeRunnerSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <![CDATA[Open Code Runner]]>
+    </name>
+    <markdowncontent><![CDATA[Executes the OpenCode LLM harness to assist with automated HTML creation, file searching, and content analysis. Includes administrative utilities to customize and manage eme-server instances.]]></markdowncontent>
+    <parameters><![CDATA[
+[{
+"id":"userrequest",
+"description":"The request or query to be sent to the opencode command"
+}]
+   ]]></parameters>
+    <defaultoutput><![CDATA[ [
+  {
+    "id": "commandoutput"
+  },
+  {
+    "id": "outputfilepath"
+  }
+] ]]></defaultoutput>
+  </data>
+
+ <data id="openCodeUserRequestSkill" bean="openCodeUserRequestSkill" agenttype="eventagent" ordering="10">
+    <name>
+      <![CDATA[Open Code Runner]]>
+    </name>
+    <markdowncontent><![CDATA[Takes the chat user's message, creates a one-step agent job for it and passes it as the userrequest to the OpenCode runner.]]></markdowncontent>
+  </data>
+
+</results>

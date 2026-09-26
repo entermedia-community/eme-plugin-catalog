@@ -1,0 +1,43 @@
+<records>
+
+
+<data id="chat_opencode_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_opencode" enabled="true" processingmessage="Welcome..."> 
+    <name> 
+      <language id="en"><![CDATA[OpenCode Harness]]></language>  
+    </name> 
+  </data>  
+
+    <data id="chat_openCodeUserRequest" aiskill="openCodeUserRequestSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="chat_opencode_welcome">
+        <name>
+           <![CDATA[Open Code User Request]]>
+        </name>
+     </data>
+
+    <data id="chat_openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Running Command"  runafter="chat_openCodeUserRequest">
+        <name>
+           <![CDATA[Open Code Runner]]>
+        </name>
+     </data>
+
+<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the chat_openCodeUserRequest for the next command -->
+
+
+    <data id="chat_opencode_markdown" aiskill="markdownToHtmlSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="chat_openCodeRunner" >
+        <name>
+           <![CDATA[Markdown Result to HTML]]>
+        </name>
+     </data>
+
+    <data id="chat_openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="chat_openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
+</records>

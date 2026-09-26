@@ -21,26 +21,5 @@
     <markdowncontent><![CDATA[Takes a markdowncontent parameter from the agent context and converts it to HTML using the built-in MarkdownUtil, storing the result on the context as 'html' for downstream steps and templates.]]></markdowncontent>
   </data>
 
-  <data id="openCodeRunnerSkill" bean="openCodeRunnerSkill" agenttype="eventagent" ordering="10">
-    <name>
-      <![CDATA[Open Code Runner]]>
-    </name>
-    <markdowncontent><![CDATA[Executes the OpenCode LLM harness to assist with automated HTML creation, file searching, and content analysis. Includes administrative utilities to customize and manage eme-server instances.]]></markdowncontent>
-    <parameters><![CDATA[
-[{
-"id":"userrequest",
-"description":"The request or query to be sent to the opencode command"
-}]
-   ]]></parameters>
-    <defaultoutput><![CDATA[ [
-  {
-    "id": "commandoutput"
-  },
-  {
-    "id": "outputfilepath"
-  }
-] ]]></defaultoutput>
-  </data>
-
 
 </results>

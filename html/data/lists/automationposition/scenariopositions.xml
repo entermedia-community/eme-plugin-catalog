@@ -64,10 +64,14 @@
     <name/>
   </data>
 
-  <data id="agentorchestrator" posx="1541.89361014098" posy="2507.52351203124">
+  <data id="agentorchestrator" posx="1642.670220775686" posy="2376.375868054568">
     <name/>
   </data>
 
+
+  <data id="chat_opencode" posx="1473.2050237549765" posy="2555.133542342118">
+    <name/>
+  </data>
 
 
   <data id="emechat_goal_manager" posx="2724.65331364985" posy="2341.59799016255">

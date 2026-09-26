@@ -10,6 +10,21 @@
     </name> 
     <markdowncontent><![CDATA[Monitors incoming chat conversations in real-time, detecting user intent, contextual needs, and dispatching tool-calling AI agents to generate intelligent responses.]]></markdowncontent>
   </data>  
+   <data id="chat_opencode" ordering="50" scenarioicon="broadcast" chatenabled="true" enabled="true" isvisible="true"  connectedtop="chatlabel">
+    <name>
+      <language id="en"><![CDATA[OpenCode Agent]]></language>
+    </name>
+    <markdowncontent><![CDATA[Connect to open code.]]></markdowncontent>
+  </data>
+  <data id="agentorchestrator" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+    <name> 
+      <language id="en"><![CDATA[Create Jobs]]></language>
+      <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>
+      <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
+      <language id="es"><![CDATA[Crear trabajos de agente]]></language>      
+    </name> 
+    <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>
+  </data>
   <data id="emechat_goal_manager" ordering="55" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false">
     <name> 
       <language id="en"><![CDATA[Create Goals]]></language>
@@ -19,15 +34,6 @@
     </name> 
     <markdowncontent><![CDATA[Analyzes chat discussions to extract project objectives, automatically creating structured goals, breakdown tasks, and assigning team members within project workspaces.]]></markdowncontent>
   </data>  
-  <data id="agentorchestrator" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
-    <name> 
-      <language id="en"><![CDATA[Create Agent Jobs]]></language>
-      <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>
-      <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
-      <language id="es"><![CDATA[Crear trabajos de agente]]></language>      
-    </name> 
-    <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>
-  </data>
   <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="chatlabel">
     <name>
       <language id="en"><![CDATA[Answer Questions]]></language>
