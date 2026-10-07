@@ -1,10 +1,5 @@
 <permissions name="Asset Permissions">
-	<permission id="viewassets" permissionentitytype="asset" caption="Enables access to assets." ordering="1">
-		<name>
-			<language id="en"><![CDATA[View Asset]]></language>
-			<language id="es"><![CDATA[Ver Activo]]></language>
-		</name>
-	</permission>
+	
 	<permission id="editallassets" permissionentitytype="asset" caption="Allow editing and viewing of any asset." ordering="10">
 		<name>
 			<language id="en"><![CDATA[Edit All Assets]]></language>

@@ -1,12 +1,5 @@
 <permissions name="General Permissions">
 
-  <permission id="view" permissionentitytype="general" multiedit="false" ordering="10" caption="View Details">
-    <name>
-      <language id="en"><![CDATA[View Details]]></language>
-      <language id="es"><![CDATA[Ver Detalles]]></language>
-    </name>
-  </permission>
-
  <permission id="create" permissionentitytype="general" multiedit="false" ordering="20" description="Create new" caption="Create entities">
     <name>
       <language id="en"><![CDATA[Create]]></language>
