@@ -19,19 +19,6 @@
 		</name>
 	</permission>
 
-	<permission id="deleteasset" permissionentitytype="asset" caption="Enables removal of an asset, and the option to remove the original." ordering="40">
-		<name>
-			<language id="en"><![CDATA[Delete]]></language>
-			<language id="es"><![CDATA[Eliminar]]></language>
-		</name>
-	</permission>
-
-	<permission id="multidelete" permissionentitytype="asset" caption="Enables removal of selected assets, and the option to remove the original." ordering="50">
-		<name>
-			<language id="en"><![CDATA[Multi-Delete]]></language>
-			<language id="es"><![CDATA[Eliminar Múltiple]]></language>
-		</name>
-	</permission>
 
 	<permission id="emaillink" permissionentitytype="asset" caption="Enables an email button that sends a link to an internal asset." ordering="60">
 		<name>
@@ -72,10 +59,10 @@
 			<language id="es"><![CDATA[Descargar Original]]></language>
 		</name>
 	</permission>
-	<permission id="quickdownload" permissionentitytype="asset" description="Enables downloading of the original asset from the results area" ordering="120">
+	<permission id="quickdownload" permissionentitytype="asset" description="Enables quick download in the results area" ordering="120">
 		<name>
-			<language id="en"><![CDATA[Quick Download Original]]></language>
-			<language id="es"><![CDATA[Descarga Rápida del Original]]></language>
+			<language id="en"><![CDATA[Quick Download]]></language>
+			<language id="es"><![CDATA[Descarga Rápida]]></language>
 		</name>
 	</permission>
 	<permission id="downloadfpo" permissionentitytype="asset" description="Enables downloading of the watermarked asset." ordering="130">
@@ -125,6 +112,13 @@
 		</name>
 	</permission>
 
+		<permission id="viewupload" permissionentitytype="asset" caption="Enables the upload of assets in the category tree." ordering="190">
+		<name>
+			<language id="en"><![CDATA[Upload Files in Category Tree]]></language>
+			<language id="es"><![CDATA[Subir Archivos en el Árbol de Categorías]]></language>
+		</name>
+	</permission>
+
 	<permission id="viewrelatedkeywords" permissionentitytype="asset" description="Enables a list of related keywords when searching." ordering="200">
 		<name>
 			<language id="en"><![CDATA[Related Keywords]]></language>
@@ -132,12 +126,7 @@
 		</name>
 	</permission>
 
-	<permission id="viewupload" permissionentitytype="asset" caption="Enables the upload of assets." ordering="210">
-		<name>
-			<language id="en"><![CDATA[Upload Files]]></language>
-			<language id="es"><![CDATA[Subir Archivos]]></language>
-		</name>
-	</permission>
+
 
 	<permission id="viewvoting" permissionentitytype="asset" caption="Enables a like button for users to express approval of an asset." ordering="220">
 		<name>
@@ -179,21 +168,6 @@
 			<language id="es"><![CDATA[Mostrar Insignia]]></language>
 		</name>
 	</permission>
-
-	<permission id="deletecomments" permissionentitytype="asset" caption="Enables deleting commenting on media assets." ordering="290">
-		<name>
-			<language id="en"><![CDATA[Delete Comments]]></language>
-			<language id="es"><![CDATA[Eliminar Comentarios]]></language>
-		</name>
-	</permission>
-
-	<permission id="assetpermissions" permissionentitytype="asset" caption="Enables permission alteration for media assets." ordering="300">
-		<name>
-			<language id="en"><![CDATA[Permissions]]></language>
-			<language id="es"><![CDATA[Permisos]]></language>
-		</name>
-	</permission>
-
 
 	<permission id="converthistory" permissionentitytype="asset" caption="Logs the conversion history of an asset." ordering="310">
 		<name>
@@ -326,6 +300,20 @@
 	</permission>
 
 	<!--
+
+
+	<permission id="assetpermissions" permissionentitytype="asset" caption="Enables permission alteration for media assets." ordering="300">
+		<name>
+			<language id="en"><![CDATA[Permissions]]></language>
+			<language id="es"><![CDATA[Permisos]]></language>
+		</name>
+	</permission>
+		<permission id="deletecomments" permissionentitytype="asset" caption="Enables deleting commenting on media assets." ordering="290">
+		<name>
+			<language id="en"><![CDATA[Delete Comments]]></language>
+			<language id="es"><![CDATA[Eliminar Comentarios]]></language>
+		</name>
+	</permission>
 
 	<preference id="relateassets" name="Create Asset Relationships" caption="Enable creation and modification of asset relation"/>
 	<permission id="editassetcategories" name="Edit Categories" caption="Edit Asset Categories"/>

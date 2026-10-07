@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties  beanname="folderSearcher"> 
-  <property id="id" editable="true" index="false" stored="false">ID 
+  <property id="id" editable="true" index="true" stored="false">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  

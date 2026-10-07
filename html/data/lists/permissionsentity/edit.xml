@@ -7,31 +7,30 @@
     </name>
   </permission>
 
-<permission id="share" multiedit="false" permissionentitytype="general" ordering="30" caption="Share Link">
-    <name>
-      <language id="en"><![CDATA[Share Link]]></language>
-      <language id="es"><![CDATA[Compartir Enlace]]></language>
-    </name>
-  </permission>
+  <permission id="multiedit" permissionentitytype="general" name="Edit Multiple Records" description="Enables various actions across multiple records simultaneously." ordering="25" />
 
-  <permission id="delete" permissionentitytype="general" multiedit="false" ordering="40" description="Delete existing" caption="Delete existing entities">
+
+
+  <permission id="delete" permissionentitytype="general" ordering="40" description="Delete existing records" caption="Delete existing records">
     <name>
       <language id="en"><![CDATA[Delete]]></language>
       <language id="es"><![CDATA[Eliminar]]></language>
     </name>
   </permission>
 
-
-
-  <permission id="view_files" multiedit="false" permissionentitytype="general" ordering="50" caption="View Files">
+  <permission id="multidelete" permissionentitytype="general" caption="Enables removal of selected records." ordering="45">
+		<name>
+			<language id="en"><![CDATA[Multi-Delete]]></language>
+			<language id="es"><![CDATA[Eliminar Múltiple]]></language>
+		</name>
+	</permission>
+	
+<permission id="share" permissionentitytype="general" ordering="48" caption="Share Link">
     <name>
-      <language id="en"><![CDATA[View Files]]></language>
-      <language id="es"><![CDATA[Ver Archivos]]></language>
+      <language id="en"><![CDATA[Share Link]]></language>
+      <language id="es"><![CDATA[Compartir Enlace]]></language>
     </name>
   </permission>
-
-
-
  
   <permission id="assign_files" permissionentitytype="general" multiedit="false" ordering="60" caption="Assign existing files">
     <name>
