@@ -8,7 +8,51 @@
       <language id="de"><![CDATA[Benachrichtigungen: Einrichtung ausstehender Erneuerungsbenachrichtigungen]]></language>
       <language id="fr"><![CDATA[Notifications : Configurer les notifications de renouvellement en attente]]></language>
       <language id="es"><![CDATA[Notificaciones: Configuración de notificaciones de renovación pendientes]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: notifications_createnotifications
+description: Runs the Setup Pending Renewal Notifications path event (notifications/createnotifications).
+---
+
+# Notifications: Setup Pending Renewal Notifications
+
+Runs the **Setup Pending Renewal Notifications** path event (`notifications/createnotifications`).
+
+## When to use
+
+- A scenario step should run the "Setup Pending Renewal Notifications" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/notifications/createnotifications.xconf`.
+2. Runs the Groovy script `events/scripts/notifications/createnotifications.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `notifications/createnotifications`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="notifications_sendnotifications" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/sendnotifications"> 
     <name> 
@@ -16,7 +60,51 @@
       <language id="de"><![CDATA[Benachrichtigungen: Ausstehende Erneuerungsbenachrichtigungen senden]]></language>
       <language id="fr"><![CDATA[Notifications : envoyer des notifications de renouvellement en attente]]></language>
       <language id="es"><![CDATA[Notificaciones: Enviar notificaciones de renovación pendientes]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: notifications_sendnotifications
+description: Runs the Send Pending Renewal Notifications path event (notifications/sendnotifications).
+---
+
+# Notifications: Send Pending Renewal Notifications
+
+Runs the **Send Pending Renewal Notifications** path event (`notifications/sendnotifications`).
+
+## When to use
+
+- A scenario step should run the "Send Pending Renewal Notifications" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/notifications/sendnotifications.xconf`.
+2. Runs the Groovy script `events/scripts/notifications/sendnotifications.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `notifications/sendnotifications`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="notifications_assetchat" bean="runSharedEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetchat"> 
     <name> 
@@ -24,7 +112,52 @@
       <language id="de"><![CDATA[Benachrichtigungen: Benachrichtigung für den Asset-Chat]]></language>
       <language id="fr"><![CDATA[Notifications : Notification de chat d'actifs]]></language>
       <language id="es"><![CDATA[Notificaciones: Notificación de chat de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: notifications_assetchat
+description: Runs the Asset Chat Notification path event (notifications/assetchat) in the background. Emails users about chats.
+---
+
+# Notifications: Asset Chat Notification
+
+Runs the **Asset Chat Notification** path event (`notifications/assetchat`) in the background. Emails users about chats.
+
+## When to use
+
+- A scenario step should run the "Asset Chat Notification" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/notifications/assetchat.xconf`.
+2. Calls `NotificationModule.sendChatNotifications`.
+3. The event scheduler also runs it every `30m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `notifications/assetchat`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="notifications_assetmetadata" bean="runSharedEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetmetadata"> 
     <name> 
@@ -32,7 +165,52 @@
       <language id="de"><![CDATA[Benachrichtigungen: Benachrichtigung zur Vermögenswert-Metadaten]]></language>
       <language id="fr"><![CDATA[Notifications : notification des métadonnées des actifs]]></language>
       <language id="es"><![CDATA[Notificaciones: Notificación de metadatos de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: notifications_assetmetadata
+description: Runs the Asset Metadata Notification path event (notifications/assetmetadata) in the background. Emails users about metadata edition.
+---
+
+# Notifications: Asset Metadata Notification
+
+Runs the **Asset Metadata Notification** path event (`notifications/assetmetadata`) in the background. Emails users about metadata edition.
+
+## When to use
+
+- A scenario step should run the "Asset Metadata Notification" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/notifications/assetmetadata.xconf`.
+2. Calls `NotificationModule.sendMetadataNotifications`.
+3. The event scheduler also runs it every `30m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `notifications/assetmetadata`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="notifications_expireassets" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/expireassets"> 
     <name> 
@@ -40,7 +218,51 @@
       <language id="de"><![CDATA[Benachrichtigungen: Verfallene Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Notifications : désignation des actifs expirés]]></language>
       <language id="es"><![CDATA[Notificaciones: Activos caducados]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: notifications_expireassets
+description: Runs the Flag Expired Assets path event (notifications/expireassets).
+---
+
+# Notifications: Flag Expired Assets
+
+Runs the **Flag Expired Assets** path event (`notifications/expireassets`).
+
+## When to use
+
+- A scenario step should run the "Flag Expired Assets" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/notifications/expireassets.xconf`.
+2. Runs the Groovy script `events/scripts/notifications/expireassets.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `notifications/expireassets`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="notifications_assetapprovednotification" bean="runEventSkill" agenttype="eventagent" folder="notifications" runoperation="notifications/assetapprovednotification"> 
     <name> 
@@ -48,7 +270,51 @@
       <language id="de"><![CDATA[Benachrichtigungen: Genehmigte Assets vom Remote-Server abrufen]]></language>
       <language id="fr"><![CDATA[Notifications : Récupérer les actifs approuvés depuis le serveur distant]]></language>
       <language id="es"><![CDATA[Notificaciones: Extraiga los activos aprobados del servidor remoto]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: notifications_assetapprovednotification
+description: Runs the Pull Approved Assets from Remote Server path event (notifications/assetapprovednotification).
+---
+
+# Notifications: Pull Approved Assets from Remote Server
+
+Runs the **Pull Approved Assets from Remote Server** path event (`notifications/assetapprovednotification`).
+
+## When to use
+
+- A scenario step should run the "Pull Approved Assets from Remote Server" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/notifications/assetapprovednotification.xconf`.
+2. Runs the Groovy script `events/scripts/notifications/assetapprovednotification.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `notifications/assetapprovednotification`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_importsql" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importsql"> 
     <name> 
@@ -56,7 +322,51 @@
       <language id="de"><![CDATA[Importieren: Importieren aus SQL]]></language>
       <language id="fr"><![CDATA[Importer : Importer depuis SQL]]></language>
       <language id="es"><![CDATA[Importar: Importar desde SQL]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_importsql
+description: Runs the Import From SQL path event (importing/importsql).
+---
+
+# Importing: Import From SQL
+
+Runs the **Import From SQL** path event (`importing/importsql`).
+
+## When to use
+
+- A scenario step should run the "Import From SQL" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/importsql.xconf`.
+2. Runs the Groovy script `events/scripts/sql/importsql.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/importsql`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_importcomplete" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importcomplete"> 
     <name> 
@@ -64,7 +374,55 @@
       <language id="de"><![CDATA[Importieren: Import abgeschlossen]]></language>
       <language id="fr"><![CDATA[Importation : Importation terminée]]></language>
       <language id="es"><![CDATA[Importar: Importación completada]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_importcomplete
+description: Runs the Import Complete path event (importing/importcomplete).
+---
+
+# Importing: Import Complete
+
+Runs the **Import Complete** path event (`importing/importcomplete`).
+
+## When to use
+
+- A scenario step should run the "Import Complete" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/importcomplete.xconf`.
+2. Queues the shared event `publishing/publishassets`.
+3. Queues the shared event `asset/archivefiles`.
+4. Queues the shared event `asset/applygoogletranscribe`.
+5. Queues the shared event `asset/facescan`.
+6. Queues the shared event `llm/addmetadata`.
+7. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/importcomplete`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_readallmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/readallmetadata"> 
     <name> 
@@ -72,7 +430,51 @@
       <language id="de"><![CDATA[Importieren: Alle Asset-Metadaten neu laden]]></language>
       <language id="fr"><![CDATA[Importation : Recharger toutes les métadonnées des actifs]]></language>
       <language id="es"><![CDATA[Importar: Cargar todos los metadatos de los activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_readallmetadata
+description: Runs the Reload All Asset Metadata path event (importing/readallmetadata).
+---
+
+# Importing: Reload All Asset Metadata
+
+Runs the **Reload All Asset Metadata** path event (`importing/readallmetadata`).
+
+## When to use
+
+- A scenario step should run the "Reload All Asset Metadata" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/readallmetadata.xconf`.
+2. Runs the Groovy script `events/scripts/importing/readallmetadata.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/readallmetadata`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_assetscreated" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetscreated"> 
     <name> 
@@ -80,7 +482,51 @@
       <language id="de"><![CDATA[Importieren: Erstellte Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Importation : actifs créés]]></language>
       <language id="es"><![CDATA[Importar: Activos creados]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_assetscreated
+description: Runs the Assets Created path event (importing/assetscreated). Assetscreated -> importassets -> customevents -> readmetadata.
+---
+
+# Importing: Assets Created
+
+Runs the **Assets Created** path event (`importing/assetscreated`). Assetscreated -> importassets -> customevents -> readmetadata.
+
+## When to use
+
+- A scenario step should run the "Assets Created" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/assetscreated.xconf`.
+2. The event defines no actions of its own. It is a hook that other events, listeners and automation scenarios run on.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/assetscreated`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_pushassetimported" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/pushassetimported"> 
     <name> 
@@ -88,7 +534,51 @@
       <language id="de"><![CDATA[Import: Push empfangen und importiert]]></language>
       <language id="fr"><![CDATA[Importation : Reçue et importée]]></language>
       <language id="es"><![CDATA[Importar: Recibido e importado]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_pushassetimported
+description: Runs the Push Received and Imported path event (importing/pushassetimported).
+---
+
+# Importing: Push Received and Imported
+
+Runs the **Push Received and Imported** path event (`importing/pushassetimported`).
+
+## When to use
+
+- A scenario step should run the "Push Received and Imported" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/pushassetimported.xconf`.
+2. Runs the Groovy script `events/scripts/importing/assetsimportedcustom.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/pushassetimported`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_fetchdownloads" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/fetchdownloads"> 
     <name> 
@@ -96,7 +586,52 @@
       <language id="de"><![CDATA[Importieren: Ressourcen von entfernten Standorten abrufen]]></language>
       <language id="fr"><![CDATA[Importation : Récupérer des actifs depuis des emplacements distants]]></language>
       <language id="es"><![CDATA[Importar: Obtener activos desde ubicaciones remotas]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_fetchdownloads
+description: Runs the Fetch assets from remote locations path event (importing/fetchdownloads) in the background.
+---
+
+# Importing: Fetch assets from remote locations
+
+Runs the **Fetch assets from remote locations** path event (`importing/fetchdownloads`) in the background.
+
+## When to use
+
+- A scenario step should run the "Fetch assets from remote locations" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/importing/fetchdownloads.xconf`.
+2. Runs the Groovy script `events/scripts/importing/fetchdownloads.groovy`.
+3. The event scheduler also runs it every `5h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/fetchdownloads`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="importing_checkpreviewstatus" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/checkpreviewstatus"> 
     <name> 
@@ -104,7 +639,51 @@
       <language id="de"><![CDATA[Importieren: Vorschau-Status überprüfen]]></language>
       <language id="fr"><![CDATA[Importation : Vérifier l'état de l'aperçu]]></language>
       <language id="es"><![CDATA[Importar: Verificar el estado de la vista previa]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_checkpreviewstatus
+description: Runs the Check Preview Status path event (importing/checkpreviewstatus).
+---
+
+# Importing: Check Preview Status
+
+Runs the **Check Preview Status** path event (`importing/checkpreviewstatus`).
+
+## When to use
+
+- A scenario step should run the "Check Preview Status" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/checkpreviewstatus.xconf`.
+2. Runs the Groovy script `events/scripts/importing/checkpreviewstatus.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/checkpreviewstatus`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_restoredeleted" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/restoredeleted"> 
     <name> 
@@ -112,7 +691,52 @@
       <language id="de"><![CDATA[Importieren: Gelöschte wiederherstellen]]></language>
       <language id="fr"><![CDATA[Importer : Restaurer les éléments supprimés]]></language>
       <language id="es"><![CDATA[Importar: Restaurar elementos eliminados]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_restoredeleted
+description: Runs the Restore Deleted path event (importing/restoredeleted) in the background.
+---
+
+# Importing: Restore Deleted
+
+Runs the **Restore Deleted** path event (`importing/restoredeleted`) in the background.
+
+## When to use
+
+- A scenario step should run the "Restore Deleted" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/importing/restoredeleted.xconf`.
+2. Runs the Groovy script `events/scripts/importing/restoredeletedassets.groovy`.
+3. The event scheduler also runs it every `5h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/restoredeleted`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="importing_importfolders" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importfolders"> 
     <name> 
@@ -120,7 +744,52 @@
       <language id="de"><![CDATA[Importieren: Hot-Folder importieren]]></language>
       <language id="fr"><![CDATA[Importer : Importer les dossiers chauds]]></language>
       <language id="es"><![CDATA[Importar: Importar carpetas activas]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_importfolders
+description: Runs the Import Hot Folders path event (importing/importfolders) in the background.
+---
+
+# Importing: Import Hot Folders
+
+Runs the **Import Hot Folders** path event (`importing/importfolders`) in the background.
+
+## When to use
+
+- A scenario step should run the "Import Hot Folders" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/importing/importfolders.xconf`.
+2. The event defines no actions of its own. It is a hook that other events, listeners and automation scenarios run on.
+3. The event scheduler also runs it every `10m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/importfolders`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="importing_importassets" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/importassets"> 
     <name> 
@@ -128,7 +797,56 @@
       <language id="de"><![CDATA[Import: Importierte Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Importation : Actifs importés]]></language>
       <language id="es"><![CDATA[Importar: Activos importados]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_importassets
+description: Runs the Imported Assets path event (importing/importassets).
+---
+
+# Importing: Imported Assets
+
+Runs the **Imported Assets** path event (`importing/importassets`).
+
+## When to use
+
+- A scenario step should run the "Imported Assets" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/importassets.xconf`.
+2. Calls `AssetImportModule.importAssets`.
+3. Runs the event `importing/assetsreadmetadata`.
+4. Runs the event `importing/assetsimportedcustom`.
+5. Calls `EntityModule.handleAssetsImported`.
+6. Runs the event `importing/queueconversions`.
+7. Queues the shared event `conversions/runconversions`.
+8. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/importassets`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_assetsclear" bean="runSharedEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsclear"> 
     <name> 
@@ -136,7 +854,52 @@
       <language id="de"><![CDATA[Importieren: Originalmedien prüfen]]></language>
       <language id="fr"><![CDATA[Importer : vérifier les médias originaux]]></language>
       <language id="es"><![CDATA[Importar: verificar los medios originales]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_assetsclear
+description: Runs the Check Original Media path event (importing/assetsclear) in the background.
+---
+
+# Importing: Check Original Media
+
+Runs the **Check Original Media** path event (`importing/assetsclear`) in the background.
+
+## When to use
+
+- A scenario step should run the "Check Original Media" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/importing/assetsclear.xconf`.
+2. Runs the Groovy script `events/scripts/importing/assetsclear.groovy`.
+3. The event scheduler also runs it every `5h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/assetsclear`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="importing_recalculatemd5" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/recalculatemd5"> 
     <name> 
@@ -144,7 +907,51 @@
       <language id="de"><![CDATA[Importieren: Alle MD5 neu laden]]></language>
       <language id="fr"><![CDATA[Importer : recharger tous les MD5]]></language>
       <language id="es"><![CDATA[Importar: Cargar todos los MD5]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_recalculatemd5
+description: Runs the Reload All MD5 path event (importing/recalculatemd5).
+---
+
+# Importing: Reload All MD5
+
+Runs the **Reload All MD5** path event (`importing/recalculatemd5`).
+
+## When to use
+
+- A scenario step should run the "Reload All MD5" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/recalculatemd5.xconf`.
+2. Runs the Groovy script `events/scripts/importing/recalculatemd5.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/recalculatemd5`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="data_takesnapshot" bean="runSharedEventSkill" agenttype="eventagent" folder="data" runoperation="data/takesnapshot"> 
     <name> 
@@ -152,7 +959,52 @@
       <language id="de"><![CDATA[Daten: Tägliches DB-Snapshot erstellen]]></language>
       <language id="fr"><![CDATA[Données : prenez une capture instantanée quotidienne de la base de données]]></language>
       <language id="es"><![CDATA[Datos: tomar una instantánea diaria de la base de datos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: data_takesnapshot
+description: Runs the Take Daily DB Snapshot path event (data/takesnapshot) in the background. Creates snapshots of the database in Settings | Status | Tools.
+---
+
+# Data: Take Daily DB Snapshot
+
+Runs the **Take Daily DB Snapshot** path event (`data/takesnapshot`) in the background. Creates snapshots of the database in Settings | Status | Tools.
+
+## When to use
+
+- A scenario step should run the "Take Daily DB Snapshot" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/data/takesnapshot.xconf`.
+2. Runs the Groovy script `events/scripts/data/takesnapshot.groovy`.
+3. The event scheduler also runs it every `1d`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `data/takesnapshot`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="data_importdatabase" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/importdatabase"> 
     <name> 
@@ -160,7 +1012,51 @@
       <language id="de"><![CDATA[Daten: Import von EM8 MediaDB]]></language>
       <language id="fr"><![CDATA[Données : import de la base de données EM8 Media]]></language>
       <language id="es"><![CDATA[Datos: Importar base de datos EM8 Media]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: data_importdatabase
+description: Runs the Import EM8 MediaDB path event (data/importdatabase).
+---
+
+# Data: Import EM8 MediaDB
+
+Runs the **Import EM8 MediaDB** path event (`data/importdatabase`).
+
+## When to use
+
+- A scenario step should run the "Import EM8 MediaDB" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/data/importdatabase.xconf`.
+2. Runs the Groovy script `events/scripts/data/importdatabase.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `data/importdatabase`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="data_reindex" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/reindex"> 
     <name> 
@@ -168,7 +1064,51 @@
       <language id="de"><![CDATA[Daten: Datenbank neuindizieren]]></language>
       <language id="fr"><![CDATA[Données : Reindexer la base de données]]></language>
       <language id="es"><![CDATA[Datos: Reíndice de base de datos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: data_reindex
+description: Runs the Reindex Database path event (data/reindex).
+---
+
+# Data: Reindex Database
+
+Runs the **Reindex Database** path event (`data/reindex`).
+
+## When to use
+
+- A scenario step should run the "Reindex Database" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/data/reindex.xconf`.
+2. Calls `MediaAdminModule.reindexAll`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `data/reindex`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="data_export" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/export"> 
     <name> 
@@ -176,7 +1116,51 @@
       <language id="de"><![CDATA[Daten: Asset-CSV speichern]]></language>
       <language id="fr"><![CDATA[Données : Enregistrer le fichier CSV des actifs]]></language>
       <language id="es"><![CDATA[Datos: Guardar CSV de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: data_export
+description: Runs the Save Asset CSV path event (data/export).
+---
+
+# Data: Save Asset CSV
+
+Runs the **Save Asset CSV** path event (`data/export`).
+
+## When to use
+
+- A scenario step should run the "Save Asset CSV" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/data/export.xconf`.
+2. Runs the Groovy script `events/scripts/data/generatecsv.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `data/export`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="data_managersnapshot" bean="runEventSkill" agenttype="eventagent" folder="data" runoperation="data/managersnapshot"> 
     <name> 
@@ -184,7 +1168,52 @@
       <language id="de"><![CDATA[Daten: Managersnapshot]]></language>
       <language id="fr"><![CDATA[Données : Capture d'écran du gestionnaire]]></language>
       <language id="es"><![CDATA[Datos: instantánea del gerente]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: data_managersnapshot
+description: Runs the Manager Snapshot path event (data/managersnapshot).
+---
+
+# Data: Manager Snapshot
+
+Runs the **Manager Snapshot** path event (`data/managersnapshot`).
+
+## When to use
+
+- A scenario step should run the "Manager Snapshot" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/data/managersnapshot.xconf`.
+2. Calls `MediaAdminModule.catalogSnapshot`.
+3. The event scheduler also runs it every `1d`.
+4. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `data/managersnapshot`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="utils_setupmodules" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/setupmodules"> 
     <name> 
@@ -192,7 +1221,51 @@
       <language id="de"><![CDATA[Hilfsmittel: Ansichten und Ordner für alle Module erstellen]]></language>
       <language id="fr"><![CDATA[Utilitaires : Créer des vues et des dossiers pour tous les modules]]></language>
       <language id="es"><![CDATA[Utilidades: Crear vistas y carpetas para todos los módulos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: utils_setupmodules
+description: Runs the Create Views and folder for all modules path event (utils/setupmodules). Make sure modules exists.
+---
+
+# Utils: Create Views and folder for all modules
+
+Runs the **Create Views and folder for all modules** path event (`utils/setupmodules`). Make sure modules exists.
+
+## When to use
+
+- A scenario step should run the "Create Views and folder for all modules" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/utils/setupmodules.xconf`.
+2. Runs the Groovy script `events/scripts/modules/createmodules.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `utils/setupmodules`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="utils_custom_assignprimaryimage" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/custom_assignprimaryimage"> 
     <name> 
@@ -200,7 +1273,51 @@
       <language id="de"><![CDATA[Hilfsmittel: Alfred: Zuweisen von Publikationsminiaturbildern]]></language>
       <language id="fr"><![CDATA[Utilitaires : Alfred : attribuer des miniatures de publications]]></language>
       <language id="es"><![CDATA[Utilidades: Alfred: Asignar miniaturas de publicaciones]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: utils_custom_assignprimaryimage
+description: Runs the Alfred: Assign Publication Thumbnails path event (utils/custom_assignprimaryimage).
+---
+
+# Utils: Alfred: Assign Publication Thumbnails
+
+Runs the **Alfred: Assign Publication Thumbnails** path event (`utils/custom_assignprimaryimage`).
+
+## When to use
+
+- A scenario step should run the "Alfred: Assign Publication Thumbnails" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/utils/custom_assignprimaryimage.xconf`.
+2. Runs the Groovy script `events/scripts/custom/alfred/assignprimaryimage.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `utils/custom_assignprimaryimage`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="utils_autorestoresnaps2" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/autorestoresnaps2"> 
     <name> 
@@ -208,7 +1325,51 @@
       <language id="de"><![CDATA[Hilfsmittel: Neueste Snapshots wiederherstellen (nur Groovy)]]></language>
       <language id="fr"><![CDATA[Utilitaires : Restaurer les dernières sauvegardes (uniquement Groovy)]]></language>
       <language id="es"><![CDATA[Utilidades: Restaurar instantáneas más recientes (solo Groovy)]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: utils_autorestoresnaps2
+description: Runs the Restore newest snapshots (Groovy Only) path event (utils/autorestoresnaps2). Watches for new snapshots and restores them when found.  Only run on the backup cluster.
+---
+
+# Utils: Restore newest snapshots (Groovy Only)
+
+Runs the **Restore newest snapshots (Groovy Only)** path event (`utils/autorestoresnaps2`). Watches for new snapshots and restores them when found.  Only run on the backup cluster.
+
+## When to use
+
+- A scenario step should run the "Restore newest snapshots (Groovy Only)" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/utils/autorestoresnaps2.xconf`.
+2. Runs the Groovy script `events/scripts/utils/autorestorelatestsnapshot2.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `utils/autorestoresnaps2`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="utils_autorestoresnaps" bean="runEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/autorestoresnaps"> 
     <name> 
@@ -216,7 +1377,51 @@
       <language id="de"><![CDATA[Hilfsmittel: Neueste Snapshots wiederherstellen]]></language>
       <language id="fr"><![CDATA[Utilitaires : Restaurer les dernières sauvegardes]]></language>
       <language id="es"><![CDATA[Utilidades: Restaurar instantáneas más recientes]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: utils_autorestoresnaps
+description: Runs the Restore newest snapshots path event (utils/autorestoresnaps). Watches for new snapshots and restores them when found.  Only run on the backup cluster.
+---
+
+# Utils: Restore newest snapshots
+
+Runs the **Restore newest snapshots** path event (`utils/autorestoresnaps`). Watches for new snapshots and restores them when found.  Only run on the backup cluster.
+
+## When to use
+
+- A scenario step should run the "Restore newest snapshots" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/utils/autorestoresnaps.xconf`.
+2. Runs the Groovy script `events/scripts/utils/autorestorelatestsnapshot.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `utils/autorestoresnaps`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="utils_flushserver" bean="runSharedEventSkill" agenttype="eventagent" folder="utils" runoperation="utils/flushserver"> 
     <name> 
@@ -224,7 +1429,52 @@
       <language id="de"><![CDATA[Utilities: Server-Objekte leeren]]></language>
       <language id="fr"><![CDATA[Utilitaires : Objets du serveur Flush]]></language>
       <language id="es"><![CDATA[Utilidades: Objetos del servidor]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: utils_flushserver
+description: Runs the Flush Server Objects path event (utils/flushserver) in the background. Runs Java garbage collection and Finalization.
+---
+
+# Utils: Flush Server Objects
+
+Runs the **Flush Server Objects** path event (`utils/flushserver`) in the background. Runs Java garbage collection and Finalization.
+
+## When to use
+
+- A scenario step should run the "Flush Server Objects" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/utils/flushserver.xconf`.
+2. Runs the Groovy script `events/scripts/utils/flushserver.groovy`.
+3. The event scheduler also runs it every `1d`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `utils/flushserver`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="conversions_autotranscode" bean="runSharedEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/autotranscode"> 
     <name> 
@@ -232,7 +1482,52 @@
       <language id="de"><![CDATA[Konvertierungen: Transkript-Audio]]></language>
       <language id="fr"><![CDATA[Conversions : transcription audio]]></language>
       <language id="es"><![CDATA[Conversión: Transcripción de audio]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_autotranscode
+description: Runs the Transcript Audio path event (conversions/autotranscode) in the background. Check for automatic transcriptions that need to be run.
+---
+
+# Conversions: Transcript Audio
+
+Runs the **Transcript Audio** path event (`conversions/autotranscode`) in the background. Check for automatic transcriptions that need to be run.
+
+## When to use
+
+- A scenario step should run the "Transcript Audio" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/autotranscode.xconf`.
+2. Calls `TimelineModule.autoTranscodeQueue`.
+3. The event scheduler also runs it every `5m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/autotranscode`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="conversions_expireconversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/expireconversions"> 
     <name> 
@@ -240,7 +1535,51 @@
       <language id="de"><![CDATA[Konvertierungen: Alte Konvertierungsaufgaben ablaufen lassen]]></language>
       <language id="fr"><![CDATA[Conversions : Expirer les anciennes tâches de conversion]]></language>
       <language id="es"><![CDATA[Conversiónes: Expirar las tareas de conversión antiguas]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_expireconversions
+description: Runs the Expire old conversion tasks path event (conversions/expireconversions). Check for conversions that were submitted and need to be expired.
+---
+
+# Conversions: Expire old conversion tasks
+
+Runs the **Expire old conversion tasks** path event (`conversions/expireconversions`). Check for conversions that were submitted and need to be expired.
+
+## When to use
+
+- A scenario step should run the "Expire old conversion tasks" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/expireconversions.xconf`.
+2. Runs the Groovy script `events/scripts/conversions/expireconversions.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/expireconversions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="conversions_runconversion" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversion"> 
     <name> 
@@ -248,7 +1587,51 @@
       <language id="de"><![CDATA[Konvertierungen: Medienkonvertierung eines Assets durchführen]]></language>
       <language id="fr"><![CDATA[Conversions : exécuter la conversion d'un actif]]></language>
       <language id="es"><![CDATA[Conversión: Ejecutar la conversión de medios en un activo]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_runconversion
+description: Runs the Run media conversion on one asset path event (conversions/runconversion). Check for conversions that need to be run.
+---
+
+# Conversions: Run media conversion on one asset
+
+Runs the **Run media conversion on one asset** path event (`conversions/runconversion`). Check for conversions that need to be run.
+
+## When to use
+
+- A scenario step should run the "Run media conversion on one asset" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/runconversion.xconf`.
+2. Calls `ConvertModule.checkQueue`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/runconversion`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="conversions_runconversions" bean="runSharedEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions"> 
     <name> 
@@ -256,7 +1639,52 @@
       <language id="de"><![CDATA[Konvertierungen: Medienkonvertierungen ausführen]]></language>
       <language id="fr"><![CDATA[Conversions : exécutez les conversions multimédias]]></language>
       <language id="es"><![CDATA[Conversiónes: Ejecutar conversiones de medios]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_runconversions
+description: Runs the Run media conversions path event (conversions/runconversions) in the background. Check for conversions that need to be run.
+---
+
+# Conversions: Run media conversions
+
+Runs the **Run media conversions** path event (`conversions/runconversions`) in the background. Check for conversions that need to be run.
+
+## When to use
+
+- A scenario step should run the "Run media conversions" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/runconversions.xconf`.
+2. Calls `ConvertModule.checkQueue`.
+3. The event scheduler also runs it every `5m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/runconversions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="conversions_rerunfailed" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/rerunfailed"> 
     <name> 
@@ -264,7 +1692,51 @@
       <language id="de"><![CDATA[Konvertierungen: Konvertierungsfehler als neu markieren]]></language>
       <language id="fr"><![CDATA[Conversions : Marquer les erreurs de conversion comme nouvelles]]></language>
       <language id="es"><![CDATA[Conversiónes: Marque los errores de conversión como nuevos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_rerunfailed
+description: Runs the Mark Conversion Errors As New path event (conversions/rerunfailed).
+---
+
+# Conversions: Mark Conversion Errors As New
+
+Runs the **Mark Conversion Errors As New** path event (`conversions/rerunfailed`).
+
+## When to use
+
+- A scenario step should run the "Mark Conversion Errors As New" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/rerunfailed.xconf`.
+2. Runs the Groovy script `events/scripts/conversions/rerunfailed.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/rerunfailed`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="conversions_generatemissing" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/generatemissing"> 
     <name> 
@@ -272,7 +1744,51 @@
       <language id="de"><![CDATA[Konvertierungen: Fehlgenerierte Bilder korrigieren]]></language>
       <language id="fr"><![CDATA[Conversions : réparer les images générées manquantes]]></language>
       <language id="es"><![CDATA[Conversiónes: Corrección de imágenes generadas faltantes]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_generatemissing
+description: Runs the Fix Missing Generated Images path event (conversions/generatemissing).
+---
+
+# Conversions: Fix Missing Generated Images
+
+Runs the **Fix Missing Generated Images** path event (`conversions/generatemissing`).
+
+## When to use
+
+- A scenario step should run the "Fix Missing Generated Images" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/generatemissing.xconf`.
+2. Runs the Groovy script `events/scripts/conversions/generatemissing.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/generatemissing`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="conversions_generateall" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/generateall"> 
     <name> 
@@ -280,7 +1796,51 @@
       <language id="de"><![CDATA[Konvertierungen: Generiert + erneut importiert]]></language>
       <language id="fr"><![CDATA[Conversions : Généré clairement + réimporter]]></language>
       <language id="es"><![CDATA[Conversiónes: Generado claro + reimportar]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_generateall
+description: Runs the Clear Generated + re-Import path event (conversions/generateall).
+---
+
+# Conversions: Clear Generated + re-Import
+
+Runs the **Clear Generated + re-Import** path event (`conversions/generateall`).
+
+## When to use
+
+- A scenario step should run the "Clear Generated + re-Import" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/generateall.xconf`.
+2. Runs the Groovy script `events/scripts/conversions/generateall.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/generateall`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="conversions_thumbnailreplaced" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/thumbnailreplaced"> 
     <name> 
@@ -288,7 +1848,51 @@
       <language id="de"><![CDATA[Konvertierungen: Thumbnail ersetzt]]></language>
       <language id="fr"><![CDATA[Conversions : vignette remplacée]]></language>
       <language id="es"><![CDATA[Conversión: Miniatura reemplazada]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: conversions_thumbnailreplaced
+description: Runs the Thumbnail Replaced path event (conversions/thumbnailreplaced).
+---
+
+# Conversions: Thumbnail Replaced
+
+Runs the **Thumbnail Replaced** path event (`conversions/thumbnailreplaced`).
+
+## When to use
+
+- A scenario step should run the "Thumbnail Replaced" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/thumbnailreplaced.xconf`.
+2. Runs the event `importing/queueconversions`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/thumbnailreplaced`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="publishing_publishcomplete" bean="runEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishcomplete"> 
     <name> 
@@ -296,7 +1900,51 @@
       <language id="de"><![CDATA[Veröffentlichung: Vollständige Veröffentlichung]]></language>
       <language id="fr"><![CDATA[Édition : Publier l'intégralité]]></language>
       <language id="es"><![CDATA[Publicación: Publicar completo]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: publishing_publishcomplete
+description: Runs the Publish Complete path event (publishing/publishcomplete).
+---
+
+# Publishing: Publish Complete
+
+Runs the **Publish Complete** path event (`publishing/publishcomplete`).
+
+## When to use
+
+- A scenario step should run the "Publish Complete" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/publishing/publishcomplete.xconf`.
+2. The event defines no actions of its own. It is a hook that other events, listeners and automation scenarios run on.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `publishing/publishcomplete`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="publishing_publishassets" bean="runSharedEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishassets"> 
     <name> 
@@ -304,7 +1952,52 @@
       <language id="de"><![CDATA[Veröffentlichung: Assets veröffentlichen]]></language>
       <language id="fr"><![CDATA[Édition : Publier des actifs]]></language>
       <language id="es"><![CDATA[Publicación: Publicar activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: publishing_publishassets
+description: Runs the Publish Assets path event (publishing/publishassets) in the background.
+---
+
+# Publishing: Publish Assets
+
+Runs the **Publish Assets** path event (`publishing/publishassets`) in the background.
+
+## When to use
+
+- A scenario step should run the "Publish Assets" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/publishing/publishassets.xconf`.
+2. Calls `PublishModule.checkQueue`.
+3. The event scheduler also runs it every `5m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `publishing/publishassets`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="publishing_publishasset" bean="runEventSkill" agenttype="eventagent" folder="publishing" runoperation="publishing/publishasset"> 
     <name> 
@@ -312,7 +2005,51 @@
       <language id="de"><![CDATA[Veröffentlichung: Einzelveröffentlichung]]></language>
       <language id="fr"><![CDATA[Édition : Publication d'un seul actif]]></language>
       <language id="es"><![CDATA[Publicación: Publicación de un solo activo]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: publishing_publishasset
+description: Runs the Publish Single Asset path event (publishing/publishasset).
+---
+
+# Publishing: Publish Single Asset
+
+Runs the **Publish Single Asset** path event (`publishing/publishasset`).
+
+## When to use
+
+- A scenario step should run the "Publish Single Asset" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/publishing/publishasset.xconf`.
+2. Calls `PublishModule.checkQueue`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `publishing/publishasset`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="smartcreator_publish" bean="runEventSkill" agenttype="eventagent" folder="smartcreator" runoperation="smartcreator/publish"> 
     <name> 
@@ -320,7 +2057,51 @@
       <language id="de"><![CDATA[Smartcreator: Smart Creator Veröffentlichen]]></language>
       <language id="fr"><![CDATA[Smartcreator : Smart Creator Publish]]></language>
       <language id="es"><![CDATA[Smartcreator: Smart Creator Publicar]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_publish
+description: Runs the Smart Creator Publish path event (smartcreator/publish).
+---
+
+# Smartcreator: Smart Creator Publish
+
+Runs the **Smart Creator Publish** path event (`smartcreator/publish`).
+
+## When to use
+
+- A scenario step should run the "Smart Creator Publish" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/smartcreator/publish.xconf`.
+2. The event defines no actions of its own. It is a hook that other events, listeners and automation scenarios run on.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `smartcreator/publish`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="categories_assetsadded" bean="runEventSkill" agenttype="eventagent" folder="categories" runoperation="categories/assetsadded"> 
     <name> 
@@ -328,7 +2109,51 @@
       <language id="de"><![CDATA[Kategorien: Vermögenswerte, die einer Kategorie hinzugefügt wurden]]></language>
       <language id="fr"><![CDATA[Catégories : Actifs ajoutés à la catégorie]]></language>
       <language id="es"><![CDATA[Categorías: Activos añadidos a la categoría]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: categories_assetsadded
+description: Runs the Assets Added to Category path event (categories/assetsadded). Used by entitmanager to log asset uploads.
+---
+
+# Categories: Assets Added to Category
+
+Runs the **Assets Added to Category** path event (`categories/assetsadded`). Used by entitmanager to log asset uploads.
+
+## When to use
+
+- A scenario step should run the "Assets Added to Category" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/categories/assetsadded.xconf`.
+2. Calls `EntityModule.handleAssetsAddedToCategory`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `categories/assetsadded`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="categories_assetsremoved" bean="runEventSkill" agenttype="eventagent" folder="categories" runoperation="categories/assetsremoved"> 
     <name> 
@@ -336,7 +2161,51 @@
       <language id="de"><![CDATA[Kategorien: Vermögenswerte, die aus der Kategorie entfernt wurden]]></language>
       <language id="fr"><![CDATA[Catégories : Actifs retirés de la catégorie]]></language>
       <language id="es"><![CDATA[Categorías: Activos eliminados de la categoría]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: categories_assetsremoved
+description: Runs the Assets Removed from Category path event (categories/assetsremoved). Used by entitmanager to log asset uploads.
+---
+
+# Categories: Assets Removed from Category
+
+Runs the **Assets Removed from Category** path event (`categories/assetsremoved`). Used by entitmanager to log asset uploads.
+
+## When to use
+
+- A scenario step should run the "Assets Removed from Category" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/categories/assetsremoved.xconf`.
+2. Calls `EntityModule.handleAssetsRemovedFromCategory`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `categories/assetsremoved`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="librarycollectionshares_saved" bean="runEventSkill" agenttype="eventagent" folder="librarycollectionshares" runoperation="librarycollectionshares/saved"> 
     <name> 
@@ -344,7 +2213,51 @@
       <language id="de"><![CDATA[Bibliotheksteilungen: Bibliotheksteilung gespeichert]]></language>
       <language id="fr"><![CDATA[Partage de collections de bibliothèque : Partage de collection de bibliothèque sauvegardé]]></language>
       <language id="es"><![CDATA[Compartir colección de biblioteca: Compartir colección de biblioteca guardado]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollectionshares_saved
+description: Runs the Library Collection Share Saved path event (librarycollectionshares/saved).
+---
+
+# Librarycollectionshares: Library Collection Share Saved
+
+Runs the **Library Collection Share Saved** path event (`librarycollectionshares/saved`).
+
+## When to use
+
+- A scenario step should run the "Library Collection Share Saved" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollectionshares/saved.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollectionshares/saved.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollectionshares/saved`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="order_saved" bean="runEventSkill" agenttype="eventagent" folder="order" runoperation="order/saved"> 
     <name> 
@@ -352,7 +2265,51 @@
       <language id="de"><![CDATA[Bestellung: Bestellung gespeichert]]></language>
       <language id="fr"><![CDATA[Commande : Commande enregistrée]]></language>
       <language id="es"><![CDATA[Orden: Orden guardada]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: order_saved
+description: Runs the Order Saved path event (order/saved).
+---
+
+# Order: Order Saved
+
+Runs the **Order Saved** path event (`order/saved`).
+
+## When to use
+
+- A scenario step should run the "Order Saved" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/order/saved.xconf`.
+2. Calls `PathEventModule.runSharedEvent`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `order/saved`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="users_sync-users-to-people" bean="runEventSkill" agenttype="eventagent" folder="users" runoperation="users/sync-users-to-people"> 
     <name> 
@@ -360,7 +2317,51 @@
       <language id="de"><![CDATA[Benutzer: Benutzer in Entitätsperson kopieren]]></language>
       <language id="fr"><![CDATA[Utilisateurs : Copiez les utilisateurs dans l'entité Person]]></language>
       <language id="es"><![CDATA[Usuarios: Copiar usuarios en la entidad Persona]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: users_sync-users-to-people
+description: Runs the Copy Users Into entityperson path event (users/sync-users-to-people). Polls user DB.
+---
+
+# Users: Copy Users Into entityperson
+
+Runs the **Copy Users Into entityperson** path event (`users/sync-users-to-people`). Polls user DB.
+
+## When to use
+
+- A scenario step should run the "Copy Users Into entityperson" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/users/sync-users-to-people.xconf`.
+2. Runs the Groovy script `events/scripts/users/sync-users-to-people.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `users/sync-users-to-people`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="library_migratepermissions" bean="runEventSkill" agenttype="eventagent" folder="library" runoperation="library/migratepermissions"> 
     <name> 
@@ -368,7 +2369,51 @@
       <language id="de"><![CDATA[Bibliothek: Kopiert die in Bibliotheken auf die zugehörige Kategorie gesetzten Berechtigungen]]></language>
       <language id="fr"><![CDATA[Bibliothèque : Copie les autorisations définies sur les bibliothèques vers sa catégorie associée]]></language>
       <language id="es"><![CDATA[Biblioteca: Copia los permisos configurados en las bibliotecas a su categoría asociada]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: library_migratepermissions
+description: Runs the Copies permissions set on libraries to its associated category path event (library/migratepermissions).
+---
+
+# Library: Copies permissions set on libraries to its associated category
+
+Runs the **Copies permissions set on libraries to its associated category** path event (`library/migratepermissions`).
+
+## When to use
+
+- A scenario step should run the "Copies permissions set on libraries to its associated category" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/library/migratepermissions.xconf`.
+2. Runs the Groovy script `events/scripts/library/migratelibrarypermissions.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `library/migratepermissions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="library_saved" bean="runEventSkill" agenttype="eventagent" folder="library" runoperation="library/saved"> 
     <name> 
@@ -376,7 +2421,51 @@
       <language id="de"><![CDATA[Bibliothek: Bibliothek gespeichert]]></language>
       <language id="fr"><![CDATA[Bibliothèque : Bibliothèque sauvegardée]]></language>
       <language id="es"><![CDATA[Biblioteca: Biblioteca guardada]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: library_saved
+description: Runs the Library Saved path event (library/saved).
+---
+
+# Library: Library Saved
+
+Runs the **Library Saved** path event (`library/saved`).
+
+## When to use
+
+- A scenario step should run the "Library Saved" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/library/saved.xconf`.
+2. Runs the Groovy script `events/scripts/library/saved.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `library/saved`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="librarycollection_notifycollectionupdates" bean="runSharedEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/notifycollectionupdates"> 
     <name> 
@@ -384,7 +2473,52 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Chat-Benachrichtigungen für die Sammlung senden]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications de chat de collection]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de chat de colección]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_notifycollectionupdates
+description: Runs the Send Collection Chat Notifications path event (librarycollection/notifycollectionupdates) in the background.
+---
+
+# Librarycollection: Send Collection Chat Notifications
+
+Runs the **Send Collection Chat Notifications** path event (`librarycollection/notifycollectionupdates`) in the background.
+
+## When to use
+
+- A scenario step should run the "Send Collection Chat Notifications" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/notifycollectionupdates.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/notifycollectionupdates.groovy`.
+3. The event scheduler also runs it every `5m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/notifycollectionupdates`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="librarycollection_notifyassetscountchange" bean="runSharedEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/notifyassetscountchange"> 
     <name> 
@@ -392,7 +2526,52 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Benachrichtigungen über Zählungsänderungen senden]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications de modification du nombre d'articles]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de cambios de cuenta]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_notifyassetscountchange
+description: Runs the Send Count Change Notifications path event (librarycollection/notifyassetscountchange) in the background.
+---
+
+# Librarycollection: Send Count Change Notifications
+
+Runs the **Send Count Change Notifications** path event (`librarycollection/notifyassetscountchange`) in the background.
+
+## When to use
+
+- A scenario step should run the "Send Count Change Notifications" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/notifyassetscountchange.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/notifyassetscountchange.groovy`.
+3. The event scheduler also runs it every `1h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/notifyassetscountchange`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="librarycollection_syncalfred" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/syncalfred"> 
     <name> 
@@ -400,7 +2579,51 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Sammlungen herunterladen und synchronisieren]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : télécharger et synchroniser les collections]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: descarga y sincronización de colecciones]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_syncalfred
+description: Runs the Download and sync collections path event (librarycollection/syncalfred).
+---
+
+# Librarycollection: Download and sync collections
+
+Runs the **Download and sync collections** path event (`librarycollection/syncalfred`).
+
+## When to use
+
+- A scenario step should run the "Download and sync collections" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/syncalfred.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/importcollections.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/syncalfred`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="librarycollection_rejected" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/rejected"> 
     <name> 
@@ -408,7 +2631,51 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Benachrichtigungen über die Ablehnung von Vermögenswerten senden]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications de rejet d'actifs]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de rechazo de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_rejected
+description: Runs the Send Asset Rejection Notifications path event (librarycollection/rejected).
+---
+
+# Librarycollection: Send Asset Rejection Notifications
+
+Runs the **Send Asset Rejection Notifications** path event (`librarycollection/rejected`).
+
+## When to use
+
+- A scenario step should run the "Send Asset Rejection Notifications" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/rejected.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/rejected.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/rejected`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="librarycollection_assetadded" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/assetadded"> 
     <name> 
@@ -416,7 +2683,51 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Vermögenswert zur Sammlung hinzugefügt]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : actif ajouté à la collection]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: Activo añadido a la colección]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_assetadded
+description: Runs the Asset Added To Collection path event (librarycollection/assetadded).
+---
+
+# Librarycollection: Asset Added To Collection
+
+Runs the **Asset Added To Collection** path event (`librarycollection/assetadded`).
+
+## When to use
+
+- A scenario step should run the "Asset Added To Collection" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/assetadded.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/assetadded.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/assetadded`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="librarycollection_approved" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/approved"> 
     <name> 
@@ -424,7 +2735,51 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Senden von Benachrichtigungen zur Genehmigung von Vermögenswerten]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : envoyer des notifications d'approbation des actifs]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: Enviar notificaciones de aprobación de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_approved
+description: Runs the Send Asset Approval Notifications path event (librarycollection/approved).
+---
+
+# Librarycollection: Send Asset Approval Notifications
+
+Runs the **Send Asset Approval Notifications** path event (`librarycollection/approved`).
+
+## When to use
+
+- A scenario step should run the "Send Asset Approval Notifications" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/approved.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/approved.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/approved`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="librarycollection_importproductentities" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/importproductentities"> 
     <name> 
@@ -432,7 +2787,51 @@
       <language id="de"><![CDATA[Bibliothekssammlung: Importieren von Entitätsprodukten]]></language>
       <language id="fr"><![CDATA[Collection de bibliothèque : Produits importés par l'entité]]></language>
       <language id="es"><![CDATA[Colección de biblioteca: Productos de la entidad importada]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: librarycollection_importproductentities
+description: Runs the Import Entity Products path event (librarycollection/importproductentities).
+---
+
+# Librarycollection: Import Entity Products
+
+Runs the **Import Entity Products** path event (`librarycollection/importproductentities`).
+
+## When to use
+
+- A scenario step should run the "Import Entity Products" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/librarycollection/importproductentities.xconf`.
+2. Runs the Groovy script `events/scripts/librarycollection/importproductentities.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `librarycollection/importproductentities`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="ordering_orderplaced" bean="runEventSkill" agenttype="eventagent" folder="ordering" runoperation="ordering/orderplaced"> 
     <name> 
@@ -440,7 +2839,52 @@
       <language id="de"><![CDATA[Bestellung: Bestellung aufgegeben]]></language>
       <language id="fr"><![CDATA[Commande : Commande passée]]></language>
       <language id="es"><![CDATA[Pedido: Pedido realizado]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: ordering_orderplaced
+description: Runs the Order Placed path event (ordering/orderplaced).
+---
+
+# Ordering: Order Placed
+
+Runs the **Order Placed** path event (`ordering/orderplaced`).
+
+## When to use
+
+- A scenario step should run the "Order Placed" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/ordering/orderplaced.xconf`.
+2. Calls `OrderModule.createConversionRequest`.
+3. Calls `PathEventModule.runSharedEvent`.
+4. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `ordering/orderplaced`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="ordering_checkorderstatus" bean="runSharedEventSkill" agenttype="eventagent" folder="ordering" runoperation="ordering/checkorderstatus"> 
     <name> 
@@ -448,7 +2892,52 @@
       <language id="de"><![CDATA[Bestellung: Bestellverlauf aktualisieren]]></language>
       <language id="fr"><![CDATA[Commande : Mise à jour de l'historique de la commande]]></language>
       <language id="es"><![CDATA[Ordenar: Actualizar el historial de pedidos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: ordering_checkorderstatus
+description: Runs the Update Order History path event (ordering/checkorderstatus) in the background.
+---
+
+# Ordering: Update Order History
+
+Runs the **Update Order History** path event (`ordering/checkorderstatus`) in the background.
+
+## When to use
+
+- A scenario step should run the "Update Order History" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/ordering/checkorderstatus.xconf`.
+2. Calls `OrderModule.updatePendingOrders`.
+3. The event scheduler also runs it every `1m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `ordering/checkorderstatus`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="llm_addmodulestoplevels" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmodulestoplevels"> 
     <name> 
@@ -456,7 +2945,52 @@
       <language id="de"><![CDATA[LLM: KI-Funktionen wiederherstellen]]></language>
       <language id="fr"><![CDATA[LLM : Recréer des fonctions d'IA]]></language>
       <language id="es"><![CDATA[LLM: Recrear funciones de IA]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_addmodulestoplevels
+description: Runs the Recreate AI Functions path event (llm/addmodulestoplevels) in the background. Recreates AI functions.
+---
+
+# Llm: Recreate AI Functions
+
+Runs the **Recreate AI Functions** path event (`llm/addmodulestoplevels`) in the background. Recreates AI functions.
+
+## When to use
+
+- A scenario step should run the "Recreate AI Functions" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/llm/addmodulestoplevels.xconf`.
+2. Calls `AgentModule.recreateFunctions`.
+3. The event scheduler also runs it every `12h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/addmodulestoplevels`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="llm_monitorchats" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/monitorchats"> 
     <name> 
@@ -464,7 +2998,52 @@
       <language id="de"><![CDATA[LLM: Chatüberwachung]]></language>
       <language id="fr"><![CDATA[LLM : Surveiller les conversations]]></language>
       <language id="es"><![CDATA[LLM: Monitorear chats]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_monitorchats
+description: Runs the Monitor Chats path event (llm/monitorchats) in the background.
+---
+
+# Llm: Monitor Chats
+
+Runs the **Monitor Chats** path event (`llm/monitorchats`) in the background.
+
+## When to use
+
+- A scenario step should run the "Monitor Chats" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/llm/monitorchats.xconf`.
+2. Calls `AgentModule.monitorChannels`.
+3. The event scheduler also runs it every `5h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/monitorchats`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="llm_creatorcomponentcontent" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/creatorcomponentcontent"> 
     <name> 
@@ -472,7 +3051,52 @@
       <language id="de"><![CDATA[LLM: Komponenteninhalt erstellen]]></language>
       <language id="fr"><![CDATA[LLM : Créer les contenus des composants]]></language>
       <language id="es"><![CDATA[LLM: Crear componentes de contenido]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_creatorcomponentcontent
+description: Runs the Make Components Contents path event (llm/creatorcomponentcontent) in the background. Creates component contents for creator sections.
+---
+
+# Llm: Make Components Contents
+
+Runs the **Make Components Contents** path event (`llm/creatorcomponentcontent`) in the background. Creates component contents for creator sections.
+
+## When to use
+
+- A scenario step should run the "Make Components Contents" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/llm/creatorcomponentcontent.xconf`.
+2. Calls `SmartCreatorModule.populateComponentContent`.
+3. The event scheduler also runs it every `12h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/creatorcomponentcontent`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="llm_executerag" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/executerag"> 
     <name> 
@@ -480,7 +3104,51 @@
       <language id="de"><![CDATA[LLM: RAG ausführen]]></language>
       <language id="fr"><![CDATA[LLM : Exécuter le RAG]]></language>
       <language id="es"><![CDATA[LLM: Ejecutar RAG]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_executerag
+description: Runs the Execute RAG path event (llm/executerag). Use AI to Execute RAG (Retrieve and Generate) for assets and entities.
+---
+
+# Llm: Execute RAG
+
+Runs the **Execute RAG** path event (`llm/executerag`). Use AI to Execute RAG (Retrieve and Generate) for assets and entities.
+
+## When to use
+
+- A scenario step should run the "Execute RAG" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/llm/executerag.xconf`.
+2. Runs the Groovy script `events/scripts/llm/executerag.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/executerag`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="llm_createentities" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createentities"> 
     <name> 
@@ -488,7 +3156,51 @@
       <language id="de"><![CDATA[LLM: Generierung von KI-Inhalten]]></language>
       <language id="fr"><![CDATA[LLM : génération de contenu par IA]]></language>
       <language id="es"><![CDATA[LLM: Generación de contenido con IA]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_createentities
+description: Runs the AI Content Generation path event (llm/createentities). Use AI to build new content and assets.
+---
+
+# Llm: AI Content Generation
+
+Runs the **AI Content Generation** path event (`llm/createentities`). Use AI to build new content and assets.
+
+## When to use
+
+- A scenario step should run the "AI Content Generation" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/llm/createentities.xconf`.
+2. Calls `ContentModule.processCreationQueue`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/createentities`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="llm_semanticrebalance" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/semanticrebalance"> 
     <name> 
@@ -496,7 +3208,52 @@
       <language id="de"><![CDATA[LLM: Semantische Neujustierung]]></language>
       <language id="fr"><![CDATA[Rééquilibrage sémantique]]></language>
       <language id="es"><![CDATA[LLM: Reequilibrio semántico]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_semanticrebalance
+description: Runs the Semantic Rebalance path event (llm/semanticrebalance) in the background. Use AI to speed up searches.
+---
+
+# Llm: Semantic Rebalance
+
+Runs the **Semantic Rebalance** path event (`llm/semanticrebalance`) in the background. Use AI to speed up searches.
+
+## When to use
+
+- A scenario step should run the "Semantic Rebalance" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/llm/semanticrebalance.xconf`.
+2. Runs the Groovy script `events/scripts/llm/sematicrebalance.groovy`.
+3. The event scheduler also runs it every `24h`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/semanticrebalance`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="llm_embeddata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/embeddata"> 
     <name> 
@@ -504,7 +3261,51 @@
       <language id="de"><![CDATA[LLM: Asset/Entity/Blogs in Projekte einbetten]]></language>
       <language id="fr"><![CDATA[LLM : Intégrer des actifs/entités/blogs dans des projets]]></language>
       <language id="es"><![CDATA[LLM: Incorporar activos/entidades/blogs en proyectos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_embeddata
+description: Runs the Embed Asset/Entity/Blogs in Projects path event (llm/embeddata). Embed Asset/Entity/Blogs in Projects for RAG.
+---
+
+# Llm: Embed Asset/Entity/Blogs in Projects
+
+Runs the **Embed Asset/Entity/Blogs in Projects** path event (`llm/embeddata`). Embed Asset/Entity/Blogs in Projects for RAG.
+
+## When to use
+
+- A scenario step should run the "Embed Asset/Entity/Blogs in Projects" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/llm/embeddata.xconf`.
+2. Runs the Groovy script `events/scripts/llm/embeddata.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/embeddata`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="llm_updateaiservers" bean="runSharedEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/updateaiservers"> 
     <name> 
@@ -512,7 +3313,52 @@
       <language id="de"><![CDATA[LLM: Aktualisierung der KI-Server]]></language>
       <language id="fr"><![CDATA[LLM : Mise à jour des serveurs IA]]></language>
       <language id="es"><![CDATA[LLM: Actualizar servidores de IA]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_updateaiservers
+description: Runs the Update AI Servers path event (llm/updateaiservers) in the background. Updates vision and tools servers.
+---
+
+# Llm: Update AI Servers
+
+Runs the **Update AI Servers** path event (`llm/updateaiservers`) in the background. Updates vision and tools servers.
+
+## When to use
+
+- A scenario step should run the "Update AI Servers" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/llm/updateaiservers.xconf`.
+2. Runs the Groovy script `events/scripts/llm/updateaiservers.groovy`.
+3. The event scheduler also runs it every `15m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/updateaiservers`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="llm_createassets" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/createassets"> 
     <name> 
@@ -520,8 +3366,51 @@
       <language id="de"><![CDATA[LLM: KI-Bildgenerierung]]></language>
       <language id="fr"><![CDATA[Génération d'images par IA]]></language>
       <language id="es"><![CDATA[LLM: Generación de imágenes con IA]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Loops over contentcreator records with status 'newimage' to generate AI images.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_createassets
+description: Runs the AI Image Generation path event (llm/createassets). Use AI to build new content and assets.
+---
+
+# Llm: AI Image Generation
+
+Runs the **AI Image Generation** path event (`llm/createassets`). Use AI to build new content and assets.
+
+## When to use
+
+- A scenario step should run the "AI Image Generation" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/llm/createassets.xconf`.
+2. Calls `ContentModule.processAssetRequests`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/createassets`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>   
   <data id="llm_addmetadata" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/addmetadata"> 
     <name> 
@@ -529,7 +3418,52 @@
       <language id="de"><![CDATA[LLM: Anwendung der Informatik auf Vermögenswerte und Entitäten]]></language>
       <language id="fr"><![CDATA[LLM : Appliquer l'informatique aux actifs et aux entités]]></language>
       <language id="es"><![CDATA[IA: Aplicar la informática a los activos y entidades]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_addmetadata
+description: Runs the Apply Informatics to Assets and Entities path event (llm/addmetadata). Use AI to Add metadata (title, caption, description, alt, tags) automatically.
+---
+
+# Llm: Apply Informatics to Assets and Entities
+
+Runs the **Apply Informatics to Assets and Entities** path event (`llm/addmetadata`). Use AI to Add metadata (title, caption, description, alt, tags) automatically.
+
+## When to use
+
+- A scenario step should run the "Apply Informatics to Assets and Entities" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/llm/addmetadata.xconf`.
+2. The event defines no actions of its own. It is a hook that other events, listeners and automation scenarios run on.
+3. The event scheduler also runs it every `10m`.
+4. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/addmetadata`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="llm_loadactions" bean="runEventSkill" agenttype="eventagent" folder="llm" runoperation="llm/loadactions"> 
     <name> 
@@ -537,7 +3471,51 @@
       <language id="de"><![CDATA[LLM: Suchaktionen in den Aktionsindex laden]]></language>
       <language id="fr"><![CDATA[LLM : Charger les actions de recherche dans l'index d'actions]]></language>
       <language id="es"><![CDATA[LLM: Cargar las acciones de búsqueda en el índice de acciones]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: llm_loadactions
+description: Runs the Load Search Actions into Action Index path event (llm/loadactions). Builds are the standard ways emedia can search modules.
+---
+
+# Llm: Load Search Actions into Action Index
+
+Runs the **Load Search Actions into Action Index** path event (`llm/loadactions`). Builds are the standard ways emedia can search modules.
+
+## When to use
+
+- A scenario step should run the "Load Search Actions into Action Index" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/llm/loadactions.xconf`.
+2. Calls `AgentModule.indexActions`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `llm/loadactions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="userprofile_saved" bean="runEventSkill" agenttype="eventagent" folder="userprofile" runoperation="userprofile/saved"> 
     <name> 
@@ -545,7 +3523,52 @@
       <language id="de"><![CDATA[Benutzerprofil: Benutzerprofil gespeichert]]></language>
       <language id="fr"><![CDATA[Profil utilisateur sauvegardé]]></language>
       <language id="es"><![CDATA[Perfil de usuario: Perfil de usuario guardado]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: userprofile_saved
+description: Runs the UserProfile  Saved path event (userprofile/saved).
+---
+
+# Userprofile: UserProfile  Saved
+
+Runs the **UserProfile  Saved** path event (`userprofile/saved`).
+
+## When to use
+
+- A scenario step should run the "UserProfile  Saved" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/userprofile/saved.xconf`.
+2. Calls `DataEditModule.clearCache`.
+3. Runs the Groovy script `events/scripts/users/setuplibraries.groovy`.
+4. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `userprofile/saved`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="searchcategory_assigncollections" bean="runEventSkill" agenttype="eventagent" folder="searchcategory" runoperation="searchcategory/assigncollections"> 
     <name> 
@@ -553,7 +3576,51 @@
       <language id="de"><![CDATA[Suchkategorie: Unterkollektionen nach Suchkategorie erstellen]]></language>
       <language id="fr"><![CDATA[Catégorie de recherche : Créer des sous-collections par catégorie de recherche]]></language>
       <language id="es"><![CDATA[Categoría de búsqueda: Crear subcolecciones por categoría de búsqueda]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: searchcategory_assigncollections
+description: Runs the Create Sub Collections by Search Category path event (searchcategory/assigncollections).
+---
+
+# Searchcategory: Create Sub Collections by Search Category
+
+Runs the **Create Sub Collections by Search Category** path event (`searchcategory/assigncollections`).
+
+## When to use
+
+- A scenario step should run the "Create Sub Collections by Search Category" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/searchcategory/assigncollections.xconf`.
+2. Runs the Groovy script `events/scripts/searchcategory/assigncollections.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `searchcategory/assigncollections`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="entities_autoassignprimaryimage" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autoassignprimaryimage"> 
     <name> 
@@ -561,7 +3628,52 @@
       <language id="de"><![CDATA[Entitäten: Automatische Zuweisung Entitätsbild]]></language>
       <language id="fr"><![CDATA[Entités : Attribution automatique d'une image d'entité]]></language>
       <language id="es"><![CDATA[Entidades: Asignación automática de la imagen de la entidad]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: entities_autoassignprimaryimage
+description: Runs the Auto assign Entity Image path event (entities/autoassignprimaryimage) in the background.
+---
+
+# Entities: Auto assign Entity Image
+
+Runs the **Auto assign Entity Image** path event (`entities/autoassignprimaryimage`) in the background.
+
+## When to use
+
+- A scenario step should run the "Auto assign Entity Image" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/entities/autoassignprimaryimage.xconf`.
+2. Runs the Groovy script `events/scripts/entities/autoassignprimaryimage.groovy`.
+3. The event scheduler also runs it every `1m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `entities/autoassignprimaryimage`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="entities_autocreateentities" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autocreateentities"> 
     <name> 
@@ -569,7 +3681,52 @@
       <language id="de"><![CDATA[Entitäten: Automatische Erstellung von Entitäten]]></language>
       <language id="fr"><![CDATA[Entités : Créer automatiquement des entités]]></language>
       <language id="es"><![CDATA[Entidades: Creación automática de entidades]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: entities_autocreateentities
+description: Runs the Auto Create Entities path event (entities/autocreateentities) in the background.
+---
+
+# Entities: Auto Create Entities
+
+Runs the **Auto Create Entities** path event (`entities/autocreateentities`) in the background.
+
+## When to use
+
+- A scenario step should run the "Auto Create Entities" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/entities/autocreateentities.xconf`.
+2. Runs the Groovy script `events/scripts/entities/autocreateentities.groovy`.
+3. The event scheduler also runs it every `10m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `entities/autocreateentities`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="entities_clearalluploadsourcepaths" bean="runEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/clearalluploadsourcepaths"> 
     <name> 
@@ -577,7 +3734,51 @@
       <language id="de"><![CDATA[Entitäten: Klare vorhandene Upload-Quellpfade]]></language>
       <language id="fr"><![CDATA[Entités : Clarifier les chemins de source de téléchargement existants]]></language>
       <language id="es"><![CDATA[Entidades: Aclarar las rutas de origen de carga existentes]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: entities_clearalluploadsourcepaths
+description: Runs the Clear Existing Upload Source Paths path event (entities/clearalluploadsourcepaths).
+---
+
+# Entities: Clear Existing Upload Source Paths
+
+Runs the **Clear Existing Upload Source Paths** path event (`entities/clearalluploadsourcepaths`).
+
+## When to use
+
+- A scenario step should run the "Clear Existing Upload Source Paths" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/entities/clearalluploadsourcepaths.xconf`.
+2. Runs the Groovy script `events/scripts/entities/clearalluploadsourcepaths.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `entities/clearalluploadsourcepaths`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="entities_autoassignprimaryimagefixdeleted" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/autoassignprimaryimagefixdeleted"> 
     <name> 
@@ -585,7 +3786,52 @@
       <language id="de"><![CDATA[Entitäten: Entität korrigiert fehlendes Primärbild (gelöschtes Asset)]]></language>
       <language id="fr"><![CDATA[Entités : correction de l'entité pour l'image principale manquante (actif supprimé)]]></language>
       <language id="es"><![CDATA[Entidades: Entidad que corrige la falta de imagen principal (activo eliminado)]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: entities_autoassignprimaryimagefixdeleted
+description: Runs the Entity fix missing Primary Image (Deleted Asset) path event (entities/autoassignprimaryimagefixdeleted) in the background.
+---
+
+# Entities: Entity fix missing Primary Image (Deleted Asset)
+
+Runs the **Entity fix missing Primary Image (Deleted Asset)** path event (`entities/autoassignprimaryimagefixdeleted`) in the background.
+
+## When to use
+
+- A scenario step should run the "Entity fix missing Primary Image (Deleted Asset)" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/entities/autoassignprimaryimagefixdeleted.xconf`.
+2. Runs the Groovy script `events/scripts/entities/autoassignprimaryimagefixdeleted.groovy`.
+3. The event scheduler also runs it every `1d`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `entities/autoassignprimaryimagefixdeleted`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="entities_checkpermissionhistory" bean="runSharedEventSkill" agenttype="eventagent" folder="entities" runoperation="entities/checkpermissionhistory"> 
     <name> 
@@ -593,7 +3839,52 @@
       <language id="de"><![CDATA[Entitäten: Berechtigungsänderungen überprüfen]]></language>
       <language id="fr"><![CDATA[Entités : Vérifier les modifications d'autorisation]]></language>
       <language id="es"><![CDATA[Entidades: Verificar cambios de permisos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: entities_checkpermissionhistory
+description: Runs the Check Permission Changes path event (entities/checkpermissionhistory) in the background.
+---
+
+# Entities: Check Permission Changes
+
+Runs the **Check Permission Changes** path event (`entities/checkpermissionhistory`) in the background.
+
+## When to use
+
+- A scenario step should run the "Check Permission Changes" event without waiting for it to finish.
+
+## How it works
+
+1. Loads `events/entities/checkpermissionhistory.xconf`.
+2. Calls `EntityModule.updatePermissions`.
+3. The event scheduler also runs it every `10m`.
+4. If the event is already queued or running, it is flagged to run again instead of starting a second copy. The child steps run right away.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `entities/checkpermissionhistory`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="faces_facerescanerrors" bean="runEventSkill" agenttype="eventagent" folder="faces" runoperation="faces/facerescanerrors"> 
     <name> 
@@ -601,7 +3892,51 @@
       <language id="de"><![CDATA[Gesichter: Fehler bei der Gesichtserkennung]]></language>
       <language id="fr"><![CDATA[Visages : erreurs de la numérisation faciale]]></language>
       <language id="es"><![CDATA[Caras: Errores en el escaneo de reconocimiento facial]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: faces_facerescanerrors
+description: Runs the Facial Recognition Scan Errors path event (faces/facerescanerrors).
+---
+
+# Faces: Facial Recognition Scan Errors
+
+Runs the **Facial Recognition Scan Errors** path event (`faces/facerescanerrors`).
+
+## When to use
+
+- A scenario step should run the "Facial Recognition Scan Errors" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/faces/facerescanerrors.xconf`.
+2. Runs the Groovy script `events/scripts/faces/facerescanerrors.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `faces/facerescanerrors`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="faces_facereinitclusters" bean="runEventSkill" agenttype="eventagent" folder="faces" runoperation="faces/facereinitclusters"> 
     <name> 
@@ -609,7 +3944,51 @@
       <language id="de"><![CDATA[Gesichter: Face-Init-Cluster]]></language>
       <language id="fr"><![CDATA[Visages : groupe Face Init]]></language>
       <language id="es"><![CDATA[Caras: Clúster de Face Init]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: faces_facereinitclusters
+description: Runs the Face Init Cluster path event (faces/facereinitclusters).
+---
+
+# Faces: Face Init Cluster
+
+Runs the **Face Init Cluster** path event (`faces/facereinitclusters`).
+
+## When to use
+
+- A scenario step should run the "Face Init Cluster" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/faces/facereinitclusters.xconf`.
+2. Runs the Groovy script `events/scripts/faces/facereinitclusters.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `faces/facereinitclusters`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_assetwritemetadata" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/assetwritemetadata"> 
     <name> 
@@ -617,7 +3996,51 @@
       <language id="de"><![CDATA[Asset: Metadaten in die Originale schreiben]]></language>
       <language id="fr"><![CDATA[Actif : Écrire les métadonnées dans les originaux]]></language>
       <language id="es"><![CDATA[Activo: Escribir metadatos a los originales]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_assetwritemetadata
+description: Runs the Write Metadata to originals path event (asset/assetwritemetadata).
+---
+
+# Asset: Write Metadata to originals
+
+Runs the **Write Metadata to originals** path event (`asset/assetwritemetadata`).
+
+## When to use
+
+- A scenario step should run the "Write Metadata to originals" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/assetwritemetadata.xconf`.
+2. Runs the Groovy script `events/scripts/asset/assetwritemetadata.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/assetwritemetadata`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_aliasduplicates" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/aliasduplicates"> 
     <name> 
@@ -625,7 +4048,51 @@
       <language id="de"><![CDATA[Vermögenswert: Alias doppelte Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Actif : Alias de doublons d'actifs]]></language>
       <language id="es"><![CDATA[Activo: Alias Activos duplicados]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_aliasduplicates
+description: Runs the Alias Duplicate Assets path event (asset/aliasduplicates).
+---
+
+# Asset: Alias Duplicate Assets
+
+Runs the **Alias Duplicate Assets** path event (`asset/aliasduplicates`).
+
+## When to use
+
+- A scenario step should run the "Alias Duplicate Assets" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/aliasduplicates.xconf`.
+2. Runs the Groovy script `events/scripts/asset/aliasduplicates.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/aliasduplicates`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_createautocomplete" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/createautocomplete"> 
     <name> 
@@ -633,7 +4100,51 @@
       <language id="de"><![CDATA[Asset: Vorabfüllung der Auto-Complete-Werte]]></language>
       <language id="fr"><![CDATA[Actif : Préremplir les valeurs de complétion automatique]]></language>
       <language id="es"><![CDATA[Activo: Prellenar valores de autocompletado]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_createautocomplete
+description: Runs the Prepopulate Auto-Complete Values path event (asset/createautocomplete). Import tags and categories.
+---
+
+# Asset: Prepopulate Auto-Complete Values
+
+Runs the **Prepopulate Auto-Complete Values** path event (`asset/createautocomplete`). Import tags and categories.
+
+## When to use
+
+- A scenario step should run the "Prepopulate Auto-Complete Values" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/createautocomplete.xconf`.
+2. Runs the Groovy script `events/scripts/asset/createautocomplete.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/createautocomplete`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_createmappings" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/createmappings"> 
     <name> 
@@ -641,7 +4152,51 @@
       <language id="de"><![CDATA[Asset: Zuordnungen erstellen]]></language>
       <language id="fr"><![CDATA[Actif : Créer des correspondances]]></language>
       <language id="es"><![CDATA[Activo: Crear mapeos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_createmappings
+description: Runs the Create Mappings path event (asset/createmappings). Create parent child mappings from tables.
+---
+
+# Asset: Create Mappings
+
+Runs the **Create Mappings** path event (`asset/createmappings`). Create parent child mappings from tables.
+
+## When to use
+
+- A scenario step should run the "Create Mappings" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/createmappings.xconf`.
+2. Runs the Groovy script `events/scripts/asset/createmappings.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/createmappings`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_originalreplaced" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/originalreplaced"> 
     <name> 
@@ -649,7 +4204,51 @@
       <language id="de"><![CDATA[Vermögenswert: Original ersetzt]]></language>
       <language id="fr"><![CDATA[Actif : Remplacement de l'original]]></language>
       <language id="es"><![CDATA[Activo: Reemplazo original]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_originalreplaced
+description: Runs the Original Replaced path event (asset/originalreplaced).
+---
+
+# Asset: Original Replaced
+
+Runs the **Original Replaced** path event (`asset/originalreplaced`).
+
+## When to use
+
+- A scenario step should run the "Original Replaced" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/originalreplaced.xconf`.
+2. Calls `EntityModule.handleAssetModified`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/originalreplaced`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_resetassettypes" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/resetassettypes"> 
     <name> 
@@ -657,7 +4256,51 @@
       <language id="de"><![CDATA[Asset: Asset-Typen zurücksetzen]]></language>
       <language id="fr"><![CDATA[Actif : Réinitialiser les types d'actifs]]></language>
       <language id="es"><![CDATA[Activo: Tipos de activo de reinicio]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_resetassettypes
+description: Runs the Reset Asset Types path event (asset/resetassettypes).
+---
+
+# Asset: Reset Asset Types
+
+Runs the **Reset Asset Types** path event (`asset/resetassettypes`).
+
+## When to use
+
+- A scenario step should run the "Reset Asset Types" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/resetassettypes.xconf`.
+2. Runs the Groovy script `events/scripts/asset/resetassettypes.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/resetassettypes`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_removedeletednow" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/removedeletednow"> 
     <name> 
@@ -665,7 +4308,51 @@
       <language id="de"><![CDATA[Vermögenswert: Jetzt löschen]]></language>
       <language id="fr"><![CDATA[Actif : supprimer les éléments supprimés maintenant]]></language>
       <language id="es"><![CDATA[Activo: Eliminar lo eliminado ahora]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_removedeletednow
+description: Runs the Remove deleted now path event (asset/removedeletednow).
+---
+
+# Asset: Remove deleted now
+
+Runs the **Remove deleted now** path event (`asset/removedeletednow`).
+
+## When to use
+
+- A scenario step should run the "Remove deleted now" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/removedeletednow.xconf`.
+2. Runs the Groovy script `events/scripts/asset/removedeletednow.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/removedeletednow`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_writeentermediaid" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/writeentermediaid"> 
     <name> 
@@ -673,7 +4360,51 @@
       <language id="de"><![CDATA[Asset: EnterMedia-ID auf das Original schreiben]]></language>
       <language id="fr"><![CDATA[Actif : Écrire l'ID EnterMedia sur les originaux]]></language>
       <language id="es"><![CDATA[Activo: Escribir el ID de EnterMedia en los originales]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_writeentermediaid
+description: Runs the Write EnterMedia ID to originals path event (asset/writeentermediaid).
+---
+
+# Asset: Write EnterMedia ID to originals
+
+Runs the **Write EnterMedia ID to originals** path event (`asset/writeentermediaid`).
+
+## When to use
+
+- A scenario step should run the "Write EnterMedia ID to originals" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/writeentermediaid.xconf`.
+2. Runs the Groovy script `events/scripts/asset/writeentermediaid.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/writeentermediaid`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_resetpermissions" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/resetpermissions"> 
     <name> 
@@ -681,7 +4412,51 @@
       <language id="de"><![CDATA[Asset: Berechtigungen für Vermögenswerte zurücksetzen]]></language>
       <language id="fr"><![CDATA[Actif : réinitialiser les autorisations de l'actif]]></language>
       <language id="es"><![CDATA[Activo: Restablecer permisos de activo]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_resetpermissions
+description: Runs the Reset Asset Permissions path event (asset/resetpermissions).
+---
+
+# Asset: Reset Asset Permissions
+
+Runs the **Reset Asset Permissions** path event (`asset/resetpermissions`).
+
+## When to use
+
+- A scenario step should run the "Reset Asset Permissions" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/resetpermissions.xconf`.
+2. Calls `AssetControlModule.resetPermissions`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/resetpermissions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_reindexlegacyassets" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/reindexlegacyassets"> 
     <name> 
@@ -689,7 +4464,51 @@
       <language id="de"><![CDATA[Vermögenswert: Legacy-Vermögenswerte (data.xml) neuindizieren]]></language>
       <language id="fr"><![CDATA[Actif : réindexer les actifs hérités (data.xml)]]></language>
       <language id="es"><![CDATA[Activo: Reindexar activos heredados (data.xml)]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_reindexlegacyassets
+description: Runs the Reindex legacy (data.xml) assets path event (asset/reindexlegacyassets).
+---
+
+# Asset: Reindex legacy (data.xml) assets
+
+Runs the **Reindex legacy (data.xml) assets** path event (`asset/reindexlegacyassets`).
+
+## When to use
+
+- A scenario step should run the "Reindex legacy (data.xml) assets" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/reindexlegacyassets.xconf`.
+2. Calls `MediaArchiveModule.reindexLegacyAssets`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/reindexlegacyassets`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_originalmodified" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/originalmodified"> 
     <name> 
@@ -697,7 +4516,52 @@
       <language id="de"><![CDATA[Vermögenswert: ursprünglich geändert]]></language>
       <language id="fr"><![CDATA[Actif : Modifié à l'origine]]></language>
       <language id="es"><![CDATA[Activo: Original modificado]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_originalmodified
+description: Runs the Original Modified path event (asset/originalmodified).
+---
+
+# Asset: Original Modified
+
+Runs the **Original Modified** path event (`asset/originalmodified`).
+
+## When to use
+
+- A scenario step should run the "Original Modified" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/originalmodified.xconf`.
+2. Calls `AssetEditModule.originalModified`.
+3. Calls `EntityModule.handleAssetModified`.
+4. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/originalmodified`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_validateautocomplete" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/validateautocomplete"> 
     <name> 
@@ -705,7 +4569,51 @@
       <language id="de"><![CDATA[Asset: Validieren Sie Vorschläge für die Suche nach Assets]]></language>
       <language id="fr"><![CDATA[Actif : Valider les suggestions de type pour les recherches d'actifs]]></language>
       <language id="es"><![CDATA[Activo: Validar las sugerencias de autocompletado para las búsquedas de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_validateautocomplete
+description: Runs the Validate type ahead suggestions for asset searches path event (asset/validateautocomplete).
+---
+
+# Asset: Validate type ahead suggestions for asset searches
+
+Runs the **Validate type ahead suggestions for asset searches** path event (`asset/validateautocomplete`).
+
+## When to use
+
+- A scenario step should run the "Validate type ahead suggestions for asset searches" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/validateautocomplete.xconf`.
+2. Calls `AutoCompleteModule.expireSuggestions`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/validateautocomplete`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_syncgoogledrive" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/syncgoogledrive"> 
     <name> 
@@ -713,7 +4621,51 @@
       <language id="de"><![CDATA[Asset: Google Drive synchronisieren]]></language>
       <language id="fr"><![CDATA[Actif : synchroniser Google Drive]]></language>
       <language id="es"><![CDATA[Activo: Sincronizar con Google Drive]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_syncgoogledrive
+description: Runs the Sync Google Drive path event (asset/syncgoogledrive).
+---
+
+# Asset: Sync Google Drive
+
+Runs the **Sync Google Drive** path event (`asset/syncgoogledrive`).
+
+## When to use
+
+- A scenario step should run the "Sync Google Drive" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/syncgoogledrive.xconf`.
+2. Calls `GoogleModule.syncAssets`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/syncgoogledrive`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_removedeleted" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/removedeleted"> 
     <name> 
@@ -721,7 +4673,51 @@
       <language id="de"><![CDATA[Asset: Gelöschte Datensätze > 1 Monat löschen]]></language>
       <language id="fr"><![CDATA[Actif : supprimer les enregistrements supprimés depuis plus d'un mois]]></language>
       <language id="es"><![CDATA[Activo: Eliminación de registros eliminados > 1 mes]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_removedeleted
+description: Runs the Remove deleted records > 1 month path event (asset/removedeleted).
+---
+
+# Asset: Remove deleted records > 1 month
+
+Runs the **Remove deleted records > 1 month** path event (`asset/removedeleted`).
+
+## When to use
+
+- A scenario step should run the "Remove deleted records > 1 month" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/removedeleted.xconf`.
+2. Runs the Groovy script `events/scripts/asset/removedeleted.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/removedeleted`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_reindex" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/reindex"> 
     <name> 
@@ -729,7 +4725,51 @@
       <language id="de"><![CDATA[Vermögenswert: Vermögenswertsuche neuindizieren]]></language>
       <language id="fr"><![CDATA[Actif : Reindexer les recherches d'actifs]]></language>
       <language id="es"><![CDATA[Activo: Reindexar búsquedas de activos]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_reindex
+description: Runs the Reindex Asset Searches path event (asset/reindex).
+---
+
+# Asset: Reindex Asset Searches
+
+Runs the **Reindex Asset Searches** path event (`asset/reindex`).
+
+## When to use
+
+- A scenario step should run the "Reindex Asset Searches" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/reindex.xconf`.
+2. Calls `MediaArchiveModule.reindex`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/reindex`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="asset_assetuploadnotification" bean="runEventSkill" agenttype="eventagent" folder="asset" runoperation="asset/assetuploadnotification"> 
     <name> 
@@ -737,7 +4777,51 @@
       <language id="de"><![CDATA[Asset: Senden Sie regelmäßig Zusammenfassungen der Uploads]]></language>
       <language id="fr"><![CDATA[Actif : Envoyer un résumé périodique des envois]]></language>
       <language id="es"><![CDATA[Activo: Enviar un resumen periódico de las cargas]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: asset_assetuploadnotification
+description: Runs the Send Periodic Summary of Uploads path event (asset/assetuploadnotification).
+---
+
+# Asset: Send Periodic Summary of Uploads
+
+Runs the **Send Periodic Summary of Uploads** path event (`asset/assetuploadnotification`).
+
+## When to use
+
+- A scenario step should run the "Send Periodic Summary of Uploads" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/asset/assetuploadnotification.xconf`.
+2. Runs the Groovy script `events/scripts/asset/assetuploadnotification.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `asset/assetuploadnotification`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="importing_queueconversions" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/queueconversions"> 
     <name> 
@@ -745,6 +4829,50 @@
       <language id="de"><![CDATA[Importieren: Warteschlangenkonversionen]]></language>
       <language id="fr"><![CDATA[Importation : conversions de file d'attente]]></language>
       <language id="es"><![CDATA[Importar: Cola de conversiones]]></language>
-    </name> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_queueconversions
+description: Runs the Importing: Queue Conversions path event (importing/queueconversions).
+---
+
+# Importing: Queue Conversions
+
+Runs the **Importing: Queue Conversions** path event (`importing/queueconversions`).
+
+## When to use
+
+- A scenario step should run the "Importing: Queue Conversions" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/queueconversions.xconf`.
+2. Runs the Groovy script `events/scripts/importing/queueconversions.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/queueconversions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data> 
 </records>

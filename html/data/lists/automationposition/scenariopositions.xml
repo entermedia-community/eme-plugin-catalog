@@ -13,16 +13,19 @@
   <data id="chat_questions" posx="1825.34060168908" posy="2585.04384804201"> 
     <name/> 
   </data>  
-  <data id="email" posx="1050.84571051792" posy="2404.04697475551"> 
+  <data id="publishing" posx="1900.61496350038" posy="1683.96362927492"> 
+    <name/> 
+  </data>  
+  <data id="email" posx="1600.84571051792" posy="1683.96362927492"> 
+    <name/> 
+  </data>  
+  <data id="search_media" posx="1250.84571051792" posy="2504.04697475551"> 
     <name/> 
   </data>  
   <data id="goals_manager" posx="918.535658820856" posy="2441.41284253311">
     <name/>
   </data>
   <data id="asset_hotfolder_scanning" posx="899.518509183412" posy="1605.16408239788"> 
-    <name/> 
-  </data>  
-  <data id="publishing" posx="1800.61496350038" posy="1683.96362927492"> 
     <name/> 
   </data>  
   <data id="informatics_translate" posx="1364.17331534985" posy="1615.38093504325"> 
@@ -64,6 +67,9 @@
     <name/>
   </data>
 
+  <data id="customer_run_opencode" posx="1004.6960380563" posy="2300.0">
+    <name/>
+  </data>
   <data id="agentorchestrator" posx="1642.670220775686" posy="2376.375868054568">
     <name/>
   </data>

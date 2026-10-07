@@ -84,5 +84,17 @@
     </name>
   </property>
 
+  <property id="orchestrator" index="true" stored="true" editable="true" type="list" listid="chosenorchestrator">
+    <name>
+      <language id="en">Orchestrator</language>
+    </name>
+  </property>
+
+
+  <property id="automationscenario" index="true" stored="true" editable="true" type="list" listid="automationscenario" note="Set when this job was made by running an automation scenario">
+    <name>
+      <language id="en">Automation Scenario</language>
+    </name>
+  </property>
 
 </properties>

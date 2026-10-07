@@ -6,14 +6,99 @@
     <name>
       <language id="en"><![CDATA[Open Code Approve]]></language>
     </name>
-    <markdowncontent><![CDATA[Answers an opencode security prompt (once, always or reject) for an agent job step.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: openCodeApproveSkill
+description: Answers an OpenCode permission (security) prompt for an agent job step.
+---
+
+# Open Code Approve
+
+Answers an OpenCode permission (security) prompt for an agent job step.
+
+## When to use
+
+- A job step is waiting with status `securityprompt` and a person has decided.
+
+## How it works
+
+1. Does nothing but run the children unless the step's status is `securityprompt`.
+2. Sends `decision` (once, always or reject; default once) to OpenCode for the pending permission.
+3. Sets the step back to `running` and clears the pending fields.
+
+## Inputs
+
+- `agentjobstep`: The waiting agentjobstep record
+- `decision`: once, always or reject
+
+## Outputs
+
+- The step saved as running, and a confirmation response
+
+## Implementation
+
+- Bean `openCodeApproveSkill`: `org.entermediadb.ai.skills.OpenCodeApproveSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentjobstep",
+"description":"The waiting agentjobstep record"
+},
+{
+"id":"decision",
+"description":"once, always or reject"
+}
+]]]></parameters>
   </data>
 
   <data id="openCodeUserRequestSkill" bean="openCodeUserRequestSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
     <name>
       <language id="en"><![CDATA[Open Code User Request]]></language>
     </name>
-    <markdowncontent><![CDATA[Takes the chat user's message, creates a one-step agent job for it and passes it as the userrequest to the OpenCode runner.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: openCodeUserRequestSkill
+description: Turns the chat user's message into a one-step agent job for the OpenCode runner.
+---
+
+# Open Code User Request
+
+Turns the chat user's message into a one-step agent job for the OpenCode runner.
+
+## When to use
+
+- A user asks in chat for something OpenCode should do, such as editing files or building pages.
+
+## How it works
+
+1. Waits if there is no user message, or if it is empty.
+2. Creates an `agentjob` with a single `openCodeRunnerSkill` step for the user.
+3. Puts `userrequest`, `agentjob` and `agentjobstep` on the root context and runs the children.
+
+## Inputs
+
+- `usermessage`: The chat message from the user
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `userrequest`, `agentjob`, `agentjobstep` (on the root context)
+
+## Implementation
+
+- Bean `openCodeUserRequestSkill`: `org.entermediadb.ai.skills.OpenCodeUserRequestSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"usermessage",
+"description":"The chat message from the user"
+}
+]]]></parameters>
     <defaultoutput><![CDATA[ [
   {
     "id": "userrequest"
@@ -28,20 +113,99 @@
     <name>
       <language id="en"><![CDATA[Open Code Answer]]></language>
     </name>
-    <markdowncontent><![CDATA[Answers an opencode question for an agent job step.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: openCodeAnswerSkill
+description: Submits a person's answers to an OpenCode question form for an agent job step.
+---
+
+# Open Code Answer
+
+Submits a person's answers to an OpenCode question form for an agent job step.
+
+## When to use
+
+- A job step is waiting with status `question` and the form has been filled in.
+
+## How it works
+
+1. Reads the step's `pendingform`.
+2. Collects one `<formid>_<fieldkey>` value per field (multiselect options post `<formid>_<fieldkey>__<option>=true`) and converts them to boolean, integer or number as the form expects.
+3. Sends the answer to OpenCode, sets the step back to `running`, and clears the pending fields.
+
+## Inputs
+
+- `agentjobstep`: The waiting agentjobstep record
+- `<formid>_<fieldkey>`: One posted value per form field
+
+## Outputs
+
+- The step saved as running, and a confirmation response with the answer
+
+## Implementation
+
+- Bean `openCodeAnswerSkill`: `org.entermediadb.ai.skills.OpenCodeAnswerSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentjobstep",
+"description":"The waiting agentjobstep record"
+},
+{
+"id":"<formid>_<fieldkey>",
+"description":"One posted value per form field"
+}
+]]]></parameters>
   </data>
 
   <data id="openCodeRunnerSkill" bean="openCodeRunnerSkill" agenttype="eventagent" ordering="10">
     <name>
       <![CDATA[Open Code Runner]]>
     </name>
-    <markdowncontent><![CDATA[Executes the OpenCode LLM harness to assist with automated HTML creation, file searching, and content analysis. Includes administrative utilities to customize and manage eme-server instances.]]></markdowncontent>
-    <parameters><![CDATA[
-[{
-"id":"userrequest",
-"description":"The request or query to be sent to the opencode command"
-}]
-   ]]></parameters>
+    <markdowncontent><![CDATA[---
+name: openCodeRunnerSkill
+description: Runs an OpenCode session for an agent job step and waits until it finishes or needs a human answer.
+---
+
+# Open Code Runner
+
+Runs an OpenCode session for an agent job step and waits until it finishes or needs a human answer.
+
+## When to use
+
+- A job step should be carried out by the OpenCode coding agent on the server's files.
+
+## How it works
+
+1. Starts an OpenCode session for the step, or resumes the existing one, in `workingpath` (default: the folder above the web root).
+2. Polls the session for up to 20 minutes, saving the latest assistant text to the step's `markdowncontent` as it goes.
+3. If OpenCode asks a question or permission, saves the step as `question` or `securityprompt` with the pending prompt and stops.
+4. When done, stores the final reply and runs the children.
+
+## Inputs
+
+- `agentjobstep`: The agentjobstep record. Its `userrequest` is the prompt sent to OpenCode
+- `workingpath`: Folder the OpenCode session runs in
+
+## Outputs
+
+- `commandoutput`, `markdowncontent`, the step's status and pending question
+
+## Implementation
+
+- Bean `openCodeRunnerSkill`: `org.entermediadb.ai.skills.OpenCodeRunnerSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentjobstep",
+"description":"The agentjobstep record. Its `userrequest` is the prompt sent to OpenCode"
+},
+{
+"id":"workingpath",
+"description":"Folder the OpenCode session runs in"
+}
+]]]></parameters>
     <defaultoutput><![CDATA[ [
   {
     "id": "commandoutput"
@@ -56,7 +220,44 @@
     <name>
       <![CDATA[Open Code Runner]]>
     </name>
-    <markdowncontent><![CDATA[Takes the chat user's message, creates a one-step agent job for it and passes it as the userrequest to the OpenCode runner.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: openCodeUserRequestSkill
+description: Turns the chat user's message into a one-step agent job for the OpenCode runner.
+---
+
+# Open Code Runner
+
+Turns the chat user's message into a one-step agent job for the OpenCode runner.
+
+## When to use
+
+- A user asks in chat for something OpenCode should do, such as editing files or building pages.
+
+## How it works
+
+1. Waits if there is no user message, or if it is empty.
+2. Creates an `agentjob` with a single `openCodeRunnerSkill` step for the user.
+3. Puts `userrequest`, `agentjob` and `agentjobstep` on the root context and runs the children.
+
+## Inputs
+
+- `usermessage`: The chat message from the user
+
+## Outputs
+
+- `userrequest`, `agentjob`, `agentjobstep` (on the root context)
+
+## Implementation
+
+- Bean `openCodeUserRequestSkill`: `org.entermediadb.ai.skills.OpenCodeUserRequestSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"usermessage",
+"description":"The chat message from the user"
+}
+]]]></parameters>
   </data>
 
 </results>

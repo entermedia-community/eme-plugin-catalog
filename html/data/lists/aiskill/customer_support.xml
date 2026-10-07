@@ -5,7 +5,64 @@
     <name>
       <![CDATA[Find Answer for Customer Query]]>
     </name>
-    <markdowncontent><![CDATA[Searches knowledge embeddings to answer customer queries and drafts automated email replies.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: answer_query
+description: Writes a reply to an incoming email: answers questions from the knowledge base or replies to greetings.
+---
+
+# Find Answer for Customer Query
+
+Writes a reply to an incoming email: answers questions from the knowledge base or replies to greetings.
+
+## When to use
+
+- After an email has been parsed into name, email, content and type.
+
+## How it works
+
+1. Reads the parameters the LLM filled in for this step.
+2. For `question` or `query`, looks up an answer from `embeddings` on the parent context and drafts the email with `agentemailanswer`.
+3. Otherwise drafts a greeting with `agentemailgreeting`.
+
+## Inputs
+
+- `name`: Sender's name
+- `email`: Sender's email address
+- `content`: The question or message text
+- `email_type`: One of question, query, greetings, followup
+- `embeddings`: Embedded document ids to search, from the parent context
+
+## Outputs
+
+- `reply_subject`, `reply_body`, `answer`, `query`
+
+## Implementation
+
+- Bean `questionManagerSkill`: `org.entermediadb.ai.skills.QuestionManagerSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"name",
+"description":"Sender's name"
+},
+{
+"id":"email",
+"description":"Sender's email address"
+},
+{
+"id":"content",
+"description":"The question or message text"
+},
+{
+"id":"email_type",
+"description":"One of question, query, greetings, followup"
+},
+{
+"id":"embeddings",
+"description":"Embedded document ids to search, from the parent context"
+}
+]]]></parameters>
   </data>
 
 

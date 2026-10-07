@@ -9,7 +9,47 @@
       <language id="fr"><![CDATA[Source du dossier chaud]]></language>
       <language id="es"><![CDATA[Carpeta de origen]]></language>
     </name>
-    <markdowncontent><![CDATA[Scans configured hot folders for new or modified files within periodic intervals and imports assets under lock protection.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: hotfoldersourceagent
+description: Scans one hot folder (asset source) and imports any new or changed files as assets.
+---
+
+# Hot Folder Source
+
+Scans one hot folder (asset source) and imports any new or changed files as assets.
+
+## When to use
+
+- A scheduled scenario needs to pull files from a configured hot folder into the catalog.
+
+## How it works
+
+1. Looks up the asset source whose id equals this skill row's id.
+2. Skips the scan if the source is disabled, or if `runwithinperiod` has not passed since `lastscanstart`.
+3. Takes the `scan-<sourceid>` lock so only one scan runs at a time, then calls `importAssets` on the source.
+4. Logs how many assets were imported and releases the lock, then runs the child steps.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `id`: Must match the id of the hot folder asset source to scan
+
+## Outputs
+
+- New and modified assets are created in the catalog with import status `created` or `modified`
+
+## Implementation
+
+- Bean `hotFolderSourceSkill`: `org.entermediadb.ai.skills.HotFolderSourceSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="AssetsImportCreated" bean="assetImportCreated" enabled="true" ordering="10" agenttype="taskagent"> 
     <name> 
@@ -17,8 +57,45 @@
       <language id="de"><![CDATA[Erstellte Vermögenswerte]]></language>
       <language id="fr"><![CDATA[Actifs créés]]></language>
       <language id="es"><![CDATA[Activos creados]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Queries assets with import status 'created' or 'modified', removes stale generated images, and batches assets into context for downstream processing.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: AssetsImportCreated
+description: Collects assets waiting in the import queue and hands them to the next steps in batches.
+---
+
+# Assets Created
+
+Collects assets waiting in the import queue and hands them to the next steps in batches.
+
+## When to use
+
+- First step of the asset import pipeline, after files have been registered as assets.
+
+## How it works
+
+1. Finds assets with import status `modified`, removes their generated images, and runs the child steps with them as `hits`.
+2. Finds assets with import status `created` and runs the child steps with them in batches of 1000 as `hits`.
+3. Puts the agent context on the web request as `currentagentcontext` before each batch.
+
+## Inputs
+
+- `webpagerequest`: The web request the child steps run against
+
+## Outputs
+
+- `hits`: the batch of assets for the child steps
+
+## Implementation
+
+- Bean `assetImportCreated`: `org.entermediadb.ai.skills.AssetImportCreatedSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request the child steps run against"
+}
+]]]></parameters>
   </data>  
   <data id="AssetImportImported" bean="assetImportImported" agenttype="taskagent" enabled="true" ordering="12"> 
     <name> 
@@ -26,8 +103,45 @@
       <language id="de"><![CDATA[Asset-Import]]></language>
       <language id="fr"><![CDATA[Importation d'actifs]]></language>
       <language id="es"><![CDATA[Importar Assets]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Marks asset import status as 'needsmetadata', detects and assigns asset types using AssetTypeManager, and persists updated asset records.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: AssetImportImported
+description: Marks a batch of imported assets as needing metadata and assigns their asset types.
+---
+
+# Asset Import
+
+Marks a batch of imported assets as needing metadata and assigns their asset types.
+
+## When to use
+
+- After a batch of assets has been created, before metadata is read from the originals.
+
+## How it works
+
+1. Sets `importstatus` to `needsmetadata` on every asset in `hits`.
+2. Runs AssetTypeManager to detect and set each asset's type.
+3. Saves the assets, then runs the child steps.
+
+## Inputs
+
+- `hits`: The batch of assets that were just imported
+
+## Outputs
+
+- The assets are saved with `importstatus=needsmetadata` and an asset type
+
+## Implementation
+
+- Bean `assetImportImported`: `org.entermediadb.ai.skills.AssetImportImportedSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"hits",
+"description":"The batch of assets that were just imported"
+}
+]]]></parameters>
   </data>  
   <!-- Not used -->  
   <data id="importing_assetsreadmetadata" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsreadmetadata"> 
@@ -36,8 +150,51 @@
       <language id="de"><![CDATA[Import: Prozess benötigt Metadaten]]></language>
       <language id="fr"><![CDATA[Importation : le processus nécessite des métadonnées]]></language>
       <language id="es"><![CDATA[Importar: El proceso necesita metadatos]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Triggers the 'importing/assetsreadmetadata' path event to extract metadata for newly imported assets.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_assetsreadmetadata
+description: Runs the Process Needs Metadata path event (importing/assetsreadmetadata).
+---
+
+# Importing: Process Needs Metadata
+
+Runs the **Process Needs Metadata** path event (`importing/assetsreadmetadata`).
+
+## When to use
+
+- A scenario step should run the "Process Needs Metadata" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/assetsreadmetadata.xconf`.
+2. Runs the Groovy script `events/scripts/importing/assetsreadmetadata.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/assetsreadmetadata`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="EntityModule_handleAssetsImported" runoperation="EntityModule.handleAssetsImported" bean="runModuleSkill" agenttype="taskagent" enabled="true" ordering="14"> 
     <name> 
@@ -45,8 +202,50 @@
       <language id="de"><![CDATA[Entity-Check-Importe]]></language>
       <language id="fr"><![CDATA[Vérification des importations d'entités]]></language>
       <language id="es"><![CDATA[Verificación de importaciones de entidades]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Executes the EntityModule.handleAssetsImported module action to process entity associations for newly imported assets.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: EntityModule_handleAssetsImported
+description: Calls the module action EntityModule.handleAssetsImported through the ModuleManager. Links newly imported assets to their entities.
+---
+
+# Entity Check Imports
+
+Calls the module action `EntityModule.handleAssetsImported` through the ModuleManager. Links newly imported assets to their entities.
+
+## When to use
+
+- During asset import, after the assets are saved, so entity uploads are attached to their records.
+
+## How it works
+
+1. Reads `runoperation` from this skill row and replaces the first `_` with `.`, so `EntityModule_handleAssetsImported` also works.
+2. Calls `ModuleManager.execute(operation, webpagerequest)`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request passed to the module method
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `EntityModule.handleAssetsImported`
+
+## Outputs
+
+- Whatever the module method puts on the request or saves
+
+## Implementation
+
+- Bean `runModuleSkill`: `org.entermediadb.ai.skills.RunModuleSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request passed to the module method"
+}
+]]]></parameters>
   </data>  
   <data id="processNeedsMetadata" bean="processNeedsMetadataSkill" agenttype="taskagent" folder="importing"> 
     <name> 
@@ -54,8 +253,45 @@
       <language id="de"><![CDATA[Prozess benötigt Metadaten]]></language>
       <language id="fr"><![CDATA[Le processus nécessite des métadonnées]]></language>
       <language id="es"><![CDATA[El proceso necesita metadatos]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Reads original file metadata using MetaDataReader, populates asset properties, and transitions asset status to 'imported'.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: processNeedsMetadata
+description: Reads embedded metadata from each asset's original file and marks the asset as imported.
+---
+
+# Process Needs Metadata
+
+Reads embedded metadata from each asset's original file and marks the asset as imported.
+
+## When to use
+
+- After asset types are set, to fill in asset fields from EXIF/XMP/IPTC and other file metadata.
+
+## How it works
+
+1. For each asset in `hits`, loads the original file and runs MetaDataReader to populate the asset.
+2. Sets `importstatus` to `imported`.
+3. Saves assets in groups of 100, then runs the child steps.
+
+## Inputs
+
+- `hits`: The batch of assets whose metadata should be read
+
+## Outputs
+
+- The assets are saved with their file metadata and `importstatus=imported`
+
+## Implementation
+
+- Bean `processNeedsMetadataSkill`: `org.entermediadb.ai.skills.ProcessNeedsMetadataSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"hits",
+"description":"The batch of assets whose metadata should be read"
+}
+]]]></parameters>
   </data>  
   <data id="importing_assetsimportedcustom" bean="runEventSkill" agenttype="eventagent" folder="importing" runoperation="importing/assetsimportedcustom"> 
     <name> 
@@ -63,8 +299,51 @@
       <language id="de"><![CDATA[Importieren: Importierte benutzerdefinierte Assets]]></language>
       <language id="fr"><![CDATA[Importation : actifs personnalisés importés]]></language>
       <language id="es"><![CDATA[Importar: Activos personalizados importados]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Triggers custom post-import path event 'importing/assetsimportedcustom' for specialized asset processing.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: importing_assetsimportedcustom
+description: Runs the Importing: Custom Assets Imported path event (importing/assetsimportedcustom).
+---
+
+# Importing: Custom Assets Imported
+
+Runs the **Importing: Custom Assets Imported** path event (`importing/assetsimportedcustom`).
+
+## When to use
+
+- A scenario step should run the "Importing: Custom Assets Imported" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/importing/assetsimportedcustom.xconf`.
+2. Runs the Groovy script `events/scripts/importing/assetsimportedcustom.groovy`.
+3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `importing/assetsimportedcustom`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="queueConversions" bean="queueConversionsSkill" agenttype="taskagent" enabled="true" ordering="16"> 
     <name> 
@@ -72,8 +351,45 @@
       <language id="de"><![CDATA[Konversionen aus Warteschlangen]]></language>
       <language id="fr"><![CDATA[Conversions de la file d'attente]]></language>
       <language id="es"><![CDATA[Conversiones de cola]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Iterates over assets and creates conversion tasks in the queue based on configured conversion presets.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: queueConversions
+description: Queues the configured conversion presets (thumbnails, previews, transcodes) for a batch of assets.
+---
+
+# Queue Conversions
+
+Queues the configured conversion presets (thumbnails, previews, transcodes) for a batch of assets.
+
+## When to use
+
+- After import, so previews and other renditions get generated.
+
+## How it works
+
+1. For each asset in `hits`, asks the PresetManager to create `conversiontask` records for every preset that applies.
+2. Logs errors per asset and continues with the rest.
+3. Stops without running child steps when `hits` is empty.
+
+## Inputs
+
+- `hits`: The batch of assets that need conversions
+
+## Outputs
+
+- New `conversiontask` records, picked up by the conversion runner
+
+## Implementation
+
+- Bean `queueConversionsSkill`: `org.entermediadb.ai.skills.QueueConversionsSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"hits",
+"description":"The batch of assets that need conversions"
+}
+]]]></parameters>
   </data>  
   <!--Use the event for now so they dont start multiple conversions simultaneously-->  
   <data id="runConversions" bean="runEventSkill" agenttype="eventagent" folder="conversions" runoperation="conversions/runconversions" enabled="true" ordering="16"> 
@@ -82,7 +398,51 @@
       <language id="de"><![CDATA[Konversionen durchführen]]></language>
       <language id="fr"><![CDATA[Lancer des conversions]]></language>
       <language id="es"><![CDATA[Ejecutar conversiones]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Triggers the conversion runner path event 'conversions/runconversions' to process pending media conversion tasks.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: runConversions
+description: Runs the Run media conversions path event (conversions/runconversions). Check for conversions that need to be run.
+---
+
+# Run Conversions
+
+Runs the **Run media conversions** path event (`conversions/runconversions`). Check for conversions that need to be run.
+
+## When to use
+
+- A scenario step should run the "Run media conversions" event and wait for it to finish.
+
+## How it works
+
+1. Loads `events/conversions/runconversions.xconf`.
+2. Calls `ConvertModule.checkQueue`.
+3. The event scheduler also runs it every `5m`.
+4. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: `conversions/runconversions`
+
+## Outputs
+
+- Whatever the event's actions produce
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data> 
 </records>

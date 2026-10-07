@@ -10,4 +10,16 @@
     </name> 
     <markdowncontent><![CDATA[Manages automated publishing and distribution workflows for approved media assets and content to external channels, social networks, and content management systems.]]></markdowncontent>
   </data> 
+
+  <data id="email" ordering="50" scenarioicon="envelope-fill" enabled="true" isvisible="true" connectedtop="publishlabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Email Responder]]></language>  
+      <language id="de"><![CDATA[E-Mail-Responder]]></language>
+      <language id="fr"><![CDATA[Répondeur automatique]]></language>
+      <language id="es"><![CDATA[Respondedor de correo electrónico]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Automates email-based customer support by ingesting incoming emails, retrieving matching knowledge base context via vector embeddings, drafting and sending AI replies, and categorizing or escalating critical issues.]]></markdowncontent>
+  </data>
+
+
 </records>

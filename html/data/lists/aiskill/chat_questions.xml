@@ -5,14 +5,131 @@
     <name>
       <![CDATA[Questions Make Suggestions]]>
     </name>
-    <markdowncontent><![CDATA[Analyzes entity embedded text and generates contextual question suggestions for the user.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: questionsMakeSuggestionsSkill
+description: Generates suggested questions for an entity from a sample of its embedded content.
+---
+
+# Questions Make Suggestions
+
+Generates suggested questions for an entity from a sample of its embedded content.
+
+## When to use
+
+- The entity has no saved question suggestions yet.
+
+## How it works
+
+1. Collects a sample of the entity's embedded text as `embeddedtext`.
+2. Calls the structure named after the current step and saves each suggestion as an `aisuggestion` record with a title and prompt.
+3. Renders `question_nosuggestions` if none came back. Otherwise runs `chat_questions_welcome`.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `entity`: The entity record
+- `entitymodule`: The entity's module record
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- New `aisuggestion` records and `embeddedtext`
+
+## Implementation
+
+- Bean `questionsMakeSuggestionsSkill`: `org.entermediadb.ai.skills.QuestionsMakeSuggestionsSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"entity",
+"description":"The entity record"
+},
+{
+"id":"entitymodule",
+"description":"The entity's module record"
+}
+]]]></parameters>
   </data>
 
   <data id="questionsAskSkill" bean="questionsAskSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10">
     <name>
       <![CDATA[Questions Ask]]>
     </name>
-    <markdowncontent><![CDATA[Searches embedded vector documents to find answers to user questions and returns structured answers with citations.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: questionsAskSkill
+description: Answers a user's question from the embedded documents of the current entity, or from the whole catalog.
+---
+
+# Questions Ask
+
+Answers a user's question from the embedded documents of the current entity, or from the whole catalog.
+
+## When to use
+
+- A user asks a question in an entity chat or the general assistant.
+
+## How it works
+
+1. Reads the user's message.
+2. With an entity, uses `docids` (or the entity's embedded documents) and asks EmbeddingManager for an answer.
+3. If `cancelemptyresponse` is set and nothing relevant was found, stays silent.
+4. Without an entity, searches every module for embedded records that match and answers from those.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `entityid`: Optional entity to ask about
+- `entitymoduleid`: Module of that entity
+- `docids`: Optional embedded document ids to restrict the answer to
+- `cancelemptyresponse`: When true, send nothing if no answer is found
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- The answer as the last response
+
+## Implementation
+
+- Bean `questionsAskSkill`: `org.entermediadb.ai.skills.QuestionsAskSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"entityid",
+"description":"Optional entity to ask about"
+},
+{
+"id":"entitymoduleid",
+"description":"Module of that entity"
+},
+{
+"id":"docids",
+"description":"Optional embedded document ids to restrict the answer to"
+},
+{
+"id":"cancelemptyresponse",
+"description":"When true, send nothing if no answer is found"
+}
+]]]></parameters>
   </data>
 
 

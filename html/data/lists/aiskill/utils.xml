@@ -4,21 +4,137 @@
     <name>
       <![CDATA[Import YouTube]]>
     </name>
-    <markdowncontent><![CDATA[Fetches video metadata and media from YouTube URLs using YouTube Data API and parser.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: import_youtube
+description: Imports a YouTube video as an entity with an asset holding its thumbnail and tags.
+---
+
+# Import YouTube
+
+Imports a YouTube video as an entity with an asset holding its thumbnail and tags.
+
+## When to use
+
+- A user or scenario provides a YouTube video link to add to the library.
+
+## How it works
+
+1. Parses `url`. Only single videos are imported.
+2. Loads the title, description, thumbnail and tags from the YouTube Data API.
+3. Creates or updates the entity in `moduleid` (matched by `embeddedid`) and an asset in its upload folder, and links the asset as the entity's primary media.
+4. Fires `fetchassetadded`.
+
+## Inputs
+
+- `url`: YouTube video URL
+- `moduleid`: Module to create the entity in, default entityvideo
+- `youtube-data-api-key`: YouTube Data API key
+
+## Outputs
+
+- The entity and its asset
+
+## Implementation
+
+- Bean `youtubeImporterSkill`: `org.entermediadb.ai.skills.YoutubeImporterSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"url",
+"description":"YouTube video URL"
+},
+{
+"id":"moduleid",
+"description":"Module to create the entity in, default entityvideo"
+},
+{
+"id":"youtube-data-api-key",
+"description":"YouTube Data API key"
+}
+]]]></parameters>
   </data>
 
   <data id="face_detection" bean="faceDetectionAgent" agenttype="taskagent" ordering="10">
     <name>
       <![CDATA[Face Detection]]>
     </name>
-    <markdowncontent><![CDATA[Detects and extracts facial profiles and bounding coordinates from visual assets.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: face_detection
+description: Detects faces in a set of assets.
+---
+
+# Face Detection
+
+Detects faces in a set of assets.
+
+## When to use
+
+- Assets need face detection outside the informatics pipeline.
+
+## How it works
+
+1. Meant to run face detection on the assets in the context. The informatics `facedetect` row (bean faceProfileSkill) does this today.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Notes
+
+- No Spring bean named `faceDetectionAgent` is registered in plugin.xml, so this skill cannot run yet. The closest implementation is `FaceProfileSkill (bean faceProfileSkill)`.
+
+## Implementation
+
+- Bean `faceDetectionAgent`: not registered
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>
 
   <data id="markdownToHtmlSkill" bean="markdownToHtmlSkill" agenttype="eventagent" ordering="10">
     <name>
       <![CDATA[Markdown to HTML]]>
     </name>
-    <markdowncontent><![CDATA[Takes a markdowncontent parameter from the agent context and converts it to HTML using the built-in MarkdownUtil, storing the result on the context as 'html' for downstream steps and templates.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: markdownToHtmlSkill
+description: Converts markdown text to HTML.
+---
+
+# Markdown to HTML
+
+Converts markdown text to HTML.
+
+## When to use
+
+- Generated markdown must be shown on a page, emailed, or saved as HTML.
+
+## How it works
+
+1. Renders `markdowncontent` with MarkdownUtil.
+2. Stores the HTML in `html` and as the last response, then runs the children.
+3. If `markdowncontent` is missing, sets `html` to an empty string and stops.
+
+## Inputs
+
+- `markdowncontent`: The markdown text to convert
+
+## Outputs
+
+- `html`, `markdown` (the MarkdownUtil instance)
+
+## Implementation
+
+- Bean `markdownToHtmlSkill`: `org.entermediadb.ai.skills.MarkdownToHtmlSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"markdowncontent",
+"description":"The markdown text to convert"
+}
+]]]></parameters>
   </data>
 
 

@@ -9,10 +9,47 @@
       <language id="fr"><![CDATA[Extracteur de contenu Web]]></language>
       <language id="es"><![CDATA[Extractor de contenido web]]></language>
     </name>
-    <markdowncontent><![CDATA[Extracts and parses website HTML content, extracts text and metadata, and collects hyperlinks for scraping and indexing.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: webContentExtractorSkill
+description: Downloads a web page and extracts its readable text, links and optional page metadata.
+---
 
-    <parameters><![CDATA[
-[
+# Web Content Extractor
+
+Downloads a web page and extracts its readable text, links and optional page metadata.
+
+## When to use
+
+- A step needs the content of a web page for summarizing, indexing or answering.
+
+## How it works
+
+1. Fetches `websiteurl`.
+2. Removes scripts, styles and tags, decodes entities, and normalizes whitespace.
+3. Collects all links. If `extractmetadata` is true, also reads title, description, keywords, language, canonical URL and Open Graph tags.
+
+## Inputs
+
+- `websiteurl`: The full URL of the website to fetch
+- `requestmethod`: The HTTP request method to use, e.g. GET or POST
+- `extractmetadata`: Whether to also extract page metadata such as title and description
+- `maxcontentlength`: Maximum content size in bytes, default 10 MB
+- `useragent`: User-Agent header to send
+
+## Outputs
+
+- `extractedcontent`, `webpagemetadata`, `extractedlinks`, `extractionstatus`, `extractiondate`, `errormessage`
+
+## Notes
+
+- `requestmethod`, `maxcontentlength` and `useragent` are read but the fetch currently always uses the shared HTTP connection defaults.
+
+## Implementation
+
+- Bean `webContentExtractorSkill`: `org.entermediadb.ai.skills.WebContentExtractorSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
 {
 "id":"websiteurl",
 "description":"The full URL of the website to fetch"
@@ -24,9 +61,16 @@
 {
 "id":"extractmetadata",
 "description":"Whether to also extract page metadata such as title and description"
+},
+{
+"id":"maxcontentlength",
+"description":"Maximum content size in bytes, default 10 MB"
+},
+{
+"id":"useragent",
+"description":"User-Agent header to send"
 }
-]
-   ]]></parameters>
+]]]></parameters>
     <defaultoutput><![CDATA[ [
   {
     "id": "extractedcontent"

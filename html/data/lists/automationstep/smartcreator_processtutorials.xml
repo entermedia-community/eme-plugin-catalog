@@ -22,9 +22,9 @@ TODO: Add another workflow for the SearchCategory population? How many small one
       <language id="fr"><![CDATA[Tutoriels en attente]]></language>
       <language id="es"><![CDATA[Tutoriales pendientes de proceso]]></language>
     </name>  
-    <llmprompt><![CDATA[Create a brief outline for a Tutorial about ${data.longcaption}. 
-	         For each outline topic, create a summary with a header, and paragraphs + lists (where necessary). 
-	         Provide examples if applicable.]]></llmprompt>
+    <contextvalues><![CDATA[
+[{"llmprompt": "Create a brief outline for a Tutorial about ${data.longcaption}. \nFor each outline topic, create a summary with a header, and paragraphs + lists (where necessary). \nProvide examples if applicable."}]
+]]></contextvalues>
   </data>  
   <data id="aitutorial_smartcreator_parse_user_prompt" aiskill="smartCreatorParseUserPromptSkill" automationscenario="smartcreator_auto_entityarticle" enabled="true" runafter="aitutorial_processpendingrecords"> 
     <name> 

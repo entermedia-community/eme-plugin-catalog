@@ -7,8 +7,57 @@
       <language id="de"><![CDATA[Informationsbeauftragter]]></language>
       <language id="fr"><![CDATA[Agent informatique]]></language>
       <language id="es"><![CDATA[Agente de informática]]></language>
-    </name>  
-    <markdowncontent><![CDATA[Loops over recently edited or pending assets and entities to run automated informatics processing pipelines.]]></markdowncontent> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: informaticsagent
+description: Finds assets and entity records that still need AI processing and feeds them, a page at a time, to the child informatics skills.
+---
+
+# Informatics Agent
+
+Finds assets and entity records that still need AI processing and feeds them, a page at a time, to the child informatics skills.
+
+## When to use
+
+- Root step of the informatics (AI metadata) scenario. Children do the classifying, embedding, translating and so on.
+
+## How it works
+
+1. Needs an InformaticsContext (set `contextbean="informaticsContext"`).
+2. If no work was handed in, finds pending assets and pending records for the enabled modules.
+3. For each page of assets: locks them, runs the children with `assetsToProcess`, marks the ones without `llmerror` as `taggedbyllm`, unlocks and saves.
+4. For each page of valid records: runs the children with `recordsToProcess`, marks them `taggedbyllm`, and saves them per module.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- `assetsToProcess` and `recordsToProcess` for the children. Processed items are saved with `taggedbyllm=true`
+
+## Implementation
+
+- Bean `informaticsProcessorSkill`: `org.entermediadb.ai.skills.InformaticsProcessorSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+},
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="entityassetsplitting" bean="documentSplitterSkill" searchtype="entityasset" generatedsearchtype="entityassetpage" contextbean="informaticsContext" enabled="true" agenttype="taskagent" generatemarkdown="true" ordering="50"> 
     <name> 
@@ -16,8 +65,54 @@
       <language id="de"><![CDATA[Aufteilung der Vermögenswerte der Entität]]></language>
       <language id="fr"><![CDATA[Découpage des actifs de l'entité]]></language>
       <language id="es"><![CDATA[División de activos de la entidad]]></language>
-    </name>  
-    <markdowncontent><![CDATA[Splits entity asset text content into smaller page segments (e.g. 2000 characters) for vector embedding and analysis.]]></markdowncontent> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: entityassetsplitting
+description: Splits long documents into page records and can generate markdown for each page.
+---
+
+# Entity Asset Split
+
+Splits long documents into page records and can generate markdown for each page.
+
+## When to use
+
+- Documents or PDFs must be broken into smaller pages before embedding or classification.
+
+## How it works
+
+1. Reads `recordsToProcess` from the informatics context. If there are none, it just runs the children.
+2. Calls DocumentSplitterManager to split each record into `generatedsearchtype` records, using the row settings.
+3. Runs the child steps.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: The module of the source documents, e.g. `entitydocument`
+- `generatedsearchtype`: The module the page records are written to, e.g. `entitydocumentpage`
+- `generatemarkdown`: When true, also generate markdown content for each page
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- New page records in `generatedsearchtype`
+
+## Implementation
+
+- Bean `documentSplitterSkill`: `org.entermediadb.ai.skills.DocumentSplitterSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="documentsplitting" bean="documentSplitterSkill" searchtype="entitydocument" generatedsearchtype="entitydocumentpage" contextbean="informaticsContext" enabled="true" agenttype="taskagent" generatemarkdown="true" ordering="50"> 
     <name> 
@@ -25,8 +120,54 @@
       <language id="de"><![CDATA[Dokumentsplitting]]></language>
       <language id="fr"><![CDATA[Découpage du document]]></language>
       <language id="es"><![CDATA[División de documentos]]></language>
-    </name>  
-    <markdowncontent><![CDATA[Splits entity document text into smaller page chunks for granular semantic search and embedding.]]></markdowncontent> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: documentsplitting
+description: Splits long documents into page records and can generate markdown for each page.
+---
+
+# Document Split
+
+Splits long documents into page records and can generate markdown for each page.
+
+## When to use
+
+- Documents or PDFs must be broken into smaller pages before embedding or classification.
+
+## How it works
+
+1. Reads `recordsToProcess` from the informatics context. If there are none, it just runs the children.
+2. Calls DocumentSplitterManager to split each record into `generatedsearchtype` records, using the row settings.
+3. Runs the child steps.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: The module of the source documents, e.g. `entitydocument`
+- `generatedsearchtype`: The module the page records are written to, e.g. `entitydocumentpage`
+- `generatemarkdown`: When true, also generate markdown content for each page
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- New page records in `generatedsearchtype`
+
+## Implementation
+
+- Bean `documentSplitterSkill`: `org.entermediadb.ai.skills.DocumentSplitterSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="autotranscribe" bean="transcriberSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Transcribe audio or video content with timestamps" ordering="100"> 
     <name> 
@@ -34,8 +175,50 @@
       <language id="de"><![CDATA[Auto-Transkription]]></language>
       <language id="fr"><![CDATA[Transcription automatique]]></language>
       <language id="es"><![CDATA[Transcripción automática]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Transcribes audio and video media files into text with timestamps using automated transcription services.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: autotranscribe
+description: Transcribes the audio of video and audio assets into timestamped text.
+---
+
+# Auto Transcribe
+
+Transcribes the audio of video and audio assets into timestamped text.
+
+## When to use
+
+- Audio or video assets need a transcript for search, captions or later AI steps.
+
+## How it works
+
+1. Sends `assetsToProcess` to TranscriberManager with this row's settings.
+2. Drops assets flagged `llmerror` from the list, so later steps skip them, then runs the children.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Transcripts stored on the assets. `assetsToProcess` is narrowed to the successful assets
+
+## Implementation
+
+- Bean `transcriberSkill`: `org.entermediadb.ai.skills.TranscriberSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="classify" bean="classifySkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" fieldsavevector="vectorarray" aicreationdescription="You are an assistant that analyzes a batch of metadata inputs and identifies a list of topics that describe the underlying concepts, emotions, actions, and themes. Focus on the essence of what is happening — abstract ideas, moods, and relationships — NOT generic object names unless they are essential to the concept. This topics are used for clustering, search, filtering, and recommendations." ordering="200"> 
     <name> 
@@ -43,8 +226,57 @@
       <language id="de"><![CDATA[Textklassifizierer]]></language>
       <language id="fr"><![CDATA[Classificateur de texte]]></language>
       <language id="es"><![CDATA[Clasificador de texto]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Analyzes text and metadata using LLM to classify content into conceptual themes, moods, and abstract topics.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: classify
+description: Uses an LLM to generate descriptive metadata and topics for assets and entity records.
+---
+
+# Text Classifier
+
+Uses an LLM to generate descriptive metadata and topics for assets and entity records.
+
+## When to use
+
+- Assets or records need AI-written titles, captions, descriptions, keywords or topics.
+
+## How it works
+
+1. Runs ClassifyManager on `assetsToProcess`, then on `recordsToProcess`, guided by `aicreationdescription`.
+2. Removes items flagged `llmerror` from each list, then runs the children.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `aicreationdescription`: System prompt describing what topics or metadata to produce
+- `fieldsavevector`: Field the resulting vector is saved in
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Metadata fields saved on each asset or record. The lists are narrowed to the successful items
+
+## Implementation
+
+- Bean `classifySkill`: `org.entermediadb.ai.skills.ClassifySkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+},
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="autotranslate" bean="translationSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="Translate fields that have values and are multi language" ordering="300"> 
     <name> 
@@ -52,9 +284,71 @@
       <language id="de"><![CDATA[Automatische Übersetzung]]></language>
       <language id="fr"><![CDATA[Traduction automatique]]></language>
       <language id="es"><![CDATA[Traducción automática]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Translates multi-language metadata fields in assets and records into target languages.]]></markdowncontent>
-    <parameters><![CDATA[ {"id":"recordsToProcess"}]]></parameters>
+    </name>
+    <markdowncontent><![CDATA[---
+name: autotranslate
+description: Translates multi-language fields on assets or records from a source language into the target languages.
+---
+
+# Auto Translate
+
+Translates multi-language fields on assets or records from a source language into the target languages.
+
+## When to use
+
+- Content entered in one language must be available in the catalog's other languages.
+
+## How it works
+
+1. Uses `assetsToProcess`, or `recordsToProcess` if there are no assets.
+2. Calls TranslationManager with the fields in `detailsToTranslate`, `sourceLang` and `targetLangs`. The full context is passed as config so glossary settings apply.
+3. Logs the time taken and runs the children.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+- `sourceLang`: Language code to translate from, e.g. en
+- `targetLangs`: Language codes to translate into
+- `detailsToTranslate`: The field definitions (PropertyDetail) to translate
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- The translated language values saved on each item
+
+## Implementation
+
+- Bean `translationSkill`: `org.entermediadb.ai.skills.TranslationSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+},
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+},
+{
+"id":"sourceLang",
+"description":"Language code to translate from, e.g. en"
+},
+{
+"id":"targetLangs",
+"description":"Language codes to translate into"
+},
+{
+"id":"detailsToTranslate",
+"description":"The field definitions (PropertyDetail) to translate"
+}
+]]]></parameters>
     <defaultoutput></defaultoutput>
     
   </data>  
@@ -64,8 +358,66 @@
       <language id="de"><![CDATA[Benutzerdefinierte Feldübersetzungen korrigieren]]></language>
       <language id="fr"><![CDATA[Correction des traductions de champs personnalisés]]></language>
       <language id="es"><![CDATA[Corregir las traducciones de campos personalizados]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Preserves and restores custom tokens used in translations with custom fields.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: FixCustomFieldAgent
+description: Protects organization names in the credit field during translation, then restores the official translations.
+---
+
+# Fix Custom Field Translations
+
+Protects organization names in the `credit` field during translation, then restores the official translations.
+
+## When to use
+
+- Wrap the translation step so organization names are not machine-translated.
+
+## How it works
+
+1. Uses `recordsToProcess`, falling back to `records` and then `assetsToProcess`.
+2. Replaces any organization name found in the `credit` field (in `sourceLang`) with a placeholder like `[__ARGS0__]`.
+3. If anything was replaced, runs the children (the translator), then swaps each placeholder for the organization's own name in every language.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+- `records`: Optional records to use when `recordsToProcess` is empty
+- `sourceLang`: Source language code, default en
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- `orgLookup`: placeholder to organization name map. The `credit` field is fixed in every language
+
+## Implementation
+
+- Bean `fixCustomFieldSkill`: `org.entermediadb.ai.skills.FixCustomFieldSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+},
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+},
+{
+"id":"records",
+"description":"Optional records to use when `recordsToProcess` is empty"
+},
+{
+"id":"sourceLang",
+"description":"Source language code, default en"
+}
+]]]></parameters>
   </data>  
   <data id="semantictopics" bean="semanticClassifierSkill" fieldname="semantictopics" searchtype="semanticembedding" contextbean="informaticsContext" enabled="true" agenttype="taskagent" fieldsavevector="vectorarray" aicreationdescription="You are an assistant that analyzes a batch of metadata inputs and creates a 3 very short semantic summary  in the same language as specified in the metadata that describe the underlying concepts, emotions, actions, and themes. Focus on the essence of what is happening, abstract ideas, moods, and relationships. NOT generic object names unless they are essential to the concept. This summaries are used for clustering, search, filtering, and recommendations. Each semantic summary should be 4 to 7 words. " aicreationcommand="Generate up to 3 semantic summary, in the same language as the content, based on the following metadata:" maxnumberofcentroids="4" init_loop_start_distance=".60" init_loop_lower_limit=".50" maxdistancetocentroid=".67" maxdistancetocentroid_one=".78" maxdistancetomatch=".455" ordering="400"> 
     <name> 
@@ -73,8 +425,60 @@
       <language id="de"><![CDATA[Semantische Themen]]></language>
       <language id="fr"><![CDATA[Thèmes sémantiques]]></language>
       <language id="es"><![CDATA[Temas semánticos]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates concise semantic summaries (4 to 7 words) and assigns semantic topic centroids using vector distance matching.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: semantictopics
+description: Creates short semantic summaries for items, embeds them, and clusters them around centroids for semantic search.
+---
+
+# Semantic Topics
+
+Creates short semantic summaries for items, embeds them, and clusters them around centroids for semantic search.
+
+## When to use
+
+- Items should be grouped by meaning so related content can be found and recommended.
+
+## How it works
+
+1. Runs SemanticClassifierManager on `assetsToProcess`, then on `recordsToProcess`, using this row's settings.
+2. Logs the time taken and runs the children.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `fieldname`: Field the semantic values are written to
+- `searchtype`: Table the embeddings are stored in
+- `aicreationdescription / aicreationcommand`: Prompts used to generate the summaries
+- `maxnumberofcentroids, init_loop_start_distance, init_loop_lower_limit`: Clustering settings
+- `maxdistancetocentroid, maxdistancetocentroid_one, maxdistancetomatch`: Distance thresholds for matching
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Semantic values on each item, and embeddings in `searchtype`
+
+## Implementation
+
+- Bean `semanticClassifierSkill`: `org.entermediadb.ai.skills.SemanticClassifierSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+},
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="aifunctionparameter" bean="semanticClassifierSkill" searchtype="aifunctionparameter" enabled="false" fieldsavevector="vectorarray" maxnumberofcentroids="4" init_loop_start_distance=".60" init_loop_lower_limit=".50" maxdistancetocentroid=".67" maxdistancetocentroid_one=".78" maxdistancetomatch=".455" ordering="1000"> 
     <name> 
@@ -82,8 +486,63 @@
       <language id="de"><![CDATA[Semantische Aktionsliste]]></language>
       <language id="fr"><![CDATA[Liste des actions sémantiques]]></language>
       <language id="es"><![CDATA[Lista de acciones semánticas]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Clusters and categorizes AI function parameters using semantic vector similarity.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: aifunctionparameter
+description: Creates short semantic summaries for items, embeds them, and clusters them around centroids for semantic search.
+---
+
+# Semantic Action List
+
+Creates short semantic summaries for items, embeds them, and clusters them around centroids for semantic search.
+
+## When to use
+
+- Items should be grouped by meaning so related content can be found and recommended.
+
+## How it works
+
+1. Runs SemanticClassifierManager on `assetsToProcess`, then on `recordsToProcess`, using this row's settings.
+2. Logs the time taken and runs the children.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `fieldname`: Field the semantic values are written to
+- `searchtype`: Table the embeddings are stored in
+- `aicreationdescription / aicreationcommand`: Prompts used to generate the summaries
+- `maxnumberofcentroids, init_loop_start_distance, init_loop_lower_limit`: Clustering settings
+- `maxdistancetocentroid, maxdistancetocentroid_one, maxdistancetomatch`: Distance thresholds for matching
+
+## Outputs
+
+- Semantic values on each item, and embeddings in `searchtype`
+
+## Notes
+
+- Disabled by default. Classifies `aifunctionparameter` records for semantic matching of AI function parameters.
+
+## Implementation
+
+- Bean `semanticClassifierSkill`: `org.entermediadb.ai.skills.SemanticClassifierSkill`
+- Agent type: ``
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+},
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="namedentityrecognition" bean="namedEntityRecognitionSkill" contextbean="informaticsContext" enabled="true" agenttype="taskagent" notes="(NER: Named Entity Recognition) is most useful when you need to extract concrete facts (companies, people, places, products) for building indexes, knowledge graphs, or searchable databases" aicreationdescription="You are an information extraction assistant. From the following text, extract a clean list of: Company Names and Place Names (cities, states, countries, or well-known places). Rules: Ignore street addresses, zip codes, URLs, hyperlinks, and email addresses. Do not include personal names (people) or abbreviations of city/states (e.g., CA, NY). Do not include duplicates, return each unique entry once. If no companies or places are found, return an empty array for that field." aicreationcommand="Extract a list of named entities from the following metadata:" ordering="600"> 
     <name> 
@@ -91,8 +550,51 @@
       <language id="de"><![CDATA[Named Entity Recognition]]></language>
       <language id="fr"><![CDATA[Reconnaissance des entités nommées]]></language>
       <language id="es"><![CDATA[Reconocimiento de Entidades Nombradas]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Extracts named entities including company names and place names from text content using LLM fact extraction.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: namedentityrecognition
+description: Extracts company and place names from entity records with an LLM (named entity recognition).
+---
+
+# Named Entity Recognition
+
+Extracts company and place names from entity records with an LLM (named entity recognition).
+
+## When to use
+
+- You need concrete facts such as organizations and places for indexes, filters or knowledge graphs.
+
+## How it works
+
+1. Runs NamedEntityRecognitionManager on `recordsToProcess`, using the row's prompts.
+2. Removes records flagged `llmerror` and runs the children.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `aicreationdescription / aicreationcommand`: Extraction rules and the command sent to the LLM
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- The extracted names saved on each record
+
+## Implementation
+
+- Bean `namedEntityRecognitionSkill`: `org.entermediadb.ai.skills.NamedEntityRecognitionSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <data id="facedetect" bean="faceProfileSkill" searchtype="faceembedding" contextbean="informaticsContext" enabled="true" agenttype="taskagent" fieldsavevector="vectorarray" maxnumberofcentroids="4" init_loop_start_distance=".60" init_loop_lower_limit=".50" maxdistancetocentroid=".795" maxdistancetocentroid_one=".835" maxdistancetomatch=".648" notes="Face detection is the process of identifying and locating human faces in images or videos." ordering="700"> 
     <name> 
@@ -100,8 +602,52 @@
       <language id="de"><![CDATA[Gesichtserkennung]]></language>
       <language id="fr"><![CDATA[Détection de visage]]></language>
       <language id="es"><![CDATA[Detección de rostros]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Detects human faces in visual media, extracts facial embeddings, and profiles individuals across assets.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: facedetect
+description: Detects faces in image and video assets, embeds them, and groups them into face profiles.
+---
+
+# Face Detect
+
+Detects faces in image and video assets, embeds them, and groups them into face profiles.
+
+## When to use
+
+- People should be recognized and grouped across the asset library.
+
+## How it works
+
+1. Runs FaceProfileManager on `assetsToProcess` with this row's clustering settings.
+2. Removes assets flagged `llmerror` and runs the children.
+
+## Inputs
+
+- `assetsToProcess`: The page of assets to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: Table the face embeddings are stored in, e.g. `faceembedding`
+- `maxnumberofcentroids, maxdistancetocentroid, maxdistancetomatch`: Clustering and matching thresholds
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Face embeddings and profile links for each asset
+
+## Implementation
+
+- Bean `faceProfileSkill`: `org.entermediadb.ai.skills.FaceProfileSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"assetsToProcess",
+"description":"The page of assets to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <!-- Automatically embed entitydocument -->  
   <data id="documentEmbedding" bean="embeddingSkill" searchtype="entitydocument" contextbean="informaticsContext" enabled="true" agenttype="taskagent" ordering="800"> 
@@ -110,8 +656,51 @@
       <language id="de"><![CDATA[Dokumenten-Einbettung]]></language>
       <language id="fr"><![CDATA[Intégration du document]]></language>
       <language id="es"><![CDATA[Incrustación del documento]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates vector embeddings for entity documents to enable similarity and semantic search.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: documentEmbedding
+description: Sends records to the embedding server so they can be searched and used for RAG answers.
+---
+
+# Document Embedding
+
+Sends records to the embedding server so they can be searched and used for RAG answers.
+
+## When to use
+
+- Documents, pages or tutorials must be searchable by meaning or usable as context for answers.
+
+## How it works
+
+1. Runs EmbeddingManager on `recordsToProcess` with this row's settings.
+2. Removes records flagged `llmerror` and runs the children.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: The module whose records are embedded
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Records marked as embedded on the embedding server
+
+## Implementation
+
+- Bean `embeddingSkill`: `org.entermediadb.ai.skills.EmbeddingSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <!-- Automatically embed entityasset -->  
   <data id="entityAssetEmbedding" bean="embeddingSkill" searchtype="entityasset" contextbean="informaticsContext" enabled="true" agenttype="taskagent" ordering="800"> 
@@ -120,8 +709,51 @@
       <language id="de"><![CDATA[Entity-Asset-Einbettung]]></language>
       <language id="fr"><![CDATA[Intégration des actifs de l'entité]]></language>
       <language id="es"><![CDATA[Incrustación de activos de la entidad]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates vector embeddings for entity assets to power AI semantic retrieval.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: entityAssetEmbedding
+description: Sends records to the embedding server so they can be searched and used for RAG answers.
+---
+
+# Entity Asset Embedding
+
+Sends records to the embedding server so they can be searched and used for RAG answers.
+
+## When to use
+
+- Documents, pages or tutorials must be searchable by meaning or usable as context for answers.
+
+## How it works
+
+1. Runs EmbeddingManager on `recordsToProcess` with this row's settings.
+2. Removes records flagged `llmerror` and runs the children.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: The module whose records are embedded
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Records marked as embedded on the embedding server
+
+## Implementation
+
+- Bean `embeddingSkill`: `org.entermediadb.ai.skills.EmbeddingSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <!-- Automatically embed aitutorial -->  
   <data id="aitutorialsEmbedding" bean="embeddingSkill" searchtype="aitutorial" contextbean="informaticsContext" enabled="true" agenttype="taskagent" ordering="800"> 
@@ -130,8 +762,51 @@
       <language id="de"><![CDATA[Tutorials einbetten]]></language>
       <language id="fr"><![CDATA[Tutoriels d'incrustage]]></language>
       <language id="es"><![CDATA[Tutoriales incrustados]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates vector embeddings for AI tutorial content and questions for interactive tutoring.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: aitutorialsEmbedding
+description: Sends records to the embedding server so they can be searched and used for RAG answers.
+---
+
+# Tutorials Embedding
+
+Sends records to the embedding server so they can be searched and used for RAG answers.
+
+## When to use
+
+- Documents, pages or tutorials must be searchable by meaning or usable as context for answers.
+
+## How it works
+
+1. Runs EmbeddingManager on `recordsToProcess` with this row's settings.
+2. Removes records flagged `llmerror` and runs the children.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: The module whose records are embedded
+- `contextbean`: `informaticsContext`
+
+## Outputs
+
+- Records marked as embedded on the embedding server
+
+## Implementation
+
+- Bean `embeddingSkill`: `org.entermediadb.ai.skills.EmbeddingSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data>  
   <!-- Manually trigger embedding on the fly  -->  
   <data id="embedding" bean="embeddingSkill" enabled="false" ordering="900"> 
@@ -140,7 +815,53 @@
       <language id="de"><![CDATA[Einbettung]]></language>
       <language id="fr"><![CDATA[Enrichissement]]></language>
       <language id="es"><![CDATA[Incrustación]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates vector embeddings on the fly for arbitrary data records or text fields.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: embedding
+description: Sends records to the embedding server so they can be searched and used for RAG answers.
+---
+
+# Embedding
+
+Sends records to the embedding server so they can be searched and used for RAG answers.
+
+## When to use
+
+- Documents, pages or tutorials must be searchable by meaning or usable as context for answers.
+
+## How it works
+
+1. Runs EmbeddingManager on `recordsToProcess` with this row's settings.
+2. Removes records flagged `llmerror` and runs the children.
+
+## Inputs
+
+- `recordsToProcess`: The page of entity records to process, handed down by the Informatics Processor
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtype`: The module whose records are embedded
+
+## Outputs
+
+- Records marked as embedded on the embedding server
+
+## Notes
+
+- Disabled by default. Generic copy of the embedding step without a fixed `searchtype`.
+
+## Implementation
+
+- Bean `embeddingSkill`: `org.entermediadb.ai.skills.EmbeddingSkill`
+- Agent type: ``
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"recordsToProcess",
+"description":"The page of entity records to process, handed down by the Informatics Processor"
+}
+]]]></parameters>
   </data> 
 </records>

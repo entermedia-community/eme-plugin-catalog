@@ -5,7 +5,40 @@
     <name>
       <![CDATA[Find Embeddings]]>
     </name>
-    <markdowncontent><![CDATA[Finds relevant embedded document IDs across semantic-enabled modules and search categories for answering queries.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: find_embeddings
+description: Collects the ids of all embedded documents in the search categories, for use as RAG sources.
+---
+
+# Find Embeddings
+
+Collects the ids of all embedded documents in the search categories, for use as RAG sources.
+
+## When to use
+
+- Before answering a question from the knowledge base, e.g. support emails.
+
+## How it works
+
+1. Finds every embedded record in semantic-enabled modules that belongs to any search category.
+2. Puts the ids (`<module>_<id>`) into `embeddings`.
+3. Then works like ToolsCallingSkill: lets the LLM pick a child step and fill its parameters.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Outputs
+
+- `embeddings`: JSON array of embedded document ids
+
+## Implementation
+
+- Bean `embeddingFinderSkill`: `org.entermediadb.ai.skills.EmbeddingFinderSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>
 
 

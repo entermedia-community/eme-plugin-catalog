@@ -1,0 +1,31 @@
+<records>
+
+
+    <data id="customer_service_openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="customer_run_opencode" enabled="true" agenttype="eventagent" processingmessage="Running Command" >
+        <name>
+           <![CDATA[Open Code Runner]]>
+        </name>
+     </data>
+
+<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the customer_service_openCodeUserRequest for the next command -->
+
+
+    <data id="customer_service_opencode_markdown" aiskill="markdownToHtmlSkill" automationscenario="customer_run_opencode" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="customer_service_openCodeRunner" >
+        <name>
+           <![CDATA[Markdown Result to HTML]]>
+        </name>
+     </data>
+
+    <data id="customer_service_openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="customer_run_opencode" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="customer_service_openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="customer_run_opencode" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
+</records>

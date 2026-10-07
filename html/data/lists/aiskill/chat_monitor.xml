@@ -7,8 +7,55 @@
       <language id="de"><![CDATA[Automatische Erkennung]]></language>
       <language id="fr"><![CDATA[Détection automatique]]></language>
       <language id="es"><![CDATA[Detección automática]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Sends an initial welcome greeting and options template to the user when starting a new chat session.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: autoDetectWelcomeSkill
+description: Sends the chat welcome message once per conversation.
+---
+
+# Auto Detect
+
+Sends the chat welcome message once per conversation.
+
+## When to use
+
+- First step of a chat assistant.
+
+## How it works
+
+1. If `sentwelcome` is not set, marks the agent message completed and renders the `chat_detection_welcome` template.
+2. Sets `sentwelcome` so it is only sent once.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `sentwelcome`: Set after the first run. When present, no welcome is sent
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- The welcome response, and `sentwelcome=true`
+
+## Implementation
+
+- Bean `autoDetectWelcomeSkill`: `org.entermediadb.ai.skills.AutoDetectWelcomeSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"sentwelcome",
+"description":"Set after the first run. When present, no welcome is sent"
+}
+]]]></parameters>
   </data>  
   <data id="renderLocalTemplateSkill" bean="renderLocalTemplateSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
@@ -16,8 +63,50 @@
       <language id="de"><![CDATA[Lokale Vorlage rendern]]></language>
       <language id="fr"><![CDATA[Rendu du modèle local]]></language>
       <language id="es"><![CDATA[Plantilla local]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Renders local UI action templates and formatting for interactive chat responses.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: renderLocalTemplateSkill
+description: Renders the local chat template named after the current automation step and sends it as the reply.
+---
+
+# Render Local Template
+
+Renders the local chat template named after the current automation step and sends it as the reply.
+
+## When to use
+
+- The reply is fixed content, such as menus, help text or confirmations, that needs no LLM call.
+
+## How it works
+
+1. Uses the current automation step's id as the template name.
+2. Renders it with the `localrender` connection and sets it as the last response.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- The rendered response
+
+## Implementation
+
+- Bean `renderLocalTemplateSkill`: `org.entermediadb.ai.skills.RenderLocalTemplateSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+}
+]]]></parameters>
   </data>  
   <data id="chatMonitorSkill" bean="chatMonitorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
@@ -25,14 +114,165 @@
       <language id="de"><![CDATA[Chats überwachen]]></language>
       <language id="fr"><![CDATA[Surveiller les chats]]></language>
       <language id="es"><![CDATA[Monitorear chats]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatMonitorSkill
+description: Reads each new team chat message, asks the LLM whether and how the assistant should help, and schedules a follow-up.
+---
+
+# Monitor Chats
+
+Reads each new team chat message, asks the LLM whether and how the assistant should help, and schedules a follow-up.
+
+## When to use
+
+- The assistant should watch a team chat quietly and step in only when it is useful.
+
+## How it works
+
+1. Loads the user message this step is replying to and stores it as `userquery`.
+2. Calls the `chat_helper` tools function on the thinking LLM.
+3. Stores the result as `pendingstructuredresponse` and the message as `pendinglastmessage`.
+4. Waits `priority_timeline` minutes (0–5) and then runs `chatMonitorConfirmation`. Nothing is shown right away.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `startup_scenario`, `userquery`, `pendinglastmessage`, `pendingstructuredresponse`, `possibletool`
+
+## Implementation
+
+- Bean `chatMonitorSkill`: `org.entermediadb.ai.skills.ChatMonitorSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+}
+]]]></parameters>
+  </data>  
+  <data id="chatMonitorConfirmationSkill" bean="chatMonitorConfirmationSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+    <name> 
+      <language id="en"><![CDATA[Send Confirmation]]></language>  
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatMonitorConfirmationSkill
+description: After the monitor's wait, posts the assistant's suggestion unless the team has kept talking.
+---
+
+# Send Confirmation
+
+After the monitor's wait, posts the assistant's suggestion unless the team has kept talking.
+
+## When to use
+
+- Runs after ChatMonitorSkill's wait.
+
+## How it works
+
+1. Stops if there is no pending message, or if a newer user message has arrived in the channel.
+2. Reads `confirmation`, `role` and `instruction` from the pending LLM response and stops if there is no confirmation.
+3. Renders `chat_monitor_confirmation` and returns to `chatMonitor`.
+
+## Inputs
+
+- `pendinglastmessage`: The message the monitor analyzed
+- `pendingstructuredresponse`: The LLM response from the monitor step
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `confirmation`, `role`, `instruction`, and the rendered response
+
+## Implementation
+
+- Bean `chatMonitorConfirmationSkill`: `org.entermediadb.ai.skills.ChatMonitorConfirmationSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"pendinglastmessage",
+"description":"The message the monitor analyzed"
+},
+{
+"id":"pendingstructuredresponse",
+"description":"The LLM response from the monitor step"
+}
+]]]></parameters>
   </data>  
   <data id="chatMonitorResponseSkill" bean="chatMonitorResponseSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Respond to Chats]]></language>  
-    </name> 
-    <markdowncontent><![CDATA[Monitors chat messages, analyzes user queries with LLM tool calling, and dispatches to appropriate skill actions.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatMonitorResponseSkill
+description: Runs the scenario step the user chose in chat.
+---
+
+# Respond to Chats
+
+Runs the scenario step the user chose in chat.
+
+## When to use
+
+- After the user picks one of the assistant's suggested actions.
+
+## How it works
+
+1. Sets `messagereload` to false.
+2. Requires `selectedscenario` in the form `scenario.step`, and logs an error if it is missing or malformed.
+3. Runs that scenario step with the current context.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `selectedscenario`: The step to run, as `scenarioid.stepid`
+- `entityid`: Optional entity the request is about
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- Whatever the selected step produces
+
+## Implementation
+
+- Bean `chatMonitorResponseSkill`: `org.entermediadb.ai.skills.ChatMonitorResponseSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"selectedscenario",
+"description":"The step to run, as `scenarioid.stepid`"
+},
+{
+"id":"entityid",
+"description":"Optional entity the request is about"
+}
+]]]></parameters>
   </data>  
 
   <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
@@ -42,14 +282,115 @@
       <language id="fr"><![CDATA[Créer des tâches d'agent]]></language>
       <language id="es"><![CDATA[Crear trabajos de agente]]></language>
     </name>
-    <markdowncontent><![CDATA[Creates agent jobs and goal structures from chat interactions by matching available skills and automations.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: agentJobCreatorSkill
+description: Plans a multi-step agent job from a user request by choosing among the documented skills and scenarios.
+---
+
+# Create Agent Jobs
+
+Plans a multi-step agent job from a user request by choosing among the documented skills and scenarios.
+
+## When to use
+
+- A user asks for something that may take several skills to complete.
+
+## How it works
+
+1. Uses `query`, or the user's non-agent messages in the channel history.
+2. Finds candidate skills and scenarios by searching the embedded `markdowncontent` of `aiskill` and `automationscenario` records.
+3. Builds possible steps from each candidate's `markdowncontent`, `parameters` and `defaultoutput`, and calls the `agentJobCreator` structure.
+4. If the user has not approved yet, shows the proposed plan (`agent_job_showjobplan`) and waits.
+5. Once approved, saves the `agentjob` and its `agentjobstep` records and fires `agentjob/runagentjobs`.
+
+## Inputs
+
+- `query`: The user's request. Built from the channel history when missing
+- `channelchathistory`: Chat history used when `query` is not set
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `agentjob`, `proposedsteps`, `userapproved`, `possible_steps`
+
+## Notes
+
+- This skill reads `markdowncontent` and `parameters` from every aiskill row to pick tools, so keep them accurate.
+
+## Implementation
+
+- Bean `agentJobCreatorSkill`: `org.entermediadb.ai.skills.AgentJobCreatorSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"query",
+"description":"The user's request. Built from the channel history when missing"
+},
+{
+"id":"channelchathistory",
+"description":"Chat history used when `query` is not set"
+}
+]]]></parameters>
   </data>
 
   <data id="agentJobStatusSkill" bean="agentJobStatusSkill" agenttype="eventagent" ordering="10">
     <name>
       <language id="en"><![CDATA[Agent Job Status]]></language>
     </name>
-    <markdowncontent><![CDATA[Reports the current status of the agent jobs created by the orchestrator.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: agentJobStatusSkill
+description: Shows the progress of a running agent job and checks again until it completes.
+---
+
+# Agent Job Status
+
+Shows the progress of a running agent job and checks again until it completes.
+
+## When to use
+
+- After an agent job has been started from chat.
+
+## How it works
+
+1. Reloads the `agentjob` and renders `agent_job_showjobplan` with its timing.
+2. While the status is not `complete` or `error`, checks again every 5 seconds. Gives up after 500 checks.
+3. When the job is finished, returns to `startup_scenario`.
+
+## Inputs
+
+- `agentjob`: The agent job to report on
+- `startup_scenario`: The step to return to when the job finishes
+- `jobcountloops`: Internal counter of status checks
+
+## Outputs
+
+- `agentjob`, `secondstaken`, `jobcountloops`, and the rendered status
+
+## Implementation
+
+- Bean `agentJobStatusSkill`: `org.entermediadb.ai.skills.AgentJobStatusSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentjob",
+"description":"The agent job to report on"
+},
+{
+"id":"startup_scenario",
+"description":"The step to return to when the job finishes"
+},
+{
+"id":"jobcountloops",
+"description":"Internal counter of status checks"
+}
+]]]></parameters>
   </data>
 
 
@@ -59,8 +400,61 @@
       <language id="de"><![CDATA[Chat-Fragen]]></language>
       <language id="fr"><![CDATA[Questions de chat]]></language>
       <language id="es"><![CDATA[Preguntas del chat]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Handles question-answering workflows in chat by loading entity contexts, guide statuses, and suggestions.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: questionsSkill
+description: Starts a Q&A chat about one entity, offering saved suggestions or creating new ones.
+---
+
+# Questions Chat
+
+Starts a Q&A chat about one entity, offering saved suggestions or creating new ones.
+
+## When to use
+
+- A user opens the question chat on an entity.
+
+## How it works
+
+1. Loads the entity, its module, the guide status, and existing `aisuggestion` records.
+2. Renders the template named after the current step.
+3. With no suggestions, runs `question_create_suggestions`. Otherwise moves to `question_ask`.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `entityid`: Id of the entity
+- `entitymoduleid`: Module id of the entity
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `entity`, `entitymodule`, `statuses`, `suggestions`
+
+## Implementation
+
+- Bean `questionsSkill`: `org.entermediadb.ai.skills.QuestionsSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"entityid",
+"description":"Id of the entity"
+},
+{
+"id":"entitymoduleid",
+"description":"Module id of the entity"
+}
+]]]></parameters>
   </data>  
   <data id="searchingChatSkill" bean="searchingSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
@@ -68,7 +462,58 @@
       <language id="de"><![CDATA[Chat durchsuchen]]></language>
       <language id="fr"><![CDATA[Recherche dans le chat]]></language>
       <language id="es"><![CDATA[Buscar en el chat]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Performs conversational search across catalogs and entities using natural language parsing and schema filters.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: searchingChatSkill
+description: Runs the conversational search flow: parses what the user wants, searches modules, and adds related semantic results.
+---
+
+# Searching Chat
+
+Runs the conversational search flow: parses what the user wants, searches modules, and adds related semantic results.
+
+## When to use
+
+- The user asks the assistant to find assets or records.
+
+## How it works
+
+1. Does different work depending on the automation step id:
+2. `chat_searching_welcome`: renders the welcome with the search schema, then `search_parse`.
+3. `search_parse`: calls the thinking LLM to parse the request into search tables and keywords. If it cannot, replies conversationally.
+4. `search_tables`: renders the table results and keeps them as a message prefix, then `search_semantic`.
+5. `search_semantic`: adds semantic matches for the keywords, then returns to `search_parse`.
+6. `view_related_record*`: renders related records.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `userquery`: The search request text, set from the user's message
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `userquery`, `semanticquery`, the parsed search parameters, and rendered results
+
+## Implementation
+
+- Bean `searchingSkill`: `org.entermediadb.ai.skills.SearchingSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"userquery",
+"description":"The search request text, set from the user's message"
+}
+]]]></parameters>
   </data> 
 </results>

@@ -9,25 +9,60 @@
       <language id="fr"><![CDATA[Opération de fichier]]></language>
       <language id="es"><![CDATA[Operación de archivo]]></language>
     </name>
-  <markdowncontent><![CDATA[Writes text to a local file.]]></markdowncontent>
-    <parameters><![CDATA[ 
-[{
+    <markdowncontent><![CDATA[---
+name: fileOperationSkill
+description: Reads or writes a text file on the server.
+---
+
+# File Operation
+
+Reads or writes a text file on the server.
+
+## When to use
+
+- A step needs to load a file's text or save generated text to disk.
+
+## How it works
+
+1. Requires `filepath`, and `fileoperationtype` set to `read` or `write`.
+2. read: returns the file's content.
+3. write: writes `filecontent`, creating parent folders and appending if `appendcontent` is true.
+4. Records the status, then runs the children.
+
+## Inputs
+
+- `filepath`: Full path of the file
+- `fileoperationtype`: read or write
+- `filecontent`: Text to write (write only)
+- `appendcontent`: true to append instead of overwrite (write only)
+
+## Outputs
+
+- `fileoperationstatus`, `fileoperationresult`, `fileoperationdate`, `filepath`, `errormessage`
+
+## Implementation
+
+- Bean `fileOperationSkill`: `org.entermediadb.ai.skills.FileOperationSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
 "id":"filepath",
-"description":"The full path to the file"
+"description":"Full path of the file"
 },
 {
 "id":"fileoperationtype",
-"description":"either read or write"
-},
-{
-"id":"appendcontent",
-"description":"Write to the end of the file"
+"description":"read or write"
 },
 {
 "id":"filecontent",
-"description":"The text content to the be saved"
-}]
-   ]]></parameters>
+"description":"Text to write (write only)"
+},
+{
+"id":"appendcontent",
+"description":"true to append instead of overwrite (write only)"
+}
+]]]></parameters>
      <defaultoutput><![CDATA[ [
   {
     "id": "fileoperationstatus"

@@ -4,7 +4,48 @@
   <data id="mediaCreatorSkill" bean="mediaCreatorSkill" ordering="10" agenttype="remoteagent"> 
     <name> 
       <language id="en"><![CDATA[Media Creator]]></language>  
-    </name> 
-    <markdowncontent><![CDATA[Create Images.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: mediaCreatorSkill
+description: Turns a chat request into image-generation fields and renders the created image back into the chat.
+---
+
+# Media Creator
+
+Turns a chat request into image-generation fields and renders the created image back into the chat.
+
+## When to use
+
+- A user asks in chat for a new image to be made.
+
+## How it works
+
+1. Calls the `creation_image_parse` structure on the thinking LLM and stores the result as the AI creation fields.
+2. Renders `creation_image_render` with the asset and runs the children.
+3. `createImage` sends the prompt to the `createimage` LLM, saves each result as a new asset under `Channels/<user>/<date>/`, and fires `importing/assetscreated`.
+
+## Inputs
+
+- `agentmessage`: The chat message being answered
+
+## Outputs
+
+- `asset`, `refreshing`, and the rendered response
+
+## Notes
+
+- Work in progress: `process` renders a fixed test asset id instead of the image it creates.
+
+## Implementation
+
+- Bean `mediaCreatorSkill`: `org.entermediadb.ai.skills.MediaCreationSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The chat message being answered"
+}
+]]]></parameters>
   </data> 
 </results>

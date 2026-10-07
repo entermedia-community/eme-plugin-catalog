@@ -100,4 +100,10 @@
     </name>
   </property>
 
+  <property id="automationstep" index="true" stored="true" editable="true" type="list" listid="automationstep" note="The automation step this step was made from">
+    <name>
+      <language id="en">Automation Step</language>
+    </name>
+  </property>
+
 </properties>

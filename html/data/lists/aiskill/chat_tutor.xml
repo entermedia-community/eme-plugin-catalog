@@ -8,8 +8,66 @@
       <language id="de"><![CDATA[Tutor-Chat: Willkommen]]></language>
       <language id="fr"><![CDATA[Bienvenue dans le chat de tutorat.]]></language>
       <language id="es"><![CDATA[Bienvenido al Tutor Chat]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Initializes adaptive tutorial sessions, displays welcome greeting, and loads tutorial or daily challenge topics.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: adaptiveTutorialWelcomeSkill
+description: Greets the learner when a tutorial chat starts.
+---
+
+# Tutor Chat Welcome
+
+Greets the learner when a tutorial chat starts.
+
+## When to use
+
+- First message of a tutorial channel.
+
+## How it works
+
+1. Stops if the channel already has non-system messages.
+2. Finds the tutorial from `tutorialid`, or from the section's tutorial for a daily challenge.
+3. Renders `chat_tutor_welcome`.
+
+## Inputs
+
+- `channel`: The tutorial chat channel (from the TutorMessageContext)
+- `tutorialid`: The tutorial to start
+- `isdailychallenge`: true when this is a daily challenge
+- `sectionid`: The section, for a daily challenge
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `tutorMessageContext`
+
+## Outputs
+
+- `tutorial`, `messagerendertype=welcome`, and the welcome response
+
+## Implementation
+
+- Bean `adaptiveTutorialWelcomeSkill`: `org.entermediadb.ai.skills.AdaptiveTutorialWelcomeSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channel",
+"description":"The tutorial chat channel (from the TutorMessageContext)"
+},
+{
+"id":"tutorialid",
+"description":"The tutorial to start"
+},
+{
+"id":"isdailychallenge",
+"description":"true when this is a daily challenge"
+},
+{
+"id":"sectionid",
+"description":"The section, for a daily challenge"
+}
+]]]></parameters>
   </data>  
   <data id="adaptiveTutorialContinueSkill" bean="adaptiveTutorialContinueSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="20"> 
     <name> 
@@ -17,8 +75,76 @@
       <language id="de"><![CDATA[Tutor-Chat fortsetzen]]></language>
       <language id="fr"><![CDATA[Continuer la discussion avec le tuteur]]></language>
       <language id="es"><![CDATA[Continuar el chat con el tutor]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Manages tutorial progression, selects the next section or question, and tracks user responses.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: adaptiveTutorialContinueSkill
+description: Shows the learner the next piece of tutorial content: text, asset or multiple-choice question.
+---
+
+# Tutor Chat Continue
+
+Shows the learner the next piece of tutorial content: text, asset or multiple-choice question.
+
+## When to use
+
+- Each time the tutorial should move forward.
+
+## How it works
+
+1. Finds the next section and component after `sectionid`/`componentid`, skipping questions already answered and limiting questions per section (`questions-per-section` setting).
+2. Sets the render type to `question`, `asset` or `text` and fills in the question or asset details.
+3. Keeps going until it reaches a question, asset or exercise that needs the learner. Ends the tutorial when nothing is left.
+
+## Inputs
+
+- `channel`: The tutorial chat channel (from the TutorMessageContext)
+- `tutorialid`: The tutorial being played
+- `sectionid`: The current section
+- `componentid`: The current component
+- `isdailychallenge`: true for a daily challenge
+- `siteroot`: Site root used to build asset URLs
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `tutorMessageContext`
+
+## Outputs
+
+- `sectionid`, `componentid`, `componentcontent`, `componenttype`, `contentrole`, `question` or `asset`, `messagerendertype`
+
+## Implementation
+
+- Bean `adaptiveTutorialContinueSkill`: `org.entermediadb.ai.skills.AdaptiveTutorialContinueSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channel",
+"description":"The tutorial chat channel (from the TutorMessageContext)"
+},
+{
+"id":"tutorialid",
+"description":"The tutorial being played"
+},
+{
+"id":"sectionid",
+"description":"The current section"
+},
+{
+"id":"componentid",
+"description":"The current component"
+},
+{
+"id":"isdailychallenge",
+"description":"true for a daily challenge"
+},
+{
+"id":"siteroot",
+"description":"Site root used to build asset URLs"
+}
+]]]></parameters>
   </data>  
   <data id="adaptiveTutorialAnswerSkill" bean="adaptiveTutorialAnswerSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="30"> 
     <name> 
@@ -26,8 +152,72 @@
       <language id="de"><![CDATA[Antwort des Tutoren-Chat]]></language>
       <language id="fr"><![CDATA[Réponse du chat du tuteur]]></language>
       <language id="es"><![CDATA[Respuesta del tutor en el chat]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Evaluates user answers against questions, calculates points based on cognitive level and confidence, and records results.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: adaptiveTutorialAnswerSkill
+description: Grades a learner's answer to a multiple-choice question, gives feedback, and updates progress.
+---
+
+# Tutor Chat Answer
+
+Grades a learner's answer to a multiple-choice question, gives feedback, and updates progress.
+
+## When to use
+
+- The learner submits an answer.
+
+## How it works
+
+1. Compares `selectedoption` with the question's correct option.
+2. Awards points for the question's cognitive level, plus a bonus based on `confidence`.
+3. Saves a `tutoranswer` record.
+4. Writes feedback with the `chat_tutor_feedback` structure, then runs `chat_tutor_progress`.
+
+## Inputs
+
+- `channel`: The tutorial chat channel (from the TutorMessageContext)
+- `questionid`: The `entityquestion` being answered
+- `selectedoption`: The chosen option, e.g. option_b
+- `confidence`: The learner's confidence level
+- `tutorialid`: The tutorial
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `tutorMessageContext`
+
+## Outputs
+
+- A `tutoranswer` record, `iscorrect`, `question`, and feedback with `messagerendertype=answereval`
+
+## Implementation
+
+- Bean `adaptiveTutorialAnswerSkill`: `org.entermediadb.ai.skills.AdaptiveTutorialAnswerSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channel",
+"description":"The tutorial chat channel (from the TutorMessageContext)"
+},
+{
+"id":"questionid",
+"description":"The `entityquestion` being answered"
+},
+{
+"id":"selectedoption",
+"description":"The chosen option, e.g. option_b"
+},
+{
+"id":"confidence",
+"description":"The learner's confidence level"
+},
+{
+"id":"tutorialid",
+"description":"The tutorial"
+}
+]]]></parameters>
   </data>  
   <data id="adaptiveTutorialProgressSkill" bean="adaptiveTutorialProgressSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="40"> 
     <name> 
@@ -35,8 +225,56 @@
       <language id="de"><![CDATA[Fortschritt des Tutors]]></language>
       <language id="fr"><![CDATA[Progrès du tuteur]]></language>
       <language id="es"><![CDATA[Progreso del tutor]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Calculates cumulative tutorial scores, competency levels (beginner, competent, expert), and completion metrics.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: adaptiveTutorialProgressSkill
+description: Recalculates the learner's beginner, competent and expert progress for a tutorial.
+---
+
+# Tutor Progress
+
+Recalculates the learner's beginner, competent and expert progress for a tutorial.
+
+## When to use
+
+- After each graded answer.
+
+## How it works
+
+1. Loads every question in the tutorial and the learner's answers.
+2. Adds up points plus bonus per cognitive level. Answers lose 1% per day since they were last scored.
+3. Saves the averages to the `tutorialprogress` record.
+
+## Inputs
+
+- `channel`: The tutorial chat channel (from the TutorMessageContext)
+- `tutorialid`: The tutorial
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `tutorMessageContext`
+
+## Outputs
+
+- `beginnerprogress`, `competentprogress`, `expertprogress`, and `messagerendertype=progressupdate`
+
+## Implementation
+
+- Bean `adaptiveTutorialProgressSkill`: `org.entermediadb.ai.skills.AdaptiveTutorialProgressSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channel",
+"description":"The tutorial chat channel (from the TutorMessageContext)"
+},
+{
+"id":"tutorialid",
+"description":"The tutorial"
+}
+]]]></parameters>
   </data>  
   <data id="adaptiveTutorialUserCommentSkill" bean="adaptiveTutorialUserCommentSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="50"> 
     <name> 
@@ -44,8 +282,66 @@
       <language id="de"><![CDATA[Tutor-Chat-Benutzerkommentar]]></language>
       <language id="fr"><![CDATA[Commentaire de l'utilisateur]]></language>
       <language id="es"><![CDATA[Comentario del usuario del tutor]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Answers user comments and questions during tutorials using embedding search over tutorial knowledge.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: adaptiveTutorialUserCommentSkill
+description: Answers a learner's free-text comment or question using the tutorial's embedded content.
+---
+
+# Tutor Chat User Comment
+
+Answers a learner's free-text comment or question using the tutorial's embedded content.
+
+## When to use
+
+- The learner types a message instead of answering a question.
+
+## How it works
+
+1. Builds the relevant chat history for the current section.
+2. Sends the message, history and the tutorial's document ids to the embedding server's `/chat`.
+3. Replies with the answer.
+
+## Inputs
+
+- `channel`: The tutorial chat channel (from the TutorMessageContext)
+- `usermessage`: The learner's message
+- `tutorialid`: The tutorial
+- `sectionid`: The current section
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `tutorMessageContext`
+
+## Outputs
+
+- The answer, with `messagerendertype=agentcomment`
+
+## Implementation
+
+- Bean `adaptiveTutorialUserCommentSkill`: `org.entermediadb.ai.skills.AdaptiveTutorialUserCommentSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channel",
+"description":"The tutorial chat channel (from the TutorMessageContext)"
+},
+{
+"id":"usermessage",
+"description":"The learner's message"
+},
+{
+"id":"tutorialid",
+"description":"The tutorial"
+},
+{
+"id":"sectionid",
+"description":"The current section"
+}
+]]]></parameters>
   </data>  
   <data id="adaptiveTutorialEndSkill" bean="adaptiveTutorialEndSkill" contextbean="tutorMessageContext" agenttype="remoteagent" ordering="60"> 
     <name> 
@@ -53,7 +349,55 @@
       <language id="de"><![CDATA[Tutor-Chat beendet]]></language>
       <language id="fr"><![CDATA[Fin de la discussion avec le tuteur]]></language>
       <language id="es"><![CDATA[Fin del chat con el tutor]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Concludes the adaptive tutorial session, marks the channel finished, and presents the final summary.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: adaptiveTutorialEndSkill
+description: Ends a tutorial session and marks the channel finished.
+---
+
+# Tutor Chat End
+
+Ends a tutorial session and marks the channel finished.
+
+## When to use
+
+- When no content is left, or the learner ends the tutorial.
+
+## How it works
+
+1. Creates the closing system message with `messagerendertype=end`.
+2. Clears `sectionid` and `componentid`.
+3. Sets the channel's `channelstatus` to `finished`.
+
+## Inputs
+
+- `channel`: The tutorial chat channel (from the TutorMessageContext)
+- `tutorialid`: The tutorial
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `tutorMessageContext`
+
+## Outputs
+
+- The channel saved as finished
+
+## Implementation
+
+- Bean `adaptiveTutorialEndSkill`: `org.entermediadb.ai.skills.AdaptiveTutorialEndSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channel",
+"description":"The tutorial chat channel (from the TutorMessageContext)"
+},
+{
+"id":"tutorialid",
+"description":"The tutorial"
+}
+]]]></parameters>
   </data> 
 </records>

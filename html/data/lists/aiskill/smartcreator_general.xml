@@ -2,8 +2,61 @@
 
 <records> 
   <data id="smartCreatorMakeSuggestionsSkill" bean="smartCreatorMakeSuggestionsSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10"> 
-    <name> <![CDATA[Smart Creator Make Suggestions]]> </name> 
-    <markdowncontent><![CDATA[Generates creative suggestions and topics for new content based on entity semantic topics.]]></markdowncontent>
+    <name> <![CDATA[Smart Creator Make Suggestions]]> </name>
+    <markdowncontent><![CDATA[---
+name: smartCreatorMakeSuggestionsSkill
+description: Suggests content ideas (articles, tutorials and so on) the Smart Creator could make from an entity.
+---
+
+# Smart Creator Make Suggestions
+
+Suggests content ideas (articles, tutorials and so on) the Smart Creator could make from an entity.
+
+## When to use
+
+- A user opens the Smart Creator chat on an entity.
+
+## How it works
+
+1. Sets up new Smart Creator steps aimed at `playbackentitymoduleid`.
+2. Gathers the entity's semantic topics, or up to 5 from its assets.
+3. Renders `chat_smartcreator_suggest` with the thinking LLM.
+
+## Inputs
+
+- `entityid`: Source entity id
+- `entitymoduleid`: Source module id
+- `playbackentitymoduleid`: Module of the content to create, e.g. entitytutorial
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `entity`, `semantictopics`, `playbackentitymodule`, and the suggestions response
+
+## Implementation
+
+- Bean `smartCreatorMakeSuggestionsSkill`: `org.entermediadb.ai.skills.SmartCreatorMakeSuggestionsSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"entityid",
+"description":"Source entity id"
+},
+{
+"id":"entitymoduleid",
+"description":"Source module id"
+},
+{
+"id":"playbackentitymoduleid",
+"description":"Module of the content to create, e.g. entitytutorial"
+}
+]]]></parameters>
   </data>  
   <data id="smartcreator_processpendingrecords" bean="smartCreatorProcessPendingSkill" agenttype="taskagent" ordering="20"> 
     <name> 
@@ -11,13 +64,48 @@
       <language id="de"><![CDATA[Smart Creator: Ausstehende Aufzeichnungen bearbeiten]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : traitement des enregistrements en attente]]></language>
       <language id="es"><![CDATA[Creador inteligente: Procesar registros pendientes]]></language>
-    </name>  
-    <markdowncontent><![CDATA[Processes new pending records across target modules using LLM prompts to generate outlines and summaries.]]></markdowncontent>
-    <llmprompt> 
-      <language id="en"><![CDATA[Create a brief outline about ${data.longcaption}. 
-	         For each outline topic, create a summary with a header, and paragraphs + lists (where necessary). 
-	         Provide examples if applicable.]]></language> 
-    </llmprompt> 
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_processpendingrecords
+description: Runs the Smart Creator pipeline for every record waiting to be generated.
+---
+
+# Smart Creator: Process Pending Records
+
+Runs the Smart Creator pipeline for every record waiting to be generated.
+
+## When to use
+
+- Scheduled batch generation of articles or tutorials.
+
+## How it works
+
+1. For each module in the row's `searchtypes`, finds records with `processingstatus=new`.
+2. Sets each one as the current entity with fresh Smart Creator steps and runs the children (outline, sections, questions, render).
+3. Marks the record `processingstatus=complete`.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `searchtypes`: Modules to process
+- `llmprompt`: Prompt template filled in for each record
+
+## Outputs
+
+- Generated content for each pending record, saved as complete
+
+## Implementation
+
+- Bean `smartCreatorProcessPendingSkill`: `org.entermediadb.ai.skills.SmartCreatorProcessPendingSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="smartcreator_findmemory" bean="smartCreatorFindMemoryFilesSkill" agenttype="taskagent" ordering="20"> 
     <name> 
@@ -25,8 +113,55 @@
       <language id="de"><![CDATA[Smart Creator: Erinnerung finden]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : retrouvez la mémoire]]></language>
       <language id="es"><![CDATA[Creador inteligente: encuentra la memoria]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Finds embedded memory files and reference documents relevant to the entity being created.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_findmemory
+description: Gathers the embedded source documents the Smart Creator should write from.
+---
+
+# Smart Creator: Find Memory
+
+Gathers the embedded source documents the Smart Creator should write from.
+
+## When to use
+
+- Before creating an outline.
+
+## How it works
+
+1. Collects the current entity's own embedded documents.
+2. Unless `skipcategorysearch` is true, adds embedded records that share the entity's search categories.
+3. Stores the ids as the embedded parent ids. Logs an error if there are none.
+
+## Inputs
+
+- `currententity`: The entity being written about
+- `currententitymodule`: Its module
+- `skipcategorysearch`: true to use only the entity's own documents
+
+## Outputs
+
+- The embedded parent ids on the Smart Creator steps
+
+## Implementation
+
+- Bean `smartCreatorFindMemoryFilesSkill`: `org.entermediadb.ai.skills.SmartCreatorFindMemoryFilesSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"currententity",
+"description":"The entity being written about"
+},
+{
+"id":"currententitymodule",
+"description":"Its module"
+},
+{
+"id":"skipcategorysearch",
+"description":"true to use only the entity's own documents"
+}
+]]]></parameters>
   </data>  
   <data id="smartCreatorParseUserPromptSkill" bean="smartCreatorParseUserPromptSkill" contextbean="chatMessageContext" agenttype="taskagent" ordering="20"> 
     <name> 
@@ -34,8 +169,50 @@
       <language id="de"><![CDATA[Intelligenter Schöpfer: Analysieren Sie den Benutzer-Prompt]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : analysez la demande de l'utilisateur]]></language>
       <language id="es"><![CDATA[Creador inteligente: Análisis del prompt del usuario]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Parses user creation prompts into structured outline components and instructions.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartCreatorParseUserPromptSkill
+description: Turns the user's creation request into structured Smart Creator instructions.
+---
+
+# Smart Creator: Parse User Prompt
+
+Turns the user's creation request into structured Smart Creator instructions.
+
+## When to use
+
+- After the user describes what they want created.
+
+## How it works
+
+1. Reads the user message this step replies to and stores it as `creationprompt`.
+2. Calls the `smartcreator_parse` structure and loads the result into the Smart Creator steps (title, outline prompt, content prompt).
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `creationprompt` and the parsed Smart Creator instructions
+
+## Implementation
+
+- Bean `smartCreatorParseUserPromptSkill`: `org.entermediadb.ai.skills.SmartCreatorParseUserPromptSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+}
+]]]></parameters>
   </data>  
   <data id="smartcreator_createoutline" bean="smartCreatorCreateOutlineSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -43,8 +220,45 @@
       <language id="de"><![CDATA[Intelligenter Schöpfer: Gliederung erstellen]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : créez un plan]]></language>
       <language id="es"><![CDATA[Creador inteligente: Crear esquema]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates a structured section outline for new content using embedding knowledge and user prompts.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_createoutline
+description: Drafts a section outline from the source documents.
+---
+
+# Smart Creator: Create Outline
+
+Drafts a section outline from the source documents.
+
+## When to use
+
+- After the source documents have been found.
+
+## How it works
+
+1. Sends the outline prompt and the embedded parent ids to the embedding server's `/create_outline`.
+2. Strips numbering such as `1.`, `A.` and `IV.` from each section title.
+3. Saves them as the proposed sections and runs the children.
+
+## Inputs
+
+- `aismartcreatorsteps`: Smart Creator steps holding the outline prompt and source document ids
+
+## Outputs
+
+- `proposedoutline`
+
+## Implementation
+
+- Bean `smartCreatorCreateOutlineSkill`: `org.entermediadb.ai.skills.SmartCreatorCreateOutlineSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"aismartcreatorsteps",
+"description":"Smart Creator steps holding the outline prompt and source document ids"
+}
+]]]></parameters>
   </data>  
   <data id="chatSmartCreatorConfirmationSkill" bean="chatSmartCreatorConfirmationSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10"> 
     <name> 
@@ -52,8 +266,66 @@
       <language id="de"><![CDATA[Bestätigung des Smart Creator]]></language>
       <language id="fr"><![CDATA[Confirmation du Créateur intelligent]]></language>
       <language id="es"><![CDATA[Confirmación de Smart Creator]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Interactively presents proposed outlines to users in chat and refines them based on user feedback.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatSmartCreatorConfirmationSkill
+description: Applies the user's feedback to the proposed outline, or creates the content record when the user confirms it.
+---
+
+# Smart Creator Confirmation
+
+Applies the user's feedback to the proposed outline, or creates the content record when the user confirms it.
+
+## When to use
+
+- After the outline has been shown to the user.
+
+## How it works
+
+1. Sends the user's reply and the proposed outline to the `smartcreator_confirmoutline` structure.
+2. If the outline changed, shows it again (`chat_smartcreator_renderoutline`).
+3. Otherwise creates the target record, saves one `componentsection` per heading (intro, body, conclusion), and runs the children.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- `aismartcreatorsteps`: Smart Creator steps with the proposed outline
+- `entityid`: Source entity id
+- `entitymoduleid`: Source module id
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `changed`, `proposedoutline`, `playbackentity`, `playbackentitymodule`, and new `componentsection` records
+
+## Implementation
+
+- Bean `chatSmartCreatorConfirmationSkill`: `org.entermediadb.ai.skills.ChatSmartCreatorConfirmationSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+},
+{
+"id":"aismartcreatorsteps",
+"description":"Smart Creator steps with the proposed outline"
+},
+{
+"id":"entityid",
+"description":"Source entity id"
+},
+{
+"id":"entitymoduleid",
+"description":"Source module id"
+}
+]]]></parameters>
   </data>  
   <data id="smartcreator_createsections" bean="smartCreatorMakeSectionsSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -61,8 +333,55 @@
       <language id="de"><![CDATA[Intelligenter Schöpfer: Abschnitte erstellen]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : créer des sections]]></language>
       <language id="es"><![CDATA[Creador inteligente: Crear secciones]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Generates detailed markdown content for each confirmed section using embedded knowledge.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_createsections
+description: Writes the content of every confirmed section from the entity's embedded documents.
+---
+
+# Smart Creator: Create Sections
+
+Writes the content of every confirmed section from the entity's embedded documents.
+
+## When to use
+
+- After the outline is confirmed.
+
+## How it works
+
+1. For each confirmed section, asks the embedding server's `/query` for content using the section name and the content prompt.
+2. Splits the markdown answer into heading and paragraph blocks, adding the section name as a heading if missing.
+3. Saves the blocks as `componentcontent` records, in groups of 5.
+
+## Inputs
+
+- `currententity`: The source entity
+- `currententitymodule`: Its module
+- `aismartcreatorsteps`: Smart Creator steps with the confirmed sections and content prompt
+
+## Outputs
+
+- New `componentcontent` records
+
+## Implementation
+
+- Bean `smartCreatorMakeSectionsSkill`: `org.entermediadb.ai.skills.SmartCreatorMakeSectionsSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"currententity",
+"description":"The source entity"
+},
+{
+"id":"currententitymodule",
+"description":"Its module"
+},
+{
+"id":"aismartcreatorsteps",
+"description":"Smart Creator steps with the confirmed sections and content prompt"
+}
+]]]></parameters>
   </data>  
   <data id="smartcreator_createquestions" bean="smartCreatorCreateQuestionsSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -70,12 +389,95 @@
       <language id="de"><![CDATA[Smart Creator: Fragen erstellen]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : créez des questions]]></language>
       <language id="es"><![CDATA[Creador inteligente: Crea preguntas]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Automatically creates multiple-choice questions with answer keys from generated section content.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_createquestions
+description: Creates multiple-choice quiz questions for each section of generated content.
+---
+
+# Smart Creator: Create Questions
+
+Creates multiple-choice quiz questions for each section of generated content.
+
+## When to use
+
+- After sections are written, for tutorials that include quizzes.
+
+## How it works
+
+1. For each section of the target record, joins its text components into `contextcontent`.
+2. Calls the `smartcreator_questions` structure. Each question needs at least four choices and a valid correct answer.
+3. Saves each question as an `entityquestion` and adds an `mcq` component to the section.
+
+## Inputs
+
+- `playbackentitymoduleid`: Module of the generated content
+- `playbackentityid`: Id of the generated content
+
+## Outputs
+
+- New `entityquestion` records and `mcq` components
+
+## Implementation
+
+- Bean `smartCreatorCreateQuestionsSkill`: `org.entermediadb.ai.skills.SmartCreatorCreateQuestionsSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"playbackentitymoduleid",
+"description":"Module of the generated content"
+},
+{
+"id":"playbackentityid",
+"description":"Id of the generated content"
+}
+]]]></parameters>
   </data>  
   <data id="smartCreatorRenderFinishedOutlineSkill" bean="smartCreatorRenderFinishedOutlineSkill" contextbean="chatMessageContext" agenttype="remoteagent" ordering="10"> 
-    <name> <![CDATA[Smart Creator Render Finished Outline]]> </name> 
-    <markdowncontent><![CDATA[Renders completed outline and sections into a finalized template preview in chat.]]></markdowncontent>
+    <name> <![CDATA[Smart Creator Render Finished Outline]]> </name>
+    <markdowncontent><![CDATA[---
+name: smartCreatorRenderFinishedOutlineSkill
+description: Shows the user the finished outline and a link to the created content.
+---
+
+# Smart Creator Render Finished Outline
+
+Shows the user the finished outline and a link to the created content.
+
+## When to use
+
+- After the content has been generated.
+
+## How it works
+
+1. Renders `chat_smartcreator_renderfinishedoutline` with the confirmed sections and the target record.
+
+## Inputs
+
+- `aismartcreatorsteps`: Smart Creator steps with the confirmed sections and target record
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `confirmedoutline`, `playbackentity`, `playbackentitymodule`, and the rendered response
+
+## Implementation
+
+- Bean `smartCreatorRenderFinishedOutlineSkill`: `org.entermediadb.ai.skills.SmartCreatorRenderFinishedOutlineSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"aismartcreatorsteps",
+"description":"Smart Creator steps with the confirmed sections and target record"
+}
+]]]></parameters>
   </data>  
   <data id="smartcreator_renderasset" bean="smartCreatorRenderAssetSkill" enabled="true" agenttype="taskagent" ordering="10"> 
     <name> 
@@ -83,7 +485,53 @@
       <language id="de"><![CDATA[Intelligenter Schöpfer: HTML rendern]]></language>
       <language id="fr"><![CDATA[Créateur intelligent : Afficher du HTML]]></language>
       <language id="es"><![CDATA[Creador inteligente: Render HTML]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Renders generated entity content into HTML and exports it as a published media asset.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: smartcreator_renderasset
+description: Renders the current Smart Creator record to HTML and saves it as an asset.
+---
+
+# Smart Creator: Render Html
+
+Renders the current Smart Creator record to HTML and saves it as an asset.
+
+## When to use
+
+- Publishing generated content as a downloadable or shareable HTML file.
+
+## How it works
+
+1. If there is a current entity, renders it to HTML with SmartCreatorPlaybackSkill using `triggersiteroot` as the CDN prefix.
+2. Saves the HTML as `<name>.html` in the entity's upload folder, then runs the children.
+
+## Inputs
+
+- `currententity`: The record to render
+- `currententitymodule`: Its module
+- `triggersiteroot`: Site root used for links in the HTML
+
+## Outputs
+
+- A new HTML asset linked to the record
+
+## Implementation
+
+- Bean `smartCreatorRenderAssetSkill`: `org.entermediadb.ai.skills.SmartCreatorRenderAssetSkill`
+- Agent type: `taskagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"currententity",
+"description":"The record to render"
+},
+{
+"id":"currententitymodule",
+"description":"Its module"
+},
+{
+"id":"triggersiteroot",
+"description":"Site root used for links in the HTML"
+}
+]]]></parameters>
   </data> 
 </records>

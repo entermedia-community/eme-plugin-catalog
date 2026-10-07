@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+   <data id="search_media_searching" aiskill="searchingChatSkill" automationscenario="search_media" enabled="true" agenttype="eventagent">
+      <name>
+         <![CDATA[Search for Media]]>
+      </name>
+   </data>
+</records>

@@ -79,4 +79,11 @@
     </name>
     <markdowncontent><![CDATA[Image creation based on user prompts.]]></markdowncontent>
   </data>
+
+    <data id="task_creation" ordering="56" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Goal/Task Creation]]></language>      
+    </name> 
+    <markdowncontent><![CDATA[Monitors project goals and task triggers to automatically generate actionable tasks, assign resources, and create dedicated collaboration channels.]]></markdowncontent>
+  </data> 
 </records>

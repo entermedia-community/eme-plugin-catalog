@@ -7,7 +7,46 @@
       <language id="de"><![CDATA[MCP: General Customer]]></language>
       <language id="fr"><![CDATA[CCP : Client général]]></language>
       <language id="es"><![CDATA[MCP: Cliente general]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Connects to Model Context Protocol (MCP) servers to discover tools and execute remote MCP tool calls.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: mcpclientagent
+description: Calls a tool on a remote Model Context Protocol (MCP) server.
+---
+
+# MCP: General Client
+
+Calls a tool on a remote Model Context Protocol (MCP) server.
+
+## When to use
+
+- A scenario needs a capability exposed by an external MCP server.
+
+## How it works
+
+1. Meant to load the `aiservers` record named by `aiserver` to get the server URL and API key.
+2. Calls the MCP tool named in `runoperation`, passing the agent context, then runs the children.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `aiserver`: Id of the `aiservers` record for the MCP server
+- `runoperation`: Name of the MCP tool to call
+
+## Notes
+
+- No Spring bean named `mcpClientAgent` is registered in plugin.xml, so this skill cannot run yet. The closest implementation is `McpClientSkill`.
+
+## Implementation
+
+- Bean `mcpClientAgent`: not registered
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data> 
 </results>

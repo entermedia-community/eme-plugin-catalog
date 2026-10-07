@@ -24,13 +24,6 @@
       <language id="fr"><![CDATA[Instructions]]></language>
       <language id="es"><![CDATA[Instrucciones]]></language>
     </name>
-   editable="true" note="Prompt used for LLM interaction" > 
-    <name> 
-      <language id="de"><![CDATA[Anweisungen]]></language>  
-      <language id="en"><![CDATA[Instructions]]></language>  
-      <language id="es"><![CDATA[Instrucciones]]></language>  
-      <language id="fr"><![CDATA[Instructions]]></language> 
-    </name> 
   </property>  
   <property id="agenttype" rendermask="${data.aiskill.agenttype.id}" index="true" editable="true" stored="true" type="list"> 
     <name> 
@@ -56,14 +49,7 @@
       <language id="es"><![CDATA[Agente Color]]></language>
     </name> 
   </property>  
-  <property id="skilloverview" editable="true" rendermask="${data.aiskill.skilloverview}" indextype="not_analyzed" index="true" stored="true" multilanguage="true"> 
-    <name> 
-      <language id="en"><![CDATA[Skill Overview]]></language>  
-      <language id="de"><![CDATA[Fähigkeitenübersicht]]></language>
-      <language id="fr"><![CDATA[Vue d'ensemble des compétences]]></language>
-      <language id="es"><![CDATA[Descripción general de las competencias]]></language>
-    </name> 
-  </property>  
+ 
   <!-- The module action, or script path or ai message function -->  
   <property id="runoperation" editable="true" indextype="not_analyzed" index="true" stored="true"> 
     <name> 
@@ -127,14 +113,6 @@
       <language id="de"><![CDATA[Nachjagen]]></language>
       <language id="fr"><![CDATA[Cours après.]]></language>
       <language id="es"><![CDATA[Perseguir]]></language>
-    </name> 
-  </property>  
-  <property id="parameterstructure" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="json"> 
-    <name> 
-      <language id="en"><![CDATA[Output Structure]]></language>  
-      <language id="de"><![CDATA[Ausgangsstruktur]]></language>
-      <language id="fr"><![CDATA[Structure des résultats]]></language>
-      <language id="es"><![CDATA[Estructura de producción]]></language>
     </name> 
   </property>  
   <property id="contextvalues" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="json" rendermask="${data.aiskill.contextvalues}"> 

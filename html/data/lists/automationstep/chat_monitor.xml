@@ -18,6 +18,12 @@
       </name>
    </data>
    
+   <data id="chatMonitorConfirmation" aiskill="chatMonitorConfirmationSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Confirming" >
+      <name>
+         <![CDATA[Send Confirmation]]>
+      </name>
+   </data>
+
     <data id="chatMonitorResponse" aiskill="chatMonitorResponseSkill" automationscenario="chat_detection" enabled="true" agenttype="eventagent" processingmessage="Orchestrating" runafter="chatMonitor" >
       <name>
          <![CDATA[Orchestrator]]>

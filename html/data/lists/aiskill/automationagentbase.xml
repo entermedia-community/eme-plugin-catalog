@@ -7,8 +7,39 @@
       <language id="de"><![CDATA[Programmatische Wenn-Prüfung]]></language>
       <language id="fr"><![CDATA[Vérification conditionnelle]]></language>
       <language id="es"><![CDATA[Comprobación condicional programática]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Evaluates programmatic Java conditions and branching logic within automation scenarios.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: javaifcheck
+description: Branches a scenario on a programmatic (Java) condition.
+---
+
+# Programmatic If Check
+
+Branches a scenario on a programmatic (Java) condition.
+
+## When to use
+
+- A scenario must choose its next step from a fixed rule rather than an LLM decision.
+
+## How it works
+
+1. Meant to evaluate a condition and run only the child steps whose branch matches.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Notes
+
+- No Spring bean named `javaLogicAgent` is registered in plugin.xml, so this skill cannot run yet.
+
+## Implementation
+
+- Bean `javaLogicAgent`: not registered
+- Agent type: `logicagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="toolifcheck" bean="llmToolAgent" enabled="true" ordering="10" agenttype="logicagent"> 
     <name> 
@@ -16,8 +47,41 @@
       <language id="de"><![CDATA[LLM-Check]]></language>
       <language id="fr"><![CDATA[LLM : Vérifier]]></language>
       <language id="es"><![CDATA[LLM Si Comprobar]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Evaluates dynamic branching conditions and tool selection rules using LLM decision logic.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: toolifcheck
+description: Branches a scenario by asking the LLM which child step to run and with which arguments.
+---
+
+# LLm If Check
+
+Branches a scenario by asking the LLM which child step to run and with which arguments.
+
+## When to use
+
+- The next step depends on understanding free text, such as routing an email or chat message.
+
+## How it works
+
+1. Meant to work like ToolsCallingSkill: each child step's `parameterstructure` becomes a tool definition.
+2. With one child, the LLM (`agentparams`) fills in its parameters. With several, the LLM (`agentdecision`) picks one.
+3. The chosen child runs with the arguments the LLM returned.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Notes
+
+- No Spring bean named `llmToolAgent` is registered in plugin.xml, so this skill cannot run yet. The closest implementation is `ToolsCallingSkill`.
+
+## Implementation
+
+- Bean `llmToolAgent`: not registered
+- Agent type: `logicagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="copyWebRequest" bean="copyWebRequestAgent" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -25,8 +89,39 @@
       <language id="de"><![CDATA[Webanfrage bearbeiten]]></language>
       <language id="fr"><![CDATA[Gérer une requête Web]]></language>
       <language id="es"><![CDATA[Gestión de solicitudes web]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Copies parameters, user profile, and session context from the active web request into the agent context.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: copyWebRequest
+description: Copies parameters, user profile and session values from the current web request into the agent context.
+---
+
+# Handle Web Request
+
+Copies parameters, user profile and session values from the current web request into the agent context.
+
+## When to use
+
+- A scenario started from a web page needs the request values available to later steps.
+
+## How it works
+
+1. Meant to copy the request's parameters and user into the context. `handleWebEventSkill` does this today.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Notes
+
+- No Spring bean named `copyWebRequestAgent` is registered in plugin.xml, so this skill cannot run yet. The closest implementation is `HandleWebEventSkill (bean handleWebEventSkill)`.
+
+## Implementation
+
+- Bean `copyWebRequestAgent`: not registered
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="runEventSkill" bean="runEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -34,8 +129,51 @@
       <language id="de"><![CDATA[Veranstaltung ausführen]]></language>
       <language id="fr"><![CDATA[Événement d'exécution]]></language>
       <language id="es"><![CDATA[Ejecutar el evento]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Runs a configured path event within the current catalog and propagates agent execution context.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: runEventSkill
+description: Runs a catalog path event (/<catalogid>/events/<runoperation>.html) in the current thread and waits for it to finish.
+---
+
+# Run Event
+
+Runs a catalog path event (`/<catalogid>/events/<runoperation>.html`) in the current thread and waits for it to finish.
+
+## When to use
+
+- A scenario needs to run an existing path event as one of its steps, with the agent context available to it.
+
+## How it works
+
+1. Reads `runoperation` from this skill row.
+2. Copies the `webpagerequest` from the context into a new request and puts the agent context on it as `currentagentcontext`.
+3. Runs the event through PathEventManager and blocks until it finishes, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request whose parameters and user are passed to the event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: Event path relative to the catalog's `events` folder, e.g. `conversions/runconversions`
+
+## Outputs
+
+- Whatever the event's actions or scripts produce. `webpagerequest` is replaced with the request the event ran with
+
+## Implementation
+
+- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request whose parameters and user are passed to the event"
+}
+]]]></parameters>
   </data>  
   <data id="runSharedEventSkill" bean="runSharedEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -43,8 +181,51 @@
       <language id="de"><![CDATA[Veranstaltung im Thread ausführen]]></language>
       <language id="fr"><![CDATA[Exécuter l'événement dans le thread]]></language>
       <language id="es"><![CDATA[Ejecutar el evento en un hilo]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Runs a shared path event asynchronously across threads and catalog scopes.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: runSharedEventSkill
+description: Queues a catalog path event to run in the background, at most one copy at a time.
+---
+
+# Run Event In Thread
+
+Queues a catalog path event to run in the background, at most one copy at a time.
+
+## When to use
+
+- The event is long-running or may be triggered often, and the scenario should not wait for it.
+
+## How it works
+
+1. Reads `runoperation` from this skill row.
+2. Calls `runSharedPathEvent`. If the same event is already queued or running it is flagged to run again soon instead of starting a second copy.
+3. Runs the child steps right away without waiting for the event.
+
+## Inputs
+
+None. It does not read any values from the agent context.
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: Event path relative to the catalog's `events` folder, e.g. `publishing/publishassets`
+
+## Outputs
+
+- Whatever the event's actions or scripts produce, later in the background
+
+## Notes
+
+- The event does not receive the agent context or the web request.
+
+## Implementation
+
+- Bean `runSharedEventSkill`: `org.entermediadb.ai.skills.RunSharedEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
   </data>  
   <data id="runModuleSkill" bean="runModuleSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -52,8 +233,50 @@
       <language id="de"><![CDATA[Modulereignis ausführen]]></language>
       <language id="fr"><![CDATA[Exécuter l'événement du module]]></language>
       <language id="es"><![CDATA[Ejecutar el evento del módulo]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Dynamically invokes a module method or action using the module manager and current web request context.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: runModuleSkill
+description: Calls a module action (Module.method) directly through the ModuleManager.
+---
+
+# Run Module Event
+
+Calls a module action (`Module.method`) directly through the ModuleManager.
+
+## When to use
+
+- A scenario step should run one module method rather than a whole path event.
+
+## How it works
+
+1. Reads `runoperation` from this skill row and replaces the first `_` with `.`, so `EntityModule_handleAssetsImported` also works.
+2. Calls `ModuleManager.execute(operation, webpagerequest)`, then runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The web request passed to the module method
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `runoperation`: The module action to call, e.g. `EntityModule.handleAssetsImported`
+
+## Outputs
+
+- Whatever the module method puts on the request or saves
+
+## Implementation
+
+- Bean `runModuleSkill`: `org.entermediadb.ai.skills.RunModuleSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The web request passed to the module method"
+}
+]]]></parameters>
   </data>  
   <data id="handleWebEventSkill" bean="handleWebEventSkill" enabled="true" agenttype="eventagent" ordering="10"> 
     <name> 
@@ -61,7 +284,60 @@
       <language id="de"><![CDATA[Webereignis verwalten]]></language>
       <language id="fr"><![CDATA[Gérer l'événement Web]]></language>
       <language id="es"><![CDATA[Gestionar el evento web]]></language>
-    </name> 
-    <markdowncontent><![CDATA[Handles incoming web events, binds entity module parameters to agent context, and routes execution to the next enabled skill step.]]></markdowncontent>
+    </name>
+    <markdowncontent><![CDATA[---
+name: handleWebEventSkill
+description: Copies an incoming web request into the agent context and optionally jumps to a named automation step.
+---
+
+# Handle Web Event
+
+Copies an incoming web request into the agent context and optionally jumps to a named automation step.
+
+## When to use
+
+- First step of a scenario that is started from a web page or form post.
+
+## How it works
+
+1. Copies every request parameter into the context.
+2. If no entity is set yet and `entitymoduleid` is posted, loads the entity and module and sets them as the current entity.
+3. Sets `triggersiteroot`, the user profile, and `nextautomationstep` from the request.
+4. If `nextautomationstep` is set, runs that step directly. Otherwise runs the child steps.
+
+## Inputs
+
+- `webpagerequest`: The incoming web request
+- `entitymoduleid`: Request parameter: module id of the entity to work on
+- `entityid`: Request parameter: id of the entity to work on
+- `nextautomationstep`: Request parameter: id of the automation step to jump to
+
+## Outputs
+
+- All request parameters, `triggersiteroot`, the current entity and module, and the user profile in the context
+
+## Implementation
+
+- Bean `handleWebEventSkill`: `org.entermediadb.ai.skills.HandleWebEventSkill`
+- Agent type: `eventagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"webpagerequest",
+"description":"The incoming web request"
+},
+{
+"id":"entitymoduleid",
+"description":"Request parameter: module id of the entity to work on"
+},
+{
+"id":"entityid",
+"description":"Request parameter: id of the entity to work on"
+},
+{
+"id":"nextautomationstep",
+"description":"Request parameter: id of the automation step to jump to"
+}
+]]]></parameters>
   </data> 
 </records>

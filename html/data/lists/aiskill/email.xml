@@ -4,14 +4,140 @@
     <name>
       <![CDATA[Process Email]]>
     </name>
-    <markdowncontent><![CDATA[Connects to an IMAP mailbox, fetches unread emails, and dispatches them to automated processing agents.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: process_email
+description: Reads unread emails from an IMAP inbox and runs the child steps once per message.
+---
+
+# Process Email
+
+Reads unread emails from an IMAP inbox and runs the child steps once per message.
+
+## When to use
+
+- A scenario should react to incoming email, such as a support mailbox.
+
+## How it works
+
+1. Connects to the IMAP server and loads unread inbox messages.
+2. For each message, sets from, subject, content and sentdate as the step parameters and runs the children (with LLM tool selection when there are several).
+3. Moves the processed messages to the in-progress folder.
+
+## Inputs
+
+- `mailserver`: IMAP server host
+- `mailport`: IMAP server port
+- `mailusername`: Mailbox user name
+- `mailpassword`: Mailbox password
+
+## Outputs
+
+- `newmessages`, `agentid`, `agentoutput`, and from/subject/content/sentdate for each child run
+
+## Implementation
+
+- Bean `imapMailCheckerSkill`: `org.entermediadb.ai.skills.ImapMailCheckerSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"mailserver",
+"description":"IMAP server host"
+},
+{
+"id":"mailport",
+"description":"IMAP server port"
+},
+{
+"id":"mailusername",
+"description":"Mailbox user name"
+},
+{
+"id":"mailpassword",
+"description":"Mailbox password"
+}
+]]]></parameters>
+
   </data>
 
   <data id="reply_email" bean="imapMailSenderSkill" agenttype="remoteagent" ordering="10">
     <name>
       <![CDATA[Reply to Email]]>
     </name>
-    <markdowncontent><![CDATA[Sends email responses via SMTP using configured server credentials and formatted response content.]]></markdowncontent>
+    <markdowncontent><![CDATA[---
+name: reply_email
+description: Sends a reply email over SMTP.
+---
+
+# Reply to Email
+
+Sends a reply email over SMTP.
+
+## When to use
+
+- Last step of an email workflow, once the reply text has been written.
+
+## How it works
+
+1. Stops with an error if `reply_body` is missing.
+2. Sends `reply_subject` and `reply_body` to `email` from `mailusername`, then runs the children.
+
+## Inputs
+
+- `mailserver`: SMTP server host
+- `mailport`: SMTP server port
+- `mailusername`: SMTP user name, also used as the From address
+- `mailpassword`: SMTP password
+- `ssl`: Use a secured connection
+- `email`: Recipient address
+- `reply_subject`: Subject of the reply
+- `reply_body`: Body of the reply
+
+## Outputs
+
+- The email is sent. The result is logged to the context
+
+## Implementation
+
+- Bean `imapMailSenderSkill`: `org.entermediadb.ai.skills.ImapMailSenderSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"mailserver",
+"description":"SMTP server host"
+},
+{
+"id":"mailport",
+"description":"SMTP server port"
+},
+{
+"id":"mailusername",
+"description":"SMTP user name, also used as the From address"
+},
+{
+"id":"mailpassword",
+"description":"SMTP password"
+},
+{
+"id":"ssl",
+"description":"Use a secured connection"
+},
+{
+"id":"email",
+"description":"Recipient address"
+},
+{
+"id":"reply_subject",
+"description":"Subject of the reply"
+},
+{
+"id":"reply_body",
+"description":"Body of the reply"
+}
+]]]></parameters>
+
+
   </data>
 
 
