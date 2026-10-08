@@ -1,0 +1,6 @@
+<properties>
+  <property id="rental">Rental</property>
+  <property id="rideshare">Ride Share</property>
+  <property id="groceryshop">Grocery Shop</property>
+  <property id="newsagency">News Agency</property>
+</properties>
