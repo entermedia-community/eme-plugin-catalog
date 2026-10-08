@@ -1,40 +1,40 @@
 <records>
 
 
-<data id="chat_opencode_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_opencode" enabled="true" processingmessage="Welcome..."> 
+<data id="chat_createjob_team_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_createjob_team" enabled="true" processingmessage="Welcome..."> 
     <name> 
       <language id="en"><![CDATA[OpenCode Harness]]></language>  
     </name> 
   </data>  
 
-    <data id="chat_openCodeUserRequest" aiskill="openCodeUserRequestSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="chat_opencode_welcome">
+    <data id="chat_createjob_teamUserRequest" aiskill="openCodeUserRequestSkill" automationscenario="chat_createjob_team" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="chat_createjob_team_welcome">
         <name>
            <![CDATA[Open Code User Request]]>
         </name>
      </data>
 
-    <data id="chat_openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Running Command"  runafter="chat_openCodeUserRequest">
+    <data id="chat_createjob_teamRunner" aiskill="openCodeRunnerSkill" automationscenario="chat_createjob_team" enabled="true" agenttype="eventagent" processingmessage="Running Command"  runafter="chat_createjob_teamUserRequest">
         <name>
            <![CDATA[Open Code Runner]]>
         </name>
      </data>
 
-<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the chat_openCodeUserRequest for the next command -->
+<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the chat_createjob_teamUserRequest for the next command -->
 
 
-    <data id="chat_opencode_markdown" aiskill="markdownToHtmlSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="chat_openCodeRunner" >
+    <data id="chat_createjob_team_markdown" aiskill="markdownToHtmlSkill" automationscenario="chat_createjob_team" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="chat_createjob_teamRunner" >
         <name>
            <![CDATA[Markdown Result to HTML]]>
         </name>
      </data>
 
-    <data id="chat_openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
+    <data id="chat_createjob_teamApprove" aiskill="openCodeApproveSkill" automationscenario="chat_createjob_team" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
         <name>
            <![CDATA[Open Code Approve]]>
         </name>
      </data>
 
-    <data id="chat_openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="chat_opencode" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+    <data id="chat_createjob_teamAnswer" aiskill="openCodeAnswerSkill" automationscenario="chat_createjob_team" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
         <name>
            <![CDATA[Open Code Answer]]>
         </name>

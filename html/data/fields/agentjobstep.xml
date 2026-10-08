@@ -23,12 +23,6 @@
     </name>
   </property>
 
-  <property id="ordering" index="true" stored="true" editable="true" type="number">
-    <name>
-      <language id="en">Ordering</language>
-    </name>
-  </property>
-
   <property id="aiskillid" index="true" stored="true" editable="true" type="list" listid="aiskill">
     <name>
       <language id="en">Skill</language>
@@ -103,6 +97,54 @@
   <property id="automationstep" index="true" stored="true" editable="true" type="list" listid="automationstep" note="The automation step this step was made from">
     <name>
       <language id="en">Automation Step</language>
+    </name>
+  </property>
+
+  <property id="name" index="true" stored="true" editable="true">
+    <name>
+      <language id="en">Name</language>
+    </name>
+  </property>
+
+  <property id="runafter" index="true" stored="true" editable="true" indextype="not_analyzed" note="The agentjobstep this step runs after">
+    <name>
+      <language id="en">Run After</language>
+    </name>
+  </property>
+
+  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed" editable="true" note="Copied from the automationstep">
+    <name>
+      <language id="en">LLM Prompt</language>
+    </name>
+  </property>
+
+  <property id="runoperation" index="true" stored="true" indextype="not_analyzed" editable="true">
+    <name>
+      <language id="en">Run Operation</language>
+    </name>
+  </property>
+
+  <property id="searchtypes" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="module">
+    <name>
+      <language id="en">Search Types</language>
+    </name>
+  </property>
+
+  <property id="contextvalues" index="true" stored="true" indextype="not_analyzed" editable="true" viewtype="json">
+    <name>
+      <language id="en">Context Values</language>
+    </name>
+  </property>
+
+  <property id="parameterstructure" index="true" stored="true" indextype="not_analyzed" editable="true">
+    <name>
+      <language id="en">Parameter Structure</language>
+    </name>
+  </property>
+
+  <property id="processingmessage" index="true" stored="true" editable="true">
+    <name>
+      <language id="en">Processing Message</language>
     </name>
   </property>
 

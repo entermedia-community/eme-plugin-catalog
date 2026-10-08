@@ -58,6 +58,12 @@
   <data id="chatlabel" posx="1784.15159952194" posy="1982.60452174756">
     <name/>
   </data>
+  <data id="teamchatlabel" posx="2198.4159952194" posy="1982.60452174756">
+    <name/>
+  </data>
+
+
+
   <data id="importinglabel" posx="1141.10338164251" posy="1428.95120772947">
     <name/>
   </data>
@@ -67,24 +73,28 @@
     <name/>
   </data>
 
-  <data id="customer_run_opencode" posx="1004.6960380563" posy="2300.0">
+  <data id="chat_createjob_server" posx="1004.6960380563" posy="2300.0">
     <name/>
   </data>
-  <data id="agentorchestrator" posx="1642.670220775686" posy="2376.375868054568">
+  
+  <data id="chat_createjob_entity" posx="1642.670220775686" posy="2376.375868054568">
+    <name/>
+  </data>
+
+
+  <data id="chat_createjob_entity" posx="1458.2050237549765" posy="2555.133542342118">
     <name/>
   </data>
 
 
-  <data id="chat_opencode" posx="1473.2050237549765" posy="2555.133542342118">
+  <data id="chat_createjob_team" posx="2473.2050237549765" posy="2555.133542342118">
     <name/>
   </data>
-
 
   <data id="emechat_goal_manager" posx="2724.65331364985" posy="2341.59799016255">
     <name/>
   </data>
   
-
 
   
 </root>

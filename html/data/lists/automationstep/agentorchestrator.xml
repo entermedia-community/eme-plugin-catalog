@@ -4,43 +4,43 @@
 <records>
 
 
-  <data id="agentorchestrator_welcome" aiskill="renderLocalTemplateSkill" automationscenario="agentorchestrator" enabled="true" processingmessage="Loading Job Creator"> 
+  <data id="chat_createjob_entity_welcome" aiskill="renderLocalTemplateSkill" automationscenario="chat_createjob_entity" enabled="true" processingmessage="Loading Job Creator"> 
     <name> 
       <language id="en"><![CDATA[Agent Job Welcome]]></language>  
     </name> 
   </data>  
 
-   <data id="agentJobCreator" aiskill="agentJobCreatorSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Calculating Steps" runafter="agentorchestrator_welcome" >
+   <data id="agentJobCreator" aiskill="openCodeJobCreatorSkill" automationscenario="chat_createjob_entity" enabled="true" agenttype="eventagent" processingmessage="Calculating Steps" runafter="chat_createjob_entity_welcome" >
       <name>
          <![CDATA[Job Creator]]>
       </name>
    </data>
 
-    <data id="agentJobStatus" aiskill="agentJobStatusSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Checking Job Status" runafter="agentJobCreator" >
+    <data id="agentJobStatus" aiskill="agentJobStatusSkill" automationscenario="chat_createjob_entity" enabled="true" agenttype="eventagent" processingmessage="Checking Job Status" runafter="agentJobCreator" >
        <name>
           <![CDATA[Agent Job Status]]>
        </name>
     </data>
 
-    <data id="markdownToHtml" aiskill="markdownToHtmlSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="agentJobStatus" >
+    <data id="markdownToHtml" aiskill="markdownToHtmlSkill" automationscenario="chat_createjob_entity" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="agentJobStatus" >
         <name>
            <![CDATA[Markdown to HTML]]>
         </name>
      </data>
 
-    <data id="openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Running Command" runafter="markdownToHtml" >
+    <data id="openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="chat_createjob_entity" enabled="true" agenttype="eventagent" processingmessage="Running Command" runafter="markdownToHtml" >
         <name>
            <![CDATA[Open Code Runner]]>
         </name>
      </data>
 
-    <data id="openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Sending Approval">
+    <data id="openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="chat_createjob_entity" enabled="true" agenttype="eventagent" processingmessage="Sending Approval">
         <name>
            <![CDATA[Open Code Approve]]>
         </name>
      </data>
 
-    <data id="openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="agentorchestrator" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+    <data id="openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="chat_createjob_entity" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
         <name>
            <![CDATA[Open Code Answer]]>
         </name>

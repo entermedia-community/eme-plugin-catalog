@@ -66,7 +66,7 @@ every other plugin (finder, community, profile, mediadb, ...) reads or extends. 
   which currently has no `.agents/` directory) run and in what order.
 - Don't hand-dump the whole `aiskill` table into an LLM prompt to let the model "see everything
   available" — it's already embedded/indexed for semantic search precisely so callers can retrieve
-  just the relevant few records instead. `plugins/finder/code/org/entermediadb/ai/skills/AgentJobCreatorSkill.java`
+  just the relevant few records instead. `plugins/finder/code/org/entermediadb/ai/skills/OpenCodeJobCreatorSkill.java`
   is the reference example: it calls `EmbeddingManager.callFindDocIds(...)` over doc ids prefixed
   `aiskill_<id>` (skills) and `automationscenario_<id>` (automations) to shortlist relevant records
   for a given goal. Note that same class's `loadSkillDocIds()` currently fetches the skill list via

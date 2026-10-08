@@ -11,9 +11,9 @@
     <markdowncontent><![CDATA[Helps customers find media by parsing natural language requests, searching the catalog, and presenting matching assets and records.]]></markdowncontent>
   </data>
 
- <data id="customer_run_opencode" ordering="57" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="true">
+ <data id="chat_createjob_server" ordering="57" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="true">
     <name> 
-      <language id="en"><![CDATA[Create OpenCode Jobs]]></language>
+      <language id="en"><![CDATA[Create Agent Jobs]]></language>
     </name> 
     <markdowncontent><![CDATA[Analyzes customer requests and conversation context to match appropriate automation skills and schedule background AI agent jobs on the customer's behalf.]]></markdowncontent>
   </data>  

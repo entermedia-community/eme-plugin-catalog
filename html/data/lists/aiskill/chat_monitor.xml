@@ -131,7 +131,7 @@ Reads each new team chat message, asks the LLM whether and how the assistant sho
 ## How it works
 
 1. Loads the user message this step is replying to and stores it as `userquery`.
-2. Calls the `chat_helper` tools function on the thinking LLM.
+2. Calls the `library_collection_chat_monitor` tools function on the thinking LLM.
 3. Stores the result as `pendingstructuredresponse` and the message as `pendinglastmessage`.
 4. Waits `priority_timeline` minutes (0–5) and then runs `chatMonitorConfirmation`. Nothing is shown right away.
 
@@ -151,7 +151,7 @@ Attributes set on this skill row:
 
 ## Implementation
 
-- Bean `chatMonitorSkill`: `org.entermediadb.ai.skills.ChatMonitorSkill`
+- Bean `chatMonitorSkill`: `org.entermediadb.ai.skills.LibraryCollectionChatMonitorSkill`
 - Agent type: `remoteagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
@@ -176,7 +176,7 @@ After the monitor's wait, posts the assistant's suggestion unless the team has k
 
 ## When to use
 
-- Runs after ChatMonitorSkill's wait.
+- Runs after LibraryCollectionChatMonitorSkill's wait.
 
 ## How it works
 
@@ -275,7 +275,7 @@ Attributes set on this skill row:
 ]]]></parameters>
   </data>  
 
-  <data id="agentJobCreatorSkill" bean="agentJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+  <data id="openCodeJobCreatorSkill" bean="openCodeJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
     <name>
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
       <language id="de"><![CDATA[Agentenaufgaben erstellen]]></language>
@@ -283,7 +283,7 @@ Attributes set on this skill row:
       <language id="es"><![CDATA[Crear trabajos de agente]]></language>
     </name>
     <markdowncontent><![CDATA[---
-name: agentJobCreatorSkill
+name: openCodeJobCreatorSkill
 description: Plans a multi-step agent job from a user request by choosing among the documented skills and scenarios.
 ---
 
@@ -324,7 +324,7 @@ Attributes set on this skill row:
 
 ## Implementation
 
-- Bean `agentJobCreatorSkill`: `org.entermediadb.ai.skills.AgentJobCreatorSkill`
+- Bean `openCodeJobCreatorSkill`: `org.entermediadb.ai.skills.OpenCodeJobCreatorSkill`
 - Agent type: `remoteagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
