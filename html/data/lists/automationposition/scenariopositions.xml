@@ -97,4 +97,16 @@
   
 
   
+  <data id="welcome_menu_customerservicelabel" posx="700.0" posy="2300.0">
+    <name/>
+  </data>
+
+  <data id="welcome_menu_chatlabel" posx="1784.15159952194" posy="2100.0">
+    <name/>
+  </data>
+
+  <data id="welcome_menu_teamchatlabel" posx="2198.4159952194" posy="2100.0">
+    <name/>
+  </data>
+
 </root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+
+  <data id="welcome_menu_customerservicelabel_welcome" aiskill="welcomeMenuSkill" automationscenario="welcome_menu_customerservicelabel" enabled="true" agenttype="eventagent" processingmessage="Welcome">
+    <name>
+      <![CDATA[Welcome Menu]]>
+    </name>
+  </data>
+
+  <data id="welcome_menu_chatlabel_welcome" aiskill="welcomeMenuSkill" automationscenario="welcome_menu_chatlabel" enabled="true" agenttype="eventagent" processingmessage="Welcome">
+    <name>
+      <![CDATA[Welcome Menu]]>
+    </name>
+  </data>
+
+  <data id="welcome_menu_teamchatlabel_welcome" aiskill="welcomeMenuSkill" automationscenario="welcome_menu_teamchatlabel" enabled="true" agenttype="eventagent" processingmessage="Welcome">
+    <name>
+      <![CDATA[Welcome Menu]]>
+    </name>
+  </data>
+
+</records>

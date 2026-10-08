@@ -61,4 +61,11 @@
     </name> 
     <markdowncontent><![CDATA[Monitors project goals and task triggers to automatically generate actionable tasks, assign resources, and create dedicated collaboration channels.]]></markdowncontent>
   </data> 
+
+  <data id="welcome_menu_chatlabel" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="chatlabel" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Welcome Menu]]></language>
+    </name>
+    <markdowncontent><![CDATA[Greets the user and shows a menu of the Entity Chat chat scenarios to choose from.]]></markdowncontent>
+  </data>
 </records>

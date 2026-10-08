@@ -25,4 +25,11 @@
     </name> 
     <markdowncontent><![CDATA[Analyzes chat discussions to extract project objectives, automatically creating structured goals, breakdown tasks, and assigning team members within project workspaces.]]></markdowncontent>
   </data>  
+
+  <data id="welcome_menu_teamchatlabel" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="teamchatlabel" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Welcome Menu]]></language>
+    </name>
+    <markdowncontent><![CDATA[Greets the user and shows a menu of the Team Chat chat scenarios to choose from.]]></markdowncontent>
+  </data>
 </records>

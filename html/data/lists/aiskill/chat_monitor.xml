@@ -57,6 +57,39 @@ Attributes set on this skill row:
 }
 ]]]></parameters>
   </data>  
+  <data id="welcomeMenuSkill" bean="welcomeMenuSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Welcome Menu]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: welcomeMenuSkill
+description: Shows a welcome menu listing the chat scenarios under the same automation label as the running scenario.
+---
+
+# Welcome Menu
+
+Shows a welcome menu listing the chat scenarios under the same automation label as the running scenario.
+
+## When to use
+
+- The `<scenarioid>_welcome` step of a `welcome_menu_<labelid>` scenario.
+
+## How it works
+
+1. Reads `connectedtop` (the automationlabel id) from the running scenario.
+2. Finds enabled, visible, chat-enabled scenarios with the same `connectedtop`, sorted by `ordering`, excluding itself.
+3. Renders the `welcome_menu` template with `menuscenarios` and `menulabel`.
+
+## Outputs
+
+- The rendered menu response, `menuscenarios` and `menulabel`
+
+## Implementation
+
+- Bean `welcomeMenuSkill`: `org.entermediadb.ai.skills.WelcomeMenuSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+  </data>
   <data id="renderLocalTemplateSkill" bean="renderLocalTemplateSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Render Local Template]]></language>  

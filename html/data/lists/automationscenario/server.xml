@@ -18,4 +18,11 @@
     <markdowncontent><![CDATA[Analyzes customer requests and conversation context to match appropriate automation skills and schedule background AI agent jobs on the customer's behalf.]]></markdowncontent>
   </data>  
 
+
+  <data id="welcome_menu_customerservicelabel" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="customerservicelabel" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Welcome Menu]]></language>
+    </name>
+    <markdowncontent><![CDATA[Greets the user and shows a menu of the Server Chat chat scenarios to choose from.]]></markdowncontent>
+  </data>
 </records>
