@@ -4,7 +4,7 @@
   <data id="asset_processing" posx="998.407787011291" posy="1830.12193535934"> 
     <name/> 
   </data>  
-  <data id="chat_smartcreator" posx="2439.98096623442" posy="2504.12229116623"> 
+  <data id="chat_smartcreator" posx="1354.75171845458" posy="2243.19459553044"> 
     <name/> 
   </data>  
   <data id="chat_searching" posx="2135.94612925181" posy="2579.36207415973"> 
@@ -31,7 +31,7 @@
   <data id="informatics_translate" posx="1364.17331534985" posy="1615.38093504325"> 
     <name/> 
   </data>  
-  <data id="smartcreator_publish" posx="2719.5994438544" posy="1665.29947500066"> 
+  <data id="smartcreator_publish" posx="2819.5994438544" posy="1665.29947500066"> 
     <name/> 
   </data>  
   <data id="informatics" posx="1252.48448145191" posy="1895.29363039042"> 
@@ -69,7 +69,7 @@
   </data>
   
 
-  <data id="chat_detection" posx="1354.75171845458" posy="2243.19459553044">
+  <data id="chat_detection"  posx="2239.98096623442" posy="2304.12229116623" >
     <name/>
   </data>
 
