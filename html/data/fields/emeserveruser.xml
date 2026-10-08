@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+  <property id="id" index="true" stored="true" keyword="true" internalfield="true" editable="true">
+    ID <name>
+      <language id="de"><![CDATA[Ich würde]]></language>
+      <language id="en"><![CDATA[ID]]></language>
+      <language id="es"><![CDATA[identificación]]></language>
+      <language id="fr"><![CDATA[ID]]></language>
+    </name>
+  </property>
+
+  <property id="user" index="true" stored="true" editable="false" type="list">
+    <name>
+      <language id="de"><![CDATA[Benutzer]]></language>
+      <language id="en"><![CDATA[User]]></language>
+      <language id="es"><![CDATA[Usuario]]></language>
+      <language id="fr"><![CDATA[Utilisateur]]></language>
+    </name>
+  </property>
+
+  <property id="emeserver" index="true" stored="true" editable="false" type="list">
+    <name>
+      <language id="de"><![CDATA[EME Server]]></language>
+      <language id="en"><![CDATA[EME Server]]></language>
+      <language id="es"><![CDATA[EME Server]]></language>
+      <language id="fr"><![CDATA[EME Server]]></language>
+    </name>
+  </property>
+
+  <property id="joined" index="true" stored="true" editable="false" type="date">
+    <name>
+      <language id="de"><![CDATA[Beigetreten]]></language>
+      <language id="en"><![CDATA[Joined]]></language>
+      <language id="es"><![CDATA[Unido]]></language>
+      <language id="fr"><![CDATA[Rejoint]]></language>
+    </name>
+  </property>
+
+  <property id="lastnotification" index="true" stored="true">
+    <name>
+      <language id="de"><![CDATA[Letzte Benachrichtigung]]></language>
+      <language id="en"><![CDATA[Last Notification]]></language>
+      <language id="es"><![CDATA[Última notificación]]></language>
+      <language id="fr"><![CDATA[Dernière notification]]></language>
+    </name>
+  </property>
+
+  <property id="lastnotificationtime" index="true" stored="true" editable="false" type="date">
+    <name>
+      <language id="de"><![CDATA[Letzte Benachrichtigungszeit]]></language>
+      <language id="en"><![CDATA[Last Notification Time]]></language>
+      <language id="es"><![CDATA[Hora de la última notificación]]></language>
+      <language id="fr"><![CDATA[Heure de la dernière notification]]></language>
+    </name>
+  </property>
+</properties>
