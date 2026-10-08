@@ -36,7 +36,7 @@
     </name>
     <markdowncontent><![CDATA[Provides an interactive conversational assistant for Smart Creator that parses prompts, retrieves reference memory from vector embeddings, generates structured outlines, refines sections with user confirmation, and renders finalized content templates.]]></markdowncontent>
   </data>
-  <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false"  connectedtop="chatlabel">
+  <data id="chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true"  connectedtop="customerservicelabel">
     <name>
       <language id="en"><![CDATA[Tutor Chat]]></language>
       <language id="de"><![CDATA[Tutor-Chat]]></language>

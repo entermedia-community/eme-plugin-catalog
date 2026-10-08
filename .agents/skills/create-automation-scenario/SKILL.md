@@ -24,7 +24,7 @@ Read `automationlabel/scenariolabels.xml`. Current labels:
 
 | Label id | Text on map | Scenario file | Used by |
 |---|---|---|---|
-| `customerservicelabel` | Server Chat | `automationscenario/server.xml` | Server-wide/customer chat (MCP, `chat_createjob_server`) |
+| `customerservicelabel` | EME Chat | `automationscenario/server.xml` | Server-wide/customer chat (MCP, `chat_createjob_server`) |
 | `chatlabel` | Entity Chat | `automationscenario/chatentity.xml` | Chat attached to an entity/module record |
 | `teamchatlabel` | Team Chat | `automationscenario/chatteam.xml` | Team channels (`chat_detection`, goals) |
 | `publishlabel` | Communication Tools | `automationscenario/publishing.xml` | Email, publishing |
