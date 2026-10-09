@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Conversion]]></language> 
     </name> 
   </property>  
-  <property id="inputtype" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="rendertype">Media Type 
+  <property id="inputtype" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="inputrendertype">Media Type 
     <name> 
       <language id="de"><![CDATA[Medientyp]]></language>  
       <language id="en"><![CDATA[Media Type]]></language>  

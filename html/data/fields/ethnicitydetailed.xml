@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[etnia]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" keyword="true" editable="true" stored="false">New 
+  <property id="name" index="true" keyword="true" editable="true" stored="true">New 
     <name> 
       <language id="en"><![CDATA[name]]></language>  
       <language id="de"><![CDATA[Name]]></language>
