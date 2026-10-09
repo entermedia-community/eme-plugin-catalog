@@ -14,9 +14,17 @@
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
       <language id="es"><![CDATA[Nombre]]></language>  
-      <language id="fr"><![CDATA[Prénom]]></language> 
-    </name> 
-  </property>  
+      <language id="fr"><![CDATA[Prénom]]></language>
+    </name>
+  </property>
+  <property id="longcaption" index="true" keyword="true" editable="true" viewtype="textarea" stored="true">
+    <name>
+      <language id="en"><![CDATA[Description]]></language>
+      <language id="de"><![CDATA[Beschreibung]]></language>
+      <language id="fr"><![CDATA[Description]]></language>
+      <language id="es"><![CDATA[Descripción]]></language>
+    </name>
+  </property>
   <property id="markdowncontent" index="true" keyword="true" editable="false" viewtype="markdown" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  

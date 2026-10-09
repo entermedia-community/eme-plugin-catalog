@@ -8,6 +8,7 @@
       <language id="fr"><![CDATA[Surveiller les chats]]></language>
       <language id="es"><![CDATA[Monitorear chats]]></language>      
     </name> 
+    <longcaption><![CDATA[Good for having an AI assistant answer questions and help out in team chats.]]></longcaption>
     <markdowncontent><![CDATA[Monitors incoming chat conversations in real-time, detecting user intent, contextual needs, and dispatching tool-calling AI agents to generate intelligent responses.]]></markdowncontent>
   </data>
 
@@ -15,6 +16,7 @@
     <name> 
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
     </name> 
+    <longcaption><![CDATA[Good for asking the assistant to run a background job for the team from the chat.]]></longcaption>
     <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>
   </data>
 
@@ -25,6 +27,7 @@
       <language id="fr"><![CDATA[Créer des objectifs]]></language>
       <language id="es"><![CDATA[Crear objetivos]]></language>
     </name> 
+    <longcaption><![CDATA[Good for turning chat discussions into project goals and assigned tasks.]]></longcaption>
     <markdowncontent><![CDATA[Analyzes chat discussions to extract project objectives, automatically creating structured goals, breakdown tasks, and assigning team members within project workspaces.]]></markdowncontent>
   </data>
 
@@ -35,6 +38,7 @@
       <language id="fr"><![CDATA[Répondre aux questions]]></language>
       <language id="es"><![CDATA[Responder preguntas]]></language>
     </name>
+    <longcaption><![CDATA[Good for getting quick answers about the files and records in your library from team chat.]]></longcaption>
     <markdowncontent><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></markdowncontent>
   </data>
 

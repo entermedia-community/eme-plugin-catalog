@@ -9,6 +9,7 @@
       <language id="fr"><![CDATA[Numérisation des dossiers chauds]]></language>
       <language id="es"><![CDATA[Escaneo de carpetas calientes]]></language>
     </name> 
+    <longcaption><![CDATA[Good for keeping the library in sync with shared folders and YouTube channels without manual uploads.]]></longcaption>
     <markdowncontent><![CDATA[Monitors configured hot folders and external sources to automatically discover, scan, and import new or updated media assets and YouTube content into the repository.]]></markdowncontent>
   </data>
 
@@ -19,6 +20,7 @@
       <language id="fr"><![CDATA[Nouveau traitement des actifs]]></language>
       <language id="es"><![CDATA[Procesamiento de nuevos activos]]></language>
     </name> 
+    <longcaption><![CDATA[Good for getting newly uploaded files ready to use, with metadata, previews and conversions.]]></longcaption>
     <markdowncontent><![CDATA[Executes the end-to-end media asset ingestion pipeline, extracting embedded metadata, assigning asset types, synchronizing entity associations, and queueing and running format transcoding and proxy conversions.]]></markdowncontent>
   </data>
 
@@ -29,6 +31,7 @@
       <language id="fr"><![CDATA[Classification automatisée]]></language>
       <language id="es"><![CDATA[Clasificación automática]]></language>
     </name> 
+    <longcaption><![CDATA[Good for making assets searchable and organized automatically with transcripts, tags, faces and topics.]]></longcaption>
     <markdowncontent><![CDATA[Performs comprehensive automated content intelligence on assets and documents, including document text splitting, speech-to-text audio/video transcription, content classification, multi-language translation, semantic topic clustering, named entity recognition (NER), facial detection, and vector embedding generation.]]></markdowncontent>
   </data>
 
@@ -39,6 +42,7 @@
       <language id="fr"><![CDATA[Classification automatisée – Traduire]]></language>
       <language id="es"><![CDATA[Clasificación automática - Traducir]]></language>
     </name> 
+    <longcaption><![CDATA[Good for keeping descriptions and other text fields available in every supported language.]]></longcaption>
     <markdowncontent><![CDATA[Performs automated translation of multi-language fields across assets, documents, and entity records to maintain multilingual catalog consistency.]]></markdowncontent>
   </data>
 

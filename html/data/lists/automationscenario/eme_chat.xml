@@ -5,6 +5,7 @@
     <name>
       <language id="en"><![CDATA[Welcome Menu]]></language>
     </name>
+    <longcaption><![CDATA[Good for starting a conversation and seeing which chat tools are available.]]></longcaption>
     <markdowncontent><![CDATA[Greets the user and shows a menu of the Server Chat chat scenarios to choose from.]]></markdowncontent>
   </data>
 
@@ -15,6 +16,7 @@
       <language id="fr"><![CDATA[Rechercher des médias]]></language>
       <language id="es"><![CDATA[Buscar medios]]></language>
     </name>
+    <longcaption><![CDATA[Good for finding media by simply describing what you are looking for.]]></longcaption>
     <markdowncontent><![CDATA[Helps customers find media by parsing natural language requests, searching the catalog, and presenting matching assets and records.]]></markdowncontent>
   </data>
 
@@ -22,6 +24,7 @@
     <name> 
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
     </name> 
+    <longcaption><![CDATA[Good for asking the assistant to run a background job, like tagging or creating content, for you.]]></longcaption>
     <markdowncontent><![CDATA[Analyzes customer requests and conversation context to match appropriate automation skills and schedule background AI agent jobs on the customer's behalf.]]></markdowncontent>
   </data>
 
@@ -32,6 +35,7 @@
       <language id="fr"><![CDATA[Chat avec le tuteur]]></language>
       <language id="es"><![CDATA[Chat con el tutor]]></language>
     </name>
+    <longcaption><![CDATA[Good for learning a topic interactively, with questions, feedback and progress tracking.]]></longcaption>
     <markdowncontent><![CDATA[Powers an adaptive interactive tutoring session that guides learners step-by-step through educational material, evaluates responses, awards cognitive confidence scores, tracks mastery progress, and answers learner questions.]]></markdowncontent>
   </data>
 

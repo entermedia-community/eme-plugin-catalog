@@ -5,6 +5,7 @@
     <name>
       <language id="en"><![CDATA[Welcome Menu]]></language>
     </name>
+    <longcaption><![CDATA[Good for starting a conversation and seeing which chat tools are available.]]></longcaption>
     <markdowncontent><![CDATA[Greets the user and shows a menu of the Entity Chat chat scenarios to choose from.]]></markdowncontent>
   </data>
 
@@ -12,6 +13,7 @@
     <name> 
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
     </name> 
+    <longcaption><![CDATA[Good for asking the assistant to run a background job on this record from the chat.]]></longcaption>
     <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>
   </data>
 
@@ -22,6 +24,7 @@
       <language id="fr"><![CDATA[Répondre aux questions]]></language>
       <language id="es"><![CDATA[Responder preguntas]]></language>
     </name>
+    <longcaption><![CDATA[Good for getting quick answers about the files and records in your library.]]></longcaption>
     <markdowncontent><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></markdowncontent>
   </data>
 
@@ -32,6 +35,7 @@
       <language id="fr"><![CDATA[Rechercher des fichiers]]></language>
       <language id="es"><![CDATA[Buscar archivos]]></language>
     </name>
+    <longcaption><![CDATA[Good for finding files and records by describing them in plain language.]]></longcaption>
     <markdowncontent><![CDATA[Enables conversational catalog search, parsing natural language queries in chat to find, filter, and present relevant media assets and data records.]]></markdowncontent>
   </data>
 
@@ -42,6 +46,7 @@
       <language id="fr"><![CDATA[Créateur intelligent]]></language>
       <language id="es"><![CDATA[Creador inteligente]]></language>
     </name>
+    <longcaption><![CDATA[Good for writing articles or documents together with the AI, section by section.]]></longcaption>
     <markdowncontent><![CDATA[Provides an interactive conversational assistant for Smart Creator that parses prompts, retrieves reference memory from vector embeddings, generates structured outlines, refines sections with user confirmation, and renders finalized content templates.]]></markdowncontent>
   </data>
 
@@ -52,6 +57,7 @@
       <language id="fr"><![CDATA[Chat du créateur d'images]]></language>
       <language id="es"><![CDATA[Chat del creador de imágenes]]></language>
     </name>
+    <longcaption><![CDATA[Good for creating and refining images through a back-and-forth conversation.]]></longcaption>
     <markdowncontent><![CDATA[Image creation based on user prompts.]]></markdowncontent>
   </data>
 
@@ -59,6 +65,7 @@
     <name> 
       <language id="en"><![CDATA[Goal/Task Creation]]></language>      
     </name> 
+    <longcaption><![CDATA[Good for turning project goals into assigned tasks and team channels automatically.]]></longcaption>
     <markdowncontent><![CDATA[Monitors project goals and task triggers to automatically generate actionable tasks, assign resources, and create dedicated collaboration channels.]]></markdowncontent>
   </data>
 

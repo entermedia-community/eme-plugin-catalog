@@ -9,6 +9,7 @@
       <language id="fr"><![CDATA[Créateur intelligent - Publier]]></language>
       <language id="es"><![CDATA[Creador inteligente - Publicar]]></language>
     </name> 
+    <longcaption><![CDATA[Good for turning finished Smart Creator content into publish-ready HTML documents with quiz questions.]]></longcaption>
     <markdowncontent><![CDATA[Renders generated Smart Creator entities into standardized HTML documents and assets, and generates accompanying assessment questions and publish-ready outputs.]]></markdowncontent>
   </data>
 
@@ -16,6 +17,7 @@
     <name> 
       <language id="en"><![CDATA[Create Image]]></language>  
     </name> 
+    <longcaption><![CDATA[Good for quickly generating new images from a text prompt and adding them to the catalog.]]></longcaption>
     <markdowncontent><![CDATA[Generates high-quality AI images from descriptive text prompts, creating and cataloging new media assets with custom dimensions, styles, and prompt parameters.]]></markdowncontent>
   </data>
 
@@ -26,6 +28,7 @@
       <language id="fr"><![CDATA[Création automatique d'articles]]></language>
       <language id="es"><![CDATA[Creación automática de artículos]]></language>
     </name> 
+    <longcaption><![CDATA[Good for producing many articles at once from your existing reference material.]]></longcaption>
     <markdowncontent><![CDATA[Automatically generates comprehensive articles in batch mode from pending records by querying reference memory embeddings, structuring article outlines, drafting detailed section content, and rendering final HTML assets.]]></markdowncontent>
   </data>
 
@@ -36,6 +39,7 @@
       <language id="fr"><![CDATA[Création automatique de tutoriels]]></language>
       <language id="es"><![CDATA[Creación automática de tutoriales]]></language>
     </name> 
+    <longcaption><![CDATA[Good for building step-by-step tutorials and lessons in bulk from your existing reference material.]]></longcaption>
     <markdowncontent><![CDATA[Automatically creates structured educational tutorials and interactive learning modules in batch mode by searching memory embeddings, building progressive lesson outlines, generating content sections, and rendering completed assets.]]></markdowncontent>
   </data>
 
