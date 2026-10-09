@@ -9,7 +9,8 @@
       <language id="fr"><![CDATA[ID]]></language>
     </name>
   </property>
-  <property id="name" index="true" multilanguage="true" deleted="false" editable="true"
+  <property id="name" index="true" multilanguage="false" deleted="false" editable="true"
+    required="true"
     stored="true">Name <name>
       <language id="de"><![CDATA[Identität]]></language>
       <language id="en"><![CDATA[Name]]></language>
@@ -39,16 +40,16 @@
       <language id="fr"><![CDATA[Catégorie]]></language>
     </name>
   </property>
-  <property id="primarycolor" index="true" stored="true" editable="true" viewtype="color">Primary
-    Color <name>
+  <property id="primarycolor" index="true" stored="true" editable="true" viewtype="color"
+    required="true">Primary Color <name>
       <language id="de"><![CDATA[Primärfarbe]]></language>
       <language id="en"><![CDATA[Primary Color]]></language>
       <language id="es"><![CDATA[Color primario]]></language>
       <language id="fr"><![CDATA[Couleur primaire]]></language>
     </name>
   </property>
-  <property id="secondarycolor" index="true" stored="true" editable="true" viewtype="color">Secondary
-    Color <name>
+  <property id="secondarycolor" index="true" stored="true" editable="true" viewtype="color"
+    required="true">Secondary Color <name>
       <language id="de"><![CDATA[Sekundärfarbe]]></language>
       <language id="en"><![CDATA[Secondary Color]]></language>
       <language id="es"><![CDATA[Color secundario]]></language>
@@ -71,8 +72,8 @@
       <language id="fr"><![CDATA[Services offerts]]></language>
     </name>
   </property>
-  <property id="avatarurl" index="true" stored="true" editable="true" type="list" listid="asset">Avatar
-    URL<name>
+  <property id="avatarurl" index="true" stored="true" editable="true" type="list" listid="asset"
+    viewtype="asset" rendertype="asset">Avatar<name>
       <language id="de"><![CDATA[Avatar-URL]]></language>
       <language id="en"><![CDATA[Avatar URL]]></language>
       <language id="es"><![CDATA[URL de avatar]]></language>
@@ -87,14 +88,16 @@
       <language id="fr"><![CDATA[Couleur de statut]]></language>
     </name>
   </property>
-  <property id="servermediadburl" index="true" stored="true" editable="true">Server MediaDB URL <name>
+  <property id="servermediadburl" index="true" stored="true" editable="true" required="true">Server
+    MediaDB URL <name>
       <language id="de"><![CDATA[Server-MediaDB-URL]]></language>
       <language id="en"><![CDATA[Server MediaDB URL]]></language>
       <language id="es"><![CDATA[URL de MediaDB del servidor]]></language>
       <language id="fr"><![CDATA[URL MediaDB du serveur]]></language>
     </name>
   </property>
-  <property id="serverfunction" index="true" stored="true" editable="true">Server Function <name>
+  <property id="serverfunction" index="true" stored="true" editable="true" required="true">Server
+    Function <name>
       <language id="de"><![CDATA[Serverfunktion]]></language>
       <language id="en"><![CDATA[Server Function]]></language>
       <language id="es"><![CDATA[Función del servidor]]></language>
