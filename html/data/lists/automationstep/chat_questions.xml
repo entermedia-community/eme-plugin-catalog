@@ -24,4 +24,24 @@
       </name>
    </data>
 
+
+   <!-- Copy of chat_questions for the team_chat label. QuestionsSkill finds these steps by aiskill, not by id -->
+   <data id="chat_questions_team_welcome" aiskill="questionsSkill" automationscenario="chat_questions_team" enabled="true" agenttype="eventagent"  processingmessage="Thinking">
+      <name>
+         <![CDATA[Handle Questions in Chat]]>
+      </name>
+   </data>
+
+   <data id="chat_questions_team_create_suggestions" aiskill="questionsMakeSuggestionsSkill" automationscenario="chat_questions_team" enabled="true" runafter="chat_questions_team_welcome" processingmessage="Creating Suggestions">
+      <name>
+         <![CDATA[Create Suggestions]]>
+      </name>
+   </data>
+
+   <data id="chat_questions_team_ask" aiskill="questionsAskSkill" automationscenario="chat_questions_team" enabled="true" runafter="chat_questions_team_create_suggestions" processingmessage="Answering Question">
+      <name>
+         <![CDATA[Answer Question]]>
+      </name>
+   </data>
+
    </records>

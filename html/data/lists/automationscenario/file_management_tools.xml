@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+
+  <data id="asset_hotfolder_scanning" ordering="50" scenarioicon="folder-fill" enabled="true" isvisible="true" connectedtop="file_management_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Hot Folder Scanning]]></language>  
+      <language id="de"><![CDATA[Hot-Ordner-Scannen]]></language>
+      <language id="fr"><![CDATA[Numérisation des dossiers chauds]]></language>
+      <language id="es"><![CDATA[Escaneo de carpetas calientes]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Monitors configured hot folders and external sources to automatically discover, scan, and import new or updated media assets and YouTube content into the repository.]]></markdowncontent>
+  </data>
+
+  <data id="asset_processing" ordering="51" scenarioicon="image-fill" enabled="true" isvisible="true" connectedtop="file_management_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[New Asset Processing]]></language>  
+      <language id="de"><![CDATA[Verarbeitung neuer Vermögenswerte]]></language>
+      <language id="fr"><![CDATA[Nouveau traitement des actifs]]></language>
+      <language id="es"><![CDATA[Procesamiento de nuevos activos]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Executes the end-to-end media asset ingestion pipeline, extracting embedded metadata, assigning asset types, synchronizing entity associations, and queueing and running format transcoding and proxy conversions.]]></markdowncontent>
+  </data>
+
+  <data id="informatics" ordering="30" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="file_management_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Automated Classification]]></language>  
+      <language id="de"><![CDATA[Automatisierte Klassifizierung]]></language>
+      <language id="fr"><![CDATA[Classification automatisée]]></language>
+      <language id="es"><![CDATA[Clasificación automática]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Performs comprehensive automated content intelligence on assets and documents, including document text splitting, speech-to-text audio/video transcription, content classification, multi-language translation, semantic topic clustering, named entity recognition (NER), facial detection, and vector embedding generation.]]></markdowncontent>
+  </data>
+
+  <data id="informatics_translate" ordering="40" scenarioicon="file-earmark-richtext" enabled="true" isvisible="true" connectedtop="file_management_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Automated Classification - Translate]]></language>  
+      <language id="de"><![CDATA[Automatische Klassifizierung – Übersetzen]]></language>
+      <language id="fr"><![CDATA[Classification automatisée – Traduire]]></language>
+      <language id="es"><![CDATA[Clasificación automática - Traducir]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Performs automated translation of multi-language fields across assets, documents, and entity records to maintain multilingual catalog consistency.]]></markdowncontent>
+  </data>
+
+</records>

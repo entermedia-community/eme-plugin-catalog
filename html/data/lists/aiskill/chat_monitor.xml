@@ -141,15 +141,12 @@ Attributes set on this skill row:
 }
 ]]]></parameters>
   </data>  
-  <data id="chatMonitorSkill" bean="chatMonitorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+  <data id="libraryCollectionChatMonitorSkill" bean="libraryCollectionChatMonitorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
-      <language id="en"><![CDATA[Monitor Chats]]></language>  
-      <language id="de"><![CDATA[Chats überwachen]]></language>
-      <language id="fr"><![CDATA[Surveiller les chats]]></language>
-      <language id="es"><![CDATA[Monitorear chats]]></language>
+      <language id="en"><![CDATA[Team Chat Monitor]]></language>  
     </name>
     <markdowncontent><![CDATA[---
-name: chatMonitorSkill
+name: libraryCollectionChatMonitorSkill
 description: Reads each new team chat message, asks the LLM whether and how the assistant should help, and schedules a follow-up.
 ---
 
@@ -164,9 +161,9 @@ Reads each new team chat message, asks the LLM whether and how the assistant sho
 ## How it works
 
 1. Loads the user message this step is replying to and stores it as `userquery`.
-2. Calls the `library_collection_chat_monitor` tools function on the thinking LLM.
-3. Stores the result as `pendingstructuredresponse` and the message as `pendinglastmessage`.
-4. Waits `priority_timeline` minutes (0–5) and then runs `chatMonitorConfirmation`. Nothing is shown right away.
+2. Calls the `library_collection_chat_monitor` tools function on the thinking LLM, which ranks the most likely `menuscenarios`, picks a `helperrole` and a `wait_minutes` (0–5).
+3. Sleeps `wait_minutes` on its own thread. Nothing is broadcast while it waits.
+4. A newer user message in the same channel cancels the wait, and that message is checked instead. If the wait finishes and no newer message arrived, it renders `chat_monitor_menu` with the recommended scenarios.
 
 ## Inputs
 
@@ -180,71 +177,17 @@ Attributes set on this skill row:
 
 ## Outputs
 
-- `startup_scenario`, `userquery`, `pendinglastmessage`, `pendingstructuredresponse`, `possibletool`
+- `startup_scenario`, `userquery`, `menuscenarios`, `recommendedscenarios`, `helperrole`, `confirmation`, `instruction`
 
 ## Implementation
 
-- Bean `chatMonitorSkill`: `org.entermediadb.ai.skills.LibraryCollectionChatMonitorSkill`
+- Bean `libraryCollectionChatMonitorSkill`: `org.entermediadb.ai.skills.LibraryCollectionChatMonitorSkill`
 - Agent type: `remoteagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
 {
 "id":"agentmessage",
 "description":"The agent's chatterbox reply record; its replytoid points at the user's message"
-}
-]]]></parameters>
-  </data>  
-  <data id="chatMonitorConfirmationSkill" bean="chatMonitorConfirmationSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
-    <name> 
-      <language id="en"><![CDATA[Send Confirmation]]></language>  
-    </name>
-    <markdowncontent><![CDATA[---
-name: chatMonitorConfirmationSkill
-description: After the monitor's wait, posts the assistant's suggestion unless the team has kept talking.
----
-
-# Send Confirmation
-
-After the monitor's wait, posts the assistant's suggestion unless the team has kept talking.
-
-## When to use
-
-- Runs after LibraryCollectionChatMonitorSkill's wait.
-
-## How it works
-
-1. Stops if there is no pending message, or if a newer user message has arrived in the channel.
-2. Reads `confirmation`, `role` and `instruction` from the pending LLM response and stops if there is no confirmation.
-3. Renders `chat_monitor_confirmation` and returns to `chatMonitor`.
-
-## Inputs
-
-- `pendinglastmessage`: The message the monitor analyzed
-- `pendingstructuredresponse`: The LLM response from the monitor step
-
-## Configuration
-
-Attributes set on this skill row:
-
-- `contextbean`: `chatMessageContext`
-
-## Outputs
-
-- `confirmation`, `role`, `instruction`, and the rendered response
-
-## Implementation
-
-- Bean `chatMonitorConfirmationSkill`: `org.entermediadb.ai.skills.ChatMonitorConfirmationSkill`
-- Agent type: `remoteagent`
-]]></markdowncontent>
-    <parameters><![CDATA[[
-{
-"id":"pendinglastmessage",
-"description":"The message the monitor analyzed"
-},
-{
-"id":"pendingstructuredresponse",
-"description":"The LLM response from the monitor step"
 }
 ]]]></parameters>
   </data>  
@@ -392,18 +335,17 @@ Shows the progress of a running agent job and checks again until it completes.
 ## How it works
 
 1. Reloads the `agentjob` and renders `agent_job_showjobplan` with its timing.
-2. While the status is not `complete` or `error`, checks again every 5 seconds. Gives up after 500 checks.
+2. While the status is not `complete` or `error`, broadcasts the status with `processUpdate` and checks again every 5 seconds on the same thread. Gives up after 500 checks.
 3. When the job is finished, returns to `startup_scenario`.
 
 ## Inputs
 
 - `agentjob`: The agent job to report on
 - `startup_scenario`: The step to return to when the job finishes
-- `jobcountloops`: Internal counter of status checks
 
 ## Outputs
 
-- `agentjob`, `secondstaken`, `jobcountloops`, and the rendered status
+- `agentjob`, `secondstaken`, and the rendered status
 
 ## Implementation
 
@@ -418,10 +360,6 @@ Shows the progress of a running agent job and checks again until it completes.
 {
 "id":"startup_scenario",
 "description":"The step to return to when the job finishes"
-},
-{
-"id":"jobcountloops",
-"description":"Internal counter of status checks"
 }
 ]]]></parameters>
   </data>

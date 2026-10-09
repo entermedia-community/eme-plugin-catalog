@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-   <data id="goals_processing_start"  runoperation="goaltask.processtasks"  aiskill="handleWebEventSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent">
+   <data id="goals_processing_start"  aiskill="handleWebEventSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent">
       <name>
          <language id="en"><![CDATA[Create Tasks]]></language>  
       </name>
@@ -13,5 +13,6 @@
       </name>
    </data>
 
+<!--runoperation="goaltask.processtasks"  should liten to events and check all the goals for any process than can be made -->
 
 </records> 

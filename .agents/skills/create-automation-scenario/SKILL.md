@@ -1,6 +1,6 @@
 ---
 name: create-automation-scenario
-description: Use when adding a new automationscenario (a node on the Automation map, e.g. a new chat mode or background workflow). Covers picking the automationlabel it hangs under (connectedtop), picking a free X/Y automationposition on the map, writing the scenario and its automationstep rows (including the <scenarioid>_welcome step chat uses), and reloading the data.
+description: Use when adding a new automationscenario (a node on the Automation map, e.g. a new chat mode or background workflow). Covers picking the automationlabel it hangs under (connectedtop), placing it on the semicircle below its label with the layout script, writing the scenario and its automationstep rows (including the <scenarioid>_welcome step chat uses), and reloading the data.
 ---
 
 # Create an Automation Scenario
@@ -11,7 +11,7 @@ four list tables under `plugins/catalog/html/data/lists/`:
 | Table | What it holds | Files |
 |---|---|---|
 | `automationlabel` | Group headings on the map ("Server Chat", "Entity Chat", ...) | `automationlabel/scenariolabels.xml` |
-| `automationscenario` | The scenario node. `connectedtop` = the label it sits under | `automationscenario/*.xml` (grouped by label) |
+| `automationscenario` | The scenario node. `connectedtop` = the label it sits under | `automationscenario/<connectedtop>.xml` (one file per label) |
 | `automationposition` | X/Y of every node, labels **and** scenarios, keyed by the same id | `automationposition/scenariopositions.xml` |
 | `automationstep` | The steps the scenario runs, each pointing at an `aiskill` | `automationstep/*.xml` |
 
@@ -24,16 +24,16 @@ Read `automationlabel/scenariolabels.xml`. Current labels:
 
 | Label id | Text on map | Scenario file | Used by |
 |---|---|---|---|
-| `customerservicelabel` | EME Chat | `automationscenario/server.xml` | Server-wide/customer chat (MCP, `chat_createjob_server`) |
-| `chatlabel` | Entity Chat | `automationscenario/chatentity.xml` | Chat attached to an entity/module record |
-| `teamchatlabel` | Team Chat | `automationscenario/chatteam.xml` | Team channels (`chat_detection`, goals) |
-| `publishlabel` | Communication Tools | `automationscenario/publishing.xml` | Email, publishing |
-| `contentcreationlabel` | Content Creation Tools | `automationscenario/imagecreation.xml`, `smartcreator_*.xml` | Image/Smart Creator |
-| `importinglabel` | File Management Tools | `automationscenario/asset.xml` | Hot folders, asset processing |
+| `eme_chat` | EME Chat | `automationscenario/eme_chat.xml` | Server-wide/customer chat (MCP, `chat_createjob_server`) |
+| `entity_chat` | Entity Chat | `automationscenario/entity_chat.xml` | Chat attached to an entity/module record |
+| `team_chat` | Team Chat | `automationscenario/team_chat.xml` | Team channels (`emeteamchat_responder`, goals) |
+| `communication_tools` | Communication Tools | `automationscenario/communication_tools.xml` | Email, publishing |
+| `content_creation_tools` | Content Creation Tools | `automationscenario/content_creation_tools.xml` | Image/Smart Creator |
+| `file_management_tools` | File Management Tools | `automationscenario/file_management_tools.xml` | Hot folders, asset processing |
 
 The scenario's `connectedtop` attribute is set to the label id; that draws the line from the
 label down to the scenario. Pages filter on it too, e.g.
-`$mediaarchive.query("automationscenario").exact("connectedtop","chatlabel")` builds the Entity
+`$mediaarchive.query("automationscenario").exact("connectedtop","entity_chat")` builds the Entity
 Chat menu. A new label needs its own row in `scenariolabels.xml` (`id`, `text`, `strokecolor`,
 `bgcolor`) **and** its own `automationposition` row.
 
@@ -43,40 +43,45 @@ Chat menu. A new label needs its own row in `scenariolabels.xml` (`id`, `text`, 
 node. The id is the scenario id (or label id). Rules from
 `plugins/community/html/default/components/javascript/emedia/agentautomation.js`:
 
-- `posx`/`posy` are the node's top-left corner. Scenario nodes are drawn **200 x 200**.
-- y grows downward. To sit "under" a label, use a `posy` larger than the label's (about +100 to
-  +300) and a `posx` near the label's.
+- `posx`/`posy` are the node's top-left corner. Scenario nodes are drawn **200 x 200**; labels are
+  padded text boxes about 250 x 60.
+- y grows downward.
 - A scenario with no position row is not drawn (the console logs `Positions not set!`).
-- Labels are about 50px tall, so the first row of scenarios usually starts ~120px below the label.
 
-Current label positions:
+### Layout: a semicircle below each label
 
-| Label | posx | posy |
+Each label's children (scenarios whose `connectedtop` is that label) sit on a semicircle **below**
+the label:
+
+- The arc runs from 15° above horizontal on the left, under the label, to 15° on the right.
+- The radius is at least 320px and grows with the number of children, so neighbouring centres are at
+  least 290px apart (more than 200 × √2, so boxes never overlap, even on the diagonal).
+- Every scenario is pushed down another 100px, so the top of its box is always below the label.
+- The `welcome_menu_*` scenario comes first (leftmost); the rest keep their left-to-right order.
+- The labels are in two rows, spread out so the arcs don't collide:
+
+| Row | Labels (left to right) | Label posy |
 |---|---|---|
-| `importinglabel` | 1141 | 1429 |
-| `contentcreationlabel` | 2404 | 1407 |
-| `publishlabel` | 1789 | 1448 |
-| `chatlabel` | 1784 | 1983 |
-| `teamchatlabel` | 2198 | 1983 |
-| `customerservicelabel` | 1005 | 2113 |
+| Top | `file_management_tools`, `communication_tools`, `content_creation_tools` | 1430 |
+| Bottom | `eme_chat`, `entity_chat`, `team_chat` | 2133 |
 
-Pick a spot that does not overlap another 200x200 box. This lists any overlap with a candidate:
+Don't place new nodes by hand. Add the scenario (Step 3), then rerun the layout script. It
+recomputes every label and scenario position, prints them with any overlaps, and with `--write`
+updates `scenariopositions.xml`, adding rows for scenarios that don't have one yet:
 
 ```bash
-python3 - <<'EOF'
-import re
-x, y = 1784.0, 2100.0   # candidate posx, posy
-s = open('plugins/catalog/html/data/lists/automationposition/scenariopositions.xml').read()
-for id_, px, py in re.findall(r'id="([^"]+)"\s+posx="([^"]+)"\s+posy="([^"]+)"', s):
-    px, py = float(px), float(py)
-    if abs(px - x) < 200 and abs(py - y) < 200:
-        print("overlaps", id_, px, py)
-EOF
+cd plugins/catalog
+python3 .agents/skills/create-automation-scenario/scripts/layout_map.py           # preview
+python3 .agents/skills/create-automation-scenario/scripts/layout_map.py --write   # update the file
 ```
 
+Run it after Step 3's scenario row is written, since it finds children from the `connectedtop`
+attributes in `automationscenario/*.xml`. A new label must also be added to `ROWS` at the top of the
+script. The constants there (`ALPHA`, `GAP`, `DROP`) control the arc angle, spacing and drop.
+
 Positions also change when someone drags nodes in the map editor (it saves through
-`AutomationManager.savePositions`), so the database can differ from the file. Check before you
-pick:
+`AutomationManager.savePositions`), so the database can differ from the file. The script overwrites
+dragged positions after the reload in Step 5. Check what is in the database first:
 
 ```bash
 AUTH='Authorization: Bearer adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc'
@@ -87,11 +92,11 @@ curl -s -H "$AUTH" -X POST -H 'Content-Type: application/json' \
 
 ## Step 3: Write the scenario row
 
-Add it to the scenario file for the label you chose (Step 1):
+Add it to `automationscenario/<connectedtop>.xml`, the file named after the label you chose in Step 1. Every row in a file has that file's label as its `connectedtop`; a new label gets a new file. If you change a scenario's `connectedtop`, move its row to the new label's file. If the label has a `welcome_menu_<label id>` scenario, keep that row **first** in the file and add new rows after it.
 
 ```xml
 <data id="my_scenario" ordering="50" scenarioicon="robot" enabled="true" isvisible="true"
-      connectedtop="chatlabel" chatenabled="true">
+      connectedtop="entity_chat" chatenabled="true">
   <name>
     <language id="en"><![CDATA[My Scenario]]></language>
   </name>
@@ -104,10 +109,11 @@ Add it to the scenario file for the label you chose (Step 1):
 - `ordering`: sort order inside menus (lower comes first).
 - `scenarioicon`: a Bootstrap Icons name without the `bi-` prefix (`robot`, `search`, `broadcast`, `list`).
 
-Then add the position row from Step 2 with the **same id**:
+Then run the layout script from Step 2 with `--write`. It adds the position row, using the
+**same id**:
 
 ```xml
-<data id="my_scenario" posx="1784.0" posy="2100.0">
+<data id="my_scenario" posx="1700.0" posy="2833.0">
   <name/>
 </data>
 ```
@@ -151,14 +157,14 @@ explicitly (see `reload-list-data`), because `restoredata` only adds and updates
 
 ## Step 6: Verify
 
-- Open the Automation map. The node is drawn at your X/Y, with a line up to its label.
+- Open the Automation map. The node is on its label's semicircle, below the label, with a line up to it.
 - For chat scenarios, the scenario appears in that label's chat menu, and choosing it renders the
   `_welcome` step.
 
 ## Example: the welcome menus
 
-`welcome_menu_customerservicelabel`, `welcome_menu_chatlabel` and `welcome_menu_teamchatlabel`
-follow this recipe. Their ids are `welcome_menu_` + the label id in `connectedtop`. Each has one
+`welcome_menu_eme_chat` and `welcome_menu_entity_chat`
+follow this recipe. Their ids are `welcome_menu_` + the label id in `connectedtop`. Each one is the first row of its label's scenario file. Each has one
 step, `welcome_menu_<label>_welcome` in `automationstep/welcome_menu.xml`, which runs
 `welcomeMenuSkill` (`WelcomeMenuSkill.java`). That skill lists the other chat scenarios under the
 same label and renders them with `agentresponses/welcome_menu.html`.

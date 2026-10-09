@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
+
+  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
+    <name> 
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property> 
+
   <property id="name" editable="true" stored="true" index="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
@@ -51,12 +61,11 @@
       <language id="es"><![CDATA[Estado del canal]]></language>
     </name> 
   </property> 
-  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
+  <property id="startup_scenario" index="true" deleted="false" editable="true" stored="true" searchtype="comment">New 
     <name> 
-      <language id="de"><![CDATA[Id]]></language>  
-      <language id="en"><![CDATA[Id]]></language>  
-      <language id="es"><![CDATA[Id]]></language>  
-      <language id="fr"><![CDATA[Id]]></language> 
+      <language id="en"><![CDATA[Function path]]></language>  
     </name> 
   </property> 
+
+
 </properties>

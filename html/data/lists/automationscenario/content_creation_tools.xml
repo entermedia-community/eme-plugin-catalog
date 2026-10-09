@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+
+  <data id="smartcreator_publish" ordering="40" scenarioicon="file-earmark-richtext" enabled="true" isvisible="true" connectedtop="content_creation_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Smart Creator - Publish]]></language>  
+      <language id="de"><![CDATA[Smart Creator – Veröffentlichen]]></language>
+      <language id="fr"><![CDATA[Créateur intelligent - Publier]]></language>
+      <language id="es"><![CDATA[Creador inteligente - Publicar]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Renders generated Smart Creator entities into standardized HTML documents and assets, and generates accompanying assessment questions and publish-ready outputs.]]></markdowncontent>
+  </data>
+
+  <data id="image_creation" ordering="10" enabled="true" isvisible="true" connectedtop="content_creation_tools" chatenabled="false" markdowncontent="This scenario will create images based on the prompt you provide. You can specify the number of images to generate and the desired size. The generated images will be saved in the specified folder."> 
+    <name> 
+      <language id="en"><![CDATA[Create Image]]></language>  
+    </name> 
+    <markdowncontent><![CDATA[Generates high-quality AI images from descriptive text prompts, creating and cataloging new media assets with custom dimensions, styles, and prompt parameters.]]></markdowncontent>
+  </data>
+
+  <data id="smartcreator_auto_entityarticle" ordering="20" enabled="true" isvisible="true" connectedtop="content_creation_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Auto Create Articles]]></language>  
+      <language id="de"><![CDATA[Automatische Artikel-Erstellung]]></language>
+      <language id="fr"><![CDATA[Création automatique d'articles]]></language>
+      <language id="es"><![CDATA[Creación automática de artículos]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Automatically generates comprehensive articles in batch mode from pending records by querying reference memory embeddings, structuring article outlines, drafting detailed section content, and rendering final HTML assets.]]></markdowncontent>
+  </data>
+
+  <data id="smartcreator_auto_entitytutorial" ordering="20" enabled="true" isvisible="true" connectedtop="content_creation_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Auto Create Tutorials]]></language>  
+      <language id="de"><![CDATA[Automatische Erstellung von Tutorials]]></language>
+      <language id="fr"><![CDATA[Création automatique de tutoriels]]></language>
+      <language id="es"><![CDATA[Creación automática de tutoriales]]></language>
+    </name> 
+    <markdowncontent><![CDATA[Automatically creates structured educational tutorials and interactive learning modules in batch mode by searching memory embeddings, building progressive lesson outlines, generating content sections, and rendering completed assets.]]></markdowncontent>
+  </data>
+
+</records>

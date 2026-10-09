@@ -1,22 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <records>
-  <data id="chat_detection" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="teamchatlabel" chatenabled="true">
+  <data id="emeteamchat_responder" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="team_chat" chatenabled="true">
     <name> 
-      <language id="en"><![CDATA[Monitor Chats]]></language>
+      <language id="en"><![CDATA[Monitor Team Chats]]></language>
       <language id="de"><![CDATA[Chats überwachen]]></language>
       <language id="fr"><![CDATA[Surveiller les chats]]></language>
       <language id="es"><![CDATA[Monitorear chats]]></language>      
     </name> 
     <markdowncontent><![CDATA[Monitors incoming chat conversations in real-time, detecting user intent, contextual needs, and dispatching tool-calling AI agents to generate intelligent responses.]]></markdowncontent>
-  </data>  
+  </data>
 
-<data id="chat_createjob_team" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="teamchatlabel" chatenabled="true">
+  <data id="chat_createjob_team" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="team_chat" chatenabled="true">
     <name> 
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
     </name> 
     <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>
   </data>
 
-  <data id="emechat_goal_manager" ordering="55" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="teamchatlabel" chatenabled="false">
+  <data id="emechat_goal_manager" ordering="55" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="team_chat" chatenabled="false">
     <name> 
       <language id="en"><![CDATA[Create Goals]]></language>
       <language id="de"><![CDATA[Ziele erstellen]]></language>
@@ -24,12 +26,16 @@
       <language id="es"><![CDATA[Crear objetivos]]></language>
     </name> 
     <markdowncontent><![CDATA[Analyzes chat discussions to extract project objectives, automatically creating structured goals, breakdown tasks, and assigning team members within project workspaces.]]></markdowncontent>
-  </data>  
-
-  <data id="welcome_menu_teamchatlabel" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="teamchatlabel" chatenabled="true">
-    <name>
-      <language id="en"><![CDATA[Welcome Menu]]></language>
-    </name>
-    <markdowncontent><![CDATA[Greets the user and shows a menu of the Team Chat chat scenarios to choose from.]]></markdowncontent>
   </data>
+
+  <data id="chat_questions_team" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="team_chat">
+    <name>
+      <language id="en"><![CDATA[Answer Questions]]></language>
+      <language id="de"><![CDATA[Fragen beantworten]]></language>
+      <language id="fr"><![CDATA[Répondre aux questions]]></language>
+      <language id="es"><![CDATA[Responder preguntas]]></language>
+    </name>
+    <markdowncontent><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></markdowncontent>
+  </data>
+
 </records>

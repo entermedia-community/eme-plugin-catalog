@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<records> 
-  <data id="publishing" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="publishlabel" chatenabled="false"> 
+<records>
+
+  <data id="publishing" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="communication_tools" chatenabled="false"> 
     <name> 
       <language id="en"><![CDATA[Publish To Socials]]></language>  
       <language id="de"><![CDATA[Veröffentlichen in sozialen Netzwerken]]></language>
@@ -9,9 +10,9 @@
       <language id="es"><![CDATA[Publicar en redes sociales]]></language>
     </name> 
     <markdowncontent><![CDATA[Manages automated publishing and distribution workflows for approved media assets and content to external channels, social networks, and content management systems.]]></markdowncontent>
-  </data> 
+  </data>
 
-  <data id="email" ordering="50" scenarioicon="envelope-fill" enabled="true" isvisible="true" connectedtop="publishlabel" chatenabled="false"> 
+  <data id="email" ordering="50" scenarioicon="envelope-fill" enabled="true" isvisible="true" connectedtop="communication_tools" chatenabled="false"> 
     <name> 
       <language id="en"><![CDATA[Email Responder]]></language>  
       <language id="de"><![CDATA[E-Mail-Responder]]></language>
@@ -20,6 +21,5 @@
     </name> 
     <markdowncontent><![CDATA[Automates email-based customer support by ingesting incoming emails, retrieving matching knowledge base context via vector embeddings, drafting and sending AI replies, and categorizing or escalating critical issues.]]></markdowncontent>
   </data>
-
 
 </records>
