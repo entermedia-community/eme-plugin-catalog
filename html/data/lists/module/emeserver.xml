@@ -1,0 +1,10 @@
+<properties>
+
+  <data id="emeserver" showonsearch="true" securityenabled="false" isentity="true" ordering="3"
+    moduleresultsview="brickvertical"
+    modulerendertype="emeserver"
+    moduleicon="grid">
+    <name><![CDATA[EME Servers]]></name>
+  </data>
+
+</properties>

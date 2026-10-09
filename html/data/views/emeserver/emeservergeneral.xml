@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+
+  <property id="name" />
+  <property id="subtitle" />
+  <property id="avatarurl" />
+
+  <property id="serverdescription" />
+
+  <property id="category" />
+
+  <property id="primarycolor" />
+  <property id="secondarycolor" />
+
+  <property id="membercount" />
+
+  <property id="servermediadburl" />
+  <property id="serverfunction" />
+
+</root>

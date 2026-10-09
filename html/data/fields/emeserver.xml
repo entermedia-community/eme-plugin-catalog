@@ -17,13 +17,6 @@
       <language id="fr"><![CDATA[Identité]]></language>
     </name>
   </property>
-  <property id="title" index="true" stored="true" editable="true">Title <name>
-      <language id="de"><![CDATA[Titel]]></language>
-      <language id="en"><![CDATA[Title]]></language>
-      <language id="es"><![CDATA[Título]]></language>
-      <language id="fr"><![CDATA[Titre]]></language>
-    </name>
-  </property>
   <property id="subtitle" index="true" stored="true" editable="true">Subtitle <name>
       <language id="de"><![CDATA[Untertitel]]></language>
       <language id="en"><![CDATA[Subtitle]]></language>
@@ -78,18 +71,12 @@
       <language id="fr"><![CDATA[Services offerts]]></language>
     </name>
   </property>
-  <property id="avatarurl" index="true" stored="true" editable="true">Avatar URL<name>
+  <property id="avatarurl" index="true" stored="true" editable="true" type="list" listid="asset">Avatar
+    URL<name>
       <language id="de"><![CDATA[Avatar-URL]]></language>
       <language id="en"><![CDATA[Avatar URL]]></language>
       <language id="es"><![CDATA[URL de avatar]]></language>
       <language id="fr"><![CDATA[URL de l'avatar]]></language>
-    </name>
-  </property>
-  <property id="iconasset" index="true" stored="true" editable="true">Icon Asset<name>
-      <language id="de"><![CDATA[Symbol-Asset]]></language>
-      <language id="en"><![CDATA[Icon Asset]]></language>
-      <language id="es"><![CDATA[Activo de icono]]></language>
-      <language id="fr"><![CDATA[Actif d'icône]]></language>
     </name>
   </property>
   <property id="statuscolor" index="true" stored="true" editable="true" viewtype="color">Status
