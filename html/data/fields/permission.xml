@@ -2,7 +2,7 @@
 
 <properties> 
   <!-- This would be stuff like "Full, Partial, None -->  
-  <property id="id" stored="true" index="true" editable="false">ID 
+  <property id="id" index="true" editable="false" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -10,7 +10,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" stored="true" index="true" editable="false">Name
+  <property id="name" index="true" editable="false" stored="true">Name
     <name>
       <language id="de"><![CDATA[Name]]></language>
       <language id="en"><![CDATA[Name]]></language>

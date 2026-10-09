@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" allowdynamicfields="true"> 
-  <property id="librarycollection" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list"> 
+  <property id="librarycollection" index="true" editable="true" viewtype="autocomplete" datatype="list" stored="true" required="true" listid="librarycollection"> 
     <name> 
       <language id="en"><![CDATA[Collection]]></language>  
       <language id="de"><![CDATA[Sammlung]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" internalfield="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New 
+  <property id="id" index="true" sortable="true" filter="false" keyword="false" editable="true" stored="true" internalfield="true">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New 
+  <property id="name" index="true" sortable="true" filter="false" keyword="false" editable="true" multilanguage="true" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  

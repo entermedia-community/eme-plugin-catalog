@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="ordering" type="number" autoincrement="true" editable="true" index="true" stored="true"> 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true" autoincrement="true"> 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="lightboxid" listid="emedialightbox" index="true" editable="true" datatype="list"> 
+  <property id="lightboxid" index="true" editable="true" datatype="list" listid="emedialightbox"> 
     <name> 
       <language id="en"><![CDATA[Lighbox]]></language>  
       <language id="de"><![CDATA[Lichtbox]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Entidad matriz]]></language>
     </name> 
   </property>  
-  <property id="parentmoduleid" index="true" editable="true" listid="module" viewtype="entity" datatype="list"> 
+  <property id="parentmoduleid" index="true" editable="true" viewtype="entity" datatype="list" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Parent Module]]></language>  
       <language id="de"><![CDATA[Elternmodul]]></language>

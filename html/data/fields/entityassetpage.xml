@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="entityasset" index="true" datatype="list" editable="true" stored="true" viewtype="entitysingle" internalfield="false" isbadge="false" rendertype="entitysingle" required="false" multilanguage="false" highlight="false" autoincrement="false" aiautocreated="false">New 
+  <property id="entityasset" index="true" editable="true" multilanguage="false" viewtype="entitysingle" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" rendertype="entitysingle" autoincrement="false" highlight="false" aiautocreated="false">New 
     <name> 
       <language id="en"><![CDATA[Entity Asset]]></language>  
       <language id="de"><![CDATA[Vermögenswerte der Entität]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Activos de la entidad]]></language>
     </name> 
   </property>  
-  <property id="pagenum" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" highlight="false" datatype="number" autoincrement="false" aiautocreated="false">New 
+  <property id="pagenum" index="true" editable="true" multilanguage="false" datatype="number" stored="true" internalfield="false" required="false" isbadge="false" autoincrement="false" highlight="false" aiautocreated="false">New 
     <name> 
       <language id="en"><![CDATA[Page Number]]></language>  
       <language id="de"><![CDATA[Seitennummer]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Número de página]]></language>
     </name> 
   </property>  
-  <property id="longcaption" index="true" internalfield="false" editable="true" isbadge="false" viewtype="textarea" rendertype="textarea" required="false" multilanguage="false" highlight="false" autoincrement="false" stored="true" keyword="true" aiautocreated="false">New 
+  <property id="longcaption" index="true" keyword="true" editable="true" multilanguage="false" viewtype="textarea" stored="true" internalfield="false" required="false" isbadge="false" rendertype="textarea" autoincrement="false" highlight="false" aiautocreated="false">New 
     <name> 
       <language id="en"><![CDATA[Main Text]]></language>  
       <language id="de"><![CDATA[Haupttext]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Texto principal]]></language>
     </name> 
   </property>  
-  <property id="entitylocation" index="true" datatype="list" editable="true" stored="true" viewtype="entity" aiautocreated="true" aicreationdescription="Names of all the places (cities, states, countries, or well-known places) mentioned in the metadata">New 
+  <property id="entitylocation" index="true" editable="true" viewtype="entity" datatype="list" stored="true" aiautocreated="true" aicreationdescription="Names of all the places (cities, states, countries, or well-known places) mentioned in the metadata">New 
     <name> 
       <language id="en"><![CDATA[Location]]></language>  
       <language id="de"><![CDATA[Standort]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Ubicación]]></language>
     </name> 
   </property>  
-  <property id="entitycompany" index="true" datatype="list" editable="true" stored="true" viewtype="entity" aiautocreated="true" aicreationdescription="Names of all the companies mentioned in the metadata.">New 
+  <property id="entitycompany" index="true" editable="true" viewtype="entity" datatype="list" stored="true" aiautocreated="true" aicreationdescription="Names of all the companies mentioned in the metadata.">New 
     <name> 
       <language id="en"><![CDATA[Companies]]></language>  
       <language id="de"><![CDATA[Unternehmen]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Empresas]]></language>
     </name> 
   </property>  
-  <property id="primarymedia" index="true" internalfield="false" editable="true" isbadge="false" viewtype="documentpage" rendertype="documentpage" sourcepath="${data.sourcepath}/${filename}" required="false" listid="asset" multilanguage="false" highlight="false" datatype="list" autoincrement="false" stored="true" aiautocreated="false">New 
+  <property id="primarymedia" index="true" editable="true" multilanguage="false" viewtype="documentpage" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" listid="asset" sourcepath="${data.sourcepath}/${filename}" rendertype="documentpage" autoincrement="false" highlight="false" aiautocreated="false">New 
     <name> 
       <language id="en"><![CDATA[Page Preview]]></language>  
       <language id="de"><![CDATA[Seitenvorschau]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Vista previa de la página]]></language>
     </name> 
   </property>  
-  <property id="parentasset" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" multilanguage="false" highlight="false" datatype="list" autoincrement="false" aiautocreated="false">New 
+  <property id="parentasset" index="true" editable="true" multilanguage="false" viewtype="asset" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" rendertype="asset" autoincrement="false" highlight="false" aiautocreated="false">New 
     <name> 
       <language id="en"><![CDATA[Parent Asset]]></language>  
       <language id="de"><![CDATA[Elternvermögen]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Activo de la empresa matriz]]></language>
     </name> 
   </property>  
-  <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="false" stored="true" viewtype="markdown"> 
+  <property id="markdowncontent" index="true" keyword="true" editable="false" viewtype="markdown" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>

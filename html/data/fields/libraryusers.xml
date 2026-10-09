@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" prefix="libraryusers"> 
-  <property id="id" index="true" stored="true" editable="false">Id 
+  <property id="id" index="true" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="userid" type="list" listid="user" editable="true" index="true" stored="true">User 
+  <property id="userid" index="true" editable="true" datatype="list" stored="true" listid="user">User 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[User]]></language>  
@@ -18,7 +18,7 @@
     </name> 
   </property>  
   
-  <property id="libraryid" type="list" listid="library" editable="true" index="true" stored="true">Library</property>
+  <property id="libraryid" index="true" editable="true" datatype="list" stored="true" listid="library">Library</property>
  
  
 </properties>

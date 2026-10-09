@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-  <property id="id" index="true" stored="true" keyword="true" internalfield="true" editable="true">
+  <property id="id" index="true" keyword="true" editable="true" stored="true" internalfield="true">
     ID <name>
       <language id="de"><![CDATA[Ich würde]]></language>
       <language id="en"><![CDATA[ID]]></language>
@@ -9,78 +9,70 @@
       <language id="fr"><![CDATA[ID]]></language>
     </name>
   </property>
-  <property id="name" index="true" multilanguage="false" deleted="false" editable="true"
-    required="true"
-    stored="true">Name <name>
+  <property id="name" index="true" editable="true" multilanguage="false" stored="true" required="true" deleted="false">Name <name>
       <language id="de"><![CDATA[Identität]]></language>
       <language id="en"><![CDATA[Name]]></language>
       <language id="es"><![CDATA[Nombre]]></language>
       <language id="fr"><![CDATA[Identité]]></language>
     </name>
   </property>
-  <property id="subtitle" index="true" stored="true" editable="true">Subtitle <name>
+  <property id="subtitle" index="true" editable="true" stored="true">Subtitle <name>
       <language id="de"><![CDATA[Untertitel]]></language>
       <language id="en"><![CDATA[Subtitle]]></language>
       <language id="es"><![CDATA[Subtítulo]]></language>
       <language id="fr"><![CDATA[Sous-titre]]></language>
     </name>
   </property>
-  <property id="serverdescription" index="true" stored="true" editable="true">Description <name>
+  <property id="serverdescription" index="true" editable="true" stored="true">Description <name>
       <language id="de"><![CDATA[Beschreibung]]></language>
       <language id="en"><![CDATA[Description]]></language>
       <language id="es"><![CDATA[Descripción]]></language>
       <language id="fr"><![CDATA[Description]]></language>
     </name>
   </property>
-  <property id="category" index="true" stored="true" editable="true" type="list" viewtype="list"
-    listid="servercategory" datatype="list">Category <name>
+  <property id="category" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="servercategory">Category <name>
       <language id="de"><![CDATA[Kategorie]]></language>
       <language id="en"><![CDATA[Category]]></language>
       <language id="es"><![CDATA[Categoría]]></language>
       <language id="fr"><![CDATA[Catégorie]]></language>
     </name>
   </property>
-  <property id="primarycolor" index="true" stored="true" editable="true" viewtype="color"
-    required="true">Primary Color <name>
+  <property id="primarycolor" index="true" editable="true" viewtype="color" stored="true" required="true">Primary Color <name>
       <language id="de"><![CDATA[Primärfarbe]]></language>
       <language id="en"><![CDATA[Primary Color]]></language>
       <language id="es"><![CDATA[Color primario]]></language>
       <language id="fr"><![CDATA[Couleur primaire]]></language>
     </name>
   </property>
-  <property id="secondarycolor" index="true" stored="true" editable="true" viewtype="color"
-    required="true">Secondary Color <name>
+  <property id="secondarycolor" index="true" editable="true" viewtype="color" stored="true" required="true">Secondary Color <name>
       <language id="de"><![CDATA[Sekundärfarbe]]></language>
       <language id="en"><![CDATA[Secondary Color]]></language>
       <language id="es"><![CDATA[Color secundario]]></language>
       <language id="fr"><![CDATA[Couleur secondaire]]></language>
     </name>
   </property>
-  <property id="membercount" index="true" stored="true" editable="true" type="number"
-    datatype="number">Member Count <name>
+  <property id="membercount" index="true" editable="true" datatype="number" stored="true">Member Count <name>
       <language id="de"><![CDATA[Mitgliederanzahl]]></language>
       <language id="en"><![CDATA[Member Count]]></language>
       <language id="es"><![CDATA[Número de miembros]]></language>
       <language id="fr"><![CDATA[Nombre de membres]]></language>
     </name>
   </property>
-  <property id="servicesoffered" index="true" stored="true" editable="true" type="list"
-    viewtype="multiselect" datatype="list">Services Offered <name>
+  <property id="servicesoffered" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true">Services Offered <name>
       <language id="de"><![CDATA[Angebotene Dienste]]></language>
       <language id="en"><![CDATA[Services Offered]]></language>
       <language id="es"><![CDATA[Servicios ofrecidos]]></language>
       <language id="fr"><![CDATA[Services offerts]]></language>
     </name>
   </property>
-  <property id="avatarurl" index="true" stored="true" editable="true" type="list" listid="asset"
-    viewtype="asset" rendertype="asset">Avatar<name>
+  <property id="avatarurl" index="true" editable="true" viewtype="asset" datatype="list" stored="true" listid="asset" rendertype="asset">Avatar<name>
       <language id="de"><![CDATA[Avatar-URL]]></language>
       <language id="en"><![CDATA[Avatar URL]]></language>
       <language id="es"><![CDATA[URL de avatar]]></language>
       <language id="fr"><![CDATA[URL de l'avatar]]></language>
     </name>
   </property>
-  <property id="statuscolor" index="true" stored="true" editable="true" viewtype="color">Status
+  <property id="statuscolor" index="true" editable="true" viewtype="color" stored="true">Status
     Color <name>
       <language id="de"><![CDATA[Statusfarbe]]></language>
       <language id="en"><![CDATA[Status Color]]></language>
@@ -88,7 +80,7 @@
       <language id="fr"><![CDATA[Couleur de statut]]></language>
     </name>
   </property>
-  <property id="servermediadburl" index="true" stored="true" editable="true" required="true">Server
+  <property id="servermediadburl" index="true" editable="true" stored="true" required="true">Server
     MediaDB URL <name>
       <language id="de"><![CDATA[Server-MediaDB-URL]]></language>
       <language id="en"><![CDATA[Server MediaDB URL]]></language>
@@ -96,7 +88,7 @@
       <language id="fr"><![CDATA[URL MediaDB du serveur]]></language>
     </name>
   </property>
-  <property id="serverfunction" index="true" stored="true" editable="true" required="true">Server
+  <property id="serverfunction" index="true" editable="true" stored="true" required="true">Server
     Function <name>
       <language id="de"><![CDATA[Serverfunktion]]></language>
       <language id="en"><![CDATA[Server Function]]></language>

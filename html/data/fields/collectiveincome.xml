@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
+  <property id="id" index="true" sortable="true" filter="false" keyword="false" editable="true" stored="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection"> 
+  <property id="collectionid" index="true" sortable="true" filter="false" keyword="false" editable="false" datatype="list" stored="true" listid="librarycollection"> 
     <name> 
       <language id="de"><![CDATA[Sammlung ID]]></language>  
       <language id="en"><![CDATA[Collection Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Id Collection]]></language> 
     </name> 
   </property>  
-  <property id="currencytype" index="true" editable="true" stored="true" datatype="list" listid="currencytype" defaultvalue="1"> 
+  <property id="currencytype" index="true" editable="true" datatype="list" stored="true" listid="currencytype" defaultvalue="1"> 
     <name> 
       <language id="en"><![CDATA[Currency Type]]></language>  
       <language id="es"><![CDATA[Moneda]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Type de monnaie]]></language>
     </name> 
   </property>  
-  <property id="incometype" index="true" editable="true" stored="true" datatype="list" listid="incometype"> 
+  <property id="incometype" index="true" editable="true" datatype="list" stored="true" listid="incometype"> 
     <name> 
       <language id="en"><![CDATA[Income Type]]></language>  
       <language id="es"><![CDATA[Tipo de Ingreso]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Type de revenu]]></language>
     </name> 
   </property>  
-  <property id="total" index="true" editable="true" stored="true" type="double"> 
+  <property id="total" index="true" editable="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Total Price]]></language>  
       <language id="es"><![CDATA[Precio Total]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Prix total]]></language>
     </name> 
   </property>  
-  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="date" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="date" stored="true" internalfield="false" required="true" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Income Date]]></language>  
       <language id="de"><![CDATA[Einkommensdatum]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Fecha de ingreso]]></language>
     </name> 
   </property>  
-  <property id="user" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="user" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="list" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" rendertype="list" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Entered By]]></language>  
       <language id="de"><![CDATA[Eingetragen von]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Introducido por]]></language>
     </name> 
   </property>  
-  <property id="owner" index="true" listid="user" deleted="false" editable="true" stored="true" viewtype="user" keyword="true" datatype="list">New 
+  <property id="owner" index="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" deleted="false" listid="user">New 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -65,7 +65,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="paidfromaccount" viewtype="bankaccount" searchcomponent="bankaccount" index="true" editable="true" stored="true" datatype="list" listid="bankaccount" defaultvalue="1"> 
+  <property id="paidfromaccount" index="true" editable="true" viewtype="bankaccount" searchcomponent="bankaccount" datatype="list" stored="true" listid="bankaccount" defaultvalue="1"> 
     <name> 
       <language id="en"> <![CDATA[Account Balance]]> </language>  
       <language id="de"><![CDATA[Kontostand]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Saldo de cuenta]]></language>
     </name> 
   </property>  
-  <property id="paidfrom" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="paidfrom" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="list" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" rendertype="list" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Paid By]]></language>  
       <language id="de"><![CDATA[Bezahlt von]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Pagado por]]></language>
     </name> 
   </property>  
-  <property id="receiptattachment" listid="asset" index="true" stored="true" editable="true" viewtype="asset" type="list" sourcepath="/uploads/${data.collectiveid}/income/${formattedyear}/${shortguid}"> 
+  <property id="receiptattachment" index="true" editable="true" viewtype="asset" datatype="list" stored="true" listid="asset" sourcepath="/uploads/${data.collectiveid}/income/${formattedyear}/${shortguid}"> 
     <name> 
       <language id="en"><![CDATA[Receipt Photo]]></language>  
       <language id="de"><![CDATA[Foto der Quittung]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Foto del recibo]]></language>
     </name> 
   </property>  
-  <property id="incomedescription" index="true" editable="true" stored="true" viewtype="textarea"> 
+  <property id="incomedescription" index="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Details]]></language>  
       <language id="de"><![CDATA[Details]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Detalles]]></language>
     </name> 
   </property>  
-  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
+  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="paymenttype" index="true" filter="false" editable="false" stored="true" sortable="true" keyword="false" type="list"> 
+  <property id="paymenttype" index="true" sortable="true" filter="false" keyword="false" editable="false" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Payment Type]]></language>  
       <language id="de"><![CDATA[Zahlungsart]]></language>

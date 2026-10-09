@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="userprofileSearcher" class="userProfile" allowdynamicfields="true">
-  <property id="id" index="true" stored="true" keyword="true" internalfield="true" editable="false">ID 
+  <property id="id" index="true" keyword="true" editable="false" stored="true" internalfield="true">ID 
     <name>
       <language id="de"><![CDATA[Ich würde]]></language>
       <language id="en"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language>
     </name>
   </property>
-  <property id="userid" type="list" listid="user" editable="true" index="true" stored="true" internalfield="true">User 
+  <property id="userid" index="true" editable="true" datatype="list" stored="true" internalfield="true" listid="user">User 
     <name>
       <language id="de"><![CDATA[Benutzer]]></language>
       <language id="en"><![CDATA[User]]></language>
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Utilisateur]]></language>
     </name>
   </property>
-  <property id="settingsrole" editable="true" index="true" stored="true" datatype="list" type="list">Role 
+  <property id="settingsrole" index="true" editable="true" datatype="list" stored="true">Role 
     <name>
       <language id="de"><![CDATA[Rolle]]></language>
       <language id="en"><![CDATA[Role]]></language>
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Rôle]]></language>
     </name>
   </property>
-  <property id="view_asset_resultstable" index="true" stored="true" internalfield="true" editable="true">View Table Results 
+  <property id="view_asset_resultstable" index="true" editable="true" stored="true" internalfield="true">View Table Results 
     <name>
       <language id="de"><![CDATA[Ansicht Tabellenergebnisse]]></language>
       <language id="en"><![CDATA[View Table Results]]></language>
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Voir les Résultats de la table]]></language>
     </name>
   </property>
-  <property id="view_asset_advancedsearch" index="true" stored="true" internalfield="true" editable="true">Asset Search 
+  <property id="view_asset_advancedsearch" index="true" editable="true" stored="true" internalfield="true">Asset Search 
     <name>
       <language id="de"><![CDATA[Asset-Suche]]></language>
       <language id="en"><![CDATA[Asset Search]]></language>
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Recherche d&#39;item]]></language>
     </name>
   </property>
-  <property id="profilesearchfilters" index="true" stored="true" internalfield="true" editable="false">Filters Used By Search 
+  <property id="profilesearchfilters" index="true" editable="false" stored="true" internalfield="true">Filters Used By Search 
     <name>
       <language id="de"><![CDATA[Filter von Such]]></language>
       <language id="en"><![CDATA[Filters Used By Search]]></language>
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Filtres utilisés par la Recherche]]></language>
     </name>
   </property>
-  <property id="hideassettype" index="true" stored="true" internalfield="true" viewtype="multiselect" datatype="list" listid="assettype" editable="true" type="list">
+  <property id="hideassettype" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="assettype">
     <name>
       <language id="de"><![CDATA[verstecken Asset-Typen]]></language>
       <language id="en"><![CDATA[Hidden Asset Types]]></language>
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Cacher les Types d&#39;item]]></language>
     </name>
   </property>
-  <property id="maximize_screen" index="true" stored="true" internalfield="true" editable="false">Maximize 
+  <property id="maximize_screen" index="true" editable="false" stored="true" internalfield="true">Maximize 
     <name>
       <language id="de"><![CDATA[maximieren]]></language>
       <language id="en"><![CDATA[Maximize]]></language>
@@ -65,7 +65,7 @@
       <language id="fr"><![CDATA[Maximiser]]></language>
     </name>
   </property>
-  <property id="sourcepath" index="true" stored="true" internalfield="true" editable="false">Source Path 
+  <property id="sourcepath" index="true" editable="false" stored="true" internalfield="true">Source Path 
     <name>
       <language id="de"><![CDATA[Source-Pfad]]></language>
       <language id="en"><![CDATA[Source Path]]></language>
@@ -73,7 +73,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language>
     </name>
   </property>
-  <property id="last_selected_module" index="true" stored="true" internalfield="true" editable="false">Last Selected Module 
+  <property id="last_selected_module" index="true" editable="false" stored="true" internalfield="true">Last Selected Module 
     <name>
       <language id="de"><![CDATA[zuletzt gewählte Modul]]></language>
       <language id="en"><![CDATA[Last Selected Module]]></language>
@@ -81,7 +81,7 @@
       <language id="fr"><![CDATA[Dernier module sélectionné]]></language>
     </name>
   </property>
-  <property id="last_selected_library" index="true" stored="true" internalfield="true" editable="false">Last Selected Library 
+  <property id="last_selected_library" index="true" editable="false" stored="true" internalfield="true">Last Selected Library 
     <name>
       <language id="de"><![CDATA[zuletzt ausgewählte Bibliothek]]></language>
       <language id="en"><![CDATA[Last Selected Library]]></language>
@@ -89,7 +89,7 @@
       <language id="fr"><![CDATA[Dernière bibliothèque sélectionnée]]></language>
     </name>
   </property>
-  <property id="maximize_player" index="true" stored="true" internalfield="true" editable="false">false 
+  <property id="maximize_player" index="true" editable="false" stored="true" internalfield="true">false 
     <name>
       <language id="de"><![CDATA[falsch]]></language>
       <language id="en"><![CDATA[false]]></language>
@@ -97,7 +97,7 @@
       <language id="fr"><![CDATA[faux]]></language>
     </name>
   </property>
-  <property id="expand_media_sidebar" index="true" stored="true" internalfield="true" editable="false">true 
+  <property id="expand_media_sidebar" index="true" editable="false" stored="true" internalfield="true">true 
     <name>
       <language id="de"><![CDATA[wahr]]></language>
       <language id="en"><![CDATA[true]]></language>
@@ -105,7 +105,7 @@
       <language id="fr"><![CDATA[vrai]]></language>
     </name>
   </property>
-  <property id="assethitsperpage" index="true" stored="true" type="list" listid="hitcount" editable="true">Number of Assets to view per page 
+  <property id="assethitsperpage" index="true" editable="true" datatype="list" stored="true" listid="hitcount">Number of Assets to view per page 
     <name>
       <language id="de"><![CDATA[Anzahl der Assets pro Seite zu sehen]]></language>
       <language id="en"><![CDATA[Number of Assets to view per page]]></language>
@@ -113,7 +113,7 @@
       <language id="fr"><![CDATA[Nombre d&#39;items à afficher par page]]></language>
     </name>
   </property>
-  <property id="modulehitsperpage" index="true" stored="true" type="list" listid="hitcount" editable="true">Number of rows show on Module results 
+  <property id="modulehitsperpage" index="true" editable="true" datatype="list" stored="true" listid="hitcount">Number of rows show on Module results 
     <name>
       <language id="de"><![CDATA[Anzahl der Zeilen zeigen Modul Ergebnisse]]></language>
       <language id="en"><![CDATA[Number of rows show on Module results]]></language>
@@ -121,7 +121,7 @@
       <language id="fr"><![CDATA[Nombre de lignes affichées sur le module des résultats]]></language>
     </name>
   </property>
-  <property id="opencollections" index="true" stored="true" internalfield="true" editable="false">Open Album Tabs 
+  <property id="opencollections" index="true" editable="false" stored="true" internalfield="true">Open Album Tabs 
     <name>
       <language id="de"><![CDATA[offene Sammellaschen]]></language>
       <language id="en"><![CDATA[Open Album Tabs]]></language>
@@ -129,7 +129,7 @@
       <language id="fr"><![CDATA[Ouvrir Tables de Album]]></language>
     </name>
   </property>
-  <property id="selectedcollection" index="true" stored="true" internalfield="true" editable="false">Selected Album 
+  <property id="selectedcollection" index="true" editable="false" stored="true" internalfield="true">Selected Album 
     <name>
       <language id="de"><![CDATA[ausgewählte Sammlung]]></language>
       <language id="en"><![CDATA[Selected Album]]></language>
@@ -138,7 +138,7 @@
     </name>
   </property>
   <!--  Data Merge -->
-  <property id="asset/assettype/default/general" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="asset/assettype/default/general" index="true" keyword="true" editable="true" stored="false">New 
     <name>
       <language id="en"><![CDATA[asset/assettype/default/general]]></language>
       <language id="de"><![CDATA[Vermögenswert/Vermögenswertart/Standard/allgemein]]></language>
@@ -146,7 +146,7 @@
       <language id="es"><![CDATA[Activo/tipo de activo/default/general]]></language>
     </name>
   </property>
-  <property id="resultview" index="true" stored="true" editable="true" type="list">New 
+  <property id="resultview" index="true" editable="true" datatype="list" stored="true">New 
     <name>
       <language id="de"><![CDATA[Standardergebnisansicht]]></language>
       <language id="en"><![CDATA[Default Result View]]></language>
@@ -154,7 +154,7 @@
       <language id="fr"><![CDATA[Vue de Résultat Par Défaut]]></language>
     </name>
   </property>
-  <property id="saveforall" index="true" type="boolean" internalfield="true" editable="true">
+  <property id="saveforall" index="true" editable="true" datatype="boolean" internalfield="true">
     <name>
       <language id="en"><![CDATA[Save For All Users]]></language>
       <language id="de"><![CDATA[Für alle Benutzer speichern]]></language>
@@ -162,7 +162,7 @@
       <language id="es"><![CDATA[Guardar para todos los usuarios]]></language>
     </name>
   </property>
-  <property id="sendcollectionnotifications" index="true" type="boolean" internalfield="true" editable="false">
+  <property id="sendcollectionnotifications" index="true" editable="false" datatype="boolean" internalfield="true">
     <name>
       <language id="en"><![CDATA[Receive Album Notifications]]></language>
       <language id="de"><![CDATA[Album-Benachrichtigungen empfangen]]></language>
@@ -170,7 +170,7 @@
       <language id="es"><![CDATA[Recibir notificaciones de álbumes]]></language>
     </name>
   </property>
-  <property id="sendapprovalnotifications" index="true" type="boolean" internalfield="true" editable="false">
+  <property id="sendapprovalnotifications" index="true" editable="false" datatype="boolean" internalfield="true">
     <name>
       <language id="en"><![CDATA[Receive Approval / Rejection Notifications]]></language>
       <language id="de"><![CDATA[Empfangen von Genehmigungs-/Ablehnungsbekanntgaben]]></language>
@@ -178,7 +178,7 @@
       <language id="es"><![CDATA[Recibir notificaciones de aprobación o rechazo]]></language>
     </name>
   </property>
-  <property id="sendchatnotifications" index="true" type="boolean" internalfield="true" editable="true">
+  <property id="sendchatnotifications" index="true" editable="true" datatype="boolean" internalfield="true">
     <name>
       <language id="en"><![CDATA[Disable Chat Notifications]]></language>
       <language id="de"><![CDATA[Chat-Benachrichtigungen deaktivieren]]></language>
@@ -186,7 +186,7 @@
       <language id="es"><![CDATA[Desactivar las notificaciones de chat]]></language>
     </name>
   </property>
-  <property id="lastviewedapp" index="true" internalfield="true" editable="true">
+  <property id="lastviewedapp" index="true" editable="true" internalfield="true">
     <name>
       <language id="en"><![CDATA[Last Viewed Application]]></language>
       <language id="de"><![CDATA[Zuletzt angezeigte Anwendung]]></language>
@@ -194,7 +194,7 @@
       <language id="es"><![CDATA[Última aplicación vista]]></language>
     </name>
   </property>
-  <property id="shortdateformat" index="true" internalfield="true" editable="true" note=" yyyy-MM-dd , MM-dd-yyyy , dd-MM-yyyy">
+  <property id="shortdateformat" index="true" editable="true" internalfield="true" note=" yyyy-MM-dd , MM-dd-yyyy , dd-MM-yyyy">
     <name>
       <language id="en"><![CDATA[Preferred Date Format]]></language>
       <language id="de"><![CDATA[Bevorzugtes Datumsformat]]></language>
@@ -203,7 +203,7 @@
     </name>
   </property>
   <!-- These are here in case they need to be overriden. Not prefered -->
-  <property id="screenname" index="true" stored="true" keyword="true" editable="true">
+  <property id="screenname" index="true" keyword="true" editable="true" stored="true">
     <name>
       <language id="en"><![CDATA[Screen Name]]></language>
       <language id="de"><![CDATA[Benutzername]]></language>
@@ -211,7 +211,7 @@
       <language id="es"><![CDATA[Nombre de usuario]]></language>
     </name>
   </property>
-  <property id="firstName" index="true" stored="true" keyword="true" editable="true">
+  <property id="firstName" index="true" keyword="true" editable="true" stored="true">
     <name>
       <language id="en"><![CDATA[First Name]]></language>
       <language id="de"><![CDATA[Vorname]]></language>
@@ -219,7 +219,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name>
   </property>
-  <property id="lastName" index="true" stored="true" keyword="true" editable="true">
+  <property id="lastName" index="true" keyword="true" editable="true" stored="true">
     <name>
       <language id="en"><![CDATA[Last Name]]></language>
       <language id="de"><![CDATA[Nachname]]></language>
@@ -227,7 +227,7 @@
       <language id="es"><![CDATA[Apellido]]></language>
     </name>
   </property>
-  <property id="email" index="true" stored="true" keyword="true" editable="true" indextype="not_analyzed">
+  <property id="email" index="true" keyword="true" editable="true" stored="true" indextype="not_analyzed">
     <name>
       <language id="en"><![CDATA[Email]]></language>
       <language id="de"><![CDATA[E-Mail]]></language>
@@ -235,7 +235,7 @@
       <language id="es"><![CDATA[Correo electrónico]]></language>
     </name>
   </property>
-  <property id="assetportrait" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="userprofiles/${id}">
+  <property id="assetportrait" index="true" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="userprofiles/${id}">
     <name>
       <language id="en"><![CDATA[Profile Picture]]></language>
       <language id="de"><![CDATA[Profilbild]]></language>
@@ -243,7 +243,7 @@
       <language id="es"><![CDATA[Foto de perfil]]></language>
     </name>
   </property>
-  <property id="usercollection" index="true" stored="true" editable="false">
+  <property id="usercollection" index="true" editable="false" stored="true">
     <name>
       <language id="en"><![CDATA[User Colletion]]></language>
       <language id="de"><![CDATA[Benutzersammlung]]></language>
@@ -251,7 +251,7 @@
       <language id="es"><![CDATA[Colección de usuarios]]></language>
     </name>
   </property>
-  <property id="sidebarcomponent" index="true" deleted="false" editable="true" stored="true">
+  <property id="sidebarcomponent" index="true" editable="true" stored="true" deleted="false">
     <name>
       <language id="en"><![CDATA[Sidebar Component]]></language>
       <language id="de"><![CDATA[Sidebar-Komponente]]></language>
@@ -259,7 +259,7 @@
       <language id="es"><![CDATA[Componente de barra lateral]]></language>
     </name>
   </property>
-  <property id="defaultmodule" index="true" deleted="false" editable="true" stored="true">
+  <property id="defaultmodule" index="true" editable="true" stored="true" deleted="false">
     <name>
       <language id="en"><![CDATA[Default Module]]></language>
       <language id="de"><![CDATA[Standardmodul]]></language>
@@ -267,7 +267,7 @@
       <language id="es"><![CDATA[Módulo predeterminado]]></language>
     </name>
   </property>
-  <property id="mainsearchmodule" index="true" deleted="false" editable="true" stored="true">
+  <property id="mainsearchmodule" index="true" editable="true" stored="true" deleted="false">
     <name>
       <language id="en"><![CDATA[Main Search Module]]></language>
       <language id="de"><![CDATA[Hauptsuchmodul]]></language>
@@ -275,7 +275,7 @@
       <language id="es"><![CDATA[Módulo de búsqueda principal]]></language>
     </name>
   </property>
-  <property id="workspace" type="list" listid="workspace" editable="true" index="true" stored="true" viewtype="multiselect">Workspace
+  <property id="workspace" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="workspace">Workspace
     <name>
       <language id="en"><![CDATA[Workspace]]></language>
       <language id="de"><![CDATA[Arbeitsbereich]]></language>
@@ -283,7 +283,7 @@
       <language id="es"><![CDATA[Espacio de trabajo]]></language>
     </name>
   </property>
-  <property id="dataconsent" type="boolean" editable="true" index="true" stored="true">
+  <property id="dataconsent" index="true" editable="true" datatype="boolean" stored="true">
     <name>
       <language id="en"><![CDATA[Data Consent]]></language>
       <language id="de"><![CDATA[Datenschutz]]></language>
@@ -291,7 +291,7 @@
       <language id="es"><![CDATA[Consentimiento de datos]]></language>
     </name>
   </property>
-  <property id="datadeleterequested" type="date" datatype="date" editable="true" index="true" stored="true">
+  <property id="datadeleterequested" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en"><![CDATA[Data Delete Requested]]></language>
       <language id="de"><![CDATA[Datenschutz]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="processingstatus" type="list" editable="true" index="true" stored="true" listid="llmstatus"> 
+  <property id="processingstatus" index="true" editable="true" datatype="list" stored="true" listid="llmstatus"> 
     <name> 
       <language id="en"><![CDATA[Processing status]]></language>  
       <language id="de"><![CDATA[Verarbeitungsstatus]]></language>

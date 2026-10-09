@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties prefix="assets" beanname="transientSearcher"> 
-  <property id="id" index="true" stored="true" editable="false">Id 
+  <property id="id" index="true" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="assetid" index="true" keyword="true" stored="true" type="list" listid="asset" viewtype="text" editable="false">Asset Id 
+  <property id="assetid" index="true" keyword="true" editable="false" viewtype="text" datatype="list" stored="true" listid="asset">Asset Id 
     <name> 
       <language id="de"><![CDATA[Asset-ID]]></language>  
       <language id="en"><![CDATA[Asset Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[ID Item]]></language> 
     </name> 
   </property>  
-  <property id="status" type="list" editable="true" index="true" stored="true" viewtype="list" listid="convertstatus">Status 
+  <property id="status" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="convertstatus">Status 
     <name> 
       <language id="de"><![CDATA[Status]]></language>  
       <language id="en"><![CDATA[Status]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Statut]]></language> 
     </name> 
   </property>  
-  <property id="submitteddate" type="date" searchcomponent="datesearch"  viewtype="datetime" index="true" stored="true" editable="false">Submission Date 
+  <property id="submitteddate" index="true" editable="false" viewtype="datetime" searchcomponent="datesearch" datatype="date" stored="true">Submission Date 
     <name> 
       <language id="de"><![CDATA[Abgabetermin]]></language>  
       <language id="en"><![CDATA[Submission Date]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Date de soumission]]></language> 
     </name> 
   </property>  
-  <property id="completed" type="date" searchcomponent="datesearch"  viewtype="datetime" index="true" stored="true" editable="false">Completed Date 
+  <property id="completed" index="true" editable="false" viewtype="datetime" searchcomponent="datesearch" datatype="date" stored="true">Completed Date 
     <name> 
       <language id="de"><![CDATA[Abschlussdatum]]></language>  
       <language id="en"><![CDATA[Completed Date]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[date d&#39;achèvement]]></language> 
     </name> 
   </property>  
-  <property id="presetid" editable="true" index="true" type="list" viewtype="list" listid="convertpreset" stored="true">Preset ID 
+  <property id="presetid" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="convertpreset">Preset ID 
     <name> 
       <language id="de"><![CDATA[Preset-ID]]></language>  
       <language id="en"><![CDATA[Preset ID]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Preset ID]]></language> 
     </name> 
   </property>  
-  <property id="externalid" index="true" stored="true" editable="false">Remote Job ID 
+  <property id="externalid" index="true" editable="false" stored="true">Remote Job ID 
     <name> 
       <language id="de"><![CDATA[Remote-Job-ID]]></language>  
       <language id="en"><![CDATA[Remote Job ID]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[ID Télétravail]]></language> 
     </name> 
   </property>  
-  <property id="orderid" index="true" type="list" stored="true" editable="false">Associated Order ID 
+  <property id="orderid" index="true" editable="false" datatype="list" stored="true">Associated Order ID 
     <name> 
       <language id="de"><![CDATA[verbunden sind, um id]]></language>  
       <language id="en"><![CDATA[Associated Order ID]]></language>  
@@ -65,7 +65,7 @@
       <language id="fr"><![CDATA[ID commande associée]]></language> 
     </name> 
   </property>  
-  <property id="itemid" index="true" type="list" stored="true" editable="false">Associated Order Item 
+  <property id="itemid" index="true" editable="false" datatype="list" stored="true">Associated Order Item 
     <name> 
       <language id="de"><![CDATA[assoziiert Auftragsposition]]></language>  
       <language id="en"><![CDATA[Associated Order Item]]></language>  
@@ -73,7 +73,7 @@
       <language id="fr"><![CDATA[Item de la commande associée]]></language> 
     </name> 
   </property>  
-  <property id="errordetails" index="true" stored="true" editable="false">Error Details 
+  <property id="errordetails" index="true" editable="false" stored="true">Error Details 
     <name> 
       <language id="de"><![CDATA[Fehlerdetails]]></language>  
       <language id="en"><![CDATA[Error Details]]></language>  
@@ -81,7 +81,7 @@
       <language id="fr"><![CDATA[Détails de l&#39;erreur]]></language> 
     </name> 
   </property>  
-  <property id="errorcount" index="true" stored="true" editable="false">Error Count 
+  <property id="errorcount" index="true" editable="false" stored="true">Error Count 
     <name> 
       <language id="de"><![CDATA[Fehleranzahl]]></language>  
       <language id="en"><![CDATA[Error Count]]></language>  
@@ -89,7 +89,7 @@
       <language id="fr"><![CDATA[Nombre d&#39;erreur]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" index="true" stored="true" editable="false">Source Path 
+  <property id="sourcepath" index="true" editable="false" stored="true">Source Path 
     <name> 
       <language id="de"><![CDATA[Source-Pfad]]></language>  
       <language id="en"><![CDATA[Source Path]]></language>  
@@ -97,7 +97,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="pagenumber" index="true" stored="true" editable="false">Page Number 
+  <property id="pagenumber" index="true" editable="false" stored="true">Page Number 
     <name> 
       <language id="de"><![CDATA[Seitennummer]]></language>  
       <language id="en"><![CDATA[Page Number]]></language>  
@@ -105,7 +105,7 @@
       <language id="fr"><![CDATA[Numéro de page]]></language> 
     </name> 
   </property>  
-  <property id="ordering" type="number" index="true" stored="true" editable="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -113,7 +113,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="x1" index="true" stored="true" editable="true">X1 
+  <property id="x1" index="true" editable="true" stored="true">X1 
     <name> 
       <language id="de"><![CDATA[X1]]></language>  
       <language id="en"><![CDATA[X1]]></language>  
@@ -121,7 +121,7 @@
       <language id="fr"><![CDATA[X1]]></language> 
     </name> 
   </property>  
-  <property id="y1" index="true" stored="true" editable="true">Y1 
+  <property id="y1" index="true" editable="true" stored="true">Y1 
     <name> 
       <language id="de"><![CDATA[Y1]]></language>  
       <language id="en"><![CDATA[Y1]]></language>  
@@ -129,7 +129,7 @@
       <language id="fr"><![CDATA[Y1]]></language> 
     </name> 
   </property>  
-  <property id="prefwidth" index="true" stored="true" editable="true">Pref Width 
+  <property id="prefwidth" index="true" editable="true" stored="true">Pref Width 
     <name> 
       <language id="de"><![CDATA[pref Breite]]></language>  
       <language id="en"><![CDATA[Pref Width]]></language>  
@@ -137,7 +137,7 @@
       <language id="fr"><![CDATA[Pref Largeur]]></language> 
     </name> 
   </property>  
-  <property id="prefheight" index="true" stored="true" editable="true">Pref Height 
+  <property id="prefheight" index="true" editable="true" stored="true">Pref Height 
     <name> 
       <language id="de"><![CDATA[pref Höhe]]></language>  
       <language id="en"><![CDATA[Pref Height]]></language>  
@@ -145,7 +145,7 @@
       <language id="fr"><![CDATA[Pref Hauteur]]></language> 
     </name> 
   </property>  
-  <property id="cropwidth" type="number" editable="true" index="true" stored="true">Crop Width
+  <property id="cropwidth" index="true" editable="true" datatype="number" stored="true">Crop Width
     <name>
       <language id="de"><![CDATA[Crop Breite]]></language>
       <language id="en"><![CDATA[Crop Width]]></language>
@@ -153,7 +153,7 @@
       <language id="fr"><![CDATA[Largueur de recadrage]]></language>
     </name>
   </property>
-  <property id="cropheight" type="number" editable="true" index="true" stored="true">Crop Height
+  <property id="cropheight" index="true" editable="true" datatype="number" stored="true">Crop Height
     <name>
       <language id="de"><![CDATA[Crop Höhe]]></language>
       <language id="en"><![CDATA[Crop Height]]></language>
@@ -161,7 +161,7 @@
       <language id="fr"><![CDATA[Hauteur de recadrage]]></language>
     </name>
   </property>
-  <property id="force" index="true" stored="true" editable="true">Force 
+  <property id="force" index="true" editable="true" stored="true">Force 
     <name> 
       <language id="de"><![CDATA[Kraft]]></language>  
       <language id="en"><![CDATA[Force]]></language>  
@@ -169,7 +169,7 @@
       <language id="fr"><![CDATA[Obliger]]></language> 
     </name> 
   </property>  
-  <property id="crop" index="true" stored="true" editable="true">Crop 
+  <property id="crop" index="true" editable="true" stored="true">Crop 
     <name> 
       <language id="de"><![CDATA[Ernte]]></language>  
       <language id="en"><![CDATA[Crop]]></language>  
@@ -177,7 +177,7 @@
       <language id="fr"><![CDATA[Recadrage]]></language> 
     </name> 
   </property>  
-  <property id="useinput" index="true" stored="true" editable="true">Use Input
+  <property id="useinput" index="true" editable="true" stored="true">Use Input
     <name>
       <language id="de"><![CDATA[verwenden Eingabe]]></language>
       <language id="en"><![CDATA[Use Input]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-  <property id="tutorial" index="true" stored="true" editable="true" type="list" listid="entitytutorial">
+  <property id="tutorial" index="true" editable="true" datatype="list" stored="true" listid="entitytutorial">
     <name>
       <language id="en">Tutorial</language>
       <language id="de"><![CDATA[Tutorium]]></language>

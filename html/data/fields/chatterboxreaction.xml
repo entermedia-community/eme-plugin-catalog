@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Character]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="messageid" index="true" editable="true" stored="true" type="list"> 
+  <property id="messageid" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Message Id]]></language>  
       <language id="de"><![CDATA[Nachrichten-ID]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[ID del mensaje]]></language>
     </name> 
   </property>  
-  <property id="user" index="true" editable="false" stored="true" viewtype="user" datatype="list"> 
+  <property id="user" index="true" editable="false" viewtype="user" datatype="list" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="date" index="true" datatype="date" editable="false" stored="true"> 
+  <property id="date" index="true" editable="false" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  

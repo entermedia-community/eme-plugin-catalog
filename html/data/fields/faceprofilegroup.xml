@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" keyword="true" rendermask="${samplecount}"> 
+  <property id="name" index="true" keyword="true" editable="true" stored="true" rendermask="${samplecount}"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
       <language id="de"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
+  <property id="creationdate" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="primaryimage" index="true" stored="true" editable="true" type="list" viewtype="faceprofilebox" listid="asset" internalfield="false" datatype="list" sourcepath="entities/${id}"> 
+  <property id="primaryimage" index="true" editable="true" viewtype="faceprofilebox" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="entities/${id}"> 
     <name> 
       <language id="en"><![CDATA[Primary Image]]></language>  
       <language id="de"><![CDATA[Primärbild]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Imagen principal]]></language>
     </name> 
   </property>  
-  <property id="automatictagging" index="true" datatype="boolean" editable="true"> 
+  <property id="automatictagging" index="true" editable="true" datatype="boolean"> 
     <name> 
       <language id="en"><![CDATA[Automaticaly Tagged]]></language>  
       <language id="de"><![CDATA[Automatisch markiert]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Etiquetado automáticamente]]></language>
     </name> 
   </property>  
-  <property id="taggedby" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" filter="true" keyword="true" stored="true" editable="true">Owner 
+  <property id="taggedby" index="true" filter="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user" listcatalogid="system">Owner 
     <name> 
       <language id="en"><![CDATA[Tagged By]]></language>  
       <language id="de"><![CDATA[Markiert von]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Etiquetado por]]></language>
     </name> 
   </property>  
-  <property id="notes" editable="true" index="true" stored="true"> 
+  <property id="notes" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Notizen]]></language>  
       <language id="en"><![CDATA[Notes]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Remarques]]></language> 
     </name> 
   </property>  
-  <property id="entitysourcetype" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+  <property id="entitysourcetype" index="true" filter="true" keyword="true" editable="true" datatype="list" stored="true" listid="module"> 
     <name> 
       <language id="en"> <![CDATA[Entity Source Type]]> </language>  
       <language id="de"><![CDATA[Entitätsquellentyp]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Tipo de entidad de origen]]></language>
     </name> 
   </property>  
-  <property id="facecounter" editable="false" index="true" stored="true" datatype="number" autoincrement="true" indextype="not_analyzed"> 
+  <property id="facecounter" index="true" editable="false" datatype="number" stored="true" indextype="not_analyzed" autoincrement="true"> 
     <name> 
       <language id="en"><![CDATA[Profile Id]]></language>  
       <language id="de"><![CDATA[Profil-ID]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[ID de perfil]]></language>
     </name> 
   </property>  
-  <property id="samplecount" editable="false" index="true" stored="true" datatype="number" indextype="not_analyzed"> 
+  <property id="samplecount" index="true" editable="false" datatype="number" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Counter]]></language>  
       <language id="de"><![CDATA[Zähler]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Contador]]></language>
     </name> 
   </property>  
-  <property id="hitscount" editable="false" index="true" stored="true" datatype="number" indextype="not_analyzed"> 
+  <property id="hitscount" index="true" editable="false" datatype="number" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Hits Counter]]></language>  
       <language id="de"><![CDATA[Trefferzähler]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Contador de Visitas]]></language>
     </name> 
   </property>  
-  <property id="faceprofilestatus" index="true" stored="true" type="list" viewtype="multiselect" listid="faceprofilestatus" editable="true"> 
+  <property id="faceprofilestatus" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="faceprofilestatus"> 
     <name> 
       <language id="en"><![CDATA[Profile Status]]></language>  
       <language id="de"><![CDATA[Profilstatus]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Estado del perfil]]></language>
     </name> 
   </property>  
-  <property id="description" defaultoperation="freeform" index="true" stored="true" editable="false">All Fields 
+  <property id="description" index="true" editable="false" stored="true" defaultoperation="freeform">All Fields 
     <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  
@@ -105,7 +105,7 @@
       <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
   </property>  
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true">Tags 
+  <property id="keywords" index="true" filter="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
@@ -113,7 +113,7 @@
       <language id="fr"><![CDATA[Tags]]></language> 
     </name> 
   </property>  
-  <property id="entity_date" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date"> 
+  <property id="entity_date" index="true" keyword="true" editable="true" viewtype="date" datatype="date" stored="true"> 
     <!-- not really a filter -->  
     <name> 
       <language id="en"> <![CDATA[Date]]> </language>  
@@ -122,7 +122,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="entityresourceURL" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="entityresourceURL" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[resourceURL]]> </language>  
       <language id="de"><![CDATA[RessourcenURL]]></language>
@@ -130,7 +130,7 @@
       <language id="es"><![CDATA[resourceURL]]></language>
     </name> 
   </property>  
-  <property id="entityperson" index="true" stored="true" editable="true" keyword="true" datatype="list" rendertype="entity"> 
+  <property id="entityperson" index="true" keyword="true" editable="true" datatype="list" stored="true" rendertype="entity"> 
     <name> 
       <language id="en"> <![CDATA[Person]]> </language>  
       <language id="de"><![CDATA[Person]]></language>

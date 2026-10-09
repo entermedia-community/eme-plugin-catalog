@@ -2,7 +2,7 @@
 
 <properties beanname="folderSearcher"> 
 
-<property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id
+<property id="id" index="true" sortable="true" filter="false" keyword="false" editable="true" stored="true" internalfield="true">Id
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -11,7 +11,7 @@
     </name> 
   </property> 
   
-  <property id="name" index="true" multilanguage="true" filter="false" editable="true" stored="true" sortable="true" keyword="false">Name
+  <property id="name" index="true" sortable="true" filter="false" keyword="false" editable="true" multilanguage="true" stored="true">Name
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -20,9 +20,7 @@
     </name> 
   </property>  
    
-	<property id="ordering" editable="false" index="true"
-		stored="true" datatype="number" viewtype="autoincrement"
-		indextype="not_analyzed">
+	<property id="ordering" index="true" editable="false" viewtype="autoincrement" datatype="number" stored="true" indextype="not_analyzed">
 		Ordering
 	</property>
    

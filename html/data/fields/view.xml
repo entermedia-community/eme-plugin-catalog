@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true" multilanguage="true"> 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="byassettype" type="boolean" editable="true" index="true" stored="true">By Asset Type 
+  <property id="byassettype" index="true" editable="true" datatype="boolean" stored="true">By Asset Type 
     <name> 
       <language id="de"><![CDATA[nach Art der Vermögenswerte]]></language>  
       <language id="en"><![CDATA[By Asset Type]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Par Type d&#39;actif]]></language> 
     </name> 
   </property>  
-  <property id="systemdefined" type="boolean" editable="true" index="true" stored="true">System Defined 
+  <property id="systemdefined" index="true" editable="true" datatype="boolean" stored="true">System Defined 
     <name> 
       <language id="de"><![CDATA[System definiert]]></language>  
       <language id="en"><![CDATA[System Defined]]></language>  
@@ -33,13 +33,13 @@
       <language id="fr"><![CDATA[Défini par le système]]></language> 
     </name> 
   </property>  
-  <property id="moduleid" index="true" stored="true" legacy="module" editable="false" type="list" listid="module" rendertype="default"> 
+  <property id="moduleid" index="true" editable="false" datatype="list" stored="true" listid="module" rendertype="default" legacy="module"> 
     <name> 
       <language id="en"><![CDATA[Searchtype]]></language>  
       <language id="es"><![CDATA[Searchtype]]></language>  
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -47,7 +47,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="rendertype" type="list" editable="true" index="true" stored="true" listid="entitytabrendertype">Render Type 
+  <property id="rendertype" index="true" editable="true" datatype="list" stored="true" listid="entitytabrendertype">Render Type 
     <name> 
       <language id="de"><![CDATA[render-Typ]]></language>  
       <language id="en"><![CDATA[Render Type]]></language>  
@@ -55,7 +55,7 @@
       <language id="fr"><![CDATA[Type de rendu]]></language> 
     </name> 
   </property>  
-  <property id="rendertable" index="true" stored="true" editable="true" type="list" listid="searchtypes">
+  <property id="rendertable" index="true" editable="true" datatype="list" stored="true" listid="searchtypes">
     <name> 
       <language id="de"><![CDATA[Tabelle]]></language>  
       <language id="en"><![CDATA[Table]]></language>  
@@ -63,7 +63,7 @@
       <language id="fr"><![CDATA[Tableau]]></language> 
     </name> 
   </property>  
-  <property id="renderexternalid" index="true" stored="true" editable="true">Table External ID 
+  <property id="renderexternalid" index="true" editable="true" stored="true">Table External ID 
     <name> 
       <language id="de"><![CDATA[Tabelle externe ID]]></language>  
       <language id="en"><![CDATA[Table External ID]]></language>  
@@ -71,7 +71,7 @@
       <language id="fr"><![CDATA[Tableau ID externe]]></language> 
     </name> 
   </property>  
-  <property id="renderinternalid" index="true" stored="true" editable="true"> 
+  <property id="renderinternalid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Table Internal Field ID]]></language>  
       <language id="de"><![CDATA[Tabelleninterne Feld-ID]]></language>
@@ -79,7 +79,7 @@
       <language id="es"><![CDATA[Identificación del campo interno de la tabla]]></language>
     </name> 
   </property>  
-  <property id="rendercustomview" index="true" stored="true" editable="true">Renderer Custom View 
+  <property id="rendercustomview" index="true" editable="true" stored="true">Renderer Custom View 
     <name> 
       <language id="de"><![CDATA[Renderer benutzerdefinierte Ansicht]]></language>  
       <language id="en"><![CDATA[Renderer Custom View]]></language>  
@@ -87,7 +87,7 @@
       <language id="fr"><![CDATA[Vue de rendu personnalisée]]></language> 
     </name> 
   </property>  
-  <property id="showonsearch" editable="true" index="true" stored="true" type="boolean"> 
+  <property id="showonsearch" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Show on Search Pages]]></language>  
       <language id="de"><![CDATA[Anzeigen auf Suchseiten]]></language>
@@ -95,7 +95,7 @@
       <language id="es"><![CDATA[Mostrar en las páginas de búsqueda]]></language>
     </name> 
   </property>  
-  <property id="deleted" editable="true" index="true" stored="true" type="boolean"> 
+  <property id="deleted" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Deleted]]></language>  
       <language id="de"><![CDATA[Entfernt]]></language>

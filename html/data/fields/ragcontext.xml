@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Consulta original]]></language>
     </name> 
   </property>  
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" editable="true" index="true"> 
+  <property id="keywords" index="true" keyword="true" editable="true" viewtype="tageditor" defaultoperation="andgroup"> 
     <name> 
       <language id="en"><![CDATA[Parsed Keywords]]></language>  
       <language id="de"><![CDATA[Geparste Schlüsselwörter]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Palabras clave analizadas]]></language>
     </name> 
   </property>  
-  <property id="context" index="true" editable="true" viewtype="text" rendertype="text" keyword="true"> 
+  <property id="context" index="true" keyword="true" editable="true" viewtype="text" rendertype="text"> 
     <name> 
       <language id="en"><![CDATA[Collected Context]]></language>  
       <language id="de"><![CDATA[Gesammelter Kontext]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Contexto recopilado]]></language>
     </name> 
   </property>  
-  <property id="ragstatus" foreignkeyid="ragstatus" index="true" stored="true" editable="true" type="list"> 
+  <property id="ragstatus" index="true" editable="true" datatype="list" stored="true" foreignkeyid="ragstatus"> 
     <name> 
       <language id="en"><![CDATA[Rag Status]]></language>  
       <language id="de"><![CDATA[Kleidungsstatus]]></language>

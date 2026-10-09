@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="catalogid" index="true" stored="true" editable="true">New 
+  <property id="catalogid" index="true" editable="true" stored="true">New 
     <name> 
       <language id="de"><![CDATA[CatalogID]]></language>  
       <language id="en"><![CDATA[CatalogID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID Catalogue]]></language> 
     </name> 
   </property>  
-  <property id="dataid" index="true" keyword="true" stored="true" editable="true">New 
+  <property id="dataid" index="true" keyword="true" editable="true" stored="true">New 
     <name> 
       <language id="en"><![CDATA[dataid]]></language>  
       <language id="de"><![CDATA[Daten-ID]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[dataid]]></language>
     </name> 
   </property>  
-  <property id="assetids" index="true" stored="true" editable="true">New 
+  <property id="assetids" index="true" editable="true" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Asset-IDs]]></language>  
       <language id="en"><![CDATA[Asset Ids]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Ids items]]></language> 
     </name> 
   </property>  
-  <property id="date" index="true" stored="true" editable="false" type="date" datatype="date">New 
+  <property id="date" index="true" editable="false" datatype="date" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Date]]></language> 
     </name> 
   </property>  
-  <property id="operation" index="true" indextype="not_analyzed" stored="true"> 
+  <property id="operation" index="true" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="de"><![CDATA[Betrieb]]></language>  
       <language id="en"><![CDATA[Operation]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Opération]]></language> 
     </name> 
   </property>  
-  <property id="user" index="true" stored="true" editable="false" type="list" viewtype="user">New 
+  <property id="user" index="true" editable="false" viewtype="user" datatype="list" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User Name]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" index="true" stored="true" editable="false" internalfield="false">New 
+  <property id="sourcepath" index="true" editable="false" stored="true" internalfield="false">New 
     <name> 
       <language id="de"><![CDATA[Source-Pfad]]></language>  
       <language id="en"><![CDATA[Source Path]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">New 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  

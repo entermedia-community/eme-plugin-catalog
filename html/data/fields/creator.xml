@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="firstname" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="firstname" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[firstname]]></language>  
       <language id="de"><![CDATA[Vorname]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[nombre]]></language>
     </name> 
   </property>  
-  <property id="lastname" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="lastname" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[lastname]]></language>  
       <language id="de"><![CDATA[Nachname]]></language>

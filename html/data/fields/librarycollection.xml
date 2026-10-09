@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="urlname" index="true" stored="true" editable="true" note="just the label My-Project"> 
+  <property id="urlname" index="true" editable="true" stored="true" note="just the label My-Project"> 
     <name> 
       <language id="en"><![CDATA[Url Name]]></language>  
       <language id="de"><![CDATA[URL-Name]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Nombre de la URL]]></language>
     </name> 
   </property>  
-  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
+  <property id="creationdate" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="startdate" index="true" stored="true" editable="true" type="date" viewtype="date" datatype="date">Start Date 
+  <property id="startdate" index="true" editable="true" viewtype="date" datatype="date" stored="true">Start Date 
     <name> 
       <language id="de"><![CDATA[Anfangsdatum]]></language>  
       <language id="en"><![CDATA[Start Date]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Date de début]]></language> 
     </name> 
   </property>  
-  <property id="deliverydate" index="true" stored="true" editable="true" type="date" datatype="date">Delivery Date 
+  <property id="deliverydate" index="true" editable="true" datatype="date" stored="true">Delivery Date 
     <name> 
       <language id="de"><![CDATA[Lieferdatum]]></language>  
       <language id="en"><![CDATA[Delivery Date]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Date de livraison]]></language> 
     </name> 
   </property>  
-  <property id="recorddate" index="true" stored="true" editable="true" type="date" datatype="date">Update Date 
+  <property id="recorddate" index="true" editable="true" datatype="date" stored="true">Update Date 
     <name> 
       <language id="de"><![CDATA[Aktualisierungsdatum]]></language>  
       <language id="en"><![CDATA[Update Date]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Date de mise à jour]]></language> 
     </name> 
   </property>  
-  <property id="library" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="library" datatype="list"> 
+  <property id="library" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="library"> 
     <name> 
       <language id="de"><![CDATA[Bibliothek]]></language>  
       <language id="en"><![CDATA[Library]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Bibliothèque]]></language> 
     </name> 
   </property>  
-  <property id="addnotifypolicy" index="true" type="list" listid="librarycollection/addnotifypolicy" stored="true" editable="true" note="[[Who do we notify when assets are added]]">Send Notifications 
+  <property id="addnotifypolicy" index="true" editable="true" datatype="list" stored="true" note="[[Who do we notify when assets are added]]" listid="librarycollection/addnotifypolicy">Send Notifications 
     <name> 
       <language id="de"><![CDATA[Benachrichtigungen versenden]]></language>  
       <language id="en"><![CDATA[Send Notifications]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Envoyer Notifications]]></language> 
     </name> 
   </property>  
-  <property id="revisions" index="true" stored="true" editable="true" type="number"> 
+  <property id="revisions" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Revisionen]]></language>  
       <language id="en"><![CDATA[Revisions]]></language>  
@@ -65,7 +65,7 @@
       <language id="fr"><![CDATA[Révisions]]></language> 
     </name> 
   </property>  
-  <property id="collectiontype" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
+  <property id="collectiontype" index="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Collection Type]]></language>  
       <language id="de"><![CDATA[Sammlungstyp]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Tipo de colección]]></language>
     </name> 
   </property>  
-  <property id="visibility" index="true" stored="true" type="list" listid="librarycollectionvisibility" editable="true"> 
+  <property id="visibility" index="true" editable="true" datatype="list" stored="true" listid="librarycollectionvisibility"> 
     <name> 
       <language id="de"><![CDATA[Sichtweite]]></language>  
       <language id="en"><![CDATA[Visibility]]></language>  
@@ -81,7 +81,7 @@
       <language id="fr"><![CDATA[Visibilité]]></language> 
     </name> 
   </property>  
-  <property id="projectstatus" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list">Project Status 
+  <property id="projectstatus" index="true" editable="true" viewtype="list" datatype="list" stored="true">Project Status 
     <name> 
       <language id="de"><![CDATA[Projekt-Status]]></language>  
       <language id="en"><![CDATA[Project Status]]></language>  
@@ -89,7 +89,7 @@
       <language id="fr"><![CDATA[Etat du projet]]></language> 
     </name> 
   </property>  
-  <property id="projecttype" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list">Project Type 
+  <property id="projecttype" index="true" editable="true" viewtype="list" datatype="list" stored="true">Project Type 
     <name> 
       <language id="de"><![CDATA[Projekttyp]]></language>  
       <language id="en"><![CDATA[Project Type]]></language>  
@@ -98,7 +98,7 @@
     </name> 
   </property>  
   
-  <property id="parentcategories" index="true" viewtype="multiselect" datatype="list" listid="category" stored="true" note="Auto populated" editable="false"> 
+  <property id="parentcategories" index="true" editable="false" viewtype="multiselect" datatype="list" stored="true" note="Auto populated" listid="category"> 
     <name> 
       <language id="en"><![CDATA[Parent Categories]]></language>  
       <language id="de"><![CDATA[Elternkategorien]]></language>
@@ -106,7 +106,7 @@
       <language id="es"><![CDATA[Categorías parentales]]></language>
     </name> 
   </property>  
-  <property id="lastmodifieddatesent" index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"> 
+  <property id="lastmodifieddatesent" index="true" viewtype="datetime" searchcomponent="datesearch" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Notified On]]></language>  
       <language id="de"><![CDATA[Benachrichtigt am]]></language>
@@ -114,7 +114,7 @@
       <language id="es"><![CDATA[Notificado el]]></language>
     </name> 
   </property>  
-  <property id="lastmodifieddate" index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"> 
+  <property id="lastmodifieddate" index="true" viewtype="datetime" searchcomponent="datesearch" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Asset Modified]]></language>  
       <language id="de"><![CDATA[Vermögenswert geändert]]></language>
@@ -133,7 +133,7 @@
   <!-- Approvals -->  
   <!--property id="assetclients.clientid" datatype="textjoin" index="true" stored="true" listid="clients" query="assetclients.assetid = asset.id">Asset Clients</property -->  
   <!-- Geo Location -->  
-  <property id="geo_point" internalfield="false" type="geo_point" datatype="geo_point" viewtype="map" index="true" stored="true" externalid="GPS Latitude,GPS Longitude" searchcomponent="locationsearch" editable="true">Position 
+  <property id="geo_point" index="true" editable="true" viewtype="map" searchcomponent="locationsearch" datatype="geo_point" stored="true" internalfield="false" externalid="GPS Latitude,GPS Longitude">Position 
     <name> 
       <language id="de"><![CDATA[Position]]></language>  
       <language id="en"><![CDATA[Position]]></language>  
@@ -141,7 +141,7 @@
       <language id="fr"><![CDATA[Position]]></language> 
     </name> 
   </property>  
-  <property id="city" index="true" stored="true" editable="true"> 
+  <property id="city" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[City / State]]></language>  
       <language id="de"><![CDATA[Stadt / Bundesland]]></language>
@@ -149,7 +149,7 @@
       <language id="es"><![CDATA[Ciudad / Estado]]></language>
     </name> 
   </property>  
-  <property id="country" index="true" stored="true" editable="true" viewtype="list" type="list"> 
+  <property id="country" index="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Land]]></language>  
       <language id="en"><![CDATA[Country]]></language>  
@@ -157,7 +157,7 @@
       <language id="fr"><![CDATA[Pays]]></language> 
     </name> 
   </property>  
-  <property id="street" index="true" stored="true" editable="true"> 
+  <property id="street" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Street]]></language>  
       <language id="de"><![CDATA[Straße]]></language>
@@ -173,7 +173,7 @@
       <language id="es"><![CDATA[Dirección con formato geográfico]]></language>
     </name> 
   </property>  
-  <property id="assetportrait" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="assetportrait" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="asset" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" rendertype="asset" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Portrait Photo]]></language>  
       <language id="de"><![CDATA[Porträtfoto]]></language>
@@ -181,7 +181,7 @@
       <language id="es"><![CDATA[Foto de retrato]]></language>
     </name> 
   </property>  
-  <property id="assetbanner" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" autocreatefromexif="false" keyword="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" writenametoexif="false">New 
+  <property id="assetbanner" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="asset" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" rendertype="asset" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Background Photo]]></language>  
       <language id="de"><![CDATA[Hintergrundbild]]></language>
@@ -189,7 +189,7 @@
       <language id="es"><![CDATA[Foto de fondo]]></language>
     </name> 
   </property>  
-  <property id="collectivebanner" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" autocreatefromexif="false" keyword="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" writenametoexif="false">New 
+  <property id="collectivebanner" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="asset" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" rendertype="asset" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Banner Photo]]></language>  
       <language id="de"><![CDATA[Bannerfoto]]></language>
@@ -197,7 +197,7 @@
       <language id="es"><![CDATA[Foto de cabecera]]></language>
     </name> 
   </property> L
-  <property id="collectivedescription" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="collectivedescription" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Projektbeschreibung]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
@@ -205,7 +205,7 @@
       <language id="fr"><![CDATA[Description du projet]]></language> 
     </name> 
   </property>  
-  <property id="manifesto" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="manifesto" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Manifesto / Mission]]></language>  
       <language id="de"><![CDATA[Manifest / Mission]]></language>
@@ -213,7 +213,7 @@
       <language id="es"><![CDATA[Manifiesto / Misión]]></language>
     </name> 
   </property>  
-  <property id="collectivetags" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true">User Tags 
+  <property id="collectivetags" index="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup">User Tags 
     <name> 
       <language id="de"><![CDATA[Nutzer-Tags]]></language>  
       <language id="en"><![CDATA[Hashtags]]></language>  
@@ -221,7 +221,7 @@
       <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="communitytag" legacy="communitytagcategory" index="true" stored="true" editable="true" filter="true" datatype="list" type="list"> 
+  <property id="communitytag" index="true" filter="true" editable="true" datatype="list" stored="true" legacy="communitytagcategory"> 
     <name> 
       <language id="en"><![CDATA[Community]]></language>  
       <language id="de"><![CDATA[Gemeinschaft]]></language>
@@ -229,7 +229,7 @@
       <language id="es"><![CDATA[Comunidad]]></language>
     </name> 
   </property>  
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true" sortable="true">Tags 
+  <property id="keywords" index="true" sortable="true" filter="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
@@ -237,7 +237,7 @@
       <language id="fr"><![CDATA[Tags]]></language> 
     </name> 
   </property>  
-  <property id="facebooklink" index="true" stored="true" editable="true"> 
+  <property id="facebooklink" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Facebook]]></language>  
       <language id="de"><![CDATA[Facebook]]></language>
@@ -245,7 +245,7 @@
       <language id="es"><![CDATA[Facebook]]></language>
     </name> 
   </property>  
-  <property id="twitterlink" index="true" stored="true" editable="true"> 
+  <property id="twitterlink" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[X (Twitter)]]></language>  
       <language id="de"><![CDATA[X (Twitter)]]></language>
@@ -253,7 +253,7 @@
       <language id="es"><![CDATA[X (Twitter)]]></language>
     </name> 
   </property>  
-  <property id="githublink" index="true" stored="true" editable="true"> 
+  <property id="githublink" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[GitHub]]></language>  
       <language id="de"><![CDATA[GitHub]]></language>
@@ -261,7 +261,7 @@
       <language id="es"><![CDATA[GitHub]]></language>
     </name> 
   </property>  
-  <property id="linkedinlink" index="true" stored="true" editable="true"> 
+  <property id="linkedinlink" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[LinkedIn]]></language>  
       <language id="de"><![CDATA[LinkedIn]]></language>
@@ -269,7 +269,7 @@
       <language id="es"><![CDATA[LinkedIn]]></language>
     </name> 
   </property>  
-  <property id="instagramlink" index="true" stored="true" editable="true"> 
+  <property id="instagramlink" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Instagram]]></language>  
       <language id="de"><![CDATA[Instagram]]></language>
@@ -277,7 +277,7 @@
       <language id="es"><![CDATA[Instagram]]></language>
     </name> 
   </property>  
-  <property id="websitelink" index="true" stored="true" editable="true"> 
+  <property id="websitelink" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Web Site]]></language>  
       <language id="de"><![CDATA[Webseite]]></language>
@@ -285,7 +285,7 @@
       <language id="es"><![CDATA[Sitio web]]></language>
     </name> 
   </property>  
-  <property id="invoicebusinessinfo" index="true" stored="true" editable="true" viewtype="html"> 
+  <property id="invoicebusinessinfo" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Business Info (Invoice)]]></language>  
       <language id="de"><![CDATA[Geschäftsinformationen (Rechnung)]]></language>
@@ -293,7 +293,7 @@
       <language id="es"><![CDATA[Información de la empresa (factura)]]></language>
     </name> 
   </property>  
-  <property id="invoicelogo" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="asset" rendertype="asset" required="false" filter="false" multilanguage="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" autocreatefromexif="false" keyword="false" writenametoexif="false"> 
+  <property id="invoicelogo" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="asset" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}" rendertype="asset" writenametoexif="false" autocreatefromexif="false"> 
     <name> 
       <language id="en"><![CDATA[Invoice Logo]]></language>  
       <language id="de"><![CDATA[Rechnungslogo]]></language>
@@ -301,10 +301,10 @@
       <language id="es"><![CDATA[Logotipo de la factura]]></language>
     </name> 
   </property>  
-  <property id="contactname" index="true" stored="true" keyword="true" editable="true">Contact Name</property>  
-  <property id="contactemail" index="true" stored="true" keyword="true" editable="true" indextype="not_analyzed">Email</property>  
-  <property id="contactphone" index="true" stored="true" keyword="true" editable="true">Phone</property>  
-  <property id="vision" index="true" stored="true" viewtype="html" editable="true" keyword="true"> 
+  <property id="contactname" index="true" keyword="true" editable="true" stored="true">Contact Name</property>  
+  <property id="contactemail" index="true" keyword="true" editable="true" stored="true" indextype="not_analyzed">Email</property>  
+  <property id="contactphone" index="true" keyword="true" editable="true" stored="true">Phone</property>  
+  <property id="vision" index="true" keyword="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Vision]]></language>  
       <language id="de"><![CDATA[Vision]]></language>
@@ -312,8 +312,8 @@
       <language id="es"><![CDATA[Visión]]></language>
     </name> 
   </property>  
-  <property id="collectionimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}">Image</property>  
-  <property id="automatictagging" index="true" datatype="boolean" editable="true"> 
+  <property id="collectionimage" index="true" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="/uploads/${id}/settings/${formattedyear}/${shortguid}">Image</property>  
+  <property id="automatictagging" index="true" editable="true" datatype="boolean"> 
     <name> 
       <language id="en"><![CDATA[Automatic Tagging]]></language>  
       <language id="de"><![CDATA[Automatische Kennzeichnung]]></language>
@@ -324,7 +324,7 @@
   <!-- 
 https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/208?fullscreen=true&showtabssearch=false&autostart=true
  -->  
-  <property id="streamurl" index="true" stored="true" editable="true"> 
+  <property id="streamurl" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Streaming URL]]></language>  
       <language id="de"><![CDATA[Streaming-URL]]></language>
@@ -332,7 +332,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[URL de streaming]]></language>
     </name> 
   </property>  
-  <property id="chatparentid" index="true" stored="true" type="list" listid="chatterbox"> 
+  <property id="chatparentid" index="true" datatype="list" stored="true" listid="chatterbox"> 
     <name> 
       <language id="en"><![CDATA[Chat Parent]]></language>  
       <language id="de"><![CDATA[Chat mit Eltern]]></language>
@@ -340,7 +340,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Chat con el padre]]></language>
     </name> 
   </property>  
-  <property id="timezone" index="true" internalfield="false" editable="true" isbadge="false" required="false" multilanguage="false" filter="false" deleted="false" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+  <property id="timezone" index="true" filter="false" keyword="false" editable="true" multilanguage="false" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Time Zone]]></language>  
       <language id="de"><![CDATA[Zeitzone]]></language>
@@ -348,7 +348,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Zona horaria]]></language>
     </name> 
   </property>  
-  <property id="sessioncalcdate" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="sessioncalcdate" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="date" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" highlight="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[sessioncalcdate]]></language>  
       <language id="de"><![CDATA[Sitzungsdatum]]></language>
@@ -356,7 +356,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[fechacalc]]></language>
     </name> 
   </property>  
-  <property id="totalsessionsused" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="totalsessionsused" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="number" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" highlight="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[totalsessionsused]]></language>  
       <language id="de"><![CDATA[Gesamtverwendete Sitzungen]]></language>
@@ -364,7 +364,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Total de sesiones utilizadas]]></language>
     </name> 
   </property>  
-  <property id="remainingsessions" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="remainingsessions" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="number" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" highlight="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[remainingsessions]]></language>  
       <language id="de"><![CDATA[Verbleibende Sitzungen]]></language>
@@ -372,7 +372,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[las sesiones restantes]]></language>
     </name> 
   </property>  
-  <property id="totalsessionspurchased" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="totalsessionspurchased" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="number" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" highlight="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[totalsessionspurchased]]></language>  
       <language id="de"><![CDATA[Gesamtzahl der gekauften Sitzungen]]></language>
@@ -380,7 +380,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Total de sesiones compradas]]></language>
     </name> 
   </property>  
-  <property id="organizationstatus" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="organizationstatus" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" highlight="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Status]]></language>  
       <language id="de"><![CDATA[Status]]></language>
@@ -388,7 +388,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Estado]]></language>
     </name> 
   </property>  
-  <property id="priviacylevel" index="true" stored="true" type="list" listid="projectprivacylevel" editable="true" defaultvalue="community"> 
+  <property id="priviacylevel" index="true" editable="true" datatype="list" stored="true" listid="projectprivacylevel" defaultvalue="community"> 
     <name> 
       <language id="en"><![CDATA[Privacy Level]]></language>  
       <language id="de"><![CDATA[Datenschutzeinstellung]]></language>
@@ -396,7 +396,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Nivel de privacidad]]></language>
     </name> 
   </property>  
-  <property id="storedescription" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="storedescription" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Store Description]]></language>  
       <language id="de"><![CDATA[Ladenbeschreibung]]></language>
@@ -404,7 +404,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Descripción de la tienda]]></language>
     </name> 
   </property>  
-  <property id="campaignhighlights" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="campaignhighlights" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Campaign Highlights]]></language>  
       <language id="de"><![CDATA[Höhepunkte der Kampagne]]></language>
@@ -412,7 +412,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Puntos destacados de la campaña]]></language>
     </name> 
   </property>  
-  <property id="proposalproblem" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="proposalproblem" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Problem]]></language>  
       <language id="de"><![CDATA[Das Problem]]></language>
@@ -420,7 +420,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[El problema]]></language>
     </name> 
   </property>  
-  <property id="proposalcauses" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="proposalcauses" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Root Causes]]></language>  
       <language id="de"><![CDATA[Ursachen]]></language>
@@ -428,7 +428,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Causas raíz]]></language>
     </name> 
   </property>  
-  <property id="proposalempowerment" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="proposalempowerment" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Empowerment]]></language>  
       <language id="de"><![CDATA[Empowerment]]></language>
@@ -436,7 +436,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Empoderamiento]]></language>
     </name> 
   </property>  
-  <property id="proposaltestimonials" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="proposaltestimonials" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Testimonials]]></language>  
       <language id="de"><![CDATA[Zeugnisse]]></language>
@@ -444,7 +444,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Testimonios]]></language>
     </name> 
   </property>  
-  <property id="featuredcollection" index="true" type="boolean" keyword="false" filter="false" editable="true"> 
+  <property id="featuredcollection" index="true" filter="false" keyword="false" editable="true" datatype="boolean"> 
     <name> 
       <language id="en"><![CDATA[Featured]]></language>  
       <language id="de"><![CDATA[Hervorgehoben]]></language>
@@ -452,7 +452,7 @@ https://videoplayer.telvue.com/player/5QlcS026fQy98qR8aFzKSh5DvYNq1NKn/stream/20
       <language id="es"><![CDATA[Destacado]]></language>
     </name> 
   </property>  
-  <property id="serverstatus" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
+  <property id="serverstatus" index="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Server Status]]></language>  
       <language id="de"><![CDATA[Serverstatus]]></language>

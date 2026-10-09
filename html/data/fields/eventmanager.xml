@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" editable="true" keyword="true"> 
+  <property id="id" index="true" keyword="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[id]]></language>  
       <language id="de"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[id]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" editable="true" keyword="true"> 
+  <property id="name" index="true" keyword="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
       <language id="de"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="notes" index="true" editable="true" keyword="true"> 
+  <property id="notes" index="true" keyword="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Notes]]></language>  
       <language id="de"><![CDATA[Anmerkungen]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
-  <property id="lastrandate" index="true" editable="true" keyword="true" internalfield="false" isbadge="false" required="false" multilanguage="false" datatype="date" autocreatefromexif="false" writenametoexif="false"> 
+  <property id="lastrandate" index="true" keyword="true" editable="true" multilanguage="false" datatype="date" internalfield="false" required="false" isbadge="false" writenametoexif="false" autocreatefromexif="false"> 
     <name> 
       <language id="en"><![CDATA[Last Ran Date]]></language>  
       <language id="de"><![CDATA[Letztes Ausführungsdatum]]></language>
@@ -38,12 +38,12 @@
 TODO: Add lastrannodeid?
 Add logs?
 
-  <property id="notificationproperties" index="true" keyword="true" stored="true" editable="true" datatype="objectarray" viewtype="notificationproperties"> 
+  <property id="notificationproperties" index="true" keyword="true" editable="true" viewtype="notificationproperties" datatype="objectarray" stored="true"> 
     <name> 
       <language id="en">Properties</language>  
     </name> 
-    <property id="key" index="true" stored="true" editable="true">key</property>
-    <property id="value" index="true" stored="true" editable="true">Value</property>   
+    <property id="key" index="true" editable="true" stored="true">key</property>
+    <property id="value" index="true" editable="true" stored="true">Value</property>   
   </property>
    --> 
 </properties>

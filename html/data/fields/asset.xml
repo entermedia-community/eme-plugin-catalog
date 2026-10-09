@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
+  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="collectiveproduct" index="true" stored="true" editable="true" viewtype="list" type="list"> 
+  <property id="collectiveproduct" index="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Store Product]]></language>  
       <language id="de"><![CDATA[Produkt im Sortiment]]></language>

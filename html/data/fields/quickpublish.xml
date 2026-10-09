@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" stored="true" editable="false">Id 
+  <property id="id" index="true" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="convertpreset" type="list" index="true" stored="true" editable="true">Conversion 
+  <property id="convertpreset" index="true" editable="true" datatype="list" stored="true">Conversion 
     <name> 
       <language id="de"><![CDATA[Umwandlung]]></language>  
       <language id="en"><![CDATA[Conversion]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Conversion]]></language> 
     </name> 
   </property>  
-  <property id="publishdestination" type="list" index="true" stored="true" editable="true">Preset ID
+  <property id="publishdestination" index="true" editable="true" datatype="list" stored="true">Preset ID
     <name>
       <language id="de"><![CDATA[Preset-ID]]></language>
       <language id="en"><![CDATA[Preset ID]]></language>

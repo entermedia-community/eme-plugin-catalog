@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false"> 
+  <property id="id" index="true" sortable="true" filter="false" keyword="false" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" filter="false" editable="false" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection"> 
+  <property id="collectionid" index="true" sortable="true" filter="false" keyword="false" editable="false" datatype="list" stored="true" listid="librarycollection"> 
     <name> 
       <language id="de"><![CDATA[Sammlung ID]]></language>  
       <language id="en"><![CDATA[Collection Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Id Collection]]></language> 
     </name> 
   </property>  
-  <property id="expensedescription" index="true" editable="true" stored="true" viewtype="textarea"> 
+  <property id="expensedescription" index="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Details]]></language>  
       <language id="de"><![CDATA[Details]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Detalles]]></language>
     </name> 
   </property>  
-  <property id="currencytype" index="true" editable="true" stored="true" datatype="list" listid="currencytype" defaultvalue="1"> 
+  <property id="currencytype" index="true" editable="true" datatype="list" stored="true" listid="currencytype" defaultvalue="1"> 
     <name> 
       <language id="en"><![CDATA[Currency Type]]></language>  
       <language id="es"><![CDATA[Moneda]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Type de monnaie]]></language>
     </name> 
   </property>  
-  <property id="total" index="true" editable="true" stored="true" type="double" required="true"> 
+  <property id="total" index="true" editable="true" datatype="double" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Total Price]]></language>  
       <language id="de"><![CDATA[Gesamtpreis]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Precio total]]></language>
     </name> 
   </property>  
-  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="date" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="date" stored="true" internalfield="false" required="true" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Date Added]]></language>  
       <language id="de"><![CDATA[Hinzugefügt am]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Fecha de creación]]></language>
     </name> 
   </property>  
-  <property id="user" index="true" viewtype="userdefault" type="list" listcatalogid="system" listid="user" filter="true" keyword="true" stored="true" editable="true"> 
+  <property id="user" index="true" filter="true" keyword="true" editable="true" viewtype="userdefault" datatype="list" stored="true" listid="user" listcatalogid="system"> 
     <name> 
       <language id="en"><![CDATA[Expense Approval]]></language>  
       <language id="de"><![CDATA[Ausgabenfreigabe]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Aprobación de gastos]]></language>
     </name> 
   </property>  
-  <property id="reimburseuser" index="true" viewtype="userdefault" type="list" listcatalogid="system" listid="user" filter="true" keyword="true" stored="true" editable="true"> 
+  <property id="reimburseuser" index="true" filter="true" keyword="true" editable="true" viewtype="userdefault" datatype="list" stored="true" listid="user" listcatalogid="system"> 
     <name> 
       <language id="en"><![CDATA[Reimbursed to]]></language>  
       <language id="de"><![CDATA[Rückerstattung an]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Reembolsado a]]></language>
     </name> 
   </property>  
-  <property id="ispaid" index="true" stored="true" type="boolean"> 
+  <property id="ispaid" index="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[Payment Issued]]> </language>  
       <language id="de"><![CDATA[Zahlungseingang]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Pago emitido]]></language>
     </name> 
   </property>  
-  <property id="paidfromaccount" viewtype="bankaccount" searchcomponent="bankaccount" index="true" editable="true" stored="true" datatype="list" listid="bankaccount" defaultvalue="1"> 
+  <property id="paidfromaccount" index="true" editable="true" viewtype="bankaccount" searchcomponent="bankaccount" datatype="list" stored="true" listid="bankaccount" defaultvalue="1"> 
     <name> 
       <language id="en"> <![CDATA[Account Balance]]> </language>  
       <language id="de"><![CDATA[Kontostand]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Saldo de cuenta]]></language>
     </name> 
   </property>  
-  <property id="paymentdate" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="paymentdate" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="date" stored="true" internalfield="false" required="true" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Paid Date]]></language>  
       <language id="de"><![CDATA[Zahlungsdatum]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Fecha de pago]]></language>
     </name> 
   </property>  
-  <property id="paymentdescription" index="true" editable="true" stored="true" viewtype="textarea"> 
+  <property id="paymentdescription" index="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[How Paid]]></language>  
       <language id="de"><![CDATA[Wie bezahlt wird]]></language>

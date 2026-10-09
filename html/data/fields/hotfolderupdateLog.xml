@@ -2,7 +2,7 @@
 
 <properties> 
   
-  <property id="date" datatype="date" viewtype="time" index="true" stored="true" editable="false" type="date">Date
+  <property id="date" index="true" editable="false" viewtype="time" datatype="date" stored="true">Date
     <name>
       <language id="de"><![CDATA[Datum]]></language>
       <language id="en"><![CDATA[Date]]></language>

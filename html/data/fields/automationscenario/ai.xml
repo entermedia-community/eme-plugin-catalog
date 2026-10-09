@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-<property id="taggedbyllm" type="boolean" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+<property id="taggedbyllm" index="true" sortable="true" filter="false" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Tagged by LLM]]></language>  
       <language id="de"><![CDATA[Von einem LLM markiert]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Etiquetado por LLM]]></language>
     </name> 
   </property>  
-  <property id="llmerror" type="boolean" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+  <property id="llmerror" index="true" sortable="true" filter="false" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[LLM Error]]></language>  
       <language id="de"><![CDATA[LLM-Fehler]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="entitydocument" index="true" stored="true" editable="true" type="list" viewtype="entity" datatype="list" required="true"> 
+  <property id="entitydocument" index="true" editable="true" viewtype="entity" datatype="list" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Document Entity]]></language>  
       <language id="de"><![CDATA[Dokumentenentität]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Entidad del documento]]></language>
     </name> 
   </property>  
-  <property id="parentasset" index="true" stored="true" editable="true" type="list" viewtype="asset" datatype="list"> 
+  <property id="parentasset" index="true" editable="true" viewtype="asset" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Parent Document Asset]]></language>  
       <language id="de"><![CDATA[Stammdokumenten-Asset]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Activo del documento original]]></language>
     </name> 
   </property>  
-  <property id="primaryimage" index="true" stored="true" editable="false" type="list" viewtype="documentpage"> 
+  <property id="primaryimage" index="true" editable="false" viewtype="documentpage" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Page Preview]]></language>  
       <language id="de"><![CDATA[Seitenvorschau]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Vista previa de la página]]></language>
     </name> 
   </property>  
-  <property id="primarymedia" index="true" stored="true" editable="false" type="list" viewtype="documentpage" listid="asset" internalfield="false" datatype="list" sourcepath="${data.sourcepath}/${filename}"> 
+  <property id="primarymedia" index="true" editable="false" viewtype="documentpage" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="${data.sourcepath}/${filename}"> 
     <name> 
       <language id="en"><![CDATA[Selected File]]></language>  
       <language id="de"><![CDATA[Ausgewählte Datei]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Archivo seleccionado]]></language>
     </name> 
   </property>  
-  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" viewtype="textarea"> 
+  <property id="longcaption" index="true" keyword="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Main Text]]></language>  
       <language id="de"><![CDATA[Haupttext]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Texto principal]]></language>
     </name> 
   </property>  
-  <property id="aisummary" keyword="true" index="true" editable="true" stored="true" viewtype="textarea"> 
+  <property id="aisummary" index="true" keyword="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[AI Summary]]></language>  
       <language id="de"><![CDATA[KI-Zusammenfassung]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Resumen de la IA]]></language>
     </name> 
   </property>  
-  <property id="pagenum" datatype="number" viewtype="number" index="true" stored="true" searchcomponent="numbersearch" type="number" required="true" editable="true"> 
+  <property id="pagenum" index="true" editable="true" viewtype="number" searchcomponent="numbersearch" datatype="number" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Page Number]]></language>  
       <language id="de"><![CDATA[Seitennummer]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Número de página]]></language>
     </name> 
   </property>  
-  <property id="synapsis" indextype="not_analyzed" multilanguage="false" index="true" stored="true" editable="true" aicreationcommand="A short comprehensive summary synapsis of the content."> 
+  <property id="synapsis" index="true" editable="true" multilanguage="false" stored="true" indextype="not_analyzed" aicreationcommand="A short comprehensive summary synapsis of the content."> 
     <name> 
       <language id="en"><![CDATA[Content Synapsis]]></language>  
       <language id="de"><![CDATA[Inhaltssynapsis]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Sintaxis del contenido]]></language>
     </name> 
   </property>  
-  <property id="taggedbyllm" type="boolean" index="true" stored="true" editable="true"> 
+  <property id="taggedbyllm" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Tagged by LLM]]></language>  
       <language id="de"><![CDATA[Von einem LLM markiert]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Etiquetado por LLM]]></language>
     </name> 
   </property>  
-  <property id="llmerror" type="boolean" index="true" stored="true" editable="true"> 
+  <property id="llmerror" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[LLM Error]]></language>  
       <language id="de"><![CDATA[LLM-Fehler]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Error del LLM]]></language>
     </name> 
   </property>  
-  <property id="semanticnamednouns" viewtype="tageditor" keyword="true" index="true" stored="true" editable="true"> 
+  <property id="semanticnamednouns" index="true" keyword="true" editable="true" viewtype="tageditor" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Named Entity Recognition]]></language>  
       <language id="de"><![CDATA[Named Entity Recognition]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Reconocimiento de Entidades Nombradas]]></language>
     </name> 
   </property>  
-  <property id="semanticnamednounsindexed" type="boolean" index="true" stored="true" editable="true"> 
+  <property id="semanticnamednounsindexed" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Named Entity Indexed]]></language>  
       <language id="de"><![CDATA[Benannte Entitäten-Index]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Índice de entidades nombradas]]></language>
     </name> 
   </property>  
-  <property id="entitylocation" index="true" aiautocreated="true" aiautocreateddescription="Names of all the places (cities, states, countries, or well-known places) mentioned in the metadata" stored="true" editable="true" type="list" viewtype="entity" datatype="list"> 
+  <property id="entitylocation" index="true" editable="true" viewtype="entity" datatype="list" stored="true" aiautocreated="true" aiautocreateddescription="Names of all the places (cities, states, countries, or well-known places) mentioned in the metadata"> 
     <name> 
       <language id="en"><![CDATA[Places]]></language>  
       <language id="de"><![CDATA[Orte]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Lugares]]></language>
     </name> 
   </property>  
-  <property id="entitycompany" index="true" aiautocreated="true" aiautocreateddescription="Names of all the companies mentioned in the metadata." stored="true" editable="true" type="list" viewtype="entity" datatype="list"> 
+  <property id="entitycompany" index="true" editable="true" viewtype="entity" datatype="list" stored="true" aiautocreated="true" aiautocreateddescription="Names of all the companies mentioned in the metadata."> 
     <name> 
       <language id="en"><![CDATA[Companies]]></language>  
       <language id="de"><![CDATA[Unternehmen]]></language>
@@ -113,7 +113,7 @@
       <language id="es"><![CDATA[Empresas]]></language>
     </name> 
   </property>  
-  <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown"> 
+  <property id="markdowncontent" index="true" keyword="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>

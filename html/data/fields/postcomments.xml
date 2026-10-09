@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" class="postComment"> 
-  <property id="id" index="true" internalfield="true" editable="true" stored="true">New 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  

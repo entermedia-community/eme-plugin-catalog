@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="pattern" editable="true" stored="true" index="true">Name 
+  <property id="pattern" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="en"><![CDATA[Pattern]]></language>  
       <language id="de"><![CDATA[Muster]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Patrón]]></language>
     </name> 
   </property>  
-  <property id="dateformat" editable="true" stored="true" index="true">Name 
+  <property id="dateformat" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="en"><![CDATA[Date format]]></language>  
       <language id="de"><![CDATA[Datumsformat]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Formato de fecha]]></language>
     </name> 
   </property>  
-  <property id="ordering" editable="true" index="true" type="number" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  

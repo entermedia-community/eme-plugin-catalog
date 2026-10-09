@@ -2,61 +2,61 @@
 
 <properties beanname="dataSearcher">
 
-  <property id="selectedoption" type="list" listid="mcqoptions" index="true" editable="true" stored="true">Selected Option
+  <property id="selectedoption" index="true" editable="true" datatype="list" stored="true" listid="mcqoptions">Selected Option
     <name>
       <language id="en"><![CDATA[Selected Option]]></language>
     </name>
   </property>
 
-  <property id="answerconfidence" type="list" listid="answerconfidence" index="true" editable="true" stored="true">Confidence
+  <property id="answerconfidence" index="true" editable="true" datatype="list" stored="true" listid="answerconfidence">Confidence
     <name>
       <language id="en"><![CDATA[Confidence]]></language>
     </name>
   </property>
 
-  <property id="entityquestion" type="list" listid="entityquestion" index="true" editable="true" stored="true">Entity Question
+  <property id="entityquestion" index="true" editable="true" datatype="list" stored="true" listid="entityquestion">Entity Question
     <name>
       <language id="en"><![CDATA[Entity Question]]></language>
     </name>
   </property>
 
-  <property id="channel" type="list" listid="channel" index="true" editable="true" stored="true">Channel
+  <property id="channel" index="true" editable="true" datatype="list" stored="true" listid="channel">Channel
     <name>
       <language id="en"><![CDATA[Channel]]></language>
     </name>
   </property>
 
-  <property id="datecreated" type="date" index="true" editable="true" stored="true">Date Created
+  <property id="datecreated" index="true" editable="true" datatype="date" stored="true">Date Created
     <name>
       <language id="en"><![CDATA[Date Created]]></language>
     </name>
   </property>
   
-  <property id="lastpenalty" type="date" index="true" editable="true" stored="true">Last Penalty
+  <property id="lastpenalty" index="true" editable="true" datatype="date" stored="true">Last Penalty
     <name>
       <language id="en"><![CDATA[Last Penalty]]></language>
     </name>
   </property>
 
-  <property id="user" type="list" listid="user" index="true" editable="true" stored="true">User
+  <property id="user" index="true" editable="true" datatype="list" stored="true" listid="user">User
     <name>
       <language id="en"><![CDATA[User]]></language>
     </name>
   </property>
 
-  <property id="pointsearned" editable="true" index="true" stored="true" type="double" datatype="double">Points Earned
+  <property id="pointsearned" index="true" editable="true" datatype="double" stored="true">Points Earned
     <name>
       <language id="en"><![CDATA[Points Earned]]></language>
     </name>
   </property>
 
-  <property id="bonusearned" editable="true" index="true" stored="true" type="double" datatype="double">Bonus Earned
+  <property id="bonusearned" index="true" editable="true" datatype="double" stored="true">Bonus Earned
     <name>
       <language id="en"><![CDATA[Bonus Earned]]></language>
     </name>
   </property>
 
-  <property id="iscorrect" editable="true" index="true" stored="true" type="boolean" datatype="boolean">Is Correct
+  <property id="iscorrect" index="true" editable="true" datatype="boolean" stored="true">Is Correct
     <name>
       <language id="en"><![CDATA[Is Correct]]></language>
     </name>

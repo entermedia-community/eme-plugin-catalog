@@ -2,7 +2,7 @@
 
 <properties>
 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name>
       <language id="de"><![CDATA[Ich würde]]></language>
       <language id="en"><![CDATA[ID]]></language>
@@ -11,7 +11,7 @@
     </name>
   </property>
 
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name>
       <language id="de"><![CDATA[Name]]></language>
       <language id="en"><![CDATA[Name]]></language>

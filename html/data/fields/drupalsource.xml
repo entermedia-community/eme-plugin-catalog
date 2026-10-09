@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" stored="true" editable="false">Id 
+  <property id="id" index="true" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Spitzname]]></language>  
       <language id="en"><![CDATA[Nick Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Surnom]]></language> 
     </name> 
   </property>  
-  <property id="remoteroot" editable="true" index="true" stored="true"> 
+  <property id="remoteroot" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Remote Root]]></language>  
       <language id="de"><![CDATA[Remote Root]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Raíz remota]]></language>
     </name> 
   </property>  
-  <property id="remoteapipath" editable="true" index="true" stored="true"> 
+  <property id="remoteapipath" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Api Path]]></language>  
       <language id="de"><![CDATA[API-Pfad]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Ruta de API]]></language>
     </name> 
   </property>  
-  <property id="structure" editable="true" index="true" stored="true"> 
+  <property id="structure" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Structure]]></language>  
       <language id="de"><![CDATA[Struktur]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Estructura]]></language>
     </name> 
   </property>  
-  <property id="drupalcontenttype" editable="true" index="true" stored="true"> 
+  <property id="drupalcontenttype" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Content Type]]></language>  
       <language id="de"><![CDATA[Inhaltstyp]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Tipo de contenido]]></language>
     </name> 
   </property>  
-  <property id="sortfield" editable="true" index="true" stored="true"> 
+  <property id="sortfield" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Sort Field]]></language>  
       <language id="de"><![CDATA[Sortierfeld]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Campo de ordenación]]></language>
     </name> 
   </property>  
-  <property id="startfrom" editable="true" index="true" stored="true"> 
+  <property id="startfrom" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Start From]]></language>  
       <language id="de"><![CDATA[Starten Sie]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Comienza desde]]></language>
     </name> 
   </property>  
-  <property id="moduleid" index="true" editable="true" isbadge="false" required="false" multilanguage="false" deleted="false" datatype="list" stored="true" listid="module"> 
+  <property id="moduleid" index="true" editable="true" multilanguage="false" datatype="list" stored="true" required="false" deleted="false" isbadge="false" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Module]]></language>  
       <language id="de"><![CDATA[Modul]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Módulo]]></language>
     </name> 
   </property>  
-  <property id="enabled" editable="true" index="true" stored="true" type="boolean">Enabled 
+  <property id="enabled" index="true" editable="true" datatype="boolean" stored="true">Enabled 
     <name> 
       <language id="de"><![CDATA[freigegeben]]></language>  
       <language id="en"><![CDATA[Enabled]]></language>  
@@ -81,7 +81,7 @@
       <language id="fr"><![CDATA[Activée]]></language> 
     </name> 
   </property>  
-  <property id="lastscanstart" index="true" stored="true" type="time" editable="true">Last Scan Start 
+  <property id="lastscanstart" index="true" editable="true" datatype="time" stored="true">Last Scan Start 
     <name> 
       <language id="de"><![CDATA[letzte Scanstart]]></language>  
       <language id="en"><![CDATA[Last Scan Start]]></language>  
@@ -89,7 +89,7 @@
       <language id="fr"><![CDATA[Dernière analyse]]></language> 
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  

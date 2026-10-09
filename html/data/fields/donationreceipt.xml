@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="amount" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="amount" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[amount]]></language>  
       <language id="de"><![CDATA[Betrag]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[cantidad]]></language>
     </name> 
   </property>  
-  <property id="donor" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="donor" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[donor]]></language>  
       <language id="de"><![CDATA[Spender]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[donante]]></language>
     </name> 
   </property>  
-  <property id="paymentid" index="true" listid="transaction" deleted="false" editable="true" stored="true">New 
+  <property id="paymentid" index="true" editable="true" stored="true" deleted="false" listid="transaction">New 
     <name> 
       <language id="en"><![CDATA[paymentid]]></language>  
       <language id="de"><![CDATA[Zahlungs-ID]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[paymentid]]></language>
     </name> 
   </property>  
-  <property id="donationdate" index="true" editable="true" stored="true" type="date" datatype="date"> 
+  <property id="donationdate" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Donation Date]]></language>  
       <language id="de"><![CDATA[Spendendatum]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Fecha de donación]]></language>
     </name> 
   </property>  
-  <property id="receiptstatus" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="receiptstatus" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[receiptstatus]]></language>  
       <language id="de"><![CDATA[Empfangsstatus]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[estado del recibo]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="false" filter="false" deleted="false" editable="true" stored="true" sortable="true" keyword="false">New 
+  <property id="name" index="true" sortable="true" filter="false" keyword="false" editable="true" multilanguage="false" stored="true" deleted="false">New 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  <property id="id" index="true" filter="false" internalfield="true" deleted="false" editable="true" stored="true" sortable="true" keyword="false">New 
+  <property id="id" index="true" sortable="true" filter="false" keyword="false" editable="true" stored="true" internalfield="true" deleted="false">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" listid="librarycollection" filter="false" deleted="false" editable="false" stored="true" sortable="true" keyword="false">New 
+  <property id="collectionid" index="true" sortable="true" filter="false" keyword="false" editable="false" stored="true" deleted="false" listid="librarycollection">New 
     <name> 
       <language id="de"><![CDATA[Sammlung ID]]></language>  
       <language id="en"><![CDATA[Collection Id]]></language>  

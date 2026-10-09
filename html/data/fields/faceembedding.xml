@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="false"> 
+  <property id="id" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
       <language id="de"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-  <property id="assetid" index="true" type="list" listid="asset" stored="true" editable="false" viewtype="default"> 
+  <property id="assetid" index="true" editable="false" viewtype="default" datatype="list" stored="true" listid="asset"> 
     <name> 
       <language id="de"><![CDATA[Asset-ID]]></language>  
       <language id="en"><![CDATA[Asset Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[ID Item]]></language> 
     </name> 
   </property>  
-  <property id="iscentroid" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="iscentroid" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Is Centroid]]></language>  
       <language id="de"><![CDATA[Ist der Schwerpunkt]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Es el centróide]]></language>
     </name> 
   </property>  
-  <property id="nearbycentroidids" index="true" stored="true" editable="true" listid="faceembedding" datatype="list" multiple="true"> 
+  <property id="nearbycentroidids" index="true" editable="true" datatype="list" stored="true" listid="faceembedding" multiple="true"> 
     <name> 
       <language id="en"><![CDATA[Nearest Face Cluster Id]]></language>  
       <language id="de"><![CDATA[Nächster Gesichtskluster-ID]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Duplicación de datos faciales]]></language>
     </name> 
   </property>  
-  <property id="entityperson" index="true" stored="true" editable="true" datatype="list" rendertype="entity"> 
+  <property id="entityperson" index="true" editable="true" datatype="list" stored="true" rendertype="entity"> 
     <name> 
       <language id="en"><![CDATA[Person]]></language>  
       <language id="de"><![CDATA[Person]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Persona]]></language>
     </name> 
   </property>  
-  <property id="timecodestart" index="true" viewtype="timelength" stored="true" datatype="double" searchcomponent="numbersearch" editable="false" type="double"> 
+  <property id="timecodestart" index="true" editable="false" viewtype="timelength" searchcomponent="numbersearch" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Face Data Time Code]]></language>  
       <language id="de"><![CDATA[Gesichtsdaten-Zeitcode]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Código de tiempo de datos faciales]]></language>
     </name> 
   </property>  
-  <property id="locationx" datatype="number" index="true" stored="true"> 
+  <property id="locationx" index="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[X Location]]></language>  
       <language id="de"><![CDATA[X Standort]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Ubicación X]]></language>
     </name> 
   </property>  
-  <property id="locationy" datatype="number" index="true" stored="true"> 
+  <property id="locationy" index="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Y Location]]></language>  
       <language id="de"><![CDATA[Y Standort]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Y Ubicación]]></language>
     </name> 
   </property>  
-  <property id="locationw" datatype="number" index="true" stored="true"> 
+  <property id="locationw" index="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Width]]></language>  
       <language id="de"><![CDATA[Breite]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Ancho]]></language>
     </name> 
   </property>  
-  <property id="locationh" datatype="number" index="true" stored="true"> 
+  <property id="locationh" index="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Height]]></language>  
       <language id="de"><![CDATA[Höhe]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Altura]]></language>
     </name> 
   </property>  
-  <property id="originalwidth" datatype="number" index="true" stored="true"> 
+  <property id="originalwidth" index="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Original Width]]></language>  
       <language id="de"><![CDATA[Ursprüngliche Breite]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Ancho original]]></language>
     </name> 
   </property>  
-  <property id="originalheight" datatype="number" index="true" stored="true"> 
+  <property id="originalheight" index="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Original Height]]></language>  
       <language id="de"><![CDATA[Ursprüngliche Höhe]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Altura original]]></language>
     </name> 
   </property>  
-  <property id="face_confidence" datatype="double" index="true" stored="true"> 
+  <property id="face_confidence" index="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Face Confidence]]></language>  
       <language id="de"><![CDATA[Gesichtserkennung]]></language>
@@ -113,7 +113,7 @@
       <language id="es"><![CDATA[Confianza en el rostro]]></language>
     </name> 
   </property>  
-  <property id="isremoved" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" filter="true" type="boolean"> 
+  <property id="isremoved" index="true" filter="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Is Removed]]></language>  
       <language id="de"><![CDATA[Entfernt]]></language>
@@ -121,7 +121,7 @@
       <language id="es"><![CDATA[Se ha eliminado]]></language>
     </name> 
   </property>  
-  <property id="hasotherfaces" datatype="boolean" index="true" stored="true" editable="true" filter="true" type="boolean"> 
+  <property id="hasotherfaces" index="true" filter="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Has Other Face]]></language>  
       <language id="de"><![CDATA[Hat ein anderes Gesicht]]></language>
@@ -129,7 +129,7 @@
       <language id="es"><![CDATA[Tiene otra cara]]></language>
     </name> 
   </property>  
-  <property id="removedby" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" filter="true" stored="true" editable="true"> 
+  <property id="removedby" index="true" filter="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user" listcatalogid="system"> 
     <name> 
       <language id="en"><![CDATA[Removed By]]></language>  
       <language id="de"><![CDATA[Entfernt von]]></language>
@@ -137,7 +137,7 @@
       <language id="es"><![CDATA[Eliminado por]]></language>
     </name> 
   </property>  
-  <property id="assignedby" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" filter="true" stored="true" editable="true"> 
+  <property id="assignedby" index="true" filter="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user" listcatalogid="system"> 
     <name> 
       <language id="en"><![CDATA[Assigned By]]></language>  
       <language id="de"><![CDATA[Zugewiesen von:]]></language>
@@ -145,7 +145,7 @@
       <language id="es"><![CDATA[Asignado por]]></language>
     </name> 
   </property>  
-  <property id="owner" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" filter="true" stored="true" editable="true">Owner 
+  <property id="owner" index="true" filter="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user" listcatalogid="system">Owner 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  

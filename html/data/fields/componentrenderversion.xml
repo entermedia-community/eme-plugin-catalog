@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="versiondate" index="true" stored="true" rendermask="${formatteddate}" editable="true" keyword="true" datatype="date" viewtype="date"> 
+  <property id="versiondate" index="true" keyword="true" editable="true" viewtype="date" datatype="date" stored="true" rendermask="${formatteddate}"> 
     <name> 
       <language id="en"><![CDATA[Date]]></language>  
       <language id="de"><![CDATA[Datum]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="componentrenderversiontype" type="list" listid="componentrenderversiontype" index="true" stored="true" editable="true">Type</property>  
-  <property id="entitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">Module</property>  
-  <property id="entityid" type="list" listid="modulesearch" index="true" stored="true" editable="true">Entity</property> 
+  <property id="componentrenderversiontype" index="true" editable="true" datatype="list" stored="true" listid="componentrenderversiontype">Type</property>  
+  <property id="entitymoduleid" index="true" editable="true" datatype="list" stored="true" listid="module">Module</property>  
+  <property id="entityid" index="true" editable="true" datatype="list" stored="true" listid="modulesearch">Entity</property> 
 </properties>

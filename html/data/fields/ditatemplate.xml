@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties lazy-init="true" beanname="listSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true" searchtype="color"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" searchtype="color"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" searchtype="color"> 
+  <property id="name" index="true" editable="true" stored="true" searchtype="color"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Nombre del archivo de la plantilla]]></language>
     </name> 
   </property>  
-  <property id="targetsubmoduleid" index="true" type="list" listid="module" editable="true"> 
+  <property id="targetsubmoduleid" index="true" editable="true" datatype="list" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Sub Module Type]]></language>  
       <language id="de"><![CDATA[Untermodultyp]]></language>

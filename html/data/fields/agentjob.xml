@@ -3,7 +3,7 @@
 <properties beanname="dataSearcher" class="agentjob">
 
 
-    <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+    <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -12,13 +12,13 @@
     </name> 
   </property>  
 
-  <property id="name" index="true" stored="true" editable="true">
+  <property id="name" index="true" editable="true" stored="true">
     <name>
       <language id="en">Job Name</language>
     </name>
   </property>
 
- <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown"> 
+ <property id="markdowncontent" index="true" keyword="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>
@@ -27,37 +27,37 @@
     </name> 
   </property> 
 
-  <property id="status" index="true" stored="true" editable="true" type="list" listid="jobstatus">
+  <property id="status" index="true" editable="true" datatype="list" stored="true" listid="jobstatus">
     <name>
       <language id="en">Status</language>
     </name>
   </property>
 
-  <property id="submitteddate" index="true" stored="true" editable="true" type="date">
+  <property id="submitteddate" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en">Submitted Date</language>
     </name>
   </property>
 
-  <property id="startdate" index="true" stored="true" editable="true" type="date">
+  <property id="startdate" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en">Start Date</language>
     </name>
   </property>
 
-  <property id="enddate" index="true" stored="true" editable="true" type="date">
+  <property id="enddate" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en">Complete Date</language>
     </name>
   </property>
 
-  <property id="errordetails" index="true" stored="true" editable="true">
+  <property id="errordetails" index="true" editable="true" stored="true">
     <name>
       <language id="en">Error Details</language>
     </name>
   </property>
 
-  <property id="userrequest" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
+  <property id="userrequest" index="true" editable="true" stored="true" note="Prompt used for LLM interaction" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Instructions]]></language>  
       <language id="de"><![CDATA[Anweisungen]]></language>
@@ -66,32 +66,32 @@
     </name> 
   </property>  
 
-  <property id="lastresponse" index="true"  indextype="not_analyzed"  stored="true" editable="true" viewtype="markdown">
+  <property id="lastresponse" index="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Last Response</language>
     </name>
   </property>
 
-  <property id="repeatperiod" index="true" stored="true" editable="true" type="list" listid="agentjobrepeatperiod">
+  <property id="repeatperiod" index="true" editable="true" datatype="list" stored="true" listid="agentjobrepeatperiod">
     <name>
       <language id="en">Repeat Period</language>
     </name>
   </property>
 
-  <property id="repeattime" index="true" stored="true" editable="true" note="24 hour time of day to run, such as 03:40">
+  <property id="repeattime" index="true" editable="true" stored="true" note="24 hour time of day to run, such as 03:40">
     <name>
       <language id="en">Repeat Time</language>
     </name>
   </property>
 
-  <property id="orchestrator" index="true" stored="true" editable="true" type="list" listid="chosenorchestrator">
+  <property id="orchestrator" index="true" editable="true" datatype="list" stored="true" listid="chosenorchestrator">
     <name>
       <language id="en">Orchestrator</language>
     </name>
   </property>
 
 
-  <property id="automationscenario" index="true" stored="true" editable="true" type="list" listid="automationscenario" note="Set when this job was made by running an automation scenario">
+  <property id="automationscenario" index="true" editable="true" datatype="list" stored="true" note="Set when this job was made by running an automation scenario" listid="automationscenario">
     <name>
       <language id="en">Automation Scenario</language>
     </name>

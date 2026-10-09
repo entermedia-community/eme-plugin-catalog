@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="deploypath" editable="true" stored="true" index="true">Deploy Path 
+  <property id="deploypath" index="true" editable="true" stored="true">Deploy Path 
     <name> 
       <language id="de"><![CDATA[bereitstellen Weg]]></language>  
       <language id="en"><![CDATA[Deploy Path]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Chemin de déploiement]]></language> 
     </name> 
   </property>  
-  <property id="url" editable="true" stored="true" index="true"> 
+  <property id="url" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[App Url]]></language>  
       <language id="de"><![CDATA[App-URL]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[URL de la aplicación]]></language>
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="securityenabled" editable="true" internalfield="true" index="true" stored="true" type="boolean"> 
+  <property id="securityenabled" index="true" editable="true" datatype="boolean" stored="true" internalfield="true"> 
     <name> 
       <language id="en"><![CDATA[Security Enabled]]></language>  
       <language id="de"><![CDATA[Sicherheit aktiviert]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Seguridad habilitada]]></language>
     </name> 
   </property>  
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list">Users 
+  <property id="viewusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="user">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list">Groups 
+  <property id="viewgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="group">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  

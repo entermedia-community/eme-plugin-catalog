@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true" multilanguage="true">Name 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="toplevelentity" editable="true" index="true" stored="true" viewtype="list" datatype="list" listid="module" type="list"> 
+  <property id="toplevelentity" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Menu Entity]]></language>  
       <language id="de"><![CDATA[Menü-Entität]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Entidad de menú]]></language>
     </name> 
   </property>  
-  <property id="custompath" editable="true" stored="true" index="true"> 
+  <property id="custompath" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Custom Path]]></language>  
       <language id="de"><![CDATA[Benutzerdefinierter Pfad]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Ruta personalizada]]></language>
     </name> 
   </property>  
-  <property id="datarendertype" editable="true" index="true" stored="true" note="Gallery,Table,Tree"> 
+  <property id="datarendertype" index="true" editable="true" stored="true" note="Gallery,Table,Tree"> 
     <name> 
       <language id="en"><![CDATA[Render Type]]></language>  
       <language id="de"><![CDATA[Rendertyp]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Tipo de renderizado]]></language>
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true" autoincrement="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true" autoincrement="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  

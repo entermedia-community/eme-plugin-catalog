@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher">
-  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" deleted="false">New 
     <name>
       <language id="de"><![CDATA[Id]]></language>
       <language id="en"><![CDATA[Id]]></language>
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language>
     </name>
   </property>
-  <property id="date" index="true" datatype="date" viewtype="datetime" editable="false" stored="true">
+  <property id="date" index="true" editable="false" viewtype="datetime" datatype="date" stored="true">
     <name>
       <language id="de"><![CDATA[Datum]]></language>
       <language id="en"><![CDATA[Date]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[El canal]]></language>
     </name>
   </property>
-  <property id="collectionid" type="list" listid="librarycollection" index="true" editable="true" stored="true" indextype="not_analyzed">
+  <property id="collectionid" index="true" editable="true" datatype="list" stored="true" indextype="not_analyzed" listid="librarycollection">
     <name>
       <language id="en"><![CDATA[Project (Old)]]></language>
       <language id="de"><![CDATA[Projekt (alt)]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[ID de la entidad]]></language>
     </name>
   </property>
-  <property id="moduleid" index="true" editable="true" isbadge="false" required="false" multilanguage="false" deleted="false" datatype="list" stored="true" listid="module">
+  <property id="moduleid" index="true" editable="true" multilanguage="false" datatype="list" stored="true" required="false" deleted="false" isbadge="false" listid="module">
     <name>
       <language id="en"><![CDATA[Module]]></language>
       <language id="de"><![CDATA[Modul]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Módulo]]></language>
     </name>
   </property>
-  <property id="messagetype" index="true" editable="true" stored="true" type="list">
+  <property id="messagetype" index="true" editable="true" datatype="list" stored="true">
     <name>
       <language id="en"><![CDATA[Message Type]]></language>
       <language id="de"><![CDATA[Nachrichtentyp]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Tipo de mensaje]]></language>
     </name>
   </property>
-  <property id="messagestatus" index="true" editable="true" stored="true" type="list">
+  <property id="messagestatus" index="true" editable="true" datatype="list" stored="true">
     <name>
       <language id="en"><![CDATA[Message Status]]></language>
       <language id="de"><![CDATA[Nachrichtenstatus]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Estado del mensaje]]></language>
     </name>
   </property>
-  <property id="chatmessagestatus" index="true" editable="true" stored="true" type="list">
+  <property id="chatmessagestatus" index="true" editable="true" datatype="list" stored="true">
     <name>
       <language id="en"><![CDATA[Chat Message Status]]></language>
       <language id="de"><![CDATA[Status der Chat-Nachricht]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Nombre de la siguiente función]]></language>
     </name>
   </property>
-  <property id="replytoid" index="true" editable="true" stored="true" datatype="list" listid="chatterbox">
+  <property id="replytoid" index="true" editable="true" datatype="list" stored="true" listid="chatterbox">
     <name>
       <language id="en"><![CDATA[Reply to]]></language>
       <language id="de"><![CDATA[Antwort an]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Respuesta a]]></language>
     </name>
   </property>
-  <property id="message" index="true" editable="true" stored="true" viewtype="textarea">
+  <property id="message" index="true" editable="true" viewtype="textarea" stored="true">
     <name>
       <language id="en"><![CDATA[Message]]></language>
       <language id="de"><![CDATA[Nachricht]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Mensaje]]></language>
     </name>
   </property>
-  <property id="messageplain" index="true" editable="true" stored="true" viewtype="textarea">
+  <property id="messageplain" index="true" editable="true" viewtype="textarea" stored="true">
     <name>
       <language id="en"><![CDATA[Message Plain (Ai Context)]]></language>
       <language id="de"><![CDATA[Nachricht: Einfach (KI-Kontext)]]></language>
@@ -113,7 +113,7 @@
       <language id="es"><![CDATA[Mensaje claro (contexto de IA)]]></language>
     </name>
   </property>
-  <property id="user" index="true" editable="false" stored="true" viewtype="user" datatype="list">
+  <property id="user" index="true" editable="false" viewtype="user" datatype="list" stored="true">
     <name>
       <language id="de"><![CDATA[Benutzername]]></language>
       <language id="en"><![CDATA[User Name]]></language>
@@ -121,14 +121,14 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language>
     </name>
   </property>
-  <property id="useralias" index="true" editable="false" stored="true" viewtype="user" datatype="list">
+  <property id="useralias" index="true" editable="false" viewtype="user" datatype="list" stored="true">
     <name>
       <language id="en"><![CDATA[Alias User]]></language>
       <language id="es"><![CDATA[Alias de usuario]]></language>
       <language id="fr"><![CDATA[Alias utilisateur]]></language>
     </name>
   </property>
-  <property id="agentcontextvalues" index="true" deleted="false" editable="true" stored="true">
+  <property id="agentcontextvalues" index="true" editable="true" stored="true" deleted="false">
     <name>
       <language id="en"><![CDATA[Context Values]]></language>
       <language id="de"><![CDATA[Kontextwerte]]></language>

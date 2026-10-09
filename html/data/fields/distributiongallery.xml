@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" internalfield="true" editable="true" stored="true"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" editable="true" stored="true"> 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Ruta de origen]]></language>
     </name> 
   </property>  
-  <property id="enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Enabled]]></language>  
       <language id="de"><![CDATA[Aktiviert]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Tipo de distribución]]></language>
     </name> 
   </property>  
-  <property id="title" index="true" multilanguage="true" editable="true" stored="true"> 
+  <property id="title" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Gallery Title]]></language>  
       <language id="de"><![CDATA[Titel der Galerie]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Título de la galería]]></language>
     </name> 
   </property>  
-  <property id="title_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="title_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Gallery Title Enabled]]></language>  
       <language id="de"><![CDATA[Galerie-Titel aktiviert]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Título de la galería habilitado]]></language>
     </name> 
   </property>  
-  <property id="footer" index="true" multilanguage="true" editable="true" stored="true"> 
+  <property id="footer" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[footer]]></language>  
       <language id="de"><![CDATA[Fußzeile]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[pie de página]]></language>
     </name> 
   </property>  
-  <property id="footer_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="footer_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[footer_enabled]]></language>  
       <language id="de"><![CDATA[Fußzeile aktiviert]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[footer_enabled]]></language>
     </name> 
   </property>  
-  <property id="download_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="download_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Download Enabled]]></language>  
       <language id="de"><![CDATA[Download aktivieren]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Descargar habilitado]]></language>
     </name> 
   </property>  
-  <property id="autoplay_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="autoplay_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Autoplay]]></language>  
       <language id="de"><![CDATA[Autoplay]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Esquema de colores]]></language>
     </name> 
   </property>  
-  <property id="externalcss_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="externalcss_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[External CSS Enabled]]></language>  
       <language id="de"><![CDATA[Externes CSS aktiviert]]></language>
@@ -121,7 +121,7 @@
       <language id="es"><![CDATA[CSS externo]]></language>
     </name> 
   </property>  
-  <property id="caption" index="true" multilanguage="true" editable="true" stored="true"> 
+  <property id="caption" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Gallery Subtitle]]></language>  
       <language id="de"><![CDATA[Galerie-Untertitel]]></language>
@@ -129,7 +129,7 @@
       <language id="es"><![CDATA[Subtítulo de la galería]]></language>
     </name> 
   </property>  
-  <property id="caption_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="caption_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Gallery Subtitle Enabled]]></language>  
       <language id="de"><![CDATA[Galerie-Untertitel aktiviert]]></language>
@@ -137,7 +137,7 @@
       <language id="es"><![CDATA[Subtítulos de la galería habilitados]]></language>
     </name> 
   </property>  
-  <property id="image_caption_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="image_caption_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Image Caption Enabled]]></language>  
       <language id="de"><![CDATA[Bildunterschrift aktivieren]]></language>
@@ -145,7 +145,7 @@
       <language id="es"><![CDATA[Subtítulos de imagen habilitados]]></language>
     </name> 
   </property>  
-  <property id="image_copyright_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="image_copyright_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Show Image Copyright]]></language>  
       <language id="de"><![CDATA[Bildrechte anzeigen]]></language>
@@ -153,7 +153,7 @@
       <language id="es"><![CDATA[Mostrar imagen con derechos de autor]]></language>
     </name> 
   </property>  
-  <property id="sharelike_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="sharelike_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[sharelike_enabled]]></language>  
       <language id="de"><![CDATA[sharelike_enabled]]></language>
@@ -161,7 +161,7 @@
       <language id="es"><![CDATA[sharelike_enabled (compartir igual)]]></language>
     </name> 
   </property>  
-  <property id="publishingfeedlayout" index="true" editable="true" stored="true" datatype="list"> 
+  <property id="publishingfeedlayout" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Theme]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -185,7 +185,7 @@
       <language id="es"><![CDATA[Módulo]]></language>
     </name> 
   </property>  
-  <property id="categoryid" index="true" editable="true" stored="true" datatype="list" listid="category"> 
+  <property id="categoryid" index="true" editable="true" datatype="list" stored="true" listid="category"> 
     <name> 
       <language id="en"><![CDATA[Category ID]]></language>  
       <language id="de"><![CDATA[Kategorie-ID]]></language>
@@ -194,7 +194,7 @@
     </name> 
   </property>  
   <!-- deprecated. Use categoryid -->  
-  <property id="lightboxid" index="true" editable="true" stored="true" datatype="list" listid="emedialightbox"> 
+  <property id="lightboxid" index="true" editable="true" datatype="list" stored="true" listid="emedialightbox"> 
     <name> 
       <language id="en"><![CDATA[Lightbox]]></language>  
       <language id="de"><![CDATA[Lichtbox]]></language>
@@ -202,7 +202,7 @@
       <language id="es"><![CDATA[Lightbox]]></language>
     </name> 
   </property>  
-  <property id="containerdimension_enabled" index="true" editable="true" stored="true" datatype="boolean"> 
+  <property id="containerdimension_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Use Fixed Dimension]]></language>  
       <language id="de"><![CDATA[Feste Dimension verwenden]]></language>
@@ -210,7 +210,7 @@
       <language id="es"><![CDATA[Utilizar dimensión fija]]></language>
     </name> 
   </property>  
-  <property id="containerwidth" index="true" editable="true" stored="true" type="number"> 
+  <property id="containerwidth" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Container Width]]></language>  
       <language id="de"><![CDATA[Behälterbreite]]></language>
@@ -218,7 +218,7 @@
       <language id="es"><![CDATA[Ancho del contenedor]]></language>
     </name> 
   </property>  
-  <property id="containerheight" index="true" editable="true" stored="true" type="number"> 
+  <property id="containerheight" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Container Height]]></language>  
       <language id="de"><![CDATA[Behälterhöhe]]></language>

@@ -2,7 +2,7 @@
 
 <properties> 
  
-<property id="entitysourcetype" internalfield="true" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+<property id="entitysourcetype" index="true" filter="true" keyword="true" editable="true" datatype="list" stored="true" internalfield="true" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Entity Source Type]]></language>  
       <language id="de"><![CDATA[Entitätstyp der Quelle]]></language>

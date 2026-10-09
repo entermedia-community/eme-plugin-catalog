@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-  <property id="id" index="true" stored="true" keyword="true" internalfield="true" editable="true">
+  <property id="id" index="true" keyword="true" editable="true" stored="true" internalfield="true">
     ID <name>
       <language id="de"><![CDATA[Ich würde]]></language>
       <language id="en"><![CDATA[ID]]></language>
@@ -10,7 +10,7 @@
     </name>
   </property>
 
-  <property id="user" index="true" stored="true" editable="false" type="list">
+  <property id="user" index="true" editable="false" datatype="list" stored="true">
     <name>
       <language id="de"><![CDATA[Benutzer]]></language>
       <language id="en"><![CDATA[User]]></language>
@@ -19,7 +19,7 @@
     </name>
   </property>
 
-  <property id="emeserver" index="true" stored="true" editable="false" type="list">
+  <property id="emeserver" index="true" editable="false" datatype="list" stored="true">
     <name>
       <language id="de"><![CDATA[EME Server]]></language>
       <language id="en"><![CDATA[EME Server]]></language>
@@ -28,7 +28,7 @@
     </name>
   </property>
 
-  <property id="joined" index="true" stored="true" editable="false" type="date">
+  <property id="joined" index="true" editable="false" datatype="date" stored="true">
     <name>
       <language id="de"><![CDATA[Beigetreten]]></language>
       <language id="en"><![CDATA[Joined]]></language>
@@ -46,7 +46,7 @@
     </name>
   </property>
 
-  <property id="lastnotificationtime" index="true" stored="true" editable="false" type="date">
+  <property id="lastnotificationtime" index="true" editable="false" datatype="date" stored="true">
     <name>
       <language id="de"><![CDATA[Letzte Benachrichtigungszeit]]></language>
       <language id="en"><![CDATA[Last Notification Time]]></language>

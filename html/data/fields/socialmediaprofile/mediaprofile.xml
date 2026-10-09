@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="apikey" index="true" deleted="false" editable="true" stored="true"> 
+  <property id="apikey" index="true" editable="true" stored="true" deleted="false"> 
     <name> 
       <language id="en"><![CDATA[API Key]]></language>  
       <language id="de"><![CDATA[API-Schlüssel]]></language>

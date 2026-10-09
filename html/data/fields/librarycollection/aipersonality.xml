@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
-  <property id="aibasetone" editable="true" index="true" stored="true" datatype="list" listid="aibasetone" type="list">Base Style and Tone 
+  <property id="aibasetone" index="true" editable="true" datatype="list" stored="true" listid="aibasetone">Base Style and Tone 
     <name>
       <language id="de"><![CDATA[Grundstil und Ton]]></language>
       <language id="en"><![CDATA[Base Style and Tone]]></language>
@@ -9,7 +9,7 @@
     </name>
   </property>
 
-  <property id="aiwarmth" editable="true" index="true" stored="true" datatype="list" listid="aiwarmth" type="list">Warmth 
+  <property id="aiwarmth" index="true" editable="true" datatype="list" stored="true" listid="aiwarmth">Warmth 
     <name>
       <language id="de"><![CDATA[Wärme]]></language>
       <language id="en"><![CDATA[Warmth]]></language>
@@ -18,7 +18,7 @@
     </name>
   </property>
 
-  <property id="aienthusiasm" editable="true" index="true" stored="true" datatype="list" listid="aienthusiasm" type="list">Enthusiasm 
+  <property id="aienthusiasm" index="true" editable="true" datatype="list" stored="true" listid="aienthusiasm">Enthusiasm 
     <name>
       <language id="de"><![CDATA[Begeisterung]]></language>
       <language id="en"><![CDATA[Enthusiasm]]></language>
@@ -27,7 +27,7 @@
     </name>
   </property>
 
-  <property id="aiemojiusage" editable="true" index="true" stored="true" datatype="list" listid="aiemojiusage" type="list">Emoji Usage 
+  <property id="aiemojiusage" index="true" editable="true" datatype="list" stored="true" listid="aiemojiusage">Emoji Usage 
     <name>
       <language id="de"><![CDATA[Emoji-Verwendung]]></language>
       <language id="en"><![CDATA[Emoji Usage]]></language>
@@ -36,7 +36,7 @@
     </name>
   </property>
 
-  <property id="ailistusage" editable="true" index="true" stored="true" datatype="list" listid="ailistusage" type="list">List Usage 
+  <property id="ailistusage" index="true" editable="true" datatype="list" stored="true" listid="ailistusage">List Usage 
     <name>
       <language id="de"><![CDATA[Listenverwendung]]></language>
       <language id="en"><![CDATA[List Usage]]></language>

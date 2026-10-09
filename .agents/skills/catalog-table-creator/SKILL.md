@@ -33,11 +33,12 @@ plugins/catalog/html/
    ```
    plugins/catalog/html/data/fields/<tablename>/
    ```
-2. Inside that folder, create a symlink named `baseentitytemplate.xml` pointing at the
-   project's base template:
+2. Inside that folder, create a symlink named `baseentity.xml` pointing at the
+   project's base template (the table-side name is always `baseentity.xml`; only the
+   master in `html/configuration/` is called `baseentitytemplate.xml`):
    ```bash
    ln -s ../../../configuration/baseentitytemplate.xml \
-     plugins/catalog/html/data/fields/<tablename>/baseentitytemplate.xml
+     plugins/catalog/html/data/fields/<tablename>/baseentity.xml
    ```
    Adjust the relative path (`../../../...`) to match the actual depth from the repo root
    you're working in — always verify with `ls -l` after creating the symlink that it
@@ -166,7 +167,7 @@ Creates `plugins/catalog/html/data/fields/loremipsum.xml`:
 User: "Create an entity table `entitycustomer` with an extra field `country` (list type)
 with options USA and Afghanistan."
 
-1. `plugins/catalog/html/data/fields/entitycustomer/baseentitytemplate.xml`
+1. `plugins/catalog/html/data/fields/entitycustomer/baseentity.xml`
    → symlink to `plugins/catalog/html/configuration/baseentitytemplate.xml`
 2. `plugins/catalog/html/data/fields/entitycustomer/fields.xml`:
 
@@ -174,7 +175,7 @@ with options USA and Afghanistan."
    <?xml version="1.0" encoding="UTF-8"?>
 
    <properties>
-     <property id="country" index="true" stored="true" editable="true" type="list" listid="country">
+     <property id="country" index="true" stored="true" editable="true" datatype="list" listid="country">
        <name>
          <language id="en">Country</language>
        </name>

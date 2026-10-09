@@ -3,8 +3,8 @@
 <page> 
   <!--  property id="google-fetch-url" internalfield="false" index="true" stored="true" indextype="not_analyzed" editable="false">Google Fetch URL</property -->  
   <!-- property id="google-thumb-url" internalfield="false" index="true" stored="true" indextype="not_analyzed" editable="false">Google Fetch URL</property -->  
-  <property id="google-view-link" internalfield="false" index="true" stored="true" indextype="not_analyzed" editable="false">Google Drive URL</property>  
-  <property id="googletagged" internalfield="false" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="google-view-link" index="true" editable="false" stored="true" internalfield="false" indextype="not_analyzed">Google Drive URL</property>  
+  <property id="googletagged" index="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Tagged by Google]]></language>  
       <language id="de"><![CDATA[Google getaggt]]></language>
@@ -12,7 +12,7 @@
       <language id="es"><![CDATA[Etiquetado por Google]]></language>
     </name> 
   </property>  
-  <property id="googletranscoded" internalfield="false" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="googletranscoded" index="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Auto transcoded Google]]></language>  
       <language id="de"><![CDATA[Google wird automatisch transkodiert]]></language>
@@ -20,7 +20,7 @@
       <language id="es"><![CDATA[Transcodificado automáticamente por Google]]></language>
     </name> 
   </property>  
-  <property id="googlekeywords" keyword="true" viewtype="tageditor" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true"> 
+  <property id="googlekeywords" index="true" filter="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup"> 
     <name> 
       <language id="en"><![CDATA[Google AI Tags]]></language>  
       <language id="de"><![CDATA[Google KI-Tags]]></language>
@@ -28,8 +28,8 @@
       <language id="es"><![CDATA[Etiquetas de IA de Google]]></language>
     </name> 
   </property>  
-  <property id="locale" internalfield="false" index="true" stored="true" editable="true" type="list">Locale</property>  
-  <property id="thumbnaillink" internalfield="false" index="true" stored="true" editable="false"> 
+  <property id="locale" index="true" editable="true" datatype="list" stored="true" internalfield="false">Locale</property>  
+  <property id="thumbnaillink" index="true" editable="false" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Google Thumbnail Link]]></language>  
       <language id="de"><![CDATA[Google-Bild-Link]]></language>
@@ -37,7 +37,7 @@
       <language id="es"><![CDATA[Enlace de miniatura de Google]]></language>
     </name> 
   </property>  
-  <property id="webviewlink" internalfield="false" index="true" stored="true" editable="false" viewtype="url"> 
+  <property id="webviewlink" index="true" editable="false" viewtype="url" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Web View Link]]></language>  
       <language id="de"><![CDATA[Web-View-Link]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" editable="true" stored="true" keyword="true"> 
+  <property id="id" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
       <language id="de"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" multilanguage="true" editable="true" keyword="true"> 
+  <property id="name" index="true" keyword="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[Name]]> </language>  
       <language id="de"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="description" internalfield="true" defaultoperation="freeform" index="true" stored="true" editable="false">All Fields 
+  <property id="description" index="true" editable="false" stored="true" internalfield="true" defaultoperation="freeform">All Fields 
     <name> 
       <language id="en"><![CDATA[All Fields]]></language>  
       <language id="de"><![CDATA[Alle Felder]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Todos los campos]]></language>
     </name> 
   </property>  
-  <property id="lightboxicon" editable="true" index="true" stored="true"> 
+  <property id="lightboxicon" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Icon]]></language>  
       <language id="de"><![CDATA[Symbol]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Icono]]></language>
     </name> 
   </property>  
-  <property id="ordering" type="number" autoincrement="false" editable="true" index="true" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true" autoincrement="false">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Mostrar en todos los módulos]]></language>
     </name> 
   </property>  
-  <property id="parentmoduleid" index="true" editable="true" listid="module" viewtype="multiselect" rendertype="multiselect" datatype="list"> 
+  <property id="parentmoduleid" index="true" editable="true" viewtype="multiselect" datatype="list" listid="module" rendertype="multiselect"> 
     <name> 
       <language id="en"><![CDATA[Show on Selected Modules]]></language>  
       <language id="de"><![CDATA[Anzeigen für ausgewählte Module]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="description" defaultoperation="freeform" index="true" stored="true" editable="false"> 
+  <property id="description" index="true" editable="false" stored="true" defaultoperation="freeform"> 
     <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
   </property>  
-  <property id="shortdescription" editable="true" index="true" stored="true">Short Description 
+  <property id="shortdescription" index="true" editable="true" stored="true">Short Description 
     <name> 
       <language id="de"><![CDATA[kurze Beschreibung]]></language>  
       <language id="en"><![CDATA[Short Description]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Brève description]]></language> 
     </name> 
   </property>  
-  <property id="parentid" editable="true" type="list" listid="category" viewtype="text" index="true" stored="true">Parent Category Id 
+  <property id="parentid" index="true" editable="true" viewtype="text" datatype="list" stored="true" listid="category">Parent Category Id 
     <name> 
       <language id="de"><![CDATA[geordnete Kategorie-ID]]></language>  
       <language id="en"><![CDATA[Parent Category Id]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Id Catégorie parent]]></language> 
     </name> 
   </property>  
-  <property id="parents" editable="false" type="list" listid="category" viewtype="text" index="true" stored="true" skipexport="true"> 
+  <property id="parents" index="true" editable="false" viewtype="text" datatype="list" stored="true" listid="category" skipexport="true"> 
     <name> 
       <language id="en"><![CDATA[Parents]]></language>  
       <language id="de"><![CDATA[Eltern]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Los padres]]></language>
     </name> 
   </property>  
-  <property id="categorypath" editable="true" index="true" stored="true" keyword="true"> 
+  <property id="categorypath" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Pfad]]></language>  
       <language id="en"><![CDATA[Path]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Chemin]]></language> 
     </name> 
   </property>  
-  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date">Created Date 
+  <property id="creationdate" index="true" editable="true" datatype="date" stored="true">Created Date 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="foldertype" editable="true" index="true" stored="true" type="list">Type 
+  <property id="foldertype" index="true" editable="true" datatype="list" stored="true">Type 
     <name> 
       <language id="de"><![CDATA[Art]]></language>  
       <language id="en"><![CDATA[Type]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Type]]></language> 
     </name> 
   </property>  
-  <property id="assetsort" editable="true" index="true" stored="true"> 
+  <property id="assetsort" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Asset Sort]]></language>  
       <language id="de"><![CDATA[Vermögensarten]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Clasificación de activos]]></language>
     </name> 
   </property>  
-  <property id="autocreatecollections" editable="true" index="true" stored="true" type="boolean"> 
+  <property id="autocreatecollections" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Auto Create Albums]]></language>  
       <language id="de"><![CDATA[Automatische Alben erstellen]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Creación automática de álbumes]]></language>
     </name> 
   </property>  
-  <property id="countdata" editable="true" index="true" stored="true" viewtype="multiselect" indextype="not_analyzed"> 
+  <property id="countdata" index="true" editable="true" viewtype="multiselect" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Counts]]></language>  
       <language id="de"><![CDATA[Zählungen]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Condes]]></language>
     </name> 
   </property>  
-  <property id="entitysourcetype" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+  <property id="entitysourcetype" index="true" filter="true" keyword="true" editable="true" datatype="list" stored="true" listid="module"> 
     <name> 
       <language id="en"> <![CDATA[Entity Source Type]]> </language>  
       <language id="de"><![CDATA[Entitätsquellentyp]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Tipo de entidad fuente]]></language>
     </name> 
   </property>  
-  <property id="headercategoryimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="Logos/${category.categorypath}/"> 
+  <property id="headercategoryimage" index="true" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="Logos/${category.categorypath}/"> 
     <name> 
       <language id="en"><![CDATA[Category Logo]]></language>  
       <language id="de"><![CDATA[Kategorie-Logo]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Logotipo de categoría]]></language>
     </name> 
   </property>  
-  <property id="categoryadminemail" editable="true" index="true" stored="true"> 
+  <property id="categoryadminemail" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Approve Users Email]]></language>  
       <language id="de"><![CDATA[Benutzer-E-Mail genehmigen]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Aprobar el correo electrónico de los usuarios]]></language>
     </name> 
   </property>  
-  <property id="isfeatured" datatype="boolean" index="true" stored="true" editable="true" filter="true" type="boolean"> 
+  <property id="isfeatured" index="true" filter="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Is Featured]]></language>  
       <language id="de"><![CDATA[Im Fokus]]></language>

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher">
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">
     <name>
       <language id="en">Id</language>
     </name>
   </property>
 
-  <property id="agentjob" index="true" stored="true" editable="true" type="list">
+  <property id="agentjob" index="true" editable="true" datatype="list" stored="true">
     <name>
       <language id="en">Agent Job</language>
     </name>
   </property>
 
-  <property id="startdate" index="true" stored="true" editable="true" type="date">
+  <property id="startdate" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en">Start Date</language>
     </name>
   </property>
 
-  <property id="enddate" index="true" stored="true" editable="true" type="date">
+  <property id="enddate" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en">End Date</language>
     </name>
   </property>
 
-  <property id="status" index="true" stored="true" editable="true" type="list" listid="jobstatus">
+  <property id="status" index="true" editable="true" datatype="list" stored="true" listid="jobstatus">
     <name>
       <language id="en">Status</language>
     </name>
   </property>
 
-  <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown">
+  <property id="markdowncontent" index="true" keyword="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed">
     <name>
       <language id="en"><![CDATA[Markdown Content]]></language>
     </name>

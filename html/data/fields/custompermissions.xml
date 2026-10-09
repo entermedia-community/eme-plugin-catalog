@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="value" index="true" deleted="false" editable="true" stored="true">New
+  <property id="value" index="true" editable="true" stored="true" deleted="false">New
     <name> 
       <language id="de"><![CDATA[Wert]]></language>  
       <language id="en"><![CDATA[Value]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Valeur]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" deleted="false" editable="true" stored="true">New
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true" deleted="false">New
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" deleted="false">New
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -25,18 +25,18 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="datapermission" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" listid="datapermisions" deleted="false" autocreatefromexif="false" writenametoexif="false" datatype="list">Permission to Override
+  <property id="datapermission" index="true" editable="true" multilanguage="false" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" listid="datapermisions" writenametoexif="false" autocreatefromexif="false">Permission to Override
   </property> 
   
-   <property id="parentfolderid" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" deleted="false" autocreatefromexif="false" writenametoexif="false" datatype="list">Parent Folder
+   <property id="parentfolderid" index="true" editable="true" multilanguage="false" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">Parent Folder
     
   </property> 
-   <property id="moduleid" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" deleted="false" autocreatefromexif="false" writenametoexif="false" datatype="list">Module
+   <property id="moduleid" index="true" editable="true" multilanguage="false" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">Module
     
   </property> 
   
   
-   <property id="dataid" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false"  deleted="false" autocreatefromexif="false" writenametoexif="false" datatype="list">Data ID
+   <property id="dataid" index="true" editable="true" multilanguage="false" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">Data ID
     
   </property>
   

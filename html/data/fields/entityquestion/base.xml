@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher">
-  <property id="question" index="true" stored="true" editable="true" viewtype="textarea">Question 
+  <property id="question" index="true" editable="true" viewtype="textarea" stored="true">Question 
     <name>
       <language id="en"><![CDATA[Question]]></language>
     </name>
   </property>
-  <property id="option_a" index="true" editable="true" stored="true" viewtype="text">Option (A)
+  <property id="option_a" index="true" editable="true" viewtype="text" stored="true">Option (A)
     <name>
       <language id="en"><![CDATA[Option (A)]]></language>
     </name>
   </property>
-  <property id="option_b" index="true" editable="true" stored="true" viewtype="text">Option (B) 
+  <property id="option_b" index="true" editable="true" viewtype="text" stored="true">Option (B) 
     <name>
       <language id="en"><![CDATA[Option (B)]]></language>
     </name>
   </property>
-  <property id="option_c" index="true" editable="true" stored="true" viewtype="text">Option (C) 
+  <property id="option_c" index="true" editable="true" viewtype="text" stored="true">Option (C) 
     <name>
       <language id="en"><![CDATA[Option (C)]]></language>
     </name>
   </property>
-  <property id="option_d" index="true" editable="true" stored="true" viewtype="text">Option (D) 
+  <property id="option_d" index="true" editable="true" viewtype="text" stored="true">Option (D) 
     <name>
       <language id="en"><![CDATA[Option (D)]]></language>
     </name>
   </property>
-  <property id="option_e" index="true" editable="true" stored="true" viewtype="text">Option (E) 
+  <property id="option_e" index="true" editable="true" viewtype="text" stored="true">Option (E) 
     <name>
       <language id="en"><![CDATA[Option (E)]]></language>
     </name>
   </property>
-  <property id="option_f" index="true" editable="true" stored="true" viewtype="text">Option (F) 
+  <property id="option_f" index="true" editable="true" viewtype="text" stored="true">Option (F) 
     <name>
       <language id="en"><![CDATA[Option (F)]]></language>
     </name>
   </property>
-  <property id="correctoption" type="list" listid="mcqoptions" index="true" editable="true" stored="true">Correct Option
+  <property id="correctoption" index="true" editable="true" datatype="list" stored="true" listid="mcqoptions">Correct Option
     <name>
       <language id="en"><![CDATA[Correct Option]]></language>
     </name>
   </property>
-  <property id="rationale" index="true" editable="true" stored="true" viewtype="textarea">Rationale 
+  <property id="rationale" index="true" editable="true" viewtype="textarea" stored="true">Rationale 
     <name>
       <language id="en"><![CDATA[Rationale]]></language>
     </name>
   </property>
-  <property id="grade" index="true" editable="true" stored="true" type="number" datatype="number">Grade 
+  <property id="grade" index="true" editable="true" datatype="number" stored="true">Grade 
     <name>
       <language id="en"><![CDATA[Grade]]></language>
     </name>
   </property>
-  <property id="mcqcognitivelevel" type="list" index="true" editable="true" stored="true">Cognitive Level 
+  <property id="mcqcognitivelevel" index="true" editable="true" datatype="list" stored="true">Cognitive Level 
     <name>
       <language id="en"><![CDATA[Cognitive Level]]></language>
     </name>

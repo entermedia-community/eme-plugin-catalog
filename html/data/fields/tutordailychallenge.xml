@@ -2,31 +2,31 @@
 
 <properties beanname="dataSearcher">
 
- <property id="id" index="true" stored="true" editable="true" internalfield="true">New 
+ <property id="id" index="true" editable="true" stored="true" internalfield="true">New 
     <name>  
       <language id="en"><![CDATA[Id]]></language>   
     </name> 
   </property>  
 
-  <property id="sectionid" type="list" listid="componentsection" index="true" editable="true" stored="true">Section
+  <property id="sectionid" index="true" editable="true" datatype="list" stored="true" listid="componentsection">Section
     <name>
       <language id="en"><![CDATA[Section]]></language>
     </name>
   </property>
 
-  <property id="challengedate" type="date" viewtype="datetime" index="true" editable="true" stored="true">Challenge Date
+  <property id="challengedate" index="true" editable="true" viewtype="datetime" datatype="date" stored="true">Challenge Date
     <name>
       <language id="en"><![CDATA[Challenge Date]]></language>
     </name>
   </property>
 
-  <property id="user" type="list" listid="user" index="true" editable="true" stored="true">User
+  <property id="user" index="true" editable="true" datatype="list" stored="true" listid="user">User
     <name>
       <language id="en"><![CDATA[User]]></language>
     </name>
   </property> 
 
-   <property id="channel" type="list" listid="channel" index="true" editable="true" stored="true">Channel
+   <property id="channel" index="true" editable="true" datatype="list" stored="true" listid="channel">Channel
     <name>
       <language id="en"><![CDATA[Channel]]></language>
     </name>

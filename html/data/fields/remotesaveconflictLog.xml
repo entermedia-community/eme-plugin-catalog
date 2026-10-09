@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" deleted="false">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="pulltime" editable="true" index="true" stored="true" datatype="date" viewtype="time" type="date"> 
+  <property id="pulltime" index="true" editable="true" viewtype="time" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[pulltime]]></language>  
       <language id="de"><![CDATA[Pulltime]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Pulltime]]></language>
     </name> 
   </property>  
-  <property id="localsource" index="true" deleted="false" editable="true" stored="true"> 
+  <property id="localsource" index="true" editable="true" stored="true" deleted="false"> 
     <name> 
       <language id="en"><![CDATA[localsource]]></language>  
       <language id="de"><![CDATA[Lokalsource]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[fuente local]]></language>
     </name> 
   </property>  
-  <property id="localrecordstatus" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="localrecordstatus" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[localrecordstatus]]></language>  
       <language id="de"><![CDATA[Lokaler Aufzeichnungsstatus]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[estado de los registros locales]]></language>
     </name> 
   </property>  
-  <property id="dataid" index="true" deleted="false" datatype="list" stored="true">New 
+  <property id="dataid" index="true" datatype="list" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[Data ID]]></language>  
       <language id="de"><![CDATA[Daten-ID]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[ID de datos]]></language>
     </name> 
   </property>  
-  <property id="remotesource" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="remotesource" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[remotesource]]></language>  
       <language id="de"><![CDATA[Remotequelle]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[remotesource]]></language>
     </name> 
   </property>  
-  <property id="searchtype" index="true" deleted="false" editable="true" stored="true"> 
+  <property id="searchtype" index="true" editable="true" stored="true" deleted="false"> 
     <name> 
       <language id="de"><![CDATA[Suchart]]></language>  
       <language id="en"><![CDATA[Search Type]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Type de recherche]]></language> 
     </name> 
   </property>  
-  <property id="masternodeid" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="masternodeid" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[masternodeid]]></language>  
       <language id="de"><![CDATA[Masternode-ID]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[en el caso del masternode]]></language>
     </name> 
   </property>  
-  <property id="remoterecordstatus" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="remoterecordstatus" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[remoterecordstatus]]></language>  
       <language id="de"><![CDATA[Remote-Aufzeichnungsstatus]]></language>

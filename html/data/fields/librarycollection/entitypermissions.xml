@@ -2,7 +2,7 @@
 
 <properties beanname="folderSearcher"> 
   <!-- asset details -->  
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list">Users 
+  <property id="viewusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="user">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -10,7 +10,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list">Groups 
+  <property id="viewgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="group">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  
@@ -18,7 +18,7 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="securityenabled" editable="true" index="true" stored="true" type="boolean"> 
+  <property id="securityenabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Security Enabled]]></language>  
       <language id="de"><![CDATA[Sicherheit aktiviert]]></language>

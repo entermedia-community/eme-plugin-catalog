@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" allowdynamicfields="true"> 
-  <property id="id" index="true" stored="true" keyword="true" internalfield="true" filter="false" editable="false" sortable="true">ID 
+  <property id="id" index="true" sortable="true" filter="false" keyword="true" editable="false" stored="true" internalfield="true">ID 
     <name> 
       <language id="en"><![CDATA[sdl_id]]></language>  
       <language id="de"><![CDATA[SDL_ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[ID]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="name" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[Name]]> </language>  
       <language id="de"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="entitysourcetype" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+  <property id="entitysourcetype" index="true" filter="true" keyword="true" editable="true" datatype="list" stored="true" listid="module"> 
     <name> 
       <language id="en"> <![CDATA[Entity Source Type]]> </language>  
       <language id="de"><![CDATA[Entitätsquellentyp]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Tipo de entidad fuente]]></language>
     </name> 
   </property>  
-  <property id="description" defaultoperation="freeform" index="true" stored="true" editable="false" sortable="true">All Fields 
+  <property id="description" index="true" sortable="true" editable="false" stored="true" defaultoperation="freeform">All Fields 
     <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
   </property>  
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true" sortable="true">Tags 
+  <property id="keywords" index="true" sortable="true" filter="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Tags]]></language> 
     </name> 
   </property>  
-  <property id="primaryimage" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="/uploads/${data.collectiveid}/products/${formattedyear}/${shortguid}"> 
+  <property id="primaryimage" index="true" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="/uploads/${data.collectiveid}/products/${formattedyear}/${shortguid}"> 
     <name> 
       <language id="en"><![CDATA[Primary Media]]></language>  
       <language id="de"><![CDATA[Primärmedien]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Medios principales]]></language>
     </name> 
   </property>  
-  <property id="entity_date" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date" filter="false"> 
+  <property id="entity_date" index="true" filter="false" keyword="true" editable="true" viewtype="date" datatype="date" stored="true"> 
     <!-- not really a filter -->  
     <name> 
       <language id="en"> <![CDATA[Date]]> </language>  
@@ -58,7 +58,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="entityresourceURL" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="entityresourceURL" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[resourceURL]]> </language>  
       <language id="de"><![CDATA[RessourcenURL]]></language>
@@ -66,7 +66,7 @@
       <language id="es"><![CDATA[resourceURL]]></language>
     </name> 
   </property>  
-  <property id="hasfulltext" index="true" stored="true" type="boolean"> 
+  <property id="hasfulltext" index="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[Has Text]]> </language>  
       <language id="de"><![CDATA[Hat Text]]></language>
@@ -74,7 +74,7 @@
       <language id="es"><![CDATA[Tiene texto]]></language>
     </name> 
   </property>  
-  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" sortable="true"> 
+  <property id="longcaption" index="true" sortable="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Description]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
@@ -83,7 +83,7 @@
     </name> 
   </property>  
   <!-- exclusive -->  
-  <property id="entityuploaded_by" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="entityuploaded_by" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[uploaded_by]]> </language>  
       <language id="de"><![CDATA[Hochgeladen von]]></language>
@@ -91,7 +91,7 @@
       <language id="es"><![CDATA[subido_por]]></language>
     </name> 
   </property>  
-  <property id="entityproject_url" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="entityproject_url" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[project_url]]> </language>  
       <language id="de"><![CDATA[Projekt-URL]]></language>
@@ -99,7 +99,7 @@
       <language id="es"><![CDATA[proyecto_url]]></language>
     </name> 
   </property>  
-  <property id="entitylast_modified" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="entitylast_modified" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[last_modified]]> </language>  
       <language id="de"><![CDATA[letzte Änderung]]></language>
@@ -108,7 +108,7 @@
     </name> 
   </property>  
   <!--  Move this to full text or description? -->  
-  <property id="fulltext" index="true" stored="true" keyword="false"> 
+  <property id="fulltext" index="true" keyword="false" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[text]]> </language>  
       <language id="de"><![CDATA[Text]]></language>
@@ -116,7 +116,7 @@
       <language id="es"><![CDATA[texto]]></language>
     </name> 
   </property>  
-  <property id="sourcepath" internalfield="false" index="true" stored="true" editable="false" sortable="true">Source Path 
+  <property id="sourcepath" index="true" sortable="true" editable="false" stored="true" internalfield="false">Source Path 
     <name> 
       <language id="de"><![CDATA[Source-Pfad]]></language>  
       <language id="en"><![CDATA[Source Path]]></language>  
@@ -124,7 +124,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="entitycompany" index="true" stored="true" type="list" viewtype="entity" editable="true" keyword="true" filter="true"> 
+  <property id="entitycompany" index="true" filter="true" keyword="true" editable="true" viewtype="entity" datatype="list" stored="true"> 
     <name> 
       <language id="en"> <![CDATA[Company Entity]]> </language>  
       <language id="de"><![CDATA[Unternehmensentity]]></language>
@@ -133,7 +133,7 @@
     </name> 
   </property>  
   <!--  OI Shopping  -->  
-  <property id="collectionid" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list"> 
+  <property id="collectionid" index="true" editable="true" viewtype="autocomplete" datatype="list" stored="true" required="true" listid="librarycollection"> 
     <name> 
       <language id="en"><![CDATA[Collection]]></language>  
       <language id="de"><![CDATA[Sammlung]]></language>

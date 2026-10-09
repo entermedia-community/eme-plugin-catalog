@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="icon" editable="true" stored="true" index="true">Icon 
+  <property id="icon" index="true" editable="true" stored="true">Icon 
     <name> 
       <language id="en"><![CDATA[Icon]]></language>  
       <language id="de"><![CDATA[Icon]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Icono]]></language>
     </name> 
   </property>  
-  <property id="color" editable="true" stored="true" index="true">Color 
+  <property id="color" index="true" editable="true" stored="true">Color 
     <name> 
       <language id="en"><![CDATA[Color]]></language>  
       <language id="de"><![CDATA[Farbe]]></language>

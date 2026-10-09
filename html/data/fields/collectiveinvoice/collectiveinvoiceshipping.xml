@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="shippingdestination" editable="false" index="true" stored="true" type="list"> 
+  <property id="shippingdestination" index="true" editable="false" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Ship to]]></language>  
       <language id="de"><![CDATA[Versand an]]></language>

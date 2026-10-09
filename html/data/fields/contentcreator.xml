@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="automationscenario" type="list" listid="automationscenario" index="true" stored="true" editable="true"> 
+  <property id="automationscenario" index="true" editable="true" datatype="list" stored="true" listid="automationscenario"> 
     <name> 
       <language id="en"><![CDATA[Scenerio]]></language>  
       <language id="de"><![CDATA[Szenario]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Escenario]]></language>
     </name> 
   </property>  
-  <property id="processingstatus" type="list" editable="true" index="true" stored="true" listid="llmstatus"> 
+  <property id="processingstatus" index="true" editable="true" datatype="list" stored="true" listid="llmstatus"> 
     <name> 
       <language id="en"><![CDATA[Processing status]]></language>  
       <language id="de"><![CDATA[Verarbeitungsstatus]]></language>

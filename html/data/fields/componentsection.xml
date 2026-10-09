@@ -1,60 +1,60 @@
 <properties beanname="dataSearcher" lazy-init="true">
 
-	<property id="id" index="true" stored="true" editable="true" internalfield="true">
+	<property id="id" index="true" editable="true" stored="true" internalfield="true">
 		<name> 
       		<language id="en"><![CDATA[Id]]></language> 
 	  	</name>
 	</property>
 
-	<property id="name" index="true" stored="true" editable="true">
+	<property id="name" index="true" editable="true" stored="true">
 		<name>
 			<language id="en"><![CDATA[Name]]></language>
 		</name>
 	</property>
 	
 	<!--project, collection-->
-	<property id="entitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">
+	<property id="entitymoduleid" index="true" editable="true" datatype="list" stored="true" listid="module">
 		<name>
 			<language id="en"><![CDATA[Created in Module]]></language>
 		</name>
 	</property>
-	<property id="entityid"  indextype="not_analyzed"  index="true" stored="true" editable="true">
+	<property id="entityid" index="true" editable="true" stored="true" indextype="not_analyzed">
 		<name>
 			<language id="en"><![CDATA[Created in Entity]]></language>
 		</name>
 	</property>
 
-	<property id="contentrole" type="list" index="true" stored="true" editable="true">
+	<property id="contentrole" index="true" editable="true" datatype="list" stored="true">
 		<name>
 			<language id="en"><![CDATA[Content Role]]></language>
 		</name>
 	</property>
 
 	<!--tutorial, blog-->
-	<property id="playbackentitymoduleid" type="list" listid="module" index="true" stored="true" editable="true">
+	<property id="playbackentitymoduleid" index="true" editable="true" datatype="list" stored="true" listid="module">
 		<name>
 			<language id="en"><![CDATA[Saved Module]]></language>
 		</name>
 	</property>
-	<property id="playbackentityid"  indextype="not_analyzed" index="true" stored="true" editable="true">
+	<property id="playbackentityid" index="true" editable="true" stored="true" indextype="not_analyzed">
 		<name>
 			<language id="en"><![CDATA[Saved Entity]]></language>
 		</name>
 	</property>
 
-	<property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">
+	<property id="ordering" index="true" editable="true" datatype="number" stored="true">
 		<name>
 			<language id="en"><![CDATA[Ordering]]></language>
 		</name>
 	</property>
 
-	<property id="creationdate" index="true" stored="true" datatype="date" viewtype="time" searchcomponent="datesearch" type="date">
+	<property id="creationdate" index="true" viewtype="time" searchcomponent="datesearch" datatype="date" stored="true">
 		<name>
 			<language id="en"><![CDATA[Created On]]></language>
 		</name>
 	</property>
 
-	<property id="modificationdate" index="true" stored="true" datatype="date" searchcomponent="datesearch" viewtype="time" type="date">
+	<property id="modificationdate" index="true" viewtype="time" searchcomponent="datesearch" datatype="date" stored="true">
 		<name>
 			<language id="en"><![CDATA[Last Modified]]></language>
 		</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true" multilanguage="true"> 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown"> 
+  <property id="markdowncontent" index="true" keyword="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Contenido Markdown]]></language>
     </name> 
   </property> 
-  <property id="parameters" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="parameters" index="true" editable="true" multilanguage="false" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
       <language id="de"><![CDATA[Erforderliche Eingaben]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Entradas requeridas]]></language>
     </name> 
   </property>
-  <property id="defaultoutput" editable="true" indextype="not_analyzed" multilanguage="false" index="true" stored="true"> 
+  <property id="defaultoutput" index="true" editable="true" multilanguage="false" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Default Output]]></language>  
       <language id="de"><![CDATA[Standardausgabe]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Salida predeterminada]]></language>
     </name> 
   </property>
-  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
+  <property id="llmprompt" index="true" editable="true" stored="true" note="Prompt used for LLM interaction" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Instructions]]></language>  
       <language id="de"><![CDATA[Anweisungen]]></language>
@@ -82,7 +82,7 @@
       <language id="es"><![CDATA[Grupo de carpetas]]></language>
     </name> 
   </property>  
-  <property id="runoperation" editable="true" indextype="not_analyzed" index="true" stored="true"> 
+  <property id="runoperation" index="true" editable="true" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Run Operation]]></language>  
       <language id="de"><![CDATA[Betrieb durchführen]]></language>
@@ -90,7 +90,7 @@
       <language id="es"><![CDATA[Ejecutar operación]]></language>
     </name> 
   </property>  
-  <property id="generatemarkdown" index="true" stored="true" editable="true" datatype="boolean"> 
+  <property id="generatemarkdown" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Generate Markdown]]></language>  
       <language id="de"><![CDATA[Markdown generieren]]></language>
@@ -98,7 +98,7 @@
       <language id="es"><![CDATA[Generar código Markdown]]></language>
     </name> 
   </property>  
-  <property id="agenttype" index="true" editable="true" stored="true" type="list"> 
+  <property id="agenttype" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Agent Type]]></language>  
       <language id="de"><![CDATA[Agententyp]]></language>
@@ -106,7 +106,7 @@
       <language id="es"><![CDATA[Tipo de agente]]></language>
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true"> 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Ordering]]></language>  
       <language id="de"><![CDATA[Bestellung]]></language>
@@ -114,7 +114,7 @@
       <language id="es"><![CDATA[Ordenar]]></language>
     </name> 
   </property>  
-  <property id="fieldsavevector" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="default"> 
+  <property id="fieldsavevector" index="true" editable="true" viewtype="default" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Field Save Vector]]></language>  
       <language id="de"><![CDATA[Feldspeicher-Vektor]]></language>
@@ -122,7 +122,7 @@
       <language id="es"><![CDATA[Vector de guardado de campo]]></language>
     </name> 
   </property>  
-  <property id="maxnumberofcentroids" type="number" editable="true" index="true" stored="true" autoincrement="true"> 
+  <property id="maxnumberofcentroids" index="true" editable="true" datatype="number" stored="true" autoincrement="true"> 
     <name> 
       <language id="en"><![CDATA[Max Number of Centroids]]></language>  
       <language id="de"><![CDATA[Maximale Anzahl der Zentren]]></language>
@@ -130,7 +130,7 @@
       <language id="es"><![CDATA[Número máximo de centroides]]></language>
     </name> 
   </property>  
-  <property id="init_loop_start_distance" index="true" editable="true" stored="true" datatype="double" type="double"> 
+  <property id="init_loop_start_distance" index="true" editable="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Initial Loop Start Distance]]></language>  
       <language id="de"><![CDATA[Anfangs-Strecke der ersten Schleife]]></language>
@@ -138,7 +138,7 @@
       <language id="es"><![CDATA[Distancia inicial de inicio del bucle]]></language>
     </name> 
   </property>  
-  <property id="init_loop_lower_limit" index="true" editable="true" stored="true" datatype="double" type="double"> 
+  <property id="init_loop_lower_limit" index="true" editable="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Initial Loop Lower Limit]]></language>  
       <language id="de"><![CDATA[Untere Grenze der ersten Schleife]]></language>
@@ -146,7 +146,7 @@
       <language id="es"><![CDATA[Límite inferior del bucle inicial]]></language>
     </name> 
   </property>  
-  <property id="maxdistancetocentroid" index="true" editable="true" stored="true" datatype="double" type="double"> 
+  <property id="maxdistancetocentroid" index="true" editable="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Max Distance to Centroid]]></language>  
       <language id="de"><![CDATA[Maximaler Abstand zum Schwerpunkt]]></language>
@@ -154,7 +154,7 @@
       <language id="es"><![CDATA[Distancia máxima al centroide]]></language>
     </name> 
   </property>  
-  <property id="maxdistancetocentroid_ome" index="true" editable="true" stored="true" datatype="double" type="double"> 
+  <property id="maxdistancetocentroid_ome" index="true" editable="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Max Distance to Centroid One]]></language>  
       <language id="de"><![CDATA[Maximaler Abstand zum Zentroid eins]]></language>
@@ -162,7 +162,7 @@
       <language id="es"><![CDATA[Distancia máxima al centróide uno]]></language>
     </name> 
   </property>  
-  <property id="maxdistancetomatch" index="true" editable="true" stored="true" datatype="double" type="double"> 
+  <property id="maxdistancetomatch" index="true" editable="true" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Max Distance to Match]]></language>  
       <language id="de"><![CDATA[Maximaler Abstand zum Match]]></language>
@@ -170,7 +170,7 @@
       <language id="es"><![CDATA[Máxima distancia para coincidir]]></language>
     </name> 
   </property>  
-  <property id="notes" editable="true" index="true" stored="true"> 
+  <property id="notes" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Notizen]]></language>  
       <language id="en"><![CDATA[Notes]]></language>  
@@ -178,7 +178,7 @@
       <language id="fr"><![CDATA[Remarques]]></language> 
     </name> 
   </property>  
-  <property id="aicreationcommand" editable="true" index="true" stored="true"> 
+  <property id="aicreationcommand" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[AI Creation Command]]></language>  
       <language id="de"><![CDATA[AI-Erstellungsbefehl]]></language>
@@ -186,7 +186,7 @@
       <language id="es"><![CDATA[Comando de creación de IA]]></language>
     </name> 
   </property>  
-  <property id="aicreationdescription" editable="true" index="true" stored="true"> 
+  <property id="aicreationdescription" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[AI Creation Description]]></language>  
       <language id="de"><![CDATA[KI-Erstellungsbeschreibung]]></language>
@@ -194,7 +194,7 @@
       <language id="es"><![CDATA[Descripción de la creación de inteligencia artificial]]></language>
     </name> 
   </property>  
-  <property id="contextvalues" index="true" editable="true" stored="true" indextype="not_analyzed" viewtype="json"> 
+  <property id="contextvalues" index="true" editable="true" viewtype="json" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Agent Context Values]]></language>  
       <language id="de"><![CDATA[Agent-Kontextwerte]]></language>

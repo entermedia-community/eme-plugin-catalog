@@ -2,7 +2,7 @@
 
 <properties> 
   <!-- Property: llmmodel -->  
-  <property id="llmmodel" foreignkeyid="llmtype" index="true" stored="true" keyword="true" editable="true" note="Specifies the LLM model used" type="list"> 
+  <property id="llmmodel" index="true" keyword="true" editable="true" datatype="list" stored="true" note="Specifies the LLM model used" foreignkeyid="llmtype"> 
     <name> 
       <language id="de"><![CDATA[LLM-Modell]]></language>  
       <language id="en"><![CDATA[LLM Model]]></language>  
@@ -11,7 +11,7 @@
     </name> 
   </property>  
   <!-- Property: llmprompt -->  
-  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed"  editable="true" note="Prompt used for LLM interaction"> 
+  <property id="llmprompt" index="true" editable="true" stored="true" note="Prompt used for LLM interaction" indextype="not_analyzed"> 
     <name> 
       <language id="de"><![CDATA[Eingabeaufforderung für LLM]]></language>  
       <language id="en"><![CDATA[LLM Prompt]]></language>  
@@ -20,7 +20,7 @@
     </name> 
   </property>  
   <!-- Property: llmimagestyle -->  
-  <property id="llmimagestyle" type="list" index="true" stored="true" keyword="true" editable="true" note="Defines the visual style for AI-generated images (e.g., 'vivid' or 'natural')"> 
+  <property id="llmimagestyle" index="true" keyword="true" editable="true" datatype="list" stored="true" note="Defines the visual style for AI-generated images (e.g., 'vivid' or 'natural')"> 
     <name> 
       <language id="de"><![CDATA[LLM-Bildstil]]></language>  
       <language id="en"><![CDATA[LLM Image Style]]></language>  
@@ -29,7 +29,7 @@
     </name> 
   </property>  
   <!-- Property: llmnotes -->  
-  <property id="llmnotes" index="true" stored="true" keyword="true" editable="true" note="General notes or comments about the LLM configuration or output"> 
+  <property id="llmnotes" index="true" keyword="true" editable="true" stored="true" note="General notes or comments about the LLM configuration or output"> 
     <name> 
       <language id="de"><![CDATA[LLM-Anmerkungen]]></language>  
       <language id="en"><![CDATA[LLM Notes]]></language>  
@@ -37,7 +37,7 @@
       <language id="fr"><![CDATA[Notes LLM]]></language> 
     </name> 
   </property>  
-  <property id="status" type="list" editable="true" index="true" stored="true" viewtype="list" listid="llmstatus">Status 
+  <property id="status" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="llmstatus">Status 
     <name> 
       <language id="de"><![CDATA[Status]]></language>  
       <language id="en"><![CDATA[Status]]></language>  
@@ -53,10 +53,10 @@
       <language id="es"><![CDATA[Módulo de nivel superior]]></language>
     </name> 
   </property>  
-  <property id="entitymoduleviewid" type="list" editable="true" index="true" stored="true" viewtype="list" listid="view">Render Table</property>  
-  <property id="entityid" internalfield="true" index="true" stored="true" type="list" editable="true" keyword="true" filter="true">Specific Entity</property>  
-  <property id="createassets" type="boolean" editable="true" index="true" stored="true">Create Assets</property>  
-  <property id="contentcreatortype" index="true" stored="true" editable="true"> 
+  <property id="entitymoduleviewid" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="view">Render Table</property>  
+  <property id="entityid" index="true" filter="true" keyword="true" editable="true" datatype="list" stored="true" internalfield="true">Specific Entity</property>  
+  <property id="createassets" index="true" editable="true" datatype="boolean" stored="true">Create Assets</property>  
+  <property id="contentcreatortype" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en">Content Type</language>  
       <language id="de"><![CDATA[Inhaltstyp]]></language>

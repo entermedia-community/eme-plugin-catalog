@@ -3,11 +3,11 @@
 <properties> 
 
 
-  <property id="name" index="true" stored="true" editable="true">Theme Name</property>
-  <property id="templatecss" index="true" stored="true" editable="true">Import Template Path</property>
+  <property id="name" index="true" editable="true" stored="true">Theme Name</property>
+  <property id="templatecss" index="true" editable="true" stored="true">Import Template Path</property>
   
   <!--  header information and style -->  
-  <property id="title" index="true" stored="true" editable="true">Site Title 
+  <property id="title" index="true" editable="true" stored="true">Site Title 
     <name> 
       <language id="de"><![CDATA[Seitentitel]]></language>  
       <language id="en"><![CDATA[Site Title]]></language>  
@@ -16,8 +16,7 @@
     </name> 
   </property>
  
-  <property id="logoasset" index="true" stored="true" sourcepath="System/logos/${filename}" editable="true" type="list" viewtype="asset" searchtype="theme" internalfield="false" listid="asset" datatype="list" 
-  	note="PNG Required, max size 300x100px."> 
+  <property id="logoasset" index="true" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" note="PNG Required, max size 300x100px." searchtype="theme" listid="asset" sourcepath="System/logos/${filename}"> 
     <name> 
       <language id="de"><![CDATA[logo Vermögenswert]]></language>  
       <language id="en"><![CDATA[Logo Asset]]></language>  
@@ -25,7 +24,7 @@
       <language id="fr"><![CDATA[Logo item]]></language> 
     </name> 
   </property>  
-  <property id="logowidth" index="true" stored="true" editable="true">Logo Width 
+  <property id="logowidth" index="true" editable="true" stored="true">Logo Width 
     <name> 
       <language id="de"><![CDATA[Logobreite]]></language>  
       <language id="en"><![CDATA[Logo Width]]></language>  
@@ -33,7 +32,7 @@
       <language id="fr"><![CDATA[Logo Largeur]]></language> 
     </name> 
   </property>  
-  <property id="logoheight" index="true" stored="true" editable="true">Logo Height 
+  <property id="logoheight" index="true" editable="true" stored="true">Logo Height 
     <name> 
       <language id="de"><![CDATA[logo Höhe]]></language>  
       <language id="en"><![CDATA[Logo Height]]></language>  

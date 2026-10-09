@@ -1,11 +1,11 @@
 <properties lazy-init="true">
 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id</property>
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">Id</property>
 
-  <property id="name" index="true" stored="true" editable="true" multilanguage="true">Name</property>
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true">Name</property>
 
-  <property id="icon" index="true" stored="true" editable="true">Icon</property>
+  <property id="icon" index="true" editable="true" stored="true">Icon</property>
 
-  <property id="ordering" index="true" stored="true" editable="true" type="number" datatype="number">Ordering</property>
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering</property>
 
 </properties>

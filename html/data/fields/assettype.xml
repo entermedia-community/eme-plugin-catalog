@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" searchtype="assettype">Id 
+  <property id="id" index="true" editable="true" stored="true" searchtype="assettype">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" searchtype="assettype" multilanguage="true">Name 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true" searchtype="assettype">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="extensions" index="true" stored="true" editable="true" searchtype="assettype">Extensions 
+  <property id="extensions" index="true" editable="true" stored="true" searchtype="assettype">Extensions 
     <name> 
       <language id="de"><![CDATA[Erweiterungen]]></language>  
       <language id="en"><![CDATA[Extensions]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Extensions]]></language> 
     </name> 
   </property>  
-  <property id="paths" index="true" stored="true" editable="true">Paths 
+  <property id="paths" index="true" editable="true" stored="true">Paths 
     <name> 
       <language id="de"><![CDATA[Pfade]]></language>  
       <language id="en"><![CDATA[Paths]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Chemins]]></language> 
     </name> 
   </property>  
-  <property id="ordering" editable="true" index="true" type="number" stored="true">Ordering
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering
     <name>
       <language id="de"><![CDATA[Bestellung]]></language>
       <language id="en"><![CDATA[Ordering]]></language>

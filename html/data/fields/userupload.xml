@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="title" index="true" deleted="false" editable="true" stored="true" keyword="true"> 
+  <property id="title" index="true" keyword="true" editable="true" stored="true" deleted="false"> 
     <name> 
       <language id="en"><![CDATA[Title]]></language>  
       <language id="de"><![CDATA[Titel]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Título]]></language>
     </name> 
   </property>  
-  <property id="longdescription" index="true" stored="true" editable="true" viewtype="html" keyword="true"> 
+  <property id="longdescription" index="true" keyword="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Description]]></language>  
       <language id="de"><![CDATA[Beschreibung]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Descripción]]></language>
     </name> 
   </property>  
-  <property id="uploaddate" index="true" stored="true" editable="true" datatype="date" viewtype="datetime"> 
+  <property id="uploaddate" index="true" editable="true" viewtype="datetime" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Upload Date]]></language>  
       <language id="de"><![CDATA[Upload-Datum]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Fecha de subida]]></language>
     </name> 
   </property>  
-  <property id="librarycollection" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list">Library 
+  <property id="librarycollection" index="true" editable="true" viewtype="autocomplete" datatype="list" stored="true" required="true" listid="librarycollection">Library 
     <name> 
       <language id="en"><![CDATA[Library Collection]]></language>  
       <language id="de"><![CDATA[Bibliothekssammlung]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Colección bibliográfica]]></language>
     </name> 
   </property>  
-  <property id="uploadcategory" index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated" editable="false">Category ID 
+  <property id="uploadcategory" index="true" editable="false" viewtype="category" datatype="list" stored="true" note="Auto populated" listid="category">Category ID 
     <name> 
       <language id="en"><![CDATA[Category ID]]></language>  
       <language id="de"><![CDATA[Kategorie-ID]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[ID de categoría]]></language>
     </name> 
   </property>  
-  <property id="usertags" datatype="kwmap" editable="true" index="true" stored="true" keyword="true" type="kwmap">User Tags 
+  <property id="usertags" index="true" keyword="true" editable="true" datatype="kwmap" stored="true">User Tags 
     <name> 
       <language id="de"><![CDATA[Nutzer-Tags]]></language>  
       <language id="en"><![CDATA[User Tags]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Mots-clés de l&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
+  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="exclusivecontent" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="exclusivecontent" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Team Only]]></language>  
       <language id="de"><![CDATA[Nur für das Team]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Solo para el equipo]]></language>
     </name> 
   </property>  
-  <property id="reportedby" index="true" viewtype="user" type="list" datatype="multi" listid="user" keyword="true" stored="true" editable="true"> 
+  <property id="reportedby" index="true" keyword="true" editable="true" viewtype="user" datatype="multi" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Reported By]]></language>  
       <language id="de"><![CDATA[Meldung von:]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Reportado por]]></language>
     </name> 
   </property>  
-  <property id="totalfilesize" index="true" stored="true" editable="true" datatype="number" viewtype="filesize"> 
+  <property id="totalfilesize" index="true" editable="true" viewtype="filesize" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Total File Size]]></language>  
       <language id="de"><![CDATA[Gesamtdateigröße]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Tamaño total del archivo]]></language>
     </name> 
   </property>  
-  <property id="urlname" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="urlname" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Post URL]]></language>  
       <language id="de"><![CDATA[URL]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[URL de la publicación]]></language>
     </name> 
   </property>  
-  <property id="primarymedia" index="true" stored="true" editable="true" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="${data.sourcepath}/${filename}"> 
+  <property id="primarymedia" index="true" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="${data.sourcepath}/${filename}"> 
     <name> 
       <language id="en"><![CDATA[Post Thumbnail]]></language>  
       <language id="de"><![CDATA[Thumbnails des Posts]]></language>

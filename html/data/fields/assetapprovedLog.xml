@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="user" index="true" viewtype="user" stored="true" type="list"> 
+  <property id="user" index="true" viewtype="user" datatype="list" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" stored="true" datatype="list"> 
+  <property id="collectionid" index="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Album]]></language>  
       <language id="de"><![CDATA[Album]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Álbum]]></language>
     </name> 
   </property>  
-  <property id="dataid" index="true" stored="true" datatype="list"> 
+  <property id="dataid" index="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Asset]]></language>  
       <language id="de"><![CDATA[Vermögen]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Nota de la Comisión]]></language>
     </name> 
   </property>  
-  <property id="date" type="date" viewtype="time" index="true" stored="true">Date 
+  <property id="date" index="true" viewtype="time" datatype="date" stored="true">Date 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  

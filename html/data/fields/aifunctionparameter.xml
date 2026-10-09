@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="false"> 
+  <property id="id" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
       <language id="de"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" multilanguage="false">Name 
+  <property id="name" index="true" editable="true" multilanguage="false" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="parentmodule" index="true" stored="true" indextype="not_analyzed" editable="false" viewtype="default"> 
+  <property id="parentmodule" index="true" editable="false" viewtype="default" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Parent Module]]></language>  
       <language id="de"><![CDATA[Elternmodul]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Módulo padre]]></language>
     </name> 
   </property>  
-  <property id="childmodule" index="true" stored="true" indextype="not_analyzed" editable="false" viewtype="default"> 
+  <property id="childmodule" index="true" editable="false" viewtype="default" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Child Module]]></language>  
       <language id="de"><![CDATA[Kindermodule]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Módulo de hijo]]></language>
     </name> 
   </property>  
-  <property id="aifunction" editable="true" index="true" stored="true" type="list"> 
+  <property id="aifunction" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[AI Function]]></language>  
       <language id="de"><![CDATA[KI-Funktion]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Función de IA]]></language>
     </name> 
   </property>  
-  <property id="iscentroid" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="iscentroid" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Is Centroid]]></language>  
       <language id="de"><![CDATA[Ist der Schwerpunkt]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Es el centróide]]></language>
     </name> 
   </property>  
-  <property id="nearbycentroidids" index="true" stored="true" editable="true" listid="semanticembedding" datatype="list" multiple="true"> 
+  <property id="nearbycentroidids" index="true" editable="true" datatype="list" stored="true" listid="semanticembedding" multiple="true"> 
     <name> 
       <language id="en"><![CDATA[Nearest Cluster Id]]></language>  
       <language id="de"><![CDATA[Nächster Cluster-Id]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Vector]]></language>
     </name> 
   </property>  
-  <property id="isremoved" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="isremoved" index="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Is Removed]]></language>  
       <language id="de"><![CDATA[Entfernt]]></language>

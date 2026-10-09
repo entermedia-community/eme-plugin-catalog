@@ -3,11 +3,11 @@
 <page> 
   
   
-   <property id="renewalpolicy" datatype="list" editable="true" index="true" stored="true"   type="list">Renewal Policy 
+   <property id="renewalpolicy" index="true" editable="true" datatype="list" stored="true">Renewal Policy 
  
   </property>  
   
-  <property id="renewalrecipient"  editable="true" index="true" stored="true" type="list" listid="user"  >Renewal Recipient 
+  <property id="renewalrecipient" index="true" editable="true" datatype="list" stored="true" listid="user">Renewal Recipient 
  
   </property>  
 </page>

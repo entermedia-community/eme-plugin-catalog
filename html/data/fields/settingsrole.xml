@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties index="true" stored="true" beanname="folderSearcher"> 
-  <property id="id" index="true" stored="true" editable="false"> 
+  <property id="id" index="true" editable="false" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="profilesearchfilters" index="true" stored="true" editable="true" note="Used for filtering">Filters 
+  <property id="profilesearchfilters" index="true" editable="true" stored="true" note="Used for filtering">Filters 
     <name> 
       <language id="de"><![CDATA[Filter]]></language>  
       <language id="en"><![CDATA[Filters]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Colonnes de la table]]></language> 
     </name> 
   </property>  
-  <property id="permissions" viewtype="multiselect" editable="false" index="true" stored="true" type="list" listid="permissionsapp">Permissions 
+  <property id="permissions" index="true" editable="false" viewtype="multiselect" datatype="list" stored="true" listid="permissionsapp">Permissions 
     <name> 
       <language id="de"><![CDATA[Berechtigungen]]></language>  
       <language id="en"><![CDATA[Permissions]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Autorisations]]></language> 
     </name> 
   </property>  
-  <property id="resultview" editable="true" index="true" stored="true" type="list">Default Result View 
+  <property id="resultview" index="true" editable="true" datatype="list" stored="true">Default Result View 
     <name> 
       <language id="de"><![CDATA[Standardergebnisansicht]]></language>  
       <language id="en"><![CDATA[Default Result View]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Vue Résultat Par Défaut]]></language> 
     </name> 
   </property>  
-  <property id="hideassettype" index="true" stored="true" internalfield="true" viewtype="multiselect" datatype="list" listid="assettype" editable="true" type="list"> 
+  <property id="hideassettype" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="assettype"> 
     <name> 
       <language id="de"><![CDATA[verstecken Asset-Typen]]></language>  
       <language id="en"><![CDATA[Hidden Asset Types]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Cacher les Types d&#39;item]]></language> 
     </name> 
   </property>  
-  <property id="assethitsperpage" index="true" stored="true" type="list" listid="hitcount" editable="true">Number of Assets to view per page 
+  <property id="assethitsperpage" index="true" editable="true" datatype="list" stored="true" listid="hitcount">Number of Assets to view per page 
     <name> 
       <language id="de"><![CDATA[Anzahl der Assets pro Seite zu sehen]]></language>  
       <language id="en"><![CDATA[Number of Assets to view per page]]></language>  
@@ -65,7 +65,7 @@
       <language id="fr"><![CDATA[Nombre d&#39;items à afficher par page]]></language> 
     </name> 
   </property>  
-  <property id="modulehitsperpage" index="true" stored="true" type="list" listid="hitcount" editable="true">Number of rows show on Module results 
+  <property id="modulehitsperpage" index="true" editable="true" datatype="list" stored="true" listid="hitcount">Number of rows show on Module results 
     <name> 
       <language id="de"><![CDATA[Anzahl der Zeilen zeigen Modul Ergebnisse]]></language>  
       <language id="en"><![CDATA[Number of rows show on Module results]]></language>  
@@ -73,7 +73,7 @@
       <language id="fr"><![CDATA[Nombre de lignes affichées sur le module des résultats]]></language> 
     </name> 
   </property>  
-  <property id="sendcollectionnotifications" index="true" type="boolean" internalfield="true" editable="false"> 
+  <property id="sendcollectionnotifications" index="true" editable="false" datatype="boolean" internalfield="true"> 
     <name> 
       <language id="en"><![CDATA[Receive Album Email Notifications]]></language>  
       <language id="de"><![CDATA[E-Mail-Benachrichtigungen für Alben erhalten]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Recibir notificaciones por correo electrónico del álbum]]></language>
     </name> 
   </property>  
-  <property id="sendapprovalnotifications" index="true" type="boolean" internalfield="true" editable="false"> 
+  <property id="sendapprovalnotifications" index="true" editable="false" datatype="boolean" internalfield="true"> 
     <name> 
       <language id="en"><![CDATA[Receive Approval or Rejection Notifications]]></language>  
       <language id="de"><![CDATA[Benachrichtigungen über Zustimmung oder Ablehnung erhalten]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Recibir notificaciones de aprobación o denegación]]></language>
     </name> 
   </property>  
-  <property id="preferedapp" index="true" internalfield="true" editable="true"> 
+  <property id="preferedapp" index="true" editable="true" internalfield="true"> 
     <name> 
       <language id="en"><![CDATA[Prefered Application]]></language>  
       <language id="de"><![CDATA[Bevorzugte Anwendung]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Aplicación preferida]]></language>
     </name> 
   </property>  
-  <property id="multiedit" editable="true" type="boolean" index="true" stored="true">old? 
+  <property id="multiedit" index="true" editable="true" datatype="boolean" stored="true">old? 
     <name> 
       <language id="de"><![CDATA[Multi-Edit]]></language>  
       <language id="en"><![CDATA[Multi-Edit]]></language>  

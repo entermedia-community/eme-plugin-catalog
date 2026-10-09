@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">Search Type 
+  <property id="id" index="true" editable="true" stored="true">Search Type 
     <name> 
       <language id="de"><![CDATA[Suchart]]></language>  
       <language id="en"><![CDATA[Search Type]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Type de recherche]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Label 
+  <property id="name" index="true" editable="true" stored="true">Label 
     <name> 
       <language id="de"><![CDATA[Etikette]]></language>  
       <language id="en"><![CDATA[Label]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Étiquette]]></language> 
     </name> 
   </property>  
-  <property id="beanname" editable="true" stored="true" index="true">Bean Name
+  <property id="beanname" index="true" editable="true" stored="true">Bean Name
     <name>
       <language id="de"><![CDATA[Bohne Name]]></language>
       <language id="en"><![CDATA[Bean Name]]></language>

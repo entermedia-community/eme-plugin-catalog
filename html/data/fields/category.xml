@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="name" editable="true" index="true" stored="true"  >Category Name 
+  <property id="name" index="true" editable="true" stored="true">Category Name 
     <name> 
       <language id="de"><![CDATA[Kategoriename]]></language>  
       <language id="en"><![CDATA[Category Name]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Catégorie]]></language> 
     </name> 
   </property>  
-  <property id="id" editable="true" index="true" stored="true"   >Category Id 
+  <property id="id" index="true" editable="true" stored="true">Category Id 
     <name> 
       <language id="de"><![CDATA[Kategorie ID]]></language>  
       <language id="en"><![CDATA[Category Id]]></language>  

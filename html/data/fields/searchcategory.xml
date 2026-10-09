@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="name" editable="true" multilanguage="true" index="true" stored="true">Category Name 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true">Category Name 
     <name> 
       <language id="de"><![CDATA[Kategoriename]]></language>  
       <language id="en"><![CDATA[Category Name]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Catégorie]]></language> 
     </name> 
   </property>  
-  <property id="id" editable="true" index="true" stored="true"> 
+  <property id="id" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Kategorie ID]]></language>  
       <language id="en"><![CDATA[Category Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Id catégorie]]></language> 
     </name> 
   </property>  
-  <property id="library" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="library" datatype="list">Library 
+  <property id="library" index="true" editable="true" viewtype="autocomplete" datatype="list" stored="true" listid="library">Library 
     <name> 
       <language id="de"><![CDATA[Bibliothek]]></language>  
       <language id="en"><![CDATA[Library]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Bibliothèque]]></language> 
     </name> 
   </property>  
-  <property id="lastsummary_date" index="true" stored="true" editable="true" type="date"> 
+  <property id="lastsummary_date" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Date]]></language>  
       <language id="de"><![CDATA[Datum]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="lastsummary_enabled" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="lastsummary_enabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Enable Summary Creation]]></language>  
       <language id="de"><![CDATA[Zusammenfassungserstellung aktivieren]]></language>

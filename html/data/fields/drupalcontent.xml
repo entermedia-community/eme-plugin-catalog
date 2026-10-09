@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="contentlink" index="true" deleted="false" editable="true" stored="true" viewtype="url">New 
+  <property id="contentlink" index="true" editable="true" viewtype="url" stored="true" deleted="false">New 
     <name> 
       <language id="en"><![CDATA[Content Link]]></language>  
       <language id="de"><![CDATA[Inhaltsverlinkung]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Enlace de contenido]]></language>
     </name> 
   </property>  
-  <property id="contentdate" index="true" stored="true" editable="true" keyword="true" datatype="date" viewtype="date"> 
+  <property id="contentdate" index="true" keyword="true" editable="true" viewtype="date" datatype="date" stored="true"> 
     <!-- not really a filter -->  
     <name> 
       <language id="en"> <![CDATA[Content Date]]> </language>  

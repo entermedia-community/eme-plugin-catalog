@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="tutorialskill" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="tutorialskill"> 
+  <property id="tutorialskill" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="tutorialskill"> 
     <name> 
       <language id="en">Tutorial Skills</language>  
       <language id="de"><![CDATA[Tutorialskills]]></language>

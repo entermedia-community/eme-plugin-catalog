@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="ordering" type="number" autoincrement="false" editable="true" index="true" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true" autoincrement="false">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Mostrar en todos los módulos]]></language>
     </name> 
   </property>  
-  <property id="parentmoduleid" index="true" editable="true" listid="module" viewtype="multiselect" rendertype="multiselect" datatype="list"> 
+  <property id="parentmoduleid" index="true" editable="true" viewtype="multiselect" datatype="list" listid="module" rendertype="multiselect"> 
     <name> 
       <language id="en"><![CDATA[Show on Selected Modules]]></language>  
       <language id="de"><![CDATA[Anzeigen für ausgewählte Module]]></language>

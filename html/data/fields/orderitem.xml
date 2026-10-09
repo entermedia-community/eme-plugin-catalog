@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" prefix="orderitems"> 
-  <property id="id" index="true" stored="true" editable="false">Item Id 
+  <property id="id" index="true" editable="false" stored="true">Item Id 
     <name> 
       <language id="de"><![CDATA[Artikel Identifikationsnummer]]></language>  
       <language id="en"><![CDATA[Item Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID de l&#39;article]]></language> 
     </name> 
   </property>  
-  <property id="orderid" index="true" type="list" stored="true" editable="false">Order Id 
+  <property id="orderid" index="true" editable="false" datatype="list" stored="true">Order Id 
     <name> 
       <language id="de"><![CDATA[Auftragsnummer]]></language>  
       <language id="en"><![CDATA[Order Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Numéro de commande]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" index="true" stored="true" editable="false">Source Path 
+  <property id="sourcepath" index="true" editable="false" stored="true">Source Path 
     <name> 
       <language id="de"><![CDATA[Source-Pfad]]></language>  
       <language id="en"><![CDATA[Source Path]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="userid" type="list" listid="user" editable="true" index="true" stored="true">User 
+  <property id="userid" index="true" editable="true" datatype="list" stored="true" listid="user">User 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[User]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="assetsourcepath" index="true" stored="true" editable="false">Asset SourcePath 
+  <property id="assetsourcepath" index="true" editable="false" stored="true">Asset SourcePath 
     <name> 
       <language id="de"><![CDATA[Asset SourcePath]]></language>  
       <language id="en"><![CDATA[Asset SourcePath]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine de l&#39;item]]></language> 
     </name> 
   </property>  
-  <property id="assetid" type="list" viewtype="asset" index="true" stored="true" editable="false">Asset Id 
+  <property id="assetid" index="true" editable="false" viewtype="asset" datatype="list" stored="true">Asset Id 
     <name> 
       <language id="de"><![CDATA[Asset-ID]]></language>  
       <language id="en"><![CDATA[Asset Id]]></language>  
@@ -50,9 +50,9 @@
     </name> 
   </property>  
   <!--  property id="status" datatype="list" listid="orderitem/status" index="true" stored="true" >Status</property>
-	<property id="errorcount" index="true" stored="true" >Error Count</property>
-	<property id="errordetails" index="true"  stored="true" >Error Details</property -->  
-  <property id="jobnotes" index="true" stored="true" editable="false">Job Notes 
+	<property id="errorcount" index="true" stored="true">Error Count</property>
+	<property id="errordetails" index="true" stored="true">Error Details</property -->  
+  <property id="jobnotes" index="true" editable="false" stored="true">Job Notes 
     <name> 
       <language id="de"><![CDATA[Job-Notizen]]></language>  
       <language id="en"><![CDATA[Job Notes]]></language>  
@@ -60,7 +60,7 @@
       <language id="fr"><![CDATA[Notes d&#39;emploi]]></language> 
     </name> 
   </property>  
-  <property id="remotePath" index="true" stored="true" editable="false">Remote Path 
+  <property id="remotePath" index="true" editable="false" stored="true">Remote Path 
     <name> 
       <language id="de"><![CDATA[Remote-Pfad]]></language>  
       <language id="en"><![CDATA[Remote Path]]></language>  
@@ -68,7 +68,7 @@
       <language id="fr"><![CDATA[Chemin distant]]></language> 
     </name> 
   </property>  
-  <property id="presetid" listid="convertpreset" type="list" index="true" stored="true" editable="false">Preset 
+  <property id="presetid" index="true" editable="false" datatype="list" stored="true" listid="convertpreset">Preset 
     <name> 
       <language id="de"><![CDATA[Preset]]></language>  
       <language id="en"><![CDATA[Preset]]></language>  
@@ -77,7 +77,7 @@
     </name> 
   </property>  
   <!--  Data Merge -->  
-  <property id="status" index="true" stored="true" editable="true" type="list" viewtype="list" listid="convertstatus">New 
+  <property id="status" index="true" editable="true" viewtype="list" datatype="list" stored="true" listid="convertstatus">New 
     <name> 
       <language id="en"><![CDATA[Convert Status]]></language>  
       <language id="de"><![CDATA[Status konvertieren]]></language>
@@ -85,7 +85,7 @@
       <language id="es"><![CDATA[Convertir el estado]]></language>
     </name> 
   </property>  
-  <property id="errordetails" index="true" stored="true" editable="false">Error Details 
+  <property id="errordetails" index="true" editable="false" stored="true">Error Details 
     <name> 
       <language id="de"><![CDATA[Fehlerdetails]]></language>  
       <language id="en"><![CDATA[Error Details]]></language>  
@@ -93,7 +93,7 @@
       <language id="fr"><![CDATA[Détails de l&#39;erreur]]></language> 
     </name> 
   </property>  
-  <property id="itemexportname" index="true" stored="true" editable="false"> 
+  <property id="itemexportname" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Preset File Path]]></language>  
       <language id="de"><![CDATA[Pfad zur Voreinstellungsdatei]]></language>
@@ -101,7 +101,7 @@
       <language id="es"><![CDATA[Ruta de archivo predeterminada]]></language>
     </name> 
   </property>  
-  <property id="itemsourcepath" index="true" stored="true" editable="false"> 
+  <property id="itemsourcepath" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Item Source Path]]></language>  
       <language id="de"><![CDATA[Quellpfad des Artikels]]></language>
@@ -109,7 +109,7 @@
       <language id="es"><![CDATA[Ruta de origen del elemento]]></language>
     </name> 
   </property>  
-  <property id="itemfilepath" index="true" stored="true" editable="false"> 
+  <property id="itemfilepath" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Preset File Path]]></language>  
       <language id="de"><![CDATA[Pfad zur Voreinstellungsdatei]]></language>
@@ -117,7 +117,7 @@
       <language id="es"><![CDATA[Ruta de archivo predeterminada]]></language>
     </name> 
   </property>  
-  <property id="itemdownloadurl" index="true" stored="true" editable="false"> 
+  <property id="itemdownloadurl" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Download Url]]></language>  
       <language id="de"><![CDATA[Download-URL]]></language>
@@ -125,7 +125,7 @@
       <language id="es"><![CDATA[Enlace de descarga]]></language>
     </name> 
   </property>  
-  <property id="publishstartdate" index="true" stored="true" editable="false" type="date"> 
+  <property id="publishstartdate" index="true" editable="false" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Publish Start Date]]></language>  
       <language id="de"><![CDATA[Veröffentlichungsdatum]]></language>
@@ -133,7 +133,7 @@
       <language id="es"><![CDATA[Fecha de inicio de la publicación]]></language>
     </name> 
   </property>  
-  <property id="publishstatus" index="true" stored="true" editable="true" type="list"> 
+  <property id="publishstatus" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Publish Status]]></language>  
       <language id="de"><![CDATA[Veröffentlichungsstatus]]></language>
@@ -141,7 +141,7 @@
       <language id="es"><![CDATA[Estado de publicación]]></language>
     </name> 
   </property>  
-  <property id="publisheddate" index="true" stored="true" editable="false" type="date"> 
+  <property id="publisheddate" index="true" editable="false" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Published Date]]></language>  
       <language id="de"><![CDATA[Veröffentlichungsdatum]]></language>
@@ -149,7 +149,7 @@
       <language id="es"><![CDATA[Fecha de publicación]]></language>
     </name> 
   </property>  
-  <property id="publishdestination" index="true" type="list" stored="true" editable="false"> 
+  <property id="publishdestination" index="true" editable="false" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Publish Destination]]></language>  
       <language id="de"><![CDATA[Zielpublikation veröffentlichen]]></language>
@@ -157,7 +157,7 @@
       <language id="es"><![CDATA[Publicar destino]]></language>
     </name> 
   </property>  
-  <property id="downloaditemsavepath" index="true" stored="true" editable="false"> 
+  <property id="downloaditemsavepath" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Download Save Path]]></language>  
       <language id="de"><![CDATA[Speicherort herunterladen]]></language>
@@ -165,7 +165,7 @@
       <language id="es"><![CDATA[Ruta de guardado]]></language>
     </name> 
   </property>  
-  <property id="downloaditemtotalfilesize" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" editable="false" type="number">File Size 
+  <property id="downloaditemtotalfilesize" index="true" editable="false" viewtype="filesize" searchcomponent="numbersearch" datatype="number" stored="true" externalid="File Size">File Size 
     <name> 
       <language id="en"><![CDATA[File Size Total]]></language>  
       <language id="de"><![CDATA[Dateigröße insgesamt]]></language>
@@ -173,7 +173,7 @@
       <language id="es"><![CDATA[Tamaño total del archivo]]></language>
     </name> 
   </property>  
-  <property id="downloaditemdownloadedfilesize" index="true" stored="true" datatype="number" viewtype="filesize" searchcomponent="numbersearch" externalid="File Size" editable="false" type="number">File Size 
+  <property id="downloaditemdownloadedfilesize" index="true" editable="false" viewtype="filesize" searchcomponent="numbersearch" datatype="number" stored="true" externalid="File Size">File Size 
     <name> 
       <language id="en"><![CDATA[Size Downloaded]]></language>  
       <language id="de"><![CDATA[Größe herunterladen]]></language>
@@ -181,7 +181,7 @@
       <language id="es"><![CDATA[Tamaño descargado]]></language>
     </name> 
   </property>  
-  <property id="downloadstartdate" index="true" stored="true" editable="false" type="date"> 
+  <property id="downloadstartdate" index="true" editable="false" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Download Start Date]]></language>  
       <language id="de"><![CDATA[Download-Startdatum]]></language>

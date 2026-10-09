@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" type="list" stored="true" editable="true" listid="librarycollection"> 
+  <property id="collectionid" index="true" editable="true" datatype="list" stored="true" listid="librarycollection"> 
     <name> 
       <language id="de"><![CDATA[Sammlung]]></language>  
       <language id="en"><![CDATA[Album]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Album]]></language> 
     </name> 
   </property>  
-  <property id="followeruser" index="true" viewtype="user" type="list" listid="user" stored="true" editable="true"> 
+  <property id="followeruser" index="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[User]]></language>  
       <language id="de"><![CDATA[Benutzer]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Usuario]]></language>
     </name> 
   </property>  
-  <property id="addeddate" index="true" searchcomponent="datesearch" viewtype="datetime" type="date" stored="true"> 
+  <property id="addeddate" index="true" viewtype="datetime" searchcomponent="datesearch" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Sendedatum]]></language>  
       <language id="en"><![CDATA[Added Date]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Date d&#39;envoi]]></language> 
     </name> 
   </property>  
-  <property id="note" editable="true" viewtype="textarea" index="true" stored="true"> 
+  <property id="note" index="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Hinweis]]></language>  
       <language id="en"><![CDATA[Leave a comment]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Erreur]]></language> 
     </name> 
   </property>  
-  <property id="fromuser" viewtype="user" type="list" listid="user" index="true" stored="true"> 
+  <property id="fromuser" index="true" viewtype="user" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="de"><![CDATA[gesendet von]]></language>  
       <language id="en"><![CDATA[Added By]]></language>  
@@ -65,7 +65,7 @@
       <language id="fr"><![CDATA[Envoyée par]]></language> 
     </name> 
   </property>  
-  <property id="agreetoterms" index="true" stored="true" type="boolean" editable="true"> 
+  <property id="agreetoterms" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[I want to contribute]]></language>  
       <language id="de"><![CDATA[Ich möchte einen Beitrag leisten.]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Quiero contribuir.]]></language>
     </name> 
   </property>  
-  <property id="whatsappnumber" index="true" stored="true" editable="true"> 
+  <property id="whatsappnumber" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[WhatsApp]]></language>  
       <language id="de"><![CDATA[WhatsApp:]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[WhatsApp]]></language>
     </name> 
   </property>  
-  <property id="ontheteam" index="true" stored="true" type="boolean" editable="true"> 
+  <property id="ontheteam" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Allow Editing]]></language>  
       <language id="de"><![CDATA[Bearbeiten erlauben]]></language>
@@ -89,7 +89,7 @@
       <language id="es"><![CDATA[Permitir editar]]></language>
     </name> 
   </property>  
-  <property id="isbillingcontact" index="true" stored="true" type="boolean" editable="true"> 
+  <property id="isbillingcontact" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Receive Billing]]></language>  
       <language id="de"><![CDATA[Rechnungen empfangen]]></language>
@@ -97,7 +97,7 @@
       <language id="es"><![CDATA[Recibir facturas]]></language>
     </name> 
   </property>  
-  <property id="dollarsperpoints" index="true" stored="true" editable="true" type="double" defaultvalue="1"> 
+  <property id="dollarsperpoints" index="true" editable="true" datatype="double" stored="true" defaultvalue="1"> 
     <name> 
       <language id="en"><![CDATA[Dollars Per Point]]></language>  
       <language id="de"><![CDATA[Dollar pro Punkt]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Dólares por punto]]></language>
     </name> 
   </property>  
-  <property id="teamroles" index="true" stored="true" editable="true" viewtype="multiselect" filter="true" listid="collectiverole" datatype="list" type="list"> 
+  <property id="teamroles" index="true" filter="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="collectiverole"> 
     <name> 
       <language id="en"><![CDATA[Roles]]></language>  
       <language id="de"><![CDATA[Rollen]]></language>

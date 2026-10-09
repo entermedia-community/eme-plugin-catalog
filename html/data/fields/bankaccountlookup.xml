@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="bankaccount" index="true" editable="true" stored="true" type="list"> 
+  <property id="bankaccount" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Bank Account]]></language>  
       <language id="de"><![CDATA[Bankkonto]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Cuenta bancaria]]></language>
     </name> 
   </property>  
-  <property id="user" index="true" type="list" editable="true" listid="user" stored="true"> 
+  <property id="user" index="true" editable="true" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[User]]></language>  
       <language id="de"><![CDATA[Benutzer]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Usuario]]></language>
     </name> 
   </property>  
-  <property id="cardmade" index="true" type="boolean" keyword="false" editable="true"> 
+  <property id="cardmade" index="true" keyword="false" editable="true" datatype="boolean"> 
     <name> 
       <language id="en"><![CDATA[Card Made]]></language>  
       <language id="de"><![CDATA[Karte erstellt]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Tarjeta elaborada]]></language>
     </name> 
   </property>  
-  <property id="cardgiven" index="true" type="boolean" keyword="false" editable="true"> 
+  <property id="cardgiven" index="true" keyword="false" editable="true" datatype="boolean"> 
     <name> 
       <language id="en"><![CDATA[Card Given]]></language>  
       <language id="de"><![CDATA[Karte übergeben]]></language>

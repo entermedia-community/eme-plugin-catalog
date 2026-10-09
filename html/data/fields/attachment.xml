@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" prefix="assets"> 
-  <property id="id" index="true" stored="true" editable="false">Id 
+  <property id="id" index="true" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="description" index="true" editable="false" >
+  <property id="description" index="true" editable="false">
   	 <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Tous les champs]]></language> 
     </name> 
   </property>  
-  <property id="assetid" editable="true" type="list" index="true" stored="true">Asset ID 
+  <property id="assetid" index="true" editable="true" datatype="list" stored="true">Asset ID 
     <name> 
       <language id="de"><![CDATA[Asset-ID]]></language>  
       <language id="en"><![CDATA[Asset ID]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[ID Item]]></language> 
     </name> 
   </property>  
-  <property id="fulltext" keyword="true" index="true" stored="false" editable="false">Full Text 
+  <property id="fulltext" index="true" keyword="true" editable="false" stored="false">Full Text 
     <name> 
       <language id="de"><![CDATA[voller Text]]></language>  
       <language id="en"><![CDATA[Full Text]]></language>  
@@ -42,7 +42,7 @@
     </name> 
   </property>  
   <!-- This is for PDFs -->  
-  <property id="sourcepath" index="true" stored="true" editable="false">Asset Source Path 
+  <property id="sourcepath" index="true" editable="false" stored="true">Asset Source Path 
     <name> 
       <language id="de"><![CDATA[Asset-Source-Pfad]]></language>  
       <language id="en"><![CDATA[Asset Source Path]]></language>  
@@ -50,7 +50,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine item]]></language> 
     </name> 
   </property>  
-  <property id="parentsourcepath" index="true" stored="true" indextype="not_analyzed" editable="false">Parent Source Path 
+  <property id="parentsourcepath" index="true" editable="false" stored="true" indextype="not_analyzed">Parent Source Path 
     <name> 
       <language id="de"><![CDATA[Mutterquellpfad]]></language>  
       <language id="en"><![CDATA[Parent Source Path]]></language>  
@@ -58,7 +58,7 @@
       <language id="fr"><![CDATA[Parent Path Source]]></language> 
     </name> 
   </property>  
-  <property id="isfolder" index="true" type="boolean" stored="true" legacy="folder" editable="false">Is Folder 
+  <property id="isfolder" index="true" editable="false" datatype="boolean" stored="true" legacy="folder">Is Folder 
     <name> 
       <language id="de"><![CDATA[ist Ordner]]></language>  
       <language id="en"><![CDATA[Is Folder]]></language>  
@@ -66,7 +66,7 @@
       <language id="fr"><![CDATA[Est dossier]]></language> 
     </name> 
   </property>  
-  <property id="compression" externalid="Compression" index="true" stored="true" datatype="text" editable="false" type="text">Compression 
+  <property id="compression" index="true" editable="false" datatype="text" stored="true" externalid="Compression">Compression 
     <name> 
       <language id="de"><![CDATA[Kompression]]></language>  
       <language id="en"><![CDATA[Compression]]></language>  
@@ -74,7 +74,7 @@
       <language id="fr"><![CDATA[Compression]]></language> 
     </name> 
   </property>  
-  <property id="cammaker" externalid="Make" index="true" stored="true" datatype="text" editable="false" type="text">Camera Maker 
+  <property id="cammaker" index="true" editable="false" datatype="text" stored="true" externalid="Make">Camera Maker 
     <name> 
       <language id="de"><![CDATA[Kamerahersteller]]></language>  
       <language id="en"><![CDATA[Camera Maker]]></language>  
@@ -82,7 +82,7 @@
       <language id="fr"><![CDATA[Fabricant de caméra]]></language> 
     </name> 
   </property>  
-  <property id="cammodel" externalid="Model" index="true" stored="true" datatype="text" editable="false" type="text">Camera Model 
+  <property id="cammodel" index="true" editable="false" datatype="text" stored="true" externalid="Model">Camera Model 
     <name> 
       <language id="de"><![CDATA[Kameramodell]]></language>  
       <language id="en"><![CDATA[Camera Model]]></language>  
@@ -90,7 +90,7 @@
       <language id="fr"><![CDATA[Modèle de la caméra]]></language> 
     </name> 
   </property>  
-  <property id="artist" externalid="Artist" index="true" stored="true" datatype="text" editable="false" type="text">Artist 
+  <property id="artist" index="true" editable="false" datatype="text" stored="true" externalid="Artist">Artist 
     <name> 
       <language id="de"><![CDATA[Künstler]]></language>  
       <language id="en"><![CDATA[Artist]]></language>  
@@ -98,7 +98,7 @@
       <language id="fr"><![CDATA[Artiste]]></language> 
     </name> 
   </property>  
-  <property id="contributor" externalid="Contributor" index="true" stored="true" datatype="text" editable="false" type="text">Contributor 
+  <property id="contributor" index="true" editable="false" datatype="text" stored="true" externalid="Contributor">Contributor 
     <name> 
       <language id="de"><![CDATA[Beiträger]]></language>  
       <language id="en"><![CDATA[Contributor]]></language>  
@@ -106,7 +106,7 @@
       <language id="fr"><![CDATA[Contributeur]]></language> 
     </name> 
   </property>  
-  <property id="creator" externalid="Creator" index="true" stored="true" datatype="text" editable="false" type="text">Creator 
+  <property id="creator" index="true" editable="false" datatype="text" stored="true" externalid="Creator">Creator 
     <name> 
       <language id="de"><![CDATA[Schöpfer]]></language>  
       <language id="en"><![CDATA[Creator]]></language>  
@@ -114,7 +114,7 @@
       <language id="fr"><![CDATA[Créateur]]></language> 
     </name> 
   </property>  
-  <property id="source" externalid="Source" index="true" stored="true" datatype="text" editable="false" type="text">Source 
+  <property id="source" index="true" editable="false" datatype="text" stored="true" externalid="Source">Source 
     <name> 
       <language id="de"><![CDATA[Quelle]]></language>  
       <language id="en"><![CDATA[Source]]></language>  
@@ -122,7 +122,7 @@
       <language id="fr"><![CDATA[Source]]></language> 
     </name> 
   </property>  
-  <property id="iso" externalid="ISO" index="true" stored="true" datatype="text" editable="false" type="text">ISO 
+  <property id="iso" index="true" editable="false" datatype="text" stored="true" externalid="ISO">ISO 
     <name> 
       <language id="de"><![CDATA[ISO]]></language>  
       <language id="en"><![CDATA[ISO]]></language>  
@@ -130,7 +130,7 @@
       <language id="fr"><![CDATA[ISO]]></language> 
     </name> 
   </property>  
-  <property id="author" externalid="Author" index="true" stored="true" datatype="text" editable="false" type="text">Author 
+  <property id="author" index="true" editable="false" datatype="text" stored="true" externalid="Author">Author 
     <name> 
       <language id="de"><![CDATA[Author]]></language>  
       <language id="en"><![CDATA[Author]]></language>  
@@ -138,7 +138,7 @@
       <language id="fr"><![CDATA[Auteur]]></language> 
     </name> 
   </property>  
-  <property id="localpath" index="true" stored="true" editable="false">Local Path 
+  <property id="localpath" index="true" editable="false" stored="true">Local Path 
     <name> 
       <language id="de"><![CDATA[lokalen Pfad]]></language>  
       <language id="en"><![CDATA[Local Path]]></language>  
@@ -147,7 +147,7 @@
     </name> 
   </property>  
   <!-- Uploading -->  
-  <property id="fileformat" index="true" stored="true" viewtype="list" editable="true" externalid="FileType">File Format 
+  <property id="fileformat" index="true" editable="true" viewtype="list" stored="true" externalid="FileType">File Format 
     <name> 
       <language id="de"><![CDATA[Datei Format]]></language>  
       <language id="en"><![CDATA[File Format]]></language>  
@@ -155,7 +155,7 @@
       <language id="fr"><![CDATA[Format de fichier]]></language> 
     </name> 
   </property>  
-  <property id="filesize" index="true" stored="true" datatype="number" viewtype="filesize" externalid="FileSize" editable="false" type="number">File Size 
+  <property id="filesize" index="true" editable="false" viewtype="filesize" datatype="number" stored="true" externalid="FileSize">File Size 
     <name> 
       <language id="de"><![CDATA[Dateigröße]]></language>  
       <language id="en"><![CDATA[File Size]]></language>  
@@ -163,7 +163,7 @@
       <language id="fr"><![CDATA[Taille du fichier]]></language> 
     </name> 
   </property>  
-  <property id="colortype" index="true" stored="true" viewtype="list" datatype="list" editable="false" type="list">Color 
+  <property id="colortype" index="true" editable="false" viewtype="list" datatype="list" stored="true">Color 
     <name> 
       <language id="de"><![CDATA[Farbe]]></language>  
       <language id="en"><![CDATA[Color]]></language>  
@@ -171,7 +171,7 @@
       <language id="fr"><![CDATA[Couleur]]></language> 
     </name> 
   </property>  
-  <property id="width" index="true" stored="true" datatype="number" editable="false" type="number">Width 
+  <property id="width" index="true" editable="false" datatype="number" stored="true">Width 
     <name> 
       <language id="de"><![CDATA[Width]]></language>  
       <language id="en"><![CDATA[Width]]></language>  
@@ -179,7 +179,7 @@
       <language id="fr"><![CDATA[Largeur]]></language> 
     </name> 
   </property>  
-  <property id="height" index="true" stored="true" datatype="number" editable="false" type="number">Height
+  <property id="height" index="true" editable="false" datatype="number" stored="true">Height
     <name>
       <language id="de"><![CDATA[Height]]></language>
       <language id="en"><![CDATA[Height]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties prefix="entityperson" beanname="dataSearcher"> 
-  <property id="name" index="true" stored="true" multilanguage="false" rendermask="${data.firstName} ${data.lastName}" editable="false"> 
+  <property id="name" index="true" editable="false" multilanguage="false" stored="true" rendermask="${data.firstName} ${data.lastName}"> 
     <name> 
       <language id="en"><![CDATA[Label]]></language>  
       <language id="de"><![CDATA[Etikett]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Etiqueta]]></language>
     </name> 
   </property>  
-  <property id="firstName" index="true" editable="true" viewtype="text" rendertype="text" keyword="true"> 
+  <property id="firstName" index="true" keyword="true" editable="true" viewtype="text" rendertype="text"> 
     <name> 
       <language id="en"><![CDATA[First Name]]></language>  
       <language id="de"><![CDATA[Vorname]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="lastName" index="true" editable="true" viewtype="text" rendertype="text" keyword="true"> 
+  <property id="lastName" index="true" keyword="true" editable="true" viewtype="text" rendertype="text"> 
     <name> 
       <language id="en"><![CDATA[Last Name]]></language>  
       <language id="de"><![CDATA[Nachname]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Apellido]]></language>
     </name> 
   </property>  
-  <property id="contact_type" index="true" editable="true" viewtype="multiselect" rendertype="multiselect" datatype="list"> 
+  <property id="contact_type" index="true" editable="true" viewtype="multiselect" datatype="list" rendertype="multiselect"> 
     <name> 
       <language id="en"><![CDATA[Contact Type]]></language>  
       <language id="de"><![CDATA[Kontaktart]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Tipo de contacto]]></language>
     </name> 
   </property>  
-  <property id="contact_email" index="true" editable="true" viewtype="text" rendertype="text" keyword="true" indextype="not_analyzed"> 
+  <property id="contact_email" index="true" keyword="true" editable="true" viewtype="text" indextype="not_analyzed" rendertype="text"> 
     <name> 
       <language id="en"><![CDATA[Contact Email]]></language>  
       <language id="de"><![CDATA[Kontakt-E-Mail]]></language>

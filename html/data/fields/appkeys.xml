@@ -1,7 +1,7 @@
 
 <properties  beanname="dataSearcher">
-  <property id="id" index="true" stored="true" editable="true" searchtype="comment" internalfield="true">Id</property>
-  <property id="user" listid="user" index="true" stored="true" editable="true" type="list" >User</property>
-  <property id="key" indextype="not_analyzed" stored="true" index="true" editable="true">Key</property>
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" searchtype="comment">Id</property>
+  <property id="user" index="true" editable="true" datatype="list" stored="true" listid="user">User</property>
+  <property id="key" index="true" editable="true" stored="true" indextype="not_analyzed">Key</property>
   
 </properties>

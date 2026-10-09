@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list">Users 
+  <property id="viewusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="user">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list">Groups 
+  <property id="viewgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="group">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="viewerusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list"> 
+  <property id="viewerusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Viewer Users]]></language>  
       <language id="de"><![CDATA[Zuschauer-Benutzer]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Usuarios espectadores]]></language>
     </name> 
   </property>  
-  <property id="viewergroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list"> 
+  <property id="viewergroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="group"> 
     <name> 
       <language id="en"><![CDATA[Viewer Groups]]></language>  
       <language id="de"><![CDATA[Zuschauergemeinschaften]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Grupos de espectadores]]></language>
     </name> 
   </property>  
-  <property id="editorusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
+  <property id="editorusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Editors by Users]]></language>  
       <language id="de"><![CDATA[Redakteure nach Benutzern]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Editores por usuario]]></language>
     </name> 
   </property>  
-  <property id="editorgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" internalfield="true" type="list"> 
+  <property id="editorgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="group"> 
     <name> 
       <language id="en"><![CDATA[Editors by Groups]]></language>  
       <language id="de"><![CDATA[Redakteure nach Gruppen]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Editores por grupos]]></language>
     </name> 
   </property>  
-  <property id="securityenabled" editable="true" index="true" stored="true" type="boolean"> 
+  <property id="securityenabled" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Security Enabled]]></language>  
       <language id="de"><![CDATA[Sicherheit aktiviert]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Seguridad habilitada]]></language>
     </name> 
   </property>  
-  <property id="permissionsupdateddate" type="date" editable="true" index="true" stored="true"> 
+  <property id="permissionsupdateddate" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Permissions Updated Date]]></language>  
       <language id="de"><![CDATA[Datum der Aktualisierung der Berechtigungen]]></language>

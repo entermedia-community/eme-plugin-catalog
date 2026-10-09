@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" stored="true" index="true" editable="false">ID 
+  <property id="id" index="true" editable="false" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true"  multilanguage="true">
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true">
     <name>
       <language id="de"><![CDATA[Name]]></language>
       <language id="en"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language>
     </name>
   </property> 
-  <property id="ordering" type="number" editable="true" index="true" stored="true"> 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Ordering]]></language>  
       <language id="de"><![CDATA[Bestellung]]></language>

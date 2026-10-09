@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" multilanguage="true"> 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
       <language id="es"><![CDATA[Nombre]]></language>
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Nom]]></language>
     </name> 
   </property>  
-  <property id="summary" index="true" stored="true" editable="true"> 
+  <property id="summary" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Summary]]></language>  
       <language id="de"><![CDATA[Zusammenfassung]]></language>
@@ -25,13 +25,13 @@
       <language id="es"><![CDATA[Resumen]]></language>
     </name> 
   </property>  
-  <property id="externaldomain" editable="true" index="true" stored="true"> 
+  <property id="externaldomain" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Site Root]]></language>  
       <language id="de"><![CDATA[Stammseite]]></language>
     </name> 
   </property>  
-  <property id="domainlist" editable="true" index="true" stored="true" viewtype="tageditor" indextype="analyzed" analyzer="tags"> 
+  <property id="domainlist" index="true" editable="true" viewtype="tageditor" stored="true" indextype="analyzed" analyzer="tags"> 
     <name> 
       <language id="en"><![CDATA[Domain List]]></language>  
       <language id="de"><![CDATA[Domänenliste]]></language>
@@ -39,7 +39,7 @@
       <language id="es"><![CDATA[Lista de dominios]]></language>
     </name> 
   </property>  
-  <property id="caption" index="true" stored="true" editable="true"> 
+  <property id="caption" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Caption]]></language>  
       <language id="de"><![CDATA[Untertitel]]></language>
@@ -47,7 +47,7 @@
       <language id="es"><![CDATA[Pie de foto]]></language>
     </name> 
   </property>  
-  <property id="primaryimagepath" index="true" stored="true" editable="true"> 
+  <property id="primaryimagepath" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Image]]></language>  
       <language id="de"><![CDATA[Bild]]></language>
@@ -55,7 +55,7 @@
       <language id="es"><![CDATA[Imagen]]></language>
     </name> 
   </property>  
-  <property id="primaryimagepathpng" index="true" stored="true" editable="true"> 
+  <property id="primaryimagepathpng" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[PNG Image]]></language>  
       <language id="de"><![CDATA[PNG-Bild]]></language>
@@ -63,7 +63,7 @@
       <language id="es"><![CDATA[Imagen en formato PNG]]></language>
     </name> 
   </property>  
-  <property id="primaryimagepathwide" index="true" stored="true" editable="true"> 
+  <property id="primaryimagepathwide" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Image Wide]]></language>  
       <language id="de"><![CDATA[Bildbreite]]></language>
@@ -71,7 +71,7 @@
       <language id="es"><![CDATA[Ancho de imagen]]></language>
     </name> 
   </property>  
-  <property id="logo" index="true" stored="true" editable="true"> 
+  <property id="logo" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Logo]]></language>  
       <language id="de"><![CDATA[Logo]]></language>
@@ -80,7 +80,7 @@
     </name> 
   </property> 
 
-  <property id="defaultapplicationid" index="true" stored="true" editable="true"> 
+  <property id="defaultapplicationid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Default Application]]></language>  
       <language id="de"><![CDATA[Standardanwendung]]></language>

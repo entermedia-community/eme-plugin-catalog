@@ -2,7 +2,7 @@
 
 <properties beanname="dataSearcher"> 
 
-  <property id="id" index="true" internalfield="true" deleted="false" editable="true" stored="true">New 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" deleted="false">New 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -11,7 +11,7 @@
     </name> 
   </property> 
 
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -19,7 +19,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="date" index="true" datatype="date" editable="true" stored="true"> 
+  <property id="date" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -27,7 +27,7 @@
       <language id="fr"><![CDATA[Date]]></language> 
     </name> 
   </property>  
-  <property id="refreshdate" index="true" datatype="date" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="datetime" rendertype="datetime" required="false" multilanguage="false" highlight="false" deleted="false" autocreatefromexif="false" writenametoexif="false">Last Activity 
+  <property id="refreshdate" index="true" editable="true" multilanguage="false" viewtype="datetime" datatype="date" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" rendertype="datetime" highlight="false" writenametoexif="false" autocreatefromexif="false">Last Activity 
     <name> 
       <language id="en"><![CDATA[Last Activity]]></language>  
       <language id="de"><![CDATA[Letzte Aktivität]]></language>
@@ -35,8 +35,8 @@
       <language id="es"><![CDATA[Última actividad]]></language>
     </name> 
   </property>  
-  <property id="user" index="true" editable="true" stored="true" type="list">User</property>  
-  <property id="channeltype" index="true" editable="true" stored="true" type="list"> 
+  <property id="user" index="true" editable="true" datatype="list" stored="true">User</property>  
+  <property id="channeltype" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Channel Type]]></language>  
       <language id="de"><![CDATA[Kanaltyp]]></language>
@@ -44,8 +44,8 @@
       <language id="es"><![CDATA[Tipo de canal]]></language>
     </name> 
   </property>  
-  <property id="dataid" index="true" deleted="false" datatype="list" viewtype="text" stored="true" editable="true" multiple="true">Related Data ID</property>  
-  <property id="searchtype" index="true" deleted="false" editable="true" stored="true" searchtype="comment">New 
+  <property id="dataid" index="true" editable="true" viewtype="text" datatype="list" stored="true" deleted="false" multiple="true">Related Data ID</property>  
+  <property id="searchtype" index="true" editable="true" stored="true" deleted="false" searchtype="comment">New 
     <name> 
       <language id="en"><![CDATA[searchtype]]></language>  
       <language id="de"><![CDATA[Suchart]]></language>
@@ -53,7 +53,7 @@
       <language id="es"><![CDATA[Tipo de búsqueda]]></language>
     </name> 
   </property> 
-  <property id="channelstatus" index="true" type="list" listid="channelstatus"  stored="true" editable="true">New 
+  <property id="channelstatus" index="true" editable="true" datatype="list" stored="true" listid="channelstatus">New 
     <name> 
       <language id="en"><![CDATA[Channel Status]]></language>  
       <language id="de"><![CDATA[Kanalstatus]]></language>
@@ -61,7 +61,7 @@
       <language id="es"><![CDATA[Estado del canal]]></language>
     </name> 
   </property> 
-  <property id="startup_scenario" index="true" deleted="false" editable="true" stored="true" searchtype="comment">New 
+  <property id="startup_scenario" index="true" editable="true" stored="true" deleted="false" searchtype="comment">New 
     <name> 
       <language id="en"><![CDATA[Function path]]></language>  
     </name> 

@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true"> 
+  <property id="name" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="beanname" index="true" stored="true" editable="true"> 
+  <property id="beanname" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Bean]]></language>  
       <language id="de"><![CDATA[Bohne]]></language>

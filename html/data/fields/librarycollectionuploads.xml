@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true">Notes 
+  <property id="name" index="true" editable="true" stored="true">Notes 
     <name> 
       <language id="de"><![CDATA[Notizen]]></language>  
       <language id="en"><![CDATA[Notes]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Remarques]]></language> 
     </name> 
   </property>  
-  <property id="date" index="true" stored="true" editable="true" type="date" datatype="date">Download Date 
+  <property id="date" index="true" editable="true" datatype="date" stored="true">Download Date 
     <name> 
       <language id="de"><![CDATA[Download-Datum]]></language>  
       <language id="en"><![CDATA[Download Date]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Date de Téléchargement]]></language> 
     </name> 
   </property>  
-  <property id="owner" index="true" stored="true" editable="true" type="list" listid="user" searchtype="librarycollectionuploads">Download By 
+  <property id="owner" index="true" editable="true" datatype="list" stored="true" searchtype="librarycollectionuploads" listid="user">Download By 
     <name> 
       <language id="de"><![CDATA[herunterladen von]]></language>  
       <language id="en"><![CDATA[Download By]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Télécharger Par]]></language> 
     </name> 
   </property>  
-  <property id="librarycollection" index="true" filter="true" type="list" stored="true" editable="true" internalfield="false">Album 
+  <property id="librarycollection" index="true" filter="true" editable="true" datatype="list" stored="true" internalfield="false">Album 
     <name> 
       <language id="de"><![CDATA[Sammlung]]></language>  
       <language id="en"><![CDATA[Album]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Album]]></language> 
     </name> 
   </property>  
-  <property id="revision" index="true" stored="true" editable="true" type="number">Revision
+  <property id="revision" index="true" editable="true" datatype="number" stored="true">Revision
     <name>
       <language id="de"><![CDATA[Revision]]></language>
       <language id="en"><![CDATA[Revision]]></language>

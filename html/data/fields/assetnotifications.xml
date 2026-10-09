@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date"> 
+  <property id="creationdate" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="userid" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" keyword="true" stored="true" editable="true"> 
+  <property id="userid" index="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user" listcatalogid="system"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="assetid" index="true" stored="true" type="list" listid="asset" viewtype="text" editable="false">Asset Id 
+  <property id="assetid" index="true" editable="false" viewtype="text" datatype="list" stored="true" listid="asset">Asset Id 
     <name> 
       <language id="de"><![CDATA[Asset-ID]]></language>  
       <language id="en"><![CDATA[Asset Id]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[ID Item]]></language> 
     </name> 
   </property>  
-  <property id="isnotified" internalfield="true" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="isnotified" index="true" editable="true" datatype="boolean" stored="true" internalfield="true"> 
     <name> 
       <language id="en"><![CDATA[Is Notified]]></language>  
       <language id="de"><![CDATA[Benachrichtigt]]></language>

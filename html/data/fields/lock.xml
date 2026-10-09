@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" editable="true" index="true" stored="true">Lock Id 
+  <property id="id" index="true" editable="true" stored="true">Lock Id 
     <name> 
       <language id="de"><![CDATA[Lock-ID]]></language>  
       <language id="en"><![CDATA[Lock Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Lock Id]]></language> 
     </name> 
   </property>  
-  <property id="nodeid" editable="true" index="true" stored="true">Node Id 
+  <property id="nodeid" index="true" editable="true" stored="true">Node Id 
     <name> 
       <language id="de"><![CDATA[Knoten-ID]]></language>  
       <language id="en"><![CDATA[Node Id]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Node Id]]></language> 
     </name> 
   </property>  
-  <property id="ownerid" editable="true" index="true" stored="true">Owner Id 
+  <property id="ownerid" index="true" editable="true" stored="true">Owner Id 
     <name> 
       <language id="de"><![CDATA[Inhaber-ID]]></language>  
       <language id="en"><![CDATA[Owner Id]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Id Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="date" editable="true" datatype="date" viewtype="time" index="true" stored="true" type="date">Date 
+  <property id="date" index="true" editable="true" viewtype="time" datatype="date" stored="true">Date 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Date]]></language> 
     </name> 
   </property>  
-  <property id="locked" editable="true" index="true" stored="true" type="boolean">Locked 
+  <property id="locked" index="true" editable="true" datatype="boolean" stored="true">Locked 
     <name> 
       <language id="de"><![CDATA[verschlossen]]></language>  
       <language id="en"><![CDATA[Locked]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Fermé à clef]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" editable="true" index="true" stored="true">Path
+  <property id="sourcepath" index="true" editable="true" stored="true">Path
     <name>
       <language id="de"><![CDATA[Pfad]]></language>
       <language id="en"><![CDATA[Path]]></language>

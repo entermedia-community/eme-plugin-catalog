@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="ethnicity" index="true" keyword="true" stored="false" editable="true" type="list">New 
+  <property id="ethnicity" index="true" keyword="true" editable="true" datatype="list" stored="false">New 
     <name> 
       <language id="en"><![CDATA[ethnicity]]></language>  
       <language id="de"><![CDATA[Ethnizität]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[etnia]]></language>
     </name> 
   </property>  
-  <property id="name" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="name" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[name]]></language>  
       <language id="de"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[nombre]]></language>
     </name> 
   </property>  
-  <property id="id" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="id" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[id]]></language>  
       <language id="de"><![CDATA[ID]]></language>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="searchtype" editable="true" stored="true" index="true">Search Type 
+  <property id="searchtype" index="true" editable="true" stored="true">Search Type 
     <name> 
       <language id="de"><![CDATA[Suchart]]></language>  
       <language id="en"><![CDATA[Search Type]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Type de recherche]]></language> 
     </name> 
   </property>  
-  <property id="name" multilanguage="true" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="editable" type="boolean" editable="true" stored="true" index="true">Editable 
+  <property id="editable" index="true" editable="true" datatype="boolean" stored="true">Editable 
     <name> 
       <language id="de"><![CDATA[editierbare]]></language>  
       <language id="en"><![CDATA[Editable]]></language>  
@@ -33,8 +33,8 @@
       <language id="fr"><![CDATA[Editable]]></language> 
     </name> 
   </property>  
-  <property id="deleted" type="boolean" editable="true" stored="true" index="true">Deleted</property>  
-  <property id="multiple" type="boolean" editable="true" stored="true" index="true"> 
+  <property id="deleted" index="true" editable="true" datatype="boolean" stored="true">Deleted</property>  
+  <property id="multiple" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Multiple]]></language>  
       <language id="de"><![CDATA[Mehrfach]]></language>
@@ -42,7 +42,7 @@
       <language id="es"><![CDATA[Múltiples]]></language>
     </name> 
   </property>  
-  <property id="internalfield" type="boolean" editable="true" stored="true" index="true">Internal use 
+  <property id="internalfield" index="true" editable="true" datatype="boolean" stored="true">Internal use 
     <name> 
       <language id="de"><![CDATA[interne Benutzung]]></language>  
       <language id="en"><![CDATA[Internal use]]></language>  
@@ -50,7 +50,7 @@
       <language id="fr"><![CDATA[Usage interne]]></language> 
     </name> 
   </property>  
-  <property id="defaultoperation" listid="defaultsearchoperation" type="list" editable="true" stored="true" index="true">Default Search Operation 
+  <property id="defaultoperation" index="true" editable="true" datatype="list" stored="true" listid="defaultsearchoperation">Default Search Operation 
     <name> 
       <language id="de"><![CDATA[Standard-Suchoperation]]></language>  
       <language id="en"><![CDATA[Default Search Operation]]></language>  
@@ -58,7 +58,7 @@
       <language id="fr"><![CDATA[Opération de recherche par défaut ]]></language> 
     </name> 
   </property>  
-  <property id="datatype" listid="datadatatype" type="list" editable="true" stored="true" index="true">Data Type 
+  <property id="datatype" index="true" editable="true" datatype="list" stored="true" listid="datadatatype">Data Type 
     <name> 
       <language id="de"><![CDATA[Datentyp]]></language>  
       <language id="en"><![CDATA[Data Type]]></language>  
@@ -66,7 +66,7 @@
       <language id="fr"><![CDATA[Type de données]]></language> 
     </name> 
   </property>  
-  <property id="rendertype" listid="datarendertype" type="list" editable="true" stored="true" index="true">Render Type 
+  <property id="rendertype" index="true" editable="true" datatype="list" stored="true" listid="datarendertype">Render Type 
     <name> 
       <language id="de"><![CDATA[render-Typ]]></language>  
       <language id="en"><![CDATA[Render Type]]></language>  
@@ -74,7 +74,7 @@
       <language id="fr"><![CDATA[Type de rendu]]></language> 
     </name> 
   </property>  
-  <property id="required" type="boolean" editable="true" stored="true" index="true">Required 
+  <property id="required" index="true" editable="true" datatype="boolean" stored="true">Required 
     <name> 
       <language id="de"><![CDATA[erforderlich]]></language>  
       <language id="en"><![CDATA[Required]]></language>  
@@ -82,7 +82,7 @@
       <language id="fr"><![CDATA[Obligatoire]]></language> 
     </name> 
   </property>  
-  <property id="index" type="boolean" editable="true" stored="true" index="true" rendermask="true"> 
+  <property id="index" index="true" editable="true" datatype="boolean" stored="true" rendermask="true"> 
     <name> 
       <language id="de"><![CDATA[durchsuchbar]]></language>  
       <language id="en"><![CDATA[Enable Index]]></language>  
@@ -90,7 +90,7 @@
       <language id="fr"><![CDATA[Consultable]]></language> 
     </name> 
   </property>  
-  <property id="searchcomponent" listid="datarendertype" type="list" editable="true" stored="true" index="true">Default Search View 
+  <property id="searchcomponent" index="true" editable="true" datatype="list" stored="true" listid="datarendertype">Default Search View 
     <name> 
       <language id="de"><![CDATA[Standard-Suchansicht]]></language>  
       <language id="en"><![CDATA[Default Search View]]></language>  
@@ -98,7 +98,7 @@
       <language id="fr"><![CDATA[Vue de recherche par défaut]]></language> 
     </name> 
   </property>  
-  <property id="externalid" editable="true" stored="true" index="true">External ID 
+  <property id="externalid" index="true" editable="true" stored="true">External ID 
     <name> 
       <language id="de"><![CDATA[externe Kennung]]></language>  
       <language id="en"><![CDATA[External ID]]></language>  
@@ -106,7 +106,7 @@
       <language id="fr"><![CDATA[ID externe]]></language> 
     </name> 
   </property>  
-  <property id="listcatalogid" editable="true" stored="true" index="true"> 
+  <property id="listcatalogid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[List Catalog ID]]></language>  
       <language id="de"><![CDATA[Listen-Katalog-ID]]></language>
@@ -114,7 +114,7 @@
       <language id="es"><![CDATA[ID del catálogo]]></language>
     </name> 
   </property>  
-  <property id="keyword" type="boolean" editable="true" stored="true" index="true">Used in Keywords 
+  <property id="keyword" index="true" editable="true" datatype="boolean" stored="true">Used in Keywords 
     <name> 
       <language id="de"><![CDATA[in Schlüsselwörter verwendet]]></language>  
       <language id="en"><![CDATA[Used in Keywords]]></language>  
@@ -122,7 +122,7 @@
       <language id="fr"><![CDATA[Utilisé dans les mots-clés]]></language> 
     </name> 
   </property>  
-  <property id="filter" type="boolean" editable="true" stored="true" index="true">Used in Filters 
+  <property id="filter" index="true" editable="true" datatype="boolean" stored="true">Used in Filters 
     <name> 
       <language id="de"><![CDATA[in Filtern verwendet]]></language>  
       <language id="en"><![CDATA[Used in Filters]]></language>  
@@ -130,7 +130,7 @@
       <language id="fr"><![CDATA[Utilisé dans les Filtres]]></language> 
     </name> 
   </property>  
-  <property id="multilanguage" type="boolean" editable="true" stored="true" index="true">Mutlilanguage Enabled 
+  <property id="multilanguage" index="true" editable="true" datatype="boolean" stored="true">Mutlilanguage Enabled 
     <name> 
       <language id="en"><![CDATA[Mutlilanguage]]></language>  
       <language id="de"><![CDATA[Mehrsprachig]]></language>
@@ -138,7 +138,7 @@
       <language id="es"><![CDATA[Multilingüe]]></language>
     </name> 
   </property>  
-  <property id="filtercount" type="number" editable="true" stored="true" index="true">Filter Count 
+  <property id="filtercount" index="true" editable="true" datatype="number" stored="true">Filter Count 
     <name> 
       <language id="de"><![CDATA[Filterzahl]]></language>  
       <language id="en"><![CDATA[Filter Count]]></language>  
@@ -146,7 +146,7 @@
       <language id="fr"><![CDATA[Nombre de filtre]]></language> 
     </name> 
   </property>  
-  <property id="note" editable="true" stored="true" index="true">Note 
+  <property id="note" index="true" editable="true" stored="true">Note 
     <name> 
       <language id="en"><![CDATA[Hint]]></language>  
       <language id="de"><![CDATA[Hinweis]]></language>
@@ -154,7 +154,7 @@
       <language id="es"><![CDATA[Pista]]></language>
     </name> 
   </property>  
-  <property id="listid" editable="true" stored="true" index="true">listid 
+  <property id="listid" index="true" editable="true" stored="true">listid 
     <name> 
       <language id="en"><![CDATA[List ID]]></language>  
       <language id="de"><![CDATA[Liste-ID]]></language>
@@ -162,7 +162,7 @@
       <language id="es"><![CDATA[ID de la lista]]></language>
     </name> 
   </property>  
-  <property id="listfilterid" editable="true" stored="true" index="true"> 
+  <property id="listfilterid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[List Filter ID]]></language>  
       <language id="de"><![CDATA[Liste-Filter-ID]]></language>
@@ -170,7 +170,7 @@
       <language id="es"><![CDATA[Filtro de lista ID]]></language>
     </name> 
   </property>  
-  <property id="foreignkeyid" editable="true" stored="true" index="true">Foreign List Key 
+  <property id="foreignkeyid" index="true" editable="true" stored="true">Foreign List Key 
     <name> 
       <language id="de"><![CDATA[Unbekannter Schlüssel]]></language>  
       <language id="en"><![CDATA[Foreign Key]]></language>  
@@ -178,7 +178,7 @@
       <language id="fr"><![CDATA[Clé étrangère]]></language> 
     </name> 
   </property>  
-  <property id="dependson" editable="true" stored="true" index="true">UI Depends On Field 
+  <property id="dependson" index="true" editable="true" stored="true">UI Depends On Field 
     <name> 
       <language id="de"><![CDATA[abhängig von Feld]]></language>  
       <language id="en"><![CDATA[Depends On Field]]></language>  
@@ -186,7 +186,7 @@
       <language id="fr"><![CDATA[Dépend du champ]]></language> 
     </name> 
   </property>  
-  <property id="dependsonvalue" editable="true" stored="true" index="true">UI Depends on Value 
+  <property id="dependsonvalue" index="true" editable="true" stored="true">UI Depends on Value 
     <name> 
       <language id="de"><![CDATA[abhängig von Wert]]></language>  
       <language id="en"><![CDATA[Depends on Value]]></language>  
@@ -194,7 +194,7 @@
       <language id="fr"><![CDATA[Dépend de la valeur]]></language> 
     </name> 
   </property>  
-  <property id="sort" editable="true" stored="true" index="true">Default Sort - 
+  <property id="sort" index="true" editable="true" stored="true">Default Sort - 
     <name>- 
       <language id="de"><![CDATA[Standardsortierung]]></language> - 
       <language id="en"><![CDATA[Default Sort]]></language> - 
@@ -203,7 +203,7 @@
     </name> 
   </property>  
   <!--   
-  <property id="regex" editable="true" stored="true" index="true">Regex 
+  <property id="regex" index="true" editable="true" stored="true">Regex 
     <name> 
       <language id="de"><![CDATA[Regex]]></language>
 <language id="en"><![CDATA[Regex]]></language>
@@ -212,7 +212,7 @@
 </name>
 </property>
  -->  
-  <property id="rendermask" editable="true" stored="true" index="true">Render Mask 
+  <property id="rendermask" index="true" editable="true" stored="true">Render Mask 
     <name> 
       <language id="de"><![CDATA[render-Maske]]></language>  
       <language id="en"><![CDATA[Render Mask]]></language>  
@@ -220,7 +220,7 @@
       <language id="fr"><![CDATA[Masque de rendu]]></language> 
     </name> 
   </property>  
-  <property id="autocreatefromexif" type="boolean" editable="true" stored="true" index="true">Auto Create Metadata from Exif 
+  <property id="autocreatefromexif" index="true" editable="true" datatype="boolean" stored="true">Auto Create Metadata from Exif 
     <name> 
       <language id="en"><![CDATA[Create Metadata from Exif]]></language>  
       <language id="de"><![CDATA[Metadaten aus EXIF erstellen]]></language>
@@ -228,7 +228,7 @@
       <language id="es"><![CDATA[Crear metadatos desde EXIF]]></language>
     </name> 
   </property>  
-  <property id="writenametoexif" type="boolean" editable="true" stored="true" index="true">Write Name to Exif 
+  <property id="writenametoexif" index="true" editable="true" datatype="boolean" stored="true">Write Name to Exif 
     <name> 
       <language id="de"><![CDATA[schreiben Namen exif]]></language>  
       <language id="en"><![CDATA[Write Name to Exif]]></language>  
@@ -236,7 +236,7 @@
       <language id="fr"><![CDATA[Ecrire Nom pour Exif]]></language> 
     </name> 
   </property>  
-  <property id="indextype" type="list" editable="true" stored="true" index="true" indextype="not_analyzed">Indexing Rule 
+  <property id="indextype" index="true" editable="true" datatype="list" stored="true" indextype="not_analyzed">Indexing Rule 
     <name> 
       <language id="de"><![CDATA[Indizierungsregel]]></language>  
       <language id="en"><![CDATA[Indexing Rule]]></language>  
@@ -244,7 +244,7 @@
       <language id="fr"><![CDATA[Règle d&#39;indexation]]></language> 
     </name> 
   </property>  
-  <property id="analyzer" type="list" editable="true" stored="true" index="true" indextype="not_analyzed">Analyzer 
+  <property id="analyzer" index="true" editable="true" datatype="list" stored="true" indextype="not_analyzed">Analyzer 
     <name> 
       <language id="de"><![CDATA[Analysator]]></language>  
       <language id="en"><![CDATA[Analyzer]]></language>  
@@ -252,7 +252,7 @@
       <language id="fr"><![CDATA[Analyseur]]></language> 
     </name> 
   </property>  
-  <property id="isbadge" type="boolean" editable="true" stored="true" index="true"> 
+  <property id="isbadge" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Show Badge]]></language>  
       <language id="en"><![CDATA[Show Badge]]></language>  
@@ -260,7 +260,7 @@
       <language id="fr"><![CDATA[Voir Badge]]></language> 
     </name> 
   </property>  
-  <property id="autoincrement" type="boolean" editable="true" stored="true" index="true"> 
+  <property id="autoincrement" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Auto Increment]]></language>  
       <language id="de"><![CDATA[Autoinkrement]]></language>
@@ -268,7 +268,7 @@
       <language id="es"><![CDATA[Autoincremento]]></language>
     </name> 
   </property>  
-  <property id="istimecoded" type="boolean" editable="true" stored="true" index="true"> 
+  <property id="istimecoded" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Is Timecoded]]></language>  
       <language id="de"><![CDATA[Ist Zeitcodiert]]></language>
@@ -276,10 +276,10 @@
       <language id="es"><![CDATA[Es Timecoded]]></language>
     </name> 
   </property>  
-  <property id="wordpressfield" editable="true" stored="true" index="true">Wordpress field mapping</property>  
-  <property id="xmpmask" editable="true" stored="true" index="true">XMP Mask</property>  
-  <property id="highlight" type="boolean" editable="true" stored="true" index="true">Include Text Highlighting</property>  
-  <property id="sourcepath" editable="true" stored="true" index="true"> 
+  <property id="wordpressfield" index="true" editable="true" stored="true">Wordpress field mapping</property>  
+  <property id="xmpmask" index="true" editable="true" stored="true">XMP Mask</property>  
+  <property id="highlight" index="true" editable="true" datatype="boolean" stored="true">Include Text Highlighting</property>  
+  <property id="sourcepath" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Upload SourcePath Mask]]></language>  
       <language id="de"><![CDATA[Hochladen der SourcePath-Maske]]></language>
@@ -287,7 +287,7 @@
       <language id="es"><![CDATA[Cargar la máscara de SourcePath]]></language>
     </name> 
   </property>  
-  <property id="aiautocreated" type="boolean" editable="true" stored="true" index="true" note="Extract and create new named entities. Must be of type list."> 
+  <property id="aiautocreated" index="true" editable="true" datatype="boolean" stored="true" note="Extract and create new named entities. Must be of type list."> 
     <name> 
       <language id="en"><![CDATA[AI Auto Create]]></language>  
       <language id="de"><![CDATA[KI-Automatische Erstellung]]></language>
@@ -295,7 +295,7 @@
       <language id="es"><![CDATA[Creación automática de IA]]></language>
     </name> 
   </property>  
-  <property id="aiautocreateddescription" editable="true" stored="true" index="true" note="Define what the named entity is (i.e. person/company/places)"> 
+  <property id="aiautocreateddescription" index="true" editable="true" stored="true" note="Define what the named entity is (i.e. person/company/places)"> 
     <name> 
       <language id="en"><![CDATA[AI Auto Create Description]]></language>  
       <language id="de"><![CDATA[KI-Automatische Beschreibungserstellung]]></language>
@@ -303,7 +303,7 @@
       <language id="es"><![CDATA[Descripción automática generada por IA]]></language>
     </name> 
   </property>  
-  <property id="aicreationcommand" editable="true" stored="true" index="true" note="Prompt for how to fill in field (if blank) during classification. Supports string, languagemap, list, boolean, number and dates."> 
+  <property id="aicreationcommand" index="true" editable="true" stored="true" note="Prompt for how to fill in field (if blank) during classification. Supports string, languagemap, list, boolean, number and dates."> 
     <name> 
       <language id="en"><![CDATA[AI Creation Command]]></language>  
       <language id="de"><![CDATA[AI-Erstellungsbefehl]]></language>

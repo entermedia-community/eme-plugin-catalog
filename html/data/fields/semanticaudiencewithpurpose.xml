@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="false"> 
+  <property id="id" index="true" editable="false" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
       <language id="de"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-  <property id="dataid" index="true" stored="true" indextype="not_analyzed" editable="false" viewtype="default"> 
+  <property id="dataid" index="true" editable="false" viewtype="default" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Data Id]]></language>  
       <language id="es"><![CDATA[identificación del activo]]></language>  
@@ -17,7 +17,7 @@
       <language id="de"><![CDATA[Daten-ID]]></language>
     </name> 
   </property>  
-  <property id="moduleid" index="true" stored="true" editable="false" viewtype="default" type="list" listid="module"> 
+  <property id="moduleid" index="true" editable="false" viewtype="default" datatype="list" stored="true" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Module Id]]></language>  
       <language id="de"><![CDATA[Modul-ID]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[ID del módulo]]></language>
     </name> 
   </property>  
-  <property id="iscentroid" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="iscentroid" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Is Centroid]]></language>  
       <language id="de"><![CDATA[Ist der Schwerpunkt]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Es el centróide]]></language>
     </name> 
   </property>  
-  <property id="nearbycentroidids" index="true" stored="true" editable="true" listid="semanticembedding" datatype="list" multiple="true"> 
+  <property id="nearbycentroidids" index="true" editable="true" datatype="list" stored="true" listid="semanticembedding" multiple="true"> 
     <name> 
       <language id="en"><![CDATA[Nearest Cluster Id]]></language>  
       <language id="de"><![CDATA[Nächster Cluster-Id]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Vector]]></language>
     </name> 
   </property>  
-  <property id="isremoved" internalfield="false" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="isremoved" index="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Is Removed]]></language>  
       <language id="de"><![CDATA[Entfernt]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Se ha eliminado]]></language>
     </name> 
   </property>  
-  <property id="hasothers" datatype="boolean" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="hasothers" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Has Others Nearby]]></language>  
       <language id="de"><![CDATA[Hat andere in der Nähe]]></language>

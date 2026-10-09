@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="listSearcher" lazy-init="true"> 
-  <property id="id" index="true" stored="true" searchtype="state" editable="false">ID 
+  <property id="id" index="true" editable="false" stored="true" searchtype="state">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" multilanguage="true" internalfield="false" searchtype="state" editable="false">Name 
+  <property id="name" index="true" editable="false" multilanguage="true" stored="true" internalfield="false" searchtype="state">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="code" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="code" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[Code]]></language>  
       <language id="de"><![CDATA[Code]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Código]]></language>
     </name> 
   </property>  
-  <property id="country" index="true" stored="true" type="list" datatype="list" searchtype="state" editable="false">Country 
+  <property id="country" index="true" editable="false" datatype="list" stored="true" searchtype="state">Country 
     <name> 
       <language id="de"><![CDATA[Land]]></language>  
       <language id="en"><![CDATA[Country]]></language>  

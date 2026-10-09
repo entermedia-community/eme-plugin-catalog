@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" editable="true" stored="true" index="true"> 
+  <property id="id" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true"> 
+  <property id="name" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="version" type="number" editable="true" index="true" stored="true" autoincrement="true"> 
+  <property id="version" index="true" editable="true" datatype="number" stored="true" autoincrement="true"> 
     <name> 
       <language id="en"><![CDATA[Version]]></language>  
       <language id="de"><![CDATA[Version]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Versión]]></language>
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true"> 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="iscurrent" index="true" type="boolean"> 
+  <property id="iscurrent" index="true" datatype="boolean"> 
     <name> 
       <language id="en"><![CDATA[Is Current Model]]></language>  
       <language id="de"><![CDATA[Ist das aktuelle Modell?]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Es el modelo actual]]></language>
     </name> 
   </property>  
-  <property id="updatedby" editable="true" index="true" stored="true" type="list" listid="user"> 
+  <property id="updatedby" index="true" editable="true" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Updated By]]></language>  
       <language id="de"><![CDATA[Aktualisiert von]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Actualizado por]]></language>
     </name> 
   </property>  
-  <property id="updatedon" editable="true" datatype="date" viewtype="time" index="true" stored="true" type="date">Date 
+  <property id="updatedon" index="true" editable="true" viewtype="time" datatype="date" stored="true">Date 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Date]]></language> 
     </name> 
   </property>  
-  <property id="json" editable="true" stored="true" index="true"> 
+  <property id="json" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[JSON]]></language>  
       <language id="de"><![CDATA[JSON]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[JSON]]></language>
     </name> 
   </property>  
-  <property id="canvastop" editable="true" index="true" stored="true"> 
+  <property id="canvastop" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Canvas Top]]></language>  
       <language id="de"><![CDATA[Canvas-Top]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Techo de lona]]></language>
     </name> 
   </property>  
-  <property id="canvasleft" editable="true" index="true" stored="true"> 
+  <property id="canvasleft" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Canvas Left]]></language>  
       <language id="de"><![CDATA[Leinwand links]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[Canvas a la izquierda]]></language>
     </name> 
   </property>  
-  <property id="canvaszoom" type="number" editable="true" index="true" stored="true"> 
+  <property id="canvaszoom" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Canvas Zoom Level]]></language>  
       <language id="de"><![CDATA[Canvas-Zoom-Level]]></language>

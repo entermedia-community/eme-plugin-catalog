@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="userid" index="true" viewtype="user" stored="true" type="list" editable="false">User Name 
+  <property id="userid" index="true" editable="false" viewtype="user" datatype="list" stored="true">User Name 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="collectionid" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="librarycollection" datatype="list"> 
+  <property id="collectionid" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="librarycollection"> 
     <name> 
       <language id="en"><![CDATA[Album]]></language>  
       <language id="de"><![CDATA[Album]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Álbum]]></language>
     </name> 
   </property>  
-  <property id="chattopicid" index="true" stored="true" editable="true" listid="collectiveproject" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" foreignkeyid="parentcollectionid"> 
+  <property id="chattopicid" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" listid="collectiveproject" foreignkeyid="parentcollectionid"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="datechecked" datatype="date" viewtype="date" searchcomponent="datesearch" index="true" stored="true" filter="true" editable="false" type="date">Date 
+  <property id="datechecked" index="true" filter="true" editable="false" viewtype="date" searchcomponent="datesearch" datatype="date" stored="true">Date 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  

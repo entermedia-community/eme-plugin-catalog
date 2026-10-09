@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Número de teléfono]]></language>
     </name> 
   </property>  
-  <property id="whatsappenabled" index="true" editable="true" stored="true" type="boolean">New 
+  <property id="whatsappenabled" index="true" editable="true" datatype="boolean" stored="true">New 
     <name> 
       <language id="en"><![CDATA[WhatsApp Enabled]]></language>  
       <language id="de"><![CDATA[WhatsApp aktiviert]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Título del puesto]]></language>
     </name> 
   </property>  
-  <property id="entitycompany" index="true" editable="true" stored="true" datatype="list">New 
+  <property id="entitycompany" index="true" editable="true" datatype="list" stored="true">New 
     <name> 
       <language id="en"><![CDATA[Company]]></language>  
       <language id="de"><![CDATA[Unternehmen]]></language>
@@ -51,14 +51,14 @@
   </property> 
 
 
-    <property id="emeskillset" editable="true" index="true" keyword="true" stored="true" viewtype="multiselect" datatype="list"> 
+    <property id="emeskillset" index="true" keyword="true" editable="true" viewtype="multiselect" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Skill Set]]></language>  
       <language id="es"><![CDATA[Conjunto de habilidades]]></language>
     </name> 
   </property>  
 
-  <property id="emepersonality" editable="true" index="true" keyword="true" stored="true" viewtype="multiselect" datatype="list"> 
+  <property id="emepersonality" index="true" keyword="true" editable="true" viewtype="multiselect" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Personality]]></language>  
       <language id="es"><![CDATA[Personalidad]]></language>

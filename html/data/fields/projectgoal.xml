@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" class="projectGoal"> 
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">Id 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true" defaultoperation="contains"> 
+  <property id="name" index="true" editable="true" stored="true" defaultoperation="contains"> 
     <name> 
       <language id="en"><![CDATA[Goal Name]]></language>  
       <language id="es"><![CDATA[Nombre del objetivo]]></language>
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Nom de l'objectif]]></language>
     </name> 
   </property>  
-  <property id="details" index="true" stored="true" editable="true"> 
+  <property id="details" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Details]]></language>  
       <language id="es"><![CDATA[Detalles]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Détails]]></language>
     </name> 
   </property>  
-  <property id="creationdate" index="true" stored="true" editable="true" type="date" datatype="date" viewtype="time" searchcomponent="datesearch"> 
+  <property id="creationdate" index="true" editable="true" viewtype="time" searchcomponent="datesearch" datatype="date" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Erstellungsdatum]]></language>  
       <language id="en"><![CDATA[Created Date]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Date de création]]></language> 
     </name> 
   </property>  
-  <property id="deliverydate" index="true" stored="true" editable="true" type="date" datatype="date">Delivery Date 
+  <property id="deliverydate" index="true" editable="true" datatype="date" stored="true">Delivery Date 
     <name> 
       <language id="de"><![CDATA[Lieferdatum]]></language>  
       <language id="en"><![CDATA[Delivery Date]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Date de livraison]]></language> 
     </name> 
   </property>  
-  <property id="owner" filter="true" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
+  <property id="owner" index="true" filter="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="resolveddate" index="true" stored="true" editable="true" type="date" datatype="date" viewtype="time"> 
+  <property id="resolveddate" index="true" editable="true" viewtype="time" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Resolved Date]]></language>  
       <language id="de"><![CDATA[Erledigungsdatum]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Fecha de resolución]]></language>
     </name> 
   </property>  
-  <property id="resolveusers" filter="true" editable="true" index="true" stored="true" listid="user" viewtype="multiselect" indextype="not_analyzed"> 
+  <property id="resolveusers" index="true" filter="true" editable="true" viewtype="multiselect" stored="true" indextype="not_analyzed" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Resolve Users]]></language>  
       <language id="de"><![CDATA[Benutzer auflösen]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Gestionar usuarios]]></language>
     </name> 
   </property>  
-  <property id="collectionid" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list"> 
+  <property id="collectionid" index="true" editable="true" viewtype="autocomplete" datatype="list" stored="true" required="true" listid="librarycollection"> 
     <name> 
       <language id="en"><![CDATA[Collection]]></language>  
       <language id="de"><![CDATA[Sammlung]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Colección]]></language>
     </name> 
   </property>  
-  <property id="chatparentid" required="false" index="true" stored="true" editable="true" type="list" listid="chatterbox" datatype="list"> 
+  <property id="chatparentid" index="true" editable="true" datatype="list" stored="true" required="false" listid="chatterbox"> 
     <name> 
       <language id="en"><![CDATA[Chat Message Id]]></language>  
       <language id="de"><![CDATA[Chat-Nachrichten-ID]]></language>
@@ -81,7 +81,7 @@
       <language id="es"><![CDATA[ID del mensaje de chat]]></language>
     </name> 
   </property>  
-  <property id="addnotifypolicy" index="true" type="list" listid="librarycollection/addnotifypolicy" stored="true" editable="true" note="[[Who do we notify when assets are added]]">Send Notifications 
+  <property id="addnotifypolicy" index="true" editable="true" datatype="list" stored="true" note="[[Who do we notify when assets are added]]" listid="librarycollection/addnotifypolicy">Send Notifications 
     <name> 
       <language id="de"><![CDATA[Benachrichtigungen versenden]]></language>  
       <language id="en"><![CDATA[Send Notifications]]></language>  
@@ -89,7 +89,7 @@
       <language id="fr"><![CDATA[Envoyer Notifications]]></language> 
     </name> 
   </property>  
-  <property id="visibility" index="true" stored="true" type="list" listid="librarycollectionvisibility" editable="true"> 
+  <property id="visibility" index="true" editable="true" datatype="list" stored="true" listid="librarycollectionvisibility"> 
     <name> 
       <language id="de"><![CDATA[Sichtweite]]></language>  
       <language id="en"><![CDATA[Visibility]]></language>  
@@ -97,7 +97,7 @@
       <language id="fr"><![CDATA[Visibilité]]></language> 
     </name> 
   </property>  
-  <property id="tickettype" filter="true" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
+  <property id="tickettype" index="true" filter="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Ticket Type]]></language>  
       <language id="de"><![CDATA[Ticketart]]></language>
@@ -105,7 +105,7 @@
       <language id="es"><![CDATA[Tipo de boleto]]></language>
     </name> 
   </property>  
-  <property id="ticketlevel" filter="true" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
+  <property id="ticketlevel" index="true" filter="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Level]]></language>  
       <language id="de"><![CDATA[Niveau]]></language>
@@ -113,7 +113,7 @@
       <language id="es"><![CDATA[Nivel]]></language>
     </name> 
   </property>  
-  <property id="projectstatus" filter="true" index="true" stored="true" editable="true" type="list" viewtype="list" datatype="list"> 
+  <property id="projectstatus" index="true" filter="true" editable="true" viewtype="list" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Status]]></language>  
       <language id="de"><![CDATA[Status]]></language>
@@ -121,7 +121,7 @@
       <language id="es"><![CDATA[Estado]]></language>
     </name> 
   </property>  
-  <property id="goaltrackercolumn" index="true" stored="true" editable="true" listid="collectiveproject" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" listfilterid="collectionid" foreignkeyid="parentcollectionid"> 
+  <property id="goaltrackercolumn" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" listid="collectiveproject" foreignkeyid="parentcollectionid" listfilterid="collectionid"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -129,7 +129,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="sessionestimate" index="true" stored="true" editable="true" listid="collectiveproject" datatype="number" foreignkeyid="parentcollectionid"> 
+  <property id="sessionestimate" index="true" editable="true" datatype="number" stored="true" listid="collectiveproject" foreignkeyid="parentcollectionid"> 
     <name> 
       <language id="en"><![CDATA[Session Estimate]]></language>  
       <language id="de"><![CDATA[Sitzungsschätzung]]></language>
@@ -137,7 +137,7 @@
       <language id="es"><![CDATA[Estimación de la sesión]]></language>
     </name> 
   </property>  
-  <property id="response" index="true" stored="true" editable="true" viewtype="textarea"> 
+  <property id="response" index="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Response]]></language>  
       <language id="de"><![CDATA[Antwort]]></language>
@@ -145,7 +145,7 @@
       <language id="es"><![CDATA[Respuesta]]></language>
     </name> 
   </property>  
-  <property id="sessioncount" index="true" stored="true" editable="true" datatype="number"> 
+  <property id="sessioncount" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Session Count]]></language>  
       <language id="de"><![CDATA[Anzahl der Sitzungen]]></language>
@@ -153,7 +153,7 @@
       <language id="es"><![CDATA[Número de sesiones]]></language>
     </name> 
   </property>  
-  <property id="approved" index="true" stored="true" editable="true" viewtype="sessionestimate" datatype="boolean"> 
+  <property id="approved" index="true" editable="true" viewtype="sessionestimate" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Estimate Approved]]></language>  
       <language id="de"><![CDATA[Genehmigte Schätzung]]></language>
@@ -161,7 +161,7 @@
       <language id="es"><![CDATA[Estimación aprobada]]></language>
     </name> 
   </property>  
-  <property id="notifiedteam" index="true" stored="true" editable="true" datatype="boolean"> 
+  <property id="notifiedteam" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Team Notified]]></language>  
       <language id="de"><![CDATA[Team benachrichtigt]]></language>
@@ -169,7 +169,7 @@
       <language id="es"><![CDATA[Equipo notificado]]></language>
     </name> 
   </property>  
-  <property id="ticketnumber" editable="false" index="true" stored="true" datatype="number" viewtype="autoincrement" indextype="not_analyzed"> 
+  <property id="ticketnumber" index="true" editable="false" viewtype="autoincrement" datatype="number" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Ticket Number]]></language>  
       <language id="de"><![CDATA[Ticketnummer]]></language>
@@ -177,7 +177,7 @@
       <language id="es"><![CDATA[Número de ticket]]></language>
     </name> 
   </property>  
-  <property id="countdata" editable="true" index="true" stored="true" viewtype="multiselect" indextype="not_analyzed"> 
+  <property id="countdata" index="true" editable="true" viewtype="multiselect" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Counts]]></language>  
       <language id="de"><![CDATA[Zählungen]]></language>
@@ -185,7 +185,7 @@
       <language id="es"><![CDATA[Condes]]></language>
     </name> 
   </property>  
-  <property id="userlikes" filter="true" editable="true" index="true" stored="true" datatype="multi" listid="librarycollectionusers" viewtype="teammembers" searchcomponent="teammembers" foreignkeyid="collectionid"> 
+  <property id="userlikes" index="true" filter="true" editable="true" viewtype="teammembers" searchcomponent="teammembers" datatype="multi" stored="true" listid="librarycollectionusers" foreignkeyid="collectionid"> 
     <name> 
       <language id="en"><![CDATA[Staff]]></language>  
       <language id="de"><![CDATA[Personal]]></language>
@@ -193,7 +193,7 @@
       <language id="es"><![CDATA[Personal]]></language>
     </name> 
   </property>  
-  <property id="recordmodificationdate" index="true" type="date" viewtype="time" searchcomponent="datesearch" stored="true" editable="false" sortable="true">Record Edit Date 
+  <property id="recordmodificationdate" index="true" sortable="true" editable="false" viewtype="time" searchcomponent="datesearch" datatype="date" stored="true">Record Edit Date 
     <name> 
       <language id="de"><![CDATA[Rekord bearbeiten Datum]]></language>  
       <language id="en"><![CDATA[Record Edit Date]]></language>  
@@ -201,7 +201,7 @@
       <language id="fr"><![CDATA[Date d&#39;édition de l&#39;enregistrement]]></language> 
     </name> 
   </property>  
-  <property id="lasteditedby" filter="true" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" editable="true"> 
+  <property id="lasteditedby" index="true" filter="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Editor]]></language>  
       <language id="es"><![CDATA[Editator]]></language>  
@@ -209,7 +209,7 @@
       <language id="fr"><![CDATA[Rédacteur en chef]]></language>
     </name> 
   </property> 
-  <property id="taggedbyllm" type="boolean" index="true" stored="true" editable="true"> 
+  <property id="taggedbyllm" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en">Tagged by LLM</language>  
       <language id="de"><![CDATA[Von einem LLM markiert]]></language>

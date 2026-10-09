@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" prefix="library"> 
-  <property id="id" index="true" editable="false" stored="true" keyword="false" sortable="true">Id 
+  <property id="id" index="true" sortable="true" keyword="false" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" sortable="true" index="true" stored="true" keyword="false">Library Name 
+  <property id="name" index="true" sortable="true" keyword="false" editable="true" stored="true">Library Name 
     <name> 
       <language id="en"><![CDATA[Community Name]]></language>  
       <language id="de"><![CDATA[Gemeinschaftsname]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre de la comunidad]]></language>
     </name> 
   </property>  
-  <property id="librarystatus" index="true" stored="true" editable="true" type="list" keyword="false" sortable="true">Client Status 
+  <property id="librarystatus" index="true" sortable="true" keyword="false" editable="true" datatype="list" stored="true">Client Status 
     <name> 
       <language id="de"><![CDATA[Client-Status]]></language>  
       <language id="en"><![CDATA[Client Status]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[État du client]]></language> 
     </name> 
   </property>  
-  <property id="thumbnail" internalfield="false" index="true" stored="true" editable="true" type="list" viewtype="asset" searchtype="library" listid="assetid" datatype="list" keyword="false" sortable="true"> 
+  <property id="thumbnail" index="true" sortable="true" keyword="false" editable="true" viewtype="asset" datatype="list" stored="true" internalfield="false" searchtype="library" listid="assetid"> 
     <name> 
       <language id="de"><![CDATA[Miniaturansicht]]></language>  
       <language id="en"><![CDATA[Thumbnail]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Vignette]]></language> 
     </name> 
   </property>  
-  <property id="owner" index="true" viewtype="user" type="list" listid="user" keyword="true" stored="true" sortable="true" editable="true"> 
+  <property id="owner" index="true" sortable="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user"> 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" type="list">Users 
+  <property id="viewusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="user">Users 
     <name> 
       <language id="de"><![CDATA[Benutzer]]></language>  
       <language id="en"><![CDATA[Users]]></language>  
@@ -49,7 +49,7 @@
       <language id="fr"><![CDATA[Utilisateurs]]></language> 
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" type="list">Groups 
+  <property id="viewgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="group">Groups 
     <name> 
       <language id="de"><![CDATA[Gruppen]]></language>  
       <language id="en"><![CDATA[Groups]]></language>  
@@ -57,7 +57,7 @@
       <language id="fr"><![CDATA[Groupes]]></language> 
     </name> 
   </property>  
-  <property id="privatelibrary" editable="true" index="true" stored="true" type="boolean"> 
+  <property id="privatelibrary" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Private Library]]></language>  
       <language id="de"><![CDATA[Private Bibliothek]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Biblioteca privada]]></language>
     </name> 
   </property>  
-  <property id="librarydescription" index="true" stored="true" viewtype="html" editable="true"> 
+  <property id="librarydescription" index="true" editable="true" viewtype="html" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Projektbeschreibung]]></language>  
       <language id="en"><![CDATA[Description]]></language>  
@@ -74,7 +74,7 @@
     </name> 
   </property>  
   <!-- 
-  <property id="folder" internalfield="true" editable="true" index="true" stored="true" note="Relative Folder hotfolder/sub1/song123" keyword="false"  sortable="true">Path 
+  <property id="folder" index="true" sortable="true" keyword="false" editable="true" stored="true" internalfield="true" note="Relative Folder hotfolder/sub1/song123">Path 
     <name> 
       <language id="de"><![CDATA[Pfad]]></language>  
       <language id="en"><![CDATA[Path]]></language>  
@@ -83,7 +83,7 @@
     </name> 
   </property>  
    -->  
-  <property id="categoryid" internalfield="false" index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated" editable="true"> 
+  <property id="categoryid" index="true" editable="true" viewtype="category" datatype="list" stored="true" internalfield="false" note="Auto populated" listid="category"> 
     <name> 
       <language id="de"><![CDATA[Kategorie ID]]></language>  
       <language id="en"><![CDATA[Category ID]]></language>  
@@ -91,10 +91,10 @@
       <language id="fr"><![CDATA[ID Catégorie]]></language> 
     </name> 
   </property>  
-  <property id="autocreatecollections" internalfield="false" index="true" type="boolean" editable="true"> 
+  <property id="autocreatecollections" index="true" editable="true" datatype="boolean" internalfield="false"> 
     <language id="en"><![CDATA[Auto Create Collections on Save]]></language> 
   </property>  
-  <property id="libraryicon" index="true" stored="true" editable="true"> 
+  <property id="libraryicon" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Library Icon]]></language>  
       <language id="de"><![CDATA[Bibliothekssymbol]]></language>
@@ -102,7 +102,7 @@
       <language id="es"><![CDATA[Icono de la biblioteca]]></language>
     </name> 
   </property>  
-  <property id="communitysubdomain" note="abc.openinstitute.org" index="true" stored="true" editable="true" keyword="false" sortable="true"> 
+  <property id="communitysubdomain" index="true" sortable="true" keyword="false" editable="true" stored="true" note="abc.openinstitute.org"> 
     <name> 
       <language id="en"><![CDATA[Domain]]></language>  
       <language id="de"><![CDATA[Domäne]]></language>

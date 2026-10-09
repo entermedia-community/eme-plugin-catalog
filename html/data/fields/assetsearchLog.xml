@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="user" index="true" viewtype="user" stored="true" type="list" editable="false">User Name 
+  <property id="user" index="true" editable="false" viewtype="user" datatype="list" stored="true">User Name 
     <name> 
       <language id="de"><![CDATA[Benutzername]]></language>  
       <language id="en"><![CDATA[User Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Nom d&#39;utilisateur]]></language> 
     </name> 
   </property>  
-  <property id="sourcepath" index="true" stored="true" editable="false">Source Path 
+  <property id="sourcepath" index="true" editable="false" stored="true">Source Path 
     <name> 
       <language id="de"><![CDATA[Source-Pfad]]></language>  
       <language id="en"><![CDATA[Source Path]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="query" externalid="JobNumber" index="true" stored="true" editable="false">Query 
+  <property id="query" index="true" editable="false" stored="true" externalid="JobNumber">Query 
     <name> 
       <language id="de"><![CDATA[Abfrage]]></language>  
       <language id="en"><![CDATA[Query]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Requête]]></language> 
     </name> 
   </property>  
-  <property id="hits" externalid="ClientJobNumber" index="true" stored="true" editable="true">Hits 
+  <property id="hits" index="true" editable="true" stored="true" externalid="ClientJobNumber">Hits 
     <name> 
       <language id="de"><![CDATA[Hits]]></language>  
       <language id="en"><![CDATA[Hits]]></language>  
@@ -41,7 +41,7 @@
       <language id="fr"><![CDATA[Coups]]></language> 
     </name> 
   </property>  
-  <property id="date" datatype="date" date="true" viewtype="time" index="true" stored="true" editable="false" type="date">Date 
+  <property id="date" index="true" editable="false" viewtype="time" datatype="date" stored="true" date="true">Date 
     <name> 
       <language id="de"><![CDATA[Datum]]></language>  
       <language id="en"><![CDATA[Date]]></language>  
@@ -50,7 +50,7 @@
     </name> 
   </property>  
   <!--  Data Merge -->  
-  <property id="catalogid" index="true" stored="true" editable="true">New 
+  <property id="catalogid" index="true" editable="true" stored="true">New 
     <name> 
       <language id="de"><![CDATA[CatalogID]]></language>  
       <language id="en"><![CDATA[CatalogID]]></language>  
@@ -58,7 +58,7 @@
       <language id="fr"><![CDATA[ID Catalogue]]></language> 
     </name> 
   </property>  
-  <property id="detailed" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="detailed" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[detailed]]></language>  
       <language id="de"><![CDATA[detailliert]]></language>
@@ -66,7 +66,7 @@
       <language id="es"><![CDATA[detallado]]></language>
     </name> 
   </property>  
-  <property id="sort" index="true" stored="true" editable="true">New 
+  <property id="sort" index="true" editable="true" stored="true">New 
     <name> 
       <language id="de"><![CDATA[Standardsortierung]]></language>  
       <language id="en"><![CDATA[Default Sort]]></language>  
@@ -74,7 +74,7 @@
       <language id="fr"><![CDATA[Tri par défaut]]></language> 
     </name> 
   </property>  
-  <property id="operation" index="true" indextype="not_analyzed" stored="true"> 
+  <property id="operation" index="true" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="de"><![CDATA[Betrieb]]></language>  
       <language id="en"><![CDATA[Operation]]></language>  

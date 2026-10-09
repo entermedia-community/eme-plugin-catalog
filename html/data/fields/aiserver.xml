@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" internalfield="true" index="true" editable="true" stored="true"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" index="true" stored="true"> 
+  <property id="name" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="serverapikey" editable="true" index="true" stored="true"> 
+  <property id="serverapikey" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Server Api Key]]></language>  
       <language id="de"><![CDATA[Server-API-Schlüssel]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Clave de API del servidor]]></language>
     </name> 
   </property>  
-  <property id="serverroot" editable="true" index="true" stored="true"> 
+  <property id="serverroot" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Server Root]]></language>  
       <language id="de"><![CDATA[Server-Root]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Raíz del servidor]]></language>
     </name> 
   </property>  
-  <property id="serverpathprefix" editable="true" index="true" stored="true"> 
+  <property id="serverpathprefix" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Base Path Pre Fix]]></language>  
       <language id="de"><![CDATA[Basispfad Präfix]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Prefijo de la ruta base]]></language>
     </name> 
   </property>  
-  <property id="aifunctions" editable="true" index="true" type="list" listid="aifunction" viewtype="multiselect" stored="true"> 
+  <property id="aifunctions" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="aifunction"> 
     <name> 
       <language id="en"><![CDATA[AI Functions]]></language>  
       <language id="de"><![CDATA[KI-Funktionen]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Funciones de la IA]]></language>
     </name> 
   </property>  
-  <property id="connectionbean" editable="true" indextype="not_analyzed" index="true" stored="true"> 
+  <property id="connectionbean" index="true" editable="true" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[LlmConnection Type]]></language>  
       <language id="de"><![CDATA[LLM-Verbindungstyp]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Tipo de conexión LLM]]></language>
     </name> 
   </property>  
-  <property id="modelname" editable="true" index="true" stored="true"> 
+  <property id="modelname" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Model Name]]></language>  
       <language id="de"><![CDATA[Modellname]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Nombre del modelo]]></language>
     </name> 
   </property>  
-  <property id="monitorspeed" editable="true" index="true" type="boolean" stored="true"> 
+  <property id="monitorspeed" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Monitor Speed]]></language>  
       <language id="de"><![CDATA[Geschwindigkeit]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Velocidad de monitor]]></language>
     </name> 
   </property>  
-  <property id="ordering" type="number" editable="true" index="true" stored="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -81,7 +81,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="aiservertype" editable="true" index="true" stored="true" type="list"> 
+  <property id="aiservertype" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[AI Server Type]]></language>  
       <language id="de"><![CDATA[KI-Server-Typ]]></language>

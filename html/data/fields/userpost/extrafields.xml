@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="poststatus" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" multilanguage="false" highlight="false" datatype="list" autoincrement="false" keyword="false">New 
+  <property id="poststatus" index="true" keyword="false" editable="true" multilanguage="false" datatype="list" stored="true" internalfield="false" required="false" isbadge="false" autoincrement="false" highlight="false">New 
     <name> 
       <language id="en"><![CDATA[Status]]></language>  
       <language id="de"><![CDATA[Status]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Estado]]></language>
     </name> 
   </property>  
-  <property id="maincontent" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="html" rendertype="html" required="false" multilanguage="false" highlight="false" autoincrement="false" keyword="true">New 
+  <property id="maincontent" index="true" keyword="true" editable="true" multilanguage="false" viewtype="html" stored="true" internalfield="false" required="false" isbadge="false" rendertype="html" autoincrement="false" highlight="false">New 
     <name> 
       <language id="en"><![CDATA[Blog Content]]></language>  
       <language id="de"><![CDATA[Blog-Inhalte]]></language>

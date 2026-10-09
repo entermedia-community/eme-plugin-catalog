@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="false"> 
+  <property id="id" index="true" editable="false" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="date" datatype="date" editable="true" index="true" stored="true" type="date"> 
+  <property id="date" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Date]]></language>  
       <language id="de"><![CDATA[Datum]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="savenotes" editable="true" list="false" index="true" stored="true"> 
+  <property id="savenotes" index="true" editable="true" stored="true" list="false"> 
     <name> 
       <language id="en"><![CDATA[Notes]]></language>  
       <language id="de"><![CDATA[Anmerkungen]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Notas]]></language>
     </name> 
   </property>  
-  <property id="notes" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="notes" index="true" editable="true" stored="true" deleted="false">New 
     <name> 
       <language id="de"><![CDATA[Notizen]]></language>  
       <language id="en"><![CDATA[Notes]]></language>  

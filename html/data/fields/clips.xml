@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="cliplabel" index="true" keyword="true" stored="true" editable="true"> 
+  <property id="cliplabel" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Clip Label]]></language>  
       <language id="de"><![CDATA[Clip-Label]]></language>
@@ -9,9 +9,9 @@
       <language id="es"><![CDATA[Etiqueta de clip]]></language>
     </name> 
   </property>  
-  <property id="timecodestart" index="true" stored="true" editable="true" datatype="double" viewtype="videotime">Start Time</property>  
-  <property id="timecodelength" index="true" stored="true" editable="true" datatype="double" viewtype="videolength">Duration</property> //Add tags and entities 
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true">Tags 
+  <property id="timecodestart" index="true" editable="true" viewtype="videotime" datatype="double" stored="true">Start Time</property>  
+  <property id="timecodelength" index="true" editable="true" viewtype="videolength" datatype="double" stored="true">Duration</property> //Add tags and entities 
+  <property id="keywords" index="true" filter="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup">Tags 
     <name> 
       <language id="de"><![CDATA[Tags]]></language>  
       <language id="en"><![CDATA[Tags]]></language>  
@@ -20,13 +20,13 @@
     </name> 
   </property>  
   <!-- 		 
-		<property id="entityperson" index="true" stored="true" datatype="list" viewtype="entity" editable="true" keyword="true">
+		<property id="entityperson" index="true" keyword="true" editable="true" viewtype="entity" datatype="list" stored="true">
 			  <name>
 			    <language id="en"> <![CDATA[Person]]></language>
 </name>
 </property>
 		 -->  
-  <property id="entitylocation" index="true" stored="true" type="list" viewtype="entity" editable="true" keyword="true"> 
+  <property id="entitylocation" index="true" keyword="true" editable="true" viewtype="entity" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Locations]]></language>  
       <language id="de"><![CDATA[Standorte]]></language>
@@ -34,7 +34,7 @@
       <language id="es"><![CDATA[Ubicaciones]]></language>
     </name> 
   </property>  
-  <property id="entityevent" index="true" stored="true" type="list" viewtype="entity" editable="true" keyword="true"> 
+  <property id="entityevent" index="true" keyword="true" editable="true" viewtype="entity" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Events]]></language>  
       <language id="de"><![CDATA[Ereignisse]]></language>

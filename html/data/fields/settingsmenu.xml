@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties > 
-  <property id="id" index="true" stored="true" editable="false">Id 
+  <property id="id" index="true" editable="false" stored="true">Id 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" stored="true" editable="true"  multilanguage="true"> 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="ordering" type="number" index="true" stored="true" editable="true">Ordering 
+  <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
       <language id="en"><![CDATA[Ordering]]></language>  
@@ -25,7 +25,7 @@
       <language id="fr"><![CDATA[Commande]]></language> 
     </name> 
   </property>  
-  <property id="type" index="true" stored="true" editable="true" type="list">Type 
+  <property id="type" index="true" editable="true" datatype="list" stored="true">Type 
     <name> 
       <language id="de"><![CDATA[Art]]></language>  
       <language id="en"><![CDATA[Type]]></language>  
@@ -38,7 +38,7 @@
   Used on /home/shanti/git/eme-server/webapp/community/default/theme/layouts/settingssubtablayout.html
   Parents are like tabs. Randomly used
   -->
-  <property id="parentid" index="true" stored="true" editable="true" type="list"> 
+  <property id="parentid" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Elternteil]]></language>  
       <language id="en"><![CDATA[Parent]]></language>  
@@ -46,7 +46,7 @@
       <language id="fr"><![CDATA[Parent]]></language> 
     </name> 
   </property>  
-  <property id="sublabel" index="true" stored="true" editable="true">Label Used on Sub
+  <property id="sublabel" index="true" editable="true" stored="true">Label Used on Sub
     <name>
       <language id="de"><![CDATA[Etikett auf die Unter]]></language>
       <language id="en"><![CDATA[Label Used on Sub]]></language>
@@ -64,12 +64,12 @@ Used:
   /home/shanti/git/eme-server/plugins/community/html/default/components/sidebars/settings/index.html
 
 -->
- <property id="menulevel" index="true" stored="true" editable="true" legacy="type">Type 
+ <property id="menulevel" index="true" editable="true" stored="true" legacy="type">Type 
     <name> 
       <language id="en"><![CDATA[Menu Level]]></language>
     </name> 
   </property>  
-  <property id="moduleid" index="true" stored="true" type="list" listid="module" editable="true" legacy="module" keyword="false">Module 
+  <property id="moduleid" index="true" keyword="false" editable="true" datatype="list" stored="true" listid="module" legacy="module">Module 
     <name> 
       <language id="de"><![CDATA[Modul]]></language>  
       <language id="en"><![CDATA[Module]]></language>  
@@ -77,7 +77,7 @@ Used:
       <language id="fr"><![CDATA[Module]]></language> 
     </name> 
   </property>  
-  <property id="path" index="true" stored="true" editable="true">Path 
+  <property id="path" index="true" editable="true" stored="true">Path 
     <name> 
       <language id="de"><![CDATA[Pfad]]></language>  
       <language id="en"><![CDATA[Path]]></language>  
@@ -86,7 +86,7 @@ Used:
     </name> 
   </property>  
   <!--  Data Merge -->  
-  <property id="tab" index="true" keyword="true" stored="false" editable="true">New 
+  <property id="tab" index="true" keyword="true" editable="true" stored="false">New 
     <name> 
       <language id="en"><![CDATA[tab]]></language>  
       <language id="de"><![CDATA[Tab]]></language>
@@ -95,7 +95,7 @@ Used:
     </name> 
   </property> 
 
-    <property id="menuicon" editable="true" stored="true" index="true"> 
+    <property id="menuicon" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Menu Icon]]></language>  
       <language id="es"><![CDATA[Ícono del módulo]]></language>

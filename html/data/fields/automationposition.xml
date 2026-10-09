@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" stored="true" editable="true" searchtype="comment" internalfield="true">Component ID</property>  
-  <property id="posx" index="true" stored="true" type="double" viewtype="text" editable="false"> 
+  <property id="id" index="true" editable="true" stored="true" internalfield="true" searchtype="comment">Component ID</property>  
+  <property id="posx" index="true" editable="false" viewtype="text" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[X]]></language>  
       <language id="de"><![CDATA[X]]></language>
@@ -10,7 +10,7 @@
       <language id="es"><![CDATA[X]]></language>
     </name> 
   </property>  
-  <property id="posy" index="true" stored="true" type="double" viewtype="text" editable="false"> 
+  <property id="posy" index="true" editable="false" viewtype="text" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Y]]></language>  
       <language id="de"><![CDATA[Y]]></language>
@@ -18,7 +18,7 @@
       <language id="es"><![CDATA[Y]]></language>
     </name> 
   </property>  
-  <property id="zoom" index="true" stored="true" type="double" viewtype="text" editable="false"> 
+  <property id="zoom" index="true" editable="false" viewtype="text" datatype="double" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Zoom]]></language>  
       <language id="de"><![CDATA[Zoom]]></language>

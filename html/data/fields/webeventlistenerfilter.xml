@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="name" index="true" multilanguage="true" deleted="false" editable="true" stored="true"> 
+  <property id="name" index="true" editable="true" multilanguage="true" stored="true" deleted="false"> 
     <name> 
       <language id="de"><![CDATA[Identität]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  <property id="webeventlistener" editable="true" index="true" stored="true" datatype="list"> 
+  <property id="webeventlistener" index="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Listener]]></language>  
       <language id="de"><![CDATA[Zuhörer]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[El oyente]]></language>
     </name> 
   </property>  
-  <property id="action" index="true" stored="true" editable="true"> 
+  <property id="action" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Action]]></language>  
       <language id="de"><![CDATA[Maßnahmen]]></language>

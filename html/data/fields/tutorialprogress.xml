@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-  <property id="user" index="true" stored="true" editable="true" type="list" listid="user">
+  <property id="user" index="true" editable="true" datatype="list" stored="true" listid="user">
     <name>
       <language id="en">User</language>
     </name>
   </property>
 
-  <property id="entitytutorial" type="list" listid="entitytutorial" index="true" stored="true" editable="true">
+  <property id="entitytutorial" index="true" editable="true" datatype="list" stored="true" listid="entitytutorial">
     <name>
       <language id="en">Tutorials</language>
     </name>
   </property>
 
-  <property id="beginnerprogress" index="true" stored="true" editable="true" datatype="number">
+  <property id="beginnerprogress" index="true" editable="true" datatype="number" stored="true">
     <name>
       <language id="en">Beginner Progress</language>
     </name>
   </property>
 
-  <property id="competentprogress" index="true" stored="true" editable="true" datatype="number">
+  <property id="competentprogress" index="true" editable="true" datatype="number" stored="true">
     <name>
       <language id="en">Competent Progress</language>
     </name>
   </property>
 
-  <property id="expertprogress" index="true" stored="true" editable="true" datatype="number">
+  <property id="expertprogress" index="true" editable="true" datatype="number" stored="true">
     <name>
       <language id="en">Expert Progress</language>
     </name>
   </property>
 
-  <property id="efficiency" index="true" stored="true" editable="true" type="list" listid="efficiency">
+  <property id="efficiency" index="true" editable="true" datatype="list" stored="true" listid="efficiency">
     <name>
       <language id="en">Efficiency</language>
     </name>
   </property>
 
-  <property id="answersforgotten" index="true" stored="true" editable="true" datatype="number">
+  <property id="answersforgotten" index="true" editable="true" datatype="number" stored="true">
     <name>
       <language id="en">Answers Forgotten</language>
     </name>
   </property>
 
-  <property id="lastreviewed" index="true" stored="true" editable="true" type="date">
+  <property id="lastreviewed" index="true" editable="true" datatype="date" stored="true">
     <name>
       <language id="en">Last Reviewed</language>
     </name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <page> 
-  <property id="bandwidth" index="true" stored="true" type="list" editable="true">Bandwidth 
+  <property id="bandwidth" index="true" editable="true" datatype="list" stored="true">Bandwidth 
     <name> 
       <language id="de"><![CDATA[Bandbreite]]></language>  
       <language id="en"><![CDATA[Bandwidth]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Bande passante]]></language> 
     </name> 
   </property>  
-  <property id="closecaptionstatus" index="true" stored="true" editable="true" datatype="list" isbadge="true" type="list">Close Caption Status</property>  
+  <property id="closecaptionstatus" index="true" editable="true" datatype="list" stored="true" isbadge="true">Close Caption Status</property>  
   <property id="aspect_ratio" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[aspect_ratio]]></language>  
@@ -18,7 +18,7 @@
       <language id="es"><![CDATA[relación de aspecto]]></language>
     </name> 
   </property>  
-  <property id="audiostreamids" index="true" indextype="not_analyzed" viewtype="multiselect" editable="true" stored="true"> 
+  <property id="audiostreamids" index="true" editable="true" viewtype="multiselect" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Audio Streams]]></language>  
       <language id="de"><![CDATA[Audio-Streams]]></language>
@@ -26,7 +26,7 @@
       <language id="es"><![CDATA[Flujos de audio]]></language>
     </name> 
   </property>  
-  <property id="videostreamids" index="true" indextype="not_analyzed" viewtype="multiselect" editable="true" stored="true"> 
+  <property id="videostreamids" index="true" editable="true" viewtype="multiselect" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Video Streams]]></language>  
       <language id="de"><![CDATA[Videostreams]]></language>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher" prefix="steps">
-  <property id="id" index="true" stored="true" editable="true" internalfield="true">
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">
     <name>
       <language id="en">Id</language>
     </name>
   </property>
 
 
- <property id="markdowncontent" keyword="true" index="true" indextype="not_analyzed" editable="true" stored="true" viewtype="markdown"> 
+ <property id="markdowncontent" index="true" keyword="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Markdown Content]]></language>  
       <language id="de"><![CDATA[Markdown-Inhalt]]></language>
@@ -17,31 +17,31 @@
     </name> 
   </property> 
 
-  <property id="agentjob" index="true" stored="true" editable="true" type="list">
+  <property id="agentjob" index="true" editable="true" datatype="list" stored="true">
     <name>
       <language id="en">Agent Job</language>
     </name>
   </property>
 
-  <property id="aiskillid" index="true" stored="true" editable="true" type="list" listid="aiskill">
+  <property id="aiskillid" index="true" editable="true" datatype="list" stored="true" listid="aiskill">
     <name>
       <language id="en">Skill</language>
     </name>
   </property>
 
-  <property id="automationscenario" index="true" stored="true" editable="true" type="list" listid="automationscenario">
+  <property id="automationscenario" index="true" editable="true" datatype="list" stored="true" listid="automationscenario">
     <name>
       <language id="en">Automation Scenario</language>
     </name>
   </property>
 
-  <property id="status" index="true" stored="true" editable="true" type="list" listid="jobstatus">
+  <property id="status" index="true" editable="true" datatype="list" stored="true" listid="jobstatus">
     <name>
       <language id="en">Status</language>
     </name>
   </property>
 
-  <property id="parameters" editable="true" indextype="not_analyzed" index="true" stored="true"> 
+  <property id="parameters" index="true" editable="true" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Required Inputs]]></language>  
       <language id="de"><![CDATA[Erforderliche Eingaben]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Entradas requeridas]]></language>
     </name> 
   </property>
-  <property id="defaultoutput" editable="true" indextype="not_analyzed" index="true" stored="true"> 
+  <property id="defaultoutput" index="true" editable="true" stored="true" indextype="not_analyzed"> 
     <name> 
       <language id="en"><![CDATA[Default Output]]></language>  
       <language id="de"><![CDATA[Standardausgabe]]></language>
@@ -58,91 +58,91 @@
     </name> 
   </property>
 
-  <property id="errordetails" index="true" stored="true" editable="true">
+  <property id="errordetails" index="true" editable="true" stored="true">
     <name>
       <language id="en">Error Details</language>
     </name>
   </property>
 
-  <property id="lastresponse" index="true"  indextype="not_analyzed"  stored="true" editable="true" viewtype="markdown">
+  <property id="lastresponse" index="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Last Response</language>
     </name>
   </property>
 
-  <property id="pendingquestion" index="true"  indextype="not_analyzed"  stored="true" editable="true" viewtype="markdown">
+  <property id="pendingquestion" index="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Pending Question</language>
     </name>
   </property>
 
-  <property id="pendingpermissionid" index="true"  indextype="not_analyzed"  stored="true" editable="true">
+  <property id="pendingpermissionid" index="true" editable="true" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Pending Permission ID</language>
     </name>
   </property>
 
-  <property id="pendingform" index="true" indextype="not_analyzed" stored="true" editable="false">
+  <property id="pendingform" index="true" editable="false" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Pending Form</language>
     </name>
   </property>
 
-  <property id="userrequest" index="true" stored="true" indextype="not_analyzed" editable="true" note="Original step request kept so repeating jobs can run it again">
+  <property id="userrequest" index="true" editable="true" stored="true" note="Original step request kept so repeating jobs can run it again" indextype="not_analyzed">
     <name>
       <language id="en">Original Request</language>
     </name>
   </property>
 
-  <property id="automationstep" index="true" stored="true" editable="true" type="list" listid="automationstep" note="The automation step this step was made from">
+  <property id="automationstep" index="true" editable="true" datatype="list" stored="true" note="The automation step this step was made from" listid="automationstep">
     <name>
       <language id="en">Automation Step</language>
     </name>
   </property>
 
-  <property id="name" index="true" stored="true" editable="true">
+  <property id="name" index="true" editable="true" stored="true">
     <name>
       <language id="en">Name</language>
     </name>
   </property>
 
-  <property id="runafter" index="true" stored="true" editable="true" indextype="not_analyzed" note="The agentjobstep this step runs after">
+  <property id="runafter" index="true" editable="true" stored="true" note="The agentjobstep this step runs after" indextype="not_analyzed">
     <name>
       <language id="en">Run After</language>
     </name>
   </property>
 
-  <property id="llmprompt" index="true" stored="true" indextype="not_analyzed" editable="true" note="Copied from the automationstep">
+  <property id="llmprompt" index="true" editable="true" stored="true" note="Copied from the automationstep" indextype="not_analyzed">
     <name>
       <language id="en">LLM Prompt</language>
     </name>
   </property>
 
-  <property id="runoperation" index="true" stored="true" indextype="not_analyzed" editable="true">
+  <property id="runoperation" index="true" editable="true" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Run Operation</language>
     </name>
   </property>
 
-  <property id="searchtypes" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="module">
+  <property id="searchtypes" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" listid="module">
     <name>
       <language id="en">Search Types</language>
     </name>
   </property>
 
-  <property id="contextvalues" index="true" stored="true" indextype="not_analyzed" editable="true" viewtype="json">
+  <property id="contextvalues" index="true" editable="true" viewtype="json" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Context Values</language>
     </name>
   </property>
 
-  <property id="parameterstructure" index="true" stored="true" indextype="not_analyzed" editable="true">
+  <property id="parameterstructure" index="true" editable="true" stored="true" indextype="not_analyzed">
     <name>
       <language id="en">Parameter Structure</language>
     </name>
   </property>
 
-  <property id="processingmessage" index="true" stored="true" editable="true">
+  <property id="processingmessage" index="true" editable="true" stored="true">
     <name>
       <language id="en">Processing Message</language>
     </name>

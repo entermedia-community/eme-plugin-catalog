@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties> 
-  <property id="id" index="true" editable="true" keyword="true" filter="false" sortable="true"> 
+  <property id="id" index="true" sortable="true" filter="false" keyword="true" editable="true"> 
     <name> 
       <language id="en"><![CDATA[Id]]></language>  
       <language id="de"><![CDATA[ID]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Identificación]]></language>
     </name> 
   </property>  
-  <property id="name" required="true" index="true" stored="true" multilanguage="false" editable="true" keyword="true"> 
+  <property id="name" index="true" keyword="true" editable="true" multilanguage="false" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Name]]></language>  
       <language id="de"><![CDATA[Name]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Nombre]]></language>
     </name> 
   </property>  
-  <property id="description" internalfield="false" defaultoperation="freeform" index="true" stored="true" editable="false" sortable="true">All Fields 
+  <property id="description" index="true" sortable="true" editable="false" stored="true" internalfield="false" defaultoperation="freeform">All Fields 
     <name> 
       <language id="en"><![CDATA[All Fields]]></language>  
       <language id="de"><![CDATA[Alle Felder]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Todos los campos]]></language>
     </name> 
   </property>  
-  <property id="keywords" viewtype="tageditor" keyword="true" defaultoperation="andgroup" index="true" stored="true" editable="true" filter="true" sortable="true" aicreationcommand="A comma separated list of relevant search keywords associated with all the metadata."> 
+  <property id="keywords" index="true" sortable="true" filter="true" keyword="true" editable="true" viewtype="tageditor" stored="true" defaultoperation="andgroup" aicreationcommand="A comma separated list of relevant search keywords associated with all the metadata."> 
     <name> 
       <language id="de"><![CDATA[Profil-Tags]]></language>  
       <language id="en"><![CDATA[Profile Tags]]></language>  
@@ -33,7 +33,7 @@
       <language id="fr"><![CDATA[Tags de Profil]]></language> 
     </name> 
   </property>  
-  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" viewtype="textarea"> 
+  <property id="longcaption" index="true" keyword="true" editable="true" viewtype="textarea" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Bio]]></language>  
       <language id="de"><![CDATA[Bio]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[Biografía]]></language>
     </name> 
   </property>  
-  <property id="primaryimage" index="true" stored="true" editable="false" type="list" viewtype="asset" listid="asset" internalfield="false" datatype="list" sourcepath="${data.sourcepath}/${filename}"> 
+  <property id="primaryimage" index="true" editable="false" viewtype="asset" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="${data.sourcepath}/${filename}"> 
     <name> 
       <language id="en"><![CDATA[Auto Assigned Media]]></language>  
       <language id="de"><![CDATA[Automatisch zugewiesene Medien]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Medios asignados automáticamente]]></language>
     </name> 
   </property>  
-  <property id="primarymedia" index="true" stored="true" editable="true" type="list" viewtype="primarymedia" listid="asset" internalfield="false" datatype="list" sourcepath="${data.sourcepath}/${filename}"> 
+  <property id="primarymedia" index="true" editable="true" viewtype="primarymedia" datatype="list" stored="true" internalfield="false" listid="asset" sourcepath="${data.sourcepath}/${filename}"> 
     <name> 
       <language id="en"><![CDATA[Profile Picture]]></language>  
       <language id="de"><![CDATA[Profilbild]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Foto de perfil]]></language>
     </name> 
   </property>  
-  <property id="entity_date" index="true" stored="true" rendermask="${formatteddate}" editable="true" keyword="true" datatype="date" viewtype="date" filter="false"> 
+  <property id="entity_date" index="true" filter="false" keyword="true" editable="true" viewtype="date" datatype="date" stored="true" rendermask="${formatteddate}"> 
     <!-- not really a filter -->  
     <name> 
       <language id="en"><![CDATA[Date]]></language>  
@@ -66,7 +66,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="entitysourcetype" internalfield="true" index="true" stored="true" type="list" listid="module" editable="true" keyword="true" filter="true"> 
+  <property id="entitysourcetype" index="true" filter="true" keyword="true" editable="true" datatype="list" stored="true" internalfield="true" listid="module"> 
     <name> 
       <language id="en"><![CDATA[Entity Source Type]]></language>  
       <language id="de"><![CDATA[Entitätsquelltyp]]></language>
@@ -74,7 +74,7 @@
       <language id="es"><![CDATA[Tipo de entidad de origen]]></language>
     </name> 
   </property>  
-  <property id="sourcepath" legacy="uploadsourcepath" index="true" stored="true" editable="true" note="Auto Populated dynamic path"> 
+  <property id="sourcepath" index="true" editable="true" stored="true" note="Auto Populated dynamic path" legacy="uploadsourcepath"> 
     <name> 
       <language id="en"><![CDATA[Dynamic Source Path]]></language>  
       <language id="de"><![CDATA[Dynamischer Quellpfad]]></language>
@@ -82,7 +82,7 @@
       <language id="es"><![CDATA[Ruta dinámica de origen]]></language>
     </name> 
   </property>  
-  <property id="archivesourcepath" index="true" stored="true" editable="true" note="Archive Source Path"> 
+  <property id="archivesourcepath" index="true" editable="true" stored="true" note="Archive Source Path"> 
     <name> 
       <language id="en"><![CDATA[Archive Source Path]]></language>  
       <language id="de"><![CDATA[Archiv-Quellpfad]]></language>
@@ -90,7 +90,7 @@
       <language id="es"><![CDATA[Ruta de origen del archivo]]></language>
     </name> 
   </property>  
-  <property id="viewusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
+  <property id="viewusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Users]]></language>  
       <language id="de"><![CDATA[Benutzer]]></language>
@@ -98,7 +98,7 @@
       <language id="es"><![CDATA[Usuarios]]></language>
     </name> 
   </property>  
-  <property id="viewgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" internalfield="true" type="list"> 
+  <property id="viewgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="group"> 
     <name> 
       <language id="en"><![CDATA[Groups]]></language>  
       <language id="de"><![CDATA[Gruppen]]></language>
@@ -106,7 +106,7 @@
       <language id="es"><![CDATA[Grupos]]></language>
     </name> 
   </property>  
-  <property id="viewerusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
+  <property id="viewerusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Viewer Users]]></language>  
       <language id="de"><![CDATA[Zuschauer-Benutzer]]></language>
@@ -114,7 +114,7 @@
       <language id="es"><![CDATA[Usuarios espectadores]]></language>
     </name> 
   </property>  
-  <property id="viewergroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" internalfield="true" type="list"> 
+  <property id="viewergroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="group"> 
     <name> 
       <language id="en"><![CDATA[Viewer Groups]]></language>  
       <language id="de"><![CDATA[Zuschauergemeinschaften]]></language>
@@ -122,7 +122,7 @@
       <language id="es"><![CDATA[Grupos de espectadores]]></language>
     </name> 
   </property>  
-  <property id="editorusers" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="user" internalfield="true" type="list"> 
+  <property id="editorusers" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Editors Users]]></language>  
       <language id="de"><![CDATA[Redakteure Benutzer]]></language>
@@ -130,7 +130,7 @@
       <language id="es"><![CDATA[Editores de usuarios]]></language>
     </name> 
   </property>  
-  <property id="editorgroups" editable="true" index="true" stored="true" viewtype="multiselect" datatype="list" listid="group" internalfield="true" type="list"> 
+  <property id="editorgroups" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" internalfield="true" listid="group"> 
     <name> 
       <language id="en"><![CDATA[Editors Groups]]></language>  
       <language id="de"><![CDATA[Redaktionsgruppen]]></language>
@@ -138,7 +138,7 @@
       <language id="es"><![CDATA[Grupos editoriales]]></language>
     </name> 
   </property>  
-  <property id="securityalwaysvisible" editable="true" internalfield="true" index="true" stored="true" type="boolean" securityfield="rootcategory"> 
+  <property id="securityalwaysvisible" index="true" editable="true" datatype="boolean" stored="true" internalfield="true" securityfield="rootcategory"> 
     <name> 
       <language id="en"><![CDATA[Always Visible]]></language>  
       <language id="de"><![CDATA[Immer sichtbar]]></language>
@@ -146,7 +146,7 @@
       <language id="es"><![CDATA[Siempre visible]]></language>
     </name> 
   </property>  
-  <property id="securityenabled" editable="true" internalfield="true" index="true" stored="true" type="boolean" securityfield="rootcategory"> 
+  <property id="securityenabled" index="true" editable="true" datatype="boolean" stored="true" internalfield="true" securityfield="rootcategory"> 
     <name> 
       <language id="en"><![CDATA[Security Enabled]]></language>  
       <language id="de"><![CDATA[Sicherheit aktiviert]]></language>
@@ -154,7 +154,7 @@
       <language id="es"><![CDATA[Seguridad habilitada]]></language>
     </name> 
   </property>  
-  <property id="owner" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" filter="true" keyword="true" stored="true" editable="true">Owner 
+  <property id="owner" index="true" filter="true" keyword="true" editable="true" viewtype="user" datatype="list" stored="true" listid="user" listcatalogid="system">Owner 
     <name> 
       <language id="de"><![CDATA[Owner]]></language>  
       <language id="en"><![CDATA[Owner]]></language>  
@@ -162,7 +162,7 @@
       <language id="fr"><![CDATA[Propriétaire]]></language> 
     </name> 
   </property>  
-  <property id="emrecordstatus" index="true" keyword="false" internalfield="true" stored="true" editable="true" datatype="object"> 
+  <property id="emrecordstatus" index="true" keyword="false" editable="true" datatype="object" stored="true" internalfield="true"> 
     <name> 
       <language id="en"><![CDATA[EM Record Status]]></language>  
       <language id="de"><![CDATA[EM-Status]]></language>
@@ -170,7 +170,7 @@
       <language id="es"><![CDATA[Estado del registro de EM]]></language>
     </name> 
   </property>  
-  <property id="rootcategory" index="true" type="list" viewtype="category" listid="category" stored="true" note="Auto populated" editable="true">Category ID 
+  <property id="rootcategory" index="true" editable="true" viewtype="category" datatype="list" stored="true" note="Auto populated" listid="category">Category ID 
     <name> 
       <language id="de"><![CDATA[Kategorie ID]]></language>  
       <language id="en"><![CDATA[Category ID]]></language>  
@@ -178,7 +178,7 @@
       <language id="fr"><![CDATA[ID Catégorie]]></language> 
     </name> 
   </property>  
-  <property id="enablepublishinggallery" editable="true" internalfield="false" index="true" stored="true" type="boolean"> 
+  <property id="enablepublishinggallery" index="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Enable Publishing]]></language>  
       <language id="de"><![CDATA[Veröffentlichen aktivieren]]></language>
@@ -186,7 +186,7 @@
       <language id="es"><![CDATA[Habilitar la publicación]]></language>
     </name> 
   </property>  
-  <property id="enablepublishingcarousel" editable="true" internalfield="false" index="true" stored="true" type="boolean"> 
+  <property id="enablepublishingcarousel" index="true" editable="true" datatype="boolean" stored="true" internalfield="false"> 
     <name> 
       <language id="en"><![CDATA[Enable Carousel]]></language>  
       <language id="de"><![CDATA[Karussell aktivieren]]></language>
@@ -194,7 +194,7 @@
       <language id="es"><![CDATA[Habilitar el carrusel]]></language>
     </name> 
   </property>  
-  <property id="searchcategory" editable="true" index="true" keyword="true" stored="true" viewtype="entity" datatype="list" listid="searchcategory"> 
+  <property id="searchcategory" index="true" keyword="true" editable="true" viewtype="entity" datatype="list" stored="true" listid="searchcategory"> 
     <name> 
       <language id="en"><![CDATA[Categories]]></language>  
       <language id="de"><![CDATA[Kategorien]]></language>
@@ -202,7 +202,7 @@
       <language id="es"><![CDATA[Categorías]]></language>
     </name> 
   </property>  
-  <property id="permissionsupdateddate" type="date" editable="true" index="true" stored="true"> 
+  <property id="permissionsupdateddate" index="true" editable="true" datatype="date" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Permissions Updated Date]]></language>  
       <language id="de"><![CDATA[Datum der Aktualisierung der Berechtigungen]]></language>
@@ -210,7 +210,7 @@
       <language id="es"><![CDATA[Fecha de actualización de permisos]]></language>
     </name> 
   </property>  
-  <property id="contentcreator" index="true" keyword="false" stored="true" type="list" viewtype="entity"> 
+  <property id="contentcreator" index="true" keyword="false" viewtype="entity" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Content Creator]]></language>  
       <language id="de"><![CDATA[Content Creator]]></language>
@@ -218,7 +218,15 @@
       <language id="es"><![CDATA[Creador de contenido]]></language>
     </name> 
   </property>  
-  <property id="semantictopics" viewtype="tageditor" keyword="true" index="true" stored="true" editable="true"> 
+  <property id="semantictopicsindexed" index="true" sortable="true" filter="false" editable="true" datatype="boolean" stored="true" legacy="semanticindexed"> 
+    <name> 
+      <language id="en"><![CDATA[Semantic Topics Indexed]]></language>  
+      <language id="de"><![CDATA[Semantische Themen indiziert]]></language>
+      <language id="fr"><![CDATA[Sujets sémantiques indexés]]></language>
+      <language id="es"><![CDATA[Temas semánticos indexados]]></language>
+    </name> 
+  </property>
+  <property id="semantictopics" index="true" keyword="true" editable="true" viewtype="tageditor" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Semantic Topics]]></language>  
       <language id="de"><![CDATA[Semantische Themen]]></language>
@@ -226,7 +234,7 @@
       <language id="es"><![CDATA[Temas semánticos]]></language>
     </name> 
   </property>  
-  <property id="taggedbyllm" type="boolean" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+  <property id="taggedbyllm" index="true" sortable="true" filter="false" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Tagged by LLM]]></language>  
       <language id="de"><![CDATA[Von einem LLM markiert]]></language>
@@ -234,7 +242,7 @@
       <language id="es"><![CDATA[Etiquetado por LLM]]></language>
     </name> 
   </property>  
-  <property id="llmerror" type="boolean" index="true" stored="true" editable="true" filter="false" sortable="true"> 
+  <property id="llmerror" index="true" sortable="true" filter="false" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[LLM Error]]></language>  
       <language id="de"><![CDATA[LLM-Fehler]]></language>

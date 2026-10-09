@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="documenttype" index="true" stored="true" editable="true" type="list" listid="recordtype" rendermask="${data.primarymedia.recordtype.id||data.primaryimage.recordtype.id}"> 
+  <property id="documenttype" index="true" editable="true" datatype="list" stored="true" listid="recordtype" rendermask="${data.primarymedia.recordtype.id||data.primaryimage.recordtype.id}"> 
     <name> 
       <language id="en"><![CDATA[Document Type]]></language>  
       <language id="de"><![CDATA[Dokumenttyp]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Tipo de documento]]></language>
     </name> 
   </property>  
-  <property id="pagescreatedfor" index="true" stored="true" editable="true"> 
+  <property id="pagescreatedfor" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[AssetID | Modtime]]></language>  
       <language id="de"><![CDATA[AssetID | Modtime]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[ID del activo | Hora de modificación]]></language>
     </name> 
   </property>  
-  <property id="totalpages" datatype="number" viewtype="number" index="true" stored="true" searchcomponent="numbersearch" editable="true" type="number" rendermask="${data.primarymedia.pages}"> 
+  <property id="totalpages" index="true" editable="true" viewtype="number" searchcomponent="numbersearch" datatype="number" stored="true" rendermask="${data.primarymedia.pages}"> 
     <name> 
       <language id="en"><![CDATA[Total Pages]]></language>  
       <language id="de"><![CDATA[Gesamtseitenanzahl]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Total de páginas]]></language>
     </name> 
   </property>  
-  <property id="longcaption" keyword="true" index="true" editable="true" stored="true" viewtype="textarea" aicreationcommand="Generate a brief summary describing what this Document is about based on its content."> 
+  <property id="longcaption" index="true" keyword="true" editable="true" viewtype="textarea" stored="true" aicreationcommand="Generate a brief summary describing what this Document is about based on its content."> 
     <name> 
       <language id="en"><![CDATA[Description]]></language>  
       <language id="de"><![CDATA[Beschreibung]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Descripción]]></language>
     </name> 
   </property>  
-  <property id="librarycollection" required="false" index="true" stored="true" editable="true" type="list" viewtype="multiselect" listid="librarycollection" datatype="list"> 
+  <property id="librarycollection" index="true" editable="true" viewtype="multiselect" datatype="list" stored="true" required="false" listid="librarycollection"> 
     <name> 
       <language id="en"><![CDATA[Collection]]></language>  
       <language id="de"><![CDATA[Sammlung]]></language>

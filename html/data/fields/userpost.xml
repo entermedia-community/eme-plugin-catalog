@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
+  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -9,7 +9,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="exclusivecontent" index="true" stored="true" editable="true" type="boolean"> 
+  <property id="exclusivecontent" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Team Only]]></language>  
       <language id="de"><![CDATA[Nur für das Team]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Solo para el equipo]]></language>
     </name> 
   </property>  
-  <property id="reportedby" index="true" viewtype="user" type="list" datatype="multi" listid="user" keyword="true" stored="true" editable="true"> 
+  <property id="reportedby" index="true" keyword="true" editable="true" viewtype="user" datatype="multi" stored="true" listid="user"> 
     <name> 
       <language id="en"><![CDATA[Reported By]]></language>  
       <language id="de"><![CDATA[Meldung von:]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Reportado por]]></language>
     </name> 
   </property>  
-  <property id="totalfilesize" index="true" stored="true" editable="true" datatype="number" viewtype="filesize"> 
+  <property id="totalfilesize" index="true" editable="true" viewtype="filesize" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Total File Size]]></language>  
       <language id="de"><![CDATA[Gesamtdateigröße]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[Tamaño total del archivo]]></language>
     </name> 
   </property>  
-  <property id="urlname" index="true" stored="true" editable="true" keyword="true"> 
+  <property id="urlname" index="true" keyword="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[URL]]></language>  
       <language id="de"><![CDATA[URL]]></language>
@@ -41,7 +41,7 @@
       <language id="es"><![CDATA[URL]]></language>
     </name> 
   </property>  
-  <property id="entitymoduleid" editable="true" index="true" type="list" stored="true" sortable="true"> 
+  <property id="entitymoduleid" index="true" sortable="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Module]]></language>  
       <language id="de"><![CDATA[Modul]]></language>
@@ -49,7 +49,7 @@
       <language id="es"><![CDATA[Módulo]]></language>
     </name> 
   </property>  
-  <property id="entityid" editable="true" index="true" type="list" stored="true" sortable="true"> 
+  <property id="entityid" index="true" sortable="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Entity]]></language>  
       <language id="de"><![CDATA[Entität]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Entidad]]></language>
     </name> 
   </property>  
-  <property id="creatorstatus" editable="true" index="true" stored="true" type="list" filter="true" sortable="true"> 
+  <property id="creatorstatus" index="true" sortable="true" filter="true" editable="true" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Creator Status]]></language>  
       <language id="de"><![CDATA[Schöpferstatus]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Estado de Creador]]></language>
     </name> 
   </property>  
-  <property id="librarycollection" required="true" index="true" stored="true" editable="true" type="list" viewtype="autocomplete" listid="librarycollection" datatype="list">Library 
+  <property id="librarycollection" index="true" editable="true" viewtype="autocomplete" datatype="list" stored="true" required="true" listid="librarycollection">Library 
     <name> 
       <language id="en"><![CDATA[Library Collection]]></language>  
       <language id="de"><![CDATA[Bibliothekssammlung]]></language>

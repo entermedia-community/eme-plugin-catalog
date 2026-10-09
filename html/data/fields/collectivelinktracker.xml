@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="id" index="true" filter="false" internalfield="true" editable="true" stored="true" sortable="true" keyword="false">Id 
+  <property id="id" index="true" sortable="true" filter="false" keyword="false" editable="true" stored="true" internalfield="true">Id 
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
       <language id="en"><![CDATA[Id]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[Id]]></language> 
     </name> 
   </property>  
-  <property id="date" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="date" index="true" filter="false" keyword="false" editable="true" multilanguage="false" datatype="date" stored="true" internalfield="false" required="true" deleted="false" isbadge="false" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Date]]></language>  
       <language id="de"><![CDATA[Datum]]></language>
@@ -17,7 +17,7 @@
       <language id="es"><![CDATA[Fecha]]></language>
     </name> 
   </property>  
-  <property id="remoteuser" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+  <property id="remoteuser" index="true" filter="false" keyword="false" editable="true" multilanguage="false" viewtype="list" datatype="list" stored="true" internalfield="false" required="false" deleted="false" isbadge="false" rendertype="list" writenametoexif="false" autocreatefromexif="false">New 
     <name> 
       <language id="en"><![CDATA[Remote User]]></language>  
       <language id="de"><![CDATA[Fernbenutzer]]></language>
@@ -57,7 +57,7 @@
       <language id="es"><![CDATA[Ruta]]></language>
     </name> 
   </property>  
-  <property id="firsttrakedlink" required="true" index="true" stored="true" editable="true" type="list" listid="collectivelinktracker" datatype="list"> 
+  <property id="firsttrakedlink" index="true" editable="true" datatype="list" stored="true" required="true" listid="collectivelinktracker"> 
     <name> 
       <language id="en"><![CDATA[First Page Link]]></language>  
       <language id="de"><![CDATA[Erster Link zur ersten Seite]]></language>
@@ -65,7 +65,7 @@
       <language id="es"><![CDATA[Enlace a la primera página]]></language>
     </name> 
   </property>  
-  <property id="collectiveproject" required="true" index="true" stored="true" editable="true" type="list" datatype="list" viewtype="collectionproject" searchcomponent="collectionproject"> 
+  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
@@ -73,7 +73,7 @@
       <language id="es"><![CDATA[Tema]]></language>
     </name> 
   </property>  
-  <property id="collectionid" index="true" filter="false" editable="true" stored="true" sortable="true" type="list" keyword="false" listid="librarycollection"> 
+  <property id="collectionid" index="true" sortable="true" filter="false" keyword="false" editable="true" datatype="list" stored="true" listid="librarycollection"> 
     <name> 
       <language id="en"><![CDATA[Collection Id]]></language>  
       <language id="de"><![CDATA[Sammlungs-ID]]></language>

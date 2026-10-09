@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="folderSearcher"> 
-  <property id="id" editable="true" stored="true" index="true">ID 
+  <property id="id" index="true" editable="true" stored="true">ID 
     <name> 
       <language id="de"><![CDATA[Ich würde]]></language>  
       <language id="en"><![CDATA[ID]]></language>  
@@ -9,7 +9,7 @@
       <language id="fr"><![CDATA[ID]]></language> 
     </name> 
   </property>  
-  <property id="name" editable="true" stored="true" index="true">Name 
+  <property id="name" index="true" editable="true" stored="true">Name 
     <name> 
       <language id="de"><![CDATA[Name]]></language>  
       <language id="en"><![CDATA[Name]]></language>  
@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Prénom]]></language> 
     </name> 
   </property>  
-  <property id="fabricobject" editable="false" index="true"> 
+  <property id="fabricobject" index="true" editable="false"> 
     <name> 
       <language id="en"><![CDATA[JSON Object]]></language>  
       <language id="de"><![CDATA[JSON-Objekt]]></language>
@@ -25,7 +25,7 @@
       <language id="es"><![CDATA[Objeto JSON]]></language>
     </name> 
   </property>  
-  <property id="activetemplateid" editable="true" stored="true" index="true"> 
+  <property id="activetemplateid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Template Id]]></language>  
       <language id="de"><![CDATA[Vorlagen-ID]]></language>
@@ -33,7 +33,7 @@
       <language id="es"><![CDATA[ID de la plantilla]]></language>
     </name> 
   </property>  
-  <property id="entityid" editable="true" stored="true" index="true"> 
+  <property id="entityid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Menu Entity Id]]></language>  
       <language id="de"><![CDATA[Menü-Entity-ID]]></language>
