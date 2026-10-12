@@ -1,62 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <results> 
-  <data id="autoDetectWelcomeSkill" bean="autoDetectWelcomeSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
-    <name> 
-      <language id="en"><![CDATA[Auto Detect]]></language>  
-      <language id="de"><![CDATA[Automatische Erkennung]]></language>
-      <language id="fr"><![CDATA[Détection automatique]]></language>
-      <language id="es"><![CDATA[Detección automática]]></language>
-    </name>
-    <markdowncontent><![CDATA[---
-name: autoDetectWelcomeSkill
-description: Sends the chat welcome message once per conversation.
----
-
-# Auto Detect
-
-Sends the chat welcome message once per conversation.
-
-## When to use
-
-- First step of a chat assistant.
-
-## How it works
-
-1. If `sentwelcome` is not set, marks the agent message completed and renders the `chat_detection_welcome` template.
-2. Sets `sentwelcome` so it is only sent once.
-
-## Inputs
-
-- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
-- `sentwelcome`: Set after the first run. When present, no welcome is sent
-
-## Configuration
-
-Attributes set on this skill row:
-
-- `contextbean`: `chatMessageContext`
-
-## Outputs
-
-- The welcome response, and `sentwelcome=true`
-
-## Implementation
-
-- Bean `autoDetectWelcomeSkill`: `org.entermediadb.ai.skills.AutoDetectWelcomeSkill`
-- Agent type: `remoteagent`
-]]></markdowncontent>
-    <parameters><![CDATA[[
-{
-"id":"agentmessage",
-"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
-},
-{
-"id":"sentwelcome",
-"description":"Set after the first run. When present, no welcome is sent"
-}
-]]]></parameters>
-  </data>  
   <data id="welcomeMenuSkill" bean="welcomeMenuSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
     <name>
       <language id="en"><![CDATA[Welcome Menu]]></language>
@@ -72,13 +16,13 @@ Shows a welcome menu listing the chat scenarios under the same automation label 
 
 ## When to use
 
-- The `<scenarioid>_welcome` step of a `welcome_menu_<labelid>` scenario.
+- The `<labelid>_welcome_menu_welcome` step of the `eme_chat_welcome_menu` and `entity_chat_welcome_menu` scenarios. EME Chat and Entity Chat open with it right away.
 
 ## How it works
 
 1. Reads `connectedtop` (the automationlabel id) from the running scenario.
 2. Finds enabled, visible, chat-enabled scenarios with the same `connectedtop`, sorted by `ordering`, excluding itself.
-3. Renders the `welcome_menu` template with `menuscenarios` and `menulabel`.
+3. Renders the `welcome_menu` template with `menuscenarios` and `menulabel`. Each menu item runs that scenario's `<scenarioid>_confirm` step first.
 
 ## Outputs
 
@@ -160,10 +104,10 @@ Reads each new team chat message, asks the LLM whether and how the assistant sho
 
 ## How it works
 
-1. Loads the user message this step is replying to and stores it as `userquery`.
+1. Stays quiet when started by a system message (opening the chat, or Not now on a confirmation page). Otherwise loads the latest user message and stores it as `userquery`.
 2. Calls the `library_collection_chat_monitor` tools function on the thinking LLM, which ranks the most likely `menuscenarios`, picks a `helperrole` and a `wait_minutes` (0–5).
 3. Sleeps `wait_minutes` on its own thread. Nothing is broadcast while it waits.
-4. A newer user message in the same channel cancels the wait, and that message is checked instead. If the wait finishes and no newer message arrived, it renders `chat_monitor_menu` with the recommended scenarios.
+4. A newer user message in the same channel cancels the wait, and that message is checked instead. If the wait finishes and no newer message arrived, it renders `chat_monitor_menu` with the recommended scenarios. Each menu item runs that scenario's `<scenarioid>_confirm` step first.
 
 ## Inputs
 
@@ -177,7 +121,8 @@ Attributes set on this skill row:
 
 ## Outputs
 
-- `startup_scenario`, `userquery`, `menuscenarios`, `recommendedscenarios`, `helperrole`, `confirmation`, `instruction`
+- `userquery`, `menuscenarios`, `recommendedscenarios`, `helperrole`, `confirmation`
+- `teaminstruction` and `teamcontext`: what the team asked for, kept for the confirmation page (`chatGuessGoalSkill` uses it)
 
 ## Implementation
 
@@ -191,66 +136,6 @@ Attributes set on this skill row:
 }
 ]]]></parameters>
   </data>  
-  <data id="chatMonitorResponseSkill" bean="chatMonitorResponseSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
-    <name> 
-      <language id="en"><![CDATA[Respond to Chats]]></language>  
-    </name>
-    <markdowncontent><![CDATA[---
-name: chatMonitorResponseSkill
-description: Runs the scenario step the user chose in chat.
----
-
-# Respond to Chats
-
-Runs the scenario step the user chose in chat.
-
-## When to use
-
-- After the user picks one of the assistant's suggested actions.
-
-## How it works
-
-1. Sets `messagereload` to false.
-2. Requires `selectedscenario` in the form `scenario.step`, and logs an error if it is missing or malformed.
-3. Runs that scenario step with the current context.
-
-## Inputs
-
-- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
-- `selectedscenario`: The step to run, as `scenarioid.stepid`
-- `entityid`: Optional entity the request is about
-
-## Configuration
-
-Attributes set on this skill row:
-
-- `contextbean`: `chatMessageContext`
-
-## Outputs
-
-- Whatever the selected step produces
-
-## Implementation
-
-- Bean `chatMonitorResponseSkill`: `org.entermediadb.ai.skills.ChatMonitorResponseSkill`
-- Agent type: `remoteagent`
-]]></markdowncontent>
-    <parameters><![CDATA[[
-{
-"id":"agentmessage",
-"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
-},
-{
-"id":"selectedscenario",
-"description":"The step to run, as `scenarioid.stepid`"
-},
-{
-"id":"entityid",
-"description":"Optional entity the request is about"
-}
-]]]></parameters>
-  </data>  
-
   <data id="openCodeJobCreatorSkill" bean="openCodeJobCreatorSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
     <name>
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
@@ -449,11 +334,11 @@ Runs the conversational search flow: parses what the user wants, searches module
 
 ## How it works
 
-1. Does different work depending on the automation step id:
-2. `chat_searching_welcome`: renders the welcome with the search schema, then `search_parse`.
-3. `search_parse`: calls the thinking LLM to parse the request into search tables and keywords. If it cannot, replies conversationally.
-4. `search_tables`: renders the table results and keeps them as a message prefix, then `search_semantic`.
-5. `search_semantic`: adds semantic matches for the keywords, then returns to `search_parse`.
+1. Does different work depending on the automation step id, after removing the `<scenarioid>_` prefix (for example `entity_chat_search_parse` is `parse`):
+2. `welcome`: renders `chat_searching_welcome` with the search schema, then `<scenarioid>_parse`.
+3. `parse`: calls the thinking LLM (`search_parse`) to parse the request into search tables and keywords. If it cannot, replies conversationally.
+4. `tables`: renders `search_tables` and keeps the results as a message prefix, then `<scenarioid>_semantic`.
+5. `semantic`: renders `search_semantic` with matches for the keywords, then returns to `<scenarioid>_parse`.
 6. `view_related_record*`: renders related records.
 
 ## Inputs

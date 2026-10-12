@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- using more descriptive ids for easier debugging -->
-
+<!-- Team Chat opens with this. It stays quiet, waits for a pause, then offers a menu. Each menu item runs <scenario>_confirm -->
 <records>
 
-
-   <data id="emeteamchat_responder_welcome" aiskill="libraryCollectionChatMonitorSkill" automationscenario="emeteamchat_responder" enabled="true" agenttype="eventagent" processingmessage="Detecting" >
+   <data id="team_chat_monitor_welcome" aiskill="libraryCollectionChatMonitorSkill" automationscenario="team_chat_monitor" enabled="true" agenttype="eventagent" processingmessage="Watching">
       <name>
-         <![CDATA[Team Monitor and Menu Confirmation]]>
+         <![CDATA[Team Monitor and Menu]]>
       </name>
    </data>
-     
 
-   </records>
+</records>

@@ -1,47 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- using more descriptive ids for easier debugging -->
-
+<!-- QuestionsSkill finds these steps by aiskill, not by id. team_chat_questions.xml is a copy for the team_chat label -->
 <records>
 
- 
-   <data id="chat_questions_welcome" aiskill="questionsSkill" automationscenario="chat_questions" enabled="true" agenttype="eventagent"  processingmessage="Thinking">
+   <data id="entity_chat_questions_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_questions" enabled="true" processingmessage="Loading">
+      <name>
+         <![CDATA[Answer Questions Confirmation]]>
+      </name>
+   </data>
+
+   <data id="entity_chat_questions_welcome" aiskill="questionsSkill" automationscenario="entity_chat_questions" runafter="entity_chat_questions_confirm" enabled="true" agenttype="eventagent" processingmessage="Thinking">
       <name>
          <![CDATA[Handle Questions in Chat]]>
       </name>
    </data>
 
-
-   <data id="question_create_suggestions" aiskill="questionsMakeSuggestionsSkill" automationscenario="chat_questions" enabled="true" runafter="chat_questions_welcome" processingmessage="Creating Suggestions">
+   <data id="entity_chat_questions_create_suggestions" aiskill="questionsMakeSuggestionsSkill" automationscenario="entity_chat_questions" enabled="true" runafter="entity_chat_questions_welcome" processingmessage="Creating Suggestions">
       <name>
          <![CDATA[Create Suggestions]]>
       </name>
    </data>
 
-   <data id="question_ask" aiskill="questionsAskSkill" automationscenario="chat_questions" enabled="true" runafter="question_create_suggestions" processingmessage="Answering Question">
+   <data id="entity_chat_questions_ask" aiskill="questionsAskSkill" automationscenario="entity_chat_questions" enabled="true" runafter="entity_chat_questions_create_suggestions" processingmessage="Answering Question">
       <name>
          <![CDATA[Answer Question]]>
       </name>
    </data>
 
-
-   <!-- Copy of chat_questions for the team_chat label. QuestionsSkill finds these steps by aiskill, not by id -->
-   <data id="chat_questions_team_welcome" aiskill="questionsSkill" automationscenario="chat_questions_team" enabled="true" agenttype="eventagent"  processingmessage="Thinking">
-      <name>
-         <![CDATA[Handle Questions in Chat]]>
-      </name>
-   </data>
-
-   <data id="chat_questions_team_create_suggestions" aiskill="questionsMakeSuggestionsSkill" automationscenario="chat_questions_team" enabled="true" runafter="chat_questions_team_welcome" processingmessage="Creating Suggestions">
-      <name>
-         <![CDATA[Create Suggestions]]>
-      </name>
-   </data>
-
-   <data id="chat_questions_team_ask" aiskill="questionsAskSkill" automationscenario="chat_questions_team" enabled="true" runafter="chat_questions_team_create_suggestions" processingmessage="Answering Question">
-      <name>
-         <![CDATA[Answer Question]]>
-      </name>
-   </data>
-
-   </records>
+</records>

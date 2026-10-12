@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- SearchingSkill strips the "eme_chat_search_media_" prefix to find the action: welcome, parse, tables, semantic -->
 <records>
-   <data id="search_media_searching" aiskill="searchingChatSkill" automationscenario="search_media" enabled="true" agenttype="eventagent">
+
+   <data id="eme_chat_search_media_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_chat_search_media" enabled="true" processingmessage="Loading">
       <name>
-         <![CDATA[Search for Media]]>
+         <![CDATA[Search for Media Confirmation]]>
       </name>
    </data>
+
+   <data id="eme_chat_search_media_welcome" aiskill="searchingChatSkill" automationscenario="eme_chat_search_media" runafter="eme_chat_search_media_confirm" enabled="true" agenttype="eventagent">
+      <name>
+         <![CDATA[Search Welcome]]>
+      </name>
+   </data>
+
+   <data id="eme_chat_search_media_parse" aiskill="searchingChatSkill" automationscenario="eme_chat_search_media" runafter="eme_chat_search_media_welcome" enabled="true" agenttype="eventagent" processingmessage="Understanding the Search">
+      <name>
+         <![CDATA[Parse Search]]>
+      </name>
+   </data>
+
+   <data id="eme_chat_search_media_tables" aiskill="searchingChatSkill" automationscenario="eme_chat_search_media" runafter="eme_chat_search_media_parse" enabled="true" agenttype="eventagent" processingmessage="Searching">
+      <name>
+         <![CDATA[Search Tables]]>
+      </name>
+   </data>
+
+   <data id="eme_chat_search_media_semantic" aiskill="searchingChatSkill" automationscenario="eme_chat_search_media" runafter="eme_chat_search_media_tables" enabled="true" agenttype="eventagent" processingmessage="Searching">
+      <name>
+         <![CDATA[Semantic Search]]>
+      </name>
+   </data>
+
 </records>

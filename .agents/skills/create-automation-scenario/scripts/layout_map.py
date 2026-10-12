@@ -32,8 +32,8 @@ for row in ROWS:
         cx=x+hw; cy=rowy+LH/2
         out[l]=(cx-lw(l)/2, rowy)
         n=len(kids[l]); R=radius(n)
-        # welcome menu first, then by current x (unpositioned last)
-        order=sorted(kids[l],key=lambda i:(not i.startswith('welcome_menu'), pos.get(i,(1e9,0))[0]))
+        # welcome menu or team monitor first, then by current x (unpositioned last)
+        order=sorted(kids[l],key=lambda i:(not (i.endswith('_welcome_menu') or i=='team_chat_monitor'), pos.get(i,(1e9,0))[0]))
         for k,i in enumerate(order):
             th=math.pi/2 if n==1 else math.pi-ALPHA-k*(math.pi-2*ALPHA)/(n-1)
             out[i]=(cx+R*math.cos(th)-BOX/2, cy+R*math.sin(th)-BOX/2+DROP)

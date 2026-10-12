@@ -4,7 +4,7 @@
 
 <records>
 
-   <data id="create_image" aiskill="mediaCreatorSkill" automationscenario="chat_imagecreator" enabled="true" processingmessage="Creating the Image">
+   <data id="create_image" aiskill="mediaCreatorSkill" automationscenario="entity_chat_image_creator" enabled="true" processingmessage="Creating the Image">
       <name>
          <![CDATA[Create Image]]>
       </name>

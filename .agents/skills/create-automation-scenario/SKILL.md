@@ -24,9 +24,9 @@ Read `automationlabel/scenariolabels.xml`. Current labels:
 
 | Label id | Text on map | Scenario file | Used by |
 |---|---|---|---|
-| `eme_chat` | EME Chat | `automationscenario/eme_chat.xml` | Server-wide/customer chat (MCP, `chat_createjob_server`) |
-| `entity_chat` | Entity Chat | `automationscenario/entity_chat.xml` | Chat attached to an entity/module record |
-| `team_chat` | Team Chat | `automationscenario/team_chat.xml` | Team channels (`emeteamchat_responder`, goals) |
+| `eme_chat` | EME Chat | `automationscenario/eme_chat.xml` | Server-wide chat. Opens with `eme_chat_welcome_menu` right away. Its scenarios are also the MCP tools |
+| `entity_chat` | Entity Chat | `automationscenario/entity_chat.xml` | Chat attached to an entity/module record. Opens with `entity_chat_welcome_menu` right away |
+| `team_chat` | Team Chat | `automationscenario/team_chat.xml` | Team channels. `team_chat_monitor` waits for a pause, then offers a menu |
 | `communication_tools` | Communication Tools | `automationscenario/communication_tools.xml` | Email, publishing |
 | `content_creation_tools` | Content Creation Tools | `automationscenario/content_creation_tools.xml` | Image/Smart Creator |
 | `file_management_tools` | File Management Tools | `automationscenario/file_management_tools.xml` | Hot folders, asset processing |
@@ -57,7 +57,7 @@ the label:
 - The radius is at least 320px and grows with the number of children, so neighbouring centres are at
   least 290px apart (more than 200 × √2, so boxes never overlap, even on the diagonal).
 - Every scenario is pushed down another 100px, so the top of its box is always below the label.
-- The `welcome_menu_*` scenario comes first (leftmost); the rest keep their left-to-right order.
+- The `<label>_welcome_menu` (or `team_chat_monitor`) scenario comes first (leftmost); the rest keep their left-to-right order.
 - The labels are in two rows, spread out so the arcs don't collide:
 
 | Row | Labels (left to right) | Label posy |
@@ -92,10 +92,10 @@ curl -s -H "$AUTH" -X POST -H 'Content-Type: application/json' \
 
 ## Step 3: Write the scenario row
 
-Add it to `automationscenario/<connectedtop>.xml`, the file named after the label you chose in Step 1. Every row in a file has that file's label as its `connectedtop`; a new label gets a new file. If you change a scenario's `connectedtop`, move its row to the new label's file. If the label has a `welcome_menu_<label id>` scenario, keep that row **first** in the file and add new rows after it.
+Add it to `automationscenario/<connectedtop>.xml`, the file named after the label you chose in Step 1. Every row in a file has that file's label as its `connectedtop`; a new label gets a new file. If you change a scenario's `connectedtop`, move its row to the new label's file. Name chat scenarios `<label id>_<action>`, for example `entity_chat_search` or `team_chat_create_goals`. If the label has a `<label id>_welcome_menu` (or `team_chat_monitor`) scenario, keep that row **first** in the file and add new rows after it.
 
 ```xml
-<data id="my_scenario" ordering="50" scenarioicon="robot" enabled="true" isvisible="true"
+<data id="entity_chat_my_scenario" ordering="50" scenarioicon="robot" enabled="true" isvisible="true"
       connectedtop="entity_chat" chatenabled="true">
   <name>
     <language id="en"><![CDATA[My Scenario]]></language>
@@ -113,29 +113,41 @@ Then run the layout script from Step 2 with `--write`. It adds the position row,
 **same id**:
 
 ```xml
-<data id="my_scenario" posx="1700.0" posy="2833.0">
+<data id="entity_chat_my_scenario" posx="1700.0" posy="2833.0">
   <name/>
 </data>
 ```
 
 ## Step 4: Write the steps
 
-Steps go in `automationstep/<file>.xml` (an existing one or a new file). Each step has
-`automationscenario="my_scenario"` and an `aiskill` bean id. Steps without `runafter` run first;
+Steps go in `automationstep/<scenarioid>.xml`. Each step has
+`automationscenario="entity_chat_my_scenario"` and an `aiskill` bean id. Steps without `runafter` run first;
 the others are chained with `runafter="<previous step id>"`.
 
-For a chat scenario, the first step's id must be **`<scenarioid>_welcome`**. When the user switches
-chat scenarios, `AgentModule` runs the function `<scenarioid>_welcome` by default:
+A chat scenario that shows up in a menu needs two first steps:
+
+1. **`<scenarioid>_confirm`**: the confirmation page. The welcome menu, the team monitor menu and the
+   scenario picker all run this step. It explains what is about to happen, with a Start button and
+   Back to menu (EME and Entity Chat) or Not now (Team Chat).
+2. **`<scenarioid>_welcome`**, with `runafter="<scenarioid>_confirm"`: the real start. The Start
+   button runs it, and so does a reply typed under the confirmation.
 
 ```xml
-<data id="my_scenario_welcome" aiskill="renderLocalTemplateSkill" automationscenario="my_scenario"
-      enabled="true" agenttype="eventagent" processingmessage="Welcome">
+<data id="entity_chat_my_scenario_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_my_scenario"
+      enabled="true" processingmessage="Loading">
+  <name><![CDATA[My Scenario Confirmation]]></name>
+</data>
+
+<data id="entity_chat_my_scenario_welcome" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_my_scenario"
+      runafter="entity_chat_my_scenario_confirm" enabled="true" agenttype="eventagent" processingmessage="Welcome">
   <name><![CDATA[Welcome]]></name>
 </data>
 ```
 
 `renderLocalTemplateSkill` renders `plugins/mediadb/html/views/agentresponses/<stepid>.html`, so
-also create `my_scenario_welcome.html` there. To write a new Java skill for a step, use the
+also create `entity_chat_my_scenario_confirm.html` and `entity_chat_my_scenario_welcome.html` there.
+Copy an existing `*_confirm.html` for the buttons. A confirmation that needs to look at the chat
+first can use its own skill instead, like `chatGuessGoalSkill` for `team_chat_create_goals_confirm`. To write a new Java skill for a step, use the
 `create-java-ai-skill` skill.
 
 ## Step 5: Reload
@@ -158,13 +170,24 @@ explicitly (see `reload-list-data`), because `restoredata` only adds and updates
 ## Step 6: Verify
 
 - Open the Automation map. The node is on its label's semicircle, below the label, with a line up to it.
-- For chat scenarios, the scenario appears in that label's chat menu, and choosing it renders the
-  `_welcome` step.
+- For chat scenarios, the scenario appears in that label's chat menu. Choosing it renders the
+  `_confirm` page, and Start renders the `_welcome` step.
 
 ## Example: the welcome menus
 
-`welcome_menu_eme_chat` and `welcome_menu_entity_chat`
-follow this recipe. Their ids are `welcome_menu_` + the label id in `connectedtop`. Each one is the first row of its label's scenario file. Each has one
-step, `welcome_menu_<label>_welcome` in `automationstep/welcome_menu.xml`, which runs
+`eme_chat_welcome_menu` and `entity_chat_welcome_menu`
+follow this recipe. Their ids are the label id in `connectedtop` + `_welcome_menu`. Each one is the first row of its label's scenario file. Each has one
+step, `<label>_welcome_menu_welcome` in `automationstep/welcome_menu.xml`, which runs
 `welcomeMenuSkill` (`WelcomeMenuSkill.java`). That skill lists the other chat scenarios under the
-same label and renders them with `agentresponses/welcome_menu.html`.
+same label and renders them with `agentresponses/welcome_menu.html`. They have no confirmation page,
+and EME Chat and Entity Chat show them as soon as the chat opens.
+
+Team Chat is different: it opens with `team_chat_monitor`, whose one step
+(`automationstep/team_chat_monitor.xml`) runs `libraryCollectionChatMonitorSkill`. It stays quiet,
+waits for a pause in the conversation, then renders `chat_monitor_menu.html` with the scenarios
+that fit.
+
+Each chat type picks its first scenario from the `defaultscenarioid` property of its page
+(`profile/chat`, `fullscreenchat`, `services/chat/connect`: `eme_chat_welcome_menu`;
+`editors/entitychat`: `entity_chat_welcome_menu`; `project/chat`: `team_chat_monitor`).
+Without one, `AgentModule.defaultScenarioFor` picks by the channel's `channeltype`.

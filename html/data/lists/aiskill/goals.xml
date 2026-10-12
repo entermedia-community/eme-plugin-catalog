@@ -2,6 +2,61 @@
 
 <results> 
 
+<data id="chatGuessGoalSkill" bean="chatGuessGoalSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Suggest Goal]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatGuessGoalSkill
+description: Guesses the goal a team needs from its recent chat messages and asks the team to confirm it.
+---
+
+# Suggest Goal
+
+Guesses the goal a team needs from its recent chat messages and asks the team to confirm it.
+
+## When to use
+
+- The confirmation step of `team_chat_create_goals`.
+
+## How it works
+
+1. Calls the `team_chat_guess_goal` tools function on the thinking LLM with `channelchathistory` and `teaminstruction`.
+2. Stores the guess as `suggestedgoal` and `suggestedgoaldetails`. Falls back to `teaminstruction` when there is no guess.
+3. Renders `team_chat_create_goals_confirm`, an editable goal with a Create Goal button. It does not run the next step; the button or a typed reply runs `team_chat_create_goals_create`.
+
+## Inputs
+
+- `channelchathistory`: The recent messages in the channel
+- `teaminstruction`: What the team monitor thought the team asked for, if anything
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `suggestedgoal`, `suggestedgoaldetails`
+
+## Implementation
+
+- Bean `chatGuessGoalSkill`: `org.entermediadb.ai.skills.ChatGuessGoalSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channelchathistory",
+"description":"The recent messages in the channel"
+},
+{
+"id":"teaminstruction",
+"description":"What the team monitor thought the team asked for, if anything"
+}
+]]]></parameters>
+  </data>
+
 <data id="chatCreateGoalSkill" bean="chatCreateGoalSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Create Goal]]></language>
@@ -11,27 +66,28 @@
     </name>
     <markdowncontent><![CDATA[---
 name: chatCreateGoalSkill
-description: Creates a project goal from a task the user described in chat.
+description: Creates the project goal the team confirmed in chat.
 ---
 
 # Create Goal
 
-Creates a project goal from a task the user described in chat.
+Creates the project goal the team confirmed in chat.
 
 ## When to use
 
-- The assistant detected that the user wants to track a goal.
+- After `chatGuessGoalSkill` in `team_chat_create_goals`.
 
 ## How it works
 
-1. Reads `arguments.task` and saves it as the agent message text.
-2. Creates a `projectgoal` for the user in the collection `entityid` through GoalManager, then runs the children.
+1. The goal is the text of a typed reply. When the Create button was used, it is `goaltext` (falling back to `suggestedgoal`).
+2. Finds the collection from the channel: a librarycollection, a collectiveproject's `parentcollectionid` or a goaltask's `collectionid`.
+3. Creates a `projectgoal` for the user through GoalManager, renders `chat_goal_created`, then runs the children.
 
 ## Inputs
 
 - `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
-- `arguments`: LLM tool arguments. `task` holds the goal description
-- `entityid`: The collection the goal belongs to
+- `goaltext`: The goal posted by the Create button on `team_chat_create_goals_confirm`
+- `entityid`: The record the team channel belongs to
 
 ## Configuration
 
@@ -54,12 +110,12 @@ Attributes set on this skill row:
 "description":"The agent's chatterbox reply record; its replytoid points at the user's message"
 },
 {
-"id":"arguments",
-"description":"LLM tool arguments. `task` holds the goal description"
+"id":"goaltext",
+"description":"The goal posted by the Create button on team_chat_create_goals_confirm"
 },
 {
 "id":"entityid",
-"description":"The collection the goal belongs to"
+"description":"The record the team channel belongs to"
 }
 ]]]></parameters>
   </data>  
@@ -132,7 +188,7 @@ Opens a chat channel for each pending goal task and posts the task so the team a
 
 1. Finds pending tasks (`taskstatus=0`) of open goals.
 2. Creates an `agententitychat` channel for each task if it has none.
-3. Posts the task text as the first message for the `emeteamchat_responder` scenario, then fires `llm.monitorchats`.
+3. Posts the task text as the first message for the `team_chat_monitor` scenario, then fires `llm.monitorchats`.
 
 ## Inputs
 

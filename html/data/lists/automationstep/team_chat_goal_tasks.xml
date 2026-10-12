@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <records>
-   <data id="goals_processing_start"  aiskill="handleWebEventSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent">
+   <data id="goals_processing_start"  aiskill="handleWebEventSkill" automationscenario="team_chat_goal_tasks" enabled="true" agenttype="eventagent">
       <name>
          <language id="en"><![CDATA[Create Tasks]]></language>  
       </name>
    </data>
 
-   <data id="taskCreateChannelSkill" aiskill="taskCreateChannelSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent" runafter="goals_processing_start">
+   <data id="taskCreateChannelSkill" aiskill="taskCreateChannelSkill" automationscenario="team_chat_goal_tasks" enabled="true" agenttype="eventagent" runafter="goals_processing_start">
       <name>
          <![CDATA[Task Channel Creation]]>
       </name>

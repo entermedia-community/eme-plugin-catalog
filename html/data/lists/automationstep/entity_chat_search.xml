@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- using more descriptive ids for easier debugging -->
-
+<!-- SearchingSkill strips the "entity_chat_search_" prefix to find the action: welcome, parse, tables, semantic -->
 <records>
-   <data id="chat_searching" aiskill="searchingChatSkill" automationscenario="chat_searching" enabled="true" agenttype="eventagent">
-      <name>
-         <![CDATA[Handle Searching in Chat]]>
-      </name>
-   </data> 
 
-   </records>
+   <data id="entity_chat_search_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_search" enabled="true" processingmessage="Loading">
+      <name>
+         <![CDATA[Search Files Confirmation]]>
+      </name>
+   </data>
+
+   <data id="entity_chat_search_welcome" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_confirm" enabled="true" agenttype="eventagent">
+      <name>
+         <![CDATA[Search Welcome]]>
+      </name>
+   </data>
+
+   <data id="entity_chat_search_parse" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_welcome" enabled="true" agenttype="eventagent" processingmessage="Understanding the Search">
+      <name>
+         <![CDATA[Parse Search]]>
+      </name>
+   </data>
+
+   <data id="entity_chat_search_tables" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_parse" enabled="true" agenttype="eventagent" processingmessage="Searching">
+      <name>
+         <![CDATA[Search Tables]]>
+      </name>
+   </data>
+
+   <data id="entity_chat_search_semantic" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_tables" enabled="true" agenttype="eventagent" processingmessage="Searching">
+      <name>
+         <![CDATA[Semantic Search]]>
+      </name>
+   </data>
+
+</records>

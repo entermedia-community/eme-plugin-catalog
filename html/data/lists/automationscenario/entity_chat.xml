@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Entity Chat: chat about one record. Opens with entity_chat_welcome_menu right away. Picking a menu item runs <scenario>_confirm first -->
 <records>
-  <data id="welcome_menu_entity_chat" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
+  <data id="entity_chat_welcome_menu" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
     <name>
       <language id="en"><![CDATA[Welcome Menu]]></language>
     </name>
     <longcaption><![CDATA[Good for starting a conversation and seeing which chat tools are available.]]></longcaption>
-    <markdowncontent><![CDATA[Greets the user and shows a menu of the Entity Chat chat scenarios to choose from.]]></markdowncontent>
+    <markdowncontent><![CDATA[Greets the user and shows a menu of the Entity Chat scenarios to choose from.]]></markdowncontent>
   </data>
 
-  <data id="chat_createjob_entity" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
-    <name> 
+  <data id="entity_chat_create_job" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
+    <name>
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
-    </name> 
+    </name>
     <longcaption><![CDATA[Good for asking the assistant to run a background job on this record from the chat.]]></longcaption>
     <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>
   </data>
 
-  <data id="chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="entity_chat">
+  <data id="entity_chat_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="entity_chat">
     <name>
       <language id="en"><![CDATA[Answer Questions]]></language>
       <language id="de"><![CDATA[Fragen beantworten]]></language>
@@ -28,7 +29,7 @@
     <markdowncontent><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></markdowncontent>
   </data>
 
-  <data id="chat_searching" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="entity_chat">
+  <data id="entity_chat_search" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="entity_chat">
     <name>
       <language id="en"><![CDATA[Search Files]]></language>
       <language id="de"><![CDATA[Dateien durchsuchen]]></language>
@@ -39,7 +40,7 @@
     <markdowncontent><![CDATA[Enables conversational catalog search, parsing natural language queries in chat to find, filter, and present relevant media assets and data records.]]></markdowncontent>
   </data>
 
-  <data id="chat_smartcreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="entity_chat">
+  <data id="entity_chat_smart_creator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="entity_chat">
     <name>
       <language id="en"><![CDATA[Smart Creator]]></language>
       <language id="de"><![CDATA[Smart Creator]]></language>
@@ -50,7 +51,7 @@
     <markdowncontent><![CDATA[Provides an interactive conversational assistant for Smart Creator that parses prompts, retrieves reference memory from vector embeddings, generates structured outlines, refines sections with user confirmation, and renders finalized content templates.]]></markdowncontent>
   </data>
 
-  <data id="chat_imagecreator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false"  connectedtop="entity_chat">
+  <data id="entity_chat_image_creator" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="false"  connectedtop="entity_chat">
     <name>
       <language id="en"><![CDATA[Image Creator Chat]]></language>
       <language id="de"><![CDATA[Bild-Generator-Chat]]></language>
@@ -59,14 +60,6 @@
     </name>
     <longcaption><![CDATA[Good for creating and refining images through a back-and-forth conversation.]]></longcaption>
     <markdowncontent><![CDATA[Image creation based on user prompts.]]></markdowncontent>
-  </data>
-
-  <data id="task_creation" ordering="56" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="false"> 
-    <name> 
-      <language id="en"><![CDATA[Goal/Task Creation]]></language>      
-    </name> 
-    <longcaption><![CDATA[Good for turning project goals into assigned tasks and team channels automatically.]]></longcaption>
-    <markdowncontent><![CDATA[Monitors project goals and task triggers to automatically generate actionable tasks, assign resources, and create dedicated collaboration channels.]]></markdowncontent>
   </data>
 
 </records>

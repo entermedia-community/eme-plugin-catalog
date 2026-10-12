@@ -2,7 +2,13 @@
 
 <!-- using more descriptive ids for easier debugging -->
 <records> 
-  <data id="chat_tutor_welcome" aiskill="adaptiveTutorialWelcomeSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading..."> 
+  <data id="eme_chat_tutor_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading">
+    <name>
+      <language id="en"><![CDATA[Tutor Chat Confirmation]]></language>
+    </name>
+  </data>
+
+  <data id="eme_chat_tutor_welcome" runafter="eme_chat_tutor_confirm" aiskill="adaptiveTutorialWelcomeSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading..."> 
     <name> 
       <language id="en"><![CDATA[Tutor Chat Welcome]]></language>  
       <language id="de"><![CDATA[Tutor-Chat: Willkommen]]></language>
@@ -10,7 +16,7 @@
       <language id="es"><![CDATA[Bienvenido al Tutor Chat]]></language>
     </name> 
   </data>  
-  <data id="chat_tutor_continue" aiskill="adaptiveTutorialContinueSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading..."> 
+  <data id="chat_tutor_continue" aiskill="adaptiveTutorialContinueSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading..."> 
     <name> 
       <language id="en"><![CDATA[Tutor Chat Continue]]></language>  
       <language id="de"><![CDATA[Tutor-Chat fortsetzen]]></language>
@@ -18,7 +24,7 @@
       <language id="es"><![CDATA[Continuar el chat con el tutor]]></language>
     </name> 
   </data>  
-  <data id="chat_tutor_answer" aiskill="adaptiveTutorialAnswerSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading..."> 
+  <data id="chat_tutor_answer" aiskill="adaptiveTutorialAnswerSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading..."> 
     <name> 
       <language id="en"><![CDATA[Tutor Chat Answer]]></language>  
       <language id="de"><![CDATA[Antwort des Tutoren-Chat]]></language>
@@ -26,7 +32,7 @@
       <language id="es"><![CDATA[Respuesta del tutor en el chat]]></language>
     </name> 
   </data>  
-  <data id="chat_tutor_progress" aiskill="adaptiveTutorialProgressSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading..."> 
+  <data id="chat_tutor_progress" aiskill="adaptiveTutorialProgressSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading..."> 
     <name> 
       <language id="en"><![CDATA[Tutor Progress]]></language>  
       <language id="de"><![CDATA[Fortschritt des Tutors]]></language>
@@ -34,7 +40,7 @@
       <language id="es"><![CDATA[Progreso del tutor]]></language>
     </name> 
   </data>  
-  <data id="chat_tutor_usercomment" aiskill="adaptiveTutorialUserCommentSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading..."> 
+  <data id="chat_tutor_usercomment" aiskill="adaptiveTutorialUserCommentSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading..."> 
     <name> 
       <language id="en"><![CDATA[Tutor Chat User Comment]]></language>  
       <language id="de"><![CDATA[Tutor-Chat-Benutzerkommentar]]></language>
@@ -42,7 +48,7 @@
       <language id="es"><![CDATA[Comentario del usuario del tutor]]></language>
     </name> 
   </data>  
-  <data id="chat_tutor_end" aiskill="adaptiveTutorialEndSkill" automationscenario="chat_tutor" enabled="true" processingmessage="Loading..."> 
+  <data id="chat_tutor_end" aiskill="adaptiveTutorialEndSkill" automationscenario="eme_chat_tutor" enabled="true" processingmessage="Loading..."> 
     <name> 
       <language id="en"><![CDATA[Tutor Chat End]]></language>  
       <language id="de"><![CDATA[Tutor-Chat-Ende]]></language>
