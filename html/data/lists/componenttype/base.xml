@@ -1,9 +1,9 @@
 <datas>
 	<data id="heading" icon="type-h1" ordering="1">
-	<name>
-		<language id="en"><![CDATA[Heading]]></language>
-		<language id="es"><![CDATA[Título]]></language>
-	</name>
+		<name>
+			<language id="en"><![CDATA[Heading]]></language>
+			<language id="es"><![CDATA[Título]]></language>
+		</name>
 	</data>
 	<data id="paragraph" icon="paragraph" ordering="2">
 		<name>
@@ -33,6 +33,12 @@
 		<name>
 			<language id="en"><![CDATA[Multiple Choice Question]]></language>
 			<language id="es"><![CDATA[Pregunta de opción múltiple]]></language>
+		</name>
+	</data>
+	<data id="textinput" icon="short_text" ordering="7">
+		<name>
+			<language id="en"><![CDATA[Text Input]]></language>
+			<language id="es"><![CDATA[Entrada de texto]]></language>
 		</name>
 	</data>
 
