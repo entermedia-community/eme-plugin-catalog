@@ -7,19 +7,11 @@
     </name>
   </data>
 
-  <data id="eme_server_create_job_welcome" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_create_job" enabled="true" runafter="eme_server_create_job_confirm" processingmessage="Welcome...">
-    <name>
-      <language id="en"><![CDATA[Agent Job Welcome]]></language>
-    </name>
-  </data>
-
-  <data id="eme_server_create_job_user_request" aiskill="openCodeUserRequestSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="eme_server_create_job_welcome">
+   <data id="eme_server_create_job_user_request" aiskill="openCodeUserRequestSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="eme_server_create_job_confirm">
     <name>
       <![CDATA[Open Code User Request]]>
     </name>
   </data>
-
-
 
     <data id="customer_service_openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Running Command" runafter="eme_server_create_job_user_request">
         <name>

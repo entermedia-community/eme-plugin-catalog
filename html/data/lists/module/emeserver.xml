@@ -3,7 +3,8 @@
   <data id="emeserver" showonsearch="true" securityenabled="false" isentity="true" ordering="3"
     moduleresultsview="brickvertical"
     modulerendertype="emeserver"
-    moduleicon="grid">
+    moduleicon="grid"
+    semanticenabled="true">
     <name><![CDATA[EME Servers]]></name>
   </data>
 
