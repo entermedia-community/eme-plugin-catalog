@@ -7,16 +7,8 @@
       <language id="en"><![CDATA[Smart Creator Confirmation]]></language>
     </name>
   </data>
-
-  <data id="entity_chat_smart_creator_welcome" runafter="entity_chat_smart_creator_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_smart_creator" enabled="true" processingmessage="Loading Creator Types"> 
-    <name> 
-      <language id="en"><![CDATA[Smart Creator Choose Type]]></language>  
-      <language id="de"><![CDATA[Smart Creator: Typ wählen]]></language>
-      <language id="fr"><![CDATA[Le créateur intelligent choisit le type]]></language>
-      <language id="es"><![CDATA[Creador inteligente: elige el tipo]]></language>
-    </name> 
-  </data>  
-  <data id="chat_smartcreator_make_suggestions" aiskill="smartCreatorMakeSuggestionsSkill" automationscenario="entity_chat_smart_creator" enabled="true" runafter="entity_chat_smart_creator_welcome" processingmessage="Creating Suggestions"> 
+  
+  <data id="chat_smartcreator_make_suggestions" aiskill="smartCreatorMakeSuggestionsSkill" automationscenario="entity_chat_smart_creator" enabled="true" runafter="entity_chat_smart_creator_confirm" processingmessage="Creating Suggestions"> 
     <name> 
       <language id="en"><![CDATA[Make Suggestions]]></language>  
       <language id="de"><![CDATA[Vorschläge einreichen]]></language>
