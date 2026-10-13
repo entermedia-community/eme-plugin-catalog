@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- EME Chat and Entity Chat open with these right away. Each menu item runs <scenario>_confirm -->
+<!-- EME Server and Entity Chat open with these right away. Each menu item runs <scenario>_confirm -->
 <records>
 
-  <data id="eme_chat_welcome_menu_welcome" aiskill="welcomeMenuSkill" automationscenario="eme_chat_welcome_menu" enabled="true" agenttype="eventagent" processingmessage="Welcome">
+  <data id="eme_server_welcome_menu_welcome" aiskill="welcomeMenuSkill" automationscenario="eme_server_welcome_menu" enabled="true" agenttype="eventagent" processingmessage="Welcome">
     <name>
       <![CDATA[Welcome Menu]]>
     </name>

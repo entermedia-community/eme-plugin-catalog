@@ -22,7 +22,7 @@ def radius(n):
     step=(math.pi-2*ALPHA)/(n-1)
     return max(320, GAP/(2*math.sin(step/2)))
 def lw(l): return 80+9*len(texts[l])
-ROWS=[['file_management_tools','communication_tools','content_creation_tools'],['eme_chat','entity_chat','team_chat']]
+ROWS=[['file_management_tools','communication_tools','content_creation_tools'],['eme_server','entity_chat','team_chat']]
 out={}; rowy=1430.0; LH=60
 for row in ROWS:
     hws=[radius(len(kids[l]))*math.cos(ALPHA)+BOX/2 for l in row]

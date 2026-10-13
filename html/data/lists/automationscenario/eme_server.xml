@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- EME Chat: server-wide chat. Opens with eme_chat_welcome_menu right away. Picking a menu item runs <scenario>_confirm first. These are also the MCP tools -->
+<!-- EME Server: server-wide chat. Opens with eme_server_welcome_menu right away. Picking a menu item runs <scenario>_confirm first. These are also the MCP tools -->
 <records>
-  <data id="eme_chat_welcome_menu" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="eme_chat" chatenabled="true">
+  <data id="eme_server_welcome_menu" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="eme_server" chatenabled="true">
     <name>
       <language id="en"><![CDATA[Welcome Menu]]></language>
     </name>
     <longcaption><![CDATA[Good for starting a conversation and seeing which chat tools are available.]]></longcaption>
-    <markdowncontent><![CDATA[Greets the user and shows a menu of the EME Chat scenarios to choose from.]]></markdowncontent>
+    <markdowncontent><![CDATA[Greets the user and shows a menu of the EME Server scenarios to choose from.]]></markdowncontent>
   </data>
 
-  <data id="eme_chat_search_media" ordering="55" scenarioicon="search" enabled="true" isvisible="true" connectedtop="eme_chat" chatenabled="true">
+  <data id="eme_server_search_media" ordering="55" scenarioicon="search" enabled="true" isvisible="true" connectedtop="eme_server" chatenabled="true">
     <name>
       <language id="en"><![CDATA[Search for Media]]></language>
       <language id="de"><![CDATA[Nach Medien suchen]]></language>
@@ -21,7 +21,7 @@
     <markdowncontent><![CDATA[Helps customers find media by parsing natural language requests, searching the catalog, and presenting matching assets and records.]]></markdowncontent>
   </data>
 
-  <data id="eme_chat_create_job" ordering="57" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="eme_chat" chatenabled="true">
+  <data id="eme_server_create_job" ordering="57" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="eme_server" chatenabled="true">
     <name>
       <language id="en"><![CDATA[Create Agent Jobs]]></language>
     </name>
@@ -29,7 +29,7 @@
     <markdowncontent><![CDATA[Analyzes customer requests and conversation context to match appropriate automation skills and schedule background AI agent jobs on the customer's behalf.]]></markdowncontent>
   </data>
 
-  <data id="eme_chat_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="eme_chat" chatenabled="true">
+  <data id="eme_server_tutor" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" connectedtop="eme_server" chatenabled="true">
     <name>
       <language id="en"><![CDATA[Tutor Chat]]></language>
       <language id="de"><![CDATA[Tutor-Chat]]></language>
@@ -38,6 +38,17 @@
     </name>
     <longcaption><![CDATA[Good for learning a topic interactively, with questions, feedback and progress tracking.]]></longcaption>
     <markdowncontent><![CDATA[Powers an adaptive interactive tutoring session that guides learners step-by-step through educational material, evaluates responses, awards cognitive confidence scores, tracks mastery progress, and answers learner questions.]]></markdowncontent>
+  </data>
+
+  <data id="eme_server_questions" ordering="50" scenarioicon="broadcast" enabled="true" isvisible="true" chatenabled="true" connectedtop="eme_server">
+    <name>
+      <language id="en"><![CDATA[Answer Questions]]></language>
+      <language id="de"><![CDATA[Fragen beantworten]]></language>
+      <language id="fr"><![CDATA[Répondre aux questions]]></language>
+      <language id="es"><![CDATA[Responder preguntas]]></language>
+    </name>
+    <longcaption><![CDATA[Good for getting quick answers about the files and records in your library.]]></longcaption>
+    <markdowncontent><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></markdowncontent>
   </data>
 
 </records>

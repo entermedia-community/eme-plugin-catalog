@@ -24,7 +24,7 @@ Read `automationlabel/scenariolabels.xml`. Current labels:
 
 | Label id | Text on map | Scenario file | Used by |
 |---|---|---|---|
-| `eme_chat` | EME Chat | `automationscenario/eme_chat.xml` | Server-wide chat. Opens with `eme_chat_welcome_menu` right away. Its scenarios are also the MCP tools |
+| `eme_server` | EME Server | `automationscenario/eme_server.xml` | Server-wide chat. Opens with `eme_server_welcome_menu` right away. Its scenarios are also the MCP tools |
 | `entity_chat` | Entity Chat | `automationscenario/entity_chat.xml` | Chat attached to an entity/module record. Opens with `entity_chat_welcome_menu` right away |
 | `team_chat` | Team Chat | `automationscenario/team_chat.xml` | Team channels. `team_chat_monitor` waits for a pause, then offers a menu |
 | `communication_tools` | Communication Tools | `automationscenario/communication_tools.xml` | Email, publishing |
@@ -63,7 +63,7 @@ the label:
 | Row | Labels (left to right) | Label posy |
 |---|---|---|
 | Top | `file_management_tools`, `communication_tools`, `content_creation_tools` | 1430 |
-| Bottom | `eme_chat`, `entity_chat`, `team_chat` | 2133 |
+| Bottom | `eme_server`, `entity_chat`, `team_chat` | 2133 |
 
 Don't place new nodes by hand. Add the scenario (Step 3), then rerun the layout script. It
 recomputes every label and scenario position, prints them with any overlaps, and with `--write`
@@ -175,12 +175,12 @@ explicitly (see `reload-list-data`), because `restoredata` only adds and updates
 
 ## Example: the welcome menus
 
-`eme_chat_welcome_menu` and `entity_chat_welcome_menu`
+`eme_server_welcome_menu` and `entity_chat_welcome_menu`
 follow this recipe. Their ids are the label id in `connectedtop` + `_welcome_menu`. Each one is the first row of its label's scenario file. Each has one
 step, `<label>_welcome_menu_welcome` in `automationstep/welcome_menu.xml`, which runs
 `welcomeMenuSkill` (`WelcomeMenuSkill.java`). That skill lists the other chat scenarios under the
 same label and renders them with `agentresponses/welcome_menu.html`. They have no confirmation page,
-and EME Chat and Entity Chat show them as soon as the chat opens.
+and EME Server and Entity Chat show them as soon as the chat opens.
 
 Team Chat is different: it opens with `team_chat_monitor`, whose one step
 (`automationstep/team_chat_monitor.xml`) runs `libraryCollectionChatMonitorSkill`. It stays quiet,
@@ -188,6 +188,6 @@ waits for a pause in the conversation, then renders `chat_monitor_menu.html` wit
 that fit.
 
 Each chat type picks its first scenario from the `defaultscenarioid` property of its page
-(`profile/chat`, `fullscreenchat`, `services/chat/connect`: `eme_chat_welcome_menu`;
+(`profile/chat`, `fullscreenchat`, `services/chat/connect`: `eme_server_welcome_menu`;
 `editors/entitychat`: `entity_chat_welcome_menu`; `project/chat`: `team_chat_monitor`).
 Without one, `AgentModule.defaultScenarioFor` picks by the channel's `channeltype`.

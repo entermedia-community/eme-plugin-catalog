@@ -1,0 +1,51 @@
+<records>
+
+  <!-- In chat: confirm, welcome, then read the request. MCP tool calls skip these and queue their own job -->
+  <data id="eme_server_create_job_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_create_job" enabled="true" processingmessage="Loading">
+    <name>
+      <language id="en"><![CDATA[Create Agent Jobs Confirmation]]></language>
+    </name>
+  </data>
+
+  <data id="eme_server_create_job_welcome" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_create_job" enabled="true" runafter="eme_server_create_job_confirm" processingmessage="Welcome...">
+    <name>
+      <language id="en"><![CDATA[Agent Job Welcome]]></language>
+    </name>
+  </data>
+
+  <data id="eme_server_create_job_user_request" aiskill="openCodeUserRequestSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="eme_server_create_job_welcome">
+    <name>
+      <![CDATA[Open Code User Request]]>
+    </name>
+  </data>
+
+
+
+    <data id="customer_service_openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Running Command" runafter="eme_server_create_job_user_request">
+        <name>
+           <![CDATA[Open Code Runner]]>
+        </name>
+     </data>
+
+<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the eme_server_create_job_UserRequest for the next command -->
+
+
+    <data id="customer_service_opencode_markdown" aiskill="markdownToHtmlSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="customer_service_openCodeRunner" >
+        <name>
+           <![CDATA[Markdown Result to HTML]]>
+        </name>
+     </data>
+
+    <data id="customer_service_openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="customer_service_openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="eme_server_create_job" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
+</records>

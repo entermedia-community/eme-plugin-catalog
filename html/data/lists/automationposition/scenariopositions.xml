@@ -4,13 +4,13 @@
   <data id="asset_processing" posx="594.5" posy="1771.0"> 
     <name/> 
   </data>  
-  <data id="entity_chat_smart_creator" posx="1199.5" posy="2559.2"> 
+  <data id="entity_chat_smart_creator" posx="1303.9" posy="2559.2"> 
     <name/> 
   </data>  
-  <data id="entity_chat_search" posx="1991.8" posy="2559.2"> 
+  <data id="entity_chat_search" posx="2096.1" posy="2559.2"> 
     <name/> 
   </data>  
-  <data id="entity_chat_questions" posx="1740.7" posy="2704.2"> 
+  <data id="entity_chat_questions" posx="1845.0" posy="2704.2"> 
     <name/> 
   </data>  
   <data id="publishing" posx="2009.1" posy="1542.8"> 
@@ -19,7 +19,7 @@
   <data id="email" posx="1390.9" posy="1542.8"> 
     <name/> 
   </data>  
-  <data id="eme_chat_search_media" posx="734.5" posy="2251.9"> 
+  <data id="eme_server_search_media" posx="677.7" posy="2521.0"> 
     <name/> 
   </data>  
   <data id="goals_manager" posx="918.535658820856" posy="2441.41284253311">
@@ -46,7 +46,7 @@
   <data id="smartcreator_auto_entityarticle" posx="2805.5" posy="1771.0"> 
     <name/> 
   </data>  
-  <data id="eme_chat" posx="427.1" posy="2133.1">
+  <data id="eme_server" posx="418.1" posy="2133.1">
     <name/>
   </data>
   <data id="communication_tools" posx="1674.5" posy="1430.0">
@@ -55,10 +55,10 @@
   <data id="content_creation_tools" posx="2621.5" posy="1430.0">
     <name/>
   </data>
-  <data id="entity_chat" posx="1606.2" posy="2133.1">
+  <data id="entity_chat" posx="1710.5" posy="2133.1">
     <name/>
   </data>
-  <data id="team_chat" posx="2912.1" posy="2133.1">
+  <data id="team_chat" posx="3016.4" posy="2133.1">
     <name/>
   </data>
 
@@ -66,45 +66,48 @@
     <name/>
   </data>
 
-  <data id="team_chat_monitor"  posx="2456.8" posy="2279.9" >
+  <data id="team_chat_monitor"  posx="2561.1" posy="2279.9" >
     <name/>
   </data>
 
-  <data id="eme_chat_create_job" posx="548.1" posy="2474.1">
+  <data id="eme_server_create_job" posx="403.1" posy="2614.2">
     <name/>
   </data>
   
-  <data id="entity_chat_create_job" posx="1450.7" posy="2704.2">
+  <data id="entity_chat_create_job" posx="1555.0" posy="2704.2">
     <name/>
   </data>
 
-  <data id="team_chat_create_job" posx="2892.6" posy="2614.2">
+  <data id="team_chat_create_job" posx="2996.9" posy="2614.2">
     <name/>
   </data>
 
-  <data id="team_chat_create_goals" posx="3167.2" posy="2521.0">
+  <data id="team_chat_create_goals" posx="3271.5" posy="2521.0">
     <name/>
   </data>
 
-  <data id="eme_chat_welcome_menu" posx="71.7" posy="2251.9">
+  <data id="eme_server_welcome_menu" posx="-32.6" posy="2279.9">
     <name/>
   </data>
 
-  <data id="entity_chat_welcome_menu" posx="1054.5" posy="2308.1">
+  <data id="entity_chat_welcome_menu" posx="1158.9" posy="2308.1">
     <name/>
   </data>
 
-  <data id="eme_chat_tutor" posx="258.1" posy="2474.1">
+  <data id="eme_server_tutor" posx="128.5" posy="2521.0">
     <name/>
   </data>
 
-  <data id="entity_chat_image_creator" posx="2136.8" posy="2308.1">
+  <data id="entity_chat_image_creator" posx="2241.1" posy="2308.1">
     <name/>
   </data>
-  <data id="team_chat_goal_tasks" posx="2617.9" posy="2521.0">
+  <data id="team_chat_goal_tasks" posx="2722.3" posy="2521.0">
     <name/>
   </data>
-  <data id="team_chat_questions" posx="3328.3" posy="2279.9">
+  <data id="team_chat_questions" posx="3432.6" posy="2279.9">
+    <name/>
+  </data>
+  <data id="eme_server_questions" posx="838.9" posy="2279.9">
     <name/>
   </data>
 </root>

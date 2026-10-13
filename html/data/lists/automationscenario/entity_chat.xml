@@ -31,7 +31,7 @@
 
   <data id="entity_chat_search" ordering="50" scenarioicon="broadcast" enabled="true" chatenabled="true" isvisible="true" connectedtop="entity_chat">
     <name>
-      <language id="en"><![CDATA[Search Files]]></language>
+      <language id="en"><![CDATA[Search for Media]]></language>
       <language id="de"><![CDATA[Dateien durchsuchen]]></language>
       <language id="fr"><![CDATA[Rechercher des fichiers]]></language>
       <language id="es"><![CDATA[Buscar archivos]]></language>

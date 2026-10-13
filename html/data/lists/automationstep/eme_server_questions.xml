@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copy of entity_chat_questions for the eme_server label. QuestionsSkill finds these steps by aiskill, not by id -->
+<records>
+
+   <data id="eme_server_questions_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_questions" enabled="true" processingmessage="Loading">
+      <name>
+         <![CDATA[Answer Questions Confirmation]]>
+      </name>
+   </data>
+
+   <data id="eme_server_questions_welcome" aiskill="questionsSkill" automationscenario="eme_server_questions" runafter="eme_server_questions_confirm" enabled="true" agenttype="eventagent" processingmessage="Thinking">
+      <name>
+         <![CDATA[Handle Questions in Chat]]>
+      </name>
+   </data>
+
+   <data id="eme_server_questions_create_suggestions" aiskill="questionsMakeSuggestionsSkill" automationscenario="eme_server_questions" enabled="true" runafter="eme_server_questions_welcome" processingmessage="Creating Suggestions">
+      <name>
+         <![CDATA[Create Suggestions]]>
+      </name>
+   </data>
+
+   <data id="eme_server_questions_ask" aiskill="questionsAskSkill" automationscenario="eme_server_questions" enabled="true" runafter="eme_server_questions_create_suggestions" processingmessage="Answering Question">
+      <name>
+         <![CDATA[Answer Question]]>
+      </name>
+   </data>
+
+</records>
