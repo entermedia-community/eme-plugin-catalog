@@ -1,3 +1,3 @@
 <properties>
-  <property id="emeserverid" value="AaEeH3NgRnUnrX6wjAEn">EME Server ID</property>
+  <property id="emeserverid" value="localhost">EME Server ID</property>
 </properties>
