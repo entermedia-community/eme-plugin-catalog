@@ -1,0 +1,6 @@
+<properties>
+  <property id="localhost" name="Local Host" serverfunction="eme_chat_welcome_menu"
+    servermediadburl="http://localhost.com:8080/site/mediadb" category="rental"
+    description="A local development server." subtitle="127.0.0.1" primarycolor="#3884FD"
+    secondarycolor="#52B852"></property>
+</properties>
