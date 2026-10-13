@@ -67,7 +67,7 @@
   <data
     id="themelight"
     themeicon="sun"
-    templatecss="/${applicationid}/themelight/styles/overridestemplate.css"
+    templatecss="/${applicationid}/theme/styles/overridestemplate.css"
     backgroundtile="false"
     btn="#3884FD"
     btn-acc="#3884FD"
@@ -95,14 +95,14 @@
     nav-btn-active-hover="#d4d4d4"
     nav-btn-active-text="#444444"
     nav-btn-hover="#b1b1b1"
-    tab-btn-hover-text="#fff"
+    tab-btn-hover-text="#ffffff"
     nav-btn-text="#FFFFFF"
-    navbar-primary="#fff"
+    navbar-primary="#ffffff"
     navbar-primary-text="#444444"
     navbar-primary-text-hover="#000000"
     
     navbar-secondary="#e1e1e1"
-    navbar-secondary-text="#333"
+    navbar-secondary-text="#333333"
     navbar-text="#FFFFFF"
     
     sidebar="#FFFFFF"

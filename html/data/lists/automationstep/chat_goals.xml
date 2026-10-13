@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+
+
+<data id="emechat_goal_manager_welcome" aiskill="chatCreateGoalSkill" automationscenario="emechat_goal_manager" enabled="true" agenttype="eventagent"  processingmessage="Welcome" >
+   <name>
+      <![CDATA[Welcome]]>
+   </name>
+</data>
+
+
+   <data id="goal_create" aiskill="chatCreateGoalSkill" automationscenario="task_creation" enabled="true" agenttype="eventagent"  processingmessage="Creating Goal" >
+      <name>
+         <![CDATA[Create Goal]]>
+      </name>
+   </data>
+
+   <data id="goal_task_create" aiskill="goalTaskCreationSkill" automationscenario="emechat_goal_manager" runafter="goal_create" enabled="true">
+   <name>
+         <![CDATA[Create Task]]>
+      </name>
+   </data>
+
+
+   </records>
