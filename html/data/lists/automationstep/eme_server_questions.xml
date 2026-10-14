@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Copy of entity_chat_questions for the eme_server label. QuestionsSkill finds these steps by aiskill, not by id -->
+<!-- Copy of entity_chat_questions for the eme_server label. QuestionsConfirmSkill finds these steps by aiskill, not by id -->
 <records>
 
-   <data id="eme_server_questions_confirm" aiskill="questionsSkill" automationscenario="eme_server_questions" enabled="true" agenttype="eventagent" processingmessage="Thinking">
+   <data id="eme_server_questions_confirm" aiskill="questionsConfirmSkill" automationscenario="eme_server_questions" enabled="true" agenttype="eventagent" processingmessage="Thinking">
       <name>
          <![CDATA[Handle Questions in Chat]]>
       </name>

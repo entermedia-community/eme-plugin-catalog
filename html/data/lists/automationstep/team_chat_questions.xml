@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Copy of entity_chat_questions for the team_chat label. QuestionsSkill finds these steps by aiskill, not by id -->
+<!-- Copy of entity_chat_questions for the team_chat label. QuestionsConfirmSkill finds these steps by aiskill, not by id -->
 <records>
 
-   <data id="team_chat_questions_confirm" aiskill="renderLocalTemplateSkill" automationscenario="team_chat_questions" enabled="true" processingmessage="Loading">
-      <name>
-         <![CDATA[Answer Questions Confirmation]]>
-      </name>
-   </data>
-
-   <data id="team_chat_questions_welcome" aiskill="questionsSkill" automationscenario="team_chat_questions" runafter="team_chat_questions_confirm" enabled="true" agenttype="eventagent" processingmessage="Thinking">
-      <name>
-         <![CDATA[Handle Questions in Chat]]>
-      </name>
-   </data>
-
-   <data id="team_chat_questions_create_suggestions" aiskill="questionsMakeSuggestionsSkill" automationscenario="team_chat_questions" enabled="true" runafter="team_chat_questions_welcome" processingmessage="Creating Suggestions">
+   <data id="team_chat_questions_confirm" aiskill="questionsMakeSuggestionsSkill" automationscenario="team_chat_questions" enabled="true"  processingmessage="Creating Suggestions">
       <name>
          <![CDATA[Create Suggestions]]>
       </name>
    </data>
 
-   <data id="team_chat_questions_ask" aiskill="questionsAskSkill" automationscenario="team_chat_questions" enabled="true" runafter="team_chat_questions_create_suggestions" processingmessage="Answering Question">
+
+   <data id="team_chat_questions_select_question" aiskill="questionsConfirmSkill" automationscenario="team_chat_questions"  enabled="true" agenttype="eventagent" runafter="team_chat_questions_create_confirm" processingmessage="Confirming">
+      <name>
+         <![CDATA[Handle Questions in Chat]]>
+      </name>
+   </data>
+
+   <data id="team_chat_questions_ask" aiskill="questionsAskSkill" automationscenario="team_chat_questions" enabled="true" runafter="team_chat_questions_select_question" processingmessage="Answering Question">
       <name>
          <![CDATA[Answer Question]]>
       </name>

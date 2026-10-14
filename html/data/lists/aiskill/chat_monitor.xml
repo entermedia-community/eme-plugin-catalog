@@ -250,7 +250,7 @@ Shows the progress of a running agent job and checks again until it completes.
   </data>
 
 
-  <data id="questionsSkill" bean="questionsSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
+  <data id="questionsConfirmSkill" bean="questionsConfirmSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
     <name> 
       <language id="en"><![CDATA[Questions Chat]]></language>  
       <language id="de"><![CDATA[Chat-Fragen]]></language>
@@ -258,7 +258,7 @@ Shows the progress of a running agent job and checks again until it completes.
       <language id="es"><![CDATA[Preguntas del chat]]></language>
     </name>
     <markdowncontent><![CDATA[---
-name: questionsSkill
+name: questionsConfirmSkill
 description: Starts a Q&A chat about one entity, offering saved suggestions or creating new ones.
 ---
 
@@ -294,7 +294,7 @@ Attributes set on this skill row:
 
 ## Implementation
 
-- Bean `questionsSkill`: `org.entermediadb.ai.skills.QuestionsSkill`
+- Bean `questionsConfirmSkill`: `org.entermediadb.ai.skills.QuestionsConfirmSkill`
 - Agent type: `remoteagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
