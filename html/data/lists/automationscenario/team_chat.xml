@@ -43,7 +43,7 @@
     <markdowncontent><![CDATA[Provides interactive question-and-answer capabilities over catalog assets and entities, generating contextual suggestion prompts and delivering AI answers retrieved via semantic vector search.]]></markdowncontent>
   </data>
 
-  <data id="team_chat_goal_tasks" ordering="56" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="team_chat" chatenabled="false">
+  <data id="team_chat_goal_tasks" ordering="56" scenarioicon="card-checklist" enabled="false" isvisible="false" connectedtop="team_chat" chatenabled="false">
     <name>
       <language id="en"><![CDATA[Goal/Task Creation]]></language>
     </name>
