@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<records>
+
+
+  <data id="entity_chat_custom_skills_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_custom_skills" enabled="true" processingmessage="Loading">
+    <name>
+      <language id="en"><![CDATA[Run Custom Skill Confirmation]]></language>
+    </name>
+  </data>
+
+  <data id="entity_chat_custom_skills_welcome" runafter="entity_chat_custom_skills_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_custom_skills" enabled="true" processingmessage="Loading Job Creator"> 
+    <name> 
+      <language id="en"><![CDATA[Agent Job Welcome]]></language>  
+    </name> 
+  </data>  
+
+   <data id="openCodeJobCreator" aiskill="openCodeJobCreatorSkill" automationscenario="entity_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Calculating Steps" runafter="entity_chat_custom_skills_welcome" >
+      <name>
+         <![CDATA[Job Creator]]>
+      </name>
+   </data>
+
+    <data id="openCodeStatus" aiskill="openCodeStatusSkill" automationscenario="entity_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Checking Job Status" runafter="openCodeJobCreator" >
+       <name>
+          <![CDATA[Open Code Status]]>
+       </name>
+    </data>
+
+    <data id="markdownToHtml" aiskill="markdownToHtmlSkill" automationscenario="entity_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="openCodeStatus" >
+        <name>
+           <![CDATA[Markdown to HTML]]>
+        </name>
+     </data>
+
+    <data id="openCodeRunner" aiskill="openCodeRunnerSkill" automationscenario="entity_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Running Command" runafter="markdownToHtml" >
+        <name>
+           <![CDATA[Open Code Runner]]>
+        </name>
+     </data>
+
+    <data id="openCodeApprove" aiskill="openCodeApproveSkill" automationscenario="entity_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Approval">
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="openCodeAnswer" aiskill="openCodeAnswerSkill" automationscenario="entity_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
+     </records>

@@ -70,15 +70,15 @@
     <name/>
   </data>
 
-  <data id="eme_server_create_job" posx="403.1" posy="2614.2">
+  <data id="eme_server_custom_skills" posx="403.1" posy="2614.2">
     <name/>
   </data>
   
-  <data id="entity_chat_create_job" posx="1555.0" posy="2704.2">
+  <data id="entity_chat_custom_skills" posx="1555.0" posy="2704.2">
     <name/>
   </data>
 
-  <data id="team_chat_create_job" posx="2996.9" posy="2614.2">
+  <data id="team_chat_custom_skills" posx="2996.9" posy="2614.2">
     <name/>
   </data>
 

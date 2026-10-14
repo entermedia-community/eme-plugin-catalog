@@ -1,0 +1,49 @@
+<records>
+
+
+  <data id="team_chat_custom_skills_confirm" aiskill="renderLocalTemplateSkill" automationscenario="team_chat_custom_skills" enabled="true" processingmessage="Loading">
+    <name>
+      <language id="en"><![CDATA[Run Custom Skill Confirmation]]></language>
+    </name>
+  </data>
+
+<data id="team_chat_custom_skills_welcome" runafter="team_chat_custom_skills_confirm" aiskill="renderLocalTemplateSkill" automationscenario="team_chat_custom_skills" enabled="true" processingmessage="Welcome..."> 
+    <name> 
+      <language id="en"><![CDATA[OpenCode Harness]]></language>  
+    </name> 
+  </data>  
+
+    <data id="team_chat_custom_skills_user_request" aiskill="openCodeUserRequestSkill" automationscenario="team_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="team_chat_custom_skills_welcome">
+        <name>
+           <![CDATA[Open Code User Request]]>
+        </name>
+     </data>
+
+    <data id="team_chat_custom_skills_runner" aiskill="openCodeRunnerSkill" automationscenario="team_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Running Command"  runafter="team_chat_custom_skills_user_request">
+        <name>
+           <![CDATA[Open Code Runner]]>
+        </name>
+     </data>
+
+<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the team_chat_custom_skills_user_request for the next command -->
+
+
+    <data id="team_chat_custom_skills_markdown" aiskill="markdownToHtmlSkill" automationscenario="team_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="team_chat_custom_skills_runner" >
+        <name>
+           <![CDATA[Markdown Result to HTML]]>
+        </name>
+     </data>
+
+    <data id="team_chat_custom_skills_approve" aiskill="openCodeApproveSkill" automationscenario="team_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="team_chat_custom_skills_answer" aiskill="openCodeAnswerSkill" automationscenario="team_chat_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
+</records>

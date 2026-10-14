@@ -1,0 +1,43 @@
+<records>
+
+  <!-- In chat: confirm, welcome, then read the request. MCP tool calls skip these and queue their own job -->
+  <data id="eme_server_custom_skills_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_custom_skills" enabled="true" processingmessage="Loading">
+    <name>
+      <language id="en"><![CDATA[Run Custom Skill Confirmation]]></language>
+    </name>
+  </data>
+
+   <data id="eme_server_custom_skills_user_request" aiskill="openCodeUserRequestSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Reading Request" runafter="eme_server_custom_skills_confirm">
+    <name>
+      <![CDATA[Create User Request]]>
+    </name>
+  </data>
+
+    <data id="eme_server_custom_skills_run" aiskill="openCodeRunnerSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Running Command" runafter="eme_server_custom_skills_user_request">
+        <name>
+           <![CDATA[Open Code Runner]]>
+        </name>
+     </data>
+
+<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the eme_server_custom_skills_UserRequest for the next command -->
+
+
+    <data id="eme_server_custom_skills_markdown" aiskill="markdownToHtmlSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="eme_server_custom_skills_run" >
+        <name>
+           <![CDATA[Markdown Result to HTML]]>
+        </name>
+     </data>
+
+    <data id="eme_server_custom_skills_approve" aiskill="openCodeApproveSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
+        <name>
+           <![CDATA[Open Code Approve]]>
+        </name>
+     </data>
+
+    <data id="eme_server_custom_skills_answer" aiskill="openCodeAnswerSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Answer">
+        <name>
+           <![CDATA[Open Code Answer]]>
+        </name>
+     </data>
+
+</records>

@@ -10,9 +10,9 @@
     <markdowncontent><![CDATA[Greets the user and shows a menu of the Entity Chat scenarios to choose from.]]></markdowncontent>
   </data>
 
-  <data id="entity_chat_create_job" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
+  <data id="entity_chat_custom_skills" ordering="50" scenarioicon="robot" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
     <name>
-      <language id="en"><![CDATA[Create Agent Jobs]]></language>
+      <language id="en"><![CDATA[Run Custom Skill]]></language>
     </name>
     <longcaption><![CDATA[Good for asking the assistant to run a background job on this record from the chat.]]></longcaption>
     <markdowncontent><![CDATA[Analyzes conversation context and user instructions to match appropriate automation skills and schedule background AI agent jobs.]]></markdowncontent>

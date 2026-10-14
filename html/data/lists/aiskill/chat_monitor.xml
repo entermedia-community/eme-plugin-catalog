@@ -200,16 +200,16 @@ Attributes set on this skill row:
 ]]]></parameters>
   </data>
 
-  <data id="agentJobStatusSkill" bean="agentJobStatusSkill" agenttype="eventagent" ordering="10">
+  <data id="openCodeStatusSkill" bean="openCodeStatusSkill" agenttype="eventagent" ordering="10">
     <name>
-      <language id="en"><![CDATA[Agent Job Status]]></language>
+      <language id="en"><![CDATA[Open Code Status]]></language>
     </name>
     <markdowncontent><![CDATA[---
-name: agentJobStatusSkill
+name: openCodeStatusSkill
 description: Shows the progress of a running agent job and checks again until it completes.
 ---
 
-# Agent Job Status
+# Open Code Status
 
 Shows the progress of a running agent job and checks again until it completes.
 
@@ -234,7 +234,7 @@ Shows the progress of a running agent job and checks again until it completes.
 
 ## Implementation
 
-- Bean `agentJobStatusSkill`: `org.entermediadb.ai.skills.AgentJobStatusSkill`
+- Bean `openCodeStatusSkill`: `org.entermediadb.ai.skills.OpenCodeStatusSkill`
 - Agent type: `eventagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
