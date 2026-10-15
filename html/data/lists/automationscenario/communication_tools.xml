@@ -24,4 +24,15 @@
     <markdowncontent><![CDATA[Automates email-based customer support by ingesting incoming emails, retrieving matching knowledge base context via vector embeddings, drafting and sending AI replies, and categorizing or escalating critical issues.]]></markdowncontent>
   </data>
 
+  <data id="billing" ordering="50" scenarioicon="cash-coin" enabled="true" isvisible="true" connectedtop="communication_tools" chatenabled="false"> 
+    <name> 
+      <language id="en"><![CDATA[Billing]]></language>  
+      <language id="de"><![CDATA[Buchhaltung]]></language>
+      <language id="fr"><![CDATA[Facturation]]></language>
+      <language id="es"><![CDATA[Facturación]]></language>
+    </name> 
+    <longcaption><![CDATA[Good for generating upcoming recurring invoices, processing Stripe autopayments and emailing the invoices to clients and project teams.]]></longcaption>
+    <markdowncontent><![CDATA[Runs the billing cycle: generates recurring invoices for active products that are due within 15 days, attempts Stripe autopay on pending invoices, then sends the invoice notification emails to the billing contacts and the project team.]]></markdowncontent>
+  </data>
+
 </records>

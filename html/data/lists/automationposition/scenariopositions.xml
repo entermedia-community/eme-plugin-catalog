@@ -19,6 +19,9 @@
   <data id="email" posx="1390.9" posy="1542.8"> 
     <name/> 
   </data>  
+  <data id="billing" posx="1700.0" posy="1542.8"> 
+    <name/> 
+  </data>  
   <data id="eme_server_search_media" posx="677.7" posy="2521.0"> 
     <name/> 
   </data>  

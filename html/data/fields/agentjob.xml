@@ -51,6 +51,12 @@
     </name>
   </property>
 
+   <property id="expirationdate" index="true" editable="true" datatype="date" stored="true">
+    <name>
+      <language id="en">Expiration Date</language>
+    </name>
+  </property>
+
   <property id="errordetails" index="true" editable="true" stored="true">
     <name>
       <language id="en">Error Details</language>

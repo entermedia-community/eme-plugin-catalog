@@ -1,0 +1,87 @@
+<records>
+
+  <data id="billingCheckInvoicesSkill" bean="billingCheckInvoicesSkill" agenttype="taskagent" ordering="10">
+    <name>
+      <![CDATA[Billing: Check Invoices]]>
+    </name>
+    <markdowncontent><![CDATA[---
+name: billingCheckInvoicesSkill
+description: Generates recurring invoices for active products due within 15 days and auto-pays invoiced invoices through Stripe. Notification emails are sent by the Billing Send Invoice skill.
+---
+
+# Billing: Check Invoices
+
+Generates recurring invoices for active products whose next bill date falls within the next 15 days, then attempts Stripe autopay on every invoice in `invoiced` status with `isautopaid=true`. Notification emails are sent by the Billing Send Invoice skill (`billingSendInvoiceSkill`), which runs as the next step of the billing scenario.
+
+## When to use
+
+- A scheduled billing run should create upcoming recurring invoices and process pending autopayments.
+
+## How it works
+
+1. Searches `collectiveproduct` for products with `recurring=true`, `billingstatus=active` and `nextbillon` within the next 15 days (sorted by `nextbillon` ascending).
+2. Skips products that already have an invoice generated within 15 days of the due date (`lastgeneratedinvoicedate`).
+3. For each eligible product, creates a `collectiveinvoice` with `paymentstatus=sendinvoice`, resolves the billing contacts from `sentto` or the collection's billing contacts, and advances the product's `nextbillon` by its `recurringperiod` months.
+4. Searches `collectiveinvoice` for `paymentstatus=invoiced` and `isautopaid=true`; for each invoice it looks up the Stripe customer `billing+<collectionid>@entermediadb.com`, charges the first stored source, and marks the invoice `paid` or `autopayfailed` with a reason (`No Customer`, `No Credit Cards Stored`, `CreditCard failed`).
+
+## Inputs
+
+None - operates on catalog data.
+
+## Outputs
+
+- A summary of how many recurring invoices were generated and how many pending invoices were auto-paid.
+
+## Implementation
+
+- Bean `billingCheckInvoicesSkill`: `org.entermediadb.ai.skills.BillingCheckInvoicesSkill`
+- Agent type: `taskagent`
+- Java port of `plugins/catalog/html/events/scripts/billing/checkinvoices.groovy`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
+  </data>
+
+  <data id="billingSendInvoiceSkill" bean="billingSendInvoiceSkill" agenttype="taskagent" ordering="20">
+    <name>
+      <![CDATA[Billing: Send Invoices]]>
+    </name>
+    <markdowncontent><![CDATA[---
+name: billingSendInvoiceSkill
+description: Sends invoice notification emails - for a single invoice by id (via the invoiceid context value) or in bulk over all invoices waiting to be sent.
+---
+
+# Billing: Send Invoices
+
+Sends the invoice notification emails. With an `invoiceid` context value it handles that single invoice; without one it does a bulk pass over every invoice with `notificationsent=false` and `paymentstatus=sendinvoice`.
+
+## When to use
+
+- A billing run should email the generated invoices to their billing contacts (typically the step after Billing: Check Invoices).
+- A single invoice needs its notification (re)sent by id.
+
+## How it works
+
+1. With an `invoiceid`: loads the invoice and branches on `paymentstatus` - `error` is left alone; anything not `paid` gets the invoice notification sent to `sentto` (plus the `invoice_cc_email` copy) and is marked `paymentstatus=invoiced`, `notificationsent=true`; a `paid` invoice that has not been notified yet gets the paid notification and is marked `notificationpaidsent=true`.
+2. Without an `invoiceid`: searches `collectiveinvoice` for `notificationsent=false` and `paymentstatus=sendinvoice`; for each invoice it emails the billing contacts (and the `invoice_cc_email` copy) and notifies the project team (`librarycollection.contactemail`). One failing invoice is logged and skipped so the rest of the batch still runs.
+3. Each email is rendered from the community's theme templates (`invoice-to-client.html`, `invoice-to-client-monthly.html` for monthly recurring, `send-paid-invoice-event.html`, `invoice-to-notify-team.html`) with the pay-now action URL, invoice dates, currency and pay options.
+
+## Inputs
+
+- `invoiceid` (optional): id of a single `collectiveinvoice` to notify. Omit for the bulk pass.
+
+## Outputs
+
+- A summary of what was sent per run.
+
+## Implementation
+
+- Bean `billingSendInvoiceSkill`: `org.entermediadb.ai.skills.BillingSendInvoiceSkill`
+- Agent type: `taskagent`
+- Java port of `plugins/catalog/html/events/scripts/billing/sendinvoice.groovy`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+]]]></parameters>
+  </data>
+
+</records>

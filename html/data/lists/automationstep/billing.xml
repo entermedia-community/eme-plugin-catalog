@@ -1,0 +1,18 @@
+<records>
+
+
+  <data id="billing_check_invoices" aiskill="billingCheckInvoicesSkill" automationscenario="billing" enabled="true">
+    <name>
+      <![CDATA[Billing: Check Invoices]]>
+    </name>
+  </data>
+
+
+  <data id="billing_send_invoice" aiskill="billingSendInvoiceSkill" automationscenario="billing" enabled="true" runafter="billing_check_invoices">
+    <name>
+      <![CDATA[Billing: Send Invoices]]>
+    </name>
+  </data>
+
+
+</records>
