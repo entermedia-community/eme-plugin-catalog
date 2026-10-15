@@ -76,9 +76,9 @@
     </name>
   </property>
 
-  <property id="pendingpermissionid" index="true" editable="true" stored="true" indextype="not_analyzed">
+  <property id="confirmationpendingid" index="true" editable="true" stored="true" indextype="not_analyzed">
     <name>
-      <language id="en">Pending Permission ID</language>
+      <language id="en">Confirmation Pending ID</language>
     </name>
   </property>
 

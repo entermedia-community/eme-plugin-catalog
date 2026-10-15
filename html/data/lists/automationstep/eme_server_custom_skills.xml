@@ -19,14 +19,19 @@
         </name>
      </data>
 
-<!-- Start rendering the incomplete job in a loop. Once it's done continue to final markdown... or back to the eme_server_custom_skills_UserRequest for the next command -->
-
-
     <data id="eme_server_custom_skills_markdown" aiskill="markdownToHtmlSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="eme_server_custom_skills_run" >
         <name>
            <![CDATA[Markdown Result to HTML]]>
         </name>
      </data>
+
+   <data id="eme_server_custom_skills_status" aiskill="openCodeStatusSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Render Job Status" runafter="eme_server_custom_skills_run" >
+       <name>
+          <![CDATA[Render Open Code Status]]>
+       </name>
+    </data>
+
+
 
     <data id="eme_server_custom_skills_approve" aiskill="openCodeApproveSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Sending Approval" >
         <name>
