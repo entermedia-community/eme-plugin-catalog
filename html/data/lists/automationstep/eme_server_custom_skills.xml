@@ -19,12 +19,6 @@
         </name>
      </data>
 
-    <data id="eme_server_custom_skills_markdown" aiskill="markdownToHtmlSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Rendering Markdown to HTML" runafter="eme_server_custom_skills_run" >
-        <name>
-           <![CDATA[Markdown Result to HTML]]>
-        </name>
-     </data>
-
    <data id="eme_server_custom_skills_status" aiskill="openCodeStatusSkill" automationscenario="eme_server_custom_skills" enabled="true" agenttype="eventagent" processingmessage="Render Job Status" runafter="eme_server_custom_skills_run" >
        <name>
           <![CDATA[Render Open Code Status]]>
