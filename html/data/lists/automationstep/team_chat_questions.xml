@@ -10,7 +10,7 @@
    </data>
 
 
-   <data id="team_chat_questions_select_question" aiskill="questionsConfirmSkill" automationscenario="team_chat_questions"  enabled="true" agenttype="eventagent" runafter="team_chat_questions_create_confirm" processingmessage="Confirming">
+   <data id="team_chat_questions_select_question" aiskill="questionsConfirmSkill" automationscenario="team_chat_questions"  enabled="true" agenttype="eventagent" runafter="team_chat_questions_confirm" processingmessage="Confirming">
       <name>
          <![CDATA[Handle Questions in Chat]]>
       </name>
