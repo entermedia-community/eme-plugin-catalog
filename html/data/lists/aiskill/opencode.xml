@@ -21,18 +21,20 @@ Answers an OpenCode permission (security) prompt for an agent job step.
 
 ## How it works
 
-1. Does nothing but run the children unless the step's status is `securityprompt`.
-2. Sends `decision` (once, always or reject; default once) to OpenCode for the pending permission.
-3. Sets the step back to `running` and clears the pending fields.
+1. Loads the waiting step from `currentagentjobstepid` (posted by `agent_job_showstatus`), or falls back to `agentjobstep`.
+2. Does nothing but run the children unless the step's status is `securityprompt`.
+3. Sends `decision` (once, always or reject; default once) to OpenCode for the pending permission.
+4. Sets the step back to `running`, clears the pending fields, and hands back to the scenario's `openCodeStatusSkill` step so progress keeps showing.
 
 ## Inputs
 
-- `agentjobstep`: The waiting agentjobstep record
+- `currentagentjobstepid`: Id of the runner step waiting on the prompt
+- `agentjobstep`: The waiting agentjobstep record, used when no id is posted
 - `decision`: once, always or reject
 
 ## Outputs
 
-- The step saved as running, and a confirmation response
+- The step saved as running, and a confirmation response that runs the status step next
 
 ## Implementation
 
@@ -41,8 +43,12 @@ Answers an OpenCode permission (security) prompt for an agent job step.
 ]]></markdowncontent>
     <parameters><![CDATA[[
 {
+"id":"currentagentjobstepid",
+"description":"Id of the runner step waiting on the prompt"
+},
+{
 "id":"agentjobstep",
-"description":"The waiting agentjobstep record"
+"description":"The waiting agentjobstep record, used when no id is posted"
 },
 {
 "id":"decision",
@@ -128,18 +134,20 @@ Submits a person's answers to an OpenCode question form for an agent job step.
 
 ## How it works
 
-1. Reads the step's `pendingform`.
-2. Collects one `<formid>_<fieldkey>` value per field (multiselect options post `<formid>_<fieldkey>__<option>=true`) and converts them to boolean, integer or number as the form expects.
+1. Loads the waiting step from `currentagentjobstepid` (posted by `agent_job_showstatus`), or falls back to `agentjobstep`, and reads its `pendingform`.
+2. Collects one `<formid>_<fieldkey>` value per field (multiselect options post `<formid>_<fieldkey>__<option>=true`) and converts them to boolean, integer or number as the form expects. Blank fields are left out so OpenCode uses the default.
 3. Sends the answer to OpenCode, sets the step back to `running`, and clears the pending fields.
+4. Hands back to the scenario's `openCodeStatusSkill` step so progress keeps showing.
 
 ## Inputs
 
-- `agentjobstep`: The waiting agentjobstep record
+- `currentagentjobstepid`: Id of the runner step waiting on the question
+- `agentjobstep`: The waiting agentjobstep record, used when no id is posted
 - `<formid>_<fieldkey>`: One posted value per form field
 
 ## Outputs
 
-- The step saved as running, and a confirmation response with the answer
+- The step saved as running, and a confirmation response with the answer that runs the status step next
 
 ## Implementation
 
@@ -148,8 +156,12 @@ Submits a person's answers to an OpenCode question form for an agent job step.
 ]]></markdowncontent>
     <parameters><![CDATA[[
 {
+"id":"currentagentjobstepid",
+"description":"Id of the runner step waiting on the question"
+},
+{
 "id":"agentjobstep",
-"description":"The waiting agentjobstep record"
+"description":"The waiting agentjobstep record, used when no id is posted"
 },
 {
 "id":"<formid>_<fieldkey>",
@@ -164,23 +176,22 @@ Submits a person's answers to an OpenCode question form for an agent job step.
     </name>
     <markdowncontent><![CDATA[---
 name: openCodeRunnerSkill
-description: Runs an OpenCode session for an agent job step and waits until it finishes or needs a human answer.
+description: Starts or resumes an OpenCode session for an agent job step, then hands it to the status step to wait on.
 ---
 
 # Open Code Runner
 
-Runs an OpenCode session for an agent job step and waits until it finishes or needs a human answer.
+Starts or resumes an OpenCode session for an agent job step, then hands it to the status step to wait on.
 
 ## When to use
 
 - A job step should be carried out by the OpenCode coding agent on the server's files.
+- Put an `openCodeStatusSkill` step after it (`runafter`) to wait on the session, show progress, and handle questions.
 
 ## How it works
 
-1. Starts an OpenCode session for the step, or resumes the existing one, in `workingpath` (default: the folder above the web root).
-2. Polls the session for up to 20 minutes, saving the latest assistant text to the step's `markdowncontent` as it goes.
-3. If OpenCode asks a question or permission, saves the step as `question` or `securityprompt` with the pending prompt and stops.
-4. When done, stores the final reply and runs the children.
+1. Connects to the OpenCode server and resumes the session saved for this step's id, or starts a new one in `workingpath` (default: the folder above the web root) with the step's `userrequest`.
+2. Puts the `sessionstatus` in the context and runs the children right away. It does not wait for OpenCode.
 
 ## Inputs
 
@@ -189,7 +200,7 @@ Runs an OpenCode session for an agent job step and waits until it finishes or ne
 
 ## Outputs
 
-- `commandoutput`, `markdowncontent`, the step's status and pending question
+- `sessionstatus`: The OpenCode session, read by `openCodeStatusSkill`
 
 ## Implementation
 
@@ -208,10 +219,7 @@ Runs an OpenCode session for an agent job step and waits until it finishes or ne
 ]]]></parameters>
     <defaultoutput><![CDATA[ [
   {
-    "id": "commandoutput"
-  },
-  {
-    "id": "outputfilepath"
+    "id": "sessionstatus"
   }
 ] ]]></defaultoutput>
   </data>

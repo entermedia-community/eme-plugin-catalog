@@ -206,31 +206,39 @@ Attributes set on this skill row:
     </name>
     <markdowncontent><![CDATA[---
 name: openCodeStatusSkill
-description: Shows the progress of a running agent job and checks again until it completes.
+description: Follows an OpenCode session (or an agent job) in chat, showing progress, question forms, security prompts and the final reply.
 ---
 
 # Open Code Status
 
-Shows the progress of a running agent job and checks again until it completes.
+Follows an OpenCode session (or an agent job) in chat, showing progress, question forms, security prompts and the final reply.
 
 ## When to use
 
-- After an agent job has been started from chat.
+- After `openCodeRunnerSkill` (`runafter`), to wait on its OpenCode session.
+- After an agent job has been started from chat, to follow the job's status.
+- Run again by `openCodeAnswerSkill` and `openCodeApproveSkill` after a person replies, to keep following the session.
 
 ## How it works
 
-1. Reloads the `agentjob` and renders `agent_job_showjobplan` with its timing.
-2. While the status is not `complete` or `error`, broadcasts the status with `processUpdate` and checks again every 5 seconds on the same thread. Gives up after 500 checks.
-3. When the job is finished, returns to `startup_scenario`.
+1. Finds the `sessionstatus`: from the runner's context, or by looking up the session for `currentagentjobstepid` or `agentjobstep`.
+2. Every 2 seconds, applies new OpenCode events, saves the latest assistant text to the runner step's `markdowncontent`, and renders `agent_job_showstatus`, broadcast with `processUpdate`. A newer chat message cancels the wait.
+3. If OpenCode asks a question or permission, saves the runner step as `question` or `securityprompt` with `pendingquestion`, `confirmationpendingid` and `pendingform`, renders the form or approval buttons, and stops.
+4. When the session finishes, puts the final reply in `commandoutput`, renders the completed card, and returns to `startup_scenario`. Throws if OpenCode reports an error or the session runs past 20 minutes.
+5. With no OpenCode session, follows the `agentjob` status instead until it is `complete` or `error` (up to 500 checks).
+
+The rendered form and buttons post to this job's scenario (`currentscenario`), using the steps that run `openCodeAnswerSkill` (`answerfunction`) and `openCodeApproveSkill` (`approvefunction`).
 
 ## Inputs
 
+- `sessionstatus`: The OpenCode session from `openCodeRunnerSkill`
+- `currentagentjobstepid`: Id of the runner step, used to find the session when resuming
 - `agentjob`: The agent job to report on
 - `startup_scenario`: The step to return to when the job finishes
 
 ## Outputs
 
-- `agentjob`, `secondstaken`, and the rendered status
+- `sessionstatus`, `pendingform`, `commandoutput`, `markdowncontent`, `secondstaken`, `currentscenario`, `answerfunction`, `approvefunction`, and the rendered status
 
 ## Implementation
 
@@ -238,6 +246,14 @@ Shows the progress of a running agent job and checks again until it completes.
 - Agent type: `eventagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
+{
+"id":"sessionstatus",
+"description":"The OpenCode session from openCodeRunnerSkill"
+},
+{
+"id":"currentagentjobstepid",
+"description":"Id of the runner step, used to find the session when resuming"
+},
 {
 "id":"agentjob",
 "description":"The agent job to report on"
