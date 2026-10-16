@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher" prefix="steps">
+<properties beanname="folderSearcher" prefix="steps">
   <property id="id" index="true" editable="true" stored="true" internalfield="true">
     <name>
       <language id="en">Id</language>

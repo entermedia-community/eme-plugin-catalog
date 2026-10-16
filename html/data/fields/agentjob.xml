@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher" class="agentjob">
+<properties beanname="folderSearcher" class="agentjob">
 
 
     <property id="id" index="true" editable="true" stored="true" internalfield="true"> 
