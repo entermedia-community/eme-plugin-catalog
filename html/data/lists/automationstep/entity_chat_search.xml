@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- SearchingSkill strips the "entity_chat_search_" prefix to find the action: welcome, parse, tables, semantic -->
+<!-- Each Searching* skill strips the "entity_chat_search_" prefix to find its action (parse, tables, semantic) -->
 <records>
 
    <data id="entity_chat_search_confirm" aiskill="renderLocalTemplateSkill" automationscenario="entity_chat_search" enabled="true" processingmessage="Loading">
@@ -9,25 +9,25 @@
       </name>
    </data>
 
-   <data id="entity_chat_search_welcome" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_confirm" enabled="true" agenttype="eventagent">
+   <data id="entity_chat_search_welcome" aiskill="searchingParseSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_confirm" enabled="true" agenttype="eventagent">
       <name>
          <![CDATA[Search Welcome]]>
       </name>
    </data>
 
-   <data id="entity_chat_search_parse" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_welcome" enabled="true" agenttype="eventagent" processingmessage="Understanding the Search">
+   <data id="entity_chat_search_parse" aiskill="searchingParseSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_welcome" enabled="true" agenttype="eventagent" processingmessage="Understanding the Search">
       <name>
          <![CDATA[Parse Search]]>
       </name>
    </data>
 
-   <data id="entity_chat_search_tables" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_parse" enabled="true" agenttype="eventagent" processingmessage="Searching">
+   <data id="entity_chat_search_tables" aiskill="searchingTablesSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_parse" enabled="true" agenttype="eventagent" processingmessage="Searching">
       <name>
          <![CDATA[Search Tables]]>
       </name>
    </data>
 
-   <data id="entity_chat_search_semantic" aiskill="searchingChatSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_tables" enabled="true" agenttype="eventagent" processingmessage="Searching">
+   <data id="entity_chat_search_semantic" aiskill="searchingSemanticSkill" automationscenario="entity_chat_search" runafter="entity_chat_search_tables" enabled="true" agenttype="eventagent" processingmessage="Searching">
       <name>
          <![CDATA[Semantic Search]]>
       </name>

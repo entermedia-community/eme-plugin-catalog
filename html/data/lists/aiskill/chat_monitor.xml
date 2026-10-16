@@ -328,34 +328,34 @@ Attributes set on this skill row:
 }
 ]]]></parameters>
   </data>  
-  <data id="searchingChatSkill" bean="searchingSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext"> 
-    <name> 
-      <language id="en"><![CDATA[Searching Chat]]></language>  
-      <language id="de"><![CDATA[Chat durchsuchen]]></language>
-      <language id="fr"><![CDATA[Recherche dans le chat]]></language>
-      <language id="es"><![CDATA[Buscar en el chat]]></language>
+  <data id="searchingParseSkill" bean="searchingParseSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Searching Parse]]></language>
+      <language id="de"><![CDATA[Suche analysieren]]></language>
+      <language id="fr"><![CDATA[Analyse de la recherche]]></language>
+      <language id="es"><![CDATA[Analizar búsqueda]]></language>
     </name>
     <markdowncontent><![CDATA[---
-name: searchingChatSkill
-description: Runs the conversational search flow: parses what the user wants, searches modules, and adds related semantic results.
+name: searchingParseSkill
+description: Parses the user's search request into structured search tables and keywords, or replies conversationally when it cannot.
 ---
 
-# Searching Chat
+# Searching Parse
 
-Runs the conversational search flow: parses what the user wants, searches modules, and adds related semantic results.
+Parses the user's search request into structured search tables and keywords so the following steps can run module searches and semantic matches.
 
 ## When to use
 
-- The user asks the assistant to find assets or records.
+- The `<scenarioid>_parse` step of the conversational search scenarios (`entity_chat_search`, `eme_server_search_media`).
 
 ## How it works
 
-1. Does different work depending on the automation step id, after removing the `<scenarioid>_` prefix (for example `entity_chat_search_parse` is `parse`):
-2. `welcome`: renders `chat_searching_welcome` with the search schema, then `<scenarioid>_parse`.
-3. `parse`: calls the thinking LLM (`search_parse`) to parse the request into search tables and keywords. If it cannot, replies conversationally.
-4. `tables`: renders `search_tables` and keeps the results as a message prefix, then `<scenarioid>_semantic`.
-5. `semantic`: renders `search_semantic` with matches for the keywords, then returns to `<scenarioid>_parse`.
-6. `view_related_record*`: renders related records.
+1. Takes the automation step id and removes the `<scenarioid>_` prefix (for example `entity_chat_search_parse` is `parse`); any other action throws `Function not supported`.
+2. Loads the user's message from the chatterbox record pointed to by the agent message's `replytoid` (or the `userquery` context value) and stores it as `userquery`.
+3. Calls the thinking LLM with the `search_parse` structure to break the request into tables, parameters and keywords.
+4. Builds an `AiSearch` with up to three steps (`table_name`, `parameters`, optional `foreign_table`). `all` means searching across modules; a missing target table falls back to the `modulesearch` module.
+5. Vector-searches the `aifunctionparameter` semantic table for a more specific function match (distance < .7) and, when found, applies its parent/child module to the search steps.
+6. If nothing was parsed, replies conversationally with the LLM's `friendly_response`. Otherwise sets the next automation step to `<scenarioid>_tables`.
 
 ## Inputs
 
@@ -370,11 +370,11 @@ Attributes set on this skill row:
 
 ## Outputs
 
-- `userquery`, `semanticquery`, the parsed search parameters, and rendered results
+- `userquery`, the parsed `AiSearch` parameters on the agent context, and either a conversational reply or the next step `<scenarioid>_tables`
 
 ## Implementation
 
-- Bean `searchingSkill`: `org.entermediadb.ai.skills.SearchingSkill`
+- Bean `searchingParseSkill`: `org.entermediadb.ai.skills.SearchingParseSkill`
 - Agent type: `remoteagent`
 ]]></markdowncontent>
     <parameters><![CDATA[[
@@ -387,5 +387,188 @@ Attributes set on this skill row:
 "description":"The search request text, set from the user's message"
 }
 ]]]></parameters>
-  </data> 
+  </data>
+  <data id="searchingTablesSkill" bean="searchingTablesSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Searching Tables]]></language>
+      <language id="de"><![CDATA[Tabellen durchsuchen]]></language>
+      <language id="fr"><![CDATA[Recherche dans les tables]]></language>
+      <language id="es"><![CDATA[Buscar en tablas]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: searchingTablesSkill
+description: Runs the parsed module searches and renders the results table before moving on to semantic matches.
+---
+
+# Searching Tables
+
+Runs the parsed module searches (single table, two-table join, or cross-module search) and renders the results as a table in the chat.
+
+## When to use
+
+- The `<scenarioid>_tables` step of the conversational search scenarios (`entity_chat_search`, `eme_server_search_media`).
+
+## How it works
+
+1. Takes the automation step id and removes the `<scenarioid>_` prefix; any other action throws `Function not supported`.
+2. For the `tables` action, renders the local `search_tables` template (path action `AgentModule.searchTables`), which runs freeform description queries for each parsed search step — including two-step joins and the cross-module `modulesearch` fallback with asset handling — and organizes the hits through the results manager.
+3. Keeps the rendered results as a message prefix and sets the next automation step to `<scenarioid>_semantic`.
+
+Also owns the module-facing helpers used by the render templates and admin pages:
+
+- `searchTables(WebPageRequest, AiSearch)`: executes the parsed search steps and puts `hits`/`assethits` on the request.
+- `organizeResults(...)`: totals the hits and loads them through the results manager.
+- `createPossibleFunctionParameters(log)`: builds and embeds one `aifunctionparameter` vector per module, child view and asset type (called by `AgentModule.recreateFunctions`).
+- `makeSearchSuggestions(UserProfile)`: up to five "Search for ... in ..." suggestions from the user's enabled modules (used by `AgentModule.loadSearchSuggestions`).
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- The parsed `AiSearch` parameters on the agent context, set by the parse step
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- The rendered results table as a message prefix and the next step `<scenarioid>_semantic`
+
+## Implementation
+
+- Bean `searchingTablesSkill`: `org.entermediadb.ai.skills.SearchingTablesSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+}
+]]]></parameters>
+  </data>
+  <data id="searchingSemanticSkill" bean="searchingSemanticSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Searching Semantic]]></language>
+      <language id="de"><![CDATA[Semantische Suche]]></language>
+      <language id="fr"><![CDATA[Recherche sémantique]]></language>
+      <language id="es"><![CDATA[Búsqueda semántica]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: searchingSemanticSkill
+description: Adds semantic matches for the search keywords on top of the table results, then offers related records.
+---
+
+# Searching Semantic
+
+Finds semantically related entities and assets for the parsed search keywords and renders them in the chat.
+
+## When to use
+
+- The `<scenarioid>_semantic` step of the conversational search scenarios (`entity_chat_search`, `eme_server_search_media`).
+
+## How it works
+
+1. Takes the automation step id and removes the `<scenarioid>_` prefix; any other action throws `Function not supported`.
+2. For the `semantic` action, builds a semantic query from the step keywords (or the original request with words like "search", "find", "look for" and "show me" removed).
+3. When the query is not empty, renders the local `search_semantic` template (path action `AgentModule.chatAgentSemanticSearch`), which asks the `semantictopics` semantic classifier for related entity ids per module and loads them as `semanticentities`, `semanticentityhits` and `semanticassethits`.
+4. When the query is empty, echoes the previous message prefix instead.
+5. Sets the next automation step to `view_related_records` and fires the step status complete.
+
+Also owns the module-facing helpers used by the render templates:
+
+- `semanticSearch(WebPageRequest)`: loads the semantic matches for the `semanticquery` request parameter.
+- `semanticSearchBestMatch(query, moduleId)`: single best semantic match in a module.
+- `searchRelatedEntitiesBySearchCategory(searchcategory)` and `rescanSearchCategories(log)`: keep search categories' related entities up to date.
+
+## Inputs
+
+- `agentmessage`: The agent's chatterbox reply record; its replytoid points at the user's message
+- The parsed `AiSearch` parameters on the agent context, set by the parse step
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `semanticquery`, the rendered semantic matches as a message prefix, and the next step `view_related_records`
+
+## Implementation
+
+- Bean `searchingSemanticSkill`: `org.entermediadb.ai.skills.SearchingSemanticSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"agentmessage",
+"description":"The agent's chatterbox reply record; its replytoid points at the user's message"
+}
+]]]></parameters>
+  </data>
+  <data id="searchingViewRelatedSkill" bean="searchingViewRelatedSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[View Related Records]]></language>
+      <language id="de"><![CDATA[Verwandte Datensätze anzeigen]]></language>
+      <language id="fr"><![CDATA[Afficher les enregistrements liés]]></language>
+      <language id="es"><![CDATA[Ver registros relacionados]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: searchingViewRelatedSkill
+description: Renders the related records views for an entity after a search.
+---
+
+# View Related Records
+
+Renders the related-records views (list and details) for an entity found by a search.
+
+## When to use
+
+- The `view_related_records*` steps of the conversational search scenarios, reached after the semantic step sets the next automation step to `view_related_records`.
+
+## How it works
+
+1. For any automation step id starting with `view_related_records`, renders the local template named by the step id (for example `view_related_records` → `AgentModule.loadRelatedRecords`, `view_related_record_list` → `AgentModule.loadRelatedRecordList`, `view_related_record_details` → `AgentModule.loadRecord`).
+2. Sets the rendered response as the last response and fires the step status complete. Any other action throws `Function not supported`.
+
+Also owns the module-facing helpers used by those render templates:
+
+- `getRelatedRecords(entityModuleId, entityId)`: finds non-system views whose `rendertable` contains records referencing the entity, with their names and counts.
+- `getRelatedRecordList(entityModuleId, entityId, listId)`: the related records of one list.
+- `getRecord(entityModuleId, entityId, listId, recordId)`: a single related record.
+
+## Inputs
+
+- `entityid`: Id of the entity
+- `entitymoduleid`: Module id of the entity
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- The rendered related records views as the step response
+
+## Implementation
+
+- Bean `searchingViewRelatedSkill`: `org.entermediadb.ai.skills.SearchingViewRelatedSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"entityid",
+"description":"Id of the entity"
+},
+{
+"id":"entitymoduleid",
+"description":"Module id of the entity"
+}
+]]]></parameters>
+  </data>
 </results>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- SearchingSkill strips the "eme_server_search_media_" prefix to find the action: welcome, parse, tables, semantic -->
+<!-- Each Searching* skill strips the "eme_server_search_media_" prefix to find its action (parse, tables, semantic) -->
 <records>
 
    <data id="eme_server_search_media_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_search_media" enabled="true" processingmessage="Loading">
@@ -9,27 +9,27 @@
       </name>
    </data>
 
-   <data id="eme_server_search_media_welcome" aiskill="searchingChatSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_confirm" enabled="true" agenttype="eventagent">
-      <name>
-         <![CDATA[Search Welcome]]>
-      </name>
-   </data>
-
-   <data id="eme_server_search_media_parse" aiskill="searchingChatSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_welcome" enabled="true" agenttype="eventagent" processingmessage="Understanding the Search">
+   <data id="eme_server_search_media_parse" aiskill="searchingParseSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_confirm" enabled="true" agenttype="eventagent" processingmessage="Understanding the Search">
       <name>
          <![CDATA[Parse Search]]>
       </name>
    </data>
 
-   <data id="eme_server_search_media_tables" aiskill="searchingChatSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_parse" enabled="true" agenttype="eventagent" processingmessage="Searching">
+   <data id="eme_server_search_media_tables" aiskill="searchingTablesSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_parse" enabled="true" agenttype="eventagent" processingmessage="Searching">
       <name>
          <![CDATA[Search Tables]]>
       </name>
    </data>
 
-   <data id="eme_server_search_media_semantic" aiskill="searchingChatSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_tables" enabled="true" agenttype="eventagent" processingmessage="Searching">
+   <data id="eme_server_search_media_semantic" aiskill="searchingSemanticSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_tables" enabled="true" agenttype="eventagent" processingmessage="Searching">
       <name>
          <![CDATA[Semantic Search]]>
+      </name>
+   </data>
+
+   <data id="eme_server_search_media_view_related_records" aiskill="searchingViewRelatedSkill" automationscenario="eme_server_search_media" runafter="eme_server_search_media_semantic" enabled="true" agenttype="eventagent" processingmessage="Searching Related Records">
+      <name>
+         <![CDATA[View Related Records]]>
       </name>
    </data>
 
