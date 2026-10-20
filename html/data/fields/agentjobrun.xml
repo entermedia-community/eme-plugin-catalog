@@ -25,15 +25,18 @@
     </name>
   </property>
 
-  <property id="status" index="true" editable="true" datatype="list" stored="true" listid="jobstatus">
+  <property id="status" index="true" editable="true" datatype="list" stored="true"
+    listid="jobstatus">
     <name>
       <language id="en">Status</language>
     </name>
   </property>
 
-  <property id="markdowncontent" index="true" keyword="true" editable="true" viewtype="markdown" stored="true" indextype="not_analyzed">
+  <property id="agentlogs" index="true" keyword="true" editable="true" multiple="true"
+    stored="true" indextype="not_analyzed">
     <name>
-      <language id="en"><![CDATA[Markdown Content]]></language>
+      <language id="en">Agent Logs</language>
     </name>
   </property>
+
 </properties>
