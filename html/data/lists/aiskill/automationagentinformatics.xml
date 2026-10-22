@@ -183,7 +183,7 @@ description: Transcribes the audio of video and audio assets into timestamped te
 
 # Auto Transcribe
 
-Transcribes the audio of video and audio assets into timestamped text.
+Transcribes the audio of video and audio assets into timestamped text, using the `aiserver` row with `aiservertype="transcribe"`.
 
 ## When to use
 
@@ -191,8 +191,9 @@ Transcribes the audio of video and audio assets into timestamped text.
 
 ## How it works
 
-1. Sends `assetsToProcess` to TranscriberManager with this row's settings.
-2. Drops assets flagged `llmerror` from the list, so later steps skip them, then runs the children.
+1. Sends `assetsToProcess` to TranscriberManager. Only video and audio assets with a `length` are transcribed.
+2. The audio is cut into 5-minute MP3 chunks and each one is POSTed (multipart field `file`) to `<serverroot>/transcribe`.
+3. Drops assets flagged `llmerror` (no length, or the transcription failed) from the list, so later steps skip them, then runs the children.
 
 ## Inputs
 
@@ -206,7 +207,7 @@ Attributes set on this skill row:
 
 ## Outputs
 
-- Transcripts stored on the assets. `assetsToProcess` is narrowed to the successful assets
+- Timestamped caption cues stored in the `videotrack` table (one row per asset, `transcribestatus` = `complete` or `error`). `assetsToProcess` is narrowed to the successful assets
 
 ## Implementation
 
