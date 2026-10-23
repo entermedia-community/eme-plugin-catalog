@@ -8,7 +8,8 @@
 	<property id="url" note="Path to saved files"/>
 	
 	<property id="username" />
-	<property id="password" note="Optional, defaults to user password" />
+	<property id="password" />
+	<property id="apppassword" note="EnterMedia server application password (emeapp.KEYID.SECRET)" />
 	<property id="convertpreset" viewtype="multiselect"/>
 
 	<property id="onimport" />
