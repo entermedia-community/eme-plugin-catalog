@@ -16,7 +16,6 @@
 	<property id="lastName" index="true" keyword="true" editable="true" stored="true">Last Name</property>
 	<property id="email" index="true" keyword="true" editable="true" stored="true" indextype="not_analyzed">Email</property>
 	<property id="enabled" index="true" editable="true" datatype="boolean" stored="true">Enabled</property>
-	<property id="password" index="true" stored="true">Password</property>
 	<property id="failedlogincount" editable="true" datatype="number">Failed login attempts</property>
 	<property id="showeditor" editable="true" datatype="boolean" stored="true">Enable HTML editing</property>
 	<property id="notes" index="true" editable="true" stored="true">Notes</property>

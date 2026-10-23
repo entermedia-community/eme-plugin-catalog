@@ -3,7 +3,7 @@
 <endpoints> 
     
   <data id="createuser" name="Create New User" url="/${applicationid}/services/settings/users/create" docsection="1420730727080" caption="Create new user" httpmethod="POST"> 
-    <samplerequest><![CDATA[{ "id":"testuser", "password":"changeme"}]]></samplerequest> 
+    <samplerequest><![CDATA[{ "id":"testuser" }]]></samplerequest> 
   </data>  
     <data id="usersearch" name="Search for Users" httpmethod="POST" url="/${applicationid}/services/settings/users/search" docsection="1420730727080"> 
     <samplerequest><![CDATA[
@@ -42,9 +42,6 @@
   </endpoint>  
   <endpoint id="createtempuserwithcode" name="Send New User Email" url="/${applicationid}/services/authentication/sendnewuseremail" docsection="1420730727080" httpmethod="POST" caption="Creates a temp user and sends them a code"> 
     <samplerequest><![CDATA[{   "email": "support@openedit.org",   "firstName": "Test",  "lastName":"Smith" }]]></samplerequest>
-  </endpoint>  
-  <endpoint id="userlogin" name="User Login" url="/${applicationid}/services/authentication/login" docsection="1420730727080" httpmethod="POST" caption="Saves a cookie so the user session remains open"> 
-    <samplerequest><![CDATA[{   "id": "admin",   "password": "admin" }]]></samplerequest>User Login
   </endpoint>  
   <endpoint id="userloginwithcode" name="User Login With Temp Code" url="/${applicationid}/services/authentication/login" docsection="1420730727080" httpmethod="POST" caption="User logs in with a temporary code"> 
     <samplerequest><![CDATA[{   "email": "support@openedit.org",   "templogincode": "123456" }]]></samplerequest>User Login

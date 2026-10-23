@@ -5,7 +5,6 @@
   <property id="profile"  menulevel="toplevel" moduleid="user" path="/views/myaccount/index.html" ordering="10">Profile</property>
   <property id="accountprefences"  menulevel="toplevel" moduleid="user" path="/views/myaccount/preferences/index.html" ordering="11">Preferences</property>
 
-  <property id="setpassword" menulevel="toplevel" moduleid="user" path="/views/myaccount/setuserpassword.html" ordering="20">Change Password</property>
   <property id="orders" menulevel="toplevel" moduleid="user" path="/views/myaccount/orders/index.html" ordering="30">Order History</property>
 </properties>
 
