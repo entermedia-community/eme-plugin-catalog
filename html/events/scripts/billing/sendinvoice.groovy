@@ -13,57 +13,65 @@ public void init() {
 	Searcher invoiceSearcher = mediaArchive .getSearcher("collectiveinvoice");
 	String invoiceid = context.getRequestParameter("invoiceid");
 	if(invoiceid!=null) {
-		log.info("Individual Invoice: ${invoiceid}");
+		//Sending individual invoice
+		
 		Data invoice = mediaArchive.getBean("invoiceManager").getInvoiceById(invoiceid);
 		if(invoice != null) {
-
-			if(invoice.get("paymentstatus").equals("error")) {
-				//notifiy about error?
-				
+			log.info("Sending Individual Invoice: ${invoiceid}");
+			if(invoice.get("invoicesentstatus").equals("sendinvoice")) {
+				sendInvoiceNotifications(mediaArchive, invoiceSearcher, invoice);
+				return;
 			}
-			else if (!invoice.get("paymentstatus").equals("paid")) {
-				invoiceContactIterate(mediaArchive, invoiceSearcher, invoice, "notificationsent");
-				invoice.setValue("paymentstatus", "invoiced");
-				invoice.setValue("notificationsent", "true")
+			else  {
+				//This is a re-try after fixing the error
+				log.info("Retrying Invoice: ${invoiceid}");
+				invoice.setValue("invoicesentstatus", "sendinvoice");
+				invoice.setValue("invoicesentstatusreason", null);
 				invoiceSearcher.saveData(invoice);
-		
+				sendInvoiceNotifications(mediaArchive, invoiceSearcher, invoice);
+				return;
 			}
-			else if(invoice.get("paymentstatus").equals("paid") && !Boolean.valueOf(invoice.get("notificationpaidsent"))) {
-				log.info("Sending Paid Notification for ${invoiceid}");
-				invoiceContactIterate(mediaArchive, invoiceSearcher, invoice, "notificationpaidsent");
-				invoice.setValue("notificationpaidsent", "true")
-				invoiceSearcher.saveData(invoice);
-			}
+		}
+		else
+		{
+			log.error("Invoice not found: ${invoiceid}");
 		}
 	}
 	else {
-		log.info("Sending Pending & Recurring Invoices...");
-		// Notifications
-		sendInvoiceNotifications(mediaArchive, invoiceSearcher);
+		//Scheduled event
+		findPendingInvoices(mediaArchive, invoiceSearcher);
 		//sendInvoiceOverdueNotifications(mediaArchive, invoiceSearcher);  //Need to adjust Due Calculation
 	}
 	
 }
 
-private void sendInvoiceNotifications(MediaArchive mediaArchive, Searcher invoiceSearcher) {
+private void findPendingInvoices(MediaArchive mediaArchive, Searcher invoiceSearcher) {
 	Collection pendingNotificationInvoices = invoiceSearcher.query()
-			.exact("notificationsent","false")
-			.exact("paymentstatus","sendinvoice").search();
-
+			.orgroup("invoicesentstatus","sendinvoice error").search();
 	
 	if (pendingNotificationInvoices.size()>0)
 	{
-		log.info("Sending Notification for " + pendingNotificationInvoices.size() + " invoices");
+		log.info("Sending " + pendingNotificationInvoices.size() + " invoices");
 		for (Data invoice: pendingNotificationInvoices)
 		{
-			invoiceContactIterate(mediaArchive, invoiceSearcher, invoice, "notificationsent");
-
-			//Notify project Admins about invoice
-			invoiceNotifyProject(mediaArchive, invoiceSearcher, invoice, "");
+			sendInvoiceNotifications(mediaArchive, invoiceSearcher, invoice);
 		}
 		
 		
 	}
+}
+
+
+private void sendInvoiceNotifications(MediaArchive mediaArchive, Searcher invoiceSearcher, Data invoice) {
+	//Send notifications to Contacts
+	invoiceContactIterate(mediaArchive, invoiceSearcher, invoice, "notificationsent");
+
+	//Notify project Admins about invoice
+	if (!invoice.get("invoicesentstatus").equals("error")) 
+	{
+		invoiceNotifyProject(mediaArchive, invoiceSearcher, invoice, "");
+	}
+	//handle send error email to team members.
 }
 
 private void sendInvoiceOverdueNotifications(MediaArchive mediaArchive, Searcher invoiceSearcher) {
@@ -114,65 +122,81 @@ private void invoiceContactIterate(MediaArchive mediaArchive, Searcher invoiceSe
 	{
 		invoice.setValue(iteratorType, "true");
 		invoiceSearcher.saveData(invoice);
-		
+		log.error("Collection not found: " + collectionid)
+		return;
 	}
-	
-	invoice.setValue("paymentstatusreason", null);
+	//reset invoice error status
+	invoice.setValue("invoicesentstatus", null);
 	
 	String emails = invoice.getValue("sentto");
 	if( emails == null)
-	{
-		log.info("Error no email address to send invoice. Invoice: ${invoice.getId()} ${invoice.getName()}" );
-		invoice.setValue("paymentstatus", "error");
-		invoice.setValue("paymentstatusreason", "Empty Send To");
+	{ 
+		log.info("Error no email address to send invoice. Project: ${librarycol.getName()} Invoice: #${invoice.getValue("invoicenumber")}" );
+		invoice.setValue("invoicesentstatus", "error");
+		invoice.setValue("invoicesentstatusreason", "Empty Send To");
 		invoiceSearcher.saveData(invoice);
 		return;
 	}
-	List<String> emaillist = Arrays.asList(emails.split(","));
-
+	List<String> emaillist = emails.split(",").collect{ it?.trim() }.findAll{ it != null && it != "" } as List<String>;
+	
 	Boolean sent = false;
 	if (emaillist.size()>0) 
 	{
-		//log.info("Sending email to  "+emaillist.size()+" : "+librarycol+ " ("+collectionid+")");
+		StringBuffer errorEmails = new StringBuffer();
 		for (String email : emaillist)
 		 {
 			if (email != null) {
 				if (email) {
-					sendinvoiceEmail(mediaArchive, email, invoice, librarycol, iteratorType);
-					sent = true; //needs better error handling
+					try
+					{
+						sendinvoiceEmail(mediaArchive, email, invoice, librarycol, iteratorType);
+						sent = true; //needs better error handling
+						
+					}
+					catch(Throwable ex)
+					{
+						errorEmails.append(email + " " + ex.getMessage());
+					}
 				}
 			}
 		}
+		if (!errorEmails.isEmpty()) {
+			log.error("Error sending invoice to addresses: ${errorEmails}");
+		}
 		if (sent) {
-			//send Copy to bookkeeper@entermediadb.org
-			String ccinvoices = mediaArchive.getCatalogSettingValue("invoice_cc_email");
-			if (ccinvoices != null) {
-				sendinvoiceEmail(mediaArchive, ccinvoices, invoice, librarycol, iteratorType);
-			}
 			
 			Calendar today = Calendar.getInstance();
 			invoice.setValue("sentto", emails);
 			invoice.setValue("sentdate", today.getTime());
+			invoice.setValue("invoicesentstatus", "sent");
 			invoice.setValue(iteratorType, "true");
+
+			//send Copy to bookkeeper@entermediadb.org
+			String ccinvoices = mediaArchive.getCatalogSettingValue("invoice_cc_email");
+			if (ccinvoices != null) {
+				ccinvoices = ccinvoices.trim();
+				if(!emaillist.contains(ccinvoices)) {
+					log.info("Sending copy of invoice to invoice_cc_email: "+ccinvoices + " List: " + emaillist);
+					sendinvoiceEmail(mediaArchive, ccinvoices, invoice, librarycol, iteratorType);
+				}
+			}
 			
-			if (!invoice.get("paymentstatus").equals("paid")) { //TODO: Seems weird. Should this be if invoice.get("paymentstatus") == null 
-				//mark as invoiced
-				invoice.setValue("paymentstatus", "invoiced");
+			if (!invoice.get("paymentstatus").equals("paid")) { 
+				invoice.setValue("paymentstatus", "pending"); //Ready to Pay
 			}
 			
 		}
 		else {
-			invoice.setValue("paymentstatus", "error");
-			invoice.setValue("paymentstatusreason", "Send email error");
-			log.info("Error sending invoice to addresses: ${emails}");
+			invoice.setValue("invoicesentstatus", "error");
+			invoice.setValue("invoicesentstatusreason", "Send email error");
 		}
 		invoiceSearcher.saveData(invoice);
 		
-		}
-		else 
-		{
-			log.info("No email addresses to send Invoice for: "+librarycol+ " ("+collectionid+")");
-		}
+	}
+	else 
+	{
+		log.info("No email addresses to send Invoice for: "+librarycol+ " ("+collectionid+")");
+	}
 }
 
 
@@ -192,13 +216,13 @@ private void invoiceNotifyProject(MediaArchive mediaArchive, Searcher invoiceSea
 	if( emails == null)
 	{
 		log.info("Error sending invoice to email to Project Team, missing contactemail. Invoice: ${invoice.getId()} Client: ${invoice.getName()} invoiceNotifyProject" );
-		invoice.setValue("paymentstatus", "error");
-		invoice.setValue("paymentstatusreason", "No contact email set on project");
-		invoiceSearcher.saveData(invoice);
+		//invoice.setValue("invoicesentstatus", "error");
+		//invoice.setValue("paymentstatusreason", "No contact email set on project");
+		//invoiceSearcher.saveData(invoice);
 		return;
 	}
 	
-	List<String> emaillist = Arrays.asList(emails.split(","));
+	List<String> emaillist = emails.split(",").collect{ it?.trim() }.findAll{ it != null && it != "" } as List<String>;
 
 	StringBuffer errorEmails = new StringBuffer();
 	if (emaillist.size()>0)
@@ -222,9 +246,9 @@ private void invoiceNotifyProject(MediaArchive mediaArchive, Searcher invoiceSea
 			}
 		}
 		if (!errorEmails.isEmpty()) {
-			invoice.setValue("paymentstatus", "error");
-			invoice.setValue("paymentstatusreason", "Error sending email to: " +errorEmails);
-			log.info("Error sending invoice to addresses: ${errorEmails}");
+			//invoice.setValue("paymentstatus", "error");
+			//invoice.setValue("paymentstatusreason", "Error sending email to: " +errorEmails);
+			log.info("Error sending invoice to Team members, addresses: ${errorEmails}");
 		}
 		invoiceSearcher.saveData(invoice);
 		
@@ -243,27 +267,18 @@ private void sendEmail(MediaArchive mediaArchive, String contact, Data invoice, 
 */
 private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data invoice, Data librarycol, String messagetype) {
 	String siteid = context.findValue("siteid");
-	
-	
+
 	//String appid = mediaArchive.getCatalogSettingValue("events_billing_notify_invoice_appid");
 
-	Data community = mediaArchive.getData("communitytag", librarycol.get("communitytag"));
+	Data community = mediaArchive.getData("communitytagcategory", librarycol.get("communitytagcategory"));
 	if (community == null) {
 		log.error("Missing Community Tag for Project: " + librarycol);
 		return;
 	}
 	
 	String communitypath = community.get("templatepath");
-	String template;
-	if (communitypath != null)
-	{
-		template = siteid + communitypath + "/theme/emails/";
-	}
-	else
-	{
-		template = siteid + "/profile/theme/emails/";
-	}
 	
+	String template = siteid + communitypath + "/theme/emails/";
 	
 	String actionUrl = community.get("externaldomain") + "/" + librarycol.get("urlname");
 	
@@ -288,7 +303,6 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 		case "notificationsent":
 			actionUrl = actionUrl + "/services/paynow.html?invoiceid=" + invoice.getValue("id") + "&collectionid=" + collectionid;
 			actionUrl = actionUrl + "&contactemail="+contact;
-			
 
 			subject = "[${project}] Invoice #${invoicenumber}";
 			
@@ -297,7 +311,7 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 					subject = "[${project}] " + invoice.getName();
 				}
 				else {
-					subject = "[${project}] ${invoicemonth} Invoice";
+					subject = "[${project}] Invoice #${invoicenumber}";
 				}
 			}
 
@@ -358,7 +372,10 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 		}
 		break;
 	case "notifyprojectadmins":
-		subject = "Invoice generated at " + librarycol.getName();
+		actionUrl = actionUrl + "/services/paynow.html?invoiceid=" + invoice.getValue("id") + "&collectionid=" + collectionid;
+		actionUrl = actionUrl + "&contactemail="+contact;
+
+		subject = "A new invoice was generated at " + librarycol.getName();
 		template = template + "invoice-to-notify-team.html";
 		
 		invoiceemailheader = librarycol.get("invoicepaidemail");
@@ -422,8 +439,6 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 	objects.put("community" , community);
 	objects.put("communitylink" , community.get("externaldomain"));
 	objects.put("communityhome","/" + siteid + community.get("templatepath"));
-
-	 
 	
 	//recurring
 	objects.put("invoicemonth", month);
@@ -433,6 +448,13 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 		objects.put("startdate",  dates); //legacy
 		objects.put("duedate",  dates);
 	}
+
+	if(invoice.getDate("nextbillon") != null) {
+		String daten = DateStorageUtil.getStorageUtil().formatDateObj(invoice.getDate("nextbillon"), "dd/MM/YY");
+		objects.put("nextbillon", daten);
+	}
+
+	//May use nextbillon
 	if(invoice.getDate("enddate") != null) {
 		String datee = DateStorageUtil.getStorageUtil().formatDateObj(invoice.getDate("enddate"), "dd/MM/YY"); 
 		objects.put("enddate", datee);
@@ -469,6 +491,7 @@ private void sendinvoiceEmail(MediaArchive mediaArchive, String contact, Data in
 	objects.put("printurl", printurl);
 	
 	templateEmail.send(objects);
+	
 	log.info(librarycol.getName() + " - Invoice #"+ invoice.getValue("invoicenumber")+" - Sent to: "+contact + " Template: " + template);
 }
 
