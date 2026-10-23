@@ -17,7 +17,7 @@ public void init()
 
 	HttpSharedConnection connection = new HttpSharedConnection();
 	String baseurl = "https://openinstitute.org/site/mediadb";
-	String entermediakey = "1106md5420940dd427e0a60de560b00f00de530d2380b93208d";
+	String apppassword = context.findValue("apppassword"); // application password for the remote server (emeapp.KEYID.SECRET)
 
 	String exportsearchtype = "librarycollection";		
 	
@@ -58,7 +58,7 @@ def search = '''{
   //local
 	  /*
   baseurl = "http://localhost:8080/finder/mediadb"
-  entermediakey = "adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc"
+  apppassword = "emeapp.KEYID.SECRET"
   search = '''{
 		"page": "1",
 		"hitsperpage": "2",
@@ -77,8 +77,7 @@ def search = '''{
 	JSONParser json_parser = new JSONParser();
 	JSONObject searchparams =json_parser.parse(search); 
 	
-	connection.addSharedHeader("X-tokentype", "entermedia")
-	connection.addSharedHeader("X-token", entermediakey)
+	connection.addSharedHeader("Authorization", "Bearer " + apppassword)
 	
 	String url = baseurl + "/services/lists/export/" + exportsearchtype
 	

@@ -8,7 +8,7 @@
     <endpoint id="createteamaccount" name="Create User With Cloud Key" url="/${applicationid}/services/authentication/startmediafinder.json" httpmethod="POST" docsection="finder"> 
 <samplerequest><![CDATA[
     	{
-         	"entermediacloudkey": "900040md5425b0ed4f250a10957c08f0a00e419040e608d0f36etstampc7QVeqTVDs6Fix5RRyfX+A==", "collectionid": "AXh_OOIMmBy4pj_YVPzo"   
+         	"entermediacloudkey": "emeapp.KEYID.SECRET", "collectionid": "AXh_OOIMmBy4pj_YVPzo"   
 	    } 
 	      ]]></samplerequest> 
 

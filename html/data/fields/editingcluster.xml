@@ -25,13 +25,10 @@
       <language id="fr"><![CDATA[Base URL]]></language> 
     </name> 
   </property>  
-  <property id="entermediakey" index="true" editable="true" stored="true"> 
-    <name> 
-      <language id="de"><![CDATA[entermediakey]]></language>  
-      <language id="en"><![CDATA[entermediakey]]></language>  
-      <language id="es"><![CDATA[entermediakey]]></language>  
-      <language id="fr"><![CDATA[entermediakey]]></language> 
-    </name> 
+  <property id="apppassword" index="true" editable="true" stored="true" viewtype="password" indextype="not_analyzed">
+    <name>
+      <language id="en"><![CDATA[Application Password]]></language>
+    </name>
   </property>  
   <property id="clustername" index="true" editable="true" stored="true"> 
     <name> 

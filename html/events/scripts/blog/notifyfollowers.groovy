@@ -138,8 +138,10 @@ public void notifyfollowers(String userpostid, String collectionid)
 		
 		templatemail.setSubject(emailSubject); //TODO: Translate
 		Map objects = new HashMap();
-		String entermediakey = archive.userManager.getEnterMediaKey(user);
-		objects.put("entermediakey",entermediakey);
+		// One-time login link (single use, one hour) instead of embedding a key in the email
+		String loginlinktoken = archive.userManager.createNewTempLoginLink(user.getId(), user.getEmail(), user.getFirstName(), user.getLastName(), user.getScreenName());
+		objects.put("loginlinktoken", loginlinktoken);
+		objects.put("loginemail", java.net.URLEncoder.encode(user.getEmail(), "UTF-8"));
 		objects.put("teamuser",user);
 		objects.put("librarycol", collection);
 		objects.put("apphome", context.getPageValue("apphome"));
