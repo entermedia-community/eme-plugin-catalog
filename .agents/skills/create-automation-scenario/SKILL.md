@@ -84,7 +84,7 @@ Positions also change when someone drags nodes in the map editor (it saves throu
 dragged positions after the reload in Step 5. Check what is in the database first:
 
 ```bash
-AUTH='Authorization: Bearer adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc'
+AUTH="Authorization: Bearer $(bin/refreshtoken.sh | tail -n1)"
 curl -s -H "$AUTH" -X POST -H 'Content-Type: application/json' \
   -d '{"page":"1","hitsperpage":"200","query":{"terms":[{"field":"id","operator":"matches","value":"*"}]}}' \
   http://localhost:8080/site/mediadb/services/lists/search/automationposition
@@ -156,7 +156,7 @@ These are list tables, so edits do nothing until you reset each changed table an
 label/position maps are also cached (`automationscenariopositionmap`, `automationlabelsmap`):
 
 ```bash
-AUTH='Authorization: Bearer adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc'
+AUTH="Authorization: Bearer $(bin/refreshtoken.sh | tail -n1)"
 for t in automationscenario automationposition automationstep automationlabel; do
   curl -s -o /dev/null -H "$AUTH" "http://localhost:8080/site/find/views/settings/lists/datamanager/list/restoredata.html?searchtype=$t&oemaxlevel=1"
 done
