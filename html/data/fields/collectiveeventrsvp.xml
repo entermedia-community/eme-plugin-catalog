@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties beanname="dataSearcher">
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">
+    <name>
+      <language id="en"><![CDATA[Id]]></language>
+    </name>
+  </property>
+  <property id="eventid" index="true" editable="false" datatype="list" stored="true" listid="collectiveevent">
+    <name>
+      <language id="en"><![CDATA[Event]]></language>
+    </name>
+  </property>
+  <property id="rsvpuser" index="true" editable="false" datatype="list" stored="true" listid="user">
+    <name>
+      <language id="en"><![CDATA[User]]></language>
+    </name>
+  </property>
+  <property id="rsvpstatus" index="true" editable="true" datatype="list" stored="true" listid="collectiveeventrsvpstatus">
+    <name>
+      <language id="en"><![CDATA[Response]]></language>
+    </name>
+  </property>
+  <property id="rsvpdate" index="true" sortable="true" editable="false" datatype="date" stored="true">
+    <name>
+      <language id="en"><![CDATA[Responded]]></language>
+    </name>
+  </property>
+</properties>

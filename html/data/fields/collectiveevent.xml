@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher">
-
-
-
+  <property id="id" index="true" editable="true" stored="true" internalfield="true">
+    <name>
+      <language id="en"><![CDATA[Id]]></language>
+    </name>
+  </property>
+  <property id="name" index="true" editable="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[Name]]></language>
+    </name>
+  </property>
+  <property id="eventdescription" index="true" editable="true" viewtype="textarea" stored="true">
+    <name>
+      <language id="en"><![CDATA[Description]]></language>
+    </name>
+  </property>
+  <property id="startdate" index="true" sortable="true" editable="true" datatype="date" stored="true">
+    <name>
+      <language id="en"><![CDATA[Start]]></language>
+    </name>
+  </property>
+  <property id="enddate" index="true" sortable="true" editable="true" datatype="date" stored="true">
+    <name>
+      <language id="en"><![CDATA[End]]></language>
+    </name>
+  </property>
+  <property id="eventlocation" index="true" editable="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[Location]]></language>
+    </name>
+  </property>
+  <property id="eventimageurl" index="true" editable="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[Cover Image URL]]></language>
+    </name>
+  </property>
+  <property id="eventhost" index="true" editable="true" datatype="list" stored="true" listid="user">
+    <name>
+      <language id="en"><![CDATA[Host]]></language>
+    </name>
+  </property>
+  <property id="createddate" index="true" sortable="true" editable="false" datatype="date" stored="true">
+    <name>
+      <language id="en"><![CDATA[Created]]></language>
+    </name>
+  </property>
 </properties>
