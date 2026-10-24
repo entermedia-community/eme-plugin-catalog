@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<records>
+
+   <!-- Drafts the event from the chat and asks the user to confirm or edit it -->
+   <data id="entity_chat_create_event_confirm" aiskill="chatGuessEventSkill" automationscenario="entity_chat_create_event" enabled="true" agenttype="eventagent" processingmessage="Reading your request">
+      <name>
+         <![CDATA[Draft Event]]>
+      </name>
+   </data>
+
+   <data id="entity_chat_create_event_create" aiskill="chatCreateEventSkill" automationscenario="entity_chat_create_event" runafter="entity_chat_create_event_confirm" enabled="true" agenttype="eventagent" processingmessage="Creating Event">
+      <name>
+         <![CDATA[Create Event]]>
+      </name>
+   </data>
+
+</records>

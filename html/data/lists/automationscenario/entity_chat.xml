@@ -62,4 +62,12 @@
     <markdowncontent><![CDATA[Image creation based on user prompts.]]></markdowncontent>
   </data>
 
+  <data id="entity_chat_create_event" ordering="56" scenarioicon="calendar-event" enabled="true" isvisible="true" connectedtop="entity_chat" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Create Event]]></language>
+    </name>
+    <longcaption><![CDATA[Good for creating a public event by describing it, like "a potluck at the park next Friday at 6pm".]]></longcaption>
+    <markdowncontent><![CDATA[Reads the request, drafts the event (name, start, end, location, description) and creates it once the user confirms. The user becomes the host.]]></markdowncontent>
+  </data>
+
 </records>

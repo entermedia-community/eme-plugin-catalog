@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<results>
+
+<data id="chatGuessEventSkill" bean="chatGuessEventSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Draft Event]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatGuessEventSkill
+description: Drafts an event from what the user asked for in chat and asks them to confirm it.
+---
+
+# Draft Event
+
+Drafts an event from what the user asked for in chat and asks them to confirm it.
+
+## When to use
+
+- The confirmation step of `entity_chat_create_event`.
+
+## How it works
+
+1. Calls the `entity_chat_guess_event` tools function on the thinking LLM with `channelchathistory` and the current date.
+2. Stores the draft as `suggestedeventname`, `suggestedeventstart`, `suggestedeventend`, `suggestedeventlocation` and `suggestedeventdescription`.
+3. Renders `entity_chat_create_event_confirm`, an editable form with a Create Event button. It does not run the next step; the button runs `entity_chat_create_event_create`.
+
+## Inputs
+
+- `channelchathistory`: The recent messages in the channel
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `suggestedeventname`, `suggestedeventstart`, `suggestedeventend`, `suggestedeventlocation`, `suggestedeventdescription`
+
+## Implementation
+
+- Bean `chatGuessEventSkill`: `org.entermediadb.ai.skills.ChatGuessEventSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"channelchathistory",
+"description":"The recent messages in the channel"
+}
+]]]></parameters>
+  </data>
+
+<data id="chatCreateEventSkill" bean="chatCreateEventSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Create Event]]></language>
+    </name>
+    <markdowncontent><![CDATA[---
+name: chatCreateEventSkill
+description: Creates the public event the user confirmed in chat, with the user as host.
+---
+
+# Create Event
+
+Creates the public event the user confirmed in chat, with the user as host.
+
+## When to use
+
+- After `chatGuessEventSkill` in `entity_chat_create_event`.
+
+## How it works
+
+1. Reads `eventname`, `eventstart`, `eventend`, `eventlocation` and `eventdescription` posted by the Create Event button on `entity_chat_create_event_confirm`. Dates are `yyyy-MM-dd'T'HH:mm` in the server's time zone, as a datetime-local input posts them.
+2. Creates a `collectiveevent` hosted by the user and marks the user as going (`collectiveeventrsvp`).
+3. Renders `entity_chat_event_created`. Without a name, a valid start, or with an end before the start, nothing is created and the error is logged.
+
+## Inputs
+
+- `eventname`, `eventstart`, `eventend`, `eventlocation`, `eventdescription`: The confirmed event
+
+## Configuration
+
+Attributes set on this skill row:
+
+- `contextbean`: `chatMessageContext`
+
+## Outputs
+
+- `event`: the new collectiveevent record
+
+## Implementation
+
+- Bean `chatCreateEventSkill`: `org.entermediadb.ai.skills.ChatCreateEventSkill`
+- Agent type: `remoteagent`
+]]></markdowncontent>
+    <parameters><![CDATA[[
+{
+"id":"eventname",
+"description":"The event name posted by the Create Event button"
+},
+{
+"id":"eventstart",
+"description":"The event start as yyyy-MM-dd'T'HH:mm"
+},
+{
+"id":"eventend",
+"description":"The event end as yyyy-MM-dd'T'HH:mm, optional"
+},
+{
+"id":"eventlocation",
+"description":"Where the event is, optional"
+},
+{
+"id":"eventdescription",
+"description":"What the event is about, optional"
+}
+]]]></parameters>
+  </data>
+
+</results>

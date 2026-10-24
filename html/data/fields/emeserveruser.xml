@@ -37,6 +37,12 @@
     </name>
   </property>
 
+  <property id="serverowner" index="true" filter="false" keyword="false" editable="true" datatype="boolean" stored="true">
+    <name>
+      <language id="en"><![CDATA[Server Owner]]></language>
+    </name>
+  </property>
+
   <property id="lastnotification" index="true" stored="true">
     <name>
       <language id="de"><![CDATA[Letzte Benachrichtigung]]></language>
