@@ -2573,58 +2573,6 @@ Attributes set on this skill row:
     <parameters><![CDATA[[
 ]]]></parameters>
   </data>  
-  <data id="librarycollection_syncalfred" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/syncalfred"> 
-    <name> 
-      <language id="en"><![CDATA[Librarycollection: Download and sync collections]]></language>  
-      <language id="de"><![CDATA[Bibliothekssammlung: Sammlungen herunterladen und synchronisieren]]></language>
-      <language id="fr"><![CDATA[Collection de bibliothèque : télécharger et synchroniser les collections]]></language>
-      <language id="es"><![CDATA[Colección de biblioteca: descarga y sincronización de colecciones]]></language>
-    </name>
-    <markdowncontent><![CDATA[---
-name: librarycollection_syncalfred
-description: Runs the Download and sync collections path event (librarycollection/syncalfred).
----
-
-# Librarycollection: Download and sync collections
-
-Runs the **Download and sync collections** path event (`librarycollection/syncalfred`).
-
-## When to use
-
-- A scenario step should run the "Download and sync collections" event and wait for it to finish.
-
-## How it works
-
-1. Loads `events/librarycollection/syncalfred.xconf`.
-2. Runs the Groovy script `events/scripts/librarycollection/importcollections.groovy`.
-3. Runs in the current thread with a copy of `webpagerequest` and the agent context as `currentagentcontext`, then runs the child steps.
-
-## Inputs
-
-- `webpagerequest`: The web request whose parameters and user are passed to the event
-
-## Configuration
-
-Attributes set on this skill row:
-
-- `runoperation`: `librarycollection/syncalfred`
-
-## Outputs
-
-- Whatever the event's actions produce
-
-## Implementation
-
-- Bean `runEventSkill`: `org.entermediadb.ai.skills.RunEventSkill`
-- Agent type: `eventagent`
-]]></markdowncontent>
-    <parameters><![CDATA[[
-{
-"id":"webpagerequest",
-"description":"The web request whose parameters and user are passed to the event"
-}
-]]]></parameters>
-  </data>  
   <data id="librarycollection_rejected" bean="runEventSkill" agenttype="eventagent" folder="librarycollection" runoperation="librarycollection/rejected"> 
     <name> 
       <language id="en"><![CDATA[Librarycollection: Send Asset Rejection Notifications]]></language>  

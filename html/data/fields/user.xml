@@ -21,7 +21,7 @@
 	<property id="notes" index="true" editable="true" stored="true">Notes</property>
 
 	<property id="groups" index="true" editable="false" viewtype="multiselect" datatype="list" stored="true" listid="group">Groups</property>
-	<property id="firebasepassword" index="true" editable="true" stored="true">Firebase Password</property>
+	<property id="firebasepassword" viewtype="password" index="true" editable="true" stored="true">Firebase Password</property>
 
 
 </properties>
