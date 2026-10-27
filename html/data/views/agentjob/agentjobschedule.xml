@@ -1,0 +1,11 @@
+<properties>
+
+  <property id="status" />
+
+  <property id="repeatperiod" />
+  <property id="repeattime" />
+  <property id="startdate" />
+
+  <property id="expirationdate" />
+  
+</properties>
