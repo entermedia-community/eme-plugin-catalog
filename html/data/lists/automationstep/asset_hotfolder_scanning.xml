@@ -1,14 +1,9 @@
 <records>
-
-
-  <data id="asset_holfoder_scanning_start" aiskill="handleWebEventSkill" runoperation="importing.importfolders" automationscenario="asset_hotfolder_scanning" enabled="true">
-    <name>
-      <![CDATA[Start Hotfolder Scan]]>
-    </name>
-  </data>
-
-
-
+<data id="asset_hotfolder_scan" aiskill="hotfoldersourceagent" automationscenario="asset_hotfolder_scanning" enabled="true">
+  <name>
+    <![CDATA[Start Hotfolder Scan]]>
+  </name>
+</data>
 <!-- 
   <data id="import_youtube_enabled" aiskill="import_youtube" enabled="true" automationscenario="asset_hotfolder_scanning" runafter="asset_holfoder_scanning_start">
     <name>

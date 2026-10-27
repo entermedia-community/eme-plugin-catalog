@@ -6,4 +6,8 @@
     <name><![CDATA[Add Scenario]]></name>
   </property>
 
+  <property id="automationscenarioaddedit" systemdefined="false" moduleid="automationscenario">
+    <name><![CDATA[Edit Scenario]]></name>
+  </property>
+
 </properties>
