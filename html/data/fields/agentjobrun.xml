@@ -13,13 +13,13 @@
     </name>
   </property>
 
-  <property id="startdate" index="true" editable="true" datatype="date" stored="true">
+  <property id="startdate" index="true" editable="true" datatype="date" viewtype="datetime" stored="true">
     <name>
       <language id="en">Start Date</language>
     </name>
   </property>
 
-  <property id="enddate" index="true" editable="true" datatype="date" stored="true">
+  <property id="enddate" index="true" editable="true" datatype="date" viewtype="datetime" stored="true">
     <name>
       <language id="en">End Date</language>
     </name>

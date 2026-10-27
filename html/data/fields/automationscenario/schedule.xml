@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties> 
+
+ <property id="startdate" index="true" editable="true" datatype="date" stored="true" viewtype="datetime">
+    <name>
+      <language id="en">Start Date</language>
+    </name>
+  </property>
+
+    <property id="repeatperiod" index="true" editable="true" datatype="list" stored="true" listid="agentjobrepeatperiod">
+    <name>
+      <language id="en">Repeat Period</language>
+    </name>
+  </property>
+
+  <property id="repeattime" index="true" editable="true" stored="true" note="24 hour time of day to run, such as 03:40">
+    <name>
+      <language id="en">Repeat Time</language>
+    </name>
+  </property>
+</properties>

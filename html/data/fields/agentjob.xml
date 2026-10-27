@@ -39,7 +39,7 @@
     </name>
   </property>
 
-  <property id="startdate" index="true" editable="true" datatype="date" stored="true">
+  <property id="startdate" index="true" editable="true" datatype="date" stored="true" viewtype="datetime">
     <name>
       <language id="en">Start Date</language>
     </name>

@@ -89,6 +89,30 @@
       <language id="es"><![CDATA[Corriendo]]></language>
     </name> 
   </property>  
+  <property id="startdate" index="true" editable="true" datatype="date" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Start Date]]></language>  
+      <language id="de"><![CDATA[Startdatum]]></language>
+      <language id="fr"><![CDATA[Date de début]]></language>
+      <language id="es"><![CDATA[Fecha de inicio]]></language>
+    </name> 
+  </property>  
+  <property id="repeatperiod" index="true" editable="true" datatype="list" stored="true" listid="agentjobrepeatperiod"> 
+    <name> 
+      <language id="en"><![CDATA[Repeat Period]]></language>  
+      <language id="de"><![CDATA[Wiederholungszeitraum]]></language>
+      <language id="fr"><![CDATA[Fréquence de répétition]]></language>
+      <language id="es"><![CDATA[Período de repetición]]></language>
+    </name> 
+  </property>  
+  <property id="repeattime" index="true" editable="true" stored="true" note="24 hour time of day to run, such as 03:40"> 
+    <name> 
+      <language id="en"><![CDATA[Repeat Time]]></language>  
+      <language id="de"><![CDATA[Wiederholungszeit]]></language>
+      <language id="fr"><![CDATA[Heure de répétition]]></language>
+      <language id="es"><![CDATA[Hora de repetición]]></language>
+    </name> 
+  </property>  
   <property id="connectedtop" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Connected Top]]></language>  
