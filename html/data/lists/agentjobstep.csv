@@ -1,3 +1,0 @@
-"agentjob","automationscenario","automationstep","confirmationpendingid","contextvalues","defaultoutput","errordetails","id","llmprompt","lastresponse","markdowncontent","name","userrequest","parameterstructure","pendingform","pendingquestion","processingmessage","parameters","runafter","runoperation","searchtypes","aiskillid","status"
-"billing_check_invoices",,"billing_check_invoices",,,,,"billing_check_invoices",,,,"Billing Checking Invoices",,,,,,,,,,,
-"billing_send_invoice",,"billing_send_invoice",,,,,"billing_send_invoice",,,,"Billing Send Invoices",,,,,,,"billing_check_invoices",,,,

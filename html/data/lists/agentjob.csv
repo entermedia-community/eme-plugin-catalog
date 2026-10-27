@@ -1,2 +1,0 @@
-"automationscenario","enddate","entitysourcetype","errordetails","expirationdate","id","userrequest","name","lastresponse","markdowncontent","orchestrator","repeatperiod","repeattime","startdate","status","submitteddate"
-"billing","2026-10-16 09:33:05 -0600","agentjob",,,"billing_check_invoices",,"Billing Check Invoices",,,,"daily","07:00","2026-10-16 07:07:50 -0600","complete","2026-10-16 07:07:50 -0600"
