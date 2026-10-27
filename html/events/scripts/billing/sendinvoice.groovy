@@ -17,8 +17,14 @@ public void init() {
 		
 		Data invoice = mediaArchive.getBean("invoiceManager").getInvoiceById(invoiceid);
 		if(invoice != null) {
-			log.info("Sending Individual Invoice: ${invoiceid}");
+			
 			if(invoice.get("invoicesentstatus").equals("sendinvoice")) {
+				if (invoice.get("paymentstatus").equals("paid")) {
+					log.info("Invoice already paid: #${invoice.getValue('invoicenumber')} Id: ${invoiceid}");
+					invoiceContactIterate(mediaArchive, invoiceSearcher, invoice, "notificationpaidsent");
+					return;
+				}
+				log.info("Sending Individual Invoice: #${invoice.getValue('invoicenumber')} Id: ${invoiceid}");
 				sendInvoiceNotifications(mediaArchive, invoiceSearcher, invoice);
 				return;
 			}
