@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
+  <property id="hour">Hour</property>
+  <property id="minute">Minute</property>
   <property id="daily">Daily</property>
   <property id="weekly">Weekly</property>
   <property id="monthly">Monthly</property>
