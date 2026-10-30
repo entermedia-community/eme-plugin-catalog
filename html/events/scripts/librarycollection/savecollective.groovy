@@ -73,9 +73,10 @@ public void init()
 	
 	//Redirect
 	String url = collection.get("urlname");
-	if( url != null)
+	String redirecttoproject = (String) context.findValue("redirecttoproject");
+	if( url != null && redirecttoproject == "true")
 	{
-		//context.redirect("/" + url);
+		context.redirect("/" + url);
 	}
 	
 }
