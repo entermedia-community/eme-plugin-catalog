@@ -1,0 +1,4 @@
+<properties>
+  <property id="teacher">Teacher</property>
+  <property id="doctor">Doctor</property>
+</properties>
