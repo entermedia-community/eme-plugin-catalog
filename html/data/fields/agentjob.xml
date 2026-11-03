@@ -84,6 +84,15 @@
     </name>
   </property>
 
+    <property id="repeatcount" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Repeat count]]></language>  
+      <language id="de"><![CDATA[Wiederholungsanzahl]]></language>
+      <language id="fr"><![CDATA[Nombre de répétitions]]></language>
+      <language id="es"><![CDATA[Número de repeticiones]]></language>
+    </name> 
+  </property> 
+
   <property id="repeattime" index="true" editable="true" stored="true" note="24 hour time of day to run, such as 03:40">
     <name>
       <language id="en">Repeat Time</language>

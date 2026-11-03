@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties beanname="listSearcher"> 
+  <property id="id" index="true" editable="true" stored="true">Id 
+    <name> 
+      <language id="de"><![CDATA[Ich würde]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Carné de identidad]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
+  <property id="name" index="true" editable="true" stored="true">Label 
+    <name> 
+      <language id="de"><![CDATA[Etikette]]></language>  
+      <language id="en"><![CDATA[Label]]></language>  
+      <language id="es"><![CDATA[Etiqueta]]></language>  
+      <language id="fr"><![CDATA[Étiquette]]></language> 
+    </name> 
+  </property>  
+    <property id="ordering" index="true" editable="true" datatype="number" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Ordering]]></language>  
+      <language id="de"><![CDATA[Bestellung]]></language>
+      <language id="fr"><![CDATA[La commande]]></language>
+      <language id="es"><![CDATA[Ordenar]]></language>
+    </name> 
+  </property>  
+</properties>

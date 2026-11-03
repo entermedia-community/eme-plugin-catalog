@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-  <property id="hour">Hour</property>
-  <property id="minute">Minute</property>
-  <property id="daily">Daily</property>
-  <property id="weekly">Weekly</property>
-  <property id="monthly">Monthly</property>
+  <property id="minute" ordering="10">
+    <name>
+      <language id="en"><![CDATA[Minute]]></language>
+    </name>
+  </property>
+  <property id="hour" ordering="20">
+    <name>
+      <language id="en"><![CDATA[Hour]]></language>
+    </name>
+  </property>
+  <property id="daily" ordering="30">
+    <name>
+      <language id="en"><![CDATA[Daily]]></language>
+    </name>
+  </property>
+  <property id="weekly" ordering="40">
+    <name>
+      <language id="en"><![CDATA[Weekly]]></language>
+    </name>
+  </property>
+  <property id="monthly" ordering="50">
+    <name>
+      <language id="en"><![CDATA[Monthly]]></language>
+    </name>
+  </property>
 </properties>

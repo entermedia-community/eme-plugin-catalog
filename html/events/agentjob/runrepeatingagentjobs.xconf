@@ -4,5 +4,5 @@
 
 	<property name="enabled">true</property>
 
-	<property name="period">10m</property>
+	<property name="period">1m</property>
 </page>

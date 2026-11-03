@@ -3,6 +3,7 @@
 <root>
  <property id="name"/>
   <property id="startdate"/>
+  <property id="repeatcount"/>
   <property id="repeatperiod"/>
   <property id="repeattime"/>
 </root>
