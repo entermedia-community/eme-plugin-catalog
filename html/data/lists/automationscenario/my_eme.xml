@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- My EME: personal assistant scenarios. The skills behind these are not implemented yet -->
+<records>
+  <data id="my_eme_welcome_menu" ordering="5" scenarioicon="list" enabled="true" isvisible="true" connectedtop="my_eme" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Welcome Menu]]></language>
+    </name>
+    <longcaption><![CDATA[Good for starting a conversation and seeing which My EME tools are available.]]></longcaption>
+    <markdowncontent><![CDATA[Greets the user and shows a menu of the My EME scenarios to choose from.]]></markdowncontent>
+  </data>
+
+  <data id="my_eme_chat" ordering="10" scenarioicon="chat" enabled="true" isvisible="true" connectedtop="my_eme" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[My EME Chat]]></language>
+    </name>
+    <longcaption><![CDATA[Good for chatting with your own personal assistant that knows you.]]></longcaption>
+    <markdowncontent><![CDATA[Opens a personal chat with My EME. Not implemented yet.]]></markdowncontent>
+  </data>
+
+  <data id="my_eme_upload_skills_memory" ordering="20" scenarioicon="upload" enabled="true" isvisible="true" connectedtop="my_eme" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Upload Skills and Memory]]></language>
+    </name>
+    <longcaption><![CDATA[Good for sending your local skills and memory files to My EME.]]></longcaption>
+    <markdowncontent><![CDATA[Uploads skills and memory files so My EME can use them in later chats. Not implemented yet.]]></markdowncontent>
+  </data>
+
+  <data id="my_eme_daily_status_report" ordering="30" scenarioicon="card-checklist" enabled="true" isvisible="true" connectedtop="my_eme" chatenabled="true">
+    <name>
+      <language id="en"><![CDATA[Daily Status Report]]></language>
+    </name>
+    <longcaption><![CDATA[Good for getting a daily summary of your pending messages.]]></longcaption>
+    <markdowncontent><![CDATA[Summarizes the messages waiting for you into a daily status report. Not implemented yet.]]></markdowncontent>
+  </data>
+</records>

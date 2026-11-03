@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Menu items run <scenario>_confirm first, so each placeholder skill is the confirm step -->
+<records>
+  <data id="my_eme_welcome_menu_welcome" aiskill="welcomeMenuSkill" automationscenario="my_eme_welcome_menu" enabled="true" agenttype="eventagent" processingmessage="Welcome">
+    <name>
+      <![CDATA[Welcome Menu]]>
+    </name>
+  </data>
+  <data id="my_eme_chat_confirm" aiskill="myEmeChatSkill" automationscenario="my_eme_chat" enabled="true" agenttype="remoteagent" processingmessage="Working...">
+    <name>
+      <language id="en"><![CDATA[My EME Chat]]></language>
+    </name>
+  </data>
+  <data id="my_eme_upload_skills_memory_confirm" aiskill="myEmeUploadSkillsMemorySkill" automationscenario="my_eme_upload_skills_memory" enabled="true" agenttype="remoteagent" processingmessage="Working...">
+    <name>
+      <language id="en"><![CDATA[Upload Skills and Memory]]></language>
+    </name>
+  </data>
+  <data id="my_eme_daily_status_report_confirm" aiskill="myEmeDailyStatusReportSkill" automationscenario="my_eme_daily_status_report" enabled="true" agenttype="remoteagent" processingmessage="Working...">
+    <name>
+      <language id="en"><![CDATA[Daily Status Report]]></language>
+    </name>
+  </data>
+</records>

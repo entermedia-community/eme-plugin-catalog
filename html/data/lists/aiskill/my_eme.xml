@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- My EME skills: placeholders, not implemented yet -->
+<records>
+  <data id="myEmeChatSkill" bean="myEmeChatSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[My EME Chat]]></language>
+    </name>
+    <markdowncontent><![CDATA[Chats with the user's personal My EME assistant. Not implemented yet.]]></markdowncontent>
+  </data>
+  <data id="myEmeUploadSkillsMemorySkill" bean="myEmeUploadSkillsMemorySkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Upload Skills and Memory]]></language>
+    </name>
+    <markdowncontent><![CDATA[Uploads the user's skills and memory files to My EME. Not implemented yet.]]></markdowncontent>
+  </data>
+  <data id="myEmeDailyStatusReportSkill" bean="myEmeDailyStatusReportSkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
+    <name>
+      <language id="en"><![CDATA[Daily Status Report]]></language>
+    </name>
+    <markdowncontent><![CDATA[Summarizes the user's pending messages into a daily status report. Not implemented yet.]]></markdowncontent>
+  </data>
+</records>

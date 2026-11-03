@@ -15,7 +15,10 @@
   <data id="team_chat" strokecolor="rgb(117, 102, 13)" bgcolor="rgba(36,37,41,1)" text="Team Chat">
     <name/>
   </data>
-  
+  <data id="my_eme" strokecolor="rgba(180,83,9,1)" bgcolor="rgba(217,119,6,1)" text="My EME">
+    <name/>
+  </data>
+
   <data id="file_management_tools" strokecolor="rgba(102,0,102,1)" bgcolor="rgba(128,0,128,1)" text="File Management Tools">
     <name/>
   </data>
