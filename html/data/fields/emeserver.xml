@@ -112,4 +112,13 @@
       <language id="fr"><![CDATA[Fonction du serveur]]></language>
     </name>
   </property>
+  <property id="serverkey" index="true" editable="true" stored="true" required="true" type="list">Server App
+    Password
+    <name>
+      <language id="de"><![CDATA[App-Passwort]]></language>
+      <language id="en"><![CDATA[App Password]]></language>
+      <language id="es"><![CDATA[Contraseña de la aplicación]]></language>
+      <language id="fr"><![CDATA[Mot de passe de l'application]]></language>
+    </name>
+  </property>
 </properties>
