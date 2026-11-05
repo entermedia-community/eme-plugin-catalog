@@ -118,7 +118,7 @@
       <language id="en"><![CDATA[Meta Description]]></language>  
       <language id="de"><![CDATA[Meta-Beschreibung]]></language>
       <language id="fr"><![CDATA[Méta-description]]></language>
-      <language id="es"><![CDATA[Meta descripción]]></language>
+      <language id="es"><![CDATA[Meta Descripción]]></language>
     </name> 
   </property>  
   <property id="metaimage" index="true" editable="true" stored="true"> 
