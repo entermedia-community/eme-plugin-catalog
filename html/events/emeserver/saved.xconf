@@ -1,0 +1,4 @@
+<page>
+	<!-- Creates/updates the emeserver's server user, makes it the owner and loads its login key -->
+	<path-action name="EmeServerModule.savedEmeServer" />
+</page>

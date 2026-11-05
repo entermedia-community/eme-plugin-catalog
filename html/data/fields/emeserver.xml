@@ -112,13 +112,22 @@
       <language id="fr"><![CDATA[Fonction du serveur]]></language>
     </name>
   </property>
-  <property id="serverkey" index="true" editable="true" stored="true" required="true" type="list">Server App
-    Password
+  <property id="owner" index="false" editable="true" stored="true" datatype="list" type="list" listid="user">Server
+    Owner
     <name>
-      <language id="de"><![CDATA[App-Passwort]]></language>
-      <language id="en"><![CDATA[App Password]]></language>
-      <language id="es"><![CDATA[Contraseña de la aplicación]]></language>
-      <language id="fr"><![CDATA[Mot de passe de l'application]]></language>
+      <language id="de"><![CDATA[Server-Benutzer]]></language>
+      <language id="en"><![CDATA[Server Owner]]></language>
+      <language id="es"><![CDATA[Propietario del servidor]]></language>
+      <language id="fr"><![CDATA[Propriétaire du serveur]]></language>
+    </name>
+  </property>
+  <property id="serverkey" index="true" editable="true" stored="true">Server
+    Key
+    <name>
+      <language id="de"><![CDATA[Server-Schlüssel]]></language>
+      <language id="en"><![CDATA[Server Key]]></language>
+      <language id="es"><![CDATA[Clave del servidor]]></language>
+      <language id="fr"><![CDATA[Clé du serveur]]></language>
     </name>
   </property>
 </properties>

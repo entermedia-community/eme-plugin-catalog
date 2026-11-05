@@ -1,5 +1,5 @@
 <properties>
   <property id="emeserverid" value="localhost">EME Server ID</property>
-  <property id="remoteemerauthserver" value="https://eme.world">Remote Auth Server</property>
-  <property id="remoteemerauthserverkey" value="">Remote Auth Server Key</property>
+  <property id="remoteemerauthserver" value="https://eme.world">Root Auth Server</property>
+  <property id="rootserverkey" value="MCowBQYDK2VwAyEA3UAdYr-A0a1t8ITQfVRP4qUC9uJUuWjTS6qjhKuqYrM">Root Server Key</property>
 </properties>
