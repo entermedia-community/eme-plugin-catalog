@@ -17,7 +17,7 @@
       <language id="fr"><![CDATA[Identité]]></language> 
     </name> 
   </property>  
-  <property id="description" index="true" editable="false" stored="true" defaultoperation="freeform">All Fields 
+  <property id="description" index="true" editable="false" stored="true" defaultoperation="startswith" viewtype="allfields">All Fields 
     <name> 
       <language id="de"><![CDATA[All Fields]]></language>  
       <language id="en"><![CDATA[All Fields]]></language>  

@@ -29,7 +29,7 @@
 	<type id="timecodetable">Timecode Table</type>
 	<type id="searchsuggest">Suggestions</type>
 	<type id="tageditor">Tags</type>
-	<type id="fieldsearch">Field Search</type>
+	<type id="allfields">All Fields</type>
 	<type id="map">Map</type>
 	<type id="secondstotime">Seconds to Time</type>
 	<type id="documentpage">Document Page</type>
