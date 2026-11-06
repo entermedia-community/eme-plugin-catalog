@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+  <property id="id" index="true" keyword="true" editable="true" stored="true" internalfield="true">
+    <name>
+      <language id="en"><![CDATA[ID]]></language>
+    </name>
+  </property>
+
+  <property id="emeserver" index="true" editable="false" datatype="list" stored="true">
+    <name>
+      <language id="en"><![CDATA[EME Server]]></language>
+    </name>
+  </property>
+
+  <property id="user" index="true" editable="false" datatype="list" stored="true">
+    <name>
+      <language id="en"><![CDATA[User]]></language>
+    </name>
+  </property>
+
+  <property id="direction" index="true" filter="true" editable="false" stored="true">
+    <name>
+      <language id="en"><![CDATA[Direction]]></language>
+    </name>
+  </property>
+
+  <property id="title" index="true" keyword="true" editable="false" stored="true">
+    <name>
+      <language id="en"><![CDATA[Title]]></language>
+    </name>
+  </property>
+
+  <property id="message" index="true" keyword="true" editable="false" stored="true">
+    <name>
+      <language id="en"><![CDATA[Message]]></language>
+    </name>
+  </property>
+
+  <property id="channel" index="true" editable="false" stored="true">
+    <name>
+      <language id="en"><![CDATA[Channel]]></language>
+    </name>
+  </property>
+
+  <property id="notificationstatus" index="true" filter="true" editable="false" stored="true">
+    <name>
+      <language id="en"><![CDATA[Status]]></language>
+    </name>
+  </property>
+
+  <property id="httpstatus" index="true" editable="false" datatype="number" stored="true">
+    <name>
+      <language id="en"><![CDATA[HTTP Status]]></language>
+    </name>
+  </property>
+
+  <property id="error" index="true" editable="false" stored="true">
+    <name>
+      <language id="en"><![CDATA[Error]]></language>
+    </name>
+  </property>
+
+  <property id="notificationtime" index="true" editable="false" datatype="date" stored="true">
+    <name>
+      <language id="en"><![CDATA[Time]]></language>
+    </name>
+  </property>
+</properties>
