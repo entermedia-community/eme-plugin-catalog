@@ -13,57 +13,57 @@ TODO: Add another workflow for the SearchCategory population? How many small one
 
 -->
 
-<records> 
-  <data id="aitutorial_eventcreateTutorials" aiskill="handleWebEventSkill" runoperation="smartcreator.checkpending" automationscenario="smartcreator_auto_entitytutorial" enabled="true" ordering="10"></data>  
-  <data id="aitutorial_processpendingrecords" aiskill="smartcreator_processpendingrecords" searchtypes="aitutorial" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="aitutorial_eventcreateTutorials"> 
-    <name> 
-      <language id="en"><![CDATA[Process Pending Tutorials]]></language>  
+<records>
+  <data id="entitytutorial_eventcreateTutorials" aiskill="handleWebEventSkill" runoperation="smartcreator.checkpending" automationscenario="smartcreator_auto_entitytutorial" enabled="true" ordering="10"></data>
+  <data id="entitytutorial_processpendingrecords" aiskill="smartcreator_processpendingrecords" searchtypes="entitytutorial" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="entitytutorial_eventcreateTutorials">
+    <name>
+      <language id="en"><![CDATA[Process Pending Tutorials]]></language>
       <language id="de"><![CDATA[Prozess-Pending-Tutorials]]></language>
       <language id="fr"><![CDATA[Tutoriels en attente]]></language>
       <language id="es"><![CDATA[Tutoriales pendientes de proceso]]></language>
-    </name>  
+    </name>
     <contextvalues><![CDATA[
 [{"llmprompt": "Create a brief outline for a Tutorial about ${data.longcaption}. \nFor each outline topic, create a summary with a header, and paragraphs + lists (where necessary). \nProvide examples if applicable."}]
-]]></contextvalues>
-  </data>  
-  <data id="aitutorial_smartcreator_parse_user_prompt" aiskill="smartCreatorParseUserPromptSkill" automationscenario="smartcreator_auto_entityarticle" enabled="true" runafter="aitutorial_processpendingrecords"> 
-    <name> 
-      <language id="en"><![CDATA[Parse Prompt]]></language>  
+]]>    </contextvalues>
+  </data>
+  <data id="entitytutorial_smartcreator_parse_user_prompt" aiskill="smartCreatorParseUserPromptSkill" automationscenario="smartcreator_auto_entityarticle" enabled="true" runafter="entitytutorial_processpendingrecords">
+    <name>
+      <language id="en"><![CDATA[Parse Prompt]]></language>
       <language id="de"><![CDATA[Prompt analysieren]]></language>
       <language id="fr"><![CDATA[Analyser le prompt]]></language>
       <language id="es"><![CDATA[Prompt de análisis]]></language>
-    </name> 
-  </data>  
-  <data id="aitutorial_smartcreator_findmemory" aiskill="smartcreator_findmemory" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="aitutorial_smartcreator_parse_user_prompt"> 
-    <name> 
-      <language id="en"><![CDATA[Find Record Search Category Data]]></language>  
+    </name>
+  </data>
+  <data id="entitytutorial_smartcreator_findmemory" aiskill="smartcreator_findmemory" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="entitytutorial_smartcreator_parse_user_prompt">
+    <name>
+      <language id="en"><![CDATA[Find Record Search Category Data]]></language>
       <language id="de"><![CDATA[Datensuche nach Kategorie für Aufzeichnungen]]></language>
       <language id="fr"><![CDATA[Trouver des données de recherche par catégorie d'enregistrement]]></language>
       <language id="es"><![CDATA[Buscar datos de la categoría de registros]]></language>
-    </name> 
-  </data>  
-  <data id="aitutorial_smartcreator_createoutline" aiskill="smartcreator_createoutline" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="aitutorial_smartcreator_findmemory"> 
-    <name> 
-      <language id="en"><![CDATA[Create Tutorial Outline]]></language>  
+    </name>
+  </data>
+  <data id="entitytutorial_smartcreator_createoutline" aiskill="smartcreator_createoutline" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="entitytutorial_smartcreator_findmemory">
+    <name>
+      <language id="en"><![CDATA[Create Tutorial Outline]]></language>
       <language id="de"><![CDATA[Tutorial-Übersicht erstellen]]></language>
       <language id="fr"><![CDATA[Créez le sommaire du tutoriel]]></language>
       <language id="es"><![CDATA[Crear el esquema del tutorial]]></language>
-    </name> 
-  </data>  
-  <data id="aitutorial_smartcreator_createsections" aiskill="smartcreator_createsections" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="aitutorial_smartcreator_createoutline"> 
-    <name> 
-      <language id="en"><![CDATA[Create Tutorial Sections]]></language>  
+    </name>
+  </data>
+  <data id="entitytutorial_smartcreator_createsections" aiskill="smartcreator_createsections" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="entitytutorial_smartcreator_createoutline">
+    <name>
+      <language id="en"><![CDATA[Create Tutorial Sections]]></language>
       <language id="de"><![CDATA[Erstellen von Tutorial-Sektionen]]></language>
       <language id="fr"><![CDATA[Créer des sections de tutoriels]]></language>
       <language id="es"><![CDATA[Crear secciones de tutoriales]]></language>
-    </name> 
-  </data>  
-  <data id="aitutorial_smartcreator_render" aiskill="smartcreator_renderasset" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="aitutorial_smartcreator_createsections"> 
-    <name> 
-      <language id="en"><![CDATA[Render Tutorial Preview]]></language>  
+    </name>
+  </data>
+  <data id="entitytutorial_smartcreator_render" aiskill="smartcreator_renderasset" automationscenario="smartcreator_auto_entitytutorial" enabled="true" runafter="entitytutorial_smartcreator_createsections">
+    <name>
+      <language id="en"><![CDATA[Render Tutorial Preview]]></language>
       <language id="de"><![CDATA[Vorschau des Render-Tutorials]]></language>
       <language id="fr"><![CDATA[Aperçu du tutoriel de rendu]]></language>
       <language id="es"><![CDATA[Vista previa del tutorial de render]]></language>
-    </name> 
-  </data> 
+    </name>
+  </data>
 </records>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+
+  <data id="entitytutorialsmart_creator" renderexternalid="entitytutorial" showonsearch="false" deleted="false" byassettype="false" ordering="1781293923831" systemdefined="false" renderinternalid="id" rendertype="tabsmartcreator" moduleid="entitytutorial">
+    <name><![CDATA[Smart Creator]]></name>
+  </data>
+  <data id="entitytutorialpreview" renderexternalid="entitytutorial" showonsearch="false" deleted="false" byassettype="false" ordering="1781293938780" systemdefined="false" renderinternalid="id" rendertype="tabsmartcreatorpreview" moduleid="entitytutorial">
+    <name><![CDATA[Preview]]></name>
+  </data>
+
+  <data id="entitytutoriallightboxes" deleted="true" moduleid="entitytutorial">
+    <name><![CDATA[Files]]></name>
+  </data>
+</properties>
