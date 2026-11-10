@@ -25,23 +25,24 @@
       <language id="fr"><![CDATA[Chemin d&#39;accès d&#39;origine]]></language> 
     </name> 
   </property>  
-  <property id="clientid" index="true" editable="true" stored="true">clientid 
+  <property id="clientid" index="true" editable="true" stored="true"> 
     <name> 
       <language id="de"><![CDATA[Kunden ID]]></language>  
-      <language id="en"><![CDATA[clientid]]></language>  
-      <language id="es"><![CDATA[Identificación del cliente]]></language>  
+      <language id="en"><![CDATA[Client Id]]></language>  
+      <language id="es"><![CDATA[Id del cliente]]></language>  
       <language id="fr"><![CDATA[Identité du client]]></language> 
     </name> 
   </property>  
-  <property id="clientsecret" index="true" editable="true" stored="true">clientsecret 
+  <property id="clientsecret" index="true" editable="true" stored="true">
     <name> 
-      <language id="de"><![CDATA[clientsecret]]></language>  
-      <language id="en"><![CDATA[clientsecret]]></language>  
-      <language id="es"><![CDATA[clientsecret]]></language>  
-      <language id="fr"><![CDATA[clientsecret]]></language> 
+      <language id="en"><![CDATA[Client Secret]]></language>  
     </name> 
   </property>  
-  <property id="refreshtoken" index="true" editable="true" stored="true">OAUTH refresh token</property>  
+  <property id="refreshtoken" index="true" editable="true" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Refresh Token]]></language>  
+    </name> 
+  </property>  
   <property id="granttoken" index="true" editable="true" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Grant Token Code]]></language>  
@@ -50,31 +51,40 @@
       <language id="es"><![CDATA[Código de token de concesión]]></language>
     </name> 
   </property>  
-  <property id="expiresin" index="true" editable="true" datatype="long" stored="true">OAUTH refresh expiration</property>  
-  <property id="httprequesttoken" index="true" editable="true" stored="true">HTTP Temp token</property>  
-  <property id="accesstokentime" index="true" editable="true" datatype="date" stored="true">Access Token Creation Time</property>  
-  <property id="redirecturi" index="true" editable="true" stored="true">redirecturi 
+  <property id="expiresin" index="true" editable="true" datatype="long" stored="true">Expires In 
     <name> 
-      <language id="de"><![CDATA[redirecturi]]></language>  
-      <language id="en"><![CDATA[redirecturi]]></language>  
-      <language id="es"><![CDATA[redirecturi]]></language>  
-      <language id="fr"><![CDATA[redirecturi]]></language> 
+      <language id="en"><![CDATA[Expires In]]></language>  
+    </name> 
+  </property>  
+  <property id="httprequesttoken" index="true" editable="true" stored="true">HTTP Temp token 
+    <name> 
+      <language id="en"><![CDATA[HTTP Temp token]]></language>  
+    </name> 
+  </property>  
+  <property id="accesstokentime" index="true" editable="true" datatype="date" stored="true">Access Token Creation Time
+    <name> 
+      <language id="en"><![CDATA[Access Token Creation Time]]></language>  
+    </name> 
+  </property>  
+  <property id="redirecturi" index="true" editable="true" stored="true">Redirect URI 
+    <name> 
+      <language id="en"><![CDATA[Redirect URI]]></language>  
     </name> 
   </property>  
   <property id="enabled" index="true" editable="true" datatype="boolean" stored="true" internalfield="false">enabled 
     <name> 
       <language id="de"><![CDATA[freigegeben]]></language>  
-      <language id="en"><![CDATA[enabled]]></language>  
+      <language id="en"><![CDATA[Enabled]]></language>  
       <language id="es"><![CDATA[habilitado]]></language>  
       <language id="fr"><![CDATA[activée]]></language> 
     </name> 
   </property>  
   <property id="remoteroot" index="true" editable="true" stored="true">remoteroot 
     <name> 
-      <language id="de"><![CDATA[remoteroot]]></language>  
-      <language id="en"><![CDATA[remoteroot]]></language>  
-      <language id="es"><![CDATA[remoteroot]]></language>  
-      <language id="fr"><![CDATA[remoteroot]]></language> 
+      <language id="de"><![CDATA[Remote Root]]></language>  
+      <language id="en"><![CDATA[Remote Root]]></language>  
+      <language id="es"><![CDATA[Remote Root]]></language>  
+      <language id="fr"><![CDATA[Remote Root]]></language> 
     </name> 
   </property>  
   <property id="autocreateusers" index="true" editable="true" datatype="boolean" stored="true" internalfield="false">Auto create new users 
