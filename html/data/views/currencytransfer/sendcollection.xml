@@ -8,7 +8,6 @@
    <property id="paymententitydesttype" />
    <property id="paymententitydest"  />
 
-<property id="collectiveproject" />
    <property id="expensetype" />
 
 </properties>

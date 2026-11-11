@@ -2,7 +2,6 @@
 
 <properties beanname="dataSearcher">
 	<property id="date"  />
-	<property id="collectiveproject" />
 	<property id="expensetype" />
 	<property id="expensedescription" />
 	<property id="currencytype" required="true" />

@@ -2,7 +2,6 @@
 
 <properties beanname="dataSearcher">
 	<property id="date"  />
-	<property id="collectiveproject" />
 	<property id="notes" />
 	<property id="currencytype" />
 	<property id="total" />

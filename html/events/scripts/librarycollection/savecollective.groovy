@@ -59,15 +59,6 @@ public void init()
 	
 	collectionsearcher.saveData(collection);
 	
-	BaseSearcher colectivesearcher = mediaArchive.getSearcher("collectiveproject");
-	Data newproject = colectivesearcher.query().exact("parentcollectionid",collection.getId()).orgroup("name","Public|General").searchOne();
-	if( newproject == null)
-	{
-		newproject = colectivesearcher.createNewData();
-		newproject.setName("Public");
-		newproject.setValue("parentcollectionid",collection.getId());
-		colectivesearcher.saveData( newproject );
-	}
 	context.putPageValue("librarycol",collection);
 	context.putPageValue("library",collection.getLibrary());
 	

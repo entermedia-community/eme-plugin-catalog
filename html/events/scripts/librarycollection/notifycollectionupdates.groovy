@@ -109,14 +109,13 @@ public void init()
 			WebEmail templatemail = mediaArchive.createSystemEmail(followeruser, template);
 			if( topicmods.size() > 1)
 			{
-				templatemail.setSubject("[EM] " + topicmods.size() + " Topic Notifications"); //TODO: Translate
+				templatemail.setSubject("[EM] " + topicmods.size() + " Project Notifications"); //TODO: Translate
 			}
 			else
 			{
 				Data oneitem = topicmods.iterator().next();
 				Data collection = mediaArchive.getCachedData("librarycollection", oneitem.get("collectionid") );
-				Data topic = mediaArchive.getCachedData("collectiveproject", oneitem.get("chattopicid") );
-				templatemail.setSubject("[EM] " + collection.getName() + "/" + topic.getName() + " Notification"); //TODO: Translate
+				templatemail.setSubject("[EM] " + collection.getName() + " Notification"); //TODO: Translate
 			}
 			Map objects = new HashMap();
 			objects.put("topicmods",topicmods);

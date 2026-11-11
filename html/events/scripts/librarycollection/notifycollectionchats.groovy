@@ -122,10 +122,6 @@ public void init()
 					}
 					else
 					{
-						Data oneitem = topicmods.iterator().next();
-						Data topic = mediaArchive.getCachedData("collectiveproject", oneitem.get("chattopicid") );
-						
-						
 						subject = "[" + collection.getName() + "] " + now_string + " Chat Notifications"  ;
 						
 						templatemail.setFromName(collection.getName());

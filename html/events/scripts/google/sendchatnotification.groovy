@@ -39,29 +39,25 @@ public void runit()
 	}
 	String message = data.get("message");
 		
-	String topicid = data.get("channel");
-	
-	
-	MultiValued topicdata = (MultiValued)mediaArchive.getData("collectiveproject", topicid);
-	
-	if (topicdata == null) {
-		log.error("No channel defined in: " + data);
+	String channelid = data.get("channel");
+
+	Data channel = mediaArchive.getCachedData("channel", channelid);
+	if (channel == null || !"librarycollection".equals(channel.get("searchtype"))) {
+		log.error("No project channel defined in: " + data);
+		return;
+	}
+	Data collection = mediaArchive.getCachedData("librarycollection", channel.get("dataid"));
+	if (collection == null) {
+		log.error("No project for channel: " + channelid);
 		return;
 	}
 	//If it ends with messages
-	
+
    		Map extra = new HashMap();
-        Data collection = mediaArchive.getCachedData("librarycollection",topicdata.getValue("parentcollectionid"));
-	    String subject =  aUser.getScreenName();
-        if(collection != null)
-        {
-            subject = subject + " in " + collection.getName();
-		    extra.put("collectionid", collection.getId());
-		    extra.put("collectionlabel", collection.getName());
-		    extra.put("collectiontype", collection.get("collectiontype")); //3 is direct messsages project
-		    extra.put("collectivetopicid", topicdata.getId());
-		    extra.put("collectivetopiclabel", topicdata.getName());
-        }
+	    String subject =  aUser.getScreenName() + " in " + collection.getName();
+	    extra.put("collectionid", collection.getId());
+	    extra.put("collectionlabel", collection.getName());
+	    extra.put("collectiontype", collection.get("collectiontype")); //3 is direct messsages project
 		extra.put("notificationtype", "projectchat");
 		extra.put("userid", aUser.getId());
 		

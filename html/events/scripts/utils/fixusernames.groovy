@@ -41,7 +41,6 @@ public void init()
 	dependants.put("clientinvoice", "user");
 	dependants.put("collectioninvoice", "owner");
 	dependants.put("collectiveproduct", "owner");
-	dependants.put("collectiveproject", "owner");
 	dependants.put("defaultLog", "user");
 	dependants.put("entermedia_clients", "userid");
 	dependants.put("entermedia_instances", "owner");

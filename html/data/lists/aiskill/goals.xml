@@ -80,7 +80,7 @@ Creates the project goal the team confirmed in chat.
 ## How it works
 
 1. The goal is the text of a typed reply. When the Create button was used, it is `goaltext` (falling back to `suggestedgoal`).
-2. Finds the collection from the channel: a librarycollection, a collectiveproject's `parentcollectionid` or a goaltask's `collectionid`.
+2. Finds the collection from the channel: a librarycollection or a goaltask's `collectionid`.
 3. Creates a `projectgoal` for the user through GoalManager, renders `chat_goal_created`, then runs the children.
 
 ## Inputs

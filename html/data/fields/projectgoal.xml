@@ -121,15 +121,7 @@
       <language id="es"><![CDATA[Estado]]></language>
     </name> 
   </property>  
-  <property id="goaltrackercolumn" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" listid="collectiveproject" foreignkeyid="parentcollectionid" listfilterid="collectionid"> 
-    <name> 
-      <language id="en"><![CDATA[Topic]]></language>  
-      <language id="de"><![CDATA[Thema]]></language>
-      <language id="fr"><![CDATA[Sujet]]></language>
-      <language id="es"><![CDATA[Tema]]></language>
-    </name> 
-  </property>  
-  <property id="sessionestimate" index="true" editable="true" datatype="number" stored="true" listid="collectiveproject" foreignkeyid="parentcollectionid"> 
+  <property id="sessionestimate" index="true" editable="true" datatype="number" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Session Estimate]]></language>  
       <language id="de"><![CDATA[Sitzungsschätzung]]></language>

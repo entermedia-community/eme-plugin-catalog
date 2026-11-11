@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties beanname="dataSearcher"> 
-  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
-    <name> 
-      <language id="en"><![CDATA[Topic]]></language>  
-      <language id="de"><![CDATA[Thema]]></language>
-      <language id="fr"><![CDATA[Sujet]]></language>
-      <language id="es"><![CDATA[Tema]]></language>
-    </name> 
-  </property>  
   <property id="exclusivecontent" index="true" editable="true" datatype="boolean" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Team Only]]></language>  

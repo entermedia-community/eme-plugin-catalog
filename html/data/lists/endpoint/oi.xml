@@ -8,10 +8,10 @@
   </data>  
   <data id="moduleuseruploadfinish" uploadfile="false" httpmethod="POST" docsection="moduleuserupload" url="/site/mediadb/services/module/userupload/uploadfinish.json"> 
     <samplerequest><![CDATA[{ "librarycollection": "AYGOFauOefS9P58F9LdN",
-    "sourcepath":"Collections/ProjectABC/Topic123/2022/12-23_32/",
+    "sourcepath":"Collections/ProjectABC/2022/12-23_32/",
     "title":"Test Title","longdescription":"More text",
     "usertags":["one","two"], 
-    "collectiveproject":"AYGOFazsefS9P58F9LdQ","exclusivecontent":"false"}]]></samplerequest>
+    "exclusivecontent":"false"}]]></samplerequest>
     <name><![CDATA[Feed Upload Finish]]></name> 
   </data>  
 
@@ -97,8 +97,7 @@
     "name":"Exmple REST Expense",
     "expensedescription":"More text",
     "currencytype":"1",
-    "total":"1.23",
-    "collectiveproject":"AYGOFazsefS9P58F9LdQ"
+    "total":"1.23"
     }]]></samplerequest>
     <name><![CDATA[Create With Attachment]]></name> 
   </data>  

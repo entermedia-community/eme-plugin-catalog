@@ -25,12 +25,12 @@
       <language id="es"><![CDATA[Álbum]]></language>
     </name> 
   </property>  
-  <property id="chattopicid" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" listid="collectiveproject" foreignkeyid="parentcollectionid"> 
+  <property id="chattopicid" index="true" editable="true" datatype="list" stored="true" listid="librarycollection"> 
     <name> 
-      <language id="en"><![CDATA[Topic]]></language>  
-      <language id="de"><![CDATA[Thema]]></language>
-      <language id="fr"><![CDATA[Sujet]]></language>
-      <language id="es"><![CDATA[Tema]]></language>
+      <language id="en"><![CDATA[Project]]></language>  
+      <language id="de"><![CDATA[Projekt]]></language>
+      <language id="fr"><![CDATA[Projet]]></language>
+      <language id="es"><![CDATA[Proyecto]]></language>
     </name> 
   </property>  
   <property id="datechecked" index="true" filter="true" editable="false" viewtype="date" searchcomponent="datesearch" datatype="date" stored="true">Date 

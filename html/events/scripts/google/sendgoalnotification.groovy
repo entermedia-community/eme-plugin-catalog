@@ -41,13 +41,7 @@ public void runit()
 		String collectionid = projectgoal.get("collectionid");
 		Data collection = mediaArchive.getData("librarycollection", collectionid);
 		
-		String topicid = event.get("goaltrackercolumn");
-		//Data topic = mediaArchive.getData("collectiveproject", topicid);
 		String subject = collection.getName();
-//		if( topic != null)
-//		{
-//			subject = subject + " / " + topic.getName();
-//		}
 		subject = aUser.getScreenName() + " task: ";
 		Data status =  mediaArchive.getData("projectstatus",projectgoal.get("projectstatus") );
 		if( status != null )

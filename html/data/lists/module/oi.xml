@@ -57,8 +57,4 @@
     <name><![CDATA[Web Content]]></name>
   </data>
 
-  <data id="collectiveproject"  isentity="false" uploadsourcepath="${data.parentcollectionid.sourcepath}/${data.name}" >
-    <name><![CDATA[Collective Project]]></name>
-  </data>
-
 </root>

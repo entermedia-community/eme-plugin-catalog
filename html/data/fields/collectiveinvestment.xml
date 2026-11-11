@@ -65,14 +65,6 @@
       <language id="es"><![CDATA[Detalles]]></language>
     </name> 
   </property>  
-  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
-    <name> 
-      <language id="en"><![CDATA[Topic]]></language>  
-      <language id="de"><![CDATA[Thema]]></language>
-      <language id="fr"><![CDATA[Sujet]]></language>
-      <language id="es"><![CDATA[Tema]]></language>
-    </name> 
-  </property>  
   <property id="bankaccount" index="true" editable="true" viewtype="bankaccount" searchcomponent="bankaccount" datatype="list" stored="true" defaultvalue="1"> 
     <name> 
       <language id="en"> <![CDATA[Account Balance]]> </language>  

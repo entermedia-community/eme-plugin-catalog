@@ -89,12 +89,20 @@
       <language id="es"><![CDATA[Cantidad]]></language>
     </name> 
   </property>  
-  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
+  <property id="collectiveproject" index="true" editable="false" datatype="list" stored="true"> 
     <name> 
       <language id="en"><![CDATA[Topic]]></language>  
       <language id="de"><![CDATA[Thema]]></language>
       <language id="fr"><![CDATA[Sujet]]></language>
       <language id="es"><![CDATA[Tema]]></language>
+    </name> 
+  </property>  
+  <property id="collectionid" index="true" editable="true" datatype="list" stored="true" listid="librarycollection"> 
+    <name> 
+      <language id="en"><![CDATA[Project]]></language>  
+      <language id="de"><![CDATA[Projekt]]></language>
+      <language id="fr"><![CDATA[Projet]]></language>
+      <language id="es"><![CDATA[Proyecto]]></language>
     </name> 
   </property>  
   <property id="currencytype" index="true" editable="true" datatype="list" stored="true" listid="currencytype" defaultvalue="1"> 

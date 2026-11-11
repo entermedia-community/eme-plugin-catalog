@@ -153,13 +153,5 @@
       <language id="es"><![CDATA[Tipo de ingreso]]></language>
     </name> 
   </property>  
-  <property id="collectiveproject" index="true" editable="true" viewtype="collectionproject" searchcomponent="collectionproject" datatype="list" stored="true" required="true"> 
-    <name> 
-      <language id="en"><![CDATA[Topic]]></language>  
-      <language id="de"><![CDATA[Thema]]></language>
-      <language id="fr"><![CDATA[Sujet]]></language>
-      <language id="es"><![CDATA[Tema]]></language>
-    </name> 
-  </property>  
   <property id="paymentstatus" index="true" editable="true" datatype="list" stored="true">Payment Status</property> 
 </properties>
