@@ -2,9 +2,9 @@
 
 <!-- using more descriptive ids for easier debugging -->
 <records>
-  <data id="eme_server_tutor_topics" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_tutor" enabled="true" processingmessage="Loading">
+  <data id="eme_server_tutor_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_tutor" enabled="true" processingmessage="Loading">
     <name>
-      <language id="en"><![CDATA[Tutor Chat Topics]]></language>
+      <language id="en"><![CDATA[Tutor Chat Confirmation]]></language>
     </name>
   </data>
 
@@ -14,13 +14,7 @@
     </name>
   </data>
 
-  <data id="eme_server_tutor_confirm" aiskill="renderLocalTemplateSkill" automationscenario="eme_server_tutor" enabled="true" processingmessage="Loading">
-    <name>
-      <language id="en"><![CDATA[Tutor Chat Confirmation]]></language>
-    </name>
-  </data>
-
-  <data id="eme_server_tutor_welcome" runafter="eme_server_tutor_confirm" aiskill="adaptiveTutorialWelcomeSkill" automationscenario="eme_server_tutor" enabled="true" processingmessage="Loading...">
+  <data id="eme_server_tutor_welcome" aiskill="adaptiveTutorialWelcomeSkill" automationscenario="eme_server_tutor" enabled="true" processingmessage="Loading...">
     <name>
       <language id="en"><![CDATA[Tutor Chat Welcome]]></language>
       <language id="de"><![CDATA[Tutor-Chat: Willkommen]]></language>
