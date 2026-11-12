@@ -6,7 +6,7 @@
     <name>
       <language id="en"><![CDATA[My EME Chat]]></language>
     </name>
-    <markdowncontent><![CDATA[Chats with the user's personal My EME assistant. Not implemented yet.]]></markdowncontent>
+    <markdowncontent><![CDATA[Sends each message in the user's My EME chat to that chat's OpenCode session, which works in the user's own workspace folder (WEB-INF/data/<catalog>/workspaces/<userid>/) with the shell, web and outside-folder access turned off, and shows OpenCode's reply. Each chat session (channel) keeps its own OpenCode session in channel.opencodesessionid. For now the reply arrives whole when OpenCode finishes.]]></markdowncontent>
   </data>
   <data id="myEmeUploadSkillsMemorySkill" bean="myEmeUploadSkillsMemorySkill" agenttype="remoteagent" ordering="10" contextbean="chatMessageContext">
     <name>
