@@ -121,6 +121,11 @@
       <language id="fr"><![CDATA[Propriétaire du serveur]]></language>
     </name>
   </property>
+  <property id="idonremote" index="true" editable="true" stored="true">Remote ID
+    <name>
+      <language id="en"><![CDATA[Remote ID]]></language>
+    </name>
+  </property>
   <property id="serverkey" index="true" editable="true" stored="true">Server
     Key
     <name>
