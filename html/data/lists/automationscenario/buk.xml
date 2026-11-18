@@ -1,0 +1,12 @@
+<records>
+
+  <data id="buk_sync" ordering="60" scenarioicon="people" enabled="true" isvisible="true" connectedtop="communication_tools" chatenabled="false" repeatperiod="daily" repeattime="03:00">
+    <name>
+      <language id="en"><![CDATA[BUK Employee Import]]></language>
+      <language id="es"><![CDATA[Importación de empleados BUK]]></language>
+    </name>
+    <longcaption><![CDATA[Imports the BUK employee roster into the Fulservice database every day, or on demand.]]></longcaption>
+    <markdowncontent><![CDATA[Reads employees from BUK (read-only) and stores a minimal, non-sensitive worker record plus a run record with counts and errors.]]></markdowncontent>
+  </data>
+
+</records>

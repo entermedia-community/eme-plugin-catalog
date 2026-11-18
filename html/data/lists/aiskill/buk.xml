@@ -1,0 +1,26 @@
+<records>
+
+  <data id="bukSyncSkill" bean="bukSyncSkill" agenttype="taskagent" ordering="10">
+    <name>
+      <![CDATA[BUK: Sync Employees]]>
+    </name>
+    <markdowncontent><![CDATA[---
+name: bukSyncSkill
+description: Imports the BUK employee roster into fstrabajador and records the run in fsejecucionfuente.
+---
+
+# BUK: Sync Employees
+
+Reads `GET /employees` from BUK page by page (read-only, token from `FULSERVICE_BUK_API_TOKEN`), upserts `fstrabajador` by BUK id and appends a redacted `fsregistrocrudo` row. Sensitive fields (RUT, wage, bank, health, family, contact) are never stored.
+
+## When to use
+
+- The repeating `buk_sync` agent job (scheduled) or "Import now" from the agent job monitor.
+
+## Output
+
+One `fsejecucionfuente` row per run with status (success, partial, failed), counts and error code; progress lines in the agent job run logs.
+]]></markdowncontent>
+  </data>
+
+</records>

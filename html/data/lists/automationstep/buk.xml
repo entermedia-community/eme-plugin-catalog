@@ -1,0 +1,9 @@
+<records>
+
+  <data id="buk_sync_employees" aiskill="bukSyncSkill" automationscenario="buk_sync" enabled="true">
+    <name>
+      <![CDATA[BUK: Sync Employees]]>
+    </name>
+  </data>
+
+</records>
