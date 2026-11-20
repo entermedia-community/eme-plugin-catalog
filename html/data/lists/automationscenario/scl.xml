@@ -1,0 +1,12 @@
+<records>
+
+  <data id="scl_sync" ordering="61" scenarioicon="fact_check" enabled="true" isvisible="true" connectedtop="communication_tools" chatenabled="false" repeatperiod="daily" repeattime="04:00">
+    <name>
+      <language id="en"><![CDATA[SCL Portal Import]]></language>
+      <language id="es"><![CDATA[Importación del portal SCL]]></language>
+    </name>
+    <longcaption><![CDATA[Captures and parses the Subcontrata Ley contractor page every day, or on demand.]]></longcaption>
+    <markdowncontent><![CDATA[Logs in to the SCL portal (read-only), saves the raw response, parses the table and stores a run record with counts and errors.]]></markdowncontent>
+  </data>
+
+</records>

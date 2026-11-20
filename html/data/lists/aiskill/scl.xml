@@ -1,0 +1,26 @@
+<records>
+
+  <data id="sclSyncSkill" bean="sclSyncSkill" agenttype="taskagent" ordering="11">
+    <name>
+      <![CDATA[SCL: Sync Contractor Page]]>
+    </name>
+    <markdowncontent><![CDATA[---
+name: sclSyncSkill
+description: Captures the Subcontrata Ley contractor page and records the run in fsejecucionfuente.
+---
+
+# SCL: Sync Contractor Page
+
+Logs in to the SCL portal (read-only; credentials from `FULSERVICE_SCL_USER` / `FULSERVICE_SCL_PASSWORD`), posts act 5004 to `ajax/contratista.ajax.php`, saves the raw response to `WEB-INF/data/<catalog>/scl-raw/`, parses the HTML table by header text, and appends a redacted `fsregistrocrudo` row.
+
+## When to use
+
+- The repeating `scl_sync` agent job (scheduled) or an on-demand run from the agent job monitor.
+
+## Output
+
+One `fsejecucionfuente` row per run (success or failed, rows read, error code); progress lines in the agent job run logs. Row data stays in the restricted raw file.
+]]></markdowncontent>
+  </data>
+
+</records>

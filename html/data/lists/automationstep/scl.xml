@@ -1,0 +1,9 @@
+<records>
+
+  <data id="scl_sync_contratista" aiskill="sclSyncSkill" automationscenario="scl_sync" enabled="true">
+    <name>
+      <![CDATA[SCL: Sync Contractor Page]]>
+    </name>
+  </data>
+
+</records>
