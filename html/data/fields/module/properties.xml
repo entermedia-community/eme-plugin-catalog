@@ -31,8 +31,13 @@
       <language id="de"><![CDATA[Modul-Icon]]></language>
       <language id="fr"><![CDATA[Icône du module]]></language>
       <language id="es"><![CDATA[Ícono del módulo]]></language>
-    </name> 
-  </property>  
+    </name>
+  </property>
+  <property id="appicon" index="true" editable="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[App Icon]]></language>
+    </name>
+  </property>
   <property id="ordering" index="true" editable="true" datatype="number" stored="true">Ordering 
     <name> 
       <language id="de"><![CDATA[Bestellung]]></language>  
