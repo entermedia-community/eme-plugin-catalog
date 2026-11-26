@@ -5,7 +5,7 @@
   <data id="stripe_test_publishable_key" value="pk_test_XXX"> 
     <name><![CDATA[Stripe Test Publishable Key]]></name> 
   </data>  
-  <data id="productionmode" value="false"> 
+  <data id="productionmode" value="false" valuetype="boolean"> 
     <name><![CDATA[Production Stripe Mode (true/false)]]></name> 
   </data>  
   <data id="stripe_private_key" value=""> 

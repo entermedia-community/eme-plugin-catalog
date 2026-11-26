@@ -2,7 +2,7 @@
 	
 	<!-- fields used by custom import scripts -->
 	<!--  hotfolder tags: create tags based on asset folder structure -->
-	<property id="hotfolder_tags_enabled" value="false">Hotfolder Tags Enabled</property>
+	<property id="hotfolder_tags_enabled" value="false" valuetype="boolean">Hotfolder Tags Enabled</property>
 	<!--  list of origins, separated by '|', each path should ideally end with file separator
 		e.g. hotfolder1/ | hotfolder2/foo/bar/ | hotfolder3/Foo Bar/foobar/ | hotfolder4/Food Bar | asdf/import/
 		If not specified the customimport will not add tags, regardless of whether it is enabled or not
@@ -12,7 +12,7 @@
 	
 	
 	
-	<data id="assigncategoryonupload" value="false">
+	<data id="assigncategoryonupload" value="false" valuetype="boolean">
     <name><![CDATA[Assign assets to categories based on their upload masks/sourcepath]]></name>
   </data>
 	

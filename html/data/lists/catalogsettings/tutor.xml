@@ -1,5 +1,5 @@
 <properties>
 	
-	<property id="questions-per-section" value="1">Questions to Show per Section</property>
+	<property id="questions-per-section" value="1" valuetype="number">Questions to Show per Section</property>
 	
 </properties>

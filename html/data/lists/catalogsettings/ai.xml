@@ -1,8 +1,8 @@
 <properties>
 
-	<property id="ai_create_enabled" value="true">AI: Enable Content Creation</property>
+	<property id="ai_create_enabled" value="true" valuetype="boolean">AI: Enable Content Creation</property>
 
-	<property id="ai_create_image_enabled" value="true">AI: Enable Image Creation</property>
+	<property id="ai_create_image_enabled" value="true" valuetype="boolean">AI: Enable Image Creation</property>
 	<!--
 	<property id="llmvisionmodel" value="qwen3vl">AI: LLM Vision Model</property>
 	<property id="llmentityclassificationmodel" value="Qwen3-14B-Q4_K_S">AI: LLM Entity Classification Model</property>
@@ -21,7 +21,7 @@
 
 	<property id="ai_metadata_startdate" value="">AI: Metadata Start Date</property>
 
-	<property id="allowclassifyothernodes" value="false">AI: Classify other nodes data</property>
+	<property id="allowclassifyothernodes" value="false" valuetype="boolean">AI: Classify other nodes data</property>
 
 	<property id="catalog-storageid" value="">Customer Storage ID</property>
 

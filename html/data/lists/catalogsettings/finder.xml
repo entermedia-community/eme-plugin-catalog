@@ -1,7 +1,7 @@
 <properties>
 
 
-	<property id="show_add_media_on_nav" value="true">Show Add Media Button On Header</property>
+	<property id="show_add_media_on_nav" value="true" valuetype="boolean">Show Add Media Button On Header</property>
 
 	<property id="stackedgalleryfield" value="assetttitle">Field to show on hover on the stacked gallery view</property>
 
@@ -9,11 +9,11 @@
 
 	<property id="guidelink" value="https://emedialibrary.com/knowledge/index.html">Guide</property>
 
-	<property id="assetcreatesymboliclinks" value="true">Create Symbolic Asset Links In Lightboxes</property>
+	<property id="assetcreatesymboliclinks" value="true" valuetype="boolean">Create Symbolic Asset Links In Lightboxes</property>
 
-	<property id="ai_create_enabled" value="true">AI: Enable Content Creation</property>
+	<property id="ai_create_enabled" value="true" valuetype="boolean">AI: Enable Content Creation</property>
 
-	<property id="ai_create_image_enabled" value="true">AI: Enable Image Creation</property>
+	<property id="ai_create_image_enabled" value="true" valuetype="boolean">AI: Enable Image Creation</property>
 
 	<property id="llmmetadatastartcategory" value="index">AI: LLM Metadata Starting Category</property>
 

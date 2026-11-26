@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="folderSearcher"> 
+<properties beanname="folderSearcher">
   <property id="id" index="true" editable="true" stored="true">Id 
-    <name> 
-      <language id="de"><![CDATA[Ich würde]]></language>  
-      <language id="en"><![CDATA[Id]]></language>  
-      <language id="es"><![CDATA[Carné de identidad]]></language>  
-      <language id="fr"><![CDATA[Id]]></language> 
-    </name> 
-  </property>  
+    <name>
+      <language id="de"><![CDATA[Ich würde]]></language>
+      <language id="en"><![CDATA[Id]]></language>
+      <language id="es"><![CDATA[Carné de identidad]]></language>
+      <language id="fr"><![CDATA[Id]]></language>
+    </name>
+  </property>
   <property id="name" index="true" editable="true" stored="true">Label 
-    <name> 
-      <language id="de"><![CDATA[Etikette]]></language>  
-      <language id="en"><![CDATA[Label]]></language>  
-      <language id="es"><![CDATA[Etiqueta]]></language>  
-      <language id="fr"><![CDATA[Étiquette]]></language> 
-    </name> 
-  </property>  
+    <name>
+      <language id="de"><![CDATA[Etikette]]></language>
+      <language id="en"><![CDATA[Label]]></language>
+      <language id="es"><![CDATA[Etiqueta]]></language>
+      <language id="fr"><![CDATA[Étiquette]]></language>
+    </name>
+  </property>
   <property id="value" index="true" editable="true" stored="true">Value
     <name>
       <language id="de"><![CDATA[Wert]]></language>
@@ -24,5 +24,10 @@
       <language id="es"><![CDATA[Valor]]></language>
       <language id="fr"><![CDATA[Valeur]]></language>
     </name>
-  </property> 
+  </property>
+  <property id="valuetype" index="true" editable="true" stored="true">Data Type
+    <name>
+      <language id="en"><![CDATA[Data Type]]></language>
+    </name>
+  </property>
 </properties>

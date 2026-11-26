@@ -27,24 +27,24 @@
 -->
 	<property id="startinglatlong" value="39.025818619038375,-95.03089171562499">Starting/Default Lat and Long for Maps</property>
 
-	<property id="log_all_searches" value="false">Log All Searches</property>
+	<property id="log_all_searches" value="false" valuetype="boolean">Log All Searches</property>
 
-	<property id="conversionexpirytime" value="7">Conversions older than this as expired</property>
-	<property id="extractmd5" value="true">Create MD5 Checksum values on import</property>
-	<property id="show_hotfolder_status" value="false">Track Hotfolder ingesting in database</property>
+	<property id="conversionexpirytime" value="7" valuetype="number">Conversions older than this as expired</property>
+	<property id="extractmd5" value="true" valuetype="boolean">Create MD5 Checksum values on import</property>
+	<property id="show_hotfolder_status" value="false" valuetype="boolean">Track Hotfolder ingesting in database</property>
 
-	<property id="preventupscaling" value="false">Prevent upscaling of asset conversions</property>
+	<property id="preventupscaling" value="false" valuetype="boolean">Prevent upscaling of asset conversions</property>
 
 	<property id="transcodebucket" value="emtranscribe">Google Cloud Storage transcode bucket</property>
 
 	<property id="defaultrole" value="users">Default role for users accessing the site </property>
-	<property id="applycheckerboardtransparency" value="false">Apply a "checkerboard" background to PNG conversions </property>
+	<property id="applycheckerboardtransparency" value="false" valuetype="boolean">Apply a "checkerboard" background to PNG conversions </property>
 
 
 	<property id="defaultmodule" value="">Default Home Page Module  </property>
 	
 	
-	<property id="allowloginbyemail" value="true">Allow login by Email Adrress</property>
+	<property id="allowloginbyemail" value="true" valuetype="boolean">Allow login by Email Adrress</property>
 	
 	
 </properties>
