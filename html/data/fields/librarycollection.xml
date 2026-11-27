@@ -302,8 +302,31 @@
     </name>
   </property>
   <property id="contactname" index="true" keyword="true" editable="true" stored="true">Contact Name</property>
-  <property id="contactemail" index="true" keyword="true" editable="true" stored="true" indextype="not_analyzed">Email</property>
-  <property id="contactphone" index="true" keyword="true" editable="true" stored="true">Phone</property>
+  <property id="contactemail" index="true" keyword="true" editable="true" stored="true" indextype="not_analyzed">
+     <name>
+      <language id="en"><![CDATA[Contact Email]]></language>
+      <language id="de"><![CDATA[Kontakt E-Mail]]></language>
+      <language id="fr"><![CDATA[Email de contact]]></language>
+      <language id="es"><![CDATA[Correo de contacto]]></language>
+    </name>
+  </property>
+  <property id="contactphone" index="true" keyword="true" editable="true" stored="true">
+    <name>
+      <language id="en"><![CDATA[Contact Phone]]></language>
+      <language id="de"><![CDATA[Kontakttelefon]]></language>
+      <language id="fr"><![CDATA[Téléphone de contact]]></language>
+      <language id="es"><![CDATA[Teléfono de contacto]]></language>
+    </name>
+  </property>
+  <property id="whatsappphonenumber" index="true" keyword="true" editable="true" stored="true" indextype="not_analyzed">
+    <name>
+      <language id="en"><![CDATA[WhatsApp Phone Number]]></language>
+      <language id="de"><![CDATA[WhatsApp-Telefonnummer]]></language>
+      <language id="fr"><![CDATA[Numéro de téléphone WhatsApp]]></language>
+      <language id="es"><![CDATA[Número de teléfono de WhatsApp]]></language>
+    </name>
+  </property>
+  
   <property id="vision" index="true" keyword="true" editable="true" viewtype="html" stored="true">
     <name>
       <language id="en"><![CDATA[Vision]]></language>
